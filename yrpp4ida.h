@@ -1127,6 +1127,31 @@ struct MPGameModeClass_vtbl; // 0x7EED60
 
 // TODO CLASS
 
+struct JumpjetLocomotionClassOffset;
+struct JumpjetLocomotionClassOffset_vtbl;
+struct FlyLocomotionClassOffset;
+struct FlyLocomotionClassOffset_vtbl;
+struct TeleportLocomotionClassOffset;
+struct TeleportLocomotionClassOffset_vtbl;
+struct ShipLocomotionClassOffset;
+struct ShipLocomotionClassOffset_vtbl;
+struct DriveLocomotionClassOffset;
+struct DriveLocomotionClassOffset_vtbl;
+struct TunnelLocomotionClassOffset;
+struct TunnelLocomotionClassOffset_vtbl;
+struct DropPodLocomotionClassOffset;
+struct DropPodLocomotionClassOffset_vtbl;
+struct RocketLocomotionClassOffset;
+struct RocketLocomotionClassOffset_vtbl;
+struct HoverLocomotionClassOffset;
+struct HoverLocomotionClassOffset_vtbl;
+struct MechLocomotionClassOffset;
+struct MechLocomotionClassOffset_vtbl;
+struct WalkLocomotionClassOffset;
+struct WalkLocomotionClassOffset_vtbl;
+
+// TODO OFFSET
+
 union Union_Large_Int;
 union Union_U_Large_Int;
 union Union_In_addr_unnamed_type_un;
@@ -13326,8 +13351,8 @@ class TechnoClass : RadioClass
   bool IsInPlayfield;
   Union_TechnoClass_TurretRecoil TechnoClass_TurretRecoil;
   Union_TechnoClass_BarrelRecoil TechnoClass_BarrelRecoil;
-  bool unknown_bool_418;
-  bool unknown_bool_419;
+  bool IsTether;
+  bool IsAlternativeTether;
   bool IsOwnedByCurrentPlayer;
   bool DiscoveredByCurrentPlayer;
   bool DiscoveredByComputer;
@@ -16104,8 +16129,8 @@ struct FootClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_528)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *vt_entry_52C)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
@@ -16467,8 +16492,8 @@ struct InfantryClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_528)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *vt_entry_52C)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
@@ -16929,8 +16954,8 @@ struct UnitClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_528)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *vt_entry_52C)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
@@ -17386,8 +17411,8 @@ struct AircraftClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_528)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *vt_entry_52C)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
@@ -23252,4 +23277,413 @@ struct BombListClass
   DynamicVectorClass_BombClass_PTR Bombs;
   DynamicVectorClass_TechnoClass_PTR Detectors;
   int UpdateDelay;
+};
+
+struct __unaligned JumpjetLocomotionClassOffset : IPersistStream, IPiggyback
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  int TurnRate;
+  int Speed;
+  float Climb;
+  float Crash;
+  int Height;
+  float Accel;
+  float Wobbles;
+  int Deviation;
+  bool NoWobbles;
+  unsigned __int8 unknown_3D;
+  unsigned __int8 unknown_3E;
+  unsigned __int8 unknown_3F;
+  CoordStruct DestinationCoords;
+  bool IsMoving;
+  unsigned __int8 unknown_4D;
+  unsigned __int8 unknown_4E;
+  unsigned __int8 unknown_4F;
+  JumpjetLocomotionClass_State State;
+  FacingClass LocomotionFacing;
+  unsigned __int8 unknown_6C;
+  unsigned __int8 unknown_6D;
+  unsigned __int8 unknown_6E;
+  unsigned __int8 unknown_6F;
+  long double CurrentSpeed;
+  long double MaxSpeed;
+  int CurrentHeight;
+  unsigned __int8 unknown_84;
+  unsigned __int8 unknown_85;
+  unsigned __int8 unknown_86;
+  unsigned __int8 unknown_87;
+  long double CurrentWobbles;
+  bool DestinationReached;
+  unsigned __int8 unknown_91;
+  unsigned __int8 unknown_92;
+  unsigned __int8 unknown_93;
+  ILocomotion *Piggybackee;
+  JumpjetLocomotionClass *OffsetClass;
+};
+
+struct JumpjetLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned FlyLocomotionClassOffset : IPersistStream
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  bool AirportBound;
+  char padding2[3];
+  CoordStruct MovingDestination;
+  CoordStruct XYZ2;
+  bool HasMoveOrder;
+  char padding3[3];
+  int FlightLevel;
+  char padding4[4];
+  long double TargetSpeed;
+  long double CurrentSpeed;
+  char IsTakingOff;
+  bool IsLanding;
+  bool WasLanding;
+  bool unknown_bool_53;
+  unsigned int unknown_54;
+  unsigned int unknown_58;
+  bool IsElevating;
+  bool unknown_bool_5D;
+  bool unknown_bool_5E;
+  bool unknown_bool_5F;
+  FlyLocomotionClass *OffsetClass;
+};
+
+struct FlyLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned TeleportLocomotionClassOffset : IPersistStream, IPiggyback
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  CoordStruct MovingDestination;
+  CoordStruct LastCoords;
+  bool Moving;
+  bool unknown_bool_35;
+  bool unknown_bool_36;
+  char padding2;
+  int State;
+  CDTimerClass Timer;
+  ILocomotion *Piggybackee;
+  TeleportLocomotionClass *OffsetClass;
+};
+
+struct TeleportLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+  void (__thiscall *vt_entry_28)(TeleportLocomotionClass *this, unsigned int);
+  bool (__thiscall *IsStill)(TeleportLocomotionClass *this);
+};
+
+struct __unaligned ShipLocomotionClassOffset : IPersistStream, IPiggyback
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  unsigned int PreviousRamp;
+  unsigned int CurrentRamp;
+  RateTimer SlopeTimer;
+  CoordStruct Destination;
+  CoordStruct HeadToCoord;
+  int SpeedAccum;
+  long double movementspeed_50;
+  unsigned int TrackNumber;
+  int TrackIndex;
+  bool IsOnShortTrack;
+  unsigned __int8 IsTurretLockedDown;
+  bool IsRotating;
+  bool IsDriving;
+  bool IsRocking;
+  bool IsLocked;
+  char padding2[2];
+  ILocomotion *Piggybackee;
+  char padding3[4];
+  ShipLocomotionClass *OffsetClass;
+};
+
+struct ShipLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned DriveLocomotionClassOffset : IPersistStream, IPiggyback
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  unsigned int PreviousRamp;
+  unsigned int CurrentRamp;
+  RateTimer SlopeTimer;
+  CoordStruct Destination;
+  CoordStruct HeadToCoord;
+  int SpeedAccum;
+  long double movementspeed_50;
+  unsigned int TrackNumber;
+  int TrackIndex;
+  bool IsOnShortTrack;
+  unsigned __int8 IsTurretLockedDown;
+  bool IsRotating;
+  bool IsDriving;
+  bool IsRocking;
+  bool IsLocked;
+  char padding2[2];
+  ILocomotion *Piggybackee;
+  int field_6C;
+  DriveLocomotionClass *OffsetClass;
+};
+
+struct DriveLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned TunnelLocomotionClassOffset : IPersistStream
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  TunnelLocomotionClass_State State;
+  CoordStruct Coords;
+  RateTimer DigTimer;
+  bool bool38;
+  char padding2[3];
+  TunnelLocomotionClass *OffsetClass;
+};
+
+struct TunnelLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned DropPodLocomotionClassOffset : IPersistStream, IPiggyback
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  bool OutOfMap;
+  char padding2[3];
+  CoordStruct DestinationCoords;
+  LocomotionID Piggybackee;
+  DropPodLocomotionClass *OffsetClass;
+};
+
+struct DropPodLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned RocketLocomotionClassOffset : IPersistStream
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  CoordStruct MovingDestination;
+  RateTimer MissionTimer;
+  CDTimerClass TrailerTimer;
+  int MissionState;
+  unsigned int unknown_44;
+  double CurrentSpeed;
+  bool unknown_bool_4C;
+  bool SpawnerIsElite;
+  char padding2[2];
+  float CurrentPitch;
+  unsigned int unknown_58;
+  unsigned int unknown_5C;
+  RocketLocomotionClass *OffsetClass;
+};
+
+struct RocketLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned HoverLocomotionClassOffset : IPersistStream
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  HoverLocomotionClass *OffsetClass;
+};
+
+struct HoverLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned MechLocomotionClassOffset : IPersistStream
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  CoordStruct Destination;
+  CoordStruct HeadToCoord;
+  bool IsMoving;
+  char padding2[3];
+  MechLocomotionClass *OffsetClass;
+};
+
+struct MechLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct __unaligned WalkLocomotionClassOffset : IPersistStream
+{
+  FootClass *Owner;
+  FootClass *LinkedTo;
+  bool Powered;
+  bool Dirty;
+  char padding[2];
+  int RefCount;
+  CoordStruct Destination;
+  CoordStruct HeadToCoord;
+  bool IsMoving;
+  bool Bool_35;
+  bool IsReallyMoving;
+  char padding2;
+  WalkLocomotionClass *OffsetClass;
+};
+
+struct WalkLocomotionClassOffset_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  int (__thiscall *Size)(LocomotionClass *this);
 };
