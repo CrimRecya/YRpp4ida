@@ -312,6 +312,8 @@ struct DirtyAreaStruct;
 struct BombListClass;
 struct WWMouseClass;
 struct WWMouseClass_vtbl; // 0x7F7B2C
+struct IndexClass_TL_int_A_int_TR_NodeElement;
+struct IndexClass_TL_int_A_int_TR_;
 
 // TODO STRUCT
 
@@ -13679,7 +13681,7 @@ struct TechnoClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
   unsigned int (__thiscall *GetDisguiseFlags)(TechnoClass *this, unsigned int);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_448)(TechnoClass *this, unsigned int, unsigned int);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
@@ -15415,7 +15417,7 @@ struct BuildingClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
   unsigned int (__thiscall *GetDisguiseFlags)(TechnoClass *this, unsigned int);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_448)(TechnoClass *this, unsigned int, unsigned int);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
@@ -16072,7 +16074,7 @@ struct FootClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
   unsigned int (__thiscall *GetDisguiseFlags)(TechnoClass *this, unsigned int);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_448)(TechnoClass *this, unsigned int, unsigned int);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
@@ -16123,7 +16125,7 @@ struct FootClass_vtbl
   bool (__thiscall *vt_entry_504)(FootClass *this);
   bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
   void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
   void (__thiscall *GoBerzerk)(FootClass *this);
   void (__thiscall *Panic)(FootClass *this);
   void (__thiscall *UnPanic)(FootClass *this);
@@ -16435,7 +16437,7 @@ struct InfantryClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
   unsigned int (__thiscall *GetDisguiseFlags)(TechnoClass *this, unsigned int);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_448)(TechnoClass *this, unsigned int, unsigned int);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
@@ -16486,7 +16488,7 @@ struct InfantryClass_vtbl
   bool (__thiscall *vt_entry_504)(FootClass *this);
   bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
   void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
   void (__thiscall *GoBerzerk)(FootClass *this);
   void (__thiscall *Panic)(FootClass *this);
   void (__thiscall *UnPanic)(FootClass *this);
@@ -16897,7 +16899,7 @@ struct UnitClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
   unsigned int (__thiscall *GetDisguiseFlags)(TechnoClass *this, unsigned int);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_448)(TechnoClass *this, unsigned int, unsigned int);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
@@ -16948,7 +16950,7 @@ struct UnitClass_vtbl
   bool (__thiscall *vt_entry_504)(FootClass *this);
   bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
   void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
   void (__thiscall *GoBerzerk)(FootClass *this);
   void (__thiscall *Panic)(FootClass *this);
   void (__thiscall *UnPanic)(FootClass *this);
@@ -17354,7 +17356,7 @@ struct AircraftClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
   unsigned int (__thiscall *GetDisguiseFlags)(TechnoClass *this, unsigned int);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_448)(TechnoClass *this, unsigned int, unsigned int);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
@@ -17405,7 +17407,7 @@ struct AircraftClass_vtbl
   bool (__thiscall *vt_entry_504)(FootClass *this);
   bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
   void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, struct IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, unsigned int, unsigned int);
   void (__thiscall *GoBerzerk)(FootClass *this);
   void (__thiscall *Panic)(FootClass *this);
   void (__thiscall *UnPanic)(FootClass *this);
@@ -23686,4 +23688,20 @@ struct WalkLocomotionClassOffset_vtbl
   HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
   void (__thiscall *~LocomotionClass)(LocomotionClass *this);
   int (__thiscall *Size)(LocomotionClass *this);
+};
+
+struct IndexClass_TL_int_A_int_TR_NodeElement
+{
+  int ID;
+  int Data;
+};
+
+struct IndexClass_TL_int_A_int_TR_
+{
+  IndexClass_TL_int_A_int_TR_NodeElement *IndexTable;
+  int IndexCount;
+  int IndexSize;
+  bool IsSorted;
+  char padding[3];
+  IndexClass_TL_int_A_int_TR_NodeElement *Archive;
 };
