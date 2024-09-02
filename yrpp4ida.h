@@ -23281,7 +23281,7 @@ struct BombListClass
   int UpdateDelay;
 };
 
-struct __unaligned JumpjetLocomotionClassOffset : IPersistStream, IPiggyback
+struct __unaligned JumpjetLocomotionClassOffset : ILocomotion, IPiggyback
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23382,7 +23382,7 @@ struct JumpjetLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned FlyLocomotionClassOffset : IPersistStream
+struct __unaligned FlyLocomotionClassOffset : ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23467,7 +23467,7 @@ struct FlyLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned TeleportLocomotionClassOffset : IPersistStream, IPiggyback
+struct __unaligned TeleportLocomotionClassOffset : ILocomotion, IPiggyback
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23541,7 +23541,7 @@ struct TeleportLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned ShipLocomotionClassOffset : IPersistStream, IPiggyback
+struct __unaligned ShipLocomotionClassOffset : ILocomotion, IPiggyback
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23624,7 +23624,7 @@ struct ShipLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned DriveLocomotionClassOffset : IPersistStream, IPiggyback
+struct __unaligned DriveLocomotionClassOffset : ILocomotion, IPiggyback
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23707,7 +23707,7 @@ struct DriveLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned TunnelLocomotionClassOffset : IPersistStream
+struct __unaligned TunnelLocomotionClassOffset : ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23777,7 +23777,7 @@ struct TunnelLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned DropPodLocomotionClassOffset : IPersistStream, IPiggyback
+struct __unaligned DropPodLocomotionClassOffset : ILocomotion, IPiggyback
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23846,7 +23846,7 @@ struct DropPodLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned RocketLocomotionClassOffset : IPersistStream
+struct __unaligned RocketLocomotionClassOffset : ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23923,7 +23923,7 @@ struct RocketLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned HoverLocomotionClassOffset : IPersistStream
+struct __unaligned HoverLocomotionClassOffset : ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -23988,7 +23988,7 @@ struct HoverLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned MechLocomotionClassOffset : IPersistStream
+struct __unaligned MechLocomotionClassOffset : ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -24057,7 +24057,7 @@ struct MechLocomotionClassOffset_vtbl
   int (__stdcall *Get_Speed_Accum)(ILocomotion *this);
 };
 
-struct __unaligned WalkLocomotionClassOffset : IPersistStream
+struct __unaligned WalkLocomotionClassOffset : ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
