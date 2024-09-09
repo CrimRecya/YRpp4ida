@@ -314,6 +314,7 @@ struct WWMouseClass;
 struct WWMouseClass_vtbl; // 0x7F7B2C
 struct IndexClass_TL_int_A_int_TR_NodeElement;
 struct IndexClass_TL_int_A_int_TR_;
+struct InputManagerClass; // 0x87F770
 
 // TODO STRUCT
 
@@ -501,7 +502,7 @@ struct DynamicVectorClass_Point2D;
 struct DynamicVectorClass_Point2D_vtbl; // 0x7EEB54
 struct VectorClass_AbstractClass_PTR;
 struct VectorClass_AbstractClass_PTR_vtbl; // 0x7E920C
-struct DynamicVectorClass_AbstractClass_PTR; // 0xB0F720
+struct DynamicVectorClass_AbstractClass_PTR; // 0xB0F720 / 0x8A0390
 struct DynamicVectorClass_AbstractClass_PTR_vtbl; // 0x7E91EC
 struct VectorClass_AbstractTypeClass_PTR;
 struct VectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA544
@@ -1126,6 +1127,8 @@ class CommandClass; // FIXME Command Tree Base (Subs exist)
 struct CommandClass_vtbl; // 0x7EBE3C
 class MPGameModeClass; // FIXME MPGameMode Tree Base (Subs exist)
 struct MPGameModeClass_vtbl; // 0x7EED60
+class GGadgetClass; // ::GadgetClass::LinkClass
+struct GGadgetClass_vtbl; // 0x7F02BC
 
 // TODO CLASS
 
@@ -14367,12 +14370,12 @@ struct DisplayClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
 };
 
 class RadarClass : DisplayClass
@@ -14477,12 +14480,12 @@ struct RadarClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
   void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
   void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
@@ -14551,12 +14554,12 @@ struct PowerClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
   void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
   void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
@@ -14639,12 +14642,12 @@ struct SidebarClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
   void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
   void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
@@ -14709,12 +14712,12 @@ struct TabClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
   void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
   void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
@@ -14727,12 +14730,11 @@ class ScrollClass : TabClass
   unsigned int unknown_int_5548;
   unsigned __int8 unknown_byte_554C;
   unsigned __int8 align_554D[3];
-  unsigned int unknown_int_5550;
-  unsigned int unknown_int_5554;
-  unsigned __int8 unknown_byte_5548;
-  unsigned __int8 unknown_byte_5549;
-  unsigned __int8 unknown_byte_554A;
-  unsigned __int8 padding_554B;
+  Point2D unknown_Point2D_5550;
+  bool unknown_bool_5558;
+  unsigned __int8 unknown_byte_5559;
+  unsigned __int8 unknown_byte_555A;
+  unsigned __int8 padding_555B;
 };
 
 struct ScrollClass_vtbl
@@ -14781,12 +14783,12 @@ struct ScrollClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
   void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
   void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
@@ -14849,12 +14851,12 @@ struct MouseClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, unsigned int);
+  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
   void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, unsigned int);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
   void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
   void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
@@ -24142,4 +24144,66 @@ struct IndexClass_TL_int_A_int_TR_
   bool IsSorted;
   char padding[3];
   IndexClass_TL_int_A_int_TR_NodeElement *Archive;
+};
+
+struct InputManagerClass
+{
+  int field_0;
+  int field_4;
+  int field_8;
+  int field_C;
+  int field_10;
+  unsigned __int8 Keycodes_b[256];
+  unsigned __int16 Keycodes_w[256];
+  int field_314;
+  int field_318;
+};
+
+class GGadgetClass : GadgetClass
+{
+  int X;
+  int Y;
+  int Width;
+  int Height;
+  bool NeedsRedraw;
+  bool IsSticky;
+  bool Disabled;
+  GadgetFlag Flags;
+};
+
+struct GGadgetClass_vtbl
+{
+  void (__thiscall *~GGadgetClass)(GGadgetClass *this);
+  LinkClass *(__thiscall *GetNext)(GGadgetClass *this);
+  LinkClass *(__thiscall *GetPrev)(GGadgetClass *this);
+  LinkClass *(__thiscall *Add)(GGadgetClass *this, LinkClass *);
+  LinkClass *(__thiscall *AddTail)(GGadgetClass *this, LinkClass *);
+  LinkClass *(__thiscall *AddHead)(GGadgetClass *this, LinkClass *);
+  LinkClass *(__thiscall *HeadOfList)(GGadgetClass *this, LinkClass *);
+  LinkClass *(__thiscall *TailOfList)(GGadgetClass *this, LinkClass *);
+  void (__thiscall *Zap)(GGadgetClass *this);
+  LinkClass *(__thiscall *Remove)(GGadgetClass *this);
+  unsigned int (__thiscall *Input)(GGadgetClass *this);
+  void (__thiscall *DrawAll)(GGadgetClass *this, bool);
+  void (__thiscall *DeleteList)(GGadgetClass *this);
+  GadgetClass *(__thiscall *ExtractGadget)(GGadgetClass *this, unsigned int);
+  void (__thiscall *MarkListToRedraw)(GGadgetClass *this);
+  void (__thiscall *Disable)(GGadgetClass *this);
+  void (__thiscall *Enable)(GGadgetClass *this);
+  unsigned int (__thiscall *GetID)(GGadgetClass *this);
+  void (__thiscall *MarkRedraw)(GGadgetClass *this);
+  void (__thiscall *PeerToPeer)(GGadgetClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *SetFocus)(GGadgetClass *this);
+  void (__thiscall *KillFocus)(GGadgetClass *this);
+  bool (__thiscall *IsFocused)(GGadgetClass *this);
+  bool (__thiscall *IsListToRedraw)(GGadgetClass *this);
+  bool (__thiscall *IsToRedraw)(GGadgetClass *this);
+  void (__thiscall *SetPosition)(GGadgetClass *this, int, int);
+  void (__thiscall *SetDimension)(GGadgetClass *this, int, int);
+  bool (__thiscall *Draw)(GGadgetClass *this, bool);
+  void (__thiscall *OnMouseEnter)(GGadgetClass *this);
+  void (__thiscall *OnMouseLeave)(GGadgetClass *this);
+  void (__thiscall *StickyProcess)(GGadgetClass *this, GadgetFlag);
+  bool (__thiscall *Action)(GGadgetClass *this, GadgetFlag, unsigned int*, KeyModifier);
+  bool (__thiscall *Clicked)(GGadgetClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
 };
