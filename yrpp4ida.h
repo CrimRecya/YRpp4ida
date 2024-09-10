@@ -14319,11 +14319,11 @@ class DisplayClass : MapClass
   bool unknown_bool_11CC;
   bool unknown_bool_11CD;
   bool unknown_bool_11CE;
-  bool DraggingRectangle;
-  bool unknown_bool_11D0;
+  bool LeftPressAndDraggingRectangle;
+  bool LeftPressAndNoDraggingRectangle;
   bool unknown_bool_11D1;
-  Point2D unknown_Point2D_11D4;
-  Point2D unknown_Point2D_11DC;
+  Point2D LeftDownPosition;
+  Point2D LeftDownPosition2;
   unsigned int padding_11E4;
 };
 
@@ -14364,7 +14364,7 @@ struct DisplayClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14373,8 +14373,8 @@ struct DisplayClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
@@ -14474,7 +14474,7 @@ struct RadarClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14483,8 +14483,8 @@ struct RadarClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
@@ -14548,7 +14548,7 @@ struct PowerClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14557,8 +14557,8 @@ struct PowerClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
@@ -14636,7 +14636,7 @@ struct SidebarClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14645,8 +14645,8 @@ struct SidebarClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
@@ -14706,7 +14706,7 @@ struct TabClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14715,8 +14715,8 @@ struct TabClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
@@ -14731,12 +14731,12 @@ struct TabClass_vtbl
 class ScrollClass : TabClass
 {
   unsigned int unknown_int_5548;
-  unsigned __int8 unknown_byte_554C;
+  bool RightDownAndDragging;
   unsigned __int8 align_554D[3];
-  Point2D unknown_Point2D_5550;
-  bool unknown_bool_5558;
+  Point2D RightDownPosition;
+  bool RightDownAndDragging2;
   unsigned __int8 unknown_byte_5559;
-  unsigned __int8 unknown_byte_555A;
+  bool AnyMouseButtonDown;
   unsigned __int8 padding_555B;
 };
 
@@ -14777,7 +14777,7 @@ struct ScrollClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14786,8 +14786,8 @@ struct ScrollClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
@@ -14845,7 +14845,7 @@ struct MouseClass_vtbl
   void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
   wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
   void (__thiscall *CloseWindow)(DisplayClass *this);
-  void (__thiscall *vt_entry_8C)(DisplayClass *this);
+  void (__thiscall *ClearDragBand)(DisplayClass *this);
   bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
   bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
   bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
@@ -14854,8 +14854,8 @@ struct MouseClass_vtbl
   bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
   void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *vt_entry_B0)(DisplayClass *this, Point2D *);
-  void (__thiscall *vt_entry_B4)(DisplayClass *this, Point2D *);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
   bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
   void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
   void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
