@@ -315,6 +315,7 @@ struct WWMouseClass_vtbl; // 0x7F7B2C
 struct IndexClass_TL_int_A_int_TR_NodeElement;
 struct IndexClass_TL_int_A_int_TR_;
 struct InputManagerClass; // 0x87F770
+struct AlphaLightingRemapClass;
 
 // TODO STRUCT
 
@@ -870,6 +871,10 @@ struct VectorClass_MPGameModeClass_PTR;
 struct VectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED40
 struct DynamicVectorClass_MPGameModeClass_PTR; // 0xABFDA0
 struct DynamicVectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED20
+struct VectorClass_AlphaLightingRemapClass_PTR;
+struct VectorClass_AlphaLightingRemapClass_PTR_vtbl;
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x0x88A080
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl;
 
 // TODO VECTOR
 
@@ -14317,10 +14322,8 @@ class DisplayClass : MapClass
   bool DraggingRectangle;
   bool unknown_bool_11D0;
   bool unknown_bool_11D1;
-  unsigned int unknown_11D4;
-  unsigned int unknown_11D8;
-  unsigned int unknown_11DC;
-  unsigned int unknown_11E0;
+  Point2D unknown_Point2D_11D4;
+  Point2D unknown_Point2D_11DC;
   unsigned int padding_11E4;
 };
 
@@ -24206,4 +24209,48 @@ struct GGadgetClass_vtbl
   void (__thiscall *StickyProcess)(GGadgetClass *this, GadgetFlag);
   bool (__thiscall *Action)(GGadgetClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(GGadgetClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+};
+
+struct AlphaLightingRemapClass
+{
+	unsigned short Table[256][256];
+	int IntensityCount;
+	int RefCount;
+};
+
+struct __declspec(align(4)) VectorClass_AlphaLightingRemapClass_PTR
+{
+  VectorClass_AlphaLightingRemapClass_PTR_vtbl *__vftable;
+  AlphaLightingRemapClass **Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_AlphaLightingRemapClass_PTR_vtbl
+{
+  void (__thiscall *~VectorClass_AlphaLightingRemapClass_PTR)(VectorClass_AlphaLightingRemapClass_PTR *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_AlphaLightingRemapClass_PTR *this, VectorClass_AlphaLightingRemapClass_PTR *);
+  bool (__thiscall *SetCapacity)(VectorClass_AlphaLightingRemapClass_PTR *this, int, AlphaLightingRemapClass **);
+  void (__thiscall *Clear)(VectorClass_AlphaLightingRemapClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
+  int (__thiscall *GetItemIndex)(VectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
+  AlphaLightingRemapClass *(__thiscall *GetItem)(VectorClass_AlphaLightingRemapClass_PTR *this, int);
+};
+
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR : VectorClass_AlphaLightingRemapClass_PTR
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_AlphaLightingRemapClass_PTR)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, VectorClass_AlphaLightingRemapClass_PTR *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, int, AlphaLightingRemapClass **);
+  void (__thiscall *Clear)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
+  AlphaLightingRemapClass *(__thiscall *GetItem)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, int);
 };
