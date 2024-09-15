@@ -316,6 +316,7 @@ struct IndexClass_TL_int_A_int_TR_NodeElement;
 struct IndexClass_TL_int_A_int_TR_;
 struct InputManagerClass; // 0x87F770
 struct AlphaLightingRemapClass;
+struct GameOptionsClass;
 
 // TODO STRUCT
 
@@ -24253,4 +24254,55 @@ struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
   AlphaLightingRemapClass *(__thiscall *GetItem)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, int);
+};
+
+struct GameOptionsClass
+{
+  int GameSpeed;
+  int Difficulty;
+  int CampDifficulty;
+  int ScrollMethod;
+  int ScrollRate;
+  bool AutoScroll;
+  int DetailLevel;
+  bool SidebarMode;
+  bool SidebarCameoText;
+  bool UnitActionLines;
+  bool ShowHidden;
+  bool Tooltips;
+  int ScreenWidth;
+  int ScreenHeight;
+  int ShellWidth;
+  int ShellHeight;
+  bool StretchMovies;
+  bool AllowHiResModes;
+  bool AllowVRAMSidebar;
+  float SoundVolume;
+  float VoiceVolume;
+  float MovieVolume;
+  bool IsScoreRepeat;
+  bool InGameMusic;
+  bool IsScoreShuffle;
+  __int16 SoundLatency;
+  __int16 Socket;
+  int LastUnlockedSovMovie;
+  int LastUnlockedAllMovie;
+  int NetCard;
+  char NetID[32];
+  int unknown_int_78;
+  int unknown_int_7C;
+  int unknown_int_80;
+  int unknown_int_84;
+  int unknown_int_88;
+  int unknown_int_8C;
+  int unknown_int_90;
+  int unknown_int_94;
+  int KeyForceMove1;
+  int KeyForceMove2;
+  int KeyForceFire1;
+  int KeyForceFire2;
+  int KeyForceSelect1;
+  int KeyForceSelect2;
+  int unknown_int_B0;
+  int unknown_int_B4;
 };
