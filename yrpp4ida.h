@@ -13720,7 +13720,7 @@ struct TechnoClass_vtbl
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  int (__thiscall *GetMegaMission)(TechnoClass *this);
+  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
@@ -15453,7 +15453,7 @@ struct BuildingClass_vtbl
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  int (__thiscall *GetMegaMission)(TechnoClass *this);
+  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
@@ -16110,7 +16110,7 @@ struct FootClass_vtbl
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  int (__thiscall *GetMegaMission)(TechnoClass *this);
+  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
@@ -16473,7 +16473,7 @@ struct InfantryClass_vtbl
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  int (__thiscall *GetMegaMission)(TechnoClass *this);
+  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
@@ -16935,7 +16935,7 @@ struct UnitClass_vtbl
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  int (__thiscall *GetMegaMission)(TechnoClass *this);
+  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
@@ -17392,7 +17392,7 @@ struct AircraftClass_vtbl
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  int (__thiscall *GetMegaMission)(TechnoClass *this);
+  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
