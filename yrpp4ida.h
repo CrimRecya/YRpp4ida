@@ -4664,22 +4664,22 @@ struct RawFileClass_vtbl
 
 class BufferIOFileClass : RawFileClass
 {
-  bool unknown_bool_24;
-  bool unknown_bool_25;
-  bool unknown_bool_26;
-  bool unknown_bool_27;
-  bool unknown_bool_28;
-  bool unknown_bool_29;
-  unsigned int unknown_2C;
-  unsigned int unknown_30;
-  unsigned int unknown_34;
-  unsigned int unknown_38;
-  unsigned int unknown_3C;
-  unsigned int unknown_40;
-  int unknown_int_44;
-  int unknown_int_48;
-  unsigned int unknown_4C;
-  unsigned int unknown_50;
+  bool HasIOBuffer;
+  bool ConsiderAsValid;
+  bool IsOpening;
+  bool DataLeftInBuffer;
+  bool DataNeedFlushing;
+  bool AsBufferedIOFile;
+  FileAccessMode ActualAccessMode;
+  void *IOBuffer;
+  unsigned int IOBufferLength;
+  unsigned int IOBufferOffset;
+  unsigned int FilePrevOffset;
+  unsigned int FlushBeginOffset;
+  unsigned int FlushEndOffset;
+  unsigned int FileClipEnd;
+  unsigned int FileOffset;
+  unsigned int FileBeginOffset;
 };
 
 struct BufferIOFileClass_vtbl
@@ -7264,7 +7264,7 @@ class Surface
 
 struct Surface_vtbl
 {
-  void (__thiscall *~Surface)(Surface *this);
+  void (__thiscall *~Surface)(Surface *this, bool);
   bool (__thiscall *CopyFromWhole)(Surface *this, Surface *, bool, bool);
   bool (__thiscall *CopyFromPart)(Surface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
   bool (__thiscall *CopyFrom)(Surface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
@@ -7287,7 +7287,7 @@ struct Surface_vtbl
   bool (__thiscall *DrawLine_)(Surface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(Surface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(Surface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(Surface *this, int, int);
+  int (__thiscall *Lock)(Surface *this, int, int);
   bool (__thiscall *Unlock)(Surface *this);
   bool (__thiscall *CanLock)(Surface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(Surface *this, unsigned int, unsigned int);
@@ -17703,7 +17703,7 @@ class XSurface : Surface
 
 struct XSurface_vtbl
 {
-  void (__thiscall *~XSurface)(XSurface *this);
+  void (__thiscall *~XSurface)(XSurface *this, bool);
   bool (__thiscall *CopyFromWhole)(XSurface *this, Surface *, bool, bool);
   bool (__thiscall *CopyFromPart)(XSurface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
   bool (__thiscall *CopyFrom)(XSurface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
@@ -17726,7 +17726,7 @@ struct XSurface_vtbl
   bool (__thiscall *DrawLine_)(XSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(XSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(XSurface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(XSurface *this, int, int);
+  int (__thiscall *Lock)(XSurface *this, int, int);
   bool (__thiscall *Unlock)(XSurface *this);
   bool (__thiscall *CanLock)(XSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(XSurface *this, unsigned int, unsigned int);
@@ -17753,7 +17753,7 @@ class DSurface : XSurface
 
 struct DSurface_vtbl
 {
-  void (__thiscall *~DSurface)(DSurface *this);
+  void (__thiscall *~DSurface)(DSurface *this, bool);
   bool (__thiscall *CopyFromWhole)(DSurface *this, Surface *, bool, bool);
   bool (__thiscall *CopyFromPart)(DSurface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
   bool (__thiscall *CopyFrom)(DSurface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
@@ -17776,7 +17776,7 @@ struct DSurface_vtbl
   bool (__thiscall *DrawLine_)(DSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(DSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(DSurface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(DSurface *this, int, int);
+  int (__thiscall *Lock)(DSurface *this, int, int);
   bool (__thiscall *Unlock)(DSurface *this);
   bool (__thiscall *CanLock)(DSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(DSurface *this, unsigned int, unsigned int);
@@ -17800,7 +17800,7 @@ class BSurface : XSurface
 
 struct BSurface_vtbl
 {
-  void (__thiscall *~BSurface)(BSurface *this);
+  void (__thiscall *~BSurface)(BSurface *this, bool);
   bool (__thiscall *CopyFromWhole)(BSurface *this, Surface *, bool, bool);
   bool (__thiscall *CopyFromPart)(BSurface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
   bool (__thiscall *CopyFrom)(BSurface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
@@ -17823,7 +17823,7 @@ struct BSurface_vtbl
   bool (__thiscall *DrawLine_)(BSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(BSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(BSurface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(BSurface *this, int, int);
+  int (__thiscall *Lock)(BSurface *this, int, int);
   bool (__thiscall *Unlock)(BSurface *this);
   bool (__thiscall *CanLock)(BSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(BSurface *this, unsigned int, unsigned int);
