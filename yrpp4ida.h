@@ -881,259 +881,259 @@ struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl;
 
 class AbstractClass; // Abstract Tree Base
 struct AbstractClass_vtbl; // 0x7E1F50
-class AbstractTypeClass; // ::AbstractClass
+class AbstractTypeClass; // : AbstractClass
 struct AbstractTypeClass_vtbl; // 0x7E2000
-class TagClass; // ::AbstractClass
+class TagClass; // : AbstractClass
 struct TagClass_vtbl; // 0x7F44E0
-class TagTypeClass; // ::AbstractTypeClass::AbstractClass
+class TagTypeClass; // : AbstractTypeClass : AbstractClass
 struct TagTypeClass_vtbl; // 0x7F45C4
-class TriggerClass; // ::AbstractClass
+class TriggerClass; // : AbstractClass
 struct TriggerClass_vtbl; // 0x7F5858
-class TriggerTypeClass; // ::AbstractTypeClass::AbstractClass
+class TriggerTypeClass; // : AbstractTypeClass : AbstractClass
 struct TriggerTypeClass_vtbl; // 0x7F5904
-class CampaignClass; // ::AbstractTypeClass::AbstractClass
+class CampaignClass; // : AbstractTypeClass : AbstractClass
 struct CampaignClass_vtbl; // 0x7E4A28
-class WaypointPathClass; // ::AbstractClass
+class WaypointPathClass; // : AbstractClass
 struct WaypointPathClass_vtbl; // 0x7F6E70
-class HouseClass; // ::AbstractClass
+class HouseClass; // : AbstractClass
 struct HouseClass_vtbl; // 0x7EA8A0
-class HouseTypeClass; // ::AbstractTypeClass::AbstractClass
+class HouseTypeClass; // : AbstractTypeClass : AbstractClass
 struct HouseTypeClass_vtbl; // 0x7EAB58
 class FileClass; // File Tree Base
 struct FileClass_vtbl; // 0x7F08BC
-class RawFileClass; // ::FileClass
+class RawFileClass; // : FileClass
 struct RawFileClass_vtbl; // 0x7F0904
-class BufferIOFileClass; // ::RawFileClass::FileClass
+class BufferIOFileClass; // : RawFileClass : FileClass
 struct BufferIOFileClass_vtbl; // 0x7E3A2C
-class CDFileClass; // ::BufferIOFileClass::RawFileClass::FileClass
+class CDFileClass; // : BufferIOFileClass : RawFileClass : FileClass
 struct CDFileClass_vtbl; // 0x7E1668
-class CCFileClass; // ::CDFileClass::BufferIOFileClass::RawFileClass::FileClass
+class CCFileClass; // : CDFileClass : BufferIOFileClass : RawFileClass : FileClass
 struct CCFileClass_vtbl; // 0x7E16B0
-class BombClass; // ::AbstractClass
+class BombClass; // : AbstractClass
 struct BombClass_vtbl; // 0x7E3D10
 class ConvertClass; // Convert Tree Base
 struct ConvertClass_vtbl; // 0x7E5358
-class LightConvertClass; // ::ConvertClass
+class LightConvertClass; // : ConvertClass
 struct LightConvertClass_vtbl; // 0x7ED0A4
-class ObjectClass; // ::AbstractClass
+class ObjectClass; // : AbstractClass
 struct ObjectClass_vtbl; // 0x7EF060
-class ObjectTypeClass; // ::AbstractTypeClass::AbstractClass
+class ObjectTypeClass; // : AbstractTypeClass : AbstractClass
 struct ObjectTypeClass_vtbl; // 0x7EF2D8
-class AnimClass; // ::ObjectClass::AbstractClass
+class AnimClass; // : ObjectClass : AbstractClass
 struct AnimClass_vtbl; // 0x7E3354
-class AnimTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class AnimTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct AnimTypeClass_vtbl; // 0x7E3608
-class SmudgeClass; // ::ObjectClass::AbstractClass
+class SmudgeClass; // : ObjectClass : AbstractClass
 struct SmudgeClass_vtbl; // 0x7F32FC
-class SmudgeTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class SmudgeTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct SmudgeTypeClass_vtbl; // 0x7F3528
-class SuperClass; // ::AbstractClass
+class SuperClass; // : AbstractClass
 struct SuperClass_vtbl; // 0x7F3FE8
-class SuperWeaponTypeClass; // ::AbstractTypeClass::AbstractClass
+class SuperWeaponTypeClass; // : AbstractTypeClass : AbstractClass
 struct SuperWeaponTypeClass_vtbl; // 0x7F4090
-class ScriptClass; // ::AbstractClass
+class ScriptClass; // : AbstractClass
 struct ScriptClass_vtbl; // 0x7F0F78
-class ScriptTypeClass; // ::AbstractTypeClass::AbstractClass
+class ScriptTypeClass; // : AbstractTypeClass : AbstractClass
 struct ScriptTypeClass_vtbl; // 0x7F1008
-class TeamClass; // ::AbstractClass
+class TeamClass; // : AbstractClass
 struct TeamClass_vtbl; // 0x7F4730
-class TeamTypeClass; // ::AbstractTypeClass::AbstractClass
+class TeamTypeClass; // : AbstractTypeClass : AbstractClass
 struct TeamTypeClass_vtbl; // 0x7F47D0
-class TActionClass; // ::AbstractClass
+class TActionClass; // : AbstractClass
 struct TActionClass_vtbl; // 0x7F443C
-class TaskForceClass; // ::AbstractTypeClass::AbstractClass
+class TaskForceClass; // : AbstractTypeClass : AbstractClass
 struct TaskForceClass_vtbl; // 0x7F4680
-class TEventClass; // ::AbstractClass
+class TEventClass; // : AbstractClass
 struct TEventClass_vtbl; // 0x7F5578
-class WaypointPathClass; // ::AbstractClass
+class WaypointPathClass; // : AbstractClass
 struct WaypointPathClass_vtbl; // 0x7F6E70
-class AirstrikeClass; // ::AbstractClass
+class AirstrikeClass; // : AbstractClass
 struct AirstrikeClass_vtbl; // 0x7E29A8
-class CaptureManagerClass; // ::AbstractClass
+class CaptureManagerClass; // : AbstractClass
 struct CaptureManagerClass_vtbl; // 0x7E4B40
-class SpawnManagerClass; // ::AbstractClass
+class SpawnManagerClass; // : AbstractClass
 struct SpawnManagerClass_vtbl; // 0x7F3650
-class SlaveManagerClass; // ::AbstractClass
+class SlaveManagerClass; // : AbstractClass
 struct SlaveManagerClass_vtbl; // 0x7F31C8
-class ParasiteClass; // ::AbstractClass
+class ParasiteClass; // : AbstractClass
 struct ParasiteClass_vtbl; // 0x7EF890
-class FactoryClass; // ::AbstractClass
+class FactoryClass; // : AbstractClass
 struct FactoryClass_vtbl; // 0x7E88D0
-class LightSourceClass; // ::AbstractClass
+class LightSourceClass; // : AbstractClass
 struct LightSourceClass_vtbl; // 0x7ED028
-class RadSiteClass; // ::AbstractClass
+class RadSiteClass; // : AbstractClass
 struct RadSiteClass_vtbl; // 0x7F0810
-class AlphaShapeClass; // ::AbstractClass
+class AlphaShapeClass; // : AbstractClass
 struct AlphaShapeClass_vtbl; // 0x7E32A4
-class EMPulseClass; // ::AbstractClass
+class EMPulseClass; // : AbstractClass
 struct EMPulseClass_vtbl; // 0x7E87A8
-class TemporalClass; // ::AbstractClass
+class TemporalClass; // : AbstractClass
 struct TemporalClass_vtbl; // 0x7F5180
-class NeuronClass; // ::AbstractClass
+class NeuronClass; // : AbstractClass
 struct NeuronClass_vtbl; // 0x7E3DF0
-class DiskLaserClass; // ::AbstractClass
+class DiskLaserClass; // : AbstractClass
 struct DiskLaserClass_vtbl; // 0x7E5FB8
-class SideClass; // ::AbstractTypeClass::AbstractClass
+class SideClass; // : AbstractTypeClass : AbstractClass
 struct SideClass_vtbl; // 0x7F2EC0
-class AITriggerTypeClass; // ::AbstractTypeClass::AbstractClass
+class AITriggerTypeClass; // : AbstractTypeClass : AbstractClass
 struct AITriggerTypeClass_vtbl; // 0x7E2A50
-class TiberiumClass; // ::AbstractTypeClass::AbstractClass
+class TiberiumClass; // : AbstractTypeClass : AbstractClass
 struct TiberiumClass_vtbl; // 0x7F5728
-class VoxelAnimClass; // ::ObjectClass::AbstractClass
+class VoxelAnimClass; // : ObjectClass : AbstractClass
 struct VoxelAnimClass_vtbl; // 0x7F6318
-class VoxelAnimTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class VoxelAnimTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct VoxelAnimTypeClass_vtbl; // 0x7F6548
-class WarheadTypeClass; // ::AbstractTypeClass::AbstractClass
+class WarheadTypeClass; // : AbstractTypeClass : AbstractClass
 struct WarheadTypeClass_vtbl; // 0x7F6B30
-class WeaponTypeClass; // ::AbstractTypeClass::AbstractClass
+class WeaponTypeClass; // : AbstractTypeClass : AbstractClass
 struct WeaponTypeClass_vtbl; // 0x7F73B8
-class ParticleClass; // ::ObjectClass::AbstractClass
+class ParticleClass; // : ObjectClass : AbstractClass
 struct ParticleClass_vtbl; // 0x7EF954
-class ParticleTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class ParticleTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct ParticleTypeClass_vtbl; // 0x7F0188
-class ParticleSystemClass; // ::ObjectClass::AbstractClass
+class ParticleSystemClass; // : ObjectClass : AbstractClass
 struct ParticleSystemClass_vtbl; // 0x7EFB9C
-class ParticleSystemTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class ParticleSystemTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct ParticleSystemTypeClass_vtbl; // 0x7F00A8
-class BulletClass; // ::ObjectClass::AbstractClass
+class BulletClass; // : ObjectClass : AbstractClass
 struct BulletClass_vtbl; // 0x7E46E4
-class BulletTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class BulletTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct BulletTypeClass_vtbl; // 0x7E4948
-class OverlayClass; // ::ObjectClass::AbstractClass
+class OverlayClass; // : ObjectClass : AbstractClass
 struct OverlayClass_vtbl; // 0x7EF3D4
-class OverlayTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class OverlayTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct OverlayTypeClass_vtbl; // 0x7EF600
-class CellClass; // ::AbstractClass
+class CellClass; // : AbstractClass
 struct CellClass_vtbl; // 0x7E4EEC
-class WaveClass; // ::ObjectClass::AbstractClass
+class WaveClass; // : ObjectClass : AbstractClass
 struct WaveClass_vtbl; // 0x7F6BF4
-class MissionClass; // ::ObjectClass::AbstractClass
+class MissionClass; // : ObjectClass : AbstractClass
 struct MissionClass_vtbl; // 0x7EDCC0
-class RadioClass; // ::MissionClass::ObjectClass::AbstractClass
+class RadioClass; // : MissionClass : ObjectClass : AbstractClass
 struct RadioClass_vtbl; // 0x7F0508
-class TechnoClass; // ::RadioClass::MissionClass::ObjectClass::AbstractClass
+class TechnoClass; // : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct TechnoClass_vtbl; // 0x7F4960
-class TechnoTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class TechnoTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct TechnoTypeClass_vtbl; // 0x7F4ED8
 class LinkClass; // Link Tree Base
 struct LinkClass_vtbl; // 0x7E9344
-class GadgetClass; // ::LinkClass
+class GadgetClass; // : LinkClass
 struct GadgetClass_vtbl; // 0x7E92BC
 class GScreenClass; // GScreen Tree Base
 struct GScreenClass_vtbl; // 0x7EA6FC
-class MapClass; // ::GScreenClass
+class MapClass; // : GScreenClass
 struct MapClass_vtbl; // 0x7ED404
-class DisplayClass; // ::MapClass::GScreenClass
+class DisplayClass; // : MapClass : GScreenClass
 struct DisplayClass_vtbl; // 0x7E6114
-class RadarClass; // ::DisplayClass::MapClass::GScreenClass
+class RadarClass; // : DisplayClass : MapClass : GScreenClass
 struct RadarClass_vtbl; // 0x7F0344
-class PowerClass; // ::RadarClass::DisplayClass::MapClass::GScreenClass
+class PowerClass; // : RadarClass : DisplayClass : MapClass : GScreenClass
 struct PowerClass_vtbl; // 0x7EFF54
-class SidebarClass; // ::PowerClass::RadarClass::DisplayClass::MapClass::GScreenClass
+class SidebarClass; // : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
 struct SidebarClass_vtbl; // 0x7F3058
-class TabClass; // ::SidebarClass::PowerClass::RadarClass::DisplayClass::MapClass::GScreenClass
+class TabClass; // : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
 struct TabClass_vtbl; // 0x7EDFB4
-class ScrollClass; // ::TabClass::SidebarClass::PowerClass::RadarClass::DisplayClass::MapClass::GScreenClass
+class ScrollClass; // : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
 struct ScrollClass_vtbl; // 0x7F1094
-class MouseClass; // 0x87F7E8 (4CurrentPlayer) ::ScrollClass::TabClass::SidebarClass::PowerClass::RadarClass::DisplayClass::MapClass::GScreenClass
+class MouseClass; // 0x87F7E8 (4CurrentPlayer)  : ScrollClass : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
 struct MouseClass_vtbl; // 0x7E1964
-class TacticalClass; // ::AbstractClass
+class TacticalClass; // : AbstractClass
 struct TacticalClass_vtbl; // 0x7F4348
-class BuildingLightClass; // ::ObjectClass::AbstractClass
+class BuildingLightClass; // : ObjectClass : AbstractClass
 struct BuildingLightClass_vtbl; // 0x7E3AD0
-class BuildingClass; // ::TechnoClass::RadioClass::MissionClass::ObjectClass::AbstractClass
+class BuildingClass; // : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct BuildingClass_vtbl; // 0x7E3EBC
-class BuildingTypeClass; // ::TechnoTypeClass::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class BuildingTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct BuildingTypeClass_vtbl; // 0x7E4570
-class FootClass; // ::TechnoClass::RadioClass::MissionClass::ObjectClass::AbstractClass
+class FootClass; // : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct FootClass_vtbl; // 0x7E8C94
-class InfantryClass; // ::FootClass::TechnoClass::RadioClass::MissionClass::ObjectClass::AbstractClass
+class InfantryClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct InfantryClass_vtbl; // 0x7EB058
-class InfantryTypeClass; // ::TechnoTypeClass::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class InfantryTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct InfantryTypeClass_vtbl; // 0x7EB610
-class UnitClass; // ::FootClass::TechnoClass::RadioClass::MissionClass::ObjectClass::AbstractClass
+class UnitClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct UnitClass_vtbl; // 0x7F5C70
-class UnitTypeClass; // ::TechnoTypeClass::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class UnitTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct UnitTypeClass_vtbl; // 0x7F6218
-class AircraftClass; // ::FootClass::TechnoClass::RadioClass::MissionClass::ObjectClass::AbstractClass
+class AircraftClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct AircraftClass_vtbl; // 0x7E22A4
-class AircraftTypeClass; // ::TechnoTypeClass::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class AircraftTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct AircraftTypeClass_vtbl; // 0x7E2868
-class TerrainClass; // ::ObjectClass::AbstractClass
+class TerrainClass; // : ObjectClass : AbstractClass
 struct TerrainClass_vtbl; // 0x7F522C
-class TerrainTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class TerrainTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct TerrainTypeClass_vtbl; // 0x7F5458
 class Surface; // Surface Tree Base
 struct Surface_vtbl; // 0x7E2198
-class XSurface; // ::Surface
+class XSurface; // : Surface
 struct XSurface_vtbl; // 0x7E2104
-class DSurface; // ::XSurface::Surface
+class DSurface; // : XSurface : Surface
 struct DSurface_vtbl; // 0x7E85D4
-class BSurface; // ::XSurface::Surface
+class BSurface; // : XSurface : Surface
 struct BSurface_vtbl; // 0x7E2070
 class LocomotionClass; // Locomotion Tree Base
 struct LocomotionClass_vtbl; // 0x7EAEC0
-class JumpjetLocomotionClass; // ::LocomotionClass
+class JumpjetLocomotionClass; // : LocomotionClass
 struct JumpjetLocomotionClass_vtbl; // 0x7ECE34
-class FlyLocomotionClass; // ::LocomotionClass
+class FlyLocomotionClass; // : LocomotionClass
 struct FlyLocomotionClass_vtbl; // 0x7E8AC0
-class TeleportLocomotionClass; // ::LocomotionClass
+class TeleportLocomotionClass; // : LocomotionClass
 struct TeleportLocomotionClass_vtbl; // 0x7F50CC
-class ShipLocomotionClass; // ::LocomotionClass
+class ShipLocomotionClass; // : LocomotionClass
 struct ShipLocomotionClass_vtbl; // 0x7F2E58
-class DriveLocomotionClass; // ::LocomotionClass
+class DriveLocomotionClass; // : LocomotionClass
 struct DriveLocomotionClass_vtbl; // 0x7E7F7C
-class TunnelLocomotionClass; // ::LocomotionClass
+class TunnelLocomotionClass; // : LocomotionClass
 struct TunnelLocomotionClass_vtbl; // 0x7F5AF0
-class DropPodLocomotionClass; // ::LocomotionClass
+class DropPodLocomotionClass; // : LocomotionClass
 struct DropPodLocomotionClass_vtbl; // 0x7E8344
-class RocketLocomotionClass; // ::LocomotionClass
+class RocketLocomotionClass; // : LocomotionClass
 struct RocketLocomotionClass_vtbl; // 0x7F0BE8
-class HoverLocomotionClass; // ::LocomotionClass
+class HoverLocomotionClass; // : LocomotionClass
 struct HoverLocomotionClass_vtbl; // 0x7EADC8
-class MechLocomotionClass; // ::LocomotionClass
+class MechLocomotionClass; // : LocomotionClass
 struct MechLocomotionClass_vtbl; // 0x7EDC38
-class WalkLocomotionClass; // ::LocomotionClass
+class WalkLocomotionClass; // : LocomotionClass
 struct WalkLocomotionClass_vtbl; // 0x7F6AC4
-class TextLabelClass; // ::GadgetClass::LinkClass
+class TextLabelClass; // : GadgetClass : LinkClass
 struct TextLabelClass_vtbl; // 0x7F5B44
-class LayerClass; // Layer Tree Base (::DynamicVectorClass_ObjectClass_PTR)
+class LayerClass; // Layer Tree Base ( : DynamicVectorClass_ObjectClass_PTR)
 struct LayerClass_vtbl; // 0x7E6060
-class LogicClass; // ::LayerClass
+class LogicClass; // : LayerClass
 struct LogicClass_vtbl; // 0x7E18FC
-class VeinholeMonsterClass; // ::ObjectClass::AbstractClass
+class VeinholeMonsterClass; // : ObjectClass : AbstractClass
 struct VeinholeMonsterClass_vtbl; // 0x7F66A8
-class IsometricTileClass; // ::ObjectClass::AbstractClass
+class IsometricTileClass; // : ObjectClass : AbstractClass
 struct IsometricTileClass_vtbl; // 0x7EC258
-class IsometricTileTypeClass; // ::ObjectTypeClass::AbstractTypeClass::AbstractClass
+class IsometricTileTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct IsometricTileTypeClass_vtbl; // 0x7ECC48
-class ControlClass; // ::GadgetClass::LinkClass
+class ControlClass; // : GadgetClass : LinkClass
 struct ControlClass_vtbl; // 0x7E528C
-class ToggleClass; // ::ControlClass::GadgetClass::LinkClass
+class ToggleClass; // : ControlClass : GadgetClass : LinkClass
 struct ToggleClass_vtbl; // 0x7E8118
-class ShapeButtonClass; // ::ToggleClass::ControlClass::GadgetClass::LinkClass
+class ShapeButtonClass; // : ToggleClass : ControlClass : GadgetClass : LinkClass
 struct ShapeButtonClass_vtbl; // 0x7E8088
-class EditClass; // ::ControlClass::GadgetClass::LinkClass
+class EditClass; // : ControlClass : GadgetClass : LinkClass
 struct EditClass_vtbl; // 0x7E81A4
-class GaugeClass; // ::ControlClass::GadgetClass::LinkClass
+class GaugeClass; // : ControlClass : GadgetClass : LinkClass
 struct GaugeClass_vtbl; // 0x7E9384
-class SliderClass; // ::GaugeClass::ControlClass::GadgetClass::LinkClass
+class SliderClass; // : GaugeClass : ControlClass : GadgetClass : LinkClass
 struct SliderClass_vtbl; // 0x7ED21C
-class ListClass; // ::ControlClass::GadgetClass::LinkClass
+class ListClass; // : ControlClass : GadgetClass : LinkClass
 struct ListClass_vtbl; // 0x7ED10C
-class DropListClass; // ::EditClass::ControlClass::GadgetClass::LinkClass
+class DropListClass; // : EditClass : ControlClass : GadgetClass : LinkClass
 struct DropListClass_vtbl; // 0x7E7FCC
-class TriColorGaugeClass; // ::GaugeClass::ControlClass::GadgetClass::LinkClass
+class TriColorGaugeClass; // : GaugeClass : ControlClass : GadgetClass : LinkClass
 struct TriColorGaugeClass_vtbl; // 0x7E9430
-class CheckListClass; // ::ListClass::ControlClass::GadgetClass::LinkClass
+class CheckListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
 struct CheckListClass_vtbl; // 0x7E4F84
-class ColorListClass; // ::ListClass::ControlClass::GadgetClass::LinkClass
+class ColorListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
 struct ColorListClass_vtbl; // 0x7E5054
 class CommandClass; // FIXME Command Tree Base (Subs exist)
 struct CommandClass_vtbl; // 0x7EBE3C
 class MPGameModeClass; // FIXME MPGameMode Tree Base (Subs exist)
 struct MPGameModeClass_vtbl; // 0x7EED60
-class GGadgetClass; // ::GadgetClass::LinkClass
+class GGadgetClass; // : GadgetClass : LinkClass
 struct GGadgetClass_vtbl; // 0x7F02BC
 
 // TODO CLASS
