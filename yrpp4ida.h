@@ -2427,6 +2427,277 @@ enum MouseCursorType : unsigned int
   MouseCursorType_SpyPlane = 0x55
 };
 
+enum KeyNumType : __int16
+{
+  KN_NONE = 0x0,
+  KN_LMOUSE = 0x1,
+  KN_RMOUSE = 0x2,
+  VK_CANCEL = 0x3,
+  KN_MMOUSE = 0x4,
+  VK_NONE_05 = 0x5,
+  VK_NONE_06 = 0x6,
+  VK_NONE_07 = 0x7,
+  VK_BACK = 0x8,
+  VK_TAB = 0x9,
+  VK_NONE_0A = 0xA,
+  VK_NONE_0B = 0xB,
+  VK_CLEAR = 0xC,
+  VK_RETURN = 0xD,
+  VK_NONE_0E = 0xE,
+  VK_NONE_0F = 0xF,
+  VK_SHIFT = 0x10,
+  VK_CONTROL = 0x11,
+  VK_MENU = 0x12,
+  VK_ALT = 0x12,
+  VK_PAUSE = 0x13,
+  VK_CAPITAL = 0x14,
+  VK_NONE_15 = 0x15,
+  VK_NONE_16 = 0x16,
+  VK_NONE_17 = 0x17,
+  VK_NONE_18 = 0x18,
+  VK_NONE_19 = 0x19,
+  VK_NONE_1A = 0x1A,
+  VK_ESCAPE = 0x1B,
+  VK_NONE_1C = 0x1C,
+  VK_NONE_1D = 0x1D,
+  VK_NONE_1E = 0x1E,
+  VK_NONE_1F = 0x1F,
+  VK_SPACE = 0x20,
+  VK_PRIOR = 0x21,
+  VK_UPRIGHT = 0x21,
+  VK_NEXT = 0x22,
+  VK_DOWNRIGHT = 0x22,
+  VK_END = 0x23,
+  VK_DOWNLEFT = 0x23,
+  VK_HOME = 0x24,
+  VK_UPLEFT = 0x24,
+  VK_LEFT = 0x25,
+  VK_UP = 0x26,
+  VK_RIGHT = 0x27,
+  VK_DOWN = 0x28,
+  VK_SELECT = 0x29,
+  VK_PRINT = 0x2A,
+  VK_EXECUTE = 0x2B,
+  VK_SNAPSHOT = 0x2C,
+  VK_INSERT = 0x2D,
+  VK_DELETE = 0x2E,
+  VK_HELP = 0x2F,
+  KN_0 = 0x30,
+  KN_1 = 0x31,
+  KN_2 = 0x32,
+  KN_3 = 0x33,
+  KN_4 = 0x34,
+  KN_5 = 0x35,
+  KN_6 = 0x36,
+  KN_7 = 0x37,
+  KN_8 = 0x38,
+  KN_9 = 0x39,
+  VK_NONE_3B = 0x3B,
+  VK_NONE_3C = 0x3C,
+  VK_NONE_3D = 0x3D,
+  VK_NONE_3E = 0x3E,
+  VK_NONE_3F = 0x3F,
+  VK_NONE_40 = 0x40,
+  KN_A = 0x41,
+  KN_B = 0x42,
+  KN_C = 0x43,
+  KN_D = 0x44,
+  KN_E = 0x45,
+  KN_F = 0x46,
+  KN_G = 0x47,
+  KN_H = 0x48,
+  KN_I = 0x49,
+  KN_J = 0x4A,
+  KN_K = 0x4B,
+  KN_L = 0x4C,
+  KN_M = 0x4D,
+  KN_N = 0x4E,
+  KN_O = 0x4F,
+  KN_P = 0x50,
+  KN_Q = 0x51,
+  KN_R = 0x52,
+  KN_S = 0x53,
+  KN_T = 0x54,
+  KN_U = 0x55,
+  KN_V = 0x56,
+  KN_W = 0x57,
+  KN_X = 0x58,
+  KN_Y = 0x59,
+  KN_Z = 0x5A,
+  VK_NONE_5B = 0x5B,
+  VK_NONE_5C = 0x5C,
+  VK_NONE_5D = 0x5D,
+  VK_NONE_5E = 0x5E,
+  VK_NONE_5F = 0x5F,
+  VK_NUMPAD0 = 0x60,
+  VK_NUMPAD1 = 0x61,
+  VK_NUMPAD2 = 0x62,
+  VK_NUMPAD3 = 0x63,
+  VK_NUMPAD4 = 0x64,
+  VK_NUMPAD5 = 0x65,
+  VK_NUMPAD6 = 0x66,
+  VK_NUMPAD7 = 0x67,
+  VK_NUMPAD8 = 0x68,
+  VK_NUMPAD9 = 0x69,
+  VK_MULTIPLY = 0x6A,
+  VK_ADD = 0x6B,
+  VK_SEPARATOR = 0x6C,
+  KN_KEYPAD_MINUS = 0x6D,
+  VK_DECIMAL = 0x6E,
+  KN_KEYPAD_SLASH = 0x6F,
+  KN_F1 = 0x70,
+  KN_F2 = 0x71,
+  KN_F3 = 0x72,
+  KN_F4 = 0x73,
+  KN_F5 = 0x74,
+  KN_F6 = 0x75,
+  KN_F7 = 0x76,
+  KN_F8 = 0x77,
+  KN_F9 = 0x78,
+  KN_F10 = 0x79,
+  KN_F11 = 0x7A,
+  KN_F12 = 0x7B,
+  VK_F13 = 0x7C,
+  VK_F14 = 0x7D,
+  VK_F15 = 0x7E,
+  VK_F16 = 0x7F,
+  VK_F17 = 0x80,
+  VK_F18 = 0x81,
+  VK_F19 = 0x82,
+  VK_F20 = 0x83,
+  VK_F21 = 0x84,
+  VK_F22 = 0x85,
+  VK_F23 = 0x86,
+  VK_F24 = 0x87,
+  VK_NONE_88 = 0x88,
+  VK_NONE_89 = 0x89,
+  VK_NONE_8A = 0x8A,
+  VK_NONE_8B = 0x8B,
+  VK_NONE_8C = 0x8C,
+  VK_NONE_8D = 0x8D,
+  VK_NONE_8E = 0x8E,
+  VK_NONE_8F = 0x8F,
+  VK_NUMLOCK = 0x90,
+  VK_SCROLL = 0x91,
+  VK_NONE_92 = 0x92,
+  VK_NONE_93 = 0x93,
+  VK_NONE_94 = 0x94,
+  VK_NONE_95 = 0x95,
+  VK_NONE_96 = 0x96,
+  VK_NONE_97 = 0x97,
+  VK_NONE_98 = 0x98,
+  VK_NONE_99 = 0x99,
+  VK_NONE_9A = 0x9A,
+  VK_NONE_9B = 0x9B,
+  VK_NONE_9C = 0x9C,
+  VK_NONE_9D = 0x9D,
+  VK_NONE_9E = 0x9E,
+  VK_NONE_9F = 0x9F,
+  VK_NONE_A0 = 0xA0,
+  VK_NONE_A1 = 0xA1,
+  VK_NONE_A2 = 0xA2,
+  VK_NONE_A3 = 0xA3,
+  VK_NONE_A4 = 0xA4,
+  VK_NONE_A5 = 0xA5,
+  VK_NONE_A6 = 0xA6,
+  VK_NONE_A7 = 0xA7,
+  VK_NONE_A8 = 0xA8,
+  VK_NONE_A9 = 0xA9,
+  VK_NONE_AA = 0xAA,
+  VK_NONE_AB = 0xAB,
+  VK_NONE_AC = 0xAC,
+  VK_NONE_AD = 0xAD,
+  VK_NONE_AE = 0xAE,
+  VK_NONE_AF = 0xAF,
+  VK_NONE_B0 = 0xB0,
+  VK_NONE_B1 = 0xB1,
+  VK_NONE_B2 = 0xB2,
+  VK_NONE_B3 = 0xB3,
+  VK_NONE_B4 = 0xB4,
+  VK_NONE_B5 = 0xB5,
+  VK_NONE_B6 = 0xB6,
+  VK_NONE_B7 = 0xB7,
+  VK_NONE_B8 = 0xB8,
+  VK_NONE_B9 = 0xB9,
+  VK_NONE_BA = 0xBA,
+  VK_NONE_BB = 0xBB,
+  VK_NONE_BC = 0xBC,
+  VK_NONE_BD = 0xBD,
+  VK_NONE_BE = 0xBE,
+  VK_NONE_BF = 0xBF,
+  VK_NONE_C0 = 0xC0,
+  VK_NONE_C1 = 0xC1,
+  VK_NONE_C2 = 0xC2,
+  VK_NONE_C3 = 0xC3,
+  VK_NONE_C4 = 0xC4,
+  VK_NONE_C5 = 0xC5,
+  VK_NONE_C6 = 0xC6,
+  VK_NONE_C7 = 0xC7,
+  VK_NONE_C8 = 0xC8,
+  VK_NONE_C9 = 0xC9,
+  VK_NONE_CA = 0xCA,
+  VK_NONE_CB = 0xCB,
+  VK_NONE_CC = 0xCC,
+  VK_NONE_CD = 0xCD,
+  VK_NONE_CE = 0xCE,
+  VK_NONE_CF = 0xCF,
+  VK_NONE_D0 = 0xD0,
+  VK_NONE_D1 = 0xD1,
+  VK_NONE_D2 = 0xD2,
+  VK_NONE_D3 = 0xD3,
+  VK_NONE_D4 = 0xD4,
+  VK_NONE_D5 = 0xD5,
+  VK_NONE_D6 = 0xD6,
+  VK_NONE_D7 = 0xD7,
+  VK_NONE_D8 = 0xD8,
+  VK_NONE_D9 = 0xD9,
+  VK_NONE_DA = 0xDA,
+  VK_NONE_DB = 0xDB,
+  VK_NONE_DC = 0xDC,
+  VK_NONE_DD = 0xDD,
+  VK_NONE_DE = 0xDE,
+  VK_NONE_DF = 0xDF,
+  VK_NONE_E0 = 0xE0,
+  VK_NONE_E1 = 0xE1,
+  VK_NONE_E2 = 0xE2,
+  VK_NONE_E3 = 0xE3,
+  VK_NONE_E4 = 0xE4,
+  VK_NONE_E5 = 0xE5,
+  VK_NONE_E6 = 0xE6,
+  VK_NONE_E7 = 0xE7,
+  VK_NONE_E8 = 0xE8,
+  VK_NONE_E9 = 0xE9,
+  VK_NONE_EA = 0xEA,
+  VK_NONE_EB = 0xEB,
+  VK_NONE_EC = 0xEC,
+  VK_NONE_ED = 0xED,
+  VK_NONE_EE = 0xEE,
+  VK_NONE_EF = 0xEF,
+  VK_NONE_F0 = 0xF0,
+  VK_NONE_F1 = 0xF1,
+  VK_NONE_F2 = 0xF2,
+  VK_NONE_F3 = 0xF3,
+  VK_NONE_F4 = 0xF4,
+  VK_NONE_F5 = 0xF5,
+  VK_NONE_F6 = 0xF6,
+  VK_NONE_F7 = 0xF7,
+  VK_NONE_F8 = 0xF8,
+  VK_NONE_F9 = 0xF9,
+  VK_NONE_FA = 0xFA,
+  VK_NONE_FB = 0xFB,
+  VK_NONE_FC = 0xFC,
+  VK_NONE_FD = 0xFD,
+  VK_NONE_FE = 0xFE,
+  VK_NONE_FF = 0xFF,
+  WWKEY_SHIFT_BIT = 0x100,
+  WWKEY_CTRL_BIT = 0x200,
+  WWKEY_ALT_BIT = 0x400,
+  WWKEY_RLS_BIT = 0x800,
+  WWKEY_VK_BIT = 0x1000,
+  WWKEY_DBL_BIT = 0x2000,
+  WWKEY_BTN_BIT = 0x8000,
+};
+
 enum GadgetFlag : __int32
 {
   GadgetFlag_LeftPress = 0x1,
@@ -2445,7 +2716,8 @@ enum KeyModifier : int
   KeyModifier_None = 0,
   KeyModifier_Shift = 1,
   KeyModifier_Ctrl = 2,
-  KeyModifier_Alt = 4
+  KeyModifier_Alt = 4,
+  KeyModifier_VK = 8
 };
 
 enum SpotlightBehaviour : unsigned int
@@ -18283,7 +18555,7 @@ struct TextLabelClass_vtbl
   void (__thiscall *StickyProcess)(TextLabelClass *this, GadgetFlag);
   bool (__thiscall *Action)(TextLabelClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(TextLabelClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(TextLabelClass *this, wchar_t *);
+  void (__thiscall *SetText)(TextLabelClass *this, wchar_t *);
 };
 
 struct __declspec(align(4)) VectorClass_ObjectClass_PTR
@@ -20455,7 +20727,7 @@ struct ControlClass_vtbl
   void (__thiscall *StickyProcess)(ControlClass *this, GadgetFlag);
   bool (__thiscall *Action)(ControlClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(ControlClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(ControlClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(ControlClass *this, GadgetClass *);
 };
 
 class ToggleClass : ControlClass
@@ -20500,7 +20772,7 @@ struct ToggleClass_vtbl
   void (__thiscall *StickyProcess)(ToggleClass *this, GadgetFlag);
   bool (__thiscall *Action)(ToggleClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(ToggleClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(ToggleClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(ToggleClass *this, GadgetClass *);
 };
 
 class ShapeButtonClass : ToggleClass
@@ -20553,7 +20825,7 @@ struct ShapeButtonClass_vtbl
   void (__thiscall *StickyProcess)(ShapeButtonClass *this, GadgetFlag);
   bool (__thiscall *Action)(ShapeButtonClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(ShapeButtonClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(ShapeButtonClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(ShapeButtonClass *this, GadgetClass *);
   void (__thiscall *SetShape)(ShapeButtonClass *this, SHPStruct*, int, int);
 };
 
@@ -20603,7 +20875,7 @@ struct EditClass_vtbl
   void (__thiscall *StickyProcess)(EditClass *this, GadgetFlag);
   bool (__thiscall *Action)(EditClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(EditClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(EditClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(EditClass *this, GadgetClass *);
   void (__thiscall *SetText)(EditClass *this, wchar_t*, int);
   wchar_t *(__thiscall *GetText)(EditClass *this);
   void (__thiscall *DrawBackground)(EditClass *this);
@@ -20656,7 +20928,7 @@ struct GaugeClass_vtbl
   void (__thiscall *StickyProcess)(GaugeClass *this, GadgetFlag);
   bool (__thiscall *Action)(GaugeClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(GaugeClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(GaugeClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(GaugeClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(GaugeClass *this, int);
   bool (__thiscall *SetValue)(GaugeClass *this, int);
   int (__thiscall *GetValue)(GaugeClass *this);
@@ -20712,7 +20984,7 @@ struct SliderClass_vtbl
   void (__thiscall *StickyProcess)(SliderClass *this, GadgetFlag);
   bool (__thiscall *Action)(SliderClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(SliderClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(SliderClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(SliderClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(SliderClass *this, int);
   bool (__thiscall *SetValue)(SliderClass *this, int);
   int (__thiscall *GetValue)(SliderClass *this);
@@ -20776,7 +21048,7 @@ struct ListClass_vtbl
   void (__thiscall *StickyProcess)(ListClass *this, GadgetFlag);
   bool (__thiscall *Action)(ListClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(ListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(ListClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(ListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(ListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(ListClass *this);
   bool (__thiscall *Bump)(ListClass *this, bool);
@@ -20839,7 +21111,7 @@ struct DropListClass_vtbl
   void (__thiscall *StickyProcess)(DropListClass *this, GadgetFlag);
   bool (__thiscall *Action)(DropListClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(DropListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(DropListClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(DropListClass *this, GadgetClass *);
   void (__thiscall *SetText)(DropListClass *this, wchar_t*, int);
   wchar_t *(__thiscall *GetText)(DropListClass *this);
   void (__thiscall *DrawBackground)(DropListClass *this);
@@ -20895,7 +21167,7 @@ struct TriColorGaugeClass_vtbl
   void (__thiscall *StickyProcess)(TriColorGaugeClass *this, GadgetFlag);
   bool (__thiscall *Action)(TriColorGaugeClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(TriColorGaugeClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(TriColorGaugeClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(TriColorGaugeClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(TriColorGaugeClass *this, int);
   bool (__thiscall *SetValue)(TriColorGaugeClass *this, int);
   int (__thiscall *GetValue)(TriColorGaugeClass *this);
@@ -20948,7 +21220,7 @@ struct CheckListClass_vtbl
   void (__thiscall *StickyProcess)(CheckListClass *this, GadgetFlag);
   bool (__thiscall *Action)(CheckListClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(CheckListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(CheckListClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(CheckListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(CheckListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(CheckListClass *this);
   bool (__thiscall *Bump)(CheckListClass *this, bool);
@@ -21010,7 +21282,7 @@ struct ColorListClass_vtbl
   void (__thiscall *StickyProcess)(ColorListClass *this, GadgetFlag);
   bool (__thiscall *Action)(ColorListClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(ColorListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(ColorListClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(ColorListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(ColorListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(ColorListClass *this);
   bool (__thiscall *Bump)(ColorListClass *this, bool);
@@ -24351,5 +24623,5 @@ struct SelectClass_vtbl
   void (__thiscall *StickyProcess)(SelectClass *this, GadgetFlag);
   bool (__thiscall *Action)(SelectClass *this, GadgetFlag, unsigned int*, KeyModifier);
   bool (__thiscall *Clicked)(SelectClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *vt_entry_84)(SelectClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(SelectClass *this, GadgetClass *);
 };
