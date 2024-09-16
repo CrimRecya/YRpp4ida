@@ -1135,6 +1135,8 @@ class MPGameModeClass; // FIXME MPGameMode Tree Base (Subs exist)
 struct MPGameModeClass_vtbl; // 0x7EED60
 class GGadgetClass; // : GadgetClass : LinkClass
 struct GGadgetClass_vtbl; // 0x7F02BC
+class SelectClass; // : ControlClass : GadgetClass : LinkClass
+struct SelectClass_vtbl; // 0x7F2FCC
 
 // TODO CLASS
 
@@ -24305,4 +24307,49 @@ struct GameOptionsClass
   int KeyForceSelect2;
   int unknown_int_B0;
   int unknown_int_B4;
+};
+
+class SelectClass : ControlClass
+{
+  StripClass *LinkTo;
+  int unknown_int_30;
+  bool MouseEntered;
+};
+
+struct SelectClass_vtbl
+{
+  void (__thiscall *~SelectClass)(SelectClass *this);
+  LinkClass *(__thiscall *GetNext)(SelectClass *this);
+  LinkClass *(__thiscall *GetPrev)(SelectClass *this);
+  LinkClass *(__thiscall *Add)(SelectClass *this, LinkClass *);
+  LinkClass *(__thiscall *AddTail)(SelectClass *this, LinkClass *);
+  LinkClass *(__thiscall *AddHead)(SelectClass *this, LinkClass *);
+  LinkClass *(__thiscall *HeadOfList)(SelectClass *this);
+  LinkClass *(__thiscall *TailOfList)(SelectClass *this);
+  void (__thiscall *Zap)(SelectClass *this);
+  LinkClass *(__thiscall *Remove)(SelectClass *this);
+  unsigned int (__thiscall *Input)(SelectClass *this);
+  void (__thiscall *DrawAll)(SelectClass *this, bool);
+  void (__thiscall *DeleteList)(SelectClass *this);
+  GadgetClass *(__thiscall *ExtractGadget)(SelectClass *this, unsigned int);
+  void (__thiscall *MarkListToRedraw)(SelectClass *this);
+  void (__thiscall *Disable)(SelectClass *this);
+  void (__thiscall *Enable)(SelectClass *this);
+  unsigned int (__thiscall *GetID)(SelectClass *this);
+  void (__thiscall *MarkRedraw)(SelectClass *this);
+  void (__thiscall *PeerToPeer)(SelectClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *SetFocus)(SelectClass *this);
+  void (__thiscall *KillFocus)(SelectClass *this);
+  bool (__thiscall *IsFocused)(SelectClass *this);
+  bool (__thiscall *IsListToRedraw)(SelectClass *this);
+  bool (__thiscall *IsToRedraw)(SelectClass *this);
+  void (__thiscall *SetPosition)(SelectClass *this, int, int);
+  void (__thiscall *SetDimension)(SelectClass *this, int, int);
+  bool (__thiscall *Draw)(SelectClass *this, bool);
+  void (__thiscall *OnMouseEnter)(SelectClass *this);
+  void (__thiscall *OnMouseLeave)(SelectClass *this);
+  void (__thiscall *StickyProcess)(SelectClass *this, GadgetFlag);
+  bool (__thiscall *Action)(SelectClass *this, GadgetFlag, unsigned int*, KeyModifier);
+  bool (__thiscall *Clicked)(SelectClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  void (__thiscall *vt_entry_84)(SelectClass *this, GadgetClass *);
 };
