@@ -14442,7 +14442,7 @@ struct GadgetClass_vtbl
   void (__thiscall *Enable)(GadgetClass *this);
   unsigned int (__thiscall *GetID)(GadgetClass *this);
   void (__thiscall *MarkRedraw)(GadgetClass *this);
-  void (__thiscall *PeerToPeer)(GadgetClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(GadgetClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(GadgetClass *this);
   void (__thiscall *KillFocus)(GadgetClass *this);
   bool (__thiscall *IsFocused)(GadgetClass *this);
@@ -14454,8 +14454,8 @@ struct GadgetClass_vtbl
   void (__thiscall *OnMouseEnter)(GadgetClass *this);
   void (__thiscall *OnMouseLeave)(GadgetClass *this);
   void (__thiscall *StickyProcess)(GadgetClass *this, GadgetFlag);
-  bool (__thiscall *Action)(GadgetClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(GadgetClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(GadgetClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(GadgetClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
 };
 
 class GScreenClass : IGameMap
@@ -18541,7 +18541,7 @@ struct TextLabelClass_vtbl
   void (__thiscall *Enable)(TextLabelClass *this);
   unsigned int (__thiscall *GetID)(TextLabelClass *this);
   void (__thiscall *MarkRedraw)(TextLabelClass *this);
-  void (__thiscall *PeerToPeer)(TextLabelClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(TextLabelClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(TextLabelClass *this);
   void (__thiscall *KillFocus)(TextLabelClass *this);
   bool (__thiscall *IsFocused)(TextLabelClass *this);
@@ -18553,8 +18553,8 @@ struct TextLabelClass_vtbl
   void (__thiscall *OnMouseEnter)(TextLabelClass *this);
   void (__thiscall *OnMouseLeave)(TextLabelClass *this);
   void (__thiscall *StickyProcess)(TextLabelClass *this, GadgetFlag);
-  bool (__thiscall *Action)(TextLabelClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(TextLabelClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(TextLabelClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(TextLabelClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *SetText)(TextLabelClass *this, wchar_t *);
 };
 
@@ -20713,7 +20713,7 @@ struct ControlClass_vtbl
   void (__thiscall *Enable)(ControlClass *this);
   unsigned int (__thiscall *GetID)(ControlClass *this);
   void (__thiscall *MarkRedraw)(ControlClass *this);
-  void (__thiscall *PeerToPeer)(ControlClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(ControlClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(ControlClass *this);
   void (__thiscall *KillFocus)(ControlClass *this);
   bool (__thiscall *IsFocused)(ControlClass *this);
@@ -20725,8 +20725,8 @@ struct ControlClass_vtbl
   void (__thiscall *OnMouseEnter)(ControlClass *this);
   void (__thiscall *OnMouseLeave)(ControlClass *this);
   void (__thiscall *StickyProcess)(ControlClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ControlClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(ControlClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(ControlClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(ControlClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(ControlClass *this, GadgetClass *);
 };
 
@@ -20758,7 +20758,7 @@ struct ToggleClass_vtbl
   void (__thiscall *Enable)(ToggleClass *this);
   unsigned int (__thiscall *GetID)(ToggleClass *this);
   void (__thiscall *MarkRedraw)(ToggleClass *this);
-  void (__thiscall *PeerToPeer)(ToggleClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(ToggleClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(ToggleClass *this);
   void (__thiscall *KillFocus)(ToggleClass *this);
   bool (__thiscall *IsFocused)(ToggleClass *this);
@@ -20770,8 +20770,8 @@ struct ToggleClass_vtbl
   void (__thiscall *OnMouseEnter)(ToggleClass *this);
   void (__thiscall *OnMouseLeave)(ToggleClass *this);
   void (__thiscall *StickyProcess)(ToggleClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ToggleClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(ToggleClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(ToggleClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(ToggleClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(ToggleClass *this, GadgetClass *);
 };
 
@@ -20811,7 +20811,7 @@ struct ShapeButtonClass_vtbl
   void (__thiscall *Enable)(ShapeButtonClass *this);
   unsigned int (__thiscall *GetID)(ShapeButtonClass *this);
   void (__thiscall *MarkRedraw)(ShapeButtonClass *this);
-  void (__thiscall *PeerToPeer)(ShapeButtonClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(ShapeButtonClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(ShapeButtonClass *this);
   void (__thiscall *KillFocus)(ShapeButtonClass *this);
   bool (__thiscall *IsFocused)(ShapeButtonClass *this);
@@ -20823,8 +20823,8 @@ struct ShapeButtonClass_vtbl
   void (__thiscall *OnMouseEnter)(ShapeButtonClass *this);
   void (__thiscall *OnMouseLeave)(ShapeButtonClass *this);
   void (__thiscall *StickyProcess)(ShapeButtonClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ShapeButtonClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(ShapeButtonClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(ShapeButtonClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(ShapeButtonClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(ShapeButtonClass *this, GadgetClass *);
   void (__thiscall *SetShape)(ShapeButtonClass *this, SHPStruct*, int, int);
 };
@@ -20861,7 +20861,7 @@ struct EditClass_vtbl
   void (__thiscall *Enable)(EditClass *this);
   unsigned int (__thiscall *GetID)(EditClass *this);
   void (__thiscall *MarkRedraw)(EditClass *this);
-  void (__thiscall *PeerToPeer)(EditClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(EditClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(EditClass *this);
   void (__thiscall *KillFocus)(EditClass *this);
   bool (__thiscall *IsFocused)(EditClass *this);
@@ -20873,8 +20873,8 @@ struct EditClass_vtbl
   void (__thiscall *OnMouseEnter)(EditClass *this);
   void (__thiscall *OnMouseLeave)(EditClass *this);
   void (__thiscall *StickyProcess)(EditClass *this, GadgetFlag);
-  bool (__thiscall *Action)(EditClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(EditClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(EditClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(EditClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(EditClass *this, GadgetClass *);
   void (__thiscall *SetText)(EditClass *this, wchar_t*, int);
   wchar_t *(__thiscall *GetText)(EditClass *this);
@@ -20914,7 +20914,7 @@ struct GaugeClass_vtbl
   void (__thiscall *Enable)(GaugeClass *this);
   unsigned int (__thiscall *GetID)(GaugeClass *this);
   void (__thiscall *MarkRedraw)(GaugeClass *this);
-  void (__thiscall *PeerToPeer)(GaugeClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(GaugeClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(GaugeClass *this);
   void (__thiscall *KillFocus)(GaugeClass *this);
   bool (__thiscall *IsFocused)(GaugeClass *this);
@@ -20926,8 +20926,8 @@ struct GaugeClass_vtbl
   void (__thiscall *OnMouseEnter)(GaugeClass *this);
   void (__thiscall *OnMouseLeave)(GaugeClass *this);
   void (__thiscall *StickyProcess)(GaugeClass *this, GadgetFlag);
-  bool (__thiscall *Action)(GaugeClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(GaugeClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(GaugeClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(GaugeClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(GaugeClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(GaugeClass *this, int);
   bool (__thiscall *SetValue)(GaugeClass *this, int);
@@ -20970,7 +20970,7 @@ struct SliderClass_vtbl
   void (__thiscall *Enable)(SliderClass *this);
   unsigned int (__thiscall *GetID)(SliderClass *this);
   void (__thiscall *MarkRedraw)(SliderClass *this);
-  void (__thiscall *PeerToPeer)(SliderClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(SliderClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(SliderClass *this);
   void (__thiscall *KillFocus)(SliderClass *this);
   bool (__thiscall *IsFocused)(SliderClass *this);
@@ -20982,8 +20982,8 @@ struct SliderClass_vtbl
   void (__thiscall *OnMouseEnter)(SliderClass *this);
   void (__thiscall *OnMouseLeave)(SliderClass *this);
   void (__thiscall *StickyProcess)(SliderClass *this, GadgetFlag);
-  bool (__thiscall *Action)(SliderClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(SliderClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(SliderClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(SliderClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(SliderClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(SliderClass *this, int);
   bool (__thiscall *SetValue)(SliderClass *this, int);
@@ -21034,7 +21034,7 @@ struct ListClass_vtbl
   void (__thiscall *Enable)(ListClass *this);
   unsigned int (__thiscall *GetID)(ListClass *this);
   void (__thiscall *MarkRedraw)(ListClass *this);
-  void (__thiscall *PeerToPeer)(ListClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(ListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(ListClass *this);
   void (__thiscall *KillFocus)(ListClass *this);
   bool (__thiscall *IsFocused)(ListClass *this);
@@ -21046,8 +21046,8 @@ struct ListClass_vtbl
   void (__thiscall *OnMouseEnter)(ListClass *this);
   void (__thiscall *OnMouseLeave)(ListClass *this);
   void (__thiscall *StickyProcess)(ListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ListClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(ListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(ListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(ListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(ListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(ListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(ListClass *this);
@@ -21097,7 +21097,7 @@ struct DropListClass_vtbl
   void (__thiscall *Enable)(DropListClass *this);
   unsigned int (__thiscall *GetID)(DropListClass *this);
   void (__thiscall *MarkRedraw)(DropListClass *this);
-  void (__thiscall *PeerToPeer)(DropListClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(DropListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(DropListClass *this);
   void (__thiscall *KillFocus)(DropListClass *this);
   bool (__thiscall *IsFocused)(DropListClass *this);
@@ -21109,8 +21109,8 @@ struct DropListClass_vtbl
   void (__thiscall *OnMouseEnter)(DropListClass *this);
   void (__thiscall *OnMouseLeave)(DropListClass *this);
   void (__thiscall *StickyProcess)(DropListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(DropListClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(DropListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(DropListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(DropListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(DropListClass *this, GadgetClass *);
   void (__thiscall *SetText)(DropListClass *this, wchar_t*, int);
   wchar_t *(__thiscall *GetText)(DropListClass *this);
@@ -21153,7 +21153,7 @@ struct TriColorGaugeClass_vtbl
   void (__thiscall *Enable)(TriColorGaugeClass *this);
   unsigned int (__thiscall *GetID)(TriColorGaugeClass *this);
   void (__thiscall *MarkRedraw)(TriColorGaugeClass *this);
-  void (__thiscall *PeerToPeer)(TriColorGaugeClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(TriColorGaugeClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(TriColorGaugeClass *this);
   void (__thiscall *KillFocus)(TriColorGaugeClass *this);
   bool (__thiscall *IsFocused)(TriColorGaugeClass *this);
@@ -21165,8 +21165,8 @@ struct TriColorGaugeClass_vtbl
   void (__thiscall *OnMouseEnter)(TriColorGaugeClass *this);
   void (__thiscall *OnMouseLeave)(TriColorGaugeClass *this);
   void (__thiscall *StickyProcess)(TriColorGaugeClass *this, GadgetFlag);
-  bool (__thiscall *Action)(TriColorGaugeClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(TriColorGaugeClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(TriColorGaugeClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(TriColorGaugeClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(TriColorGaugeClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(TriColorGaugeClass *this, int);
   bool (__thiscall *SetValue)(TriColorGaugeClass *this, int);
@@ -21206,7 +21206,7 @@ struct CheckListClass_vtbl
   void (__thiscall *Enable)(CheckListClass *this);
   unsigned int (__thiscall *GetID)(CheckListClass *this);
   void (__thiscall *MarkRedraw)(CheckListClass *this);
-  void (__thiscall *PeerToPeer)(CheckListClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(CheckListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(CheckListClass *this);
   void (__thiscall *KillFocus)(CheckListClass *this);
   bool (__thiscall *IsFocused)(CheckListClass *this);
@@ -21218,8 +21218,8 @@ struct CheckListClass_vtbl
   void (__thiscall *OnMouseEnter)(CheckListClass *this);
   void (__thiscall *OnMouseLeave)(CheckListClass *this);
   void (__thiscall *StickyProcess)(CheckListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(CheckListClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(CheckListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(CheckListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(CheckListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(CheckListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(CheckListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(CheckListClass *this);
@@ -21268,7 +21268,7 @@ struct ColorListClass_vtbl
   void (__thiscall *Enable)(ColorListClass *this);
   unsigned int (__thiscall *GetID)(ColorListClass *this);
   void (__thiscall *MarkRedraw)(ColorListClass *this);
-  void (__thiscall *PeerToPeer)(ColorListClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(ColorListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(ColorListClass *this);
   void (__thiscall *KillFocus)(ColorListClass *this);
   bool (__thiscall *IsFocused)(ColorListClass *this);
@@ -21280,8 +21280,8 @@ struct ColorListClass_vtbl
   void (__thiscall *OnMouseEnter)(ColorListClass *this);
   void (__thiscall *OnMouseLeave)(ColorListClass *this);
   void (__thiscall *StickyProcess)(ColorListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ColorListClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(ColorListClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(ColorListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(ColorListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(ColorListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(ColorListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(ColorListClass *this);
@@ -24470,7 +24470,7 @@ struct GGadgetClass_vtbl
   void (__thiscall *Enable)(GGadgetClass *this);
   unsigned int (__thiscall *GetID)(GGadgetClass *this);
   void (__thiscall *MarkRedraw)(GGadgetClass *this);
-  void (__thiscall *PeerToPeer)(GGadgetClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(GGadgetClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(GGadgetClass *this);
   void (__thiscall *KillFocus)(GGadgetClass *this);
   bool (__thiscall *IsFocused)(GGadgetClass *this);
@@ -24482,8 +24482,8 @@ struct GGadgetClass_vtbl
   void (__thiscall *OnMouseEnter)(GGadgetClass *this);
   void (__thiscall *OnMouseLeave)(GGadgetClass *this);
   void (__thiscall *StickyProcess)(GGadgetClass *this, GadgetFlag);
-  bool (__thiscall *Action)(GGadgetClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(GGadgetClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(GGadgetClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(GGadgetClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
 };
 
 struct AlphaLightingRemapClass
@@ -24609,7 +24609,7 @@ struct SelectClass_vtbl
   void (__thiscall *Enable)(SelectClass *this);
   unsigned int (__thiscall *GetID)(SelectClass *this);
   void (__thiscall *MarkRedraw)(SelectClass *this);
-  void (__thiscall *PeerToPeer)(SelectClass *this, unsigned int, unsigned int *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(SelectClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
   void (__thiscall *SetFocus)(SelectClass *this);
   void (__thiscall *KillFocus)(SelectClass *this);
   bool (__thiscall *IsFocused)(SelectClass *this);
@@ -24621,7 +24621,7 @@ struct SelectClass_vtbl
   void (__thiscall *OnMouseEnter)(SelectClass *this);
   void (__thiscall *OnMouseLeave)(SelectClass *this);
   void (__thiscall *StickyProcess)(SelectClass *this, GadgetFlag);
-  bool (__thiscall *Action)(SelectClass *this, GadgetFlag, unsigned int*, KeyModifier);
-  bool (__thiscall *Clicked)(SelectClass *this, unsigned int *, GadgetFlag, int, int, KeyModifier);
+  bool (__thiscall *Action)(SelectClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(SelectClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(SelectClass *this, GadgetClass *);
 };
