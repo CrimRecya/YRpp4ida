@@ -7259,12 +7259,12 @@ struct StripClass
   int Index;
   bool NeedsRedraw;
   unsigned __int8 unknown_3D;
-  unsigned __int8 unknown_3E;
-  unsigned __int8 unknown_3F;
+  bool ScrollDownward;
+  bool IsScrolling;
   unsigned int unknown_40;
   int TopRowIndex;
-  unsigned int unknown_48;
-  unsigned int unknown_4C;
+  int ScrollDownOffset;
+  int SomeSizeCheck;
   unsigned int unknown_50;
   int CameoCount;
   BuildType Cameos[75];
