@@ -1444,7 +1444,8 @@ enum TargetType : unsigned int
   TargetType_Infantry = 4,
   TargetType_Vehicles = 5,
   TargetType_Factories = 6,
-  TargetType_BaseDefenses = 7,
+  TargetType_Defenses = 7,
+  TargetType_Threats = 8,
   TargetType_Power = 9,
   TargetType_Occupiable = 10,
   TargetType_TechBuildings = 11
@@ -2675,6 +2676,7 @@ enum KeyNumType : __int16
 
 enum GadgetFlag : __int32
 {
+  GadgetFlag_None = 0x0,
   GadgetFlag_LeftPress = 0x1,
   GadgetFlag_LeftHeld = 0x2,
   GadgetFlag_LeftRelease = 0x4,
@@ -2764,9 +2766,9 @@ enum EventType : unsigned char
 
 enum TargetFlags : unsigned int
 {
-  TargetFlags_None = 0x0,
-  TargetFlags_unknown_1 = 0x1,
-  TargetFlags_unknown_2 = 0x2,
+  TargetFlags_Normal = 0x0,
+  TargetFlags_Range = 0x1,
+  TargetFlags_Area = 0x2,
   TargetFlags_Air = 0x4,
   TargetFlags_Infantry = 0x8,
   TargetFlags_Vehicles = 0x10,
