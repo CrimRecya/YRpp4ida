@@ -3391,10 +3391,8 @@ struct Vector2D_int
 };
 typedef Vector2D_int Point2D;
 
-struct Vector3D_int
+struct Vector3D_int : Vector2D_int
 {
-  int X;
-  int Y;
   int Z;
 };
 typedef Vector3D_int CoordStruct;
@@ -3414,18 +3412,13 @@ struct Vector3D_double
 };
 typedef Vector3D_double BulletVelocity;
 
-struct Vector4D_float
+struct Vector4D_float : Vector3D_float
 {
-  float X;
-  float Y;
-  float Z;
   float W;
 };
 
-struct RectangleStruct
+struct RectangleStruct : Vector2D_int
 {
-  int X;
-  int Y;
   int Width;
   int Height;
 };
@@ -13488,7 +13481,7 @@ class TechnoClass : RadioClass
   Union_Anim_Techno_Animation Anim_Techno_Animation;
   Union_TechnoClass_Passengers TechnoClass_Passengers;
   TechnoClass *Transporter;
-  int unknown_int_120;
+  int LastFireBulletFrame;
   int CurrentTurretNumber;
   int unknown_int_128;
   AnimClass *BehindAnim;
@@ -13633,7 +13626,7 @@ class TechnoClass : RadioClass
   HouseClass *ChronoWarpedByHouse;
   bool unknown_bool_430;
   bool IsMouseHovering;
-  bool unknown_bool_432;
+  bool ShouldBeReselectOnUnlimbo;
   TeamClass *OldTeam;
   bool CountedAsOwnedSpecial;
   bool Absorbed;
