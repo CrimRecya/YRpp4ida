@@ -1368,9 +1368,8 @@ enum AbstractType : __int32
   AbstractType_DiskLaser = 0x49,
 };
 
-enum AbstractFlags : unsigned int
+enum __bitmask AbstractFlags : unsigned int
 {
-  AbstractFlags_None = 0x0,
   AbstractFlags_Techno = 0x1,
   AbstractFlags_Object = 0x2,
   AbstractFlags_Foot = 0x4
@@ -1470,9 +1469,8 @@ enum SoundPriority : int
   SoundPriority_Critical = 4
 };
 
-enum SoundType : unsigned int
+enum __bitmask SoundType : unsigned int
 {
-  SoundType_Normal = 0x0,
   SoundType_Violent = 0x1,
   SoundType_Movement = 0x2,
   SoundType_Quiet = 0x4,
@@ -1488,9 +1486,8 @@ enum SoundType : unsigned int
   SoundType_Ambient = 0x1000
 };
 
-enum SoundControl : unsigned int
+enum __bitmask SoundControl : unsigned int
 {
-  SoundControl_None = 0x0,
   SoundControl_Loop = 0x1,
   SoundControl_Random = 0x2,
   SoundControl_All = 0x4,
@@ -1772,13 +1769,11 @@ enum Armor : unsigned int
   Armor_Special_2 = 10
 };
 
-enum BlitterFlags : unsigned int
+enum __bitmask BlitterFlags : unsigned int
 {
-  BlitterFlags_None = 0x0,
   BlitterFlags_Darken = 0x1,
   BlitterFlags_TransLucent25 = 0x2,
   BlitterFlags_TransLucent50 = 0x4,
-  BlitterFlags_TransLucent75 = 0x6,
   BlitterFlags_Warp = 0x8,
   BlitterFlags_ZRemap = 0x10,
   BlitterFlags_Plain = 0x20,
@@ -1790,7 +1785,6 @@ enum BlitterFlags : unsigned int
   BlitterFlags_Alpha = 0x800,
   BlitterFlags_bf_1000 = 0x1000,
   BlitterFlags_Flat = 0x2000,
-  BlitterFlags_ZRead = 0x3000,
   BlitterFlags_ZReadWrite = 0x4000,
   BlitterFlags_bf_8000 = 0x8000,
   BlitterFlags_Zero = 0x10000,
@@ -2151,9 +2145,8 @@ enum PassabilityType : unsigned int
   PassabilityType_OutsideMap = 7
 };
 
-enum CellFlags : unsigned int
+enum __bitmask CellFlags : unsigned int
 {
-  CellFlags_Empty = 0x0,
   CellFlags_CenterRevealed = 0x1,
   CellFlags_EdgeRevealed = 0x2,
   CellFlags_IsWaypoint = 0x4,
@@ -2177,11 +2170,9 @@ enum CellFlags : unsigned int
   CellFlags_HorizontalLineEventTag = 0x100000,
   CellFlags_VerticalLineEventTag = 0x200000,
   CellFlags_Fogged = 0x400000,
-  CellFlags_Revealed = CellFlags_CenterRevealed | CellFlags_EdgeRevealed,
-  CellFlags_Bridge = CellFlags_BridgeHead | CellFlags_BridgeBody
 };
 
-enum AltCellFlags : unsigned int
+enum __bitmask AltCellFlags : unsigned int
 {
   AltCellFlags_Unknown_1 = 0x1,
   AltCellFlags_ContainsBuilding = 0x2,
@@ -2192,7 +2183,6 @@ enum AltCellFlags : unsigned int
   AltCellFlags_Unknown_40 = 0x40,
   AltCellFlags_Unknown_80 = 0x80,
   AltCellFlags_Unknown_100 = 0x100,
-  AltCellFlags_Clear = AltCellFlags_Mapped | AltCellFlags_NoFog
 };
 
 enum Rank : __int32
@@ -2674,9 +2664,8 @@ enum KeyNumType : __int16
   WWKEY_BTN_BIT = 0x8000,
 };
 
-enum GadgetFlag : __int32
+enum __bitmask GadgetFlag : __int32
 {
-  GadgetFlag_None = 0x0,
   GadgetFlag_LeftPress = 0x1,
   GadgetFlag_LeftHeld = 0x2,
   GadgetFlag_LeftRelease = 0x4,
@@ -2764,9 +2753,8 @@ enum EventType : unsigned char
   EventType_LAST_EVENT = 47,
 };
 
-enum TargetFlags : unsigned int
+enum __bitmask TargetFlags : unsigned int
 {
-  TargetFlags_Normal = 0x0,
   TargetFlags_Range = 0x1,
   TargetFlags_Area = 0x2,
   TargetFlags_Air = 0x4,
@@ -3168,7 +3156,7 @@ enum TextPrintType : __int32
   GradAll = 0xF000,
 };
 
-enum EditFlag : int
+enum __bitmask EditFlag : int
 {
 	Alpha = 0x1,
 	Digit = 0x2,
@@ -3176,9 +3164,8 @@ enum EditFlag : int
 	ToUpper = 0x8
 };
 
-enum SpotlightFlags : unsigned int
+enum __bitmask SpotlightFlags : unsigned int
 {
-  None = 0x0,
   NoColor = 0x1,
   NoRed = 0x2,
   NoGreen = 0x4,
