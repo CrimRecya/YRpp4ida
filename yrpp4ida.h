@@ -319,6 +319,11 @@ struct AlphaLightingRemapClass;
 struct GameOptionsClass;
 struct BasePlanningCell;
 struct BasePlanningCellContainer;
+struct SHPReference;
+struct MessageListClass;
+struct BitFont;
+struct BitFont_vtbl;
+struct BitFont_InternalData;
 
 // TODO STRUCT
 
@@ -18431,7 +18436,7 @@ struct WWMouseClass
   HWND__ *hWnd;
   RectangleStruct Rect0;
   Point2D XY2;
-  unsigned int field_44;
+  Surface *CopySurface;
   RectangleStruct Rect1;
   unsigned int field_58;
   RectangleStruct Rect2;
@@ -23751,4 +23756,79 @@ struct BasePlanningCellContainer
   int Capacity;
   bool Sorted;
   unsigned int Unknown_10;
+};
+
+struct SHPReference : SHPStruct
+{
+  char *Filename;
+  SHPStruct *Data;
+  bool Loaded;
+  int Index;
+  SHPReference *Next;
+  SHPReference *Prev;
+  unsigned int unknown_20;
+};
+
+struct MessageListClass
+{
+  TextLabelClass *MessageList;
+  Point2D MessagePos;
+  int MaxMessageCount;
+  int MaxCharacters;
+  int Height;
+  bool EnableOverflow;
+  bool IsEdit;
+  bool AdjustEdit;
+  Point2D EditPos;
+  TextLabelClass *EditLabel;
+  wchar_t EditBuffer[162];
+  wchar_t OverflowBuffer[162];
+  unsigned int EditCurrentPos;
+  unsigned int EditInitialPos;
+  wchar_t CursorCharacter;
+  unsigned int OverflowStart;
+  unsigned int OverflowEnd;
+  int Width;
+  wchar_t MessageBuffers[14][162];
+  wchar_t BufferAvail[14];
+};
+
+struct BitFont
+{
+  BitFont_vtbl *__vftable;
+  BitFont_InternalData *InternalPTR;
+  void *Pointer_8;
+  __int16 *pGraphBuffer;
+  int PitchDiv2;
+  int Unknown_14;
+  wchar_t *field_18;
+  int field_1C;
+  int field_20;
+  unsigned __int16 Color;
+  __int16 DefaultColor2;
+  int Unknown_28;
+  int State_2C;
+  LTRBStruct Bounds;
+  bool Bool_40;
+  bool field_41;
+  bool field_42;
+  bool field_43;
+};
+
+struct BitFont_vtbl
+{
+  void (__thiscall *~BitFont)(BitFont *this);
+};
+
+struct BitFont_InternalData
+{
+  int FontWidth;
+  int Stride;
+  int FontHeight;
+  int Lines;
+  int Count;
+  int SymbolDataSize;
+  __int16 *SymbolTable;
+  char *Bitmaps;
+  int ValidSymbolCount;
 };
