@@ -317,6 +317,8 @@ struct IndexClass_TL_int_A_int_TR_;
 struct InputManagerClass; // 0x87F770
 struct AlphaLightingRemapClass;
 struct GameOptionsClass;
+struct BasePlanningCell;
+struct BasePlanningCellContainer;
 
 // TODO STRUCT
 
@@ -23734,4 +23736,19 @@ struct SelectClass_vtbl
   bool (__thiscall *Action)(SelectClass *this, GadgetFlag, KeyNumType *, KeyModifier);
   bool (__thiscall *Clicked)(SelectClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(SelectClass *this, GadgetClass *);
+};
+
+struct BasePlanningCell
+{
+  int Weight;
+  CellStruct Position;
+};
+
+struct BasePlanningCellContainer
+{
+  BasePlanningCell *Items;
+  int Count;
+  int Capacity;
+  bool Sorted;
+  unsigned int Unknown_10;
 };
