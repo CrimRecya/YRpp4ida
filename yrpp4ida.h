@@ -324,6 +324,15 @@ struct MessageListClass;
 struct BitFont;
 struct BitFont_vtbl;
 struct BitFont_InternalData;
+struct PathFinder_StructC;
+struct PathFinder_Struct10;
+struct PathFinder_Struct14_Data8;
+struct PathFinder_Struct14;
+struct PathFinder_Struct64;
+struct PathFinder_Struct68_Data8;
+struct PathFinder_Struct68;
+struct PathFinder_StructBC;
+struct PathFinder;
 
 // TODO STRUCT
 
@@ -23831,4 +23840,86 @@ struct BitFont_InternalData
   __int16 *SymbolTable;
   char *Bitmaps;
   int ValidSymbolCount;
+};
+
+struct PathFinder_StructC
+{
+  unsigned int unknown_int[393217];
+};
+
+struct PathFinder_Struct10
+{
+  unsigned int unknown_int[262145];
+};
+
+struct PathFinder_Struct14_Data8
+{
+  unsigned int unknown_int[65537];
+};
+
+struct PathFinder_Struct14
+{
+  int unknown_int_0;
+  int unknown_int_4;
+  PathFinder_Struct14_Data8* unknown_ptr_8;
+  int unknown_int_C;
+  int unknown_int_10;
+};
+
+struct PathFinder_Struct64
+{
+  unsigned int unknown_int[40000];
+};
+
+struct PathFinder_Struct68_Data8
+{
+  unsigned int unknown_int[10001];
+};
+
+struct PathFinder_Struct68
+{
+  int unknown_int_0;
+  int unknown_int_4;
+  PathFinder_Struct68_Data8* unknown_ptr_8;
+  int unknown_int_C;
+  int unknown_int_10;
+};
+
+struct PathFinder_StructBC
+{
+  unsigned int unknown_int[250];
+};
+
+struct PathFinder
+{
+  __int8 unknown_byte_0;
+  __int8 unknown_byte_1;
+  __int8 unknown_byte_2;
+  __int8 unknown_byte_3;
+  float unknown_float_4;
+  __int8 unknown_byte_8;
+  PathFinder_StructC* unknown_ptr_C;
+  PathFinder_Struct10* unknown_ptr_10;
+  PathFinder_Struct14* unknown_ptr_14;
+  int unknown_int_18;
+  int unknown_int_1C;
+  int unknown_int_20;
+  int unknown_int_24;
+  int unknown_int_28;
+  int unknown_int_2C;
+  int unknown_field_30;
+  int unknown_field_34;
+  __int8 unknown_byte_38;
+  int unknown_int_3C;
+  int unknown_int_40[3];
+  int unknown_int_4C[3];
+  int unknown_int_58[3];
+  PathFinder_Struct64* unknown_ptr_64;
+  PathFinder_Struct68* unknown_ptr_68;
+  int unknown_int_6C;
+  short unknown_short_70;
+  short unknown_short_72;
+  DynamicVectorClass_unsigned_int unknown_vector_74[3];
+  PathFinder_StructBC unknown_struct_BC[3];
+  int unknown_int_C28[3];
 };
