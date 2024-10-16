@@ -5885,7 +5885,7 @@ struct ILocomotion_vtbl
   int (__stdcall *Z_Adjust)(ILocomotion *this);
   ZGradient (__stdcall *Z_Gradient)(ILocomotion *this);
   bool (__stdcall *Process)(ILocomotion *this);
-  void (__stdcall *Move_To)(ILocomotion *this, CoordStruct);
+  void (__stdcall *Move_To)(ILocomotion *this, int, int, int);
   void (__stdcall *Stop_Moving)(ILocomotion *this);
   void (__stdcall *Do_Turn)(ILocomotion *this, DirStruct);
   void (__stdcall *Unlimbo)(ILocomotion *this);
@@ -16024,13 +16024,13 @@ class FootClass : TechnoClass
   bool ShouldEnterOccupiable;
   bool ShouldGarrisonStructure;
   FootClass *ParasiteEatingMe;
-  unsigned int unknown_698;
+  unsigned int LastBeParasitedStartFrame;
   ParasiteClass *ParasiteImUsing;
   Union_FootClass_ParalysisTimer FootClass_ParalysisTimer;
   bool unknown_bool_6AC;
   bool IsAttackedByLocomotor;
   bool IsLetGoByLocomotor;
-  bool unknown_bool_6AF;
+  bool IsRotatingTurretNotSpin;
   bool unknown_bool_6B0;
   bool unknown_bool_6B1;
   bool unknown_bool_6B2;
