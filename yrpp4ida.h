@@ -16389,7 +16389,7 @@ struct FootClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_53C)(FootClass *this, unsigned int);
+  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
@@ -16752,7 +16752,7 @@ struct InfantryClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_53C)(FootClass *this, unsigned int);
+  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
@@ -17214,7 +17214,7 @@ struct UnitClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_53C)(FootClass *this, unsigned int);
+  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
@@ -17671,7 +17671,7 @@ struct AircraftClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  unsigned int (__thiscall *vt_entry_53C)(FootClass *this, unsigned int);
+  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
@@ -18405,7 +18405,7 @@ struct MechLocomotionClass_vtbl
   int (__thiscall *Size)(LocomotionClass *this);
 };
 
-class WalkLocomotionClass : LocomotionClass
+class WalkLocomotionClass : LocomotionClass, IPiggyback
 {
   CoordStruct Destination;
   CoordStruct HeadToCoord;
