@@ -13870,7 +13870,7 @@ struct TechnoClass_vtbl
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  unsigned int (__thiscall *ScanForTiberium)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
@@ -15603,7 +15603,7 @@ struct BuildingClass_vtbl
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  unsigned int (__thiscall *ScanForTiberium)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
@@ -16260,7 +16260,7 @@ struct FootClass_vtbl
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  unsigned int (__thiscall *ScanForTiberium)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
@@ -16623,7 +16623,7 @@ struct InfantryClass_vtbl
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  unsigned int (__thiscall *ScanForTiberium)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
@@ -17085,7 +17085,7 @@ struct UnitClass_vtbl
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  unsigned int (__thiscall *ScanForTiberium)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
@@ -17542,7 +17542,7 @@ struct AircraftClass_vtbl
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  unsigned int (__thiscall *ScanForTiberium)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
