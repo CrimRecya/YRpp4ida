@@ -18368,6 +18368,18 @@ struct RocketLocomotionClass_vtbl
 
 class HoverLocomotionClass : LocomotionClass
 {
+  CoordStruct Destination;
+  CoordStruct HeadToCoord;
+  FacingClass LocomotionFacing;
+  double CurrentSpeed;
+  int unknown_int_50;
+  int unknown_int_54;
+  double unknown_double_58;
+  int unknown_int_60;
+  int unknown_int_64;
+  bool unknown_bool_68;
+  int unknown_int_6C;
+  bool unknown_bool_70;
 };
 
 struct HoverLocomotionClass_vtbl
