@@ -4537,12 +4537,8 @@ struct BytePalette
   ColorStruct Entries[256];
 };
 
-struct LTRBStruct
+struct LTRBStruct : RectangleStruct
 {
-  int Left;
-  int Top;
-  int Right;
-  int Bottom;
 };
 
 struct Crate
@@ -5888,8 +5884,8 @@ struct ILocomotion_vtbl
   bool (__stdcall *Is_To_Have_Shadow)(ILocomotion *this);
   Matrix3D *(__stdcall *Draw_Matrix)(ILocomotion *this, Matrix3D *result, Union_VoxelIndexKey *);
   Matrix3D *(__stdcall *Shadow_Matrix)(ILocomotion *this, Matrix3D *result, Union_VoxelIndexKey *);
-  Point2D (__stdcall *Draw_Point)(ILocomotion *this);
-  Point2D (__stdcall *Shadow_Point)(ILocomotion *this);
+  Point2D *(__stdcall *Draw_Point)(ILocomotion *this, Point2D *);
+  Point2D *(__stdcall *Shadow_Point)(ILocomotion *this, Point2D *);
   VisualType (__stdcall *Visual_Character)(ILocomotion *this, bool);
   int (__stdcall *Z_Adjust)(ILocomotion *this);
   ZGradient (__stdcall *Z_Gradient)(ILocomotion *this);
