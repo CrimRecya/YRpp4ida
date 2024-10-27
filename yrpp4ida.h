@@ -14741,7 +14741,7 @@ struct RadarClass_vtbl
 
 class PowerClass : RadarClass
 {
-  bool unknown_bool_150C;
+  bool PowerNeedRedraw;
   unsigned __int8 align_150D[3];
   CDTimerClass unknown_timer_1510;
   unsigned int unknown_151C;
