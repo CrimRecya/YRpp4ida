@@ -215,7 +215,6 @@ struct Theater;
 struct VoxClass;
 struct RocketStruct;
 struct DifficultyStruct;
-struct ScenarioFlags;
 struct Randomizer;
 struct Variable;
 struct LightingStruct;
@@ -333,6 +332,7 @@ struct PathFinder_Struct68_Data8;
 struct PathFinder_Struct68;
 struct PathFinder_StructBC;
 struct PathFinder;
+struct FoggedObjectDraw;
 
 // TODO STRUCT
 
@@ -892,6 +892,14 @@ struct VectorClass_AlphaLightingRemapClass_PTR;
 struct VectorClass_AlphaLightingRemapClass_PTR_vtbl;
 struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x0x88A080
 struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl;
+struct VectorClass_FoggedObjectClass_PTR;
+struct VectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E4514
+struct DynamicVectorClass_FoggedObjectClass_PTR;
+struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E44F4
+struct VectorClass_FoggedObjectDraw;
+struct VectorClass_FoggedObjectDraw_vtbl; // 0x7E8BC0
+struct DynamicVectorClass_FoggedObjectDraw;
+struct DynamicVectorClass_FoggedObjectDraw_vtbl; // 0x7E8BA0
 
 // TODO VECTOR
 
@@ -1153,6 +1161,8 @@ class GGadgetClass; // : GadgetClass : LinkClass
 struct GGadgetClass_vtbl; // 0x7F02BC
 class SelectClass; // : ControlClass : GadgetClass : LinkClass
 struct SelectClass_vtbl; // 0x7F2FCC
+class FoggedObjectClass; // : AbstractClass
+struct FoggedObjectClass_vtbl; // 0x7E8B38
 
 // TODO CLASS
 
@@ -3188,6 +3198,42 @@ enum __bitmask SpotlightFlags : unsigned int
   NoBlue = 0x8
 };
 
+enum __bitmask ScenarioFlags : unsigned int
+{
+  bit00 = 0x1,
+  bit01 = 0x2,
+  bit02 = 0x4,
+  bit03 = 0x8,
+  CTFMode = 0x10,
+  Inert = 0x20,
+  TiberiumGrows = 0x40,
+  TiberiumSpreads = 0x80,
+  MCVDeploy = 0x100,
+  InitialVeteran = 0x200,
+  FixedAlliance = 0x400,
+  HarvesterImmune = 0x800,
+  FogOfWar = 0x1000,
+  bit13 = 0x2000,
+  TiberiumExplosive = 0x4000,
+  DestroyableBridges = 0x8000,
+  Meteorites = 0x10000,
+  IonStorms = 0x20000,
+  Visceroids = 0x40000,
+  bit19 = 0x80000,
+  bit20 = 0x100000,
+  bit21 = 0x200000,
+  bit22 = 0x400000,
+  bit23 = 0x800000,
+  bit24 = 0x1000000,
+  bit25 = 0x2000000,
+  bit26 = 0x4000000,
+  bit27 = 0x8000000,
+  bit28 = 0x10000000,
+  bit29 = 0x20000000,
+  bit30 = 0x40000000,
+  bit31 = 0x80000000,
+};
+
 // TODO ENUM
 
 union Union_CRCEngine_unnamed_type_StagingBuffer
@@ -4635,42 +4681,6 @@ struct DifficultyStruct
   bool DestroyWalls;
   bool ContentScan;
   unsigned __int8 unused_4B[5];
-};
-
-struct ScenarioFlags
-{
-  __int8 bit00 : 1;
-  __int8 bit01 : 1;
-  __int8 bit02 : 1;
-  __int8 bit03 : 1;
-  __int8 CTFMode : 1;
-  __int8 Inert : 1;
-  __int8 TiberiumGrows : 1;
-  __int8 TiberiumSpreads : 1;
-  __int8 MCVDeploy : 1;
-  __int8 InitialVeteran : 1;
-  __int8 FixedAlliance : 1;
-  __int8 HarvesterImmune : 1;
-  __int8 FogOfWar : 1;
-  __int8 bit13 : 1;
-  __int8 TiberiumExplosive : 1;
-  __int8 DestroyableBridges : 1;
-  __int8 Meteorites : 1;
-  __int8 IonStorms : 1;
-  __int8 Visceroids : 1;
-  __int8 bit19 : 1;
-  __int8 bit20 : 1;
-  __int8 bit21 : 1;
-  __int8 bit22 : 1;
-  __int8 bit23 : 1;
-  __int8 bit24 : 1;
-  __int8 bit25 : 1;
-  __int8 bit26 : 1;
-  __int8 bit27 : 1;
-  __int8 bit28 : 1;
-  __int8 bit29 : 1;
-  __int8 bit30 : 1;
-  __int8 bit31 : 1;
 };
 
 struct Randomizer
@@ -12874,7 +12884,7 @@ struct OverlayTypeClass_vtbl
 class CellClass : AbstractClass
 {
   CellStruct MapCoords;
-  struct DynamicVectorClass_FoggedObjectClass_PTR *FoggedObjects;
+  DynamicVectorClass_FoggedObjectClass_PTR *FoggedObjects;
   CellClass *BridgeOwnerCell;
   unsigned int unknown_30;
   LightConvertClass *LightConvert;
@@ -14637,17 +14647,13 @@ class RadarClass : DisplayClass
   unsigned int unknown_1204;
   unsigned int unknown_1208;
   RectangleStruct unknown_rect_120C;
-  unsigned int unknown_121C;
-  unsigned int unknown_1220;
+  BSurface *unknown_surface_121C;
+  BSurface *unknown_surface_1220;
   DynamicVectorClass_CellStruct unknown_cells_1124;
   unsigned int unknown_123C;
-  unsigned int unknown_1240;
-  unsigned int unknown_1244;
-  unsigned int unknown_1248;
-  unsigned int unknown_124C;
-  unsigned int unknown_1250;
-  unsigned int unknown_1254;
-  unsigned int unknown_1258;
+  Point2D unknown_point2d_1240;
+  RectangleStruct unknown_rect_1248;
+  unsigned int unknown_ptr_1258;
   DynamicVectorClass_Point2D unknown_points_125C;
   unsigned int unknown_1274;
   DynamicVectorClass_Point2D FoundationTypePixels[22];
@@ -14673,10 +14679,7 @@ class RadarClass : DisplayClass
   bool unknown_bool_14D9;
   bool unknown_bool_14DA;
   RectangleStruct unknown_rect_14DC;
-  unsigned int unknown_14EC;
-  unsigned int unknown_14F0;
-  unsigned int unknown_14F4;
-  unsigned int unknown_14F8;
+  RectangleStruct unknown_rect_14EC;
   unsigned int unknown_14FC;
   CDTimerClass unknown_timer_1500;
 };
@@ -23930,4 +23933,129 @@ struct PathFinder
   DynamicVectorClass_unsigned_int unknown_vector_74[3];
   PathFinder_StructBC unknown_struct_BC[3];
   int unknown_int_C28[3];
+};
+
+struct FoggedObjectDraw
+{
+  AbstractTypeClass *DrawType;
+  int AnimFrame;
+  int IsFirestormWall;
+  int ZAdjust;
+};
+
+struct __declspec(align(4)) VectorClass_FoggedObjectDraw
+{
+  VectorClass_FoggedObjectDraw_vtbl *__vftable;
+  FoggedObjectDraw *Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_FoggedObjectDraw_vtbl
+{
+  void (__thiscall *~VectorClass_FoggedObjectDraw)(VectorClass_FoggedObjectDraw *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_FoggedObjectDraw *this, VectorClass_FoggedObjectDraw *);
+  bool (__thiscall *SetCapacity)(VectorClass_FoggedObjectDraw *this, int, AbstractClass **);
+  void (__thiscall *Clear)(VectorClass_FoggedObjectDraw *this);
+  int (__thiscall *FindItemIndex)(VectorClass_FoggedObjectDraw *this, AbstractClass **);
+  int (__thiscall *GetItemIndex)(VectorClass_FoggedObjectDraw *this, AbstractClass **);
+  AbstractClass *(__thiscall *GetItem)(VectorClass_FoggedObjectDraw *this, int);
+};
+
+struct DynamicVectorClass_FoggedObjectDraw : VectorClass_FoggedObjectDraw
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_FoggedObjectDraw_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_FoggedObjectDraw)(DynamicVectorClass_FoggedObjectDraw *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FoggedObjectDraw *this, VectorClass_FoggedObjectDraw *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_FoggedObjectDraw *this, int, AbstractClass **);
+  void (__thiscall *Clear)(DynamicVectorClass_FoggedObjectDraw *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_FoggedObjectDraw *this, AbstractClass **);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_FoggedObjectDraw *this, AbstractClass **);
+  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_FoggedObjectDraw *this, int);
+};
+
+class FoggedObjectClass : AbstractClass
+{
+  int unknown_int_24;
+  HouseClass *Owner;
+  int unknown_int_2C;
+  AbstractType ItemType;
+  CoordStruct Location;
+  RectangleStruct RenderDimension;
+  int CellLevel;
+  int unknown_int_54;
+  int unknown_int_58;
+  DynamicVectorClass_FoggedObjectDraw DrawRecord;
+  bool unknown_bool_74;
+};
+
+struct FoggedObjectClass_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~AbstractClass)(AbstractClass *this);
+  void (__thiscall *Init)(AbstractClass *this);
+  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
+  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
+  int (__thiscall *Size)(AbstractClass *this);
+  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
+  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
+  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
+  int (__thiscall *GetArrayIndex)(AbstractClass *this);
+  bool (__thiscall *IsDead)(AbstractClass *this);
+  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
+  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
+  bool (__thiscall *IsOnFloor)(AbstractClass *this);
+  bool (__thiscall *IsInAir)(AbstractClass *this);
+  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
+  void (__thiscall *Update)(AbstractClass *this);
+};
+
+struct __declspec(align(4)) VectorClass_FoggedObjectClass_PTR
+{
+  VectorClass_FoggedObjectClass_PTR_vtbl *__vftable;
+  FoggedObjectClass **Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_FoggedObjectClass_PTR_vtbl
+{
+  void (__thiscall *~VectorClass_FoggedObjectClass_PTR)(VectorClass_FoggedObjectClass_PTR *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_FoggedObjectClass_PTR *this, VectorClass_FoggedObjectClass_PTR *);
+  bool (__thiscall *SetCapacity)(VectorClass_FoggedObjectClass_PTR *this, int, AbstractClass **);
+  void (__thiscall *Clear)(VectorClass_FoggedObjectClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
+  int (__thiscall *GetItemIndex)(VectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
+  AbstractClass *(__thiscall *GetItem)(VectorClass_FoggedObjectClass_PTR *this, int);
+};
+
+struct DynamicVectorClass_FoggedObjectClass_PTR : VectorClass_FoggedObjectClass_PTR
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_FoggedObjectClass_PTR)(DynamicVectorClass_FoggedObjectClass_PTR *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FoggedObjectClass_PTR *this, VectorClass_FoggedObjectClass_PTR *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_FoggedObjectClass_PTR *this, int, AbstractClass **);
+  void (__thiscall *Clear)(DynamicVectorClass_FoggedObjectClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
+  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_FoggedObjectClass_PTR *this, int);
 };
