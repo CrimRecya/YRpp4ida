@@ -3234,6 +3234,18 @@ enum __bitmask ScenarioFlags : unsigned int
   ScenarioFlags_bit31 = 0x80000000,
 };
 
+enum __bitmask Occupations : unsigned int
+{
+  Occupations_SubCenter = 0x1,
+  Occupations_SubTop = 0x2,
+  Occupations_SubRight = 0x4,
+  Occupations_SubLeft = 0x8,
+  Occupations_Terrains = 0x10,
+  Occupations_Units = 0x20,
+  Occupations_Aircrafts = 0x40,
+  Occupations_Buildings = 0x80,
+};
+
 // TODO ENUM
 
 union Union_CRCEngine_unnamed_type_StagingBuffer
@@ -12934,8 +12946,8 @@ class CellClass : AbstractClass
   char Foggedness;
   unsigned __int8 BlockedNeighbours;
   unsigned __int8 align_123;
-  unsigned int OccupationFlags;
-  unsigned int AltOccupationFlags;
+  Occupations OccupationFlags;
+  Occupations AltOccupationFlags;
   AltCellFlags AltFlags;
   int ShroudCounter;
   unsigned int GapsCoveringThisCell;
@@ -15739,7 +15751,7 @@ class BuildingTypeClass : TechnoTypeClass
   Point2D PrimaryFirePixelOffset;
   Point2D SecondaryFirePixelOffset;
   OverlayTypeClass *ToOverlay;
-  int ToTile;
+  IsometricTileTypeClass *ToTile;
   char BuildupFile[16];
   int BuildupSound;
   int PackupSound;
