@@ -14566,12 +14566,12 @@ class DisplayClass : MapClass
   CellStruct *CurrentFoundationCopy_Data;
   ObjectClass *CurrentBuilding_Buffer;
   ObjectTypeClass *CurrentBuildingType_Buffer;
-  unsigned int CurrentBuildingTypeArrayIndexCopy;
+  unsigned int CurrentBuildingOwnerArrayIndexCopy;
   bool FollowObject;
   ObjectClass *ObjectToFollow;
   ObjectClass *CurrentBuilding;
   ObjectTypeClass *CurrentBuildingType;
-  unsigned int CurrentBuildingTypeArrayIndex;
+  unsigned int CurrentBuildingOwnerArrayIndex;
   bool RepairMode;
   bool SellMode;
   bool PowerToggleMode;
