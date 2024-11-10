@@ -3240,7 +3240,7 @@ enum __bitmask Occupations : unsigned int
   Occupations_SubTop = 0x2,
   Occupations_SubRight = 0x4,
   Occupations_SubLeft = 0x8,
-  Occupations_Terrains = 0x10,
+  Occupations_SubDown = 0x10,
   Occupations_Units = 0x20,
   Occupations_Aircrafts = 0x40,
   Occupations_Buildings = 0x80,
@@ -9434,7 +9434,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   unsigned __int8 unknown_53D9;
   unsigned __int8 unknown_53DA;
   unsigned __int8 unknown_53DB;
-  UnitClass *OurFlagCarrier;
+  AbstractClass *OurFlagCarrier;
   CellStruct OurFlagCoords;
   int KilledUnitsOfHouses[20];
   int TotalKilledUnits;
@@ -17899,8 +17899,8 @@ class TerrainTypeClass : ObjectTypeClass
   ColorStruct RadarColor;
   int AnimationRate;
   float AnimationProbability;
-  int TemperateOccupationBits;
-  int SnowOccupationBits;
+  Occupations TemperateOccupationBits;
+  Occupations SnowOccupationBits;
   bool WaterBound;
   bool SpawnsTiberium;
   bool IsFlammable;
