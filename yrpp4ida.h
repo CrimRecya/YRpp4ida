@@ -323,15 +323,19 @@ struct MessageListClass;
 struct BitFont;
 struct BitFont_vtbl;
 struct BitFont_InternalData;
+struct PathFinder_StructC_Data;
 struct PathFinder_StructC;
+struct PathFinder_Struct10_Data;
 struct PathFinder_Struct10;
 struct PathFinder_Struct14_Data8;
 struct PathFinder_Struct14;
+struct PathFinder_Struct64_Data;
 struct PathFinder_Struct64;
 struct PathFinder_Struct68_Data8;
 struct PathFinder_Struct68;
 struct PathFinder_StructBC;
 struct PathFinder;
+struct PathFinderData;
 struct FoggedObjectDraw;
 struct PCX;
 
@@ -4615,7 +4619,8 @@ struct CellLevelPassabilityStruct
 
 struct LevelAndPassabilityStruct2
 {
-  __int16 word_0[4];
+  __int16 Indexes[3];
+  __int16 unknown_short_6;
   char CellLevel;
   char field_9;
 };
@@ -7275,8 +7280,8 @@ struct TabDataClass
 
 struct __declspec(align(4)) SubzoneConnectionStruct
 {
-  unsigned int unknown_dword_0;
-  unsigned __int8 unknown_byte_4;
+  int Index;
+  bool Supplement;
 };
 
 struct __declspec(align(4)) VectorClass_SubzoneConnectionStruct
@@ -7319,8 +7324,8 @@ struct DynamicVectorClass_SubzoneConnectionStruct_vtbl
 struct SubzoneTrackingStruct
 {
   DynamicVectorClass_SubzoneConnectionStruct SubzoneConnections;
-  unsigned __int16 unknown_word_18;
-  unsigned int unknown_dword_1C;
+  __int16 Index;
+  int CoefficientIndex;
   unsigned int unknown_dword_20;
 };
 
@@ -7553,7 +7558,7 @@ struct Surface_vtbl
   bool (__thiscall *DrawLine_)(Surface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(Surface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(Surface *this, RectangleStruct *, unsigned int);
-  int (__thiscall *Lock)(Surface *this, int, int);
+  void *(__thiscall *Lock)(Surface *this, int, int);
   bool (__thiscall *Unlock)(Surface *this);
   bool (__thiscall *CanLock)(Surface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(Surface *this, unsigned int, unsigned int);
@@ -15995,8 +16000,7 @@ class FootClass : TechnoClass
   CellStruct WaypointNearbyAccessibleCellDelta;
   CellStruct WaypointCell;
   unsigned int unknown_52C;
-  unsigned int unknown_530;
-  unsigned int unknown_534;
+  long double ThreatAvoidanceCoefficient;
   int WalkedFramesSoFar;
   bool IsMoveSoundPlaying;
   int MoveSoundDelay;
@@ -16402,7 +16406,7 @@ struct FootClass_vtbl
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
+  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -16765,7 +16769,7 @@ struct InfantryClass_vtbl
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
+  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -17227,7 +17231,7 @@ struct UnitClass_vtbl
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
+  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -17684,7 +17688,7 @@ struct AircraftClass_vtbl
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, unsigned int);
+  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -17985,7 +17989,7 @@ struct XSurface_vtbl
   bool (__thiscall *DrawLine_)(XSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(XSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(XSurface *this, RectangleStruct *, unsigned int);
-  int (__thiscall *Lock)(XSurface *this, int, int);
+  void *(__thiscall *Lock)(XSurface *this, int, int);
   bool (__thiscall *Unlock)(XSurface *this);
   bool (__thiscall *CanLock)(XSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(XSurface *this, unsigned int, unsigned int);
@@ -18035,7 +18039,7 @@ struct DSurface_vtbl
   bool (__thiscall *DrawLine_)(DSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(DSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(DSurface *this, RectangleStruct *, unsigned int);
-  int (__thiscall *Lock)(DSurface *this, int, int);
+  void *(__thiscall *Lock)(DSurface *this, int, int);
   bool (__thiscall *Unlock)(DSurface *this);
   bool (__thiscall *CanLock)(DSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(DSurface *this, unsigned int, unsigned int);
@@ -18082,7 +18086,7 @@ struct BSurface_vtbl
   bool (__thiscall *DrawLine_)(BSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(BSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(BSurface *this, RectangleStruct *, unsigned int);
-  int (__thiscall *Lock)(BSurface *this, int, int);
+  void *(__thiscall *Lock)(BSurface *this, int, int);
   bool (__thiscall *Unlock)(BSurface *this);
   bool (__thiscall *CanLock)(BSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(BSurface *this, unsigned int, unsigned int);
@@ -23866,86 +23870,122 @@ struct BitFont_InternalData
   int ValidSymbolCount;
 };
 
+struct PathFinder_StructC_Data
+{
+  CellClass **Items;
+  int Level;
+  PathFinder_StructC_Data *Next;
+};
+
 struct PathFinder_StructC
 {
-  unsigned int unknown_int[393217];
+  PathFinder_StructC_Data Data[131072];
+  int Count;
+};
+
+struct PathFinder_Struct10_Data
+{
+  PathFinder_StructC_Data *Datas;
+  float LastDistance;
+  float AccumulatedDistance;
+  int AccumulatedCount;
 };
 
 struct PathFinder_Struct10
 {
-  unsigned int unknown_int[262145];
+  PathFinder_Struct10_Data Data[65536];
+  int Count;
 };
 
 struct PathFinder_Struct14_Data8
 {
-  unsigned int unknown_int[65537];
+  PathFinder_Struct10_Data *Data[65537];
 };
 
 struct PathFinder_Struct14
 {
-  int unknown_int_0;
-  int unknown_int_4;
-  PathFinder_Struct14_Data8* unknown_ptr_8;
-  int unknown_int_C;
-  int unknown_int_10;
+  int Count;
+  int Capacity;
+  PathFinder_Struct14_Data8 *Datas;
+  PathFinder_Struct10_Data *TheMaxData;
+  PathFinder_Struct10_Data *TheMinData;
+};
+
+struct PathFinder_Struct64_Data
+{
+  int Index;
+  int FinderIndex;
+  float Coefficient;
+  int Count;
 };
 
 struct PathFinder_Struct64
 {
-  unsigned int unknown_int[40000];
+  PathFinder_Struct64_Data Data[10000];
 };
 
 struct PathFinder_Struct68_Data8
 {
-  unsigned int unknown_int[10001];
+  PathFinder_Struct64_Data *Data[10001];
 };
 
 struct PathFinder_Struct68
 {
-  int unknown_int_0;
-  int unknown_int_4;
-  PathFinder_Struct68_Data8* unknown_ptr_8;
-  int unknown_int_C;
-  int unknown_int_10;
+  int Count;
+  int Capacity;
+  PathFinder_Struct68_Data8 *Datas;
+  PathFinder_Struct64_Data *TheMaxData;
+  PathFinder_Struct64_Data *TheMinData;
 };
 
 struct PathFinder_StructBC
 {
-  unsigned int unknown_int[250];
+  __int16 Indexes[500];
 };
 
 struct PathFinder
 {
   __int8 unknown_byte_0;
-  __int8 unknown_byte_1;
+  bool FindBridgeOwner;
   __int8 unknown_byte_2;
-  __int8 unknown_byte_3;
-  float unknown_float_4;
-  __int8 unknown_byte_8;
-  PathFinder_StructC* unknown_ptr_C;
-  PathFinder_Struct10* unknown_ptr_10;
-  PathFinder_Struct14* unknown_ptr_14;
-  int unknown_int_18;
+  bool CanFind;
+  float FinderCoefficient;
+  bool IsAlt;
+  PathFinder_StructC *Datas_C;
+  PathFinder_Struct10 *Datas_10;
+  PathFinder_Struct14 *Datas_14;
+  int *AltCounts;
+  int *Counts;
+  float *Distances;
+  float *AltDistances;
+  int FindCount;
+  SpeedType FinderSpeedType;
+  int SourceCellLevel;
+  int DestinationCellLevel;
+  bool Finding;
+  int FindMode;
+  int *BothWayPassabilityCounts[3];
+  int *OneWayPassabilityCounts[3];
+  float *OneWayPassabilityCoefficients[3];
+  PathFinder_Struct64 *Datas_64;
+  PathFinder_Struct68 *Datas_68;
+  int CellStructCount;
+  CellStruct CellStructBuffer;
+  DynamicVectorClass_unsigned_int SubzonesIndexes[3];
+  PathFinder_StructBC PassabilityIndexes[3];
+  int PassabilityCounts[3];
+};
+
+struct PathFinderData
+{
+  CellStruct unknown_cellstruct_0;
+  int AccumulatedDistance;
+  int AccumulatedCount;
+  int *Facings;
+  int unknown_int_10;
+  int *Levels;
+  CellStruct unknown_cellstruct_18;
   int unknown_int_1C;
-  int unknown_int_20;
-  int unknown_int_24;
-  int unknown_int_28;
-  int unknown_int_2C;
-  int unknown_field_30;
-  int unknown_field_34;
-  __int8 unknown_byte_38;
-  int unknown_int_3C;
-  int unknown_int_40[3];
-  int unknown_int_4C[3];
-  int unknown_int_58[3];
-  PathFinder_Struct64* unknown_ptr_64;
-  PathFinder_Struct68* unknown_ptr_68;
-  int unknown_int_6C;
-  short unknown_short_70;
-  short unknown_short_72;
-  DynamicVectorClass_unsigned_int unknown_vector_74[3];
-  PathFinder_StructBC unknown_struct_BC[3];
-  int unknown_int_C28[3];
 };
 
 struct FoggedObjectDraw
