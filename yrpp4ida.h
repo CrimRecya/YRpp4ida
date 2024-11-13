@@ -333,6 +333,7 @@ struct PathFinder_Struct68;
 struct PathFinder_StructBC;
 struct PathFinder;
 struct FoggedObjectDraw;
+struct PCX;
 
 // TODO STRUCT
 
@@ -24070,4 +24071,21 @@ struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
   AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_FoggedObjectClass_PTR *this, int);
+};
+
+struct PCX
+{
+  int unknown_int_0;
+  int unknown_int_4;
+  int unknown_int_8;
+  int unknown_int_C;
+  int unknown_int_10;
+  __int8 unknown_byte_14;
+  unsigned int (__fastcall *GetLength)(const char **this);
+  int unknown_int_1C;
+  unsigned int unknown_int_20;
+  float unknown_float_24;
+  unsigned int unknown_int_28;
+  float unknown_float_2C;
+  int unknown_int_30;
 };
