@@ -3586,8 +3586,8 @@ union Union_BaseClass_BaseNodes
 
 struct WaypointClass
 {
-  CellStruct Coords;
-  unsigned int unknown;
+  Point2D Coords;
+  int unknown_int_8;
 };
 
 struct __declspec(align(4)) VectorClass_WaypointClass
@@ -13676,7 +13676,7 @@ class TechnoClass : RadioClass
   unsigned int unknown_4F4;
   bool unknown_bool_4F8;
   unsigned int unknown_4FC;
-  TechnoClass *unknown_500;
+  TechnoClass *QueueUpToEnter;
   unsigned int EMPLockRemaining;
   unsigned int ThreatPosed;
   unsigned int ShouldLoseTargetNow;
@@ -14584,9 +14584,8 @@ class DisplayClass : MapClass
   bool PlanningMode;
   bool PlaceBeaconMode;
   int CurrentSWTypeIndex;
-  unsigned int unknown_11BC;
-  unsigned int unknown_11C0;
-  unsigned int unknown_11C4;
+  WaypointClass *unknown_waypoint_11BC;
+  Point2D unknown_waypoint_location_11C0;
   unsigned int unknown_11C8;
   bool unknown_bool_11CC;
   bool unknown_bool_11CD;
