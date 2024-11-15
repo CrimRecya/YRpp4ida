@@ -13675,7 +13675,7 @@ class TechnoClass : RadioClass
   unsigned int QueuedVoiceIndex;
   unsigned int unknown_4F4;
   bool unknown_bool_4F8;
-  unsigned int unknown_4FC;
+  unsigned int unknown_frame_4FC;
   TechnoClass *QueueUpToEnter;
   unsigned int EMPLockRemaining;
   unsigned int ThreatPosed;
