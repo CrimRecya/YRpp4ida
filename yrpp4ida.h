@@ -13166,7 +13166,7 @@ class MissionClass : ObjectClass
   bool unknown_bool_B8;
   int MissionStatus;
   int CurrentMissionStartTime;
-  unsigned int unknown_C4;
+  int MissionAccumulateTime;
   Union_MissionClass_UpdateTimer MissionClass_UpdateTimer;
 };
 
@@ -13544,8 +13544,7 @@ class TechnoClass : RadioClass
   Union_TechnoClass_DisguiseBlinkTimer TechnoClass_DisguiseBlinkTimer;
   bool UnlimboingInfantry;
   Union_TechnoClass_ReloadTimer TechnoClass_ReloadTimer;
-  unsigned int unknown_208;
-  unsigned int unknown_20C;
+  Point2D RadarPosition;
   Union_TechnoClass_DisplayProductionTo TechnoClass_DisplayProductionTo;
   int Group;
   AbstractClass *Focus;
