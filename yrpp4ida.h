@@ -12460,13 +12460,14 @@ class BulletClass : ObjectClass
   BulletVelocity Velocity;
   unsigned int unknown_100;
   bool unknown_104;
-  unsigned int unknown_108;
+  bool CourseLock;
+  int CourseLockCounter;
   AbstractClass *Target;
   int Speed;
   int InheritedColor;
-  unsigned int unknown_118;
+  unsigned int UnknownCounter;
   unsigned int unknown_11C;
-  long double unknown_120;
+  long double UnknownAccumulatedLength;
   WarheadTypeClass *WH;
   unsigned __int8 AnimFrame;
   unsigned __int8 AnimRateCounter;
@@ -15343,7 +15344,7 @@ class __declspec(align(8)) BuildingClass : TechnoClass
   unsigned int unknown_544;
   AnimClass *FirestormAnim;
   AnimClass *PsiWarnAnim;
-  CDTimerClass unknown_timer_550;
+  CDTimerClass FactoryRetryTimer;
   AnimClass *Anims[21];
   bool AnimStates[21];
   char align_5C5[3];
@@ -23837,7 +23838,7 @@ struct BitFont
   int PitchDiv2;
   int Unknown_14;
   wchar_t *field_18;
-  int field_1C;
+  int MinLineSpace;
   int field_20;
   unsigned __int16 Color;
   __int16 DefaultColor2;
