@@ -65,6 +65,8 @@ struct CCINIClass;
 struct CCINIClass_vtbl; // 0x7E1AF4
 struct FrameTimer;
 struct TimerStruct_FrameTimer;
+struct SystemTimer;
+struct TimerStruct_SystemTimer;
 struct StartingTechnoStruct;
 struct BaseNodeClass;
 struct BaseClass;
@@ -3505,6 +3507,7 @@ struct TintStruct
 
 struct FrameTimer
 {
+  int buffer;
 };
 
 struct TimerStruct_FrameTimer
@@ -3514,6 +3517,19 @@ struct TimerStruct_FrameTimer
   int TimeLeft;
 };
 typedef TimerStruct_FrameTimer CDTimerClass;
+
+struct SystemTimer
+{
+  int buffer;
+};
+
+struct TimerStruct_SystemTimer
+{
+  int StartTime;
+  SystemTimer CurrentTime;
+  int TimeLeft;
+};
+typedef TimerStruct_SystemTimer SysTimerClass;
 
 struct IndexBitfield_TL_HouseClass_PTR_TR_
 {
@@ -5310,6 +5326,7 @@ struct GameModeOptionsClass
   bool BuildOffAlly;
   int GameSpeed;
   bool MultiEngineer;
+  bool unknwon_bool_1D;
   int UnitCount;
   int AIPlayers;
   int AIDifficulty;
@@ -5337,7 +5354,7 @@ struct SessionOptionsClass
   CoordStruct SlotData[8];
 };
 
-struct IPXAddressClass
+struct __declspec(align(4)) IPXAddressClass
 {
   unsigned __int8 NetworkNumber[4];
   unsigned __int8 NodeAddress[6];
@@ -8013,11 +8030,104 @@ struct __declspec(align(4)) SessionClass
   int GameVersion;
   DynamicVectorClass_MultiMission_PTR MultiMission;
   char ScenarioFilename[514];
-  unsigned __int8 unknown_8AA[8034];
+  unsigned int unknown_8AC[8];
+  unsigned int unknown_8CC;
+  unsigned __int8 unknown_8D0;
+  unsigned int unknown_8D4;
+  unsigned int unknown_8D8[3];
+  IPXAddressClass unknown_8E4;
+  DynamicVectorClass_unsigned_int unknown_vector_8F0;
+  unsigned int unknown_908[8];
+  unsigned int unknown_928[64];
+  MessageListClass MessageListClassInstance;
+  IPXAddressClass unknown_1EC4;
+  unsigned int unknown_1ED0[2];
+  unsigned __int8 unknown_1ED8;
+  unsigned __int8 unknown_1ED9;
+  unsigned __int16 unknown_1EDA;
+  unsigned int unknown_1EDC[56];
+  unsigned int unknown_1FBC;
+  unsigned __int8 unknown_1FC0;
+  unsigned __int8 unknown_1FC1;
+  unsigned int unknown_1FC4[228];
+  CCFileClass CCFileClassInstance;
+  unsigned int unknown_23C0;
+  unsigned int unknown_23C4;
+  IPXAddressClass unknown_23C8;
+  unsigned __int8 unknown_23D4;
+  unsigned __int8 unknown_23D5;
+  unsigned __int8 unknown_23D6;
+  unsigned __int16 unknown_23D8;
+  unsigned int unknown_23DC[124];
+  IPXAddressClass unknown_25CC;
+  unsigned __int16 unknown_25D8;
+  unsigned int unknown_25DC[140];
   DynamicVectorClass_NodeNameType_PTR unknown_vector_280C;
   DynamicVectorClass_NodeNameType_PTR unknown_vector_2824;
   DynamicVectorClass_NodeNameType_PTR StartSpots;
-  unsigned int unknown_2854[545];
+  unsigned int unknown_2854[9];
+  unsigned __int8 unknown_2878;
+  unsigned int unknown_287C;
+  unsigned int unknown_2880;
+  unsigned int unknown_2884;
+  unsigned int unknown_2888;
+  unsigned int unknown_288C;
+  unsigned int unknown_2890;
+  unsigned int unknown_2894;
+  unsigned int unknown_2898;
+  unsigned int unknown_289C;
+  unsigned int unknown_28A0[2];
+  char unknown_28A8[80];
+  unsigned int unknown_28F8;
+  DynamicVectorClass_unsigned_int unknown_vector_28FC;
+  DynamicVectorClass_unsigned_int unknown_vector_2914;
+  DynamicVectorClass_unsigned_int unknown_vector_292C;
+  unsigned int unknown_2944[8];
+  unsigned int unknown_2964;
+  unsigned __int8 unknown_2968;
+  unsigned __int16 unknown_296A;
+  IPXAddressClass unknown_296C;
+  IPXAddressClass unknown_2978;
+  unsigned __int16 unknown_2984;
+  unsigned __int16 unknown_2986;
+  IPXAddressClass unknown_2988;
+  IPXAddressClass unknown_2994[8];
+  unsigned int unknown_29F4[341];
+  unsigned __int8 unknown_2F48;
+  unsigned int unknown_2F4C[16];
+  SysTimerClass unknown_2F8C[8];
+  unsigned int unknown_2FEC;
+  unsigned int unknown_2FF0;
+  unsigned int unknown_2FF4;
+  unsigned int unknown_2FF8[8];
+  unsigned __int8 unknown_3018;
+  unsigned int unknown_301C;
+  unsigned int unknown_3020[10];
+  unsigned __int16 unknown_3048;
+  unsigned int unknown_304C[8];
+  unsigned __int8 unknown_306C;
+  unsigned __int16 unknown_306E;
+  unsigned __int16 unknown_3070;
+  unsigned int unknown_3074;
+  unsigned __int8 unknown_3078;
+  unsigned __int16 unknown_307A[8];
+  unsigned int unknown_308C;
+  unsigned __int8 unknown_3090;
+  unsigned int unknown_3094;
+  unsigned __int8 unknown_3098;
+  unsigned int unknown_309C;
+  unsigned int unknown_30A0;
+  unsigned int unknown_30A4;
+  unsigned int unknown_30A8;
+  unsigned int unknown_30AC;
+  unsigned int unknown_30B0;
+  unsigned int unknown_30B4;
+  CoordStruct unknown_30B8;
+  unsigned int unknown_30C4;
+  unsigned __int8 unknown_30C8;
+  unsigned int unknown_30CC;
+  unsigned int unknown_30D0;
+  unsigned int unknown_30D4;
   bool CurrentlyInGame;
 };
 
