@@ -16340,9 +16340,9 @@ struct FootClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  BuildingClass *(__thiscall *FindNearestDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
@@ -18413,11 +18413,11 @@ struct WWMouseClass
   HWND__ *hWnd;
   RectangleStruct Rect0;
   Point2D XY2;
-  Surface *CopySurface;
+  DSurface *CopySurface;
   RectangleStruct Rect1;
-  unsigned int field_58;
+  DSurface *TacticalSurface;
   RectangleStruct Rect2;
-  unsigned int field_6C;
+  DSurface *SidebarSurface;
   RectangleStruct Rect3;
   RectangleStruct Rect4;
   unsigned int field_90;
