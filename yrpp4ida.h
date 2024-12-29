@@ -7634,13 +7634,15 @@ struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl
 
 struct PlanningBranchClass
 {
-  char Unknown[0x78];
+  EventClass Event;
+  int field_70;
+  int field_74;
 };
 
 struct __declspec(align(4)) VectorClass_PlanningBranchClass_PTR
 {
   VectorClass_PlanningBranchClass_PTR_vtbl *__vftable;
-  struct PlanningBranchClass **Items;
+  PlanningBranchClass **Items;
   int Capacity;
   bool IsInitialized;
   bool IsAllocated;
@@ -7650,11 +7652,11 @@ struct VectorClass_PlanningBranchClass_PTR_vtbl
 {
   void (__thiscall *~VectorClass_PlanningBranchClass_PTR)(VectorClass_PlanningBranchClass_PTR *this);
   bool (__thiscall *OperatorEqual)(VectorClass_PlanningBranchClass_PTR *this, VectorClass_PlanningBranchClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_PlanningBranchClass_PTR *this, int, struct PlanningBranchClass **);
+  bool (__thiscall *SetCapacity)(VectorClass_PlanningBranchClass_PTR *this, int, PlanningBranchClass **);
   void (__thiscall *Clear)(VectorClass_PlanningBranchClass_PTR *this);
   int (__thiscall *FindItemIndex)(VectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
   int (__thiscall *GetItemIndex)(VectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
-  struct PlanningBranchClass *(__thiscall *GetItem)(VectorClass_PlanningBranchClass_PTR *this, int);
+  PlanningBranchClass *(__thiscall *GetItem)(VectorClass_PlanningBranchClass_PTR *this, int);
 };
 
 struct DynamicVectorClass_PlanningBranchClass_PTR : VectorClass_PlanningBranchClass_PTR
@@ -7667,19 +7669,24 @@ struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl
 {
   void (__thiscall *~DynamicVectorClass_PlanningBranchClass_PTR)(DynamicVectorClass_PlanningBranchClass_PTR *this);
   bool (__thiscall *OperatorEqual)(DynamicVectorClass_PlanningBranchClass_PTR *this, VectorClass_PlanningBranchClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_PlanningBranchClass_PTR *this, int, struct PlanningBranchClass **);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_PlanningBranchClass_PTR *this, int, PlanningBranchClass **);
   void (__thiscall *Clear)(DynamicVectorClass_PlanningBranchClass_PTR *this);
   int (__thiscall *FindItemIndex)(DynamicVectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
-  struct PlanningBranchClass *(__thiscall *GetItem)(DynamicVectorClass_PlanningBranchClass_PTR *this, int);
+  PlanningBranchClass *(__thiscall *GetItem)(DynamicVectorClass_PlanningBranchClass_PTR *this, int);
 };
 
 struct PlanningNodeClass
 {
   DynamicVectorClass_PlanningMemberClass_PTR PlanningMembers;
-  int field_18;
+  int Frame;
   bool field_1C;
   DynamicVectorClass_PlanningBranchClass_PTR PlanningBranches;
+  EventClass Event;
+  int field_A8;
+  int field_AC;
+  int field_B0;
+  int field_B4;
 };
 
 struct __declspec(align(4)) VectorClass_PlanningNodeClass_PTR
@@ -19045,9 +19052,9 @@ struct EventClass_LATENCYFUDGE
   int LatencyFudge;
 };
 
-struct EventClass_MEGAFRAMEINFO
+struct __unaligned EventClass_MEGAFRAMEINFO
 {
-  char Unknown[104];
+  char Unknown[101];
 };
 
 struct EventClass_PACKETTIMING
@@ -19097,9 +19104,9 @@ struct EventClass_ABANDON_ALL
   int IsNaval;
 };
 
-union Union_EventClass_Event
+union __unaligned Union_EventClass_Event
 {
-  char DataBuffer[104];
+  char DataBuffer[101];
   EventClass_EMPTY Empty;
   EventClass_POWERON Poweron;
   EventClass_POWEROFF Poweroff;
@@ -19156,6 +19163,8 @@ struct __unaligned EventClass
   char HouseIndex;
   unsigned int Frame;
   Union_EventClass_Event EventClass_Event;
+  unsigned __int16 field_6C;
+  unsigned __int8 field_6E;
 };
 
 struct EventList_OutList
