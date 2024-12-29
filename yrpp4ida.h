@@ -3602,8 +3602,7 @@ union Union_BaseClass_BaseNodes
 
 struct WaypointClass
 {
-  Point2D Coords;
-  int unknown_int_8;
+  CoordStruct Coords;
 };
 
 struct __declspec(align(4)) VectorClass_WaypointClass
