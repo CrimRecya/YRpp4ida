@@ -1170,6 +1170,8 @@ class SelectClass; // : ControlClass : GadgetClass : LinkClass
 struct SelectClass_vtbl; // 0x7F2FCC
 class FoggedObjectClass; // : AbstractClass
 struct FoggedObjectClass_vtbl; // 0x7E8B38
+class StaticButtonClass; // : GadgetClass : LinkClass
+struct StaticButtonClass_vtbl; // 0x7F3EA0
 
 // TODO CLASS
 
@@ -2426,7 +2428,7 @@ enum MouseCursorType : unsigned int
   MouseCursorType_SpyPlane = 0x55
 };
 
-enum KeyNumType : __int16
+enum KeyNumType : int
 {
   KN_NONE = 0x0,
   KN_LMOUSE = 0x1,
@@ -2992,17 +2994,6 @@ enum Powerup : unsigned int
   Powerup_Gas = 16,
   Powerup_Tiberium = 17,
   Powerup_Pod = 18
-};
-
-enum WWKey : int
-{
-  WWKey_Shift = 0x100,
-  WWKey_Ctrl = 0x200,
-  WWKey_Alt = 0x400,
-  WWKey_Release = 0x800,
-  WWKey_VirtualKey = 0x1000,
-  WWKey_DoubleClick = 0x2000,
-  WWKey_Button = 0x8000,
 };
 
 enum JumpjetLocomotionClass_State
@@ -5674,10 +5665,10 @@ struct CommandClass_vtbl
   wchar_t *(__thiscall *GetUIName)(CommandClass *this);
   wchar_t *(__thiscall *GetUICategory)(CommandClass *this);
   wchar_t *(__thiscall *GetUIDescription)(CommandClass *this);
-  bool (__thiscall *PreventCombinationOverride)(CommandClass *this, WWKey);
-  bool (__thiscall *ExtraTriggerCondition)(CommandClass *this, WWKey);
-  bool (__thiscall *CheckLoop55E020)(CommandClass *this, WWKey);
-  void (__thiscall *Execute)(CommandClass *this, WWKey);
+  bool (__thiscall *PreventCombinationOverride)(CommandClass *this, KeyNumType);
+  bool (__thiscall *ExtraTriggerCondition)(CommandClass *this, KeyNumType);
+  bool (__thiscall *CheckLoop55E020)(CommandClass *this, KeyNumType);
+  void (__thiscall *Execute)(CommandClass *this, KeyNumType);
 };
 
 struct SwizzlePointerClass
@@ -24241,4 +24232,51 @@ struct PCX
   unsigned int unknown_int_28;
   float unknown_float_2C;
   int unknown_int_30;
+};
+
+class StaticButtonClass : GadgetClass
+{
+  MemoryBuffer Buffer;
+  wchar_t *String;
+  TextPrintType PrintType;
+};
+
+struct StaticButtonClass_vtbl
+{
+  void (__thiscall *~StaticButtonClass)(StaticButtonClass *this);
+  LinkClass *(__thiscall *GetNext)(StaticButtonClass *this);
+  LinkClass *(__thiscall *GetPrev)(StaticButtonClass *this);
+  LinkClass *(__thiscall *Add)(StaticButtonClass *this, LinkClass *);
+  LinkClass *(__thiscall *AddTail)(StaticButtonClass *this, LinkClass *);
+  LinkClass *(__thiscall *AddHead)(StaticButtonClass *this, LinkClass *);
+  LinkClass *(__thiscall *HeadOfList)(StaticButtonClass *this);
+  LinkClass *(__thiscall *TailOfList)(StaticButtonClass *this);
+  void (__thiscall *Zap)(StaticButtonClass *this);
+  LinkClass *(__thiscall *Remove)(StaticButtonClass *this);
+  unsigned int (__thiscall *Input)(StaticButtonClass *this);
+  void (__thiscall *DrawAll)(StaticButtonClass *this, bool);
+  void (__thiscall *DeleteList)(StaticButtonClass *this);
+  GadgetClass *(__thiscall *ExtractGadget)(StaticButtonClass *this, unsigned int);
+  void (__thiscall *MarkListToRedraw)(StaticButtonClass *this);
+  void (__thiscall *Disable)(StaticButtonClass *this);
+  void (__thiscall *Enable)(StaticButtonClass *this);
+  unsigned int (__thiscall *GetID)(StaticButtonClass *this);
+  void (__thiscall *MarkRedraw)(StaticButtonClass *this);
+  void (__thiscall *PeerToPeer)(StaticButtonClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
+  void (__thiscall *SetFocus)(StaticButtonClass *this);
+  void (__thiscall *KillFocus)(StaticButtonClass *this);
+  bool (__thiscall *IsFocused)(StaticButtonClass *this);
+  bool (__thiscall *IsListToRedraw)(StaticButtonClass *this);
+  bool (__thiscall *IsToRedraw)(StaticButtonClass *this);
+  void (__thiscall *SetPosition)(StaticButtonClass *this, int, int);
+  void (__thiscall *SetDimension)(StaticButtonClass *this, int, int);
+  bool (__thiscall *Draw)(StaticButtonClass *this, bool);
+  void (__thiscall *OnMouseEnter)(StaticButtonClass *this);
+  void (__thiscall *OnMouseLeave)(StaticButtonClass *this);
+  void (__thiscall *StickyProcess)(StaticButtonClass *this, GadgetFlag);
+  bool (__thiscall *Action)(StaticButtonClass *this, GadgetFlag, KeyNumType *, KeyModifier);
+  bool (__thiscall *Clicked)(StaticButtonClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
+  void (__thiscall *SetString)(StaticButtonClass *this, wchar_t *, bool);
+  bool (__thiscall *CopySurface)(StaticButtonClass *this);
+  bool (__thiscall *PrintString)(StaticButtonClass *this, wchar_t *);
 };
