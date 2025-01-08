@@ -13486,7 +13486,7 @@ class TechnoClass : RadioClass
   Point2D RadarPosition;
   Union_TechnoClass_DisplayProductionTo TechnoClass_DisplayProductionTo;
   int Group;
-  AbstractClass *Focus;
+  AbstractClass *ArchiveTarget;
   HouseClass *Owner;
   CloakState CloakState;
   Union_TechnoClass_CloakProgress TechnoClass_CloakProgress;
@@ -15962,7 +15962,7 @@ class FootClass : TechnoClass
   bool HaveAttackMoveTarget;
   TeamClass *Team;
   FootClass *NextTeamMember;
-  unsigned int unknown_5DC;
+  CellClass *PatrolTarget;
   int PathDirections[24];
   Union_FootClass_PathDelayTimer FootClass_PathDelayTimer;
   int unknown_int_64C;
@@ -16342,12 +16342,12 @@ struct FootClass_vtbl
   BuildingClass *(__thiscall *FindNearestDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
+  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *vt_entry_550)(FootClass *this, unsigned int);
+  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
 };
 
 class InfantryClass : FootClass
@@ -16705,12 +16705,12 @@ struct InfantryClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
+  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *vt_entry_550)(FootClass *this, unsigned int);
+  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
   bool (__thiscall *IsDeployed)(InfantryClass *this);
   bool (__thiscall *PlayAnim)(InfantryClass *this, Sequence, bool, bool);
 };
@@ -17167,12 +17167,12 @@ struct UnitClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
+  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *vt_entry_550)(FootClass *this, unsigned int);
+  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
   void (__thiscall *DrawAsVXL)(UnitClass *this, Point2D, RectangleStruct, int, int);
   void (__thiscall *DrawAsSHP)(UnitClass *this, Point2D, RectangleStruct, int, int);
   void (__thiscall *DrawObject)(UnitClass *this, Surface *, Point2D, RectangleStruct, int, int);
@@ -17624,12 +17624,12 @@ struct AircraftClass_vtbl
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *vt_entry_53C)(FootClass *this, bool);
+  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *vt_entry_550)(FootClass *this, unsigned int);
+  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
 };
 
 class __declspec(align(2)) AircraftTypeClass : TechnoTypeClass
