@@ -2788,25 +2788,25 @@ enum EventType : unsigned char
   EventType_LAST_EVENT = 47,
 };
 
-enum __bitmask TargetFlags : unsigned int
+enum __bitmask ThreatType : unsigned int
 {
-  TargetFlags_Range = 0x1,
-  TargetFlags_Area = 0x2,
-  TargetFlags_Air = 0x4,
-  TargetFlags_Infantry = 0x8,
-  TargetFlags_Vehicles = 0x10,
-  TargetFlags_Buildings = 0x20,
-  TargetFlags_Economy = 0x40,
-  TargetFlags_Ships = 0x80,
-  TargetFlags_Neutral = 0x100,
-  TargetFlags_Capture = 0x200,
-  TargetFlags_Fakes = 0x400,
-  TargetFlags_Power = 0x800,
-  TargetFlags_Factories = 0x1000,
-  TargetFlags_BaseDefense = 0x2000,
-  TargetFlags_Friendlies = 0x4000,
-  TargetFlags_Occupiable = 0x8000,
-  TargetFlags_TechCapture = 0x10000
+  ThreatType_Range = 0x1,
+  ThreatType_Area = 0x2,
+  ThreatType_Air = 0x4,
+  ThreatType_Infantry = 0x8,
+  ThreatType_Vehicles = 0x10,
+  ThreatType_Buildings = 0x20,
+  ThreatType_Economy = 0x40,
+  ThreatType_Ships = 0x80,
+  ThreatType_Neutral = 0x100,
+  ThreatType_Capture = 0x200,
+  ThreatType_Fakes = 0x400,
+  ThreatType_Power = 0x800,
+  ThreatType_Factories = 0x1000,
+  ThreatType_BaseDefense = 0x2000,
+  ThreatType_Friendlies = 0x4000,
+  ThreatType_Occupiable = 0x8000,
+  ThreatType_TechCapture = 0x10000
 };
 
 enum BuildCat : __int32
@@ -13857,7 +13857,7 @@ struct TechnoClass_vtbl
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
   void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
   bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, TargetFlags);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
   void (__thiscall *Stun)(TechnoClass *this);
   bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
   bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
@@ -13867,7 +13867,7 @@ struct TechnoClass_vtbl
   void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
   FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
   FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, TargetFlags, CoordStruct *, bool);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
   void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
@@ -15582,7 +15582,7 @@ struct BuildingClass_vtbl
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
   void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
   bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, TargetFlags);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
   void (__thiscall *Stun)(TechnoClass *this);
   bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
   bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
@@ -15592,7 +15592,7 @@ struct BuildingClass_vtbl
   void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
   FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
   FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, TargetFlags, CoordStruct *, bool);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
   void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
@@ -15965,7 +15965,7 @@ class FootClass : TechnoClass
   CellClass *PatrolTarget;
   int PathDirections[24];
   Union_FootClass_PathDelayTimer FootClass_PathDelayTimer;
-  int unknown_int_64C;
+  int PathWaitTimes;
   Union_FootClass_unknown_timer_650 FootClass_unknown_timer_650;
   Union_FootClass_SightTimer FootClass_SightTimer;
   Union_FootClass_BlockagePathTimer FootClass_BlockagePathTimer;
@@ -15974,7 +15974,7 @@ class FootClass : TechnoClass
   char TubeIndex;
   bool unknown_bool_685;
   char WaypointIndex;
-  bool unknown_bool_687;
+  bool ShouldScatterInNextIdle;
   bool unknown_bool_688;
   bool IsInitiated;
   bool ShouldScanForTarget;
@@ -15994,9 +15994,9 @@ class FootClass : TechnoClass
   bool IsLetGoByLocomotor;
   bool IsRotatingTurretNotSpin;
   bool unknown_bool_6B0;
-  bool unknown_bool_6B1;
+  bool IsCycleNavQueue;
   bool unknown_bool_6B2;
-  bool unknown_bool_6B3;
+  bool HaveEnteredIdleInThisFrame;
   bool unknown_bool_6B4;
   bool unknown_bool_6B5;
   bool FrozenStill;
@@ -16238,7 +16238,7 @@ struct FootClass_vtbl
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
   void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
   bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, TargetFlags);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
   void (__thiscall *Stun)(TechnoClass *this);
   bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
   bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
@@ -16248,7 +16248,7 @@ struct FootClass_vtbl
   void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
   FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
   FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, TargetFlags, CoordStruct *, bool);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
   void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
@@ -16601,7 +16601,7 @@ struct InfantryClass_vtbl
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
   void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
   bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, TargetFlags);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
   void (__thiscall *Stun)(TechnoClass *this);
   bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
   bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
@@ -16611,7 +16611,7 @@ struct InfantryClass_vtbl
   void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
   FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
   FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, TargetFlags, CoordStruct *, bool);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
   void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
@@ -17063,7 +17063,7 @@ struct UnitClass_vtbl
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
   void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
   bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, TargetFlags);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
   void (__thiscall *Stun)(TechnoClass *this);
   bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
   bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
@@ -17073,7 +17073,7 @@ struct UnitClass_vtbl
   void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
   FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
   FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, TargetFlags, CoordStruct *, bool);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
   void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
@@ -17520,7 +17520,7 @@ struct AircraftClass_vtbl
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
   void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
   bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, TargetFlags);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
   void (__thiscall *Stun)(TechnoClass *this);
   bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
   bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
@@ -17530,7 +17530,7 @@ struct AircraftClass_vtbl
   void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
   FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
   FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, TargetFlags, CoordStruct *, bool);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
   void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
