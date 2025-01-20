@@ -9772,7 +9772,7 @@ struct ObjectClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -10035,7 +10035,7 @@ struct AnimClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -10287,7 +10287,7 @@ struct SmudgeClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -11651,7 +11651,7 @@ struct VoxelAnimClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -12078,7 +12078,7 @@ struct ParticleClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -12300,7 +12300,7 @@ struct ParticleSystemClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -12529,7 +12529,7 @@ struct BulletClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -12753,7 +12753,7 @@ struct OverlayClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -13081,7 +13081,7 @@ struct WaveClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -13219,7 +13219,7 @@ struct MissionClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -13386,7 +13386,7 @@ struct RadioClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -13734,7 +13734,7 @@ struct TechnoClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -15254,7 +15254,7 @@ struct BuildingLightClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -15459,7 +15459,7 @@ struct BuildingClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -16000,7 +16000,7 @@ class FootClass : TechnoClass
   bool unknown_bool_6B4;
   bool unknown_bool_6B5;
   bool FrozenStill;
-  bool unknown_bool_6B7;
+  bool IsWaitingBlockagePath;
   bool unknown_bool_6B8;
   unsigned int unused_6BC;
 };
@@ -16115,7 +16115,7 @@ struct FootClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -16478,7 +16478,7 @@ struct InfantryClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -16940,7 +16940,7 @@ struct UnitClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -17397,7 +17397,7 @@ struct AircraftClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -17818,7 +17818,7 @@ struct TerrainClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -18808,7 +18808,7 @@ struct VeinholeMonsterClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
@@ -19443,6 +19443,7 @@ class IsometricTileTypeClass : ObjectTypeClass
   int unk_2F0;
   bool unk_2F4;
   char FileName[14];
+  char padding[2];
   bool AllowBurrowing;
   bool AllowTiberium;
   unsigned int unk_308;
@@ -21355,7 +21356,7 @@ struct IsometricTileClass_vtbl
   void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
   void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
   Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  unsigned int (__thiscall *vt_entry_1B0)(ObjectClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
   void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
   CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
