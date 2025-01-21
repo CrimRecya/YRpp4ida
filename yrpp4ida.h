@@ -340,6 +340,7 @@ struct FoggedObjectDraw;
 struct SessionClass_TL_unnamed_type_MPStats_TR_;
 struct SessionClass;
 struct PCX;
+struct DamageGroup;
 
 // TODO STRUCT
 
@@ -907,6 +908,10 @@ struct VectorClass_FoggedObjectDraw;
 struct VectorClass_FoggedObjectDraw_vtbl; // 0x7E8BC0
 struct DynamicVectorClass_FoggedObjectDraw;
 struct DynamicVectorClass_FoggedObjectDraw_vtbl; // 0x7E8BA0
+struct VectorClass_DamageGroup_PTR;
+struct VectorClass_DamageGroup_PTR_vtbl; // 0x7E5144
+struct DynamicVectorClass_DamageGroup_PTR;
+struct DynamicVectorClass_DamageGroup_PTR_vtbl; // 0x7E5170
 
 // TODO VECTOR
 
@@ -24280,4 +24285,47 @@ struct StaticButtonClass_vtbl
   void (__thiscall *SetString)(StaticButtonClass *this, wchar_t *, bool);
   bool (__thiscall *CopySurface)(StaticButtonClass *this);
   bool (__thiscall *PrintString)(StaticButtonClass *this, wchar_t *);
+};
+
+struct DamageGroup
+{
+  TechnoClass *Unit;
+  int Distance;
+};
+
+struct __declspec(align(4)) VectorClass_DamageGroup_PTR
+{
+  VectorClass_DamageGroup_PTR_vtbl *__vftable;
+  DamageGroup **Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_DamageGroup_PTR_vtbl
+{
+  void (__thiscall *~VectorClass_DamageGroup_PTR)(VectorClass_DamageGroup_PTR *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_DamageGroup_PTR *this, VectorClass_DamageGroup_PTR *);
+  bool (__thiscall *SetCapacity)(VectorClass_DamageGroup_PTR *this, int, DamageGroup **);
+  void (__thiscall *Clear)(VectorClass_DamageGroup_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_DamageGroup_PTR *this, DamageGroup **);
+  int (__thiscall *GetItemIndex)(VectorClass_DamageGroup_PTR *this, DamageGroup **);
+  DamageGroup *(__thiscall *GetItem)(VectorClass_DamageGroup_PTR *this, int);
+};
+
+struct DynamicVectorClass_DamageGroup_PTR : VectorClass_DamageGroup_PTR
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_DamageGroup_PTR_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_DamageGroup_PTR)(DynamicVectorClass_DamageGroup_PTR *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_DamageGroup_PTR *this, VectorClass_DamageGroup_PTR *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_DamageGroup_PTR *this, int, DamageGroup **);
+  void (__thiscall *Clear)(DynamicVectorClass_DamageGroup_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_DamageGroup_PTR *this, DamageGroup **);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_DamageGroup_PTR *this, DamageGroup **);
+  DamageGroup *(__thiscall *GetItem)(DynamicVectorClass_DamageGroup_PTR *this, int);
 };
