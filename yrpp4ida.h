@@ -23405,7 +23405,7 @@ struct StaticButtonClass_vtbl
 
 struct DamageGroup
 {
-  TechnoClass *Unit;
+  ObjectClass *Target;
   int Distance;
 };
 
