@@ -142,7 +142,6 @@ struct Quaternion;
 struct BounceClass;
 struct RandomStruct;
 struct ScriptActionNode;
-struct RectangleStruct_Unknown_Type;
 struct TaskForceEntryStruct;
 struct ControlNode;
 struct SpawnControl;
@@ -1192,135 +1191,10 @@ union Union_D_D_PIXEL_FORMAT_dw2;
 union Union_D_D_PIXEL_FORMAT_dw3;
 union Union_D_D_PIXEL_FORMAT_dw4;
 union Union_D_D_PIXEL_FORMAT_dw5;
-union Union_CRCEngine_unnamed_type_StagingBuffer;
-union Union_INIClass_Sections;
-union Union_LoadOptionsClass_FileEntries;
-union Union_BaseClass_BaseNodes;
-union Union_BaseClass_Cells_24;
-union Union_BaseClass_Cells_38;
-union Union_IndexClass_SectionIndex;
-union Union_HouseClass_RelatedTags;
-union Union_HouseClass_ConYards;
-union Union_HouseClass_Buildings;
-union Union_HouseClass_UnitRepairStations;
-union Union_HouseClass_Grinders;
-union Union_HouseClass_Absorbers;
-union Union_HouseClass_Bunkers;
-union Union_HouseClass_Occupiables;
-union Union_HouseClass_CloningVats;
-union Union_HouseClass_SecretLabs;
-union Union_HouseClass_PsychicDetectionBuildings;
-union Union_HouseClass_FactoryPlants;
-union Union_HouseClass_StartingUnits;
-union Union_HouseClass_Supers;
-union Union_HouseClass_RepairTimer;
-union Union_HouseClass_AlertTimer;
-union Union_HouseClass_BorrowedTime;
-union Union_HouseClass_PowerBlackoutTimer;
-union Union_HouseClass_RadarBlackoutTimer;
-union Union_HouseClass_OwnedTiberium;
-union Union_HouseClass_OwnedWeed;
-union Union_HouseClass_BuiltAircraftTypes;
-union Union_HouseClass_BuiltInfantryTypes;
-union Union_HouseClass_BuiltUnitTypes;
-union Union_HouseClass_BuiltBuildingTypes;
-union Union_HouseClass_KilledAircraftTypes;
-union Union_HouseClass_KilledInfantryTypes;
-union Union_HouseClass_KilledUnitTypes;
-union Union_HouseClass_KilledBuildingTypes;
-union Union_HouseClass_CapturedBuildings;
-union Union_HouseClass_CollectedCrates;
-union Union_HouseClass_ZoneInfos;
-union Union_HouseClass_OwnedBuildingTypes;
-union Union_HouseClass_OwnedUnitTypes;
-union Union_HouseClass_OwnedInfantryTypes;
-union Union_HouseClass_OwnedAircraftTypes;
-union Union_HouseClass_ActiveBuildingTypes;
-union Union_HouseClass_ActiveUnitTypes;
-union Union_HouseClass_ActiveInfantryTypes;
-union Union_HouseClass_ActiveAircraftTypes;
-union Union_HouseClass_FactoryProducedBuildingTypes;
-union Union_HouseClass_FactoryProducedUnitTypes;
-union Union_HouseClass_FactoryProducedInfantryTypes;
-union Union_HouseClass_FactoryProducedAircraftTypes;
-union Union_HouseClass_AttackTimer;
-union Union_HouseClass_AngerNodes;
-union Union_HouseClass_ScoutNodes;
-union Union_HouseClass_AITimer;
-union Union_HouseClass_Unknown_Timer_5640;
-union Union_HouseClass_FrameTimer;
-union Union_HouseClass_DropshipData;
-union Union_HouseClass_DamageDelayTimer;
-union Union_HouseClass_TeamDelayTimer;
-union Union_HouseClass_TriggerDelayTimer;
-union Union_HouseClass_SpeakAttackDelayTimer;
-union Union_HouseClass_SpeakPowerDelayTimer;
-union Union_HouseClass_SpeakMoneyDelayTimer;
-union Union_HouseClass_SpeakMaxedDelayTimer;
 union Union_HouseClass_StartingLocation;
-union Union_HouseClass_WaypointPath;
-union Union_ObjectClass_AmbientSoundController;
-union Union_ObjectClass_CustomSoundController;
-union Union_MissionClass_UpdateTimer;
-union Union_RadioClass_RadioLinks;
-union Union_TechnoClass_Flashing;
-union Union_TechnoClass_Passengers;
-union Union_TechnoClass_Veterancy;
-union Union_TechnoClass_IdleActionTimer;
-union Union_TechnoClass_RadarFlashTimer;
-union Union_TechnoClass_TargetingTimer;
-union Union_TechnoClass_IronCurtainTimer;
-union Union_TechnoClass_IronTintTimer;
-union Union_TechnoClass_AirstrikeTimer;
-union Union_TechnoClass_AirstrikeTintTimer;
-union Union_TechnoClass_InfantryBlinkTimer;
-union Union_TechnoClass_DisguiseBlinkTimer;
-union Union_TechnoClass_ReloadTimer;
-union Union_TechnoClass_DisplayProductionTo;
-union Union_TechnoClass_CloakProgress;
-union Union_TechnoClass_CloakDelayTimer;
-union Union_TechnoClass_RearmTimer;
-union Union_TechnoClass_Tiberium;
-union Union_TechnoClass_UnloadTimer;
-union Union_TechnoClass_BarrelFacing;
-union Union_TechnoClass_PrimaryFacing;
-union Union_TechnoClass_SecondaryFacing;
-union Union_TechnoClass_TargetLaserTimer;
-union Union_TechnoClass_TurretRecoil;
-union Union_TechnoClass_BarrelRecoil;
-union Union_TechnoClass_CurrentTargetThreatValues;
-union Union_TechnoClass_CurrentTargets;
-union Union_TechnoClass_AttackedTargets;
-union Union_TechnoClass_Audio5;
-union Union_TechnoClass_Audio6;
-union Union_FootClass_MoveSoundAudioController;
-union Union_FootClass_unknown_abstract_array_588;
-union Union_FootClass_NavQueue;
-union Union_FootClass_PathDelayTimer;
-union Union_FootClass_unknown_timer_650;
-union Union_FootClass_SightTimer;
-union Union_FootClass_BlockagePathTimer;
-union Union_FootClass_Locomotor;
-union Union_FootClass_ParalysisTimer;
-union Union_WeaponTypeClass_Report;
-union Union_WeaponTypeClass_DownReport;
-union Union_WeaponTypeClass_Anim;
-union Union_Anim_Techno_Animation;
-union Union_Anim_Techno_Audio3;
-union Union_Anim_Techno_Audio4;
-union Union_AnimClass_Bounce;
-union Union_RadSiteClass_RadLevelTimer;
-union Union_RadSiteClass_RadLightTimer;
-union Union_TiberiumClass_Debris;
-union Union_TiberiumClass_SpreadLogic;
-union Union_TiberiumClass_GrowthLogic;
-union Union_ParticleSystemClass_Particles;
-union Union_ControlNode_LinkDrawTimer;
-union Union_TActionClass_Bounds;
 union Union_EventClass_Event;
 union Union_Matrix3D_Vector4D;
 union Union_VoxelIndexKey;
-union Union_LaserDrawClass_Progress;
 union Union_VeinholeMonsterClass_GrowthLogic;
 union Union_PlanningTokenClass_unknown_20_88;
 union Union_MPGameModeClass_CSFTitle;
@@ -3251,17 +3125,11 @@ enum __bitmask Occupations : unsigned int
 
 // TODO ENUM
 
-union Union_CRCEngine_unnamed_type_StagingBuffer
-{
-  int Composite;
-  char Buffer[4];
-};
-
 struct CRCEngine
 {
   int CRC;
   int Index;
-  Union_CRCEngine_unnamed_type_StagingBuffer StagingBuffer;
+  int CompositeStagingBuffer;
 };
 
 union Union_DDD_D_SURFACE_DESC2_lPitch
@@ -3539,12 +3407,6 @@ struct ColorStruct
   unsigned __int8 B;
 };
 
-union Union_TechnoClass_DisplayProductionTo
-{
-  IndexBitfield_TL_HouseClass_PTR_TR_ DisplayProductionTo;
-  char __DisplayProductionTo[4];
-};
-
 struct BaseNodeClass
 {
   int BuildingTypeIndex;
@@ -3588,12 +3450,6 @@ struct DynamicVectorClass_BaseNodeClass_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_BaseNodeClass *this, BaseNodeClass *);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_BaseNodeClass *this, BaseNodeClass *);
   BaseNodeClass *(__thiscall *GetItem)(DynamicVectorClass_BaseNodeClass *this, BaseNodeClass *result, int);
-};
-
-union Union_BaseClass_BaseNodes
-{
-  DynamicVectorClass_BaseNodeClass BaseNodes;
-  char __BaseNodes[24];
 };
 
 struct WaypointClass
@@ -3646,24 +3502,6 @@ struct StorageClass
   float Tiberium4;
 };
 
-union Union_HouseClass_OwnedTiberium
-{
-  StorageClass OwnedTiberium;
-  char __OwnedTiberium[16];
-};
-
-union Union_HouseClass_OwnedWeed
-{
-  StorageClass OwnedWeed;
-  char __OwnedWeed[16];
-};
-
-union Union_TechnoClass_Tiberium
-{
-  StorageClass Tiberium;
-  char __Tiberium[16];
-};
-
 struct UnitTrackerClass
 {
   int UnitTotals[512];
@@ -3671,77 +3509,11 @@ struct UnitTrackerClass
   int InNetworkFormat;
 };
 
-union Union_HouseClass_BuiltAircraftTypes
-{
-  UnitTrackerClass BuiltAircraftTypes;
-  char __BuiltAircraftTypes[2056];
-};
-
-union Union_HouseClass_BuiltInfantryTypes
-{
-  UnitTrackerClass BuiltInfantryTypes;
-  char __BuiltInfantryTypes[2056];
-};
-
-union Union_HouseClass_BuiltUnitTypes
-{
-  UnitTrackerClass BuiltUnitTypes;
-  char __BuiltUnitTypes[2056];
-};
-
-union Union_HouseClass_BuiltBuildingTypes
-{
-  UnitTrackerClass BuiltBuildingTypes;
-  char __BuiltBuildingTypes[2056];
-};
-
-union Union_HouseClass_KilledAircraftTypes
-{
-  UnitTrackerClass KilledAircraftTypes;
-  char __KilledAircraftTypes[2056];
-};
-
-union Union_HouseClass_KilledInfantryTypes
-{
-  UnitTrackerClass KilledInfantryTypes;
-  char __KilledInfantryTypes[2056];
-};
-
-union Union_HouseClass_KilledUnitTypes
-{
-  UnitTrackerClass KilledUnitTypes;
-  char __KilledUnitTypes[2056];
-};
-
-union Union_HouseClass_KilledBuildingTypes
-{
-  UnitTrackerClass KilledBuildingTypes;
-  char __KilledBuildingTypes[2056];
-};
-
-union Union_HouseClass_CapturedBuildings
-{
-  UnitTrackerClass CapturedBuildings;
-  char __CapturedBuildings[2056];
-};
-
-union Union_HouseClass_CollectedCrates
-{
-  UnitTrackerClass CollectedCrates;
-  char __CollectedCrates[2056];
-};
-
 struct ZoneInfoStruct
 {
   int Aircraft;
   int Armor;
   int Infantry;
-};
-
-union Union_HouseClass_ZoneInfos
-{
-  ZoneInfoStruct ZoneInfos[5];
-  char __ZoneInfos[60];
 };
 
 struct __declspec(align(4)) VectorClass_int
@@ -3786,12 +3558,6 @@ struct DynamicVectorClass_int : VectorClass_int
   int CapacityIncrement;
 };
 
-union Union_TechnoClass_CurrentTargetThreatValues
-{
-  DynamicVectorClass_int CurrentTargetThreatValues;
-  char __CurrentTargetThreatValues[24];
-};
-
 struct DynamicVectorClass_int_vtbl
 {
   void (__thiscall *~DynamicVectorClass_int)(DynamicVectorClass_int *this);
@@ -3817,18 +3583,6 @@ struct TypeList_int_vtbl
   int (__thiscall *FindItemIndex)(TypeList_int *this, int *);
   int (__thiscall *GetItemIndex)(TypeList_int *this, int *);
   int (__thiscall *GetItem)(TypeList_int *this, int);
-};
-
-union Union_WeaponTypeClass_Report
-{
-  TypeList_int Report;
-  char __Report[28];
-};
-
-union Union_WeaponTypeClass_DownReport
-{
-  TypeList_int DownReport;
-  char __DownReport[28];
 };
 
 struct FixedString_TL_25_A_char_TR_
@@ -4105,102 +3859,6 @@ struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_
   IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *Archive;
 };
 
-union Union_HouseClass_RepairTimer
-{
-  CDTimerClass RepairTimer;
-  char __RepairTimer[12];
-};
-
-union Union_HouseClass_AlertTimer
-{
-  CDTimerClass AlertTimer;
-  char __AlertTimer[12];
-};
-
-union Union_HouseClass_BorrowedTime
-{
-  CDTimerClass BorrowedTime;
-  char __BorrowedTime[12];
-};
-
-union Union_HouseClass_PowerBlackoutTimer
-{
-  CDTimerClass PowerBlackoutTimer;
-  char __PowerBlackoutTimer[12];
-};
-
-union Union_HouseClass_RadarBlackoutTimer
-{
-  CDTimerClass RadarBlackoutTimer;
-  char __RadarBlackoutTimer[12];
-};
-
-union Union_HouseClass_AttackTimer
-{
-  CDTimerClass AttackTimer;
-  char __AttackTimer[12];
-};
-
-union Union_HouseClass_AITimer
-{
-  CDTimerClass AITimer;
-  char __AITimer[12];
-};
-
-union Union_HouseClass_Unknown_Timer_5640
-{
-  CDTimerClass Unknown_Timer_5640;
-  char __Unknown_Timer_5640[12];
-};
-
-union Union_HouseClass_FrameTimer
-{
-  CDTimerClass Timer;
-  char __Timer[12];
-};
-
-union Union_HouseClass_DamageDelayTimer
-{
-  CDTimerClass DamageDelayTimer;
-  char __DamageDelayTimer[12];
-};
-
-union Union_HouseClass_TeamDelayTimer
-{
-  CDTimerClass TeamDelayTimer;
-  char __TeamDelayTimer[12];
-};
-
-union Union_HouseClass_TriggerDelayTimer
-{
-  CDTimerClass TriggerDelayTimer;
-  char __TriggerDelayTimer[12];
-};
-
-union Union_HouseClass_SpeakAttackDelayTimer
-{
-  CDTimerClass SpeakAttackDelayTimer;
-  char __SpeakAttackDelayTimer[12];
-};
-
-union Union_HouseClass_SpeakPowerDelayTimer
-{
-  CDTimerClass SpeakPowerDelayTimer;
-  char __SpeakPowerDelayTimer[12];
-};
-
-union Union_HouseClass_SpeakMoneyDelayTimer
-{
-  CDTimerClass SpeakMoneyDelayTimer;
-  char __SpeakMoneyDelayTimer[12];
-};
-
-union Union_HouseClass_SpeakMaxedDelayTimer
-{
-  CDTimerClass SpeakMaxedDelayTimer;
-  char __SpeakMaxedDelayTimer[12];
-};
-
 struct StageClass
 {
   int Value;
@@ -4229,12 +3887,6 @@ struct BounceClass
   Quaternion AngularVelocity;
 };
 
-union Union_AnimClass_Bounce
-{
-  BounceClass Bounce;
-  char __Bounce[80];
-};
-
 struct RandomStruct
 {
   int Min;
@@ -4245,152 +3897,6 @@ struct ScriptActionNode
 {
   int Action;
   int Argument;
-};
-
-struct RectangleStruct_Unknown_Type
-{
-  int Param3;
-  int Param4;
-  int Param5;
-  int Param6;
-};
-
-union Union_TActionClass_Bounds
-{
-  RectangleStruct Bounds;
-  RectangleStruct_Unknown_Type __s1;
-};
-
-union Union_ControlNode_LinkDrawTimer
-{
-  CDTimerClass LinkDrawTimer;
-  char __LinkDrawTimer[12];
-};
-
-union Union_RadSiteClass_RadLevelTimer
-{
-  CDTimerClass RadLevelTimer;
-  char __RadLevelTimer[12];
-};
-
-union Union_RadSiteClass_RadLightTimer
-{
-  CDTimerClass RadLightTimer;
-  char __RadLightTimer[12];
-};
-
-union Union_MissionClass_UpdateTimer
-{
-  CDTimerClass UpdateTimer;
-  char __UpdateTimer[12];
-};
-
-union Union_TechnoClass_IdleActionTimer
-{
-  CDTimerClass IdleActionTimer;
-  char __IdleActionTimer[12];
-};
-
-union Union_TechnoClass_RadarFlashTimer
-{
-  CDTimerClass RadarFlashTimer;
-  char __RadarFlashTimer[12];
-};
-
-union Union_TechnoClass_TargetingTimer
-{
-  CDTimerClass TargetingTimer;
-  char __TargetingTimer[12];
-};
-
-union Union_TechnoClass_IronCurtainTimer
-{
-  CDTimerClass IronCurtainTimer;
-  char __IronCurtainTimer[12];
-};
-
-union Union_TechnoClass_IronTintTimer
-{
-  CDTimerClass IronTintTimer;
-  char __IronTintTimer[12];
-};
-
-union Union_TechnoClass_AirstrikeTimer
-{
-  CDTimerClass AirstrikeTimer;
-  char __AirstrikeTimer[12];
-};
-
-union Union_TechnoClass_AirstrikeTintTimer
-{
-  CDTimerClass AirstrikeTintTimer;
-  char __AirstrikeTintTimer[12];
-};
-
-union Union_TechnoClass_InfantryBlinkTimer
-{
-  CDTimerClass InfantryBlinkTimer;
-  char __InfantryBlinkTimer[12];
-};
-
-union Union_TechnoClass_DisguiseBlinkTimer
-{
-  CDTimerClass DisguiseBlinkTimer;
-  char __DisguiseBlinkTimer[12];
-};
-
-union Union_TechnoClass_ReloadTimer
-{
-  CDTimerClass ReloadTimer;
-  char __ReloadTimer[12];
-};
-
-union Union_TechnoClass_CloakDelayTimer
-{
-  CDTimerClass CloakDelayTimer;
-  char __CloakDelayTimer[12];
-};
-
-union Union_TechnoClass_RearmTimer
-{
-  CDTimerClass RearmTimer;
-  char __RearmTimer[12];
-};
-
-union Union_TechnoClass_TargetLaserTimer
-{
-  CDTimerClass TargetLaserTimer;
-  char __TargetLaserTimer[12];
-};
-
-union Union_FootClass_PathDelayTimer
-{
-  CDTimerClass PathDelayTimer;
-  char __PathDelayTimer[12];
-};
-
-union Union_FootClass_unknown_timer_650
-{
-  CDTimerClass unknown_timer_650;
-  char __unknown_timer_650[12];
-};
-
-union Union_FootClass_SightTimer
-{
-  CDTimerClass SightTimer;
-  char __SightTimer[12];
-};
-
-union Union_FootClass_BlockagePathTimer
-{
-  CDTimerClass BlockagePathTimer;
-  char __BlockagePathTimer[12];
-};
-
-union Union_FootClass_ParalysisTimer
-{
-  CDTimerClass ParalysisTimer;
-  char __ParalysisTimer[12];
 };
 
 struct ReservedVoxelIndexKey
@@ -4409,117 +3915,15 @@ union Union_VoxelIndexKey
   ReservedVoxelIndexKey Reserved;
 };
 
-union Union_HouseClass_OwnedBuildingTypes
-{
-  CounterClass OwnedBuildingTypes;
-  char __OwnedBuildingTypes[20];
-};
-
-union Union_HouseClass_OwnedUnitTypes
-{
-  CounterClass OwnedUnitTypes;
-  char __OwnedUnitTypes[20];
-};
-
-union Union_HouseClass_OwnedInfantryTypes
-{
-  CounterClass OwnedInfantryTypes;
-  char __OwnedInfantryTypes[20];
-};
-
-union Union_HouseClass_OwnedAircraftTypes
-{
-  CounterClass OwnedAircraftTypes;
-  char __OwnedAircraftTypes[20];
-};
-
-union Union_HouseClass_ActiveBuildingTypes
-{
-  CounterClass ActiveBuildingTypes;
-  char __ActiveBuildingTypes[20];
-};
-
-union Union_HouseClass_ActiveUnitTypes
-{
-  CounterClass ActiveUnitTypes;
-  char __ActiveUnitTypes[20];
-};
-
-union Union_HouseClass_ActiveInfantryTypes
-{
-  CounterClass ActiveInfantryTypes;
-  char __ActiveInfantryTypes[20];
-};
-
-union Union_HouseClass_ActiveAircraftTypes
-{
-  CounterClass ActiveAircraftTypes;
-  char __ActiveAircraftTypes[20];
-};
-
-union Union_HouseClass_FactoryProducedBuildingTypes
-{
-  CounterClass FactoryProducedBuildingTypes;
-  char __FactoryProducedBuildingTypes[20];
-};
-
-union Union_HouseClass_FactoryProducedUnitTypes
-{
-  CounterClass FactoryProducedUnitTypes;
-  char __FactoryProducedUnitTypes[20];
-};
-
-union Union_HouseClass_FactoryProducedInfantryTypes
-{
-  CounterClass FactoryProducedInfantryTypes;
-  char __FactoryProducedInfantryTypes[20];
-};
-
-union Union_HouseClass_FactoryProducedAircraftTypes
-{
-  CounterClass FactoryProducedAircraftTypes;
-  char __FactoryProducedAircraftTypes[20];
-};
-
-union Union_Anim_Techno_Animation
-{
-  StageClass Animation;
-  char __Animation[28];
-};
-
-union Union_TechnoClass_CloakProgress
-{
-  StageClass CloakProgress;
-  char __CloakProgress[28];
-};
-
-union Union_LaserDrawClass_Progress
-{
-  StageClass Progress;
-  char __Progress[28];
-};
-
 struct __declspec(align(4)) FlashData
 {
   int DurationRemaining;
   bool FlashingNow;
 };
 
-union Union_TechnoClass_Flashing
-{
-  FlashData Flashing;
-  char __Flashing[8];
-};
-
 struct VeterancyStruct
 {
   float Veterancy;
-};
-
-union Union_TechnoClass_Veterancy
-{
-  VeterancyStruct Veterancy;
-  char __Veterancy[4];
 };
 
 struct DirStruct
@@ -4536,24 +3940,6 @@ struct FacingClass
   DirStruct ROT;
 };
 
-union Union_TechnoClass_BarrelFacing
-{
-  FacingClass BarrelFacing;
-  char __BarrelFacing[24];
-};
-
-union Union_TechnoClass_PrimaryFacing
-{
-  FacingClass PrimaryFacing;
-  char __PrimaryFacing[24];
-};
-
-union Union_TechnoClass_SecondaryFacing
-{
-  FacingClass SecondaryFacing;
-  char __SecondaryFacing[24];
-};
-
 struct __declspec(align(8)) TransitionTimer
 {
   long double Rate1;
@@ -4561,12 +3947,6 @@ struct __declspec(align(8)) TransitionTimer
   unsigned int Rate2;
   bool State1;
   bool State2;
-};
-
-union Union_TechnoClass_UnloadTimer
-{
-  TransitionTimer UnloadTimer;
-  char __UnloadTimer[32];
 };
 
 struct TurretControl
@@ -4584,18 +3964,6 @@ struct RecoilData
   float TravelSoFar;
   RecoilData_RecoilState State;
   int TravelFramesLeft;
-};
-
-union Union_TechnoClass_TurretRecoil
-{
-  RecoilData TurretRecoil;
-  char __TurretRecoil[32];
-};
-
-union Union_TechnoClass_BarrelRecoil
-{
-  RecoilData BarrelRecoil;
-  char __BarrelRecoil[32];
 };
 
 struct BulletData
@@ -5061,48 +4429,6 @@ struct AudioController
   unsigned int Unused;
 };
 
-union Union_ObjectClass_AmbientSoundController
-{
-  AudioController AmbientSoundController;
-  char __AmbientSoundController[20];
-};
-
-union Union_ObjectClass_CustomSoundController
-{
-  AudioController CustomSoundController;
-  char __CustomSoundController[20];
-};
-
-union Union_Anim_Techno_Audio3
-{
-  AudioController Audio3;
-  char __Audio3[20];
-};
-
-union Union_Anim_Techno_Audio4
-{
-  AudioController Audio4;
-  char __Audio4[20];
-};
-
-union Union_TechnoClass_Audio5
-{
-  AudioController Audio5;
-  char __Audio5[20];
-};
-
-union Union_TechnoClass_Audio6
-{
-  AudioController Audio6;
-  char __Audio6[20];
-};
-
-union Union_FootClass_MoveSoundAudioController
-{
-  AudioController MoveSoundAudioController;
-  char __MoveSoundAudioController[20];
-};
-
 struct PriorityQueueClassNode
 {
   CellStruct MapCoord;
@@ -5125,18 +4451,6 @@ struct TiberiumLogic
   bool *CellIndexesWithTiberium;
   PriorityQueueClassNode *Nodes;
   CDTimerClass Timer;
-};
-
-union Union_TiberiumClass_SpreadLogic
-{
-  TiberiumLogic SpreadLogic;
-  char __SpreadLogic[28];
-};
-
-union Union_TiberiumClass_GrowthLogic
-{
-  TiberiumLogic GrowthLogic;
-  char __GrowthLogic[28];
 };
 
 struct GenericNode
@@ -5170,12 +4484,6 @@ struct List_TL_INIClass_INISection_PTR_TR_ : GenericList
 struct List_TL_INIClass_INISection_PTR_TR__vtbl
 {
   void (__thiscall *~List_TL_INIClass_INISection_PTR_TR_)(List_TL_INIClass_INISection_PTR_TR_ *this);
-};
-
-union Union_INIClass_Sections
-{
-  List_TL_INIClass_INISection_PTR_TR_ Sections;
-  char __Sections[28];
 };
 
 struct HWND__
@@ -5840,12 +5148,6 @@ struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_
   IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement *Archive;
 };
 
-union Union_IndexClass_SectionIndex
-{
-  IndexClass_TL_int_A_INIClass_INISection_PTR_TR_ SectionIndex;
-  char __SectionIndex[20];
-};
-
 struct __declspec(align(4)) VectorClass_CellStruct
 {
   VectorClass_CellStruct_vtbl *__vftable;
@@ -5883,28 +5185,10 @@ struct DynamicVectorClass_CellStruct_vtbl
   CellStruct (__thiscall *GetItem)(DynamicVectorClass_CellStruct *this, int);
 };
 
-union Union_BaseClass_Cells_24
-{
-  DynamicVectorClass_CellStruct Cells_24;
-  char __Cells_24[24];
-};
-
-union Union_BaseClass_Cells_38
-{
-  DynamicVectorClass_CellStruct Cells_38;
-  char __Cells_38[24];
-};
-
 struct PassengersClass
 {
   int NumPassengers;
   FootClass *FirstPassenger;
-};
-
-union Union_TechnoClass_Passengers
-{
-  PassengersClass Passengers;
-  char __Passengers[8];
 };
 
 struct ILocomotion : IUnknown
@@ -5970,19 +5254,13 @@ struct LocomotionID
   ILocomotion *m_pInterface;
 };
 
-union Union_FootClass_Locomotor
-{
-  LocomotionID Locomotor;
-  char __Locomotor[4];
-};
-
 struct INIClass
 {
   INIClass_vtbl *__vftable;
   char *CurrentSectionName;
   INIClass_INISection *CurrentSection;
-  Union_INIClass_Sections INIClass_Sections;
-  Union_IndexClass_SectionIndex IndexClass_SectionIndex;
+  List_TL_INIClass_INISection_PTR_TR_ Sections;
+  IndexClass_TL_int_A_INIClass_INISection_PTR_TR_ SectionIndex;
   INIClass_INIComment *LineComments;
 };
 
@@ -6039,12 +5317,6 @@ struct DynamicVectorClass_TagClass_PTR_vtbl
   TagClass *(__thiscall *GetItem)(DynamicVectorClass_TagClass_PTR *this, int);
 };
 
-union Union_HouseClass_RelatedTags
-{
-  DynamicVectorClass_TagClass_PTR RelatedTags;
-  char __RelatedTags[24];
-};
-
 struct __declspec(align(4)) VectorClass_BuildingClass_PTR
 {
   VectorClass_BuildingClass_PTR_vtbl *__vftable;
@@ -6080,72 +5352,6 @@ struct DynamicVectorClass_BuildingClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_BuildingClass_PTR *this, BuildingClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_BuildingClass_PTR *this, BuildingClass **);
   BuildingClass *(__thiscall *GetItem)(DynamicVectorClass_BuildingClass_PTR *this, int);
-};
-
-union Union_HouseClass_ConYards
-{
-  DynamicVectorClass_BuildingClass_PTR ConYards;
-  char __ConYards[24];
-};
-
-union Union_HouseClass_Buildings
-{
-  DynamicVectorClass_BuildingClass_PTR Buildings;
-  char __Buildings[24];
-};
-
-union Union_HouseClass_UnitRepairStations
-{
-  DynamicVectorClass_BuildingClass_PTR UnitRepairStations;
-  char __UnitRepairStations[24];
-};
-
-union Union_HouseClass_Grinders
-{
-  DynamicVectorClass_BuildingClass_PTR Grinders;
-  char __Grinders[24];
-};
-
-union Union_HouseClass_Absorbers
-{
-  DynamicVectorClass_BuildingClass_PTR Absorbers;
-  char __Absorbers[24];
-};
-
-union Union_HouseClass_Bunkers
-{
-  DynamicVectorClass_BuildingClass_PTR Bunkers;
-  char __Bunkers[24];
-};
-
-union Union_HouseClass_Occupiables
-{
-  DynamicVectorClass_BuildingClass_PTR Occupiables;
-  char __Occupiables[24];
-};
-
-union Union_HouseClass_CloningVats
-{
-  DynamicVectorClass_BuildingClass_PTR CloningVats;
-  char __CloningVats[24];
-};
-
-union Union_HouseClass_SecretLabs
-{
-  DynamicVectorClass_BuildingClass_PTR SecretLabs;
-  char __SecretLabs[24];
-};
-
-union Union_HouseClass_PsychicDetectionBuildings
-{
-  DynamicVectorClass_BuildingClass_PTR PsychicDetectionBuildings;
-  char __PsychicDetectionBuildings[24];
-};
-
-union Union_HouseClass_FactoryPlants
-{
-  DynamicVectorClass_BuildingClass_PTR FactoryPlants;
-  char __FactoryPlants[24];
 };
 
 struct StartingTechnoStruct
@@ -6191,19 +5397,13 @@ struct DynamicVectorClass_StartingTechnoStruct_PTR_vtbl
   StartingTechnoStruct *(__thiscall *GetItem)(DynamicVectorClass_StartingTechnoStruct_PTR *this, int);
 };
 
-union Union_HouseClass_StartingUnits
-{
-  DynamicVectorClass_StartingTechnoStruct_PTR StartingUnits;
-  char __StartingUnits[24];
-};
-
 struct BaseClass
 {
   BaseClass_vtbl *__vftable;
-  Union_BaseClass_BaseNodes BaseClass_BaseNodes;
+  DynamicVectorClass_BaseNodeClass BaseNodes;
   int PercentBuilt;
-  Union_BaseClass_Cells_24 BaseClass_Cells_24;
-  Union_BaseClass_Cells_38 BaseClass_Cells_38;
+  DynamicVectorClass_CellStruct Cells_24;
+  DynamicVectorClass_CellStruct Cells_38;
   CellStruct Center;
   unsigned __int8 unknown_54[32];
   HouseClass *Owner;
@@ -6253,12 +5453,6 @@ struct DynamicVectorClass_SuperClass_PTR_vtbl
   SuperClass *(__thiscall *GetItem)(DynamicVectorClass_SuperClass_PTR *this, int);
 };
 
-union Union_HouseClass_Supers
-{
-  DynamicVectorClass_SuperClass_PTR Supers;
-  char __Supers[24];
-};
-
 struct AngerStruct
 {
   HouseClass *House;
@@ -6300,12 +5494,6 @@ struct DynamicVectorClass_AngerStruct_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_AngerStruct *this, AngerStruct *);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_AngerStruct *this, AngerStruct *);
   AngerStruct (__thiscall *GetItem)(DynamicVectorClass_AngerStruct *this, int);
-};
-
-union Union_HouseClass_AngerNodes
-{
-  DynamicVectorClass_AngerStruct AngerNodes;
-  char __AngerNodes[24];
 };
 
 struct __declspec(align(4)) ScoutStruct
@@ -6351,26 +5539,14 @@ struct DynamicVectorClass_ScoutStruct_vtbl
   ScoutStruct (__thiscall *GetItem)(DynamicVectorClass_ScoutStruct *this, int);
 };
 
-union Union_HouseClass_ScoutNodes
-{
-  DynamicVectorClass_ScoutStruct ScoutNodes;
-  char __ScoutNodes[24];
-};
-
 struct DropshipStruct
 {
-  Union_HouseClass_FrameTimer HouseClass_FrameTimer;
+  CDTimerClass FrameTimer;
   unsigned __int8 unknown_C;
   unsigned __int8 align_D[3];
   int Count;
   TechnoTypeClass *Types[5];
   int TotalCost;
-};
-
-union Union_HouseClass_DropshipData
-{
-  DropshipStruct DropshipData[3];
-  char __DropshipData[132];
 };
 
 struct __declspec(align(4)) VectorClass_IConnectionPoint_PTR
@@ -6408,12 +5584,6 @@ struct DynamicVectorClass_IConnectionPoint_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_IConnectionPoint_PTR *this, IConnectionPoint **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_IConnectionPoint_PTR *this, IConnectionPoint **);
   IConnectionPoint *(__thiscall *GetItem)(DynamicVectorClass_IConnectionPoint_PTR *this, int);
-};
-
-union Union_HouseClass_WaypointPath
-{
-  DynamicVectorClass_IConnectionPoint_PTR WaypointPath;
-  char __WaypointPath[24];
 };
 
 struct TagCONNECTDATA
@@ -6637,7 +5807,7 @@ struct ControlNode
 {
   TechnoClass *Unit;
   HouseClass *OriginalOwner;
-  Union_ControlNode_LinkDrawTimer ControlNode_LinkDrawTimer;
+  CDTimerClass LinkDrawTimer;
 };
 
 struct __declspec(align(4)) VectorClass_ControlNode_PTR
@@ -6825,18 +5995,6 @@ struct TypeList_AnimTypeClass_PTR_vtbl
   AnimTypeClass *(__thiscall *GetItem)(TypeList_AnimTypeClass_PTR *this, int);
 };
 
-union Union_TiberiumClass_Debris
-{
-  TypeList_AnimTypeClass_PTR Debris;
-  char __Debris[28];
-};
-
-union Union_WeaponTypeClass_Anim
-{
-  TypeList_AnimTypeClass_PTR Anim;
-  char __Anim[28];
-};
-
 struct __declspec(align(4)) VectorClass_VoxelAnimTypeClass_PTR
 {
   VectorClass_VoxelAnimTypeClass_PTR_vtbl *__vftable;
@@ -6980,12 +6138,6 @@ struct DynamicVectorClass_ParticleClass_PTR_vtbl
   ParticleClass *(__thiscall *GetItem)(DynamicVectorClass_ParticleClass_PTR *this, int);
 };
 
-union Union_ParticleSystemClass_Particles
-{
-  DynamicVectorClass_ParticleClass_PTR Particles;
-  char __Particles[24];
-};
-
 struct __declspec(align(4)) VectorClass_TechnoClass_PTR
 {
   VectorClass_TechnoClass_PTR_vtbl *__vftable;
@@ -7004,12 +6156,6 @@ struct VectorClass_TechnoClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(VectorClass_TechnoClass_PTR *this, TechnoClass **);
   int (__thiscall *GetItemIndex)(VectorClass_TechnoClass_PTR *this, TechnoClass **);
   TechnoClass *(__thiscall *GetItem)(VectorClass_TechnoClass_PTR *this, int);
-};
-
-union Union_RadioClass_RadioLinks
-{
-  VectorClass_TechnoClass_PTR RadioLinks;
-  char __RadioLinks[16];
 };
 
 struct __declspec(align(4)) VectorClass_AbstractClass_PTR
@@ -7047,30 +6193,6 @@ struct DynamicVectorClass_AbstractClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_AbstractClass_PTR *this, AbstractClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_AbstractClass_PTR *this, AbstractClass **);
   AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_AbstractClass_PTR *this, int);
-};
-
-union Union_TechnoClass_CurrentTargets
-{
-  DynamicVectorClass_AbstractClass_PTR CurrentTargets;
-  char __CurrentTargets[24];
-};
-
-union Union_TechnoClass_AttackedTargets
-{
-  DynamicVectorClass_AbstractClass_PTR AttackedTargets;
-  char __AttackedTargets[24];
-};
-
-union Union_FootClass_unknown_abstract_array_588
-{
-  DynamicVectorClass_AbstractClass_PTR unknown_abstract_array_588;
-  char __unknown_abstract_array_588[24];
-};
-
-union Union_FootClass_NavQueue
-{
-  DynamicVectorClass_AbstractClass_PTR NavQueue;
-  char __NavQueue[24];
 };
 
 struct __declspec(align(4)) VectorClass_CellClass_PTR
@@ -7790,7 +6912,7 @@ struct __declspec(align(4)) EBolt
 
 struct LaserDrawClass
 {
-  Union_LaserDrawClass_Progress LaserDrawClass_Progress;
+  StageClass Progress;
   int Thickness;
   bool IsHouseColor;
   bool IsSupported;
@@ -9233,24 +8355,24 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
 {
   int ArrayIndex;
   HouseTypeClass *Type;
-  Union_HouseClass_RelatedTags HouseClass_RelatedTags;
-  Union_HouseClass_ConYards HouseClass_ConYards;
-  Union_HouseClass_Buildings HouseClass_Buildings;
-  Union_HouseClass_UnitRepairStations HouseClass_UnitRepairStations;
-  Union_HouseClass_Grinders HouseClass_Grinders;
-  Union_HouseClass_Absorbers HouseClass_Absorbers;
-  Union_HouseClass_Bunkers HouseClass_Bunkers;
-  Union_HouseClass_Occupiables HouseClass_Occupiables;
-  Union_HouseClass_CloningVats HouseClass_CloningVats;
-  Union_HouseClass_SecretLabs HouseClass_SecretLabs;
-  Union_HouseClass_PsychicDetectionBuildings HouseClass_PsychicDetectionBuildings;
-  Union_HouseClass_FactoryPlants HouseClass_FactoryPlants;
+  DynamicVectorClass_TagClass_PTR RelatedTags;
+  DynamicVectorClass_BuildingClass_PTR ConYards;
+  DynamicVectorClass_BuildingClass_PTR Buildings;
+  DynamicVectorClass_BuildingClass_PTR UnitRepairStations;
+  DynamicVectorClass_BuildingClass_PTR Grinders;
+  DynamicVectorClass_BuildingClass_PTR Absorbers;
+  DynamicVectorClass_BuildingClass_PTR Bunkers;
+  DynamicVectorClass_BuildingClass_PTR Occupiables;
+  DynamicVectorClass_BuildingClass_PTR CloningVats;
+  DynamicVectorClass_BuildingClass_PTR SecretLabs;
+  DynamicVectorClass_BuildingClass_PTR PsychicDetectionBuildings;
+  DynamicVectorClass_BuildingClass_PTR FactoryPlants;
   int CountResourceGatherers;
   int CountResourceDestinations;
   int CountWarfactories;
   int InfantrySelfHeal;
   int UnitsSelfHeal;
-  Union_HouseClass_StartingUnits HouseClass_StartingUnits;
+  DynamicVectorClass_StartingTechnoStruct_PTR StartingUnits;
   AIDifficulty AIDifficulty;
   long double FirepowerMultiplier;
   long double GroundspeedMultiplier;
@@ -9304,17 +8426,17 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   bool IsToLook;
   int IQLevel2;
   AIMode AIMode;
-  Union_HouseClass_Supers HouseClass_Supers;
+  DynamicVectorClass_SuperClass_PTR Supers;
   int LastBuiltBuildingType;
   int LastBuiltInfantryType;
   int LastBuiltAircraftType;
   int LastBuiltVehicleType;
   int AllowWinBlocks;
-  Union_HouseClass_RepairTimer HouseClass_RepairTimer;
-  Union_HouseClass_AlertTimer HouseClass_AlertTimer;
-  Union_HouseClass_BorrowedTime HouseClass_BorrowedTime;
-  Union_HouseClass_PowerBlackoutTimer HouseClass_PowerBlackoutTimer;
-  Union_HouseClass_RadarBlackoutTimer HouseClass_RadarBlackoutTimer;
+  CDTimerClass RepairTimer;
+  CDTimerClass AlertTimer;
+  CDTimerClass BorrowedTime;
+  CDTimerClass PowerBlackoutTimer;
+  CDTimerClass RadarBlackoutTimer;
   bool Side2TechInfiltrated;
   bool Side1TechInfiltrated;
   bool Side0TechInfiltrated;
@@ -9334,21 +8456,21 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   int OwnedBuildings;
   int OwnedInfantry;
   int OwnedAircraft;
-  Union_HouseClass_OwnedTiberium HouseClass_OwnedTiberium;
+  StorageClass OwnedTiberium;
   int Balance;
   int TotalStorage;
-  Union_HouseClass_OwnedWeed HouseClass_OwnedWeed;
+  StorageClass OwnedWeed;
   unsigned int unknown_324;
-  Union_HouseClass_BuiltAircraftTypes HouseClass_BuiltAircraftTypes;
-  Union_HouseClass_BuiltInfantryTypes HouseClass_BuiltInfantryTypes;
-  Union_HouseClass_BuiltUnitTypes HouseClass_BuiltUnitTypes;
-  Union_HouseClass_BuiltBuildingTypes HouseClass_BuiltBuildingTypes;
-  Union_HouseClass_KilledAircraftTypes HouseClass_KilledAircraftTypes;
-  Union_HouseClass_KilledInfantryTypes HouseClass_KilledInfantryTypes;
-  Union_HouseClass_KilledUnitTypes HouseClass_KilledUnitTypes;
-  Union_HouseClass_KilledBuildingTypes HouseClass_KilledBuildingTypes;
-  Union_HouseClass_CapturedBuildings HouseClass_CapturedBuildings;
-  Union_HouseClass_CollectedCrates HouseClass_CollectedCrates;
+  UnitTrackerClass BuiltAircraftTypes;
+  UnitTrackerClass BuiltInfantryTypes;
+  UnitTrackerClass BuiltUnitTypes;
+  UnitTrackerClass BuiltBuildingTypes;
+  UnitTrackerClass KilledAircraftTypes;
+  UnitTrackerClass KilledInfantryTypes;
+  UnitTrackerClass KilledUnitTypes;
+  UnitTrackerClass KilledBuildingTypes;
+  UnitTrackerClass CapturedBuildings;
+  UnitTrackerClass CollectedCrates;
   int NumAirpads;
   int NumBarracks;
   int NumWarFactories;
@@ -9393,7 +8515,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   CellStruct BaseSpawnCell;
   CellStruct BaseCenter;
   int Radius;
-  Union_HouseClass_ZoneInfos HouseClass_ZoneInfos;
+  ZoneInfoStruct ZoneInfos[5];
   int LATime;
   int LAEnemy;
   int ToCapture;
@@ -9404,25 +8526,25 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   CellStruct PreferredDefensiveCell;
   CellStruct PreferredDefensiveCell2;
   int PreferredDefensiveCellStartTime;
-  Union_HouseClass_OwnedBuildingTypes HouseClass_OwnedBuildingTypes;
-  Union_HouseClass_OwnedUnitTypes HouseClass_OwnedUnitTypes;
-  Union_HouseClass_OwnedInfantryTypes HouseClass_OwnedInfantryTypes;
-  Union_HouseClass_OwnedAircraftTypes HouseClass_OwnedAircraftTypes;
-  Union_HouseClass_ActiveBuildingTypes HouseClass_ActiveBuildingTypes;
-  Union_HouseClass_ActiveUnitTypes HouseClass_ActiveUnitTypes;
-  Union_HouseClass_ActiveInfantryTypes HouseClass_ActiveInfantryTypes;
-  Union_HouseClass_ActiveAircraftTypes HouseClass_ActiveAircraftTypes;
-  Union_HouseClass_FactoryProducedBuildingTypes HouseClass_FactoryProducedBuildingTypes;
-  Union_HouseClass_FactoryProducedUnitTypes HouseClass_FactoryProducedUnitTypes;
-  Union_HouseClass_FactoryProducedInfantryTypes HouseClass_FactoryProducedInfantryTypes;
-  Union_HouseClass_FactoryProducedAircraftTypes HouseClass_FactoryProducedAircraftTypes;
-  Union_HouseClass_AttackTimer HouseClass_AttackTimer;
+  CounterClass OwnedBuildingTypes;
+  CounterClass OwnedUnitTypes;
+  CounterClass OwnedInfantryTypes;
+  CounterClass OwnedAircraftTypes;
+  CounterClass ActiveBuildingTypes;
+  CounterClass ActiveUnitTypes;
+  CounterClass ActiveInfantryTypes;
+  CounterClass ActiveAircraftTypes;
+  CounterClass FactoryProducedBuildingTypes;
+  CounterClass FactoryProducedUnitTypes;
+  CounterClass FactoryProducedInfantryTypes;
+  CounterClass FactoryProducedAircraftTypes;
+  CDTimerClass AttackTimer;
   int InitialAttackDelay;
   int EnemyHouseIndex;
-  Union_HouseClass_AngerNodes HouseClass_AngerNodes;
-  Union_HouseClass_ScoutNodes HouseClass_ScoutNodes;
-  Union_HouseClass_AITimer HouseClass_AITimer;
-  Union_HouseClass_Unknown_Timer_5640 HouseClass_Unknown_Timer_5640;
+  DynamicVectorClass_AngerStruct AngerNodes;
+  DynamicVectorClass_ScoutStruct ScoutNodes;
+  CDTimerClass AITimer;
+  CDTimerClass Unknown_Timer_5640;
   int ProducingBuildingTypeIndex;
   int ProducingUnitTypeIndex;
   int ProducingInfantryTypeIndex;
@@ -9432,7 +8554,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   int RatioTeamInfantry;
   int RatioTeamBuildings;
   int BaseDefenseTeamCount;
-  Union_HouseClass_DropshipData HouseClass_DropshipData;
+  DropshipStruct DropshipData[3];
   int CurrentDropshipIndex;
   unsigned __int8 HasCloakingRanges;
   ColorStruct Color;
@@ -9446,13 +8568,13 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   CellStruct EMPTarget;
   CellStruct NukeTarget;
   IndexBitfield_TL_HouseClass_PTR_TR_ Allies;
-  Union_HouseClass_DamageDelayTimer HouseClass_DamageDelayTimer;
-  Union_HouseClass_TeamDelayTimer HouseClass_TeamDelayTimer;
-  Union_HouseClass_TriggerDelayTimer HouseClass_TriggerDelayTimer;
-  Union_HouseClass_SpeakAttackDelayTimer HouseClass_SpeakAttackDelayTimer;
-  Union_HouseClass_SpeakPowerDelayTimer HouseClass_SpeakPowerDelayTimer;
-  Union_HouseClass_SpeakMoneyDelayTimer HouseClass_SpeakMoneyDelayTimer;
-  Union_HouseClass_SpeakMaxedDelayTimer HouseClass_SpeakMaxedDelayTimer;
+  CDTimerClass DamageDelayTimer;
+  CDTimerClass TeamDelayTimer;
+  CDTimerClass TriggerDelayTimer;
+  CDTimerClass SpeakAttackDelayTimer;
+  CDTimerClass SpeakPowerDelayTimer;
+  CDTimerClass SpeakMoneyDelayTimer;
+  CDTimerClass SpeakMaxedDelayTimer;
   IAIHouse *AIGeneral;
   unsigned int ThreatPosedEstimates[130][130];
   char PlainName[21];
@@ -9462,7 +8584,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   Union_HouseClass_StartingLocation HouseClass_StartingLocation;
   IndexBitfield_TL_HouseClass_PTR_TR_ StartingAllies;
   unsigned int unknown_16060;
-  Union_HouseClass_WaypointPath HouseClass_WaypointPath;
+  DynamicVectorClass_IConnectionPoint_PTR WaypointPath;
   unsigned int unknown_1607C;
   unsigned int unknown_16080;
   unsigned int unknown_16084;
@@ -9635,8 +8757,8 @@ class ObjectClass : AbstractClass
   ObjectClass *NextObject;
   TagClass *AttachedTag;
   BombClass *AttachedBomb;
-  Union_ObjectClass_AmbientSoundController ObjectClass_AmbientSoundController;
-  Union_ObjectClass_CustomSoundController ObjectClass_CustomSoundController;
+  AudioController AmbientSoundController;
+  AudioController CustomSoundController;
   int CustomSound;
   bool BombVisible;
   unsigned __int8 align_69[3];
@@ -9887,7 +9009,7 @@ struct ObjectTypeClass_vtbl
 
 class AnimClass : ObjectClass
 {
-  Union_Anim_Techno_Animation Anim_Techno_Animation;
+  StageClass Animation;
   AnimTypeClass *Type;
   ObjectClass *OwnerObject;
   unsigned int unknown_D0;
@@ -9906,7 +9028,7 @@ class AnimClass : ObjectClass
   int PausedAnimFrame;
   bool Reverse;
   unsigned int unknown_124;
-  Union_AnimClass_Bounce AnimClass_Bounce;
+  BounceClass Bounce;
   unsigned __int8 TranslucencyLevel;
   bool TimeToDie;
   BulletClass *AttachedBullet;
@@ -9926,8 +9048,8 @@ class AnimClass : ObjectClass
   bool Invisible;
   bool PowerOff;
   unsigned __int8 unused_19F;
-  Union_Anim_Techno_Audio3 Anim_Techno_Audio3;
-  Union_Anim_Techno_Audio4 Anim_Techno_Audio4;
+  AudioController Audio3;
+  AudioController Audio4;
 };
 
 struct AnimClass_vtbl
@@ -10704,7 +9826,7 @@ class TActionClass : AbstractClass
   TActionClass *NextAction;
   TriggerAction ActionKind;
   TeamTypeClass *TeamType;
-  Union_TActionClass_Bounds TActionClass_Bounds;
+  RectangleStruct TActionClass_Bounds;
   int Waypoint;
   int Value2;
   TagTypeClass *TagType;
@@ -11153,8 +10275,8 @@ struct LightSourceClass_vtbl
 class __unaligned __declspec(align(4)) RadSiteClass : AbstractClass
 {
   LightSourceClass *LightSource;
-  Union_RadSiteClass_RadLevelTimer RadSiteClass_RadLevelTimer;
-  Union_RadSiteClass_RadLightTimer RadSiteClass_RadLightTimer;
+  CDTimerClass RadLevelTimer;
+  CDTimerClass RadLightTimer;
   CellStruct BaseCell;
   int Spread;
   int SpreadInLeptons;
@@ -11488,13 +10610,13 @@ class TiberiumClass : AbstractTypeClass
   int Value;
   int Power;
   int Color;
-  Union_TiberiumClass_Debris TiberiumClass_Debris;
+  TypeList_AnimTypeClass_PTR Debris;
   OverlayTypeClass *Image;
   int NumFrames;
   int NumImages;
   int field_EC;
-  Union_TiberiumClass_SpreadLogic TiberiumClass_SpreadLogic;
-  Union_TiberiumClass_GrowthLogic TiberiumClass_GrowthLogic;
+  TiberiumLogic SpreadLogic;
+  TiberiumLogic GrowthLogic;
 };
 
 struct TiberiumClass_vtbl
@@ -11531,15 +10653,15 @@ struct TiberiumClass_vtbl
 class VoxelAnimClass : ObjectClass
 {
   unsigned int unused_AC;
-  Union_AnimClass_Bounce AnimClass_Bounce;
+  BounceClass Bounce;
   int unknown_int_100;
   VoxelAnimTypeClass *Type;
   ParticleSystemClass *AttachedSystem;
   HouseClass *OwnerHouse;
   bool TimeToDie;
   unsigned __int8 unused_111[3];
-  Union_Anim_Techno_Audio3 Anim_Techno_Audio3;
-  Union_Anim_Techno_Audio4 Anim_Techno_Audio4;
+  AudioController Audio3;
+  AudioController Audio4;
   bool Invisible;
   unsigned __int8 unused_13D[3];
   int Duration;
@@ -11853,9 +10975,9 @@ class __declspec(align(4)) WeaponTypeClass : AbstractTypeClass
   int ROF;
   int Range;
   int MinimumRange;
-  Union_WeaponTypeClass_Report WeaponTypeClass_Report;
-  Union_WeaponTypeClass_DownReport WeaponTypeClass_DownReport;
-  Union_WeaponTypeClass_Anim WeaponTypeClass_Anim;
+  TypeList_int Report;
+  TypeList_int DownReport;
+  TypeList_AnimTypeClass_PTR Anim;
   AnimTypeClass *OccupantAnim;
   AnimTypeClass *AssaultAnim;
   AnimTypeClass *OpenToppedAnim;
@@ -12182,7 +11304,7 @@ class ParticleSystemClass : ObjectClass
 {
   ParticleSystemTypeClass *Type;
   CoordStruct SpawnDistanceToOwner;
-  Union_ParticleSystemClass_Particles ParticleSystemClass_Particles;
+  DynamicVectorClass_ParticleClass_PTR Particles;
   CoordStruct TargetCoords;
   ObjectClass *Owner;
   AbstractClass *Target;
@@ -13111,7 +12233,7 @@ class MissionClass : ObjectClass
   int MissionStatus;
   int CurrentMissionStartTime;
   int MissionAccumulateTime;
-  Union_MissionClass_UpdateTimer MissionClass_UpdateTimer;
+  CDTimerClass UpdateTimer;
 };
 
 struct MissionClass_vtbl
@@ -13278,7 +12400,7 @@ struct MissionClass_vtbl
 class RadioClass : MissionClass
 {
   RadioCommand LastCommands[3];
-  Union_RadioClass_RadioLinks RadioClass_RadioLinks;
+  VectorClass_TechnoClass_PTR RadioLinks;
 };
 
 struct RadioClass_vtbl
@@ -13448,9 +12570,9 @@ struct RadioClass_vtbl
 
 class TechnoClass : RadioClass
 {
-  Union_TechnoClass_Flashing TechnoClass_Flashing;
-  Union_Anim_Techno_Animation Anim_Techno_Animation;
-  Union_TechnoClass_Passengers TechnoClass_Passengers;
+  FlashData Flashing;
+  StageClass Animation;
+  PassengersClass Passengers;
   TechnoClass *Transporter;
   int LastFireBulletFrame;
   int CurrentTurretNumber;
@@ -13464,18 +12586,18 @@ class TechnoClass : RadioClass
   int GattlingValue;
   int TurretAnimFrame;
   HouseClass *InitialOwner;
-  Union_TechnoClass_Veterancy TechnoClass_Veterancy;
+  VeterancyStruct Veterancy;
   unsigned int align_154;
   long double ArmorMultiplier;
   long double FirepowerMultiplier;
-  Union_TechnoClass_IdleActionTimer TechnoClass_IdleActionTimer;
-  Union_TechnoClass_RadarFlashTimer TechnoClass_RadarFlashTimer;
-  Union_TechnoClass_TargetingTimer TechnoClass_TargetingTimer;
-  Union_TechnoClass_IronCurtainTimer TechnoClass_IronCurtainTimer;
-  Union_TechnoClass_IronTintTimer TechnoClass_IronTintTimer;
+  CDTimerClass IdleActionTimer;
+  CDTimerClass RadarFlashTimer;
+  CDTimerClass TargetingTimer;
+  CDTimerClass IronCurtainTimer;
+  CDTimerClass IronTintTimer;
   int IronTintStage;
-  Union_TechnoClass_AirstrikeTimer TechnoClass_AirstrikeTimer;
-  Union_TechnoClass_AirstrikeTintTimer TechnoClass_AirstrikeTintTimer;
+  CDTimerClass AirstrikeTimer;
+  CDTimerClass AirstrikeTintTimer;
   unsigned int AirstrikeTintStage;
   int ForceShielded;
   bool Deactivated;
@@ -13484,18 +12606,18 @@ class TechnoClass : RadioClass
   AnimClass *DrainAnim;
   bool Disguised;
   unsigned int DisguiseCreationFrame;
-  Union_TechnoClass_InfantryBlinkTimer TechnoClass_InfantryBlinkTimer;
-  Union_TechnoClass_DisguiseBlinkTimer TechnoClass_DisguiseBlinkTimer;
+  CDTimerClass InfantryBlinkTimer;
+  CDTimerClass DisguiseBlinkTimer;
   bool UnlimboingInfantry;
-  Union_TechnoClass_ReloadTimer TechnoClass_ReloadTimer;
+  CDTimerClass ReloadTimer;
   Point2D RadarPosition;
-  Union_TechnoClass_DisplayProductionTo TechnoClass_DisplayProductionTo;
+  IndexBitfield_TL_HouseClass_PTR_TR_ DisplayProductionTo;
   int Group;
   AbstractClass *ArchiveTarget;
   HouseClass *Owner;
   CloakState CloakState;
-  Union_TechnoClass_CloakProgress TechnoClass_CloakProgress;
-  Union_TechnoClass_CloakDelayTimer TechnoClass_CloakDelayTimer;
+  StageClass CloakProgress;
+  CDTimerClass CloakDelayTimer;
   float WarpFactor;
   bool unknown_bool_250;
   CoordStruct LastSightCoords;
@@ -13536,7 +12658,7 @@ class TechnoClass : RadioClass
   HouseClass *OriginallyOwnedByHouse;
   TechnoClass *BunkerLinkedItem;
   float PitchAngle;
-  Union_TechnoClass_RearmTimer TechnoClass_RearmTimer;
+  CDTimerClass RearmTimer;
   int ChargeTurretDelay;
   int Ammo;
   int Value;
@@ -13554,14 +12676,14 @@ class TechnoClass : RadioClass
   float RockingSidewaysPerFrame;
   float RockingForwardsPerFrame;
   int HijackerInfantryType;
-  Union_TechnoClass_Tiberium TechnoClass_Tiberium;
+  StorageClass Tiberium;
   unsigned int unknown_34C;
-  Union_TechnoClass_UnloadTimer TechnoClass_UnloadTimer;
-  Union_TechnoClass_BarrelFacing TechnoClass_BarrelFacing;
-  Union_TechnoClass_PrimaryFacing TechnoClass_PrimaryFacing;
-  Union_TechnoClass_SecondaryFacing TechnoClass_SecondaryFacing;
+  TransitionTimer UnloadTimer;
+  FacingClass BarrelFacing;
+  FacingClass PrimaryFacing;
+  FacingClass SecondaryFacing;
   int CurrentBurstIndex;
-  Union_TechnoClass_TargetLaserTimer TechnoClass_TargetLaserTimer;
+  CDTimerClass TargetLaserTimer;
   __int16 FireReportRandomNumber;
   unsigned __int16 unknown_3CA;
   bool CountedAsOwned;
@@ -13574,8 +12696,8 @@ class TechnoClass : RadioClass
   bool IsPrimaryFactory;
   bool Spawned;
   bool IsInPlayfield;
-  Union_TechnoClass_TurretRecoil TechnoClass_TurretRecoil;
-  Union_TechnoClass_BarrelRecoil TechnoClass_BarrelRecoil;
+  RecoilData TurretRecoil;
+  RecoilData BarrelRecoil;
   bool IsTether;
   bool IsAlternativeTether;
   bool IsOwnedByCurrentPlayer;
@@ -13602,19 +12724,19 @@ class TechnoClass : RadioClass
   bool Absorbed;
   bool unknown_bool_43A;
   unsigned int unknown_43C;
-  Union_TechnoClass_CurrentTargetThreatValues TechnoClass_CurrentTargetThreatValues;
-  Union_TechnoClass_CurrentTargets TechnoClass_CurrentTargets;
-  Union_TechnoClass_AttackedTargets TechnoClass_AttackedTargets;
-  Union_Anim_Techno_Audio3 Anim_Techno_Audio3;
+  DynamicVectorClass_int CurrentTargetThreatValues;
+  DynamicVectorClass_AbstractClass_PTR CurrentTargets;
+  DynamicVectorClass_AbstractClass_PTR AttackedTargets;
+  AudioController Audio3;
   int unknown_BOOL_49C;
   int TurretIsRotating;
-  Union_Anim_Techno_Audio4 Anim_Techno_Audio4;
+  AudioController Audio4;
   bool unknown_bool_4B8;
   unsigned int unknown_4BC;
-  Union_TechnoClass_Audio5 TechnoClass_Audio5;
+  AudioController Audio5;
   bool unknown_bool_4D4;
   unsigned int unknown_4D8;
-  Union_TechnoClass_Audio6 TechnoClass_Audio6;
+  AudioController Audio6;
   unsigned int QueuedVoiceIndex;
   unsigned int unknown_4F4;
   bool unknown_bool_4F8;
@@ -13877,7 +12999,7 @@ struct TechnoClass_vtbl
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
   bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *vt_entry_3D8)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
   bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
@@ -15602,7 +14724,7 @@ struct BuildingClass_vtbl
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
   bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *vt_entry_3D8)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
   bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
@@ -15946,7 +15068,7 @@ class FootClass : TechnoClass
   int WalkedFramesSoFar;
   bool IsMoveSoundPlaying;
   int MoveSoundDelay;
-  Union_FootClass_MoveSoundAudioController FootClass_MoveSoundAudioController;
+  AudioController MoveSoundAudioController;
   CellStruct CurrentMapCoords;
   CellStruct LastMapCoords;
   CellStruct LastFlightMapCoords;
@@ -15955,11 +15077,11 @@ class FootClass : TechnoClass
   unsigned int unused_574;
   long double SpeedPercentage;
   long double SpeedMultiplier;
-  Union_FootClass_unknown_abstract_array_588 FootClass_unknown_abstract_array_588;
+  DynamicVectorClass_AbstractClass_PTR unknown_abstract_array_588;
   AbstractClass *Follow;
   AbstractClass *Destination;
   AbstractClass *LastDestination;
-  Union_FootClass_NavQueue FootClass_NavQueue;
+  DynamicVectorClass_AbstractClass_PTR NavQueue;
   Mission MegaMission;
   AbstractClass *MegaDestination;
   AbstractClass *MegaTarget;
@@ -15969,12 +15091,12 @@ class FootClass : TechnoClass
   FootClass *NextTeamMember;
   CellClass *PatrolTarget;
   int PathDirections[24];
-  Union_FootClass_PathDelayTimer FootClass_PathDelayTimer;
+  CDTimerClass PathDelayTimer;
   int PathWaitTimes;
-  Union_FootClass_unknown_timer_650 FootClass_unknown_timer_650;
-  Union_FootClass_SightTimer FootClass_SightTimer;
-  Union_FootClass_BlockagePathTimer FootClass_BlockagePathTimer;
-  Union_FootClass_Locomotor FootClass_Locomotor;
+  CDTimerClass BaseDefenseTimer;
+  CDTimerClass SightTimer;
+  CDTimerClass BlockagePathTimer;
+  LocomotionID Locomotor;
   CoordStruct unknown_point3d_678;
   char TubeIndex;
   bool unknown_bool_685;
@@ -15993,7 +15115,7 @@ class FootClass : TechnoClass
   FootClass *ParasiteEatingMe;
   unsigned int LastBeParasitedStartFrame;
   ParasiteClass *ParasiteImUsing;
-  Union_FootClass_ParalysisTimer FootClass_ParalysisTimer;
+  CDTimerClass ParalysisTimer;
   bool unknown_bool_6AC;
   bool IsAttackedByLocomotor;
   bool IsLetGoByLocomotor;
@@ -16258,7 +15380,7 @@ struct FootClass_vtbl
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
   bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *vt_entry_3D8)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
   bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
@@ -16621,7 +15743,7 @@ struct InfantryClass_vtbl
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
   bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *vt_entry_3D8)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
   bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
@@ -17083,7 +16205,7 @@ struct UnitClass_vtbl
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
   bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *vt_entry_3D8)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
   bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
@@ -17540,7 +16662,7 @@ struct AircraftClass_vtbl
   BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
   void (__thiscall *Guard)(TechnoClass *this);
   bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *vt_entry_3D8)(TechnoClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
   bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
@@ -18638,12 +17760,6 @@ struct DynamicVectorClass_FileEntryClass_PTR_vtbl
   FileEntryClass *(__thiscall *GetItem)(DynamicVectorClass_FileEntryClass_PTR *this, int);
 };
 
-union Union_LoadOptionsClass_FileEntries
-{
-  DynamicVectorClass_FileEntryClass_PTR FileEntries;
-  char __FileEntries[24];
-};
-
 struct LoadOptionsClass
 {
   LoadOptionsClass_vtbl *__vftable;
@@ -18654,7 +17770,7 @@ struct LoadOptionsClass
   unsigned int unknown_14;
   unsigned int unknown_18;
   unsigned int unknown_1C;
-  Union_LoadOptionsClass_FileEntries LoadOptionsClass_FileEntries;
+  DynamicVectorClass_FileEntryClass_PTR FileEntries;
 };
 
 struct LoadOptionsClass_vtbl
