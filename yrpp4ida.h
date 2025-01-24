@@ -6389,7 +6389,7 @@ struct StripClass
   RectangleStruct Bounds;
   int Index;
   bool NeedsRedraw;
-  unsigned __int8 unknown_3D;
+  bool IsProducing;
   bool ScrollDownward;
   bool IsScrolling;
   unsigned int unknown_40;
@@ -6703,6 +6703,340 @@ struct Surface_vtbl
   int (__thiscall *GetWidth)(Surface *this);
   int (__thiscall *GetHeight)(Surface *this);
   bool (__thiscall *IsDSurface)(Surface *this);
+};
+
+struct __unaligned __declspec(align(1)) TargetClass
+{
+  int m_ID;
+  AbstractTypeE m_RTTI;
+};
+
+struct TacticalSelectableStruct
+{
+  TechnoClass *Techno;
+  int X;
+  int Y;
+};
+
+struct EventClass_EMPTY
+{
+};
+
+struct EventClass_POWERON
+{
+  TargetClass Target;
+};
+
+struct EventClass_POWEROFF
+{
+  TargetClass Target;
+};
+
+struct EventClass_ALLY
+{
+  int HouseID;
+};
+
+struct EventClass_MEGAMISSION
+{
+  TargetClass Whom;
+  MissionE Mission;
+  char _gap_;
+  TargetClass Target;
+  TargetClass Destination;
+  TargetClass Follow;
+  bool IsPlanningEvent;
+};
+
+struct EventClass_MEGAMISSION_F
+{
+  TargetClass Whom;
+  MissionE Mission;
+  TargetClass Target;
+  TargetClass Destination;
+  int Speed;
+  int MaxSpeed;
+};
+
+struct EventClass_IDLE
+{
+  TargetClass Whom;
+};
+
+struct EventClass_SCATTER
+{
+  TargetClass Whom;
+};
+
+struct EventClass_DESTRUCT
+{
+};
+
+struct EventClass_DEPLOY
+{
+  TargetClass Whom;
+};
+
+struct EventClass_DETONATE
+{
+  TargetClass Whom;
+};
+
+struct EventClass_PLACE
+{
+  AbstractType RTTIType;
+  int HeapID;
+  int IsNaval;
+  CellStruct Location;
+};
+
+struct EventClass_OPTIONS
+{
+};
+
+struct EventClass_GAMESPEED
+{
+  int GameSpeed;
+};
+
+struct EventClass_PRODUCE
+{
+  AbstractType RTTIType;
+  int HeapID;
+  int IsNaval;
+};
+
+struct EventClass_SUSPEND
+{
+  AbstractType RTTIType;
+  int HeapID;
+  int IsNaval;
+};
+
+struct EventClass_ABANDON
+{
+  AbstractType RTTIType;
+  int HeapID;
+  int IsNaval;
+};
+
+struct EventClass_PRIMARY
+{
+  TargetClass Whom;
+};
+
+struct EventClass_SPECIAL_PLACE
+{
+  int ID;
+  CellStruct Location;
+};
+
+struct EventClass_EXIT
+{
+};
+
+struct EventClass_ANIMATION
+{
+  int AnimID;
+  int HouseID;
+  Point2D Location;
+};
+
+struct EventClass_REPAIR
+{
+  TargetClass Whom;
+};
+
+struct EventClass_SELL
+{
+  TargetClass Whom;
+};
+
+struct EventClass_SELLCELL
+{
+  CellStruct Location;
+};
+
+struct EventClass_SPECIAL
+{
+  ScenarioFlags SpecialFlags;
+};
+
+struct EventClass_FRAMESYNC
+{
+};
+
+struct EventClass_MESSAGE
+{
+};
+
+struct EventClass_RESPONSE_TIME
+{
+  char unknown[6];
+  unsigned __int16 MaxAhead;
+};
+
+struct __unaligned __declspec(align(1)) EventClass_FRAMEINFO
+{
+  unsigned int CRC;
+  unsigned __int16 CommandCount;
+  unsigned __int8 Delay;
+};
+
+struct EventClass_SAVEGAME
+{
+};
+
+struct EventClass_ARCHIVE
+{
+  TargetClass Whom1;
+  TargetClass Whom2;
+};
+
+struct EventClass_ADDPLAYER
+{
+  void *unknownPointer;
+};
+
+struct __unaligned __declspec(align(1)) EventClass_TIMING
+{
+  unsigned __int16 RequestedFPS;
+  unsigned __int16 MaxAhead;
+  unsigned __int8 FrameSendRate;
+};
+
+struct EventClass_PROCESS_TIME
+{
+  unsigned __int16 Time;
+};
+
+struct EventClass_PAGEUSER
+{
+};
+
+struct EventClass_REMOVEPLAYER
+{
+  int HouseID;
+};
+
+struct EventClass_LATENCYFUDGE
+{
+  int LatencyFudge;
+};
+
+struct __unaligned EventClass_MEGAFRAMEINFO
+{
+  char Unknown[101];
+};
+
+struct EventClass_PACKETTIMING
+{
+  char Unknown[64];
+};
+
+struct EventClass_ABOUTTOEXIT
+{
+};
+
+struct EventClass_FALLBACKHOST
+{
+  int FallbackHost;
+};
+
+struct __unaligned __declspec(align(1)) EventClass_ADDRESSCHANGE
+{
+  char PlayerID;
+  unsigned int Address;
+};
+
+struct EventClass_PLANCONNECT
+{
+  TargetClass Target1;
+  TargetClass Target2;
+};
+
+struct EventClass_PLANCOMMIT
+{
+};
+
+struct EventClass_PLANNODEDELETE
+{
+  TargetClass Target;
+};
+
+struct EventClass_ALLCHEER
+{
+  char Unknown[4];
+};
+
+struct EventClass_ABANDON_ALL
+{
+  AbstractType RTTIType;
+  int HeapID;
+  int IsNaval;
+};
+
+union __unaligned Union_EventClass_Event
+{
+  char DataBuffer[101];
+  EventClass_EMPTY Empty;
+  EventClass_POWERON Poweron;
+  EventClass_POWEROFF Poweroff;
+  EventClass_ALLY Ally;
+  EventClass_MEGAMISSION MegaMission;
+  EventClass_MEGAMISSION_F MegaMissionF;
+  EventClass_IDLE Idle;
+  EventClass_SCATTER Scatter;
+  EventClass_DESTRUCT Destruct;
+  EventClass_DEPLOY Deploy;
+  EventClass_DETONATE Detonate;
+  EventClass_PLACE Place;
+  EventClass_OPTIONS Options;
+  EventClass_GAMESPEED GameSpeed;
+  EventClass_PRODUCE Produce;
+  EventClass_SUSPEND Suspend;
+  EventClass_ABANDON Abandon;
+  EventClass_PRIMARY Primary;
+  EventClass_SPECIAL_PLACE SpecialPlace;
+  EventClass_EXIT Exit;
+  EventClass_ANIMATION Animation;
+  EventClass_REPAIR Repair;
+  EventClass_SELL Sell;
+  EventClass_SELLCELL SellCell;
+  EventClass_SPECIAL Special;
+  EventClass_FRAMESYNC FrameSync;
+  EventClass_MESSAGE Message;
+  EventClass_RESPONSE_TIME ResponseTime;
+  EventClass_FRAMEINFO FrameInfo;
+  EventClass_SAVEGAME SaveGame;
+  EventClass_ARCHIVE Archive;
+  EventClass_ADDPLAYER AddPlayer;
+  EventClass_TIMING Timing;
+  EventClass_PROCESS_TIME ProcessTime;
+  EventClass_PAGEUSER PageUser;
+  EventClass_REMOVEPLAYER RemovePlayer;
+  EventClass_LATENCYFUDGE LatencyFudge;
+  EventClass_MEGAFRAMEINFO MegafFameInfo;
+  EventClass_PACKETTIMING PacketTiming;
+  EventClass_ABOUTTOEXIT AboutToExit;
+  EventClass_FALLBACKHOST FallbackHost;
+  EventClass_ADDRESSCHANGE AddressChange;
+  EventClass_PLANCONNECT PlanConnect;
+  EventClass_PLANCOMMIT PlanCommit;
+  EventClass_PLANNODEDELETE PlanNodeDelete;
+  EventClass_ALLCHEER AllCheer;
+  EventClass_ABANDON_ALL AbandonAll;
+};
+
+struct __unaligned EventClass
+{
+  EventType Type;
+  bool IsExecuted;
+  char HouseIndex;
+  unsigned int Frame;
+  Union_EventClass_Event EventClass_Event;
+  unsigned __int16 field_6C;
+  unsigned __int8 field_6E;
 };
 
 struct __declspec(align(4)) PlanningMemberClass
@@ -17943,340 +18277,6 @@ struct VeinholeMonsterClass_vtbl
   bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
   bool (__thiscall *IsNotWarping)(ObjectClass *this);
   LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
-
-struct __unaligned __declspec(align(1)) TargetClass
-{
-  int m_ID;
-  AbstractTypeE m_RTTI;
-};
-
-struct TacticalSelectableStruct
-{
-  TechnoClass *Techno;
-  int X;
-  int Y;
-};
-
-struct EventClass_EMPTY
-{
-};
-
-struct EventClass_POWERON
-{
-  TargetClass Target;
-};
-
-struct EventClass_POWEROFF
-{
-  TargetClass Target;
-};
-
-struct EventClass_ALLY
-{
-  int HouseID;
-};
-
-struct EventClass_MEGAMISSION
-{
-  TargetClass Whom;
-  MissionE Mission;
-  char _gap_;
-  TargetClass Target;
-  TargetClass Destination;
-  TargetClass Follow;
-  bool IsPlanningEvent;
-};
-
-struct EventClass_MEGAMISSION_F
-{
-  TargetClass Whom;
-  MissionE Mission;
-  TargetClass Target;
-  TargetClass Destination;
-  int Speed;
-  int MaxSpeed;
-};
-
-struct EventClass_IDLE
-{
-  TargetClass Whom;
-};
-
-struct EventClass_SCATTER
-{
-  TargetClass Whom;
-};
-
-struct EventClass_DESTRUCT
-{
-};
-
-struct EventClass_DEPLOY
-{
-  TargetClass Whom;
-};
-
-struct EventClass_DETONATE
-{
-  TargetClass Whom;
-};
-
-struct EventClass_PLACE
-{
-  AbstractType RTTIType;
-  int HeapID;
-  int IsNaval;
-  CellStruct Location;
-};
-
-struct EventClass_OPTIONS
-{
-};
-
-struct EventClass_GAMESPEED
-{
-  int GameSpeed;
-};
-
-struct EventClass_PRODUCE
-{
-  AbstractType RTTIType;
-  int HeapID;
-  int IsNaval;
-};
-
-struct EventClass_SUSPEND
-{
-  AbstractType RTTIType;
-  int HeapID;
-  int IsNaval;
-};
-
-struct EventClass_ABANDON
-{
-  AbstractType RTTIType;
-  int HeapID;
-  int IsNaval;
-};
-
-struct EventClass_PRIMARY
-{
-  TargetClass Whom;
-};
-
-struct EventClass_SPECIAL_PLACE
-{
-  int ID;
-  CellStruct Location;
-};
-
-struct EventClass_EXIT
-{
-};
-
-struct EventClass_ANIMATION
-{
-  int AnimID;
-  int HouseID;
-  Point2D Location;
-};
-
-struct EventClass_REPAIR
-{
-  TargetClass Whom;
-};
-
-struct EventClass_SELL
-{
-  TargetClass Whom;
-};
-
-struct EventClass_SELLCELL
-{
-  CellStruct Location;
-};
-
-struct EventClass_SPECIAL
-{
-  ScenarioFlags SpecialFlags;
-};
-
-struct EventClass_FRAMESYNC
-{
-};
-
-struct EventClass_MESSAGE
-{
-};
-
-struct EventClass_RESPONSE_TIME
-{
-  char unknown[6];
-  unsigned __int16 MaxAhead;
-};
-
-struct __unaligned __declspec(align(1)) EventClass_FRAMEINFO
-{
-  unsigned int CRC;
-  unsigned __int16 CommandCount;
-  unsigned __int8 Delay;
-};
-
-struct EventClass_SAVEGAME
-{
-};
-
-struct EventClass_ARCHIVE
-{
-  TargetClass Whom1;
-  TargetClass Whom2;
-};
-
-struct EventClass_ADDPLAYER
-{
-  void *unknownPointer;
-};
-
-struct __unaligned __declspec(align(1)) EventClass_TIMING
-{
-  unsigned __int16 RequestedFPS;
-  unsigned __int16 MaxAhead;
-  unsigned __int8 FrameSendRate;
-};
-
-struct EventClass_PROCESS_TIME
-{
-  unsigned __int16 Time;
-};
-
-struct EventClass_PAGEUSER
-{
-};
-
-struct EventClass_REMOVEPLAYER
-{
-  int HouseID;
-};
-
-struct EventClass_LATENCYFUDGE
-{
-  int LatencyFudge;
-};
-
-struct __unaligned EventClass_MEGAFRAMEINFO
-{
-  char Unknown[101];
-};
-
-struct EventClass_PACKETTIMING
-{
-  char Unknown[64];
-};
-
-struct EventClass_ABOUTTOEXIT
-{
-};
-
-struct EventClass_FALLBACKHOST
-{
-  int FallbackHost;
-};
-
-struct __unaligned __declspec(align(1)) EventClass_ADDRESSCHANGE
-{
-  char PlayerID;
-  unsigned int Address;
-};
-
-struct EventClass_PLANCONNECT
-{
-  TargetClass Target1;
-  TargetClass Target2;
-};
-
-struct EventClass_PLANCOMMIT
-{
-};
-
-struct EventClass_PLANNODEDELETE
-{
-  TargetClass Target;
-};
-
-struct EventClass_ALLCHEER
-{
-  char Unknown[4];
-};
-
-struct EventClass_ABANDON_ALL
-{
-  AbstractType RTTIType;
-  int HeapID;
-  int IsNaval;
-};
-
-union __unaligned Union_EventClass_Event
-{
-  char DataBuffer[101];
-  EventClass_EMPTY Empty;
-  EventClass_POWERON Poweron;
-  EventClass_POWEROFF Poweroff;
-  EventClass_ALLY Ally;
-  EventClass_MEGAMISSION MegaMission;
-  EventClass_MEGAMISSION_F MegaMissionF;
-  EventClass_IDLE Idle;
-  EventClass_SCATTER Scatter;
-  EventClass_DESTRUCT Destruct;
-  EventClass_DEPLOY Deploy;
-  EventClass_DETONATE Detonate;
-  EventClass_PLACE Place;
-  EventClass_OPTIONS Options;
-  EventClass_GAMESPEED GameSpeed;
-  EventClass_PRODUCE Produce;
-  EventClass_SUSPEND Suspend;
-  EventClass_ABANDON Abandon;
-  EventClass_PRIMARY Primary;
-  EventClass_SPECIAL_PLACE SpecialPlace;
-  EventClass_EXIT Exit;
-  EventClass_ANIMATION Animation;
-  EventClass_REPAIR Repair;
-  EventClass_SELL Sell;
-  EventClass_SELLCELL SellCell;
-  EventClass_SPECIAL Special;
-  EventClass_FRAMESYNC FrameSync;
-  EventClass_MESSAGE Message;
-  EventClass_RESPONSE_TIME ResponseTime;
-  EventClass_FRAMEINFO FrameInfo;
-  EventClass_SAVEGAME SaveGame;
-  EventClass_ARCHIVE Archive;
-  EventClass_ADDPLAYER AddPlayer;
-  EventClass_TIMING Timing;
-  EventClass_PROCESS_TIME ProcessTime;
-  EventClass_PAGEUSER PageUser;
-  EventClass_REMOVEPLAYER RemovePlayer;
-  EventClass_LATENCYFUDGE LatencyFudge;
-  EventClass_MEGAFRAMEINFO MegafFameInfo;
-  EventClass_PACKETTIMING PacketTiming;
-  EventClass_ABOUTTOEXIT AboutToExit;
-  EventClass_FALLBACKHOST FallbackHost;
-  EventClass_ADDRESSCHANGE AddressChange;
-  EventClass_PLANCONNECT PlanConnect;
-  EventClass_PLANCOMMIT PlanCommit;
-  EventClass_PLANNODEDELETE PlanNodeDelete;
-  EventClass_ALLCHEER AllCheer;
-  EventClass_ABANDON_ALL AbandonAll;
-};
-
-struct __unaligned EventClass
-{
-  EventType Type;
-  bool IsExecuted;
-  char HouseIndex;
-  unsigned int Frame;
-  Union_EventClass_Event EventClass_Event;
-  unsigned __int16 field_6C;
-  unsigned __int8 field_6E;
 };
 
 struct EventList_OutList
