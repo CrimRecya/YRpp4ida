@@ -17866,14 +17866,14 @@ struct WWMouseClass
   DSurface *PrimarySurface;
   HWND__ *hWnd;
   RectangleStruct ClientRect;
-  Point2D DrawPosition;
+  Point2D DrawSize;
   BSurface *CopySurface;
   RectangleStruct CopySurfaceRect;
   BSurface *TacticalSurface;
   RectangleStruct TacticalSurfaceRect;
   BSurface *SidebarSurface;
   RectangleStruct SidebarSurfaceRect;
-  RectangleStruct unknownRect;
+  RectangleStruct unknownRect_80;
   int field_90;
   int field_94;
 };
