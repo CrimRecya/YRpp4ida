@@ -17786,9 +17786,8 @@ class HoverLocomotionClass : LocomotionClass
   CoordStruct HeadToCoord;
   FacingClass LocomotionFacing;
   double CurrentSpeed;
-  int unknown_int_50;
-  int unknown_int_54;
-  double unknown_double_58;
+  double TargetSpeed;
+  double BoostSpeed;
   int unknown_int_60;
   int unknown_int_64;
   bool unknown_bool_68;
