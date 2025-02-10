@@ -14163,12 +14163,12 @@ class PowerClass : RadarClass
   bool PowerNeedRedraw;
   unsigned __int8 align_150D[3];
   CDTimerClass unknown_timer_1510;
-  unsigned int unknown_151C;
+  int FloatingCompleteCountDown;
   CDTimerClass unknown_timer_1520;
-  unsigned int unknown_152C;
-  unsigned int unknown_1530;
-  unsigned int unknown_1534;
-  bool unknown_bool_1538;
+  int GreenBarHeight;
+  int YellowBarHeight;
+  int RedBarHeight;
+  bool PowerIsFloating;
   unsigned __int8 align_1539[3];
   int PowerOutput;
   int PowerDrain;
@@ -14238,7 +14238,7 @@ class SidebarClass : PowerClass
   unsigned int unknown_5394;
   unsigned int unknown_5398;
   int ActiveTabIndex;
-  unsigned int unknown_53A0;
+  int unknown_frame_53A0;
   bool HideObjectNameInTooltip;
   bool IsSidebarActive;
   bool SidebarNeedsRedraw;
