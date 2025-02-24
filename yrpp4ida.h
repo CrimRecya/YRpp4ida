@@ -340,6 +340,8 @@ struct SessionClass_TL_unnamed_type_MPStats_TR_;
 struct SessionClass;
 struct PCX;
 struct DamageGroup;
+struct FoundationStruct;
+struct FoundationCellsStruct;
 
 // TODO STRUCT
 
@@ -8298,8 +8300,8 @@ struct __declspec(align(8)) ScenarioClass
   Randomizer Random;
   unsigned int Difficulty1;
   unsigned int Difficulty2;
-  CDTimerClass ElapsedTimer;
-  CDTimerClass PauseTimer;
+  SysTimerClass ElapsedTimer;
+  SysTimerClass PauseTimer;
   unsigned int unknown_62C;
   bool IsGamePaused;
   CellStruct Waypoints[702];
@@ -23442,4 +23444,35 @@ struct DynamicVectorClass_DamageGroup_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_DamageGroup_PTR *this, DamageGroup **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_DamageGroup_PTR *this, DamageGroup **);
   DamageGroup *(__thiscall *GetItem)(DynamicVectorClass_DamageGroup_PTR *this, int);
+};
+
+struct FoundationStruct
+{
+  CellStruct cell[30];
+};
+
+struct FoundationCellsStruct
+{
+  FoundationStruct Foundation_1x1;
+  FoundationStruct Foundation_2x1;
+  FoundationStruct Foundation_1x2;
+  FoundationStruct Foundation_2x2;
+  FoundationStruct Foundation_2x3;
+  FoundationStruct Foundation_3x2;
+  FoundationStruct Foundation_3x3;
+  FoundationStruct Foundation_3x5;
+  FoundationStruct Foundation_4x2;
+  FoundationStruct Foundation_3x3Refinery;
+  FoundationStruct Foundation_1x3;
+  FoundationStruct Foundation_3x1;
+  FoundationStruct Foundation_4x3;
+  FoundationStruct Foundation_1x4;
+  FoundationStruct Foundation_1x5;
+  FoundationStruct Foundation_2x6;
+  FoundationStruct Foundation_2x5;
+  FoundationStruct Foundation_5x3;
+  FoundationStruct Foundation_4x4;
+  FoundationStruct Foundation_3x4;
+  FoundationStruct Foundation_6x4;
+  FoundationStruct Foundation_0x0;
 };
