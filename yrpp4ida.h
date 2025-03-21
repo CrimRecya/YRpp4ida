@@ -342,6 +342,7 @@ struct PCX;
 struct DamageGroup;
 struct FoundationStruct;
 struct FoundationCellsStruct;
+struct ChangeLinkHouseStruct;
 
 // TODO STRUCT
 
@@ -913,6 +914,10 @@ struct VectorClass_DamageGroup_PTR;
 struct VectorClass_DamageGroup_PTR_vtbl; // 0x7E5144
 struct DynamicVectorClass_DamageGroup_PTR;
 struct DynamicVectorClass_DamageGroup_PTR_vtbl; // 0x7E5170
+struct VectorClass_ChangeLinkHouseStruct_PTR;
+struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4468
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR;
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
 
 // TODO VECTOR
 
@@ -8854,7 +8859,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   ZoneInfoStruct ZoneInfos[5];
   int LATime;
   int LAEnemy;
-  int ToCapture;
+  BuildingClass *ToCapture;
   IndexBitfield_TL_HouseClass_PTR_TR_ RadarVisibleTo;
   int SiloMoney;
   TargetType PreferredTargetType;
@@ -14803,7 +14808,7 @@ class __declspec(align(8)) BuildingClass : TechnoClass
   TechnoTypeClass *SecretProduction;
   ColorStruct ColorAdd;
   int unknown_int_6FC;
-  __int16 unknown_short_700;
+  __int16 BrightIntensity;
   unsigned __int8 UpgradeLevel;
   char GateStage;
   PrismChargeState PrismStage;
@@ -15123,7 +15128,7 @@ struct BuildingClass_vtbl
   bool (__thiscall *ContinueMegaMission)(TechnoClass *this);
   void (__thiscall *UpdateAttackMove)(TechnoClass *this);
   bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
-  CellStruct (__thiscall *FindExitCell)(BuildingClass *this, unsigned int, unsigned int);
+  CellStruct *(__thiscall *FindExitCell)(BuildingClass *this, CellStruct *, TechnoClass *);
   int (__thiscall *DistanceToDockingCoord)(BuildingClass *this, ObjectClass *);
   void (__thiscall *Place)(BuildingClass *this, bool);
   void (__thiscall *UpdateConstructionOptions)(BuildingClass *this);
@@ -15803,7 +15808,7 @@ struct FootClass_vtbl
   BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
   BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   BuildingClass *(__thiscall *FindNearestDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
+  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
@@ -16166,7 +16171,7 @@ struct InfantryClass_vtbl
   BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
   BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
+  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
@@ -16628,7 +16633,7 @@ struct UnitClass_vtbl
   BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
   BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
+  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
@@ -17085,7 +17090,7 @@ struct AircraftClass_vtbl
   BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
   BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
   unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_534)(FootClass *this, unsigned int, unsigned int);
+  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
   void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
@@ -23475,4 +23480,47 @@ struct FoundationCellsStruct
   FoundationStruct Foundation_3x4;
   FoundationStruct Foundation_6x4;
   FoundationStruct Foundation_0x0;
+};
+
+struct ChangeLinkHouseStruct
+{
+  TechnoClass *Techno;
+  bool IsTether;
+};
+
+struct __declspec(align(4)) VectorClass_ChangeLinkHouseStruct_PTR
+{
+  VectorClass_ChangeLinkHouseStruct_PTR_vtbl *__vftable;
+  ChangeLinkHouseStruct **Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl
+{
+  void (__thiscall *~VectorClass_ChangeLinkHouseStruct_PTR)(VectorClass_ChangeLinkHouseStruct_PTR *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_ChangeLinkHouseStruct_PTR *this, VectorClass_ChangeLinkHouseStruct_PTR *);
+  bool (__thiscall *SetCapacity)(VectorClass_ChangeLinkHouseStruct_PTR *this, int, ChangeLinkHouseStruct **);
+  void (__thiscall *Clear)(VectorClass_ChangeLinkHouseStruct_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
+  int (__thiscall *GetItemIndex)(VectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
+  ChangeLinkHouseStruct *(__thiscall *GetItem)(VectorClass_ChangeLinkHouseStruct_PTR *this, int);
+};
+
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR : VectorClass_ChangeLinkHouseStruct_PTR
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_ChangeLinkHouseStruct_PTR)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, VectorClass_ChangeLinkHouseStruct_PTR *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, int, ChangeLinkHouseStruct **);
+  void (__thiscall *Clear)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
+  ChangeLinkHouseStruct *(__thiscall *GetItem)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, int);
 };
