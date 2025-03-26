@@ -14001,7 +14001,6 @@ class DisplayClass : MapClass
   bool unknown_bool_11D1;
   Point2D LeftDownPosition;
   Point2D LeftDownPosition2;
-  unsigned int padding_11E4;
 };
 
 struct DisplayClass_vtbl
@@ -14060,51 +14059,46 @@ struct DisplayClass_vtbl
 
 class RadarClass : DisplayClass
 {
-  unsigned int unknown_11E8;
-  unsigned int unknown_11EC;
-  unsigned int unknown_11F0;
-  unsigned int unknown_11F4;
-  unsigned int unknown_11F8;
+  Point2D unknown_point2d_11E4;
+  int unknown_size_11EC;
+  int unknown_size_11F0;
+  int unknown_size_11F4;
+  int unknown_size_11F8;
   unsigned int unknown_11FC;
-  unsigned int unknown_1200;
-  unsigned int unknown_1204;
-  unsigned int unknown_1208;
+  Point2D unknown_point2d_1200;
+  unsigned int unknown_color_1208;
   RectangleStruct unknown_rect_120C;
-  BSurface *unknown_surface_121C;
+  DSurface *unknown_surface_121C;
   BSurface *unknown_surface_1220;
   DynamicVectorClass_CellStruct unknown_cells_1124;
   unsigned int unknown_123C;
   Point2D unknown_point2d_1240;
   RectangleStruct unknown_rect_1248;
-  unsigned int unknown_ptr_1258;
+  void *unknown_ptr_1258;
   DynamicVectorClass_Point2D unknown_points_125C;
-  unsigned int unknown_1274;
+  void *unknown_ptr_1274;
   DynamicVectorClass_Point2D FoundationTypePixels[22];
   float RadarSizeFactor;
   int unknown_int_148C;
   unsigned int unknown_1490;
   unsigned int unknown_1494;
   unsigned int unknown_1498;
-  RectangleStruct unknown_rect_149C;
+  RectangleStruct RadarRect;
   unsigned int unknown_14AC;
   unsigned int unknown_14B0;
   unsigned int unknown_14B4;
   unsigned int unknown_14B8;
   bool unknown_bool_14BC;
   bool unknown_bool_14BD;
-  unsigned int unknown_14C0;
-  unsigned int unknown_14C4;
-  unsigned int unknown_14C8;
-  unsigned int unknown_14CC;
-  unsigned int unknown_14D0;
+  AudioController RadarAudioController;
   int unknown_int_14D4;
   bool IsAvailableNow;
   bool unknown_bool_14D9;
   bool unknown_bool_14DA;
-  RectangleStruct unknown_rect_14DC;
-  RectangleStruct unknown_rect_14EC;
+  RectangleStruct RadarScopeRect;
+  RectangleStruct RadarScopeRect2;
   unsigned int unknown_14FC;
-  CDTimerClass unknown_timer_1500;
+  SysTimerClass unknown_timer_1500;
 };
 
 struct RadarClass_vtbl
