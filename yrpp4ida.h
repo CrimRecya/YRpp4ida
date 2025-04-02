@@ -343,6 +343,7 @@ struct DamageGroup;
 struct FoundationStruct;
 struct FoundationCellsStruct;
 struct ChangeLinkHouseStruct;
+struct GroundType;
 
 // TODO STRUCT
 
@@ -14759,10 +14760,9 @@ class __declspec(align(8)) BuildingClass : TechnoClass
   unsigned int LaserFenceFrame;
   unsigned int FirestormWallFrame;
   StageClass RepairProgress;
-  RectangleStruct unknown_rect_63C;
-  CoordStruct unknown_coord_64C;
-  int unknown_int_658;
-  unsigned int unknown_65C;
+  RectangleStruct LastRenderDimensions;
+  CoordStruct LastRenderCoords;
+  Point2D LastTacticalPos;
   bool HasPower;
   bool IsOverpowered;
   bool RegisteredAsPoweredUnitSource;
@@ -15210,10 +15210,7 @@ class BuildingTypeClass : TechnoTypeClass
   int AntiArmorValue;
   int AntiInfantryValue;
   Point2D ZShapePointMove;
-  int unknown_1538;
-  int unknown_153C;
-  int unknown_1540;
-  int unknown_1544;
+  RectangleStruct unknown_rect_1538;
   unsigned __int16 ExtraLight;
   bool TogglePower;
   bool HasSpotlight;
@@ -17636,8 +17633,8 @@ struct TeleportLocomotionClass_vtbl
   HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
   void (__thiscall *~LocomotionClass)(LocomotionClass *this);
   int (__thiscall *Size)(LocomotionClass *this);
-  void (__thiscall *vt_entry_28)(TeleportLocomotionClass *this, unsigned int);
-  bool (__thiscall *IsStill)(TeleportLocomotionClass *this);
+  void (__stdcall *vt_entry_28)(TeleportLocomotionClass *this);
+  bool (__stdcall *IsStill)(TeleportLocomotionClass *this);
 };
 
 class __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
@@ -23517,4 +23514,10 @@ struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
   ChangeLinkHouseStruct *(__thiscall *GetItem)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, int);
+};
+
+struct GroundType
+{
+	float Cost[8];
+	bool Buildable;
 };
