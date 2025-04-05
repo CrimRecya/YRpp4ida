@@ -344,6 +344,9 @@ struct FoundationStruct;
 struct FoundationCellsStruct;
 struct ChangeLinkHouseStruct;
 struct GroundType;
+struct TrackNumStruct;
+struct TrackPtStruct;
+struct TrackIdxStruct;
 
 // TODO STRUCT
 
@@ -919,6 +922,10 @@ struct VectorClass_ChangeLinkHouseStruct_PTR;
 struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4468
 struct DynamicVectorClass_ChangeLinkHouseStruct_PTR;
 struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
+struct VectorClass_TubeClass_PTR;
+struct VectorClass_TubeClass_PTR_vtbl;
+struct DynamicVectorClass_TubeClass_PTR; // 0x8B4138
+struct DynamicVectorClass_TubeClass_PTR_vtbl;
 
 // TODO VECTOR
 
@@ -1184,6 +1191,8 @@ class FoggedObjectClass; // : AbstractClass
 struct FoggedObjectClass_vtbl; // 0x7E8B38
 class StaticButtonClass; // : GadgetClass : LinkClass
 struct StaticButtonClass_vtbl; // 0x7F3EA0
+class TubeClass; // : AbstractClass
+struct TubeClass_vtbl; // 0x7F59B0
 
 // TODO CLASS
 
@@ -13086,7 +13095,7 @@ class TechnoClass : RadioClass
   TechnoClass *QueueUpToEnter;
   unsigned int EMPLockRemaining;
   unsigned int ThreatPosed;
-  unsigned int ShouldLoseTargetNow;
+  bool ShouldLoseTargetNow;
   RadBeam *FiringRadBeam;
   PlanningTokenClass *PlanningToken;
   ObjectTypeClass *Disguise;
@@ -16275,7 +16284,7 @@ class UnitClass : FootClass
   UnitTypeClass *Type;
   UnitClass *FollowerCar;
   int FlagHouseIndex;
-  bool HasFollowerCar;
+  bool IsFollowerCar;
   bool Unloading;
   bool IsHarvesting;
   bool TerrainPalette;
@@ -17653,7 +17662,7 @@ class __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
   bool IsRotating;
   bool IsDriving;
   bool IsRocking;
-  bool IsLocked;
+  bool UnLocked;
   ILocomotion *Piggybackee;
 };
 
@@ -17687,7 +17696,7 @@ class DriveLocomotionClass : LocomotionClass, IPiggyback
   bool IsRotating;
   bool IsDriving;
   bool IsRocking;
-  bool IsLocked;
+  bool UnLocked;
   ILocomotion *Piggybackee;
   int field_6C;
 };
@@ -23520,4 +23529,100 @@ struct GroundType
 {
 	float Cost[8];
 	bool Buildable;
+};
+
+struct TrackNumStruct
+{
+  char NormalTrackStructIndex;
+  char ShortTrackStructIndex;
+  int Face;
+  int Flag;
+};
+
+struct TrackPtStruct
+{
+  Point2D Point;
+  int Flag;
+};
+
+struct TrackIdxStruct
+{
+  TrackPtStruct *TrackPoint;
+  int TrackIndex1;
+  int TrackIndex2;
+  int TrackIndex3;
+};
+
+class TubeClass : AbstractClass
+{
+  CellStruct unknown_cell_24;
+  CellStruct unknown_cell_28;
+  int unknown_int_2C;
+  int unknown_int_30[100];
+  int unknown_int_1C0;
+};
+
+struct TubeClass_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  unsigned int (__stdcall *AddRef)(IUnknown *this);
+  unsigned int (__stdcall *Release)(IUnknown *this);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  void (__thiscall *~AbstractClass)(AbstractClass *this);
+  void (__thiscall *Init)(AbstractClass *this);
+  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
+  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
+  int (__thiscall *Size)(AbstractClass *this);
+  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
+  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
+  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
+  int (__thiscall *GetArrayIndex)(AbstractClass *this);
+  bool (__thiscall *IsDead)(AbstractClass *this);
+  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
+  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
+  bool (__thiscall *IsOnFloor)(AbstractClass *this);
+  bool (__thiscall *IsInAir)(AbstractClass *this);
+  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
+  void (__thiscall *Update)(AbstractClass *this);
+};
+
+struct __declspec(align(4)) VectorClass_TubeClass_PTR
+{
+  VectorClass_TubeClass_PTR_vtbl *__vftable;
+  TubeClass **Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_TubeClass_PTR_vtbl
+{
+  void (__thiscall *~VectorClass_TubeClass_PTR)(VectorClass_TubeClass_PTR *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_TubeClass_PTR *this, VectorClass_TubeClass_PTR *);
+  bool (__thiscall *SetCapacity)(VectorClass_TubeClass_PTR *this, int, AbstractClass **);
+  void (__thiscall *Clear)(VectorClass_TubeClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_TubeClass_PTR *this, AbstractClass **);
+  int (__thiscall *GetItemIndex)(VectorClass_TubeClass_PTR *this, AbstractClass **);
+  AbstractClass *(__thiscall *GetItem)(VectorClass_TubeClass_PTR *this, int);
+};
+
+struct DynamicVectorClass_TubeClass_PTR : VectorClass_TubeClass_PTR
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_TubeClass_PTR_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_TubeClass_PTR)(DynamicVectorClass_TubeClass_PTR *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TubeClass_PTR *this, VectorClass_TubeClass_PTR *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_TubeClass_PTR *this, int, AbstractClass **);
+  void (__thiscall *Clear)(DynamicVectorClass_TubeClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_TubeClass_PTR *this, AbstractClass **);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_TubeClass_PTR *this, AbstractClass **);
+  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_TubeClass_PTR *this, int);
 };
