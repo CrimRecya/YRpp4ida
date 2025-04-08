@@ -23542,7 +23542,7 @@ struct TrackNumStruct
 struct TrackPtStruct
 {
   Point2D Point;
-  int Flag;
+  int Face;
 };
 
 struct TrackIdxStruct
@@ -23555,9 +23555,9 @@ struct TrackIdxStruct
 
 class TubeClass : AbstractClass
 {
-  CellStruct unknown_cell_24;
-  CellStruct unknown_cell_28;
-  int unknown_int_2C;
+  CellStruct EnterCell;
+  CellStruct ExitCell;
+  int ExitFace;
   int unknown_int_30[100];
   int unknown_int_1C0;
 };
