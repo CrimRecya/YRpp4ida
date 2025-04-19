@@ -344,9 +344,9 @@ struct FoundationStruct;
 struct FoundationCellsStruct;
 struct ChangeLinkHouseStruct;
 struct GroundType;
-struct TrackNumStruct;
-struct TrackPtStruct;
-struct TrackIdxStruct;
+struct TurnTrackType;
+struct TrackType;
+struct RawTrackType;
 
 // TODO STRUCT
 
@@ -3365,6 +3365,7 @@ struct Vector4D_float : Vector3D_float
 {
   float W;
 };
+typedef Vector4D_float Quaternion;
 
 struct RectangleStruct : Vector2D_int
 {
@@ -3883,14 +3884,6 @@ struct StageClass
   CDTimerClass Timer;
   int Rate;
   int Step;
-};
-
-struct Quaternion
-{
-  float X;
-  float Y;
-  float Z;
-  float W;
 };
 
 struct BounceClass
@@ -13304,7 +13297,7 @@ struct TechnoClass_vtbl
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
   int (__thiscall *GetROF)(TechnoClass *this, int);
   int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *vt_entry_320)(TechnoClass *this);
+  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
   bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
@@ -13430,7 +13423,7 @@ class TechnoTypeClass : ObjectTypeClass
   long double ThreatAvoidanceCoefficient;
   int SlowdownDistance;
   unsigned int align_2FC;
-  long double unknown_double_300;
+  long double DecelerationFactor;
   long double AccelerationFactor;
   int CloakingSpeed;
   TypeList_VoxelAnimTypeClass_PTR DebrisTypes;
@@ -15022,7 +15015,7 @@ struct BuildingClass_vtbl
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
   int (__thiscall *GetROF)(TechnoClass *this, int);
   int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *vt_entry_320)(TechnoClass *this);
+  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
   bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
@@ -15414,7 +15407,7 @@ class FootClass : TechnoClass
   CellStruct LastMapCoords;
   CellStruct LastFlightMapCoords;
   CellStruct CurrentJumpjetMapCoords;
-  CoordStruct unknown_coords_568;
+  CoordStruct CurrentTunnelCoords;
   unsigned int unused_574;
   long double SpeedPercentage;
   long double SpeedMultiplier;
@@ -15440,10 +15433,10 @@ class FootClass : TechnoClass
   LocomotionID Locomotor;
   CoordStruct unknown_point3d_678;
   char TubeIndex;
-  bool unknown_bool_685;
+  char TubeFaceIndex;
   char WaypointIndex;
   bool ShouldScatterInNextIdle;
-  bool unknown_bool_688;
+  bool IsScanLimited;
   bool IsInitiated;
   bool ShouldScanForTarget;
   bool unknown_bool_68B;
@@ -15466,7 +15459,7 @@ class FootClass : TechnoClass
   bool unknown_bool_6B2;
   bool HaveEnteredIdleInThisFrame;
   bool unknown_bool_6B4;
-  bool unknown_bool_6B5;
+  bool IsCrushingSomething;
   bool FrozenStill;
   bool IsWaitingBlockagePath;
   bool unknown_bool_6B8;
@@ -15675,7 +15668,7 @@ struct FootClass_vtbl
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
   int (__thiscall *GetROF)(TechnoClass *this, int);
   int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *vt_entry_320)(TechnoClass *this);
+  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
   bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
@@ -15796,7 +15789,7 @@ struct FootClass_vtbl
   bool (__thiscall *vt_entry_4F8)(FootClass *this);
   bool (__thiscall *MoveTo)(FootClass *this, CoordStruct *);
   bool (__thiscall *StopMoving)(FootClass *this);
-  bool (__thiscall *vt_entry_504)(FootClass *this);
+  bool (__thiscall *TryEnterIdle)(FootClass *this);
   bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
   void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
   void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, BlitterFlags, unsigned int);
@@ -16038,7 +16031,7 @@ struct InfantryClass_vtbl
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
   int (__thiscall *GetROF)(TechnoClass *this, int);
   int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *vt_entry_320)(TechnoClass *this);
+  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
   bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
@@ -16168,9 +16161,9 @@ struct InfantryClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  unsigned int (__thiscall *FindNearestDockBuilding)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
@@ -16500,7 +16493,7 @@ struct UnitClass_vtbl
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
   int (__thiscall *GetROF)(TechnoClass *this, int);
   int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *vt_entry_320)(TechnoClass *this);
+  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
   bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
@@ -16630,9 +16623,9 @@ struct UnitClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  unsigned int (__thiscall *FindNearestDockBuilding)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
@@ -16957,7 +16950,7 @@ struct AircraftClass_vtbl
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
   int (__thiscall *GetROF)(TechnoClass *this, int);
   int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *vt_entry_320)(TechnoClass *this);
+  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
   bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
   bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
@@ -17087,9 +17080,9 @@ struct AircraftClass_vtbl
   void (__thiscall *UnPanic)(FootClass *this);
   void (__thiscall *PlayIdleAnim)(FootClass *this, int);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryDockNewBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *CanDockWhichBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *vt_entry_530)(FootClass *this, unsigned int, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
+  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
+  unsigned int (__thiscall *FindNearestDockBuilding)(FootClass *this, unsigned int, unsigned int, unsigned int);
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
@@ -23531,7 +23524,7 @@ struct GroundType
 	bool Buildable;
 };
 
-struct TrackNumStruct
+struct TurnTrackType
 {
   char NormalTrackStructIndex;
   char ShortTrackStructIndex;
@@ -23539,18 +23532,18 @@ struct TrackNumStruct
   int Flag;
 };
 
-struct TrackPtStruct
+struct TrackType
 {
   Point2D Point;
   int Face;
 };
 
-struct TrackIdxStruct
+struct RawTrackType
 {
-  TrackPtStruct *TrackPoint;
-  int TrackIndex1;
-  int TrackIndex2;
-  int TrackIndex3;
+  TrackType *TrackPoint;
+  int JumpIndex;
+  int EntryIndex;
+  int CellIndex;
 };
 
 class TubeClass : AbstractClass
@@ -23558,7 +23551,7 @@ class TubeClass : AbstractClass
   CellStruct EnterCell;
   CellStruct ExitCell;
   int ExitFace;
-  int unknown_int_30[100];
+  int Faces[100];
   int unknown_int_1C0;
 };
 
