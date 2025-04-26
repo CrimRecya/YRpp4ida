@@ -347,6 +347,9 @@ struct GroundType;
 struct TurnTrackType;
 struct TrackType;
 struct RawTrackType;
+struct VoxelBoundaryData;
+struct VoxelBoundary;
+struct VoxelSection;
 
 // TODO STRUCT
 
@@ -23618,4 +23621,32 @@ struct DynamicVectorClass_TubeClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_TubeClass_PTR *this, AbstractClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_TubeClass_PTR *this, AbstractClass **);
   AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_TubeClass_PTR *this, int);
+};
+
+struct VoxelBoundaryData
+{
+  VoxLib* VoxLib;
+  int HeaderIndex;
+  int TrailerIndex;
+  int MinZIndex;
+  float MinX;
+  float MinY;
+  float MinZ;
+  float MaxX;
+  float MaxY;
+  float MaxZ;
+  Vector3D_float TransformedPoints[8];
+};
+
+struct VoxelBoundary
+{
+  Point2D Point;
+  RectangleStruct Bound;
+};
+
+struct VoxelSection
+{
+  int unk_int[6];
+  __int16 unk_short[12];
+  __int8 unk_byte[3];
 };
