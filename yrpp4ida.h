@@ -322,19 +322,19 @@ struct MessageListClass;
 struct BitFont;
 struct BitFont_vtbl;
 struct BitFont_InternalData;
-struct PathFinder_StructC_Data;
-struct PathFinder_StructC;
-struct PathFinder_Struct10_Data;
-struct PathFinder_Struct10;
-struct PathFinder_Struct14_Data8;
-struct PathFinder_Struct14;
-struct PathFinder_Struct64_Data;
-struct PathFinder_Struct64;
-struct PathFinder_Struct68_Data8;
-struct PathFinder_Struct68;
-struct PathFinder_StructBC;
-struct PathFinder;
-struct PathFinderData;
+struct AStarClass_WorkPathHeapNode;
+struct AStarClass_WorkPathHeapData;
+struct AStarClass_WorkPathQueueNode;
+struct AStarClass_WorkPathQueueBuffer;
+struct AStarClass_WorkPathQueueArray;
+struct PriorityQueueClass_WorkPathData;
+struct AStarClass_HierarchicalQueueNode;
+struct AStarClass_HierarchicalQueueBuffer;
+struct AStarClass_HierarchicalQueueArray;
+struct PriorityQueueClass_HierarchicalData;
+struct AStarClass_PassabilityIndexData;
+struct AStarClass;
+struct AStarClass_PathType;
 struct FoggedObjectDraw;
 struct SessionClass_TL_unnamed_type_MPStats_TR_;
 struct SessionClass;
@@ -15807,7 +15807,7 @@ struct FootClass_vtbl
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
+  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathType *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -16170,7 +16170,7 @@ struct InfantryClass_vtbl
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
+  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathType *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -16632,7 +16632,7 @@ struct UnitClass_vtbl
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
+  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathType *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -17089,7 +17089,7 @@ struct AircraftClass_vtbl
   void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
   AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, PathFinderData *);
+  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathType *);
   void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
@@ -22928,80 +22928,80 @@ struct BitFont_InternalData
   int ValidSymbolCount;
 };
 
-struct PathFinder_StructC_Data
+struct AStarClass_WorkPathHeapNode
 {
   CellClass **Items;
   int Level;
-  PathFinder_StructC_Data *Next;
+  AStarClass_WorkPathHeapNode *Prev;
 };
 
-struct PathFinder_StructC
+struct AStarClass_WorkPathHeapData
 {
-  PathFinder_StructC_Data Data[131072];
+  AStarClass_WorkPathHeapNode WorkPathHeapData[131072];
   int Count;
 };
 
-struct PathFinder_Struct10_Data
+struct AStarClass_WorkPathQueueNode
 {
-  PathFinder_StructC_Data *Datas;
-  float LastDistance;
+  AStarClass_WorkPathHeapNode *WorkPathHeapNodes;
+  float MovementDistance;
   float AccumulatedDistance;
   int AccumulatedCount;
 };
 
-struct PathFinder_Struct10
+struct AStarClass_WorkPathQueueBuffer
 {
-  PathFinder_Struct10_Data Data[65536];
+  AStarClass_WorkPathQueueNode WorkPathData[65536];
   int Count;
 };
 
-struct PathFinder_Struct14_Data8
+struct AStarClass_WorkPathQueueArray
 {
-  PathFinder_Struct10_Data *Data[65537];
+  AStarClass_WorkPathQueueNode *WorkPathData[65537];
 };
 
-struct PathFinder_Struct14
+struct PriorityQueueClass_WorkPathData
 {
   int Count;
   int Capacity;
-  PathFinder_Struct14_Data8 *Datas;
-  PathFinder_Struct10_Data *TheMaxData;
-  PathFinder_Struct10_Data *TheMinData;
+  AStarClass_WorkPathQueueArray *WorkPathDatas;
+  AStarClass_WorkPathQueueNode *TheMaxWorkPathData;
+  AStarClass_WorkPathQueueNode *TheMinWorkPathData;
 };
 
-struct PathFinder_Struct64_Data
+struct AStarClass_HierarchicalQueueNode
 {
-  int Index;
+  int NodeIndex;
   int FinderIndex;
   float Coefficient;
   int Count;
 };
 
-struct PathFinder_Struct64
+struct AStarClass_HierarchicalQueueBuffer
 {
-  PathFinder_Struct64_Data Data[10000];
+  AStarClass_HierarchicalQueueNode HierarchicalData[10000];
 };
 
-struct PathFinder_Struct68_Data8
+struct AStarClass_HierarchicalQueueArray
 {
-  PathFinder_Struct64_Data *Data[10001];
+  AStarClass_HierarchicalQueueNode *HierarchicalData[10001];
 };
 
-struct PathFinder_Struct68
+struct PriorityQueueClass_HierarchicalData
 {
   int Count;
   int Capacity;
-  PathFinder_Struct68_Data8 *Datas;
-  PathFinder_Struct64_Data *TheMaxData;
-  PathFinder_Struct64_Data *TheMinData;
+  AStarClass_HierarchicalQueueArray *HierarchicalDatas;
+  AStarClass_HierarchicalQueueNode *TheMaxHierarchicalData;
+  AStarClass_HierarchicalQueueNode *TheMinHierarchicalData;
 };
 
-struct PathFinder_StructBC
+struct AStarClass_PassabilityIndexData
 {
   __int16 Indexes[500];
 };
 
-struct PathFinder
+struct AStarClass
 {
   __int8 unknown_byte_0;
   bool FindBridgeOwner;
@@ -23009,9 +23009,9 @@ struct PathFinder
   bool CanFind;
   float FinderCoefficient;
   bool IsAlt;
-  PathFinder_StructC *Datas_C;
-  PathFinder_Struct10 *Datas_10;
-  PathFinder_Struct14 *Datas_14;
+  AStarClass_WorkPathHeapData *WorkPathHeapData;
+  AStarClass_WorkPathQueueBuffer *WorkPathPriorityQueueBuffer;
+  PriorityQueueClass_WorkPathData *WorkPathPriorityQueueDatas;
   int *AltCounts;
   int *Counts;
   float *Distances;
@@ -23025,18 +23025,18 @@ struct PathFinder
   int *BothWayPassabilityCounts[3];
   int *OneWayPassabilityCounts[3];
   float *OneWayPassabilityCoefficients[3];
-  PathFinder_Struct64 *Datas_64;
-  PathFinder_Struct68 *Datas_68;
+  AStarClass_HierarchicalQueueBuffer *HierarchicalPriorityQueueBuffer;
+  PriorityQueueClass_HierarchicalData *HierarchicalPriorityQueueDatas;
   int CellStructCount;
   CellStruct CellStructBuffer;
   DynamicVectorClass_unsigned_int SubzonesIndexes[3];
-  PathFinder_StructBC PassabilityIndexes[3];
+  AStarClass_PassabilityIndexData PassabilityIndexes[3];
   int PassabilityCounts[3];
 };
 
-struct PathFinderData
+struct AStarClass_PathType
 {
-  CellStruct unknown_cellstruct_0;
+  CellStruct Start;
   int AccumulatedDistance;
   int AccumulatedCount;
   int *Facings;
