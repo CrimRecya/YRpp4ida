@@ -7,6 +7,10 @@
 #define __int64 long long
 typedef int HRESULT;
 
+struct LimitedRegister;
+struct ExtendedRegister;
+struct StackRegister;
+struct Registers;
 struct _GUID;
 struct IUnknown;
 struct IUnknown_vtbl;
@@ -1199,6 +1203,9 @@ struct TubeClass_vtbl; // 0x7F59B0
 
 // TODO CLASS
 
+union Union_LimitedRegister;
+union Union_ExtendedRegister;
+union Union_StackRegister;
 union Union_Large_Int;
 union Union_U_Large_Int;
 union Union_In_addr_unnamed_type_un;
@@ -23649,4 +23656,61 @@ struct VoxelSection
   int unk_int[6];
   __int16 unk_short[12];
   __int8 unk_byte[3];
+};
+
+struct LimitedRegister
+{
+  unsigned __int16 _LOWORD;
+  unsigned __int16 _HIWORD;
+};
+
+struct ExtendedRegister
+{
+  unsigned __int8 _LOBYTE;
+  unsigned __int8 _BYTE1;
+  unsigned __int8 _BYTE2;
+  unsigned __int8 _BYTE3;
+};
+
+struct StackRegister
+{
+  unsigned int StackHieght;
+};
+
+union Union_LimitedRegister
+{
+  void* As_Ptr;
+  unsigned int As_DWORD;
+  LimitedRegister As_WORD;
+};
+
+union Union_ExtendedRegister
+{
+  void* As_Ptr;
+  unsigned int As_DWORD;
+  LimitedRegister As_WORD;
+  ExtendedRegister As_BYTE;
+};
+
+union Union_StackRegister
+{
+  void* As_Ptr;
+  unsigned int As_DWORD;
+  LimitedRegister As_WORD;
+  ExtendedRegister As_BYTE;
+  StackRegister As_Stack;
+};
+
+struct Registers
+{
+  unsigned int origin;
+  unsigned int flags;
+  Union_LimitedRegister _EDI;
+  Union_LimitedRegister _ESI;
+  Union_StackRegister _EBP;
+  Union_StackRegister _ESP;
+  Union_ExtendedRegister _EBX;
+  Union_ExtendedRegister _EDX;
+  Union_ExtendedRegister _ECX;
+  Union_ExtendedRegister _EAX;
 };
