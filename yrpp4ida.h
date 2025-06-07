@@ -6712,7 +6712,7 @@ struct Surface_vtbl
   bool (__thiscall *DrawLine_)(Surface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(Surface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(Surface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Lock)(Surface *this, int, int);
+  void *(__thiscall *Lock)(Surface *this, int, int);
   bool (__thiscall *Unlock)(Surface *this);
   bool (__thiscall *CanLock)(Surface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(Surface *this, unsigned int, unsigned int);
@@ -13373,7 +13373,7 @@ struct TechnoClass_vtbl
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *vt_entry_428)(TechnoClass *this);
+  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
   bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
@@ -15091,7 +15091,7 @@ struct BuildingClass_vtbl
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *vt_entry_428)(TechnoClass *this);
+  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
   bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
@@ -15744,7 +15744,7 @@ struct FootClass_vtbl
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *vt_entry_428)(TechnoClass *this);
+  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
   bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
@@ -16107,7 +16107,7 @@ struct InfantryClass_vtbl
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *vt_entry_428)(TechnoClass *this);
+  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
   bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
@@ -16569,7 +16569,7 @@ struct UnitClass_vtbl
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *vt_entry_428)(TechnoClass *this);
+  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
   bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
@@ -17026,7 +17026,7 @@ struct AircraftClass_vtbl
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *vt_entry_428)(TechnoClass *this);
+  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
   CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
   bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
@@ -17397,7 +17397,7 @@ struct XSurface_vtbl
   bool (__thiscall *DrawLine_)(XSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(XSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(XSurface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Lock)(XSurface *this, int, int);
+  void *(__thiscall *Lock)(XSurface *this, int, int);
   bool (__thiscall *Unlock)(XSurface *this);
   bool (__thiscall *CanLock)(XSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(XSurface *this, unsigned int, unsigned int);
@@ -17447,7 +17447,7 @@ struct DSurface_vtbl
   bool (__thiscall *DrawLine_)(DSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(DSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(DSurface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Lock)(DSurface *this, int, int);
+  void *(__thiscall *Lock)(DSurface *this, int, int);
   bool (__thiscall *Unlock)(DSurface *this);
   bool (__thiscall *CanLock)(DSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(DSurface *this, unsigned int, unsigned int);
@@ -17494,7 +17494,7 @@ struct BSurface_vtbl
   bool (__thiscall *DrawLine_)(BSurface *this, Point2D *, Point2D *, int, bool);
   bool (__thiscall *DrawRectEx)(BSurface *this, RectangleStruct *, RectangleStruct *, int);
   bool (__thiscall *DrawRect)(BSurface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Lock)(BSurface *this, int, int);
+  void *(__thiscall *Lock)(BSurface *this, int, int);
   bool (__thiscall *Unlock)(BSurface *this);
   bool (__thiscall *CanLock)(BSurface *this, unsigned int, unsigned int);
   bool (__thiscall *vt_entry_68)(BSurface *this, unsigned int, unsigned int);
