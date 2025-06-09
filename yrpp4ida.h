@@ -11279,8 +11279,8 @@ class WarheadTypeClass : AbstractTypeClass
   int ShakeYhi;
   TypeList_VoxelAnimTypeClass_PTR DebrisTypes;
   TypeList_int DebrisMaximums;
-  int MinDebris;
   int MaxDebris;
+  int MinDebris;
   unsigned int unused_1CC;
 };
 
@@ -13512,8 +13512,8 @@ class TechnoTypeClass : ObjectTypeClass
   int MindClearedSound;
   MovementZone MovementZone;
   int GuardRange;
-  int MinDebris;
   int MaxDebris;
+  int MinDebris;
   TypeList_AnimTypeClass_PTR DebrisAnims;
   int Passengers;
   bool OpenTopped;
