@@ -354,6 +354,7 @@ struct RawTrackType;
 struct VoxelBoundaryData;
 struct VoxelBoundary;
 struct VoxelSection;
+struct MouseThreadClass;
 
 // TODO STRUCT
 
@@ -13890,7 +13891,7 @@ struct GScreenClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -13954,7 +13955,7 @@ struct MapClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14025,7 +14026,7 @@ struct DisplayClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14123,7 +14124,7 @@ struct RadarClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14197,7 +14198,7 @@ struct PowerClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14285,7 +14286,7 @@ struct SidebarClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14355,7 +14356,7 @@ struct TabClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14426,7 +14427,7 @@ struct ScrollClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -14494,7 +14495,7 @@ struct MouseClass_vtbl
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
   void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, int *, Point2D *);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
   bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
   bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
@@ -17907,9 +17908,9 @@ struct WWMouseClass_vtbl
 
 class TextLabelClass : GadgetClass
 {
-  void *UserData1;
-  void *UserData2;
-  unsigned int Style;
+  int DeleteTime;
+  int ID;
+  TextPrintType Style;
   wchar_t *Text;
   int ColorSchemeIndex;
   unsigned int PixWidth;
@@ -23711,3 +23712,17 @@ struct Registers
   Union_ExtendedRegister _ECX;
   Union_ExtendedRegister _EAX;
 };
+
+#pragma pack(push, 4)
+struct __declspec(align(4)) MouseThreadClass
+{
+  int IsInactive;
+  int CallCount;
+  int IsStopped;
+  int field_C;
+  unsigned __int64 Interval;
+  int IsThreadCalled;
+  void *ThreadHandle;
+  unsigned int ThreadID;
+};
+#pragma pack(pop)
