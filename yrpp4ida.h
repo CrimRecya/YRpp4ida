@@ -5426,7 +5426,8 @@ struct BaseClass
   DynamicVectorClass_CellStruct Cells_24;
   DynamicVectorClass_CellStruct Cells_38;
   CellStruct Center;
-  unsigned __int8 unknown_54[32];
+  RectangleStruct BaseRect;
+  RectangleStruct BaseRect2;
   HouseClass *Owner;
 };
 
@@ -13919,9 +13920,7 @@ class MapClass : GScreenClass
   unsigned int unknown_78;
   unsigned int unknown_7C;
   unsigned int unknown_80[3];
-  DynamicVectorClass_SubzoneTrackingStruct SubzoneTracking1;
-  DynamicVectorClass_SubzoneTrackingStruct SubzoneTracking2;
-  DynamicVectorClass_SubzoneTrackingStruct SubzoneTracking3;
+  DynamicVectorClass_SubzoneTrackingStruct SubzoneTracking[3];
   DynamicVectorClass_CellStruct CellStructs1;
   RectangleStruct MapRect;
   RectangleStruct VisibleRect;
