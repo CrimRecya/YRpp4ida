@@ -17648,17 +17648,17 @@ struct TeleportLocomotionClass_vtbl
 
 class __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
 {
-  unsigned int PreviousRamp;
-  unsigned int CurrentRamp;
+  int CurrentRamp;
+  int PreviousRamp;
   RateTimer SlopeTimer;
   CoordStruct Destination;
   CoordStruct HeadToCoord;
   int SpeedAccum;
-  double movementspeed_50;
-  unsigned int TrackNumber;
+  double Movementspeed;
+  int TrackNumber;
   int TrackIndex;
   bool IsOnShortTrack;
-  unsigned __int8 IsTurretLockedDown;
+  bool IsTurretLockedDown;
   bool IsRotating;
   bool IsDriving;
   bool IsRocking;
@@ -17682,23 +17682,22 @@ struct ShipLocomotionClass_vtbl
 
 class DriveLocomotionClass : LocomotionClass, IPiggyback
 {
-  unsigned int PreviousRamp;
-  unsigned int CurrentRamp;
+  int CurrentRamp;
+  int PreviousRamp;
   RateTimer SlopeTimer;
   CoordStruct Destination;
   CoordStruct HeadToCoord;
   int SpeedAccum;
-  double movementspeed_50;
-  unsigned int TrackNumber;
+  double Movementspeed;
+  int TrackNumber;
   int TrackIndex;
   bool IsOnShortTrack;
-  unsigned __int8 IsTurretLockedDown;
+  bool IsTurretLockedDown;
   bool IsRotating;
   bool IsDriving;
   bool IsRocking;
   bool UnLocked;
   ILocomotion *Piggybackee;
-  int field_6C;
 };
 
 struct DriveLocomotionClass_vtbl
