@@ -17795,8 +17795,8 @@ class HoverLocomotionClass : LocomotionClass
   double CurrentSpeed;
   double BoostSpeed;
   double CurrentWobbles;
-  bool unknown_bool_68;
-  int unknown_int_6C;
+  bool OutOfControl;
+  int TailSpin;
   bool unknown_bool_70;
 };
 
