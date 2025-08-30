@@ -4458,8 +4458,8 @@ struct PriorityQueueClassNode
 
 struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_
 {
-  int Capacity;
   int Count;
+  int Capacity;
   PriorityQueueClassNode **Nodes;
   PriorityQueueClassNode *LMost;
   PriorityQueueClassNode *RMost;
@@ -22965,8 +22965,8 @@ struct AStarClass_PathQueueArray
 
 struct PriorityQueueClass_PathQueueNode
 {
-  int Capacity;
   int Count;
+  int Capacity;
   AStarClass_PathQueueArray *Nodes;
   AStarClass_PathQueueNode *LMost;
   AStarClass_PathQueueNode *RMost;
@@ -22992,8 +22992,8 @@ struct AStarClass_HierarchicalArray
 
 struct PriorityQueueClass_HierarchicalNode
 {
-  int Capacity;
   int Count;
+  int Capacity;
   AStarClass_HierarchicalArray *Nodes;
   AStarClass_HierarchicalNode *LMost;
   AStarClass_HierarchicalNode *RMost;
