@@ -4019,8 +4019,8 @@ struct CellLevelPassabilityStruct
 
 struct LevelAndPassabilityStruct2
 {
-  __int16 Indexes[3];
-  __int16 unknown_short_6;
+  unsigned __int16 Indexes[3];
+  unsigned __int16 ZoneArrayIndex;
   char CellLevel;
   char field_9;
 };
@@ -13915,8 +13915,8 @@ class MapClass : GScreenClass
   DynamicVectorClass_ZoneConnectionClass ZoneConnections;
   CellLevelPassabilityStruct *LevelAndPassability;
   int ValidMapCellCount;
-  LevelAndPassabilityStruct2 *LevelAndPassabilityStruct2pointer_70;
-  unsigned int unknown_74;
+  LevelAndPassabilityStruct2 *LevelAndPassability2;
+  unsigned int *unknown_74;
   unsigned int unknown_78;
   unsigned int unknown_7C;
   unsigned int unknown_80[3];
