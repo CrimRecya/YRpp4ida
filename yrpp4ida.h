@@ -23006,8 +23006,8 @@ struct AStarClass_PassabilityData
 
 struct AStarClass
 {
-  bool Initialized;
-  bool FindBridgeOwner;
+  __int8 unknown_byte_0;
+  bool FindBridgeDir;
   __int8 unknown_byte_2;
   bool CanFindPath;
   float PathCostFactor;
