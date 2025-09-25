@@ -355,6 +355,12 @@ struct VoxelBoundaryData;
 struct VoxelBoundary;
 struct VoxelSection;
 struct MouseThreadClass;
+struct ZoneConnectionTable;
+struct ZoneConnectionTables;
+struct ZoneConnectionTableManager;
+struct SubzoneConnectionTable;
+struct HierarchyConnectionTables;
+struct HierarchyConnectionTableManager;
 
 // TODO STRUCT
 
@@ -934,6 +940,14 @@ struct VectorClass_TubeClass_PTR;
 struct VectorClass_TubeClass_PTR_vtbl;
 struct DynamicVectorClass_TubeClass_PTR; // 0x8B4138
 struct DynamicVectorClass_TubeClass_PTR_vtbl;
+struct VectorClass_ZoneConnectionTable;
+struct VectorClass_ZoneConnectionTable_vtbl;
+struct DynamicVectorClass_ZoneConnectionTable;
+struct DynamicVectorClass_ZoneConnectionTable_vtbl;
+struct VectorClass_SubzoneConnectionTable;
+struct VectorClass_SubzoneConnectionTable_vtbl;
+struct DynamicVectorClass_SubzoneConnectionTable;
+struct DynamicVectorClass_SubzoneConnectionTable_vtbl;
 
 // TODO VECTOR
 
@@ -13906,20 +13920,133 @@ struct GScreenClass_vtbl
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
 };
 
+struct ZoneConnectionTable
+{
+  int SourceTargetPair;
+  int TargetSourcePair;
+};
+
+struct __declspec(align(4)) VectorClass_ZoneConnectionTable
+{
+  VectorClass_ZoneConnectionTable_vtbl *__vftable;
+  ZoneConnectionTable *Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_ZoneConnectionTable_vtbl
+{
+  void (__thiscall *~VectorClass_ZoneConnectionTable)(VectorClass_ZoneConnectionTable *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_ZoneConnectionTable *this, VectorClass_ZoneConnectionTable *);
+  bool (__thiscall *SetCapacity)(VectorClass_ZoneConnectionTable *this, int, ZoneConnectionTable *);
+  void (__thiscall *Clear)(VectorClass_ZoneConnectionTable *this);
+  int (__thiscall *FindItemIndex)(VectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
+  int (__thiscall *GetItemIndex)(VectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
+  ZoneConnectionTable *(__thiscall *GetItem)(VectorClass_ZoneConnectionTable *this, ZoneConnectionTable *result, int);
+};
+
+struct DynamicVectorClass_ZoneConnectionTable : VectorClass_ZoneConnectionTable
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_ZoneConnectionTable_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_ZoneConnectionTable)(DynamicVectorClass_ZoneConnectionTable *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ZoneConnectionTable *this, VectorClass_ZoneConnectionTable *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_ZoneConnectionTable *this, int, ZoneConnectionTable *);
+  void (__thiscall *Clear)(DynamicVectorClass_ZoneConnectionTable *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
+  ZoneConnectionTable *(__thiscall *GetItem)(DynamicVectorClass_ZoneConnectionTable *this, ZoneConnectionTable *result, int);
+};
+
+struct ZoneConnectionTables
+{
+  int TableCount;
+  DynamicVectorClass_ZoneConnectionTable Tables[256];
+};
+
+struct ZoneConnectionTableManager
+{
+  DynamicVectorClass_ZoneConnectionTable* Manager;
+  int (__thiscall *GetID)(int*);
+  int TableCount;
+  int CapacityIncrement;
+};
+
+struct SubzoneConnectionTable
+{
+  int SourceTargetPair;
+  int TargetSourcePair;
+  __int8 ConnectionCost;
+};
+
+struct __declspec(align(4)) VectorClass_SubzoneConnectionTable
+{
+  VectorClass_SubzoneConnectionTable_vtbl *__vftable;
+  SubzoneConnectionTable *Items;
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct VectorClass_SubzoneConnectionTable_vtbl
+{
+  void (__thiscall *~VectorClass_SubzoneConnectionTable)(VectorClass_SubzoneConnectionTable *this);
+  bool (__thiscall *OperatorEqual)(VectorClass_SubzoneConnectionTable *this, VectorClass_SubzoneConnectionTable *);
+  bool (__thiscall *SetCapacity)(VectorClass_SubzoneConnectionTable *this, int, SubzoneConnectionTable *);
+  void (__thiscall *Clear)(VectorClass_SubzoneConnectionTable *this);
+  int (__thiscall *FindItemIndex)(VectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
+  int (__thiscall *GetItemIndex)(VectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
+  SubzoneConnectionTable *(__thiscall *GetItem)(VectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *result, int);
+};
+
+struct DynamicVectorClass_SubzoneConnectionTable : VectorClass_SubzoneConnectionTable
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct DynamicVectorClass_SubzoneConnectionTable_vtbl
+{
+  void (__thiscall *~DynamicVectorClass_SubzoneConnectionTable)(DynamicVectorClass_SubzoneConnectionTable *this);
+  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SubzoneConnectionTable *this, VectorClass_SubzoneConnectionTable *);
+  bool (__thiscall *SetCapacity)(DynamicVectorClass_SubzoneConnectionTable *this, int, SubzoneConnectionTable *);
+  void (__thiscall *Clear)(DynamicVectorClass_SubzoneConnectionTable *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
+  SubzoneConnectionTable *(__thiscall *GetItem)(DynamicVectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *result, int);
+};
+
+struct HierarchyConnectionTables
+{
+  int TableCount;
+  DynamicVectorClass_SubzoneConnectionTable Tables[256];
+};
+
+struct HierarchyConnectionTableManager
+{
+  DynamicVectorClass_SubzoneConnectionTable* Manager;
+  int (__thiscall *GetID)(int*);
+  int TableCount;
+  int CapacityIncrement;
+};
+
 class MapClass : GScreenClass
 {
   unsigned int unknown_10;
-  void *unknown_pointer_14;
+  ZoneConnectionTableManager *ZonesConnectionsData;
   void *MovementZones[13];
   unsigned int somecount_4C;
   DynamicVectorClass_ZoneConnectionClass ZoneConnections;
   CellLevelPassabilityStruct *LevelAndPassability;
   int ValidMapCellCount;
   LevelAndPassabilityStruct2 *LevelAndPassability2;
-  unsigned int *unknown_74;
-  unsigned int unknown_78;
-  unsigned int unknown_7C;
-  unsigned int unknown_80[3];
+  int SubZonesCounts[3];
+  HierarchyConnectionTableManager *SubZonesConnectionsData[3];
   DynamicVectorClass_SubzoneTrackingStruct SubzoneTracking[3];
   DynamicVectorClass_CellStruct CellStructs1;
   RectangleStruct MapRect;
@@ -23001,7 +23128,7 @@ struct PriorityQueueClass_HierarchicalNode
 
 struct AStarClass_PassabilityData
 {
-  __int16 Indices[500];
+  unsigned __int16 Indices[500];
 };
 
 struct AStarClass
@@ -23015,22 +23142,22 @@ struct AStarClass
   AStarClass_PathNodeBuffer *PathNodeBuffer;
   AStarClass_PathQueueBuffer *PathQueueBuffer;
   PriorityQueueClass_PathQueueNode *PathQueue;
-  int *AltVisitCounts;
   int *VisitCounts;
-  float *Distances;
+  int *AltVisitCounts;
   float *AltDistances;
+  float *Distances;
   int SearchID;
   SpeedType FinderSpeedType;
   int StartLevel;
   int EndLevel;
   bool IsSearching;
-  int SearchMode;
+  int FindMode;
   int *TwoWayPassCounts[3];
   int *OneWayPassCounts[3];
   float *OneWayPassFactors[3];
   AStarClass_HierarchicalBuffer *HierarchyBuffer;
   PriorityQueueClass_HierarchicalNode *HierarchyQueue;
-  int CellStructCount;
+  int PathLength;
   CellStruct CellStructBuffer;
   DynamicVectorClass_unsigned_int ZoneIndices[3];
   AStarClass_PassabilityData PassabilityData[3];
