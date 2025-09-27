@@ -23152,9 +23152,9 @@ struct AStarClass
   int EndLevel;
   bool IsSearching;
   int FindMode;
-  int *TwoWayPassCounts[3];
-  int *OneWayPassCounts[3];
-  float *OneWayPassFactors[3];
+  int *LevelVisitedMarkers[3];
+  int *OpenSetMarkers[3];
+  float *GCostArray[3];
   AStarClass_HierarchicalBuffer *HierarchyBuffer;
   PriorityQueueClass_HierarchicalNode *HierarchyQueue;
   int PathLength;
@@ -23685,7 +23685,7 @@ class TubeClass : AbstractClass
   CellStruct ExitCell;
   int ExitFace;
   int Faces[100];
-  int unknown_int_1C0;
+  int FaceCount;
 };
 
 struct TubeClass_vtbl
