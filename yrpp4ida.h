@@ -6495,7 +6495,7 @@ struct SubzoneTrackingStruct
 {
   DynamicVectorClass_SubzoneConnectionStruct SubzoneConnections;
   __int16 Index;
-  int CoefficientIndex;
+  PassabilityType Passability;
   unsigned int unknown_dword_20;
 };
 
