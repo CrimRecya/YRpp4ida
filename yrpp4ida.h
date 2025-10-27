@@ -6451,7 +6451,7 @@ struct TabDataClass
 struct __declspec(align(4)) SubzoneConnectionStruct
 {
   int Index;
-  bool Supplement;
+  bool IsDiagonal;
 };
 
 struct __declspec(align(4)) VectorClass_SubzoneConnectionStruct
@@ -6494,9 +6494,9 @@ struct DynamicVectorClass_SubzoneConnectionStruct_vtbl
 struct SubzoneTrackingStruct
 {
   DynamicVectorClass_SubzoneConnectionStruct SubzoneConnections;
-  __int16 Index;
+  unsigned __int16 SuperiorIndex;
   PassabilityType Passability;
-  unsigned int unknown_dword_20;
+  unsigned int ThreatNodeIndex;
 };
 
 struct __declspec(align(4)) VectorClass_SubzoneTrackingStruct
@@ -13981,7 +13981,7 @@ struct SubzoneConnectionTable
 {
   int SourceTargetPair;
   int TargetSourcePair;
-  __int8 ConnectionCost;
+  bool IsDiagonal;
 };
 
 struct __declspec(align(4)) VectorClass_SubzoneConnectionTable
@@ -23101,8 +23101,8 @@ struct PriorityQueueClass_PathQueueNode
 
 struct AStarClass_HierarchicalNode
 {
-  int NodeIndex;
-  int FinderIndex;
+  int PreviousNodeIndex;
+  int SubzoneIndex;
   float Cost;
   int Count;
 };
