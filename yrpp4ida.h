@@ -3165,6 +3165,16 @@ enum __bitmask Occupations : unsigned int
   Occupations_Buildings = 0x80,
 };
 
+enum AITriggerConditionComparatorType : unsigned int
+{
+	Less = 0,
+	LessOrEqual = 1,
+	Equal = 2,
+	GreaterOrEqual = 3,
+	Greater = 4,
+	NotEqual = 5
+};
+
 // TODO ENUM
 
 struct CRCEngine
@@ -5974,8 +5984,8 @@ struct DynamicVectorClass_SlaveControl_PTR_vtbl
 
 struct AITriggerConditionComparator
 {
-  int ComparatorType;
-  int ComparatorOperand;
+	int ComparatorOperand;
+	AITriggerConditionComparatorType ComparatorType;
 };
 
 struct __declspec(align(4)) VectorClass_AnimTypeClass_PTR
@@ -8000,7 +8010,7 @@ struct __declspec(align(8)) RulesClass
   float OccupyDamageMultiplier;
   float OccupyROFMultiplier;
   int OccupyWeaponRange;
-  int BunkerDamageMultiplier;
+  float BunkerDamageMultiplier;
   float BunkerROFMultiplier;
   int BunkerWeaponRangeBonus;
   float OpenToppedDamageMultiplier;
@@ -9394,7 +9404,7 @@ class AnimClass : ObjectClass
   bool Unpaused;
   int PausedAnimFrame;
   bool Reverse;
-  unsigned int unknown_124;
+  unsigned __int8 padding_121[7];
   BounceClass Bounce;
   unsigned __int8 TranslucencyLevel;
   bool TimeToDie;
@@ -9405,8 +9415,8 @@ class AnimClass : ObjectClass
   BlitterFlags AnimFlags;
   bool HasExtras;
   unsigned __int8 RemainingIterations;
-  unsigned __int8 unknown_196;
-  unsigned __int8 unknown_197;
+  bool UseCellLightConvert;;
+  bool DeleteOnMapCleanup;
   bool IsInert;
   bool IsFogged;
   bool FlamingGuyExpire;
@@ -9415,8 +9425,8 @@ class AnimClass : ObjectClass
   bool Invisible;
   bool PowerOff;
   unsigned __int8 unused_19F;
-  AudioController Audio3;
-  AudioController Audio4;
+  AudioController StartSoundAudioController;
+  AudioController StopSoundAudioController;
 };
 
 struct AnimClass_vtbl
@@ -11619,7 +11629,7 @@ class ParticleTypeClass : ObjectTypeClass
   unsigned __int8 Translucent25State;
   unsigned __int8 Translucent50State;
   bool Normalized;
-  ParticleTypeClass *NextParticle;
+  int NextParticle;
   BehavesLike BehavesLike;
 };
 
@@ -13094,16 +13104,16 @@ class TechnoClass : RadioClass
   DynamicVectorClass_int CurrentTargetThreatValues;
   DynamicVectorClass_AbstractClass_PTR CurrentTargets;
   DynamicVectorClass_AbstractClass_PTR AttackedTargets;
-  AudioController Audio3;
-  int unknown_BOOL_49C;
+  AudioController TurretRotateSoundController;
+  int IsTurretRotateSoundPlaying;
   int TurretIsRotating;
-  AudioController Audio4;
-  bool unknown_bool_4B8;
+  AudioController GattlingSoundController;
+  bool IsGattlingSoundPlaying;
   unsigned int unknown_4BC;
-  AudioController Audio5;
-  bool unknown_bool_4D4;
+  AudioController UnusedGattlingSoundController;
+  bool IsUnusedGattlingSoundPlaying;
   unsigned int unknown_4D8;
-  AudioController Audio6;
+  AudioController QueuedVoiceSoundController;
   unsigned int QueuedVoiceIndex;
   unsigned int unknown_4F4;
   bool unknown_bool_4F8;
@@ -14464,7 +14474,7 @@ class TabClass : SidebarClass, INoticeSink
   TabDataClass TabData;
   CDTimerClass unknown_timer_552C;
   CDTimerClass InsufficientFundsBlinkTimer;
-  unsigned __int8 unknown_byte_5544;
+  bool ThumbActive;
   bool MissionTimerPinged;
   unsigned __int8 unknown_byte_5546;
   unsigned __int8 padding_5547;
@@ -17967,8 +17977,9 @@ class WalkLocomotionClass : LocomotionClass, IPiggyback
   CoordStruct Destination;
   CoordStruct HeadToCoord;
   bool IsMoving;
-  bool Bool_35;
+  bool InProcessing;
   bool IsReallyMoving;
+  ILocomotion* Piggybackee;
 };
 
 struct WalkLocomotionClass_vtbl
