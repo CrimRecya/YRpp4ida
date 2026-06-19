@@ -9415,7 +9415,7 @@ class AnimClass : ObjectClass
   BlitterFlags AnimFlags;
   bool HasExtras;
   unsigned __int8 RemainingIterations;
-  bool UseCellLightConvert;;
+  bool UseCellLightConvert;
   bool DeleteOnMapCleanup;
   bool IsInert;
   bool IsFogged;
