@@ -17902,10 +17902,10 @@ class RocketLocomotionClass : LocomotionClass
   int MissionState;
   unsigned int unknown_44;
   double CurrentSpeed;
-  bool unknown_bool_4C;
+  bool ShouldMark;
   bool SpawnerIsElite;
   float CurrentPitch;
-  unsigned int unknown_58;
+  int TargetHorizontalDistance;
   unsigned int unknown_5C;
 };
 
@@ -21177,7 +21177,7 @@ struct ThemeControl
 struct KamikazeControl
 {
   AircraftClass *Item;
-  CellClass *Cell;
+  AbstractClass *Target;
 };
 
 struct __declspec(align(4)) VectorClass_Kamikaze_PTR
