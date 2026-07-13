@@ -355,6 +355,8 @@ struct VoxelBoundaryData;
 struct VoxelBoundary;
 struct VoxelSection;
 struct MouseThreadClass;
+struct FoggedObjectRenderVector;
+struct FoggedObjectRenderStruct;
 struct ZoneConnectionTable;
 struct ZoneConnectionTables;
 struct ZoneConnectionTableManager;
@@ -2134,8 +2136,8 @@ enum __bitmask AltCellFlags : unsigned int
   AltCellFlags_ContainsBuilding = 0x2,
   AltCellFlags_Unknown_4 = 0x4,
   AltCellFlags_Mapped = 0x8,
-  AltCellFlags_NoFog = 0x10,
-  AltCellFlags_Unknown_20 = 0x20,
+  AltCellFlags_Visible = 0x10,
+  AltCellFlags_ToShroud = 0x20,
   AltCellFlags_Unknown_40 = 0x40,
   AltCellFlags_Unknown_80 = 0x80,
   AltCellFlags_Unknown_100 = 0x100,
@@ -12358,7 +12360,7 @@ class CellClass : AbstractClass
   int WallOwnerIndex;
   int InfantryOwnerIndex;
   int AltInfantryOwnerIndex;
-  unsigned int unknown_5C;
+  int ShroudCellRedrawFrame;
   unsigned int unknown_60;
   unsigned int RedrawFrame;
   RectangleStruct InViewportRect;
@@ -23189,9 +23191,9 @@ struct AStarClass_PathFinderData
 
 struct FoggedObjectDraw
 {
-  AbstractTypeClass *DrawType;
-  int AnimFrame;
-  int IsFirestormWall;
+  ObjectTypeClass *DrawType;
+  int FrameIndex;
+  bool IsFirestormWall;
   int ZAdjust;
 };
 
@@ -23234,17 +23236,17 @@ struct DynamicVectorClass_FoggedObjectDraw_vtbl
 
 class FoggedObjectClass : AbstractClass
 {
-  int unknown_int_24;
+  int OverlayTypeIndex;
   HouseClass *Owner;
-  int unknown_int_2C;
+  int OverlayData;
   AbstractType ItemType;
   CoordStruct Location;
   RectangleStruct RenderDimension;
   int CellLevel;
-  int unknown_int_54;
-  int unknown_int_58;
+  int SmudgeTypeIndex;
+  int SmudgeData;
   DynamicVectorClass_FoggedObjectDraw DrawRecord;
-  bool unknown_bool_74;
+  bool Visible;
 };
 
 struct FoggedObjectClass_vtbl
@@ -23273,6 +23275,7 @@ struct FoggedObjectClass_vtbl
   bool (__thiscall *IsInAir)(AbstractClass *this);
   CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
   void (__thiscall *Update)(AbstractClass *this);
+  CellStruct *(__thiscall *GetCellStruct)(FoggedObjectClass *this, CellStruct *);
 };
 
 struct __declspec(align(4)) VectorClass_FoggedObjectClass_PTR
@@ -23310,6 +23313,21 @@ struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl
   int (__thiscall *FindItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
   int (__thiscall *GetItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
   AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_FoggedObjectClass_PTR *this, int);
+};
+
+struct FoggedObjectRenderVector
+{
+  FoggedObjectRenderStruct* Objects;
+  int Count;
+  int Capacity;
+  bool Sorted;
+  int unknown_int_10;
+};
+
+struct FoggedObjectRenderStruct
+{
+  unsigned int RenderSortKey;
+  FoggedObjectClass* FoggedObject;
 };
 
 struct __declspec(align(4)) SessionClass_TL_unnamed_type_MPStats_TR_
