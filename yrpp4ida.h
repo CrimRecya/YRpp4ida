@@ -366,586 +366,877 @@ struct HierarchyConnectionTableManager;
 
 // TODO STRUCT
 
+struct VectorBase;
+struct VectorBase_vtbl;
+struct VectorBase_ELE;
+struct VectorBase_ELE_vtbl;
+struct VectorBase_PTR;
+struct VectorBase_PTR_vtbl;
+struct VectorAddon;
+struct DynamicAddon;
+struct TypeListAddon;
+struct VectorBase_int;
+struct VectorBase_int_vtbl;
 struct VectorClass_int;
 struct VectorClass_int_vtbl; // 0x7E4DB8
 struct DynamicVectorClass_int;
 struct DynamicVectorClass_int_vtbl; // 0x7E4E78
 struct TypeList_int;
 struct TypeList_int_vtbl; // 0x7E4DD8
+struct VectorBase_char_PTR;
+struct VectorBase_char_PTR_vtbl;
 struct VectorClass_char_PTR;
 struct VectorClass_char_PTR_vtbl; // 0x7E5C24 / 0x7EE0D4
 struct DynamicVectorClass_char_PTR;
 struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5C04 / 0x7EE0B4
+struct VectorBase_unsigned_char_PTR;
+struct VectorBase_unsigned_char_PTR_vtbl;
 struct VectorClass_unsigned_char_PTR;
 struct VectorClass_unsigned_char_PTR_vtbl; // 0x7F7B0C
 struct DynamicVectorClass_unsigned_char_PTR;
 struct DynamicVectorClass_unsigned_char_PTR_vtbl; // 0x7F7AEC
+struct VectorBase_unsigned_char;
+struct VectorBase_unsigned_char_vtbl;
 struct VectorClass_unsigned_char;
 struct VectorClass_unsigned_char_vtbl; // 0x7F65F4
+struct VectorBase_unsigned_int;
+struct VectorBase_unsigned_int_vtbl;
 struct VectorClass_unsigned_int;
 struct VectorClass_unsigned_int_vtbl; // 0x7E37EC
 struct DynamicVectorClass_unsigned_int;
 struct DynamicVectorClass_unsigned_int_vtbl; // 0x7E37CC
+struct VectorBase_unsigned_short;
+struct VectorBase_unsigned_short_vtbl;
 struct VectorClass_unsigned_short;
 struct VectorClass_unsigned_short_vtbl; // 0x7E3824
 struct DynamicVectorClass_unsigned_short;
 struct DynamicVectorClass_unsigned_short_vtbl; // 0x7E3844
+struct VectorBase_bool;
+struct VectorBase_bool_vtbl;
 struct VectorClass_bool;
 struct VectorClass_bool_vtbl; // 0x7EAA5C
 struct DynamicVectorClass_bool;
 struct DynamicVectorClass_bool_vtbl; // 0x7EAA7C
+struct VectorBase_double;
+struct VectorBase_double_vtbl;
 struct VectorClass_double;
 struct VectorClass_double_vtbl; // 0x7EDA4C
 struct DynamicVectorClass_double;
 struct DynamicVectorClass_double_vtbl; // 0x7EDA6C
+struct VectorBase_unsigned_long;
+struct VectorBase_unsigned_long_vtbl;
 struct VectorClass_unsigned_long;
 struct VectorClass_unsigned_long_vtbl; // 0x7F3748
 struct DynamicVectorClass_unsigned_long; // 0xB0BC88
 struct DynamicVectorClass_unsigned_long_vtbl; // 0x7F3728
+struct VectorBase_unsigned_short_PTR;
+struct VectorBase_unsigned_short_PTR_vtbl;
 struct VectorClass_unsigned_short_PTR;
 struct VectorClass_unsigned_short_PTR_vtbl; // 0x7ECD0C / 0x7ED1FC
 struct DynamicVectorClass_unsigned_short_PTR;
 struct DynamicVectorClass_unsigned_short_PTR_vtbl; // 0x7ECCEC / 0x7ED1DC
+struct VectorBase_HWND___PTR;
+struct VectorBase_HWND___PTR_vtbl;
 struct VectorClass_HWND___PTR;
 struct VectorClass_HWND___PTR_vtbl; // 0x7EECAC
 struct DynamicVectorClass_HWND___PTR;
 struct DynamicVectorClass_HWND___PTR_vtbl; // 0x7EEC8C
+struct VectorBase_DirtyAreaStruct_PTR;
+struct VectorBase_DirtyAreaStruct_PTR_vtbl;
 struct VectorClass_DirtyAreaStruct_PTR;
 struct VectorClass_DirtyAreaStruct_PTR_vtbl; // 0x7F42BC
 struct DynamicVectorClass_DirtyAreaStruct_PTR; // 0xB0CE78
 struct DynamicVectorClass_DirtyAreaStruct_PTR_vtbl; // 0x7F429C
+struct VectorBase_CCINIClass_PTR;
+struct VectorBase_CCINIClass_PTR_vtbl;
 struct VectorClass_CCINIClass_PTR;
 struct VectorClass_CCINIClass_PTR_vtbl; // 0x7EB80C
 struct DynamicVectorClass_CCINIClass_PTR;
 struct DynamicVectorClass_CCINIClass_PTR_vtbl; // 0x7EB82C
+struct VectorBase_PassabilityType;
+struct VectorBase_PassabilityType_vtbl;
 struct VectorClass_PassabilityType;
 struct VectorClass_PassabilityType_vtbl; // 0x7ED560
 struct DynamicVectorClass_PassabilityType;
 struct DynamicVectorClass_PassabilityType_vtbl; // 0x7ED580
+struct VectorBase_IConnectionPoint_PTR;
+struct VectorBase_IConnectionPoint_PTR_vtbl;
 struct VectorClass_IConnectionPoint_PTR;
 struct VectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D08
 struct DynamicVectorClass_IConnectionPoint_PTR;
 struct DynamicVectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D48
+struct VectorBase_MPTeam_PTR;
+struct VectorBase_MPTeam_PTR_vtbl;
 struct VectorClass_MPTeam_PTR;
 struct VectorClass_MPTeam_PTR_vtbl; // 0x7EEE54
 struct DynamicVectorClass_MPTeam_PTR;
 struct DynamicVectorClass_MPTeam_PTR_vtbl; // 0x7EEE34
+struct VectorBase_MultiMission_PTR;
+struct VectorBase_MultiMission_PTR_vtbl;
 struct VectorClass_MultiMission_PTR;
 struct VectorClass_MultiMission_PTR_vtbl; // 0x7EEF50 / 0x7F1214
 struct DynamicVectorClass_MultiMission_PTR;
 struct DynamicVectorClass_MultiMission_PTR_vtbl; // 0x7EEF70 / 0x7F11F4
+struct VectorBase_NodeNameType_PTR;
+struct VectorBase_NodeNameType_PTR_vtbl;
 struct VectorClass_NodeNameType_PTR;
 struct VectorClass_NodeNameType_PTR_vtbl; // 0x7EE390
 struct DynamicVectorClass_NodeNameType_PTR; // 0xA8DA74
 struct DynamicVectorClass_NodeNameType_PTR_vtbl; // 0x7EE370
+struct VectorBase_SmudgeTypeClass_PTR;
+struct VectorBase_SmudgeTypeClass_PTR_vtbl;
 struct VectorClass_SmudgeTypeClass_PTR;
 struct VectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0D7C / 0x7EA1C4
 struct DynamicVectorClass_SmudgeTypeClass_PTR; // 0xA8EC18
 struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0DEC / 0x7EA1A4
 struct TypeList_SmudgeTypeClass_PTR;
 struct TypeList_SmudgeTypeClass_PTR_vtbl; // 0x7F0D1C
+struct VectorBase_CommandClass_PTR;
+struct VectorBase_CommandClass_PTR_vtbl;
 struct VectorClass_CommandClass_PTR;
 struct VectorClass_CommandClass_PTR_vtbl; // 0x7E184C
 struct DynamicVectorClass_CommandClass_PTR; // 0x87F658
 struct DynamicVectorClass_CommandClass_PTR_vtbl; // 0x7E182C
+struct VectorBase_AngerStruct;
+struct VectorBase_AngerStruct_vtbl;
 struct VectorClass_AngerStruct;
 struct VectorClass_AngerStruct_vtbl; // 0x7EA984
 struct DynamicVectorClass_AngerStruct;
 struct DynamicVectorClass_AngerStruct_vtbl; // 0x7EA924
+struct VectorBase_ScoutStruct;
+struct VectorBase_ScoutStruct_vtbl;
 struct VectorClass_ScoutStruct;
 struct VectorClass_ScoutStruct_vtbl; // 0x7EA9A4
 struct DynamicVectorClass_ScoutStruct;
 struct DynamicVectorClass_ScoutStruct_vtbl; // 0x7EA904
+struct VectorBase_ColorScheme_PTR;
+struct VectorBase_ColorScheme_PTR_vtbl;
 struct VectorClass_ColorScheme_PTR;
 struct VectorClass_ColorScheme_PTR_vtbl; // 0x7EF7B0
 struct DynamicVectorClass_ColorScheme_PTR; // 0xB054D0
 struct DynamicVectorClass_ColorScheme_PTR_vtbl; // 0x7EF790
+struct VectorBase_Color16Struct_PTR;
+struct VectorBase_Color16Struct_PTR_vtbl;
 struct VectorClass_Color16Struct_PTR;
 struct VectorClass_Color16Struct_PTR_vtbl;
 struct DynamicVectorClass_Color16Struct_PTR;
 struct DynamicVectorClass_Color16Struct_PTR_vtbl;
+struct VectorBase_RGBClass_PTR;
+struct VectorBase_RGBClass_PTR_vtbl;
 struct VectorClass_RGBClass_PTR;
 struct VectorClass_RGBClass_PTR_vtbl; // 0x7E4E38
 struct DynamicVectorClass_RGBClass_PTR;
 struct DynamicVectorClass_RGBClass_PTR_vtbl; // 0x7F022C
 struct TypeList_RGBClass_PTR;
 struct TypeList_RGBClass_PTR_vtbl; // 0x7E4E58
+struct VectorBase_SubzoneConnectionStruct;
+struct VectorBase_SubzoneConnectionStruct_vtbl;
 struct VectorClass_SubzoneConnectionStruct;
 struct VectorClass_SubzoneConnectionStruct_vtbl; // 0x7E177C
 struct DynamicVectorClass_SubzoneConnectionStruct;
 struct DynamicVectorClass_SubzoneConnectionStruct_vtbl; // 0x7ED5A0
+struct VectorBase_SubzoneTrackingStruct;
+struct VectorBase_SubzoneTrackingStruct_vtbl;
 struct VectorClass_SubzoneTrackingStruct;
 struct VectorClass_SubzoneTrackingStruct_vtbl; // 0x7ED500
 struct DynamicVectorClass_SubzoneTrackingStruct;
 struct DynamicVectorClass_SubzoneTrackingStruct_vtbl; // 0x7ED4A0
+struct VectorBase_ZoneConnectionClass;
+struct VectorBase_ZoneConnectionClass_vtbl;
 struct VectorClass_ZoneConnectionClass;
 struct VectorClass_ZoneConnectionClass_vtbl; // 0x7ED4E0
 struct DynamicVectorClass_ZoneConnectionClass;
 struct DynamicVectorClass_ZoneConnectionClass_vtbl; // 0x7ED4C0
+struct VectorBase_FileEntryClass_PTR;
+struct VectorBase_FileEntryClass_PTR_vtbl;
 struct VectorClass_FileEntryClass_PTR;
 struct VectorClass_FileEntryClass_PTR_vtbl; // 0x7ED32C
 struct DynamicVectorClass_FileEntryClass_PTR;
 struct DynamicVectorClass_FileEntryClass_PTR_vtbl; // 0x7ED30C
+struct VectorBase_ToolTip_PTR;
+struct VectorBase_ToolTip_PTR_vtbl;
 struct VectorClass_ToolTip_PTR;
 struct VectorClass_ToolTip_PTR_vtbl; // 0x7F57E8
 struct DynamicVectorClass_ToolTip_PTR;
 struct DynamicVectorClass_ToolTip_PTR_vtbl; // 0x7F57C8
+struct VectorBase_SwizzlePointerClass;
+struct VectorBase_SwizzlePointerClass_vtbl;
 struct VectorClass_SwizzlePointerClass;
 struct VectorClass_SwizzlePointerClass_vtbl; // 0x7F4154
 struct DynamicVectorClass_SwizzlePointerClass;
 struct DynamicVectorClass_SwizzlePointerClass_vtbl; // 0x7F4134
+struct VectorBase_PlanningMemberClass_PTR;
+struct VectorBase_PlanningMemberClass_PTR_vtbl;
 struct VectorClass_PlanningMemberClass_PTR;
 struct VectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFF04
 struct DynamicVectorClass_PlanningMemberClass_PTR;
 struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFEE4
+struct VectorBase_PlanningBranchClass_PTR;
+struct VectorBase_PlanningBranchClass_PTR_vtbl;
 struct VectorClass_PlanningBranchClass_PTR;
 struct VectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFF24
 struct DynamicVectorClass_PlanningBranchClass_PTR;
 struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFEC4
+struct VectorBase_PlanningNodeClass_PTR;
+struct VectorBase_PlanningNodeClass_PTR_vtbl;
 struct VectorClass_PlanningNodeClass_PTR;
 struct VectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE64
 struct DynamicVectorClass_PlanningNodeClass_PTR; // 0xAC4B30 / 0xAC4C18 / 0xAC4C98
 struct DynamicVectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE44
+struct VectorBase_PlanningTokenClass_PTR;
+struct VectorBase_PlanningTokenClass_PTR_vtbl;
 struct VectorClass_PlanningTokenClass_PTR;
 struct VectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFEA4
 struct DynamicVectorClass_PlanningTokenClass_PTR; // 0xAC4C78
 struct DynamicVectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFE84
+struct VectorBase_WaypointClass;
+struct VectorBase_WaypointClass_vtbl;
 struct VectorClass_WaypointClass;
 struct VectorClass_WaypointClass_vtbl; // 0x7F6EF4
 struct DynamicVectorClass_WaypointClass;
 struct DynamicVectorClass_WaypointClass_vtbl; // 0x7F6ED4
+struct VectorBase_WaypointPathClass_PTR;
+struct VectorBase_WaypointPathClass_PTR_vtbl;
 struct VectorClass_WaypointPathClass_PTR;
 struct VectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E24
 struct DynamicVectorClass_WaypointPathClass_PTR; // 0xB72608
 struct DynamicVectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E04
+struct VectorBase_BaseNodeClass;
+struct VectorBase_BaseNodeClass_vtbl;
 struct VectorClass_BaseNodeClass;
 struct VectorClass_BaseNodeClass_vtbl; // 0x7E38F0
 struct DynamicVectorClass_BaseNodeClass;
 struct DynamicVectorClass_BaseNodeClass_vtbl; // 0x7E38B0
+struct VectorBase_TagClass_PTR;
+struct VectorBase_TagClass_PTR_vtbl;
 struct VectorClass_TagClass_PTR;
 struct VectorClass_TagClass_PTR_vtbl; // 0x7EA5C4
 struct DynamicVectorClass_TagClass_PTR; // 0x8B40C8 / 0x8B41A8 / 0xB0E720
 struct DynamicVectorClass_TagClass_PTR_vtbl; // 0x7EA5A4
+struct VectorBase_TagTypeClass_PTR;
+struct VectorBase_TagTypeClass_PTR_vtbl;
 struct VectorClass_TagTypeClass_PTR;
 struct VectorClass_TagTypeClass_PTR_vtbl; // 0x7F4578
 struct DynamicVectorClass_TagTypeClass_PTR; // 0xB0E780
 struct DynamicVectorClass_TagTypeClass_PTR_vtbl; // 0x7F4558
+struct VectorBase_ThemeClass_PTR;
+struct VectorBase_ThemeClass_PTR_vtbl;
 struct VectorClass_ThemeClass_PTR;
 struct VectorClass_ThemeClass_PTR_vtbl;
 struct DynamicVectorClass_ThemeClass_PTR;
 struct DynamicVectorClass_ThemeClass_PTR_vtbl;
+struct VectorBase_StartingTechnoStruct_PTR;
+struct VectorBase_StartingTechnoStruct_PTR_vtbl;
 struct VectorClass_StartingTechnoStruct_PTR;
 struct VectorClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA964
 struct DynamicVectorClass_StartingTechnoStruct_PTR;
 struct DynamicVectorClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA944
+struct VectorBase_CellStruct;
+struct VectorBase_CellStruct_vtbl;
 struct VectorClass_CellStruct;
 struct VectorClass_CellStruct_vtbl; // 0x7E38D0
 struct DynamicVectorClass_CellStruct;
 struct DynamicVectorClass_CellStruct_vtbl; // 0x7E3890
+struct VectorBase_CoordStruct;
+struct VectorBase_CoordStruct_vtbl;
 struct VectorClass_CoordStruct;
 struct VectorClass_CoordStruct_vtbl;
+struct VectorBase_Point2D;
+struct VectorBase_Point2D_vtbl;
 struct VectorClass_Point2D;
 struct VectorClass_Point2D_vtbl; // 0x7EEB74
 struct DynamicVectorClass_Point2D;
 struct DynamicVectorClass_Point2D_vtbl; // 0x7EEB54
+struct VectorBase_AbstractClass_PTR;
+struct VectorBase_AbstractClass_PTR_vtbl;
 struct VectorClass_AbstractClass_PTR;
 struct VectorClass_AbstractClass_PTR_vtbl; // 0x7E920C
 struct DynamicVectorClass_AbstractClass_PTR; // 0xB0F720 / 0x8A0390
 struct DynamicVectorClass_AbstractClass_PTR_vtbl; // 0x7E91EC
+struct VectorBase_AbstractTypeClass_PTR;
+struct VectorBase_AbstractTypeClass_PTR_vtbl;
 struct VectorClass_AbstractTypeClass_PTR;
 struct VectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA544
 struct DynamicVectorClass_AbstractTypeClass_PTR; // 0xA8E968
 struct DynamicVectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA524
+struct VectorBase_CellClass_PTR;
+struct VectorBase_CellClass_PTR_vtbl;
 struct VectorClass_CellClass_PTR;
 struct VectorClass_CellClass_PTR_vtbl; // 0x7ED480
 struct DynamicVectorClass_CellClass_PTR;
 struct DynamicVectorClass_CellClass_PTR_vtbl; // 0x7ED9BC
+struct VectorBase_ObjectClass_PTR;
+struct VectorBase_ObjectClass_PTR_vtbl;
 struct VectorClass_ObjectClass_PTR;
 struct VectorClass_ObjectClass_PTR_vtbl; // 0x7E192C
 struct DynamicVectorClass_ObjectClass_PTR; // 0x87F778 (LogicClass) / 0x8A0360 / 0xA8E360 / 0xA8ECB8 / 0xB0F698 / 0xAC1418
 struct DynamicVectorClass_ObjectClass_PTR_vtbl; // 0x7E4F64
+struct VectorBase_ObjectTypeClass_PTR;
+struct VectorBase_ObjectTypeClass_PTR_vtbl;
 struct VectorClass_ObjectTypeClass_PTR;
 struct VectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF28C
 struct DynamicVectorClass_ObjectTypeClass_PTR;
 struct DynamicVectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF26C
+struct VectorBase_TechnoClass_PTR;
+struct VectorBase_TechnoClass_PTR_vtbl;
 struct VectorClass_TechnoClass_PTR;
 struct VectorClass_TechnoClass_PTR_vtbl; // 0x7E180C
 struct DynamicVectorClass_TechnoClass_PTR; // 0xA8EC78 / 0xAC4C40
 struct DynamicVectorClass_TechnoClass_PTR_vtbl; // 0x7E17AC
+struct VectorBase_TechnoTypeClass_PTR;
+struct VectorBase_TechnoTypeClass_PTR_vtbl;
 struct VectorClass_TechnoTypeClass_PTR;
 struct VectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E4DF8 / 0x7E8954
 struct DynamicVectorClass_TechnoTypeClass_PTR; // 0xA8EB00
 struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E858C / 0x7E8934
 struct TypeList_TechnoTypeClass_PTR;
 struct TypeList_TechnoTypeClass_PTR_vtbl; // 0x7E4E18
+struct VectorBase_FootClass_PTR;
+struct VectorBase_FootClass_PTR_vtbl;
 struct VectorClass_FootClass_PTR;
 struct VectorClass_FootClass_PTR_vtbl; // 0x7E8C48
 struct DynamicVectorClass_FootClass_PTR; // 0x8B3DC0
 struct DynamicVectorClass_FootClass_PTR_vtbl; // 0x7E8C28
+struct VectorBase_InfantryClass_PTR;
+struct VectorBase_InfantryClass_PTR_vtbl;
 struct VectorClass_InfantryClass_PTR;
 struct VectorClass_InfantryClass_PTR_vtbl; // 0x7E43E8
 struct DynamicVectorClass_InfantryClass_PTR; // 0xA83DE8
 struct DynamicVectorClass_InfantryClass_PTR_vtbl; // 0x7E43C8
+struct VectorBase_InfantryTypeClass_PTR;
+struct VectorBase_InfantryTypeClass_PTR_vtbl;
 struct VectorClass_InfantryTypeClass_PTR;
 struct VectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC28 / 0x7EA344
 struct DynamicVectorClass_InfantryTypeClass_PTR; // 0xA8E348
 struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC88 / 0x7EA324
 struct TypeList_InfantryTypeClass_PTR;
 struct TypeList_InfantryTypeClass_PTR_vtbl; // 0x7EAC08
+struct VectorBase_UnitClass_PTR;
+struct VectorBase_UnitClass_PTR_vtbl;
 struct VectorClass_UnitClass_PTR;
 struct VectorClass_UnitClass_PTR_vtbl; // 0x7E9EC4
 struct DynamicVectorClass_UnitClass_PTR; // 0x8B4108
 struct DynamicVectorClass_UnitClass_PTR_vtbl; // 0x7E9EA4
+struct VectorBase_UnitTypeClass_PTR;
+struct VectorBase_UnitTypeClass_PTR_vtbl;
 struct VectorClass_UnitTypeClass_PTR;
 struct VectorClass_UnitTypeClass_PTR_vtbl; // 0x7EAC48 / 0x7EA2C4
 struct DynamicVectorClass_UnitTypeClass_PTR; // 0xA83CE0
 struct DynamicVectorClass_UnitTypeClass_PTR_vtbl; // 0x7EACA8 / 0x7EA2A4
 struct TypeList_UnitTypeClass_PTR;
 struct TypeList_UnitTypeClass_PTR_vtbl; // 0x7EABE8
+struct VectorBase_AircraftClass_PTR;
+struct VectorBase_AircraftClass_PTR_vtbl;
 struct VectorClass_AircraftClass_PTR;
 struct VectorClass_AircraftClass_PTR_vtbl; // 0x7E9E84
 struct DynamicVectorClass_AircraftClass_PTR; // 0xA8E390
 struct DynamicVectorClass_AircraftClass_PTR_vtbl; // 0x7E9E64
+struct VectorBase_AircraftTypeClass_PTR;
+struct VectorBase_AircraftTypeClass_PTR_vtbl;
 struct VectorClass_AircraftTypeClass_PTR;
 struct VectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EAC68 / 0x7EA284
 struct DynamicVectorClass_AircraftTypeClass_PTR; // 0xA8B218
 struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EACC8 / 0x7EA264
 struct TypeList_AircraftTypeClass_PTR;
 struct TypeList_AircraftTypeClass_PTR_vtbl; // 0x7EABC8
+struct VectorBase_BuildingClass_PTR;
+struct VectorBase_BuildingClass_PTR_vtbl;
 struct VectorClass_BuildingClass_PTR;
 struct VectorClass_BuildingClass_PTR_vtbl; // 0x7E9E44
 struct DynamicVectorClass_BuildingClass_PTR; // 0x8B41E0 / 0xA8EB40
 struct DynamicVectorClass_BuildingClass_PTR_vtbl; // 0x7E9E24
+struct VectorBase_BuildingTypeClass_PTR;
+struct VectorBase_BuildingTypeClass_PTR_vtbl;
 struct VectorClass_BuildingTypeClass_PTR;
 struct VectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA244 / 0x7EAA08
 struct DynamicVectorClass_BuildingTypeClass_PTR; // 0xA83C68
 struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA224 / 0x7EAA28
 struct TypeList_BuildingTypeClass_PTR;
 struct TypeList_BuildingTypeClass_PTR_vtbl; // 0x7ED90C
+struct VectorBase_SuperClass_PTR;
+struct VectorBase_SuperClass_PTR_vtbl;
 struct VectorClass_SuperClass_PTR;
 struct VectorClass_SuperClass_PTR_vtbl; // 0x7EA504
 struct DynamicVectorClass_SuperClass_PTR; // 0xA83CB8 / 0xA83D50
 struct DynamicVectorClass_SuperClass_PTR_vtbl; // 0x7EA4E4
+struct VectorBase_SuperWeaponTypeClass_PTR;
+struct VectorBase_SuperWeaponTypeClass_PTR_vtbl;
 struct VectorClass_SuperWeaponTypeClass_PTR;
 struct VectorClass_SuperWeaponTypeClass_PTR_vtbl; // 0x7EA4C4
 struct DynamicVectorClass_SuperWeaponTypeClass_PTR; // 0xA8E330
 struct DynamicVectorClass_SuperWeaponTypeClass_PTR_vtbl; // 0x7EA4A4
+struct VectorBase_WeaponTypeClass_PTR;
+struct VectorBase_WeaponTypeClass_PTR_vtbl;
 struct VectorClass_WeaponTypeClass_PTR;
 struct VectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1EF4
 struct DynamicVectorClass_WeaponTypeClass_PTR; // 0x887568
 struct DynamicVectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1ED4
+struct VectorBase_WarheadTypeClass_PTR;
+struct VectorBase_WarheadTypeClass_PTR_vtbl;
 struct VectorClass_WarheadTypeClass_PTR;
 struct VectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1EA4
 struct DynamicVectorClass_WarheadTypeClass_PTR; // 0x8874C0
 struct DynamicVectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1E84
+struct VectorBase_BulletClass_PTR;
+struct VectorBase_BulletClass_PTR_vtbl;
 struct VectorClass_BulletClass_PTR;
 struct VectorClass_BulletClass_PTR_vtbl; // 0x7E4698
 struct DynamicVectorClass_BulletClass_PTR; // 0x89DE18 / 0xA8ED40
 struct DynamicVectorClass_BulletClass_PTR_vtbl; // 0x7E4678
+struct VectorBase_BulletTypeClass_PTR;
+struct VectorBase_BulletTypeClass_PTR_vtbl;
 struct VectorClass_BulletTypeClass_PTR;
 struct VectorClass_BulletTypeClass_PTR_vtbl; // 0x7EA384
 struct DynamicVectorClass_BulletTypeClass_PTR; // 0xA83C80
 struct DynamicVectorClass_BulletTypeClass_PTR_vtbl; // 0x7EA364
+struct VectorBase_FactoryClass_PTR;
+struct VectorBase_FactoryClass_PTR_vtbl;
 struct VectorClass_FactoryClass_PTR;
 struct VectorClass_FactoryClass_PTR_vtbl; // 0x7E9FC4
 struct DynamicVectorClass_FactoryClass_PTR; // 0xA83E30
 struct DynamicVectorClass_FactoryClass_PTR_vtbl; // 0x7E9FA4
+struct VectorBase_BuildingLightClass_PTR;
+struct VectorBase_BuildingLightClass_PTR_vtbl;
 struct VectorClass_BuildingLightClass_PTR;
 struct VectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C44
 struct DynamicVectorClass_BuildingLightClass_PTR; // 0x8B4190
 struct DynamicVectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C24
+struct VectorBase_ControlNode_PTR;
+struct VectorBase_ControlNode_PTR_vtbl;
 struct VectorClass_ControlNode_PTR;
 struct VectorClass_ControlNode_PTR_vtbl; // 0x7E4BC4
 struct DynamicVectorClass_ControlNode_PTR;
 struct DynamicVectorClass_ControlNode_PTR_vtbl; // 0x7E4BA4
+struct VectorBase_SpawnControl_PTR;
+struct VectorBase_SpawnControl_PTR_vtbl;
 struct VectorClass_SpawnControl_PTR;
 struct VectorClass_SpawnControl_PTR_vtbl; // 0x7F36D4
 struct DynamicVectorClass_SpawnControl_PTR;
 struct DynamicVectorClass_SpawnControl_PTR_vtbl; // 0x7F36B4
+struct VectorBase_SlaveControl_PTR;
+struct VectorBase_SlaveControl_PTR_vtbl;
 struct VectorClass_SlaveControl_PTR;
 struct VectorClass_SlaveControl_PTR_vtbl; // 0x7F324C
 struct DynamicVectorClass_SlaveControl_PTR;
 struct DynamicVectorClass_SlaveControl_PTR_vtbl; // 0x7F322C
+struct VectorBase_ParticleClass_PTR;
+struct VectorBase_ParticleClass_PTR_vtbl;
 struct VectorClass_ParticleClass_PTR;
 struct VectorClass_ParticleClass_PTR_vtbl; // 0x7E9D84
 struct DynamicVectorClass_ParticleClass_PTR; // 0xA83DC8
 struct DynamicVectorClass_ParticleClass_PTR_vtbl; // 0x7E9D64
+struct VectorBase_ParticleTypeClass_PTR;
+struct VectorBase_ParticleTypeClass_PTR_vtbl;
 struct VectorClass_ParticleTypeClass_PTR;
 struct VectorClass_ParticleTypeClass_PTR_vtbl; // 0x7EA444
 struct DynamicVectorClass_ParticleTypeClass_PTR; // 0xA83D98
 struct DynamicVectorClass_ParticleTypeClass_PTR_vtbl; // 0x7EA424
+struct VectorBase_ParticleSystemClass_PTR;
+struct VectorBase_ParticleSystemClass_PTR_vtbl;
 struct VectorClass_ParticleSystemClass_PTR;
 struct VectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C84
 struct DynamicVectorClass_ParticleSystemClass_PTR; // 0xA80208
 struct DynamicVectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C64
+struct VectorBase_ParticleSystemTypeClass_PTR;
+struct VectorBase_ParticleSystemTypeClass_PTR_vtbl;
 struct VectorClass_ParticleSystemTypeClass_PTR;
 struct VectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4424 / 0x7EA484
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR; // 0xA83D68
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4444 / 0x7EA464
 struct TypeList_ParticleSystemTypeClass_PTR;
 struct TypeList_ParticleSystemTypeClass_PTR_vtbl; // 0x7F4F9C
+struct VectorBase_TiberiumClass_PTR;
+struct VectorBase_TiberiumClass_PTR_vtbl;
 struct VectorClass_TiberiumClass_PTR;
 struct VectorClass_TiberiumClass_PTR_vtbl; // 0x7F56DC
 struct DynamicVectorClass_TiberiumClass_PTR; // 0xB0F4E8
 struct DynamicVectorClass_TiberiumClass_PTR_vtbl; // 0x7F56BC
+struct VectorBase_TerrainClass_PTR;
+struct VectorBase_TerrainClass_PTR_vtbl;
 struct VectorClass_TerrainClass_PTR;
 struct VectorClass_TerrainClass_PTR_vtbl; // 0x7E9E04
 struct DynamicVectorClass_TerrainClass_PTR; // 0xA8E988
 struct DynamicVectorClass_TerrainClass_PTR_vtbl; // 0x7E9DE4
+struct VectorBase_TerrainTypeClass_PTR;
+struct VectorBase_TerrainTypeClass_PTR_vtbl;
 struct VectorClass_TerrainTypeClass_PTR;
 struct VectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0D9C / 0x7EA204
 struct DynamicVectorClass_TerrainTypeClass_PTR; // 0xA8E318
 struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0E0C / 0x7EA1E4
 struct TypeList_TerrainTypeClass_PTR;
 struct TypeList_TerrainTypeClass_PTR_vtbl; // 0x7F0CFC
+struct VectorBase_OverlayClass_PTR;
+struct VectorBase_OverlayClass_PTR_vtbl;
 struct VectorClass_OverlayClass_PTR;
 struct VectorClass_OverlayClass_PTR_vtbl; // 0x7E9D44
 struct DynamicVectorClass_OverlayClass_PTR; // 0xA8EC50
 struct DynamicVectorClass_OverlayClass_PTR_vtbl; // 0x7E9D24
+struct VectorBase_OverlayTypeClass_PTR;
+struct VectorBase_OverlayTypeClass_PTR_vtbl;
 struct VectorClass_OverlayTypeClass_PTR;
 struct VectorClass_OverlayTypeClass_PTR_vtbl; // 0x7EA184
 struct DynamicVectorClass_OverlayTypeClass_PTR; // 0xA83D80
 struct DynamicVectorClass_OverlayTypeClass_PTR_vtbl; // 0x7EA164
+struct VectorBase_IsometricTileClass_PTR;
+struct VectorBase_IsometricTileClass_PTR_vtbl;
 struct VectorClass_IsometricTileClass_PTR;
 struct VectorClass_IsometricTileClass_PTR_vtbl; // 0x7E18DC
 struct DynamicVectorClass_IsometricTileClass_PTR; // 0x87F750
 struct DynamicVectorClass_IsometricTileClass_PTR_vtbl; // 0x7E18BC
+struct VectorBase_IsometricTileTypeClass_PTR;
+struct VectorBase_IsometricTileTypeClass_PTR_vtbl;
 struct VectorClass_IsometricTileTypeClass_PTR;
 struct VectorClass_IsometricTileTypeClass_PTR_vtbl; // 0x7EA404
 struct DynamicVectorClass_IsometricTileTypeClass_PTR; // 0xA8ED28
 struct DynamicVectorClass_IsometricTileTypeClass_PTR_vtbl; // 0x7EA3E4
+struct VectorBase_VeinholeMonsterClass_PTR;
+struct VectorBase_VeinholeMonsterClass_PTR_vtbl;
 struct VectorClass_VeinholeMonsterClass_PTR;
 struct VectorClass_VeinholeMonsterClass_PTR_vtbl; // 0x7F665C
 struct DynamicVectorClass_VeinholeMonsterClass_PTR; // 0xB1D290
 struct DynamicVectorClass_VeinholeMonsterClass_PTR_vtbl; // 0x7F663C
+struct VectorBase_BombClass_PTR;
+struct VectorBase_BombClass_PTR_vtbl;
 struct VectorClass_BombClass_PTR;
 struct VectorClass_BombClass_PTR_vtbl; // 0x7E17EC
 struct DynamicVectorClass_BombClass_PTR; // 0x89C668
 struct DynamicVectorClass_BombClass_PTR_vtbl; // 0x7E17CC
+struct VectorBase_NeuronClass_PTR;
+struct VectorBase_NeuronClass_PTR_vtbl;
 struct VectorClass_NeuronClass_PTR;
 struct VectorClass_NeuronClass_PTR_vtbl; // 0x7E3E54
+struct VectorBase_CaptureManagerClass_PTR;
+struct VectorBase_CaptureManagerClass_PTR_vtbl;
 struct VectorClass_CaptureManagerClass_PTR;
 struct VectorClass_CaptureManagerClass_PTR_vtbl; // 0x7E4AF4
 struct DynamicVectorClass_CaptureManagerClass_PTR; // 0x89E0F0
 struct DynamicVectorClass_CaptureManagerClass_PTR_vtbl; // 0x7E4AD4
+struct VectorBase_SlaveManagerClass_PTR;
+struct VectorBase_SlaveManagerClass_PTR_vtbl;
 struct VectorClass_SlaveManagerClass_PTR;
 struct VectorClass_SlaveManagerClass_PTR_vtbl; // 0x7F317C
 struct DynamicVectorClass_SlaveManagerClass_PTR; // 0xB0B5F0
 struct DynamicVectorClass_SlaveManagerClass_PTR_vtbl; // 0x7F315C
+struct VectorBase_SpawnManagerClass_PTR;
+struct VectorBase_SpawnManagerClass_PTR_vtbl;
 struct VectorClass_SpawnManagerClass_PTR;
 struct VectorClass_SpawnManagerClass_PTR_vtbl; // 0x7F3604
 struct DynamicVectorClass_SpawnManagerClass_PTR; // 0xB0B880
 struct DynamicVectorClass_SpawnManagerClass_PTR_vtbl; // 0x7F35E4
+struct VectorBase_AirstrikeClass_PTR;
+struct VectorBase_AirstrikeClass_PTR_vtbl;
 struct VectorClass_AirstrikeClass_PTR;
 struct VectorClass_AirstrikeClass_PTR_vtbl; // 0x7E295C
 struct DynamicVectorClass_AirstrikeClass_PTR; // 0x889FB8
 struct DynamicVectorClass_AirstrikeClass_PTR_vtbl; // 0x7E293C
+struct VectorBase_DiskLaserClass_PTR;
+struct VectorBase_DiskLaserClass_PTR_vtbl;
 struct VectorClass_DiskLaserClass_PTR;
 struct VectorClass_DiskLaserClass_PTR_vtbl; // 0x7E5EFC
 struct DynamicVectorClass_DiskLaserClass_PTR; // 0x8A0208
 struct DynamicVectorClass_DiskLaserClass_PTR_vtbl; // 0x7E5EDC
+struct VectorBase_EBolt_PTR;
+struct VectorBase_EBolt_PTR_vtbl;
 struct VectorClass_EBolt_PTR;
 struct VectorClass_EBolt_PTR_vtbl; // 0x7E86AC
 struct DynamicVectorClass_EBolt_PTR; // 0x8A0E88
 struct DynamicVectorClass_EBolt_PTR_vtbl; // 0x7E868C
+struct VectorBase_TemporalClass_PTR;
+struct VectorBase_TemporalClass_PTR_vtbl;
 struct VectorClass_TemporalClass_PTR;
 struct VectorClass_TemporalClass_PTR_vtbl; // 0x7F5134
 struct DynamicVectorClass_TemporalClass_PTR; // 0xB0EC60
 struct DynamicVectorClass_TemporalClass_PTR_vtbl; // 0x7F5114
+struct VectorBase_WaveClass_PTR;
+struct VectorBase_WaveClass_PTR_vtbl;
 struct VectorClass_WaveClass_PTR;
 struct VectorClass_WaveClass_PTR_vtbl; // 0x7E9D04
 struct DynamicVectorClass_WaveClass_PTR; // 0xA8EC38
 struct DynamicVectorClass_WaveClass_PTR_vtbl; // 0x7E9CE4
+struct VectorBase_LaserDrawClass_PTR;
+struct VectorBase_LaserDrawClass_PTR_vtbl;
 struct VectorClass_LaserDrawClass_PTR;
 struct VectorClass_LaserDrawClass_PTR_vtbl; // 0x7ECEFC
 struct DynamicVectorClass_LaserDrawClass_PTR; // 0xABC878
 struct DynamicVectorClass_LaserDrawClass_PTR_vtbl; // 0x7ECEDC
+struct VectorBase_LineTrail_PTR;
+struct VectorBase_LineTrail_PTR_vtbl;
 struct VectorClass_LineTrail_PTR;
 struct VectorClass_LineTrail_PTR_vtbl; // 0x7ED0EC
 struct DynamicVectorClass_LineTrail_PTR; // 0xABCB78
 struct DynamicVectorClass_LineTrail_PTR_vtbl; // 0x7ED0CC
+struct VectorBase_RadBeam_PTR;
+struct VectorBase_RadBeam_PTR_vtbl;
 struct VectorClass_RadBeam_PTR;
 struct VectorClass_RadBeam_PTR_vtbl; // 0x7F04A4
 struct DynamicVectorClass_RadBeam_PTR; // 0xB04A60
 struct DynamicVectorClass_RadBeam_PTR_vtbl; // 0x7F0484
+struct VectorBase_RadSiteClass_PTR;
+struct VectorBase_RadSiteClass_PTR_vtbl;
 struct VectorClass_RadSiteClass_PTR;
 struct VectorClass_RadSiteClass_PTR_vtbl; // 0x7F07C4
 struct DynamicVectorClass_RadSiteClass_PTR; // 0xB04BD0
 struct DynamicVectorClass_RadSiteClass_PTR_vtbl; // 0x7F07A4
+struct VectorBase_LightSourceClass_PTR;
+struct VectorBase_LightSourceClass_PTR_vtbl;
 struct VectorClass_LightSourceClass_PTR;
 struct VectorClass_LightSourceClass_PTR_vtbl; // 0x7ECF9C
 struct DynamicVectorClass_LightSourceClass_PTR; // 0xABCA10
 struct DynamicVectorClass_LightSourceClass_PTR_vtbl; // 0x7ECF7C
+struct VectorBase_ParasiteClass_PTR;
+struct VectorBase_ParasiteClass_PTR_vtbl;
 struct VectorClass_ParasiteClass_PTR;
 struct VectorClass_ParasiteClass_PTR_vtbl; // 0x7EF844
 struct DynamicVectorClass_ParasiteClass_PTR; // 0xAC4910
 struct DynamicVectorClass_ParasiteClass_PTR_vtbl; // 0x7EF824
+struct VectorBase_Kamikaze_PTR;
+struct VectorBase_Kamikaze_PTR_vtbl;
 struct VectorClass_Kamikaze_PTR;
 struct VectorClass_Kamikaze_PTR_vtbl;
 struct DynamicVectorClass_Kamikaze_PTR; // 0xABC604
 struct DynamicVectorClass_Kamikaze_PTR_vtbl;
+struct VectorBase_KamikazeControl_PTR;
+struct VectorBase_KamikazeControl_PTR_vtbl;
 struct VectorClass_KamikazeControl_PTR;
 struct VectorClass_KamikazeControl_PTR_vtbl; // 0x7ECE9C
 struct DynamicVectorClass_KamikazeControl_PTR;
 struct DynamicVectorClass_KamikazeControl_PTR_vtbl; // 0x7ECE7C
+struct VectorBase_ConvertClass_PTR;
+struct VectorBase_ConvertClass_PTR_vtbl;
 struct VectorClass_ConvertClass_PTR;
 struct VectorClass_ConvertClass_PTR_vtbl; // 0x7E5338
 struct DynamicVectorClass_ConvertClass_PTR; // 0x89ECF8
 struct DynamicVectorClass_ConvertClass_PTR_vtbl; // 0x7E5318
+struct VectorBase_LightConvertClass_PTR;
+struct VectorBase_LightConvertClass_PTR_vtbl;
 struct VectorClass_LightConvertClass_PTR;
 struct VectorClass_LightConvertClass_PTR_vtbl; // 0x7E188C
 struct DynamicVectorClass_LightConvertClass_PTR; // 0x87F698
 struct DynamicVectorClass_LightConvertClass_PTR_vtbl; // 0x7E186C
+struct VectorBase_EMPulseClass_PTR;
+struct VectorBase_EMPulseClass_PTR_vtbl;
 struct VectorClass_EMPulseClass_PTR;
 struct VectorClass_EMPulseClass_PTR_vtbl; // 0x7E875C
 struct DynamicVectorClass_EMPulseClass_PTR; // 0x8A3870
 struct DynamicVectorClass_EMPulseClass_PTR_vtbl; // 0x7E873C
+struct VectorBase_AnimClass_PTR;
+struct VectorBase_AnimClass_PTR_vtbl;
 struct VectorClass_AnimClass_PTR;
 struct VectorClass_AnimClass_PTR_vtbl; // 0x7E9F44 / 0x7EBFEC
 struct DynamicVectorClass_AnimClass_PTR; // 0xA8E9A8 / 0xA9F9D0 / 0xA9FA18 / 0xA9FA60
 struct DynamicVectorClass_AnimClass_PTR_vtbl; // 0x7E9F24 / 0x7EBFCC
+struct VectorBase_AnimTypeClass_PTR;
+struct VectorBase_AnimTypeClass_PTR_vtbl;
 struct VectorClass_AnimTypeClass_PTR;
 struct VectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA304 / 0x7EB6F4
 struct DynamicVectorClass_AnimTypeClass_PTR; // 0x8B4150
 struct DynamicVectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA2E4 / 0x7EB714
 struct TypeList_AnimTypeClass_PTR;
 struct TypeList_AnimTypeClass_PTR_vtbl;
+struct VectorBase_VoxelAnimClass_PTR;
+struct VectorBase_VoxelAnimClass_PTR_vtbl;
 struct VectorClass_VoxelAnimClass_PTR;
 struct VectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E4C
 struct DynamicVectorClass_VoxelAnimClass_PTR; // 0x887388
 struct DynamicVectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E2C
+struct VectorBase_VoxelAnimTypeClass_PTR;
+struct VectorBase_VoxelAnimTypeClass_PTR_vtbl;
 struct VectorClass_VoxelAnimTypeClass_PTR;
 struct VectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D5C / 0x7EA3C4
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR; // 0xA8EB28
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0DCC / 0x7EA3A4
 struct TypeList_VoxelAnimTypeClass_PTR;
 struct TypeList_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D3C
+struct VectorBase_AlphaShapeClass_PTR;
+struct VectorBase_AlphaShapeClass_PTR_vtbl;
 struct VectorClass_AlphaShapeClass_PTR;
 struct VectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3258
 struct DynamicVectorClass_AlphaShapeClass_PTR; // 0x88A0F0
 struct DynamicVectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3238
+struct VectorBase_IonBlastClass_PTR;
+struct VectorBase_IonBlastClass_PTR_vtbl;
 struct VectorClass_IonBlastClass_PTR;
 struct VectorClass_IonBlastClass_PTR_vtbl; // 0x7EC07C
 struct DynamicVectorClass_IonBlastClass_PTR; // 0xAA0118
 struct DynamicVectorClass_IonBlastClass_PTR_vtbl; // 0x7EC05C
+struct VectorBase_SpotLightClass_PTR;
+struct VectorBase_SpotLightClass_PTR_vtbl;
 struct VectorClass_SpotLightClass_PTR;
 struct VectorClass_SpotLightClass_PTR_vtbl; // 0x7EF6DC
 struct DynamicVectorClass_SpotLightClass_PTR; // 0xAC1678
 struct DynamicVectorClass_SpotLightClass_PTR_vtbl; // 0x7EF6BC
+struct VectorBase_VocClass_PTR;
+struct VectorBase_VocClass_PTR_vtbl;
 struct VectorClass_VocClass_PTR;
 struct VectorClass_VocClass_PTR_vtbl; // 0x7F68CC
 struct DynamicVectorClass_VocClass_PTR; // 0xB1D378
 struct DynamicVectorClass_VocClass_PTR_vtbl; // 0x7F68AC
+struct VectorBase_VoxClass_PTR;
+struct VectorBase_VoxClass_PTR_vtbl;
 struct VectorClass_VoxClass_PTR;
 struct VectorClass_VoxClass_PTR_vtbl; // 0x7F6924
 struct DynamicVectorClass_VoxClass_PTR; // 0xB1D4A0
 struct DynamicVectorClass_VoxClass_PTR_vtbl; // 0x7F6904
+struct VectorBase_TriggerClass_PTR;
+struct VectorBase_TriggerClass_PTR_vtbl;
 struct VectorClass_TriggerClass_PTR;
 struct VectorClass_TriggerClass_PTR_vtbl; // 0x7E9C04
 struct DynamicVectorClass_TriggerClass_PTR; // 0xA8EAE8
 struct DynamicVectorClass_TriggerClass_PTR_vtbl; // 0x7E9BE4
+struct VectorBase_TriggerTypeClass_PTR;
+struct VectorBase_TriggerTypeClass_PTR_vtbl;
 struct VectorClass_TriggerTypeClass_PTR;
 struct VectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BC4
 struct DynamicVectorClass_TriggerTypeClass_PTR; // 0x8B4178
 struct DynamicVectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BA4
+struct VectorBase_AITriggerTypeClass_PTR;
+struct VectorBase_AITriggerTypeClass_PTR_vtbl;
 struct VectorClass_AITriggerTypeClass_PTR;
 struct VectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B84
 struct DynamicVectorClass_AITriggerTypeClass_PTR; // 0xA8B200
 struct DynamicVectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B64
+struct VectorBase_TeamClass_PTR;
+struct VectorBase_TeamClass_PTR_vtbl;
 struct VectorClass_TeamClass_PTR;
 struct VectorClass_TeamClass_PTR_vtbl; // 0x7E9F84
 struct DynamicVectorClass_TeamClass_PTR; // 0x8B40E8
 struct DynamicVectorClass_TeamClass_PTR_vtbl; // 0x7E9F64
+struct VectorBase_TeamTypeClass_PTR;
+struct VectorBase_TeamTypeClass_PTR_vtbl;
 struct VectorClass_TeamTypeClass_PTR;
 struct VectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA104 / 0x7EA9E4
 struct DynamicVectorClass_TeamTypeClass_PTR; // 0xA8ECA0
 struct DynamicVectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA0E4 / 0x7EAAE8
 struct TypeList_TeamTypeClass_PTR;
 struct TypeList_TeamTypeClass_PTR_vtbl; // 0x7EA9C4
+struct VectorBase_TaskForceClass_PTR;
+struct VectorBase_TaskForceClass_PTR_vtbl;
 struct VectorClass_TaskForceClass_PTR;
 struct VectorClass_TaskForceClass_PTR_vtbl; // 0x7EA0C4
 struct DynamicVectorClass_TaskForceClass_PTR; // 0xA8E8D0
 struct DynamicVectorClass_TaskForceClass_PTR_vtbl; // 0x7EA0A4
+struct VectorBase_ScriptClass_PTR;
+struct VectorBase_ScriptClass_PTR_vtbl;
 struct VectorClass_ScriptClass_PTR;
 struct VectorClass_ScriptClass_PTR_vtbl; // 0x7E1B44
 struct DynamicVectorClass_ScriptClass_PTR; // 0x8872B0
 struct DynamicVectorClass_ScriptClass_PTR_vtbl; // 0x7E1B24
+struct VectorBase_ScriptTypeClass_PTR;
+struct VectorBase_ScriptTypeClass_PTR_vtbl;
 struct VectorClass_ScriptTypeClass_PTR;
 struct VectorClass_ScriptTypeClass_PTR_vtbl; // 0x7EA144
 struct DynamicVectorClass_ScriptTypeClass_PTR; // 0x8B41C8
 struct DynamicVectorClass_ScriptTypeClass_PTR_vtbl; // 0x7EA124
+struct VectorBase_HouseClass_PTR;
+struct VectorBase_HouseClass_PTR_vtbl;
 struct VectorClass_HouseClass_PTR;
 struct VectorClass_HouseClass_PTR_vtbl; // 0x7E9F04
 struct DynamicVectorClass_HouseClass_PTR; // 0xA80228
 struct DynamicVectorClass_HouseClass_PTR_vtbl; // 0x7E9EE4
+struct VectorBase_HouseTypeClass_PTR;
+struct VectorBase_HouseTypeClass_PTR_vtbl;
 struct VectorClass_HouseTypeClass_PTR;
 struct VectorClass_HouseTypeClass_PTR_vtbl; // 0x7EA084
 struct DynamicVectorClass_HouseTypeClass_PTR; // 0xA83C98
 struct DynamicVectorClass_HouseTypeClass_PTR_vtbl; // 0x7EA064
+struct VectorBase_SideClass_PTR;
+struct VectorBase_SideClass_PTR_vtbl;
 struct VectorClass_SideClass_PTR;
 struct VectorClass_SideClass_PTR_vtbl; // 0x7EA044
 struct DynamicVectorClass_SideClass_PTR; // 0x8B4120
 struct DynamicVectorClass_SideClass_PTR_vtbl; // 0x7EA024
+struct VectorBase_EventClass_PTR;
+struct VectorBase_EventClass_PTR_vtbl;
 struct VectorClass_EventClass_PTR;
 struct VectorClass_EventClass_PTR_vtbl; // 0x7EFE24
 struct DynamicVectorClass_EventClass_PTR; // 0xAC4B48 / 0xB0F1A0
 struct DynamicVectorClass_EventClass_PTR_vtbl; // 0x7EFE04
+struct VectorBase_TEventClass_PTR;
+struct VectorBase_TEventClass_PTR_vtbl;
 struct VectorClass_TEventClass_PTR;
 struct VectorClass_TEventClass_PTR_vtbl; // 0x7F552C
 struct DynamicVectorClass_TEventClass_PTR; // 0xB0F1A0
 struct DynamicVectorClass_TEventClass_PTR_vtbl; // 0x7F550C
+struct VectorBase_TActionClass_PTR;
+struct VectorBase_TActionClass_PTR_vtbl;
 struct VectorClass_TActionClass_PTR;
 struct VectorClass_TActionClass_PTR_vtbl; // 0x7F43F0
 struct DynamicVectorClass_TActionClass_PTR; // 0xB0E658
 struct DynamicVectorClass_TActionClass_PTR_vtbl; // 0x7F43D0
+struct VectorBase_SmudgeClass_PTR;
+struct VectorBase_SmudgeClass_PTR_vtbl;
 struct VectorClass_SmudgeClass_PTR;
 struct VectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DC4
 struct DynamicVectorClass_SmudgeClass_PTR; // 0xA8B1E0
 struct DynamicVectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DA4
+struct VectorBase_RadarEventClass_PTR;
+struct VectorBase_RadarEventClass_PTR_vtbl;
 struct VectorClass_RadarEventClass_PTR;
 struct VectorClass_RadarEventClass_PTR_vtbl; // 0x7F0ACC
 struct DynamicVectorClass_RadarEventClass_PTR; // 0xB04DA8
 struct DynamicVectorClass_RadarEventClass_PTR_vtbl; // 0x7F0AAC
+struct VectorBase_ThemeControl_PTR;
+struct VectorBase_ThemeControl_PTR_vtbl;
 struct VectorClass_ThemeControl_PTR;
 struct VectorClass_ThemeControl_PTR_vtbl; // 0x7EA584
 struct DynamicVectorClass_ThemeControl_PTR;
 struct DynamicVectorClass_ThemeControl_PTR_vtbl; // 0x7F568C
+struct VectorBase_CampaignClass_PTR;
+struct VectorBase_CampaignClass_PTR_vtbl;
 struct VectorClass_CampaignClass_PTR;
 struct VectorClass_CampaignClass_PTR_vtbl; // 0x7EA004
 struct DynamicVectorClass_CampaignClass_PTR;
 struct DynamicVectorClass_CampaignClass_PTR_vtbl; // 0x7E9FE4
+struct VectorBase_MPGameModeClass_PTR;
+struct VectorBase_MPGameModeClass_PTR_vtbl;
 struct VectorClass_MPGameModeClass_PTR;
 struct VectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED40
 struct DynamicVectorClass_MPGameModeClass_PTR; // 0xABFDA0
 struct DynamicVectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED20
+struct VectorBase_AlphaLightingRemapClass_PTR;
+struct VectorBase_AlphaLightingRemapClass_PTR_vtbl;
 struct VectorClass_AlphaLightingRemapClass_PTR;
 struct VectorClass_AlphaLightingRemapClass_PTR_vtbl;
 struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x0x88A080
 struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl;
+struct VectorBase_FoggedObjectClass_PTR;
+struct VectorBase_FoggedObjectClass_PTR_vtbl;
 struct VectorClass_FoggedObjectClass_PTR;
 struct VectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E4514
 struct DynamicVectorClass_FoggedObjectClass_PTR;
 struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E44F4
+struct VectorBase_FoggedObjectDraw;
+struct VectorBase_FoggedObjectDraw_vtbl;
 struct VectorClass_FoggedObjectDraw;
 struct VectorClass_FoggedObjectDraw_vtbl; // 0x7E8BC0
 struct DynamicVectorClass_FoggedObjectDraw;
 struct DynamicVectorClass_FoggedObjectDraw_vtbl; // 0x7E8BA0
+struct VectorBase_DamageGroup_PTR;
+struct VectorBase_DamageGroup_PTR_vtbl;
 struct VectorClass_DamageGroup_PTR;
 struct VectorClass_DamageGroup_PTR_vtbl; // 0x7E5144
 struct DynamicVectorClass_DamageGroup_PTR;
 struct DynamicVectorClass_DamageGroup_PTR_vtbl; // 0x7E5170
+struct VectorBase_ChangeLinkHouseStruct_PTR;
+struct VectorBase_ChangeLinkHouseStruct_PTR_vtbl;
 struct VectorClass_ChangeLinkHouseStruct_PTR;
 struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4468
 struct DynamicVectorClass_ChangeLinkHouseStruct_PTR;
 struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
+struct VectorBase_TubeClass_PTR;
+struct VectorBase_TubeClass_PTR_vtbl;
 struct VectorClass_TubeClass_PTR;
 struct VectorClass_TubeClass_PTR_vtbl;
 struct DynamicVectorClass_TubeClass_PTR; // 0x8B4138
 struct DynamicVectorClass_TubeClass_PTR_vtbl;
+struct VectorBase_ZoneConnectionTable;
+struct VectorBase_ZoneConnectionTable_vtbl;
 struct VectorClass_ZoneConnectionTable;
 struct VectorClass_ZoneConnectionTable_vtbl;
 struct DynamicVectorClass_ZoneConnectionTable;
 struct DynamicVectorClass_ZoneConnectionTable_vtbl;
+struct VectorBase_SubzoneConnectionTable;
+struct VectorBase_SubzoneConnectionTable_vtbl;
 struct VectorClass_SubzoneConnectionTable;
 struct VectorClass_SubzoneConnectionTable_vtbl;
 struct DynamicVectorClass_SubzoneConnectionTable;
@@ -3179,6 +3470,57 @@ enum AITriggerConditionComparatorType : unsigned int
 
 // TODO ENUM
 
+struct __declspec(align(4)) VectorBase
+{
+  VectorBase_vtbl *__vftable;
+};
+
+struct VectorBase_vtbl
+{
+  void (__thiscall *~VectorBase)(VectorBase *this);
+  bool (__thiscall *OperatorEqual)(VectorBase *this, VectorBase *);
+};
+
+struct VectorBase_ELE : VectorBase {};
+
+struct VectorBase_ELE_vtbl : VectorBase_vtbl
+{
+  bool (__thiscall *SetCapacity)(VectorBase_ELE *this, int, void *);
+  void (__thiscall *Clear)(VectorBase_ELE *this);
+  int (__thiscall *FindItemIndex)(VectorBase_ELE *this, void *);
+  int (__thiscall *GetItemIndex)(VectorBase_ELE *this, void *);
+  void *(__thiscall *GetItem)(VectorBase_ELE *this, void *, int);
+};
+
+struct VectorBase_PTR : VectorBase {};
+
+struct VectorBase_PTR_vtbl : VectorBase_vtbl
+{
+  bool (__thiscall *SetCapacity)(VectorBase_PTR *this, int, void **);
+  void (__thiscall *Clear)(VectorBase_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorBase_PTR *this, void **);
+  int (__thiscall *GetItemIndex)(VectorBase_PTR *this, void **);
+  void *(__thiscall *GetItem)(VectorBase_PTR *this, int);
+};
+
+struct VectorAddon
+{
+  int Capacity;
+  bool IsInitialized;
+  bool IsAllocated;
+};
+
+struct DynamicAddon
+{
+  int Count;
+  int CapacityIncrement;
+};
+
+struct TypeListAddon
+{
+  int unknown_18;
+};
+
 struct CRCEngine
 {
   int CRC;
@@ -3470,84 +3812,30 @@ struct BaseNodeClass
   int Attempts;
 };
 
-struct __declspec(align(4)) VectorClass_BaseNodeClass
+struct VectorBase_BaseNodeClass : VectorBase_ELE
 {
-  VectorClass_BaseNodeClass_vtbl *__vftable;
   BaseNodeClass *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_BaseNodeClass_vtbl
-{
-  void (__thiscall *~VectorClass_BaseNodeClass)(VectorClass_BaseNodeClass *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BaseNodeClass *this, VectorClass_BaseNodeClass *);
-  bool (__thiscall *SetCapacity)(VectorClass_BaseNodeClass *this, int, BaseNodeClass *);
-  void (__thiscall *Clear)(VectorClass_BaseNodeClass *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BaseNodeClass *this, BaseNodeClass *);
-  int (__thiscall *GetItemIndex)(VectorClass_BaseNodeClass *this, BaseNodeClass *);
-  BaseNodeClass *(__thiscall *GetItem)(VectorClass_BaseNodeClass *this, BaseNodeClass *result, int);
-};
-
-struct DynamicVectorClass_BaseNodeClass : VectorClass_BaseNodeClass
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BaseNodeClass_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BaseNodeClass)(DynamicVectorClass_BaseNodeClass *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BaseNodeClass *this, VectorClass_BaseNodeClass *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BaseNodeClass *this, int, BaseNodeClass *);
-  void (__thiscall *Clear)(DynamicVectorClass_BaseNodeClass *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BaseNodeClass *this, BaseNodeClass *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BaseNodeClass *this, BaseNodeClass *);
-  BaseNodeClass *(__thiscall *GetItem)(DynamicVectorClass_BaseNodeClass *this, BaseNodeClass *result, int);
-};
+struct VectorBase_BaseNodeClass_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_BaseNodeClass : VectorBase_BaseNodeClass, VectorAddon {};
+struct VectorClass_BaseNodeClass_vtbl : VectorBase_BaseNodeClass_vtbl {};
+struct DynamicVectorClass_BaseNodeClass : VectorClass_BaseNodeClass, DynamicAddon {};
+struct DynamicVectorClass_BaseNodeClass_vtbl : VectorClass_BaseNodeClass_vtbl {};
 
 struct WaypointClass
 {
   CoordStruct Coords;
 };
 
-struct __declspec(align(4)) VectorClass_WaypointClass
+struct VectorBase_WaypointClass : VectorBase_ELE
 {
-  VectorClass_WaypointClass_vtbl *__vftable;
   WaypointClass *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_WaypointClass_vtbl
-{
-  void (__thiscall *~VectorClass_WaypointClass)(VectorClass_WaypointClass *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_WaypointClass *this, VectorClass_WaypointClass *);
-  bool (__thiscall *SetCapacity)(VectorClass_WaypointClass *this, int, WaypointClass *);
-  void (__thiscall *Clear)(VectorClass_WaypointClass *this);
-  int (__thiscall *FindItemIndex)(VectorClass_WaypointClass *this, WaypointClass *);
-  int (__thiscall *GetItemIndex)(VectorClass_WaypointClass *this, WaypointClass *);
-  WaypointClass (__thiscall *GetItem)(VectorClass_WaypointClass *this, int);
-};
-
-struct DynamicVectorClass_WaypointClass : VectorClass_WaypointClass
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_WaypointClass_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_WaypointClass)(DynamicVectorClass_WaypointClass *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_WaypointClass *this, VectorClass_WaypointClass *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_WaypointClass *this, int, WaypointClass *);
-  void (__thiscall *Clear)(DynamicVectorClass_WaypointClass *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_WaypointClass *this, WaypointClass *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_WaypointClass *this, WaypointClass *);
-  WaypointClass (__thiscall *GetItem)(DynamicVectorClass_WaypointClass *this, int);
-};
+struct VectorBase_WaypointClass_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_WaypointClass : VectorBase_WaypointClass, VectorAddon {};
+struct VectorClass_WaypointClass_vtbl : VectorBase_WaypointClass_vtbl {};
+struct DynamicVectorClass_WaypointClass : VectorClass_WaypointClass, DynamicAddon {};
+struct DynamicVectorClass_WaypointClass_vtbl : VectorClass_WaypointClass_vtbl {};
 
 struct StorageClass
 {
@@ -3571,74 +3859,23 @@ struct ZoneInfoStruct
   int Infantry;
 };
 
-struct __declspec(align(4)) VectorClass_int
+struct VectorBase_int : VectorBase_ELE
 {
-  VectorClass_int_vtbl *__vftable;
   int *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_int_vtbl
-{
-  void (__thiscall *~VectorClass_int)(VectorClass_int *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_int *this, VectorClass_int *);
-  bool (__thiscall *SetCapacity)(VectorClass_int *this, int, int *);
-  void (__thiscall *Clear)(VectorClass_int *this);
-  int (__thiscall *FindItemIndex)(VectorClass_int *this, int *);
-  int (__thiscall *GetItemIndex)(VectorClass_int *this, int *);
-  int (__thiscall *GetItem)(VectorClass_int *this, int);
-};
+struct VectorBase_int_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_int : VectorBase_int, VectorAddon {};
+struct VectorClass_int_vtbl : VectorBase_int_vtbl {};
+struct DynamicVectorClass_int : VectorClass_int, DynamicAddon {};
+struct DynamicVectorClass_int_vtbl : VectorClass_int_vtbl {};
+struct TypeList_int : DynamicVectorClass_int, TypeListAddon {};
+struct TypeList_int_vtbl : DynamicVectorClass_int_vtbl {};
 
 struct CounterClass : VectorClass_int
 {
   int Total;
 };
-
-struct CounterClass_vtbl
-{
-  void (__thiscall *~CounterClass)(CounterClass *this);
-  bool (__thiscall *OperatorEqual)(CounterClass *this, VectorClass_int *);
-  bool (__thiscall *SetCapacity)(CounterClass *this, int, int *);
-  void (__thiscall *Clear)(CounterClass *this);
-  int (__thiscall *FindItemIndex)(CounterClass *this, int *);
-  int (__thiscall *GetItemIndex)(CounterClass *this, int *);
-  int (__thiscall *GetItem)(CounterClass *this, int);
-};
-
-struct DynamicVectorClass_int : VectorClass_int
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_int_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_int)(DynamicVectorClass_int *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_int *this, VectorClass_int *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_int *this, int, int *);
-  void (__thiscall *Clear)(DynamicVectorClass_int *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_int *this, int *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_int *this, int *);
-  int (__thiscall *GetItem)(DynamicVectorClass_int *this, int);
-};
-
-struct TypeList_int : DynamicVectorClass_int
-{
-  int unknown_18;
-};
-
-struct TypeList_int_vtbl
-{
-  void (__thiscall *~TypeList_int)(TypeList_int *this);
-  bool (__thiscall *OperatorEqual)(TypeList_int *this, VectorClass_int *);
-  bool (__thiscall *SetCapacity)(TypeList_int *this, int, int *);
-  void (__thiscall *Clear)(TypeList_int *this);
-  int (__thiscall *FindItemIndex)(TypeList_int *this, int *);
-  int (__thiscall *GetItemIndex)(TypeList_int *this, int *);
-  int (__thiscall *GetItem)(TypeList_int *this, int);
-};
+struct CounterClass_vtbl : VectorClass_int_vtbl {};
 
 struct FixedString_TL_25_A_char_TR_
 {
@@ -4026,9 +4263,7 @@ struct BytePalette
   ColorStruct Entries[256];
 };
 
-struct LTRBStruct : RectangleStruct
-{
-};
+struct LTRBStruct : RectangleStruct {};
 
 struct Crate
 {
@@ -4180,9 +4415,8 @@ class LightConvertClass : ConvertClass
   unsigned __int8 align_1B1[3];
 };
 
-struct LightConvertClass_vtbl
+struct LightConvertClass_vtbl : ConvertClass_vtbl
 {
-  void (__thiscall *~LightConvertClass)(LightConvertClass *this);
   void (__thiscall *UpdateColors)(LightConvertClass *this, int, int, int, bool);
 };
 
@@ -4199,42 +4433,15 @@ struct ColorScheme
   unsigned __int8 unknown_334[8];
 };
 
-struct __declspec(align(4)) VectorClass_ColorScheme_PTR
+struct VectorBase_ColorScheme_PTR : VectorBase_PTR
 {
-  VectorClass_ColorScheme_PTR_vtbl *__vftable;
   ColorScheme **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ColorScheme_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ColorScheme_PTR)(VectorClass_ColorScheme_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ColorScheme_PTR *this, VectorClass_ColorScheme_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ColorScheme_PTR *this, int, ColorScheme **);
-  void (__thiscall *Clear)(VectorClass_ColorScheme_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ColorScheme_PTR *this, ColorScheme **);
-  int (__thiscall *GetItemIndex)(VectorClass_ColorScheme_PTR *this, ColorScheme **);
-  ColorScheme *(__thiscall *GetItem)(VectorClass_ColorScheme_PTR *this, int);
-};
-
-struct DynamicVectorClass_ColorScheme_PTR : VectorClass_ColorScheme_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ColorScheme_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ColorScheme_PTR)(DynamicVectorClass_ColorScheme_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ColorScheme_PTR *this, VectorClass_ColorScheme_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ColorScheme_PTR *this, int, ColorScheme **);
-  void (__thiscall *Clear)(DynamicVectorClass_ColorScheme_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ColorScheme_PTR *this, ColorScheme **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ColorScheme_PTR *this, ColorScheme **);
-  ColorScheme *(__thiscall *GetItem)(DynamicVectorClass_ColorScheme_PTR *this, int);
-};
+struct VectorBase_ColorScheme_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ColorScheme_PTR : VectorBase_ColorScheme_PTR, VectorAddon {};
+struct VectorClass_ColorScheme_PTR_vtbl : VectorBase_ColorScheme_PTR_vtbl {};
+struct DynamicVectorClass_ColorScheme_PTR : VectorClass_ColorScheme_PTR, DynamicAddon {};
+struct DynamicVectorClass_ColorScheme_PTR_vtbl : VectorClass_ColorScheme_PTR_vtbl {};
 
 struct In_addr_unnamed_type_un_u_b
 {
@@ -4338,26 +4545,7 @@ class RawFileClass : FileClass
   unsigned __int8 padding_21[3];
 };
 
-struct RawFileClass_vtbl
-{
-  void (__thiscall *~RawFileClass)(RawFileClass *this);
-  char *(__thiscall *GetFileName)(RawFileClass *this);
-  char *(__thiscall *SetFileName)(RawFileClass *this, char *);
-  int (__thiscall *CreateFileA)(RawFileClass *this);
-  int (__thiscall *DeleteFileA)(RawFileClass *this);
-  bool (__thiscall *Exists)(RawFileClass *this, bool);
-  bool (__thiscall *HasHandle)(RawFileClass *this);
-  bool (__thiscall *Open)(RawFileClass *this, FileAccessMode);
-  bool (__thiscall *OpenEx)(RawFileClass *this, char *, FileAccessMode);
-  int (__thiscall *ReadBytes)(RawFileClass *this, void *, int);
-  int (__thiscall *Seek)(RawFileClass *this, int, FileSeekMode);
-  int (__thiscall *GetFileSize)(RawFileClass *this);
-  int (__thiscall *WriteBytes)(RawFileClass *this, void *, int);
-  void (__thiscall *Close)(RawFileClass *this);
-  unsigned int (__thiscall *GetFileTime)(RawFileClass *this);
-  bool (__thiscall *SetFileTime)(RawFileClass *this, unsigned int);
-  void (__thiscall *CDCheck)(RawFileClass *this, unsigned int, bool, char *);
-};
+struct RawFileClass_vtbl : FileClass_vtbl {};
 
 class BufferIOFileClass : RawFileClass
 {
@@ -4379,52 +4567,14 @@ class BufferIOFileClass : RawFileClass
   unsigned int FileBeginOffset;
 };
 
-struct BufferIOFileClass_vtbl
-{
-  void (__thiscall *~BufferIOFileClass)(BufferIOFileClass *this);
-  char *(__thiscall *GetFileName)(BufferIOFileClass *this);
-  char *(__thiscall *SetFileName)(BufferIOFileClass *this, char *);
-  int (__thiscall *CreateFileA)(BufferIOFileClass *this);
-  int (__thiscall *DeleteFileA)(BufferIOFileClass *this);
-  bool (__thiscall *Exists)(BufferIOFileClass *this, bool);
-  bool (__thiscall *HasHandle)(BufferIOFileClass *this);
-  bool (__thiscall *Open)(BufferIOFileClass *this, FileAccessMode);
-  bool (__thiscall *OpenEx)(BufferIOFileClass *this, char *, FileAccessMode);
-  int (__thiscall *ReadBytes)(BufferIOFileClass *this, void *, int);
-  int (__thiscall *Seek)(BufferIOFileClass *this, int, FileSeekMode);
-  int (__thiscall *GetFileSize)(BufferIOFileClass *this);
-  int (__thiscall *WriteBytes)(BufferIOFileClass *this, void *, int);
-  void (__thiscall *Close)(BufferIOFileClass *this);
-  unsigned int (__thiscall *GetFileTime)(BufferIOFileClass *this);
-  bool (__thiscall *SetFileTime)(BufferIOFileClass *this, unsigned int);
-  void (__thiscall *CDCheck)(BufferIOFileClass *this, unsigned int, bool, char *);
-};
+struct BufferIOFileClass_vtbl : RawFileClass_vtbl {};
 
 class __declspec(align(4)) CDFileClass : BufferIOFileClass
 {
   bool IsDisabled;
 };
 
-struct CDFileClass_vtbl
-{
-  void (__thiscall *~CDFileClass)(CDFileClass *this);
-  char *(__thiscall *GetFileName)(CDFileClass *this);
-  char *(__thiscall *SetFileName)(CDFileClass *this, char *);
-  int (__thiscall *CreateFileA)(CDFileClass *this);
-  int (__thiscall *DeleteFileA)(CDFileClass *this);
-  bool (__thiscall *Exists)(CDFileClass *this, bool);
-  bool (__thiscall *HasHandle)(CDFileClass *this);
-  bool (__thiscall *Open)(CDFileClass *this, FileAccessMode);
-  bool (__thiscall *OpenEx)(CDFileClass *this, char *, FileAccessMode);
-  int (__thiscall *ReadBytes)(CDFileClass *this, void *, int);
-  int (__thiscall *Seek)(CDFileClass *this, int, FileSeekMode);
-  int (__thiscall *GetFileSize)(CDFileClass *this);
-  int (__thiscall *WriteBytes)(CDFileClass *this, void *, int);
-  void (__thiscall *Close)(CDFileClass *this);
-  unsigned int (__thiscall *GetFileTime)(CDFileClass *this);
-  bool (__thiscall *SetFileTime)(CDFileClass *this, unsigned int);
-  void (__thiscall *CDCheck)(CDFileClass *this, unsigned int, bool, char *);
-};
+struct CDFileClass_vtbl : BufferIOFileClass_vtbl {};
 
 class CCFileClass : CDFileClass
 {
@@ -4433,26 +4583,7 @@ class CCFileClass : CDFileClass
   unsigned int Availablility;
 };
 
-struct CCFileClass_vtbl
-{
-  void (__thiscall *~CCFileClass)(CCFileClass *this);
-  char *(__thiscall *GetFileName)(CCFileClass *this);
-  char *(__thiscall *SetFileName)(CCFileClass *this, char *);
-  int (__thiscall *CreateFileA)(CCFileClass *this);
-  int (__thiscall *DeleteFileA)(CCFileClass *this);
-  bool (__thiscall *Exists)(CCFileClass *this, bool);
-  bool (__thiscall *HasHandle)(CCFileClass *this);
-  bool (__thiscall *Open)(CCFileClass *this, FileAccessMode);
-  bool (__thiscall *OpenEx)(CCFileClass *this, char *, FileAccessMode);
-  int (__thiscall *ReadBytes)(CCFileClass *this, void *, int);
-  int (__thiscall *Seek)(CCFileClass *this, int, FileSeekMode);
-  int (__thiscall *GetFileSize)(CCFileClass *this);
-  int (__thiscall *WriteBytes)(CCFileClass *this, void *, int);
-  void (__thiscall *Close)(CCFileClass *this);
-  unsigned int (__thiscall *GetFileTime)(CCFileClass *this);
-  bool (__thiscall *SetFileTime)(CCFileClass *this, unsigned int);
-  void (__thiscall *CDCheck)(CCFileClass *this, unsigned int, bool, char *);
-};
+struct CCFileClass_vtbl : CDFileClass_vtbl {};
 
 struct AudioIDXData
 {
@@ -4524,9 +4655,7 @@ struct GenericList_vtbl
   void (__thiscall *~GenericList)(GenericList *this);
 };
 
-struct List_TL_INIClass_INISection_PTR_TR_ : GenericList
-{
-};
+struct List_TL_INIClass_INISection_PTR_TR_ : GenericList {};
 
 struct List_TL_INIClass_INISection_PTR_TR__vtbl
 {
@@ -4617,42 +4746,15 @@ struct __unaligned __declspec(align(1)) NodeNameType
   unsigned __int8 unknown_byte_84;
 };
 
-struct __declspec(align(4)) VectorClass_NodeNameType_PTR
+struct VectorBase_NodeNameType_PTR : VectorBase_PTR
 {
-  VectorClass_NodeNameType_PTR_vtbl *__vftable;
   NodeNameType **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_NodeNameType_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_NodeNameType_PTR)(VectorClass_NodeNameType_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_NodeNameType_PTR *this, VectorClass_NodeNameType_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_NodeNameType_PTR *this, int, NodeNameType **);
-  void (__thiscall *Clear)(VectorClass_NodeNameType_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_NodeNameType_PTR *this, NodeNameType **);
-  int (__thiscall *GetItemIndex)(VectorClass_NodeNameType_PTR *this, NodeNameType **);
-  NodeNameType *(__thiscall *GetItem)(VectorClass_NodeNameType_PTR *this, int);
-};
-
-struct DynamicVectorClass_NodeNameType_PTR : VectorClass_NodeNameType_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_NodeNameType_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_NodeNameType_PTR)(DynamicVectorClass_NodeNameType_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_NodeNameType_PTR *this, VectorClass_NodeNameType_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_NodeNameType_PTR *this, int, NodeNameType **);
-  void (__thiscall *Clear)(DynamicVectorClass_NodeNameType_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_NodeNameType_PTR *this, NodeNameType **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_NodeNameType_PTR *this, NodeNameType **);
-  NodeNameType *(__thiscall *GetItem)(DynamicVectorClass_NodeNameType_PTR *this, int);
-};
+struct VectorBase_NodeNameType_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_NodeNameType_PTR : VectorBase_NodeNameType_PTR, VectorAddon {};
+struct VectorClass_NodeNameType_PTR_vtbl : VectorBase_NodeNameType_PTR_vtbl {};
+struct DynamicVectorClass_NodeNameType_PTR : VectorClass_NodeNameType_PTR, DynamicAddon {};
+struct DynamicVectorClass_NodeNameType_PTR_vtbl : VectorClass_NodeNameType_PTR_vtbl {};
 
 struct AISlotsStruct
 {
@@ -4740,58 +4842,35 @@ struct IUnknown_vtbl
   unsigned int (__stdcall *Release)(IUnknown *this);
 };
 
-struct IPersist : IUnknown
-{
-};
+struct IPersist : IUnknown {};
 
-struct IPersist_vtbl
+struct IPersist_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
 };
 
-struct IPersistStream : IPersist
-{
-};
+struct IPersistStream : IPersist {};
 
-struct IPersistStream_vtbl
+struct IPersistStream_vtbl : IPersist_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
   HRESULT (__stdcall *IsDirty)(IPersistStream *this);
   HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
   HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
   HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
 };
 
-struct ISequentialStream : IUnknown
-{
-};
+struct ISequentialStream : IUnknown {};
 
-struct ISequentialStream_vtbl
+struct ISequentialStream_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
   HRESULT (__stdcall *Write)(ISequentialStream *this, void *, unsigned int, unsigned int *);
 };
 
-struct IStream : ISequentialStream
-{
-};
+struct IStream : ISequentialStream {};
 
-struct IStream_vtbl
+struct IStream_vtbl : ISequentialStream_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
-  HRESULT (__stdcall *Write)(ISequentialStream *this, void *, unsigned int, unsigned int *);
   HRESULT (__stdcall *Seek)(IStream *this, Union_Large_Int, unsigned int, Union_U_Large_Int *);
   HRESULT (__stdcall *SetSize)(IStream *this, Union_U_Large_Int);
   HRESULT (__stdcall *CopyTo)(IStream *this, IStream *, Union_U_Large_Int, Union_U_Large_Int *, Union_U_Large_Int *);
@@ -4803,15 +4882,10 @@ struct IStream_vtbl
   HRESULT (__stdcall *Clone)(IStream *this, IStream **);
 };
 
-struct IRTTITypeInfo : IUnknown
-{
-};
+struct IRTTITypeInfo : IUnknown {};
 
-struct IRTTITypeInfo_vtbl
+struct IRTTITypeInfo_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   AbstractType (__stdcall *What_Am_I)(IRTTITypeInfo *this);
   int (__stdcall *Fetch_ID)(IRTTITypeInfo *this);
   void (__stdcall *Create_ID)(IRTTITypeInfo *this);
@@ -4837,43 +4911,28 @@ struct INoticeSource_vtbl
   void (__stdcall *INoticeSource_Unknown)(INoticeSource *this);
 };
 
-struct IAIHouse : IUnknown
-{
-};
+struct IAIHouse : IUnknown {};
 
-struct IAIHouse_vtbl
+struct IAIHouse_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   void (__stdcall *Link_House)(IAIHouse *this, void *);
   void (__stdcall *AI)(IAIHouse *this, int *);
 };
 
-struct IEnumConnections : IUnknown
-{
-};
+struct IEnumConnections : IUnknown {};
 
-struct IEnumConnections_vtbl
+struct IEnumConnections_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *Next)(IEnumConnections *this, unsigned int, TagCONNECTDATA *, unsigned int *);
   HRESULT (__stdcall *Skip)(IEnumConnections *this, unsigned int);
   HRESULT (__stdcall *Reset)(IEnumConnections *this);
   HRESULT (__stdcall *Clone)(IEnumConnections *this, IEnumConnections **);
 };
 
-struct ISwizzle : IUnknown
-{
-};
+struct ISwizzle : IUnknown {};
 
-struct ISwizzle_vtbl
+struct ISwizzle_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *Reset)(ISwizzle *this);
   HRESULT (__stdcall *Swizzle)(ISwizzle *this, void **);
   HRESULT (__stdcall *Fetch_Swizzle_ID)(ISwizzle *this, void *, int *);
@@ -4883,15 +4942,10 @@ struct ISwizzle_vtbl
   HRESULT (__stdcall *Get_Save_Size)(ISwizzle *this, int *);
 };
 
-struct IApplication : IUnknown
-{
-};
+struct IApplication : IUnknown {};
 
-struct IApplication_vtbl
+struct IApplication_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *FullName)(IApplication *this, wchar_t **);
   HRESULT (__stdcall *Name)(IApplication *this, wchar_t **);
   HRESULT (__stdcall *Quit)(IApplication *this);
@@ -4900,15 +4954,10 @@ struct IApplication_vtbl
   HRESULT (__stdcall *Swizzle_Interface)(IApplication *this, ISwizzle **);
 };
 
-struct IHouse : IUnknown
-{
-};
+struct IHouse : IUnknown {};
 
-struct IHouse_vtbl
+struct IHouse_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *ID_Number)(IHouse *this);
   wchar_t *(__stdcall *Name)(IHouse *this);
   IApplication *(__stdcall *Get_Application)(IHouse *this);
@@ -4923,15 +4972,10 @@ struct IHouse_vtbl
   HRESULT (__stdcall *All_To_Hunt)(IHouse *this);
 };
 
-struct IPublicHouse : IUnknown
-{
-};
+struct IPublicHouse : IUnknown {};
 
-struct IPublicHouse_vtbl
+struct IPublicHouse_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *ID_Number)(IPublicHouse *this);
   wchar_t *(__stdcall *Name)(IPublicHouse *this);
   int (__stdcall *Apparent_Category_Quantity)(IPublicHouse *this, Category);
@@ -4940,43 +4984,28 @@ struct IPublicHouse_vtbl
   bool (__stdcall *Is_Powered)(IPublicHouse *this);
 };
 
-struct IEnumConnectionPoints : IUnknown
-{
-};
+struct IEnumConnectionPoints : IUnknown {};
 
-struct IEnumConnectionPoints_vtbl
+struct IEnumConnectionPoints_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *Next)(IEnumConnectionPoints *this, unsigned int, IConnectionPoint **, unsigned int *);
   HRESULT (__stdcall *Skip)(IEnumConnectionPoints *this, unsigned int);
   HRESULT (__stdcall *Reset)(IEnumConnectionPoints *this);
   HRESULT (__stdcall *Clone)(IEnumConnectionPoints *this, IEnumConnectionPoints **);
 };
 
-struct IConnectionPointContainer : IUnknown
-{
-};
+struct IConnectionPointContainer : IUnknown {};
 
-struct IConnectionPointContainer_vtbl
+struct IConnectionPointContainer_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *EnumConnectionPoints)(IConnectionPointContainer *this, IEnumConnectionPoints **);
   HRESULT (__stdcall *FindConnectionPoint)(IConnectionPointContainer *this, _GUID *, IConnectionPoint **);
 };
 
-struct IConnectionPoint : IUnknown
-{
-};
+struct IConnectionPoint : IUnknown {};
 
-struct IConnectionPoint_vtbl
+struct IConnectionPoint_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *GetConnectionInterface)(IConnectionPoint *this, _GUID *);
   HRESULT (__stdcall *GetConnectionPointContainer)(IConnectionPoint *this, IConnectionPointContainer **);
   HRESULT (__stdcall *Advise)(IConnectionPoint *this, IUnknown *, unsigned int *);
@@ -4984,27 +5013,17 @@ struct IConnectionPoint_vtbl
   HRESULT (__stdcall *EnumConnections)(IConnectionPoint *this, IEnumConnections **);
 };
 
-struct IGameMap : IUnknown
-{
-};
+struct IGameMap : IUnknown {};
 
-struct IGameMap_vtbl
+struct IGameMap_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
 };
 
-struct IFlyControl : IUnknown
-{
-};
+struct IFlyControl : IUnknown {};
 
-struct IFlyControl_vtbl
+struct IFlyControl_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Landing_Altitude)(IFlyControl *this);
   int (__stdcall *Landing_Direction)(IFlyControl *this);
   int (__stdcall *Is_Loaded)(IFlyControl *this);
@@ -5037,42 +5056,15 @@ struct SwizzlePointerClass
   void *pAnything;
 };
 
-struct __declspec(align(4)) VectorClass_SwizzlePointerClass
+struct VectorBase_SwizzlePointerClass : VectorBase_ELE
 {
-  VectorClass_SwizzlePointerClass_vtbl *__vftable;
   SwizzlePointerClass *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_SwizzlePointerClass_vtbl
-{
-  void (__thiscall *~VectorClass_SwizzlePointerClass)(VectorClass_SwizzlePointerClass *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SwizzlePointerClass *this, VectorClass_SwizzlePointerClass *);
-  bool (__thiscall *SetCapacity)(VectorClass_SwizzlePointerClass *this, int, SwizzlePointerClass *);
-  void (__thiscall *Clear)(VectorClass_SwizzlePointerClass *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SwizzlePointerClass *this, SwizzlePointerClass *);
-  int (__thiscall *GetItemIndex)(VectorClass_SwizzlePointerClass *this, SwizzlePointerClass *);
-  SwizzlePointerClass (__thiscall *GetItem)(VectorClass_SwizzlePointerClass *this, int);
-};
-
-struct DynamicVectorClass_SwizzlePointerClass : VectorClass_SwizzlePointerClass
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SwizzlePointerClass_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SwizzlePointerClass)(DynamicVectorClass_SwizzlePointerClass *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SwizzlePointerClass *this, VectorClass_SwizzlePointerClass *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SwizzlePointerClass *this, int, SwizzlePointerClass *);
-  void (__thiscall *Clear)(DynamicVectorClass_SwizzlePointerClass *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SwizzlePointerClass *this, SwizzlePointerClass *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SwizzlePointerClass *this, SwizzlePointerClass *);
-  SwizzlePointerClass (__thiscall *GetItem)(DynamicVectorClass_SwizzlePointerClass *this, int);
-};
+struct VectorBase_SwizzlePointerClass_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_SwizzlePointerClass : VectorBase_SwizzlePointerClass, VectorAddon {};
+struct VectorClass_SwizzlePointerClass_vtbl : VectorBase_SwizzlePointerClass_vtbl {};
+struct DynamicVectorClass_SwizzlePointerClass : VectorClass_SwizzlePointerClass, DynamicAddon {};
+struct DynamicVectorClass_SwizzlePointerClass_vtbl : VectorClass_SwizzlePointerClass_vtbl {};
 
 struct SwizzleManagerClass : ISwizzle
 {
@@ -5080,18 +5072,8 @@ struct SwizzleManagerClass : ISwizzle
   DynamicVectorClass_SwizzlePointerClass Swizzles_New;
 };
 
-struct SwizzleManagerClass_vtbl
+struct SwizzleManagerClass_vtbl : ISwizzle_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *Reset)(ISwizzle *this);
-  HRESULT (__stdcall *Swizzle)(ISwizzle *this, void **);
-  HRESULT (__stdcall *Fetch_Swizzle_ID)(ISwizzle *this, void *, int *);
-  HRESULT (__stdcall *Here_I_Am)(ISwizzle *this, int, void *);
-  HRESULT (__stdcall *Save_Interface)(ISwizzle *this, IStream *, IUnknown *);
-  HRESULT (__stdcall *Load_Interface)(ISwizzle *this, IStream *, _GUID *, void **);
-  HRESULT (__stdcall *Get_Save_Size)(ISwizzle *this, int *);
   void (__thiscall *~SwizzleManagerClass)(SwizzleManagerClass *this);
 };
 
@@ -5101,27 +5083,21 @@ union Union_PlanningTokenClass_unknown_20_88
   char __unknown_20_88[108];
 };
 
-struct Node_TL_INIClass_INISection_PTR_TR_ : GenericNode
-{
-};
+struct Node_TL_INIClass_INISection_PTR_TR_ : GenericNode {};
 
 struct Node_TL_INIClass_INISection_PTR_TR__vtbl
 {
   void (__thiscall *~Node_TL_INIClass_INISection_PTR_TR_)(Node_TL_INIClass_INISection_PTR_TR_ *this);
 };
 
-struct List_TL_INIClass_INIEntry_PTR_TR_ : GenericList
-{
-};
+struct List_TL_INIClass_INIEntry_PTR_TR_ : GenericList {};
 
 struct List_TL_INIClass_INIEntry_PTR_TR__vtbl
 {
   void (__thiscall *~List_TL_INIClass_INIEntry_PTR_TR_)(List_TL_INIClass_INIEntry_PTR_TR_ *this);
 };
 
-struct Node_TL_INIClass_INIEntry_PTR_TR_ : GenericNode
-{
-};
+struct Node_TL_INIClass_INIEntry_PTR_TR_ : GenericNode {};
 
 struct Node_TL_INIClass_INIEntry_PTR_TR__vtbl
 {
@@ -5195,42 +5171,15 @@ struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_
   IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement *Archive;
 };
 
-struct __declspec(align(4)) VectorClass_CellStruct
+struct VectorBase_CellStruct : VectorBase_ELE
 {
-  VectorClass_CellStruct_vtbl *__vftable;
   CellStruct *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_CellStruct_vtbl
-{
-  void (__thiscall *~VectorClass_CellStruct)(VectorClass_CellStruct *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CellStruct *this, VectorClass_CellStruct *);
-  bool (__thiscall *SetCapacity)(VectorClass_CellStruct *this, int, CellStruct *);
-  void (__thiscall *Clear)(VectorClass_CellStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CellStruct *this, CellStruct *);
-  int (__thiscall *GetItemIndex)(VectorClass_CellStruct *this, CellStruct *);
-  CellStruct (__thiscall *GetItem)(VectorClass_CellStruct *this, int);
-};
-
-struct DynamicVectorClass_CellStruct : VectorClass_CellStruct
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_CellStruct_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_CellStruct)(DynamicVectorClass_CellStruct *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_CellStruct *this, VectorClass_CellStruct *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_CellStruct *this, int, CellStruct *);
-  void (__thiscall *Clear)(DynamicVectorClass_CellStruct *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_CellStruct *this, CellStruct *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_CellStruct *this, CellStruct *);
-  CellStruct (__thiscall *GetItem)(DynamicVectorClass_CellStruct *this, int);
-};
+struct VectorBase_CellStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_CellStruct : VectorBase_CellStruct, VectorAddon {};
+struct VectorClass_CellStruct_vtbl : VectorBase_CellStruct_vtbl {};
+struct DynamicVectorClass_CellStruct : VectorClass_CellStruct, DynamicAddon {};
+struct DynamicVectorClass_CellStruct_vtbl : VectorClass_CellStruct_vtbl {};
 
 struct PassengersClass
 {
@@ -5238,15 +5187,10 @@ struct PassengersClass
   FootClass *FirstPassenger;
 };
 
-struct ILocomotion : IUnknown
-{
-};
+struct ILocomotion : IUnknown {};
 
-struct ILocomotion_vtbl
+struct ILocomotion_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *Link_To_Object)(ILocomotion *this, void *);
   bool (__stdcall *Is_Moving)(ILocomotion *this);
   CoordStruct *(__stdcall *Destination)(ILocomotion *this, CoordStruct *result);
@@ -5327,79 +5271,25 @@ struct CCINIClass_vtbl
   void (__thiscall *~CCINIClass)(CCINIClass *this);
 };
 
-struct __declspec(align(4)) VectorClass_TagClass_PTR
+struct VectorBase_TagClass_PTR : VectorBase_PTR
 {
-  VectorClass_TagClass_PTR_vtbl *__vftable;
   TagClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TagClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TagClass_PTR : VectorBase_TagClass_PTR, VectorAddon {};
+struct VectorClass_TagClass_PTR_vtbl : VectorBase_TagClass_PTR_vtbl {};
+struct DynamicVectorClass_TagClass_PTR : VectorClass_TagClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TagClass_PTR_vtbl : VectorClass_TagClass_PTR_vtbl {};
 
-struct VectorClass_TagClass_PTR_vtbl
+struct VectorBase_BuildingClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TagClass_PTR)(VectorClass_TagClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TagClass_PTR *this, VectorClass_TagClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TagClass_PTR *this, int, TagClass **);
-  void (__thiscall *Clear)(VectorClass_TagClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TagClass_PTR *this, TagClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TagClass_PTR *this, TagClass **);
-  TagClass *(__thiscall *GetItem)(VectorClass_TagClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TagClass_PTR : VectorClass_TagClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TagClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TagClass_PTR)(DynamicVectorClass_TagClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TagClass_PTR *this, VectorClass_TagClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TagClass_PTR *this, int, TagClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TagClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TagClass_PTR *this, TagClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TagClass_PTR *this, TagClass **);
-  TagClass *(__thiscall *GetItem)(DynamicVectorClass_TagClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_BuildingClass_PTR
-{
-  VectorClass_BuildingClass_PTR_vtbl *__vftable;
   BuildingClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_BuildingClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_BuildingClass_PTR)(VectorClass_BuildingClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BuildingClass_PTR *this, VectorClass_BuildingClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_BuildingClass_PTR *this, int, BuildingClass **);
-  void (__thiscall *Clear)(VectorClass_BuildingClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BuildingClass_PTR *this, BuildingClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_BuildingClass_PTR *this, BuildingClass **);
-  BuildingClass *(__thiscall *GetItem)(VectorClass_BuildingClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_BuildingClass_PTR : VectorClass_BuildingClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BuildingClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BuildingClass_PTR)(DynamicVectorClass_BuildingClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BuildingClass_PTR *this, VectorClass_BuildingClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BuildingClass_PTR *this, int, BuildingClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_BuildingClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BuildingClass_PTR *this, BuildingClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BuildingClass_PTR *this, BuildingClass **);
-  BuildingClass *(__thiscall *GetItem)(DynamicVectorClass_BuildingClass_PTR *this, int);
-};
+struct VectorBase_BuildingClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BuildingClass_PTR : VectorBase_BuildingClass_PTR, VectorAddon {};
+struct VectorClass_BuildingClass_PTR_vtbl : VectorBase_BuildingClass_PTR_vtbl {};
+struct DynamicVectorClass_BuildingClass_PTR : VectorClass_BuildingClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_BuildingClass_PTR_vtbl : VectorClass_BuildingClass_PTR_vtbl {};
 
 struct StartingTechnoStruct
 {
@@ -5407,42 +5297,15 @@ struct StartingTechnoStruct
   CellStruct Cell;
 };
 
-struct __declspec(align(4)) VectorClass_StartingTechnoStruct_PTR
+struct VectorBase_StartingTechnoStruct_PTR : VectorBase_PTR
 {
-  VectorClass_StartingTechnoStruct_PTR_vtbl *__vftable;
   StartingTechnoStruct **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_StartingTechnoStruct_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_StartingTechnoStruct_PTR)(VectorClass_StartingTechnoStruct_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_StartingTechnoStruct_PTR *this, VectorClass_StartingTechnoStruct_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_StartingTechnoStruct_PTR *this, int, StartingTechnoStruct **);
-  void (__thiscall *Clear)(VectorClass_StartingTechnoStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_StartingTechnoStruct_PTR *this, StartingTechnoStruct **);
-  int (__thiscall *GetItemIndex)(VectorClass_StartingTechnoStruct_PTR *this, StartingTechnoStruct **);
-  StartingTechnoStruct *(__thiscall *GetItem)(VectorClass_StartingTechnoStruct_PTR *this, int);
-};
-
-struct DynamicVectorClass_StartingTechnoStruct_PTR : VectorClass_StartingTechnoStruct_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_StartingTechnoStruct_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_StartingTechnoStruct_PTR)(DynamicVectorClass_StartingTechnoStruct_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_StartingTechnoStruct_PTR *this, VectorClass_StartingTechnoStruct_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_StartingTechnoStruct_PTR *this, int, StartingTechnoStruct **);
-  void (__thiscall *Clear)(DynamicVectorClass_StartingTechnoStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_StartingTechnoStruct_PTR *this, StartingTechnoStruct **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_StartingTechnoStruct_PTR *this, StartingTechnoStruct **);
-  StartingTechnoStruct *(__thiscall *GetItem)(DynamicVectorClass_StartingTechnoStruct_PTR *this, int);
-};
+struct VectorBase_StartingTechnoStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_StartingTechnoStruct_PTR : VectorBase_StartingTechnoStruct_PTR, VectorAddon {};
+struct VectorClass_StartingTechnoStruct_PTR_vtbl : VectorBase_StartingTechnoStruct_PTR_vtbl {};
+struct DynamicVectorClass_StartingTechnoStruct_PTR : VectorClass_StartingTechnoStruct_PTR, DynamicAddon {};
+struct DynamicVectorClass_StartingTechnoStruct_PTR_vtbl : VectorClass_StartingTechnoStruct_PTR_vtbl {};
 
 struct BaseClass
 {
@@ -5464,42 +5327,15 @@ struct BaseClass_vtbl
   void (__thiscall *ComputeCRC)(BaseClass *this, CRCEngine *);
 };
 
-struct __declspec(align(4)) VectorClass_SuperClass_PTR
+struct VectorBase_SuperClass_PTR : VectorBase_PTR
 {
-  VectorClass_SuperClass_PTR_vtbl *__vftable;
   SuperClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_SuperClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_SuperClass_PTR)(VectorClass_SuperClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SuperClass_PTR *this, VectorClass_SuperClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SuperClass_PTR *this, int, SuperClass **);
-  void (__thiscall *Clear)(VectorClass_SuperClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SuperClass_PTR *this, SuperClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SuperClass_PTR *this, SuperClass **);
-  SuperClass *(__thiscall *GetItem)(VectorClass_SuperClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SuperClass_PTR : VectorClass_SuperClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SuperClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SuperClass_PTR)(DynamicVectorClass_SuperClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SuperClass_PTR *this, VectorClass_SuperClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SuperClass_PTR *this, int, SuperClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SuperClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SuperClass_PTR *this, SuperClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SuperClass_PTR *this, SuperClass **);
-  SuperClass *(__thiscall *GetItem)(DynamicVectorClass_SuperClass_PTR *this, int);
-};
+struct VectorBase_SuperClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SuperClass_PTR : VectorBase_SuperClass_PTR, VectorAddon {};
+struct VectorClass_SuperClass_PTR_vtbl : VectorBase_SuperClass_PTR_vtbl {};
+struct DynamicVectorClass_SuperClass_PTR : VectorClass_SuperClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SuperClass_PTR_vtbl : VectorClass_SuperClass_PTR_vtbl {};
 
 struct AngerStruct
 {
@@ -5507,42 +5343,15 @@ struct AngerStruct
   int AngerLevel;
 };
 
-struct __declspec(align(4)) VectorClass_AngerStruct
+struct VectorBase_AngerStruct : VectorBase_ELE
 {
-  VectorClass_AngerStruct_vtbl *__vftable;
   AngerStruct *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_AngerStruct_vtbl
-{
-  void (__thiscall *~VectorClass_AngerStruct)(VectorClass_AngerStruct *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AngerStruct *this, VectorClass_AngerStruct *);
-  bool (__thiscall *SetCapacity)(VectorClass_AngerStruct *this, int, AngerStruct *);
-  void (__thiscall *Clear)(VectorClass_AngerStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AngerStruct *this, AngerStruct *);
-  int (__thiscall *GetItemIndex)(VectorClass_AngerStruct *this, AngerStruct *);
-  AngerStruct (__thiscall *GetItem)(VectorClass_AngerStruct *this, int);
-};
-
-struct DynamicVectorClass_AngerStruct : VectorClass_AngerStruct
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AngerStruct_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AngerStruct)(DynamicVectorClass_AngerStruct *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AngerStruct *this, VectorClass_AngerStruct *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AngerStruct *this, int, AngerStruct *);
-  void (__thiscall *Clear)(DynamicVectorClass_AngerStruct *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AngerStruct *this, AngerStruct *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AngerStruct *this, AngerStruct *);
-  AngerStruct (__thiscall *GetItem)(DynamicVectorClass_AngerStruct *this, int);
-};
+struct VectorBase_AngerStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_AngerStruct : VectorBase_AngerStruct, VectorAddon {};
+struct VectorClass_AngerStruct_vtbl : VectorBase_AngerStruct_vtbl {};
+struct DynamicVectorClass_AngerStruct : VectorClass_AngerStruct, DynamicAddon {};
+struct DynamicVectorClass_AngerStruct_vtbl : VectorClass_AngerStruct_vtbl {};
 
 struct __declspec(align(4)) ScoutStruct
 {
@@ -5550,42 +5359,15 @@ struct __declspec(align(4)) ScoutStruct
   bool IsPreferred;
 };
 
-struct __declspec(align(4)) VectorClass_ScoutStruct
+struct VectorBase_ScoutStruct : VectorBase_ELE
 {
-  VectorClass_ScoutStruct_vtbl *__vftable;
   ScoutStruct *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ScoutStruct_vtbl
-{
-  void (__thiscall *~VectorClass_ScoutStruct)(VectorClass_ScoutStruct *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ScoutStruct *this, VectorClass_ScoutStruct *);
-  bool (__thiscall *SetCapacity)(VectorClass_ScoutStruct *this, int, ScoutStruct *);
-  void (__thiscall *Clear)(VectorClass_ScoutStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ScoutStruct *this, ScoutStruct *);
-  int (__thiscall *GetItemIndex)(VectorClass_ScoutStruct *this, ScoutStruct *);
-  ScoutStruct (__thiscall *GetItem)(VectorClass_ScoutStruct *this, int);
-};
-
-struct DynamicVectorClass_ScoutStruct : VectorClass_ScoutStruct
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ScoutStruct_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ScoutStruct)(DynamicVectorClass_ScoutStruct *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ScoutStruct *this, VectorClass_ScoutStruct *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ScoutStruct *this, int, ScoutStruct *);
-  void (__thiscall *Clear)(DynamicVectorClass_ScoutStruct *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ScoutStruct *this, ScoutStruct *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ScoutStruct *this, ScoutStruct *);
-  ScoutStruct (__thiscall *GetItem)(DynamicVectorClass_ScoutStruct *this, int);
-};
+struct VectorBase_ScoutStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_ScoutStruct : VectorBase_ScoutStruct, VectorAddon {};
+struct VectorClass_ScoutStruct_vtbl : VectorBase_ScoutStruct_vtbl {};
+struct DynamicVectorClass_ScoutStruct : VectorClass_ScoutStruct, DynamicAddon {};
+struct DynamicVectorClass_ScoutStruct_vtbl : VectorClass_ScoutStruct_vtbl {};
 
 struct DropshipStruct
 {
@@ -5597,42 +5379,15 @@ struct DropshipStruct
   int TotalCost;
 };
 
-struct __declspec(align(4)) VectorClass_IConnectionPoint_PTR
+struct VectorBase_IConnectionPoint_PTR : VectorBase_PTR
 {
-  VectorClass_IConnectionPoint_PTR_vtbl *__vftable;
   IConnectionPoint **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_IConnectionPoint_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_IConnectionPoint_PTR)(VectorClass_IConnectionPoint_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_IConnectionPoint_PTR *this, VectorClass_IConnectionPoint_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_IConnectionPoint_PTR *this, int, IConnectionPoint **);
-  void (__thiscall *Clear)(VectorClass_IConnectionPoint_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_IConnectionPoint_PTR *this, IConnectionPoint **);
-  int (__thiscall *GetItemIndex)(VectorClass_IConnectionPoint_PTR *this, IConnectionPoint **);
-  IConnectionPoint *(__thiscall *GetItem)(VectorClass_IConnectionPoint_PTR *this, int);
-};
-
-struct DynamicVectorClass_IConnectionPoint_PTR : VectorClass_IConnectionPoint_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_IConnectionPoint_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_IConnectionPoint_PTR)(DynamicVectorClass_IConnectionPoint_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_IConnectionPoint_PTR *this, VectorClass_IConnectionPoint_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_IConnectionPoint_PTR *this, int, IConnectionPoint **);
-  void (__thiscall *Clear)(DynamicVectorClass_IConnectionPoint_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_IConnectionPoint_PTR *this, IConnectionPoint **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_IConnectionPoint_PTR *this, IConnectionPoint **);
-  IConnectionPoint *(__thiscall *GetItem)(DynamicVectorClass_IConnectionPoint_PTR *this, int);
-};
+struct VectorBase_IConnectionPoint_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_IConnectionPoint_PTR : VectorBase_IConnectionPoint_PTR, VectorAddon {};
+struct VectorClass_IConnectionPoint_PTR_vtbl : VectorBase_IConnectionPoint_PTR_vtbl {};
+struct DynamicVectorClass_IConnectionPoint_PTR : VectorClass_IConnectionPoint_PTR, DynamicAddon {};
+struct DynamicVectorClass_IConnectionPoint_PTR_vtbl : VectorClass_IConnectionPoint_PTR_vtbl {};
 
 struct TagCONNECTDATA
 {
@@ -5640,164 +5395,41 @@ struct TagCONNECTDATA
   unsigned int dwCookie;
 };
 
-struct __declspec(align(4)) VectorClass_InfantryTypeClass_PTR
+struct VectorBase_InfantryTypeClass_PTR : VectorBase_PTR
 {
-  VectorClass_InfantryTypeClass_PTR_vtbl *__vftable;
   InfantryTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_InfantryTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_InfantryTypeClass_PTR : VectorBase_InfantryTypeClass_PTR, VectorAddon {};
+struct VectorClass_InfantryTypeClass_PTR_vtbl : VectorBase_InfantryTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_InfantryTypeClass_PTR : VectorClass_InfantryTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl : VectorClass_InfantryTypeClass_PTR_vtbl {};
+struct TypeList_InfantryTypeClass_PTR : DynamicVectorClass_InfantryTypeClass_PTR, TypeListAddon {};
+struct TypeList_InfantryTypeClass_PTR_vtbl : DynamicVectorClass_InfantryTypeClass_PTR_vtbl {};
 
-struct VectorClass_InfantryTypeClass_PTR_vtbl
+struct VectorBase_UnitTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_InfantryTypeClass_PTR)(VectorClass_InfantryTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_InfantryTypeClass_PTR *this, VectorClass_InfantryTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_InfantryTypeClass_PTR *this, int, InfantryTypeClass **);
-  void (__thiscall *Clear)(VectorClass_InfantryTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_InfantryTypeClass_PTR *this, InfantryTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_InfantryTypeClass_PTR *this, InfantryTypeClass **);
-  InfantryTypeClass *(__thiscall *GetItem)(VectorClass_InfantryTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_InfantryTypeClass_PTR : VectorClass_InfantryTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_InfantryTypeClass_PTR)(DynamicVectorClass_InfantryTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_InfantryTypeClass_PTR *this, VectorClass_InfantryTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_InfantryTypeClass_PTR *this, int, InfantryTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_InfantryTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_InfantryTypeClass_PTR *this, InfantryTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_InfantryTypeClass_PTR *this, InfantryTypeClass **);
-  InfantryTypeClass *(__thiscall *GetItem)(DynamicVectorClass_InfantryTypeClass_PTR *this, int);
-};
-
-struct TypeList_InfantryTypeClass_PTR : DynamicVectorClass_InfantryTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_InfantryTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_InfantryTypeClass_PTR)(TypeList_InfantryTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_InfantryTypeClass_PTR *this, VectorClass_InfantryTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_InfantryTypeClass_PTR *this, int, InfantryTypeClass **);
-  void (__thiscall *Clear)(TypeList_InfantryTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_InfantryTypeClass_PTR *this, InfantryTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_InfantryTypeClass_PTR *this, InfantryTypeClass **);
-  InfantryTypeClass *(__thiscall *GetItem)(TypeList_InfantryTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_UnitTypeClass_PTR
-{
-  VectorClass_UnitTypeClass_PTR_vtbl *__vftable;
   UnitTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_UnitTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_UnitTypeClass_PTR : VectorBase_UnitTypeClass_PTR, VectorAddon {};
+struct VectorClass_UnitTypeClass_PTR_vtbl : VectorBase_UnitTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_UnitTypeClass_PTR : VectorClass_UnitTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_UnitTypeClass_PTR_vtbl : VectorClass_UnitTypeClass_PTR_vtbl {};
+struct TypeList_UnitTypeClass_PTR : DynamicVectorClass_UnitTypeClass_PTR, TypeListAddon {};
+struct TypeList_UnitTypeClass_PTR_vtbl : DynamicVectorClass_UnitTypeClass_PTR_vtbl {};
 
-struct VectorClass_UnitTypeClass_PTR_vtbl
+struct VectorBase_AircraftTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_UnitTypeClass_PTR)(VectorClass_UnitTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_UnitTypeClass_PTR *this, VectorClass_UnitTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_UnitTypeClass_PTR *this, int, UnitTypeClass **);
-  void (__thiscall *Clear)(VectorClass_UnitTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_UnitTypeClass_PTR *this, UnitTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_UnitTypeClass_PTR *this, UnitTypeClass **);
-  UnitTypeClass *(__thiscall *GetItem)(VectorClass_UnitTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_UnitTypeClass_PTR : VectorClass_UnitTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_UnitTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_UnitTypeClass_PTR)(DynamicVectorClass_UnitTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_UnitTypeClass_PTR *this, VectorClass_UnitTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_UnitTypeClass_PTR *this, int, UnitTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_UnitTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_UnitTypeClass_PTR *this, UnitTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_UnitTypeClass_PTR *this, UnitTypeClass **);
-  UnitTypeClass *(__thiscall *GetItem)(DynamicVectorClass_UnitTypeClass_PTR *this, int);
-};
-
-struct TypeList_UnitTypeClass_PTR : DynamicVectorClass_UnitTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_UnitTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_UnitTypeClass_PTR)(TypeList_UnitTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_UnitTypeClass_PTR *this, VectorClass_UnitTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_UnitTypeClass_PTR *this, int, UnitTypeClass **);
-  void (__thiscall *Clear)(TypeList_UnitTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_UnitTypeClass_PTR *this, UnitTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_UnitTypeClass_PTR *this, UnitTypeClass **);
-  UnitTypeClass *(__thiscall *GetItem)(TypeList_UnitTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AircraftTypeClass_PTR
-{
-  VectorClass_AircraftTypeClass_PTR_vtbl *__vftable;
   AircraftTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_AircraftTypeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_AircraftTypeClass_PTR)(VectorClass_AircraftTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AircraftTypeClass_PTR *this, VectorClass_AircraftTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AircraftTypeClass_PTR *this, int, AircraftTypeClass **);
-  void (__thiscall *Clear)(VectorClass_AircraftTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AircraftTypeClass_PTR *this, AircraftTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AircraftTypeClass_PTR *this, AircraftTypeClass **);
-  AircraftTypeClass *(__thiscall *GetItem)(VectorClass_AircraftTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AircraftTypeClass_PTR : VectorClass_AircraftTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AircraftTypeClass_PTR)(DynamicVectorClass_AircraftTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AircraftTypeClass_PTR *this, VectorClass_AircraftTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AircraftTypeClass_PTR *this, int, AircraftTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AircraftTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AircraftTypeClass_PTR *this, AircraftTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AircraftTypeClass_PTR *this, AircraftTypeClass **);
-  AircraftTypeClass *(__thiscall *GetItem)(DynamicVectorClass_AircraftTypeClass_PTR *this, int);
-};
-
-struct TypeList_AircraftTypeClass_PTR : DynamicVectorClass_AircraftTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_AircraftTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_AircraftTypeClass_PTR)(TypeList_AircraftTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_AircraftTypeClass_PTR *this, VectorClass_AircraftTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_AircraftTypeClass_PTR *this, int, AircraftTypeClass **);
-  void (__thiscall *Clear)(TypeList_AircraftTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_AircraftTypeClass_PTR *this, AircraftTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_AircraftTypeClass_PTR *this, AircraftTypeClass **);
-  AircraftTypeClass *(__thiscall *GetItem)(TypeList_AircraftTypeClass_PTR *this, int);
-};
+struct VectorBase_AircraftTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AircraftTypeClass_PTR : VectorBase_AircraftTypeClass_PTR, VectorAddon {};
+struct VectorClass_AircraftTypeClass_PTR_vtbl : VectorBase_AircraftTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_AircraftTypeClass_PTR : VectorClass_AircraftTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl : VectorClass_AircraftTypeClass_PTR_vtbl {};
+struct TypeList_AircraftTypeClass_PTR : DynamicVectorClass_AircraftTypeClass_PTR, TypeListAddon {};
+struct TypeList_AircraftTypeClass_PTR_vtbl : DynamicVectorClass_AircraftTypeClass_PTR_vtbl {};
 
 struct LineTrail
 {
@@ -5814,42 +5446,17 @@ struct TaskForceEntryStruct
   TechnoTypeClass *Type;
 };
 
-struct __declspec(align(4)) VectorClass_TechnoTypeClass_PTR
+struct VectorBase_TechnoTypeClass_PTR : VectorBase_PTR
 {
-  VectorClass_TechnoTypeClass_PTR_vtbl *__vftable;
   TechnoTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_TechnoTypeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_TechnoTypeClass_PTR)(VectorClass_TechnoTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TechnoTypeClass_PTR *this, VectorClass_TechnoTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TechnoTypeClass_PTR *this, int, TechnoTypeClass **);
-  void (__thiscall *Clear)(VectorClass_TechnoTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TechnoTypeClass_PTR *this, TechnoTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TechnoTypeClass_PTR *this, TechnoTypeClass **);
-  TechnoTypeClass *(__thiscall *GetItem)(VectorClass_TechnoTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TechnoTypeClass_PTR : VectorClass_TechnoTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TechnoTypeClass_PTR)(DynamicVectorClass_TechnoTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TechnoTypeClass_PTR *this, VectorClass_TechnoTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TechnoTypeClass_PTR *this, int, TechnoTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TechnoTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TechnoTypeClass_PTR *this, TechnoTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TechnoTypeClass_PTR *this, TechnoTypeClass **);
-  TechnoTypeClass *(__thiscall *GetItem)(DynamicVectorClass_TechnoTypeClass_PTR *this, int);
-};
+struct VectorBase_TechnoTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TechnoTypeClass_PTR : VectorBase_TechnoTypeClass_PTR, VectorAddon {};
+struct VectorClass_TechnoTypeClass_PTR_vtbl : VectorBase_TechnoTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_TechnoTypeClass_PTR : VectorClass_TechnoTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl : VectorClass_TechnoTypeClass_PTR_vtbl {};
+struct TypeList_TechnoTypeClass_PTR : DynamicVectorClass_TechnoTypeClass_PTR, TypeListAddon {};
+struct TypeList_TechnoTypeClass_PTR_vtbl : DynamicVectorClass_TechnoTypeClass_PTR_vtbl {};
 
 struct ControlNode
 {
@@ -5858,42 +5465,15 @@ struct ControlNode
   CDTimerClass LinkDrawTimer;
 };
 
-struct __declspec(align(4)) VectorClass_ControlNode_PTR
+struct VectorBase_ControlNode_PTR : VectorBase_PTR
 {
-  VectorClass_ControlNode_PTR_vtbl *__vftable;
   ControlNode **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ControlNode_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ControlNode_PTR)(VectorClass_ControlNode_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ControlNode_PTR *this, VectorClass_ControlNode_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ControlNode_PTR *this, int, ControlNode **);
-  void (__thiscall *Clear)(VectorClass_ControlNode_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ControlNode_PTR *this, ControlNode **);
-  int (__thiscall *GetItemIndex)(VectorClass_ControlNode_PTR *this, ControlNode **);
-  ControlNode *(__thiscall *GetItem)(VectorClass_ControlNode_PTR *this, int);
-};
-
-struct DynamicVectorClass_ControlNode_PTR : VectorClass_ControlNode_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ControlNode_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ControlNode_PTR)(DynamicVectorClass_ControlNode_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ControlNode_PTR *this, VectorClass_ControlNode_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ControlNode_PTR *this, int, ControlNode **);
-  void (__thiscall *Clear)(DynamicVectorClass_ControlNode_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ControlNode_PTR *this, ControlNode **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ControlNode_PTR *this, ControlNode **);
-  ControlNode *(__thiscall *GetItem)(DynamicVectorClass_ControlNode_PTR *this, int);
-};
+struct VectorBase_ControlNode_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ControlNode_PTR : VectorBase_ControlNode_PTR, VectorAddon {};
+struct VectorClass_ControlNode_PTR_vtbl : VectorBase_ControlNode_PTR_vtbl {};
+struct DynamicVectorClass_ControlNode_PTR : VectorClass_ControlNode_PTR, DynamicAddon {};
+struct DynamicVectorClass_ControlNode_PTR_vtbl : VectorClass_ControlNode_PTR_vtbl {};
 
 struct SpawnControl
 {
@@ -5903,42 +5483,15 @@ struct SpawnControl
   int IsSpawnMissile;
 };
 
-struct __declspec(align(4)) VectorClass_SpawnControl_PTR
+struct VectorBase_SpawnControl_PTR : VectorBase_PTR
 {
-  VectorClass_SpawnControl_PTR_vtbl *__vftable;
   SpawnControl **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_SpawnControl_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_SpawnControl_PTR)(VectorClass_SpawnControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SpawnControl_PTR *this, VectorClass_SpawnControl_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SpawnControl_PTR *this, int, SpawnControl **);
-  void (__thiscall *Clear)(VectorClass_SpawnControl_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SpawnControl_PTR *this, SpawnControl **);
-  int (__thiscall *GetItemIndex)(VectorClass_SpawnControl_PTR *this, SpawnControl **);
-  SpawnControl *(__thiscall *GetItem)(VectorClass_SpawnControl_PTR *this, int);
-};
-
-struct DynamicVectorClass_SpawnControl_PTR : VectorClass_SpawnControl_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SpawnControl_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SpawnControl_PTR)(DynamicVectorClass_SpawnControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SpawnControl_PTR *this, VectorClass_SpawnControl_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SpawnControl_PTR *this, int, SpawnControl **);
-  void (__thiscall *Clear)(DynamicVectorClass_SpawnControl_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SpawnControl_PTR *this, SpawnControl **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SpawnControl_PTR *this, SpawnControl **);
-  SpawnControl *(__thiscall *GetItem)(DynamicVectorClass_SpawnControl_PTR *this, int);
-};
+struct VectorBase_SpawnControl_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SpawnControl_PTR : VectorBase_SpawnControl_PTR, VectorAddon {};
+struct VectorClass_SpawnControl_PTR_vtbl : VectorBase_SpawnControl_PTR_vtbl {};
+struct DynamicVectorClass_SpawnControl_PTR : VectorClass_SpawnControl_PTR, DynamicAddon {};
+struct DynamicVectorClass_SpawnControl_PTR_vtbl : VectorClass_SpawnControl_PTR_vtbl {};
 
 struct SlaveManagerClass_SlaveControl
 {
@@ -5947,42 +5500,15 @@ struct SlaveManagerClass_SlaveControl
   CDTimerClass RespawnTimer;
 };
 
-struct __declspec(align(4)) VectorClass_SlaveControl_PTR
+struct VectorBase_SlaveControl_PTR : VectorBase_PTR
 {
-  VectorClass_SlaveControl_PTR_vtbl *__vftable;
   SlaveManagerClass_SlaveControl **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_SlaveControl_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_SlaveControl_PTR)(VectorClass_SlaveControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SlaveControl_PTR *this, VectorClass_SlaveControl_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SlaveControl_PTR *this, int, SlaveManagerClass_SlaveControl **);
-  void (__thiscall *Clear)(VectorClass_SlaveControl_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SlaveControl_PTR *this, SlaveManagerClass_SlaveControl **);
-  int (__thiscall *GetItemIndex)(VectorClass_SlaveControl_PTR *this, SlaveManagerClass_SlaveControl **);
-  SlaveManagerClass_SlaveControl *(__thiscall *GetItem)(VectorClass_SlaveControl_PTR *this, int);
-};
-
-struct DynamicVectorClass_SlaveControl_PTR : VectorClass_SlaveControl_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SlaveControl_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SlaveControl_PTR)(DynamicVectorClass_SlaveControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SlaveControl_PTR *this, VectorClass_SlaveControl_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SlaveControl_PTR *this, int, SlaveManagerClass_SlaveControl **);
-  void (__thiscall *Clear)(DynamicVectorClass_SlaveControl_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SlaveControl_PTR *this, SlaveManagerClass_SlaveControl **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SlaveControl_PTR *this, SlaveManagerClass_SlaveControl **);
-  SlaveManagerClass_SlaveControl *(__thiscall *GetItem)(DynamicVectorClass_SlaveControl_PTR *this, int);
-};
+struct VectorBase_SlaveControl_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SlaveControl_PTR : VectorBase_SlaveControl_PTR, VectorAddon {};
+struct VectorClass_SlaveControl_PTR_vtbl : VectorBase_SlaveControl_PTR_vtbl {};
+struct DynamicVectorClass_SlaveControl_PTR : VectorClass_SlaveControl_PTR, DynamicAddon {};
+struct DynamicVectorClass_SlaveControl_PTR_vtbl : VectorClass_SlaveControl_PTR_vtbl {};
 
 struct AITriggerConditionComparator
 {
@@ -5990,295 +5516,81 @@ struct AITriggerConditionComparator
 	AITriggerConditionComparatorType ComparatorType;
 };
 
-struct __declspec(align(4)) VectorClass_AnimTypeClass_PTR
+struct VectorBase_AnimTypeClass_PTR : VectorBase_PTR
 {
-  VectorClass_AnimTypeClass_PTR_vtbl *__vftable;
   AnimTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AnimTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AnimTypeClass_PTR : VectorBase_AnimTypeClass_PTR, VectorAddon {};
+struct VectorClass_AnimTypeClass_PTR_vtbl : VectorBase_AnimTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_AnimTypeClass_PTR : VectorClass_AnimTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AnimTypeClass_PTR_vtbl : VectorClass_AnimTypeClass_PTR_vtbl {};
+struct TypeList_AnimTypeClass_PTR : DynamicVectorClass_AnimTypeClass_PTR, TypeListAddon {};
+struct TypeList_AnimTypeClass_PTR_vtbl : DynamicVectorClass_AnimTypeClass_PTR_vtbl {};
 
-struct VectorClass_AnimTypeClass_PTR_vtbl
+struct VectorBase_VoxelAnimTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AnimTypeClass_PTR)(VectorClass_AnimTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AnimTypeClass_PTR *this, VectorClass_AnimTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AnimTypeClass_PTR *this, int, AnimTypeClass **);
-  void (__thiscall *Clear)(VectorClass_AnimTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AnimTypeClass_PTR *this, AnimTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AnimTypeClass_PTR *this, AnimTypeClass **);
-  AnimTypeClass *(__thiscall *GetItem)(VectorClass_AnimTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AnimTypeClass_PTR : VectorClass_AnimTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AnimTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AnimTypeClass_PTR)(DynamicVectorClass_AnimTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AnimTypeClass_PTR *this, VectorClass_AnimTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AnimTypeClass_PTR *this, int, AnimTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AnimTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AnimTypeClass_PTR *this, AnimTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AnimTypeClass_PTR *this, AnimTypeClass **);
-  AnimTypeClass *(__thiscall *GetItem)(DynamicVectorClass_AnimTypeClass_PTR *this, int);
-};
-
-struct TypeList_AnimTypeClass_PTR : DynamicVectorClass_AnimTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_AnimTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_AnimTypeClass_PTR)(TypeList_AnimTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_AnimTypeClass_PTR *this, VectorClass_AnimTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_AnimTypeClass_PTR *this, int, AnimTypeClass **);
-  void (__thiscall *Clear)(TypeList_AnimTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_AnimTypeClass_PTR *this, AnimTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_AnimTypeClass_PTR *this, AnimTypeClass **);
-  AnimTypeClass *(__thiscall *GetItem)(TypeList_AnimTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_VoxelAnimTypeClass_PTR
-{
-  VectorClass_VoxelAnimTypeClass_PTR_vtbl *__vftable;
   VoxelAnimTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_VoxelAnimTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_VoxelAnimTypeClass_PTR : VectorBase_VoxelAnimTypeClass_PTR, VectorAddon {};
+struct VectorClass_VoxelAnimTypeClass_PTR_vtbl : VectorBase_VoxelAnimTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_VoxelAnimTypeClass_PTR : VectorClass_VoxelAnimTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl : VectorClass_VoxelAnimTypeClass_PTR_vtbl {};
+struct TypeList_VoxelAnimTypeClass_PTR : DynamicVectorClass_VoxelAnimTypeClass_PTR, TypeListAddon {};
+struct TypeList_VoxelAnimTypeClass_PTR_vtbl : DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl {};
 
-struct VectorClass_VoxelAnimTypeClass_PTR_vtbl
+struct VectorBase_RGBClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_VoxelAnimTypeClass_PTR)(VectorClass_VoxelAnimTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_VoxelAnimTypeClass_PTR *this, VectorClass_VoxelAnimTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_VoxelAnimTypeClass_PTR *this, int, VoxelAnimTypeClass **);
-  void (__thiscall *Clear)(VectorClass_VoxelAnimTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_VoxelAnimTypeClass_PTR *this, VoxelAnimTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_VoxelAnimTypeClass_PTR *this, VoxelAnimTypeClass **);
-  VoxelAnimTypeClass *(__thiscall *GetItem)(VectorClass_VoxelAnimTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_VoxelAnimTypeClass_PTR : VectorClass_VoxelAnimTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_VoxelAnimTypeClass_PTR)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this, VectorClass_VoxelAnimTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this, int, VoxelAnimTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this, VoxelAnimTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this, VoxelAnimTypeClass **);
-  VoxelAnimTypeClass *(__thiscall *GetItem)(DynamicVectorClass_VoxelAnimTypeClass_PTR *this, int);
-};
-
-struct TypeList_VoxelAnimTypeClass_PTR : DynamicVectorClass_VoxelAnimTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_VoxelAnimTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_VoxelAnimTypeClass_PTR)(TypeList_VoxelAnimTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_VoxelAnimTypeClass_PTR *this, VectorClass_VoxelAnimTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_VoxelAnimTypeClass_PTR *this, int, VoxelAnimTypeClass **);
-  void (__thiscall *Clear)(TypeList_VoxelAnimTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_VoxelAnimTypeClass_PTR *this, VoxelAnimTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_VoxelAnimTypeClass_PTR *this, VoxelAnimTypeClass **);
-  VoxelAnimTypeClass *(__thiscall *GetItem)(TypeList_VoxelAnimTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_RGBClass_PTR
-{
-  VectorClass_RGBClass_PTR_vtbl *__vftable;
   RGBClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_RGBClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_RGBClass_PTR : VectorBase_RGBClass_PTR, VectorAddon {};
+struct VectorClass_RGBClass_PTR_vtbl : VectorBase_RGBClass_PTR_vtbl {};
+struct DynamicVectorClass_RGBClass_PTR : VectorClass_RGBClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_RGBClass_PTR_vtbl : VectorClass_RGBClass_PTR_vtbl {};
+struct TypeList_RGBClass_PTR : DynamicVectorClass_RGBClass_PTR, TypeListAddon {};
+struct TypeList_RGBClass_PTR_vtbl : DynamicVectorClass_RGBClass_PTR_vtbl {};
 
-struct VectorClass_RGBClass_PTR_vtbl
+struct VectorBase_ParticleClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_RGBClass_PTR)(VectorClass_RGBClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_RGBClass_PTR *this, VectorClass_RGBClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_RGBClass_PTR *this, int, RGBClass **);
-  void (__thiscall *Clear)(VectorClass_RGBClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_RGBClass_PTR *this, RGBClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_RGBClass_PTR *this, RGBClass **);
-  RGBClass *(__thiscall *GetItem)(VectorClass_RGBClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_RGBClass_PTR : VectorClass_RGBClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_RGBClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_RGBClass_PTR)(DynamicVectorClass_RGBClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_RGBClass_PTR *this, VectorClass_RGBClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_RGBClass_PTR *this, int, RGBClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_RGBClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_RGBClass_PTR *this, RGBClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_RGBClass_PTR *this, RGBClass **);
-  RGBClass *(__thiscall *GetItem)(DynamicVectorClass_RGBClass_PTR *this, int);
-};
-
-struct TypeList_RGBClass_PTR : DynamicVectorClass_RGBClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_RGBClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_RGBClass_PTR)(TypeList_RGBClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_RGBClass_PTR *this, VectorClass_RGBClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_RGBClass_PTR *this, int, RGBClass **);
-  void (__thiscall *Clear)(TypeList_RGBClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_RGBClass_PTR *this, RGBClass **);
-  int (__thiscall *GetItemIndex)(TypeList_RGBClass_PTR *this, RGBClass **);
-  RGBClass *(__thiscall *GetItem)(TypeList_RGBClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ParticleClass_PTR
-{
-  VectorClass_ParticleClass_PTR_vtbl *__vftable;
   ParticleClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ParticleClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ParticleClass_PTR : VectorBase_ParticleClass_PTR, VectorAddon {};
+struct VectorClass_ParticleClass_PTR_vtbl : VectorBase_ParticleClass_PTR_vtbl {};
+struct DynamicVectorClass_ParticleClass_PTR : VectorClass_ParticleClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ParticleClass_PTR_vtbl : VectorClass_ParticleClass_PTR_vtbl {};
 
-struct VectorClass_ParticleClass_PTR_vtbl
+struct VectorBase_TechnoClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ParticleClass_PTR)(VectorClass_ParticleClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ParticleClass_PTR *this, VectorClass_ParticleClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ParticleClass_PTR *this, int, ParticleClass **);
-  void (__thiscall *Clear)(VectorClass_ParticleClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ParticleClass_PTR *this, ParticleClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ParticleClass_PTR *this, ParticleClass **);
-  ParticleClass *(__thiscall *GetItem)(VectorClass_ParticleClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ParticleClass_PTR : VectorClass_ParticleClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ParticleClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ParticleClass_PTR)(DynamicVectorClass_ParticleClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ParticleClass_PTR *this, VectorClass_ParticleClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ParticleClass_PTR *this, int, ParticleClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ParticleClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ParticleClass_PTR *this, ParticleClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ParticleClass_PTR *this, ParticleClass **);
-  ParticleClass *(__thiscall *GetItem)(DynamicVectorClass_ParticleClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TechnoClass_PTR
-{
-  VectorClass_TechnoClass_PTR_vtbl *__vftable;
   TechnoClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TechnoClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TechnoClass_PTR : VectorBase_TechnoClass_PTR, VectorAddon {};
+struct VectorClass_TechnoClass_PTR_vtbl : VectorBase_TechnoClass_PTR_vtbl {};
+struct DynamicVectorClass_TechnoClass_PTR : VectorClass_TechnoClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TechnoClass_PTR_vtbl : VectorClass_TechnoClass_PTR_vtbl {};
 
-struct VectorClass_TechnoClass_PTR_vtbl
+struct VectorBase_AbstractClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TechnoClass_PTR)(VectorClass_TechnoClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TechnoClass_PTR *this, VectorClass_TechnoClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TechnoClass_PTR *this, int, TechnoClass **);
-  void (__thiscall *Clear)(VectorClass_TechnoClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TechnoClass_PTR *this, TechnoClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TechnoClass_PTR *this, TechnoClass **);
-  TechnoClass *(__thiscall *GetItem)(VectorClass_TechnoClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AbstractClass_PTR
-{
-  VectorClass_AbstractClass_PTR_vtbl *__vftable;
   AbstractClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AbstractClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AbstractClass_PTR : VectorBase_AbstractClass_PTR, VectorAddon {};
+struct VectorClass_AbstractClass_PTR_vtbl : VectorBase_AbstractClass_PTR_vtbl {};
+struct DynamicVectorClass_AbstractClass_PTR : VectorClass_AbstractClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AbstractClass_PTR_vtbl : VectorClass_AbstractClass_PTR_vtbl {};
 
-struct VectorClass_AbstractClass_PTR_vtbl
+struct VectorBase_CellClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AbstractClass_PTR)(VectorClass_AbstractClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AbstractClass_PTR *this, VectorClass_AbstractClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AbstractClass_PTR *this, int, AbstractClass **);
-  void (__thiscall *Clear)(VectorClass_AbstractClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AbstractClass_PTR *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AbstractClass_PTR *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(VectorClass_AbstractClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AbstractClass_PTR : VectorClass_AbstractClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AbstractClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AbstractClass_PTR)(DynamicVectorClass_AbstractClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AbstractClass_PTR *this, VectorClass_AbstractClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AbstractClass_PTR *this, int, AbstractClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AbstractClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AbstractClass_PTR *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AbstractClass_PTR *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_AbstractClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_CellClass_PTR
-{
-  VectorClass_CellClass_PTR_vtbl *__vftable;
   CellClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_CellClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_CellClass_PTR)(VectorClass_CellClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CellClass_PTR *this, VectorClass_CellClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_CellClass_PTR *this, int, CellClass **);
-  void (__thiscall *Clear)(VectorClass_CellClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CellClass_PTR *this, CellClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_CellClass_PTR *this, CellClass **);
-  CellClass *(__thiscall *GetItem)(VectorClass_CellClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_CellClass_PTR : VectorClass_CellClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_CellClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_CellClass_PTR)(DynamicVectorClass_CellClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_CellClass_PTR *this, VectorClass_CellClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_CellClass_PTR *this, int, CellClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_CellClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_CellClass_PTR *this, CellClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_CellClass_PTR *this, CellClass **);
-  CellClass *(__thiscall *GetItem)(DynamicVectorClass_CellClass_PTR *this, int);
-};
+struct VectorBase_CellClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CellClass_PTR : VectorBase_CellClass_PTR, VectorAddon {};
+struct VectorClass_CellClass_PTR_vtbl : VectorBase_CellClass_PTR_vtbl {};
+struct DynamicVectorClass_CellClass_PTR : VectorClass_CellClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_CellClass_PTR_vtbl : VectorClass_CellClass_PTR_vtbl {};
 
 struct __declspec(align(4)) WeaponStruct
 {
@@ -6311,111 +5623,29 @@ struct AbilitiesStruct
   bool CRUSHER;
 };
 
-struct __declspec(align(4)) VectorClass_BuildingTypeClass_PTR
+struct VectorBase_BuildingTypeClass_PTR : VectorBase_PTR
 {
-  VectorClass_BuildingTypeClass_PTR_vtbl *__vftable;
   BuildingTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_BuildingTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BuildingTypeClass_PTR : VectorBase_BuildingTypeClass_PTR, VectorAddon {};
+struct VectorClass_BuildingTypeClass_PTR_vtbl : VectorBase_BuildingTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_BuildingTypeClass_PTR : VectorClass_BuildingTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl : VectorClass_BuildingTypeClass_PTR_vtbl {};
+struct TypeList_BuildingTypeClass_PTR : DynamicVectorClass_BuildingTypeClass_PTR, TypeListAddon {};
+struct TypeList_BuildingTypeClass_PTR_vtbl : DynamicVectorClass_BuildingTypeClass_PTR_vtbl {};
 
-struct VectorClass_BuildingTypeClass_PTR_vtbl
+struct VectorBase_ParticleSystemTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_BuildingTypeClass_PTR)(VectorClass_BuildingTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BuildingTypeClass_PTR *this, VectorClass_BuildingTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_BuildingTypeClass_PTR *this, int, BuildingTypeClass **);
-  void (__thiscall *Clear)(VectorClass_BuildingTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BuildingTypeClass_PTR *this, BuildingTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_BuildingTypeClass_PTR *this, BuildingTypeClass **);
-  BuildingTypeClass *(__thiscall *GetItem)(VectorClass_BuildingTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_BuildingTypeClass_PTR : VectorClass_BuildingTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BuildingTypeClass_PTR)(DynamicVectorClass_BuildingTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BuildingTypeClass_PTR *this, VectorClass_BuildingTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BuildingTypeClass_PTR *this, int, BuildingTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_BuildingTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BuildingTypeClass_PTR *this, BuildingTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BuildingTypeClass_PTR *this, BuildingTypeClass **);
-  BuildingTypeClass *(__thiscall *GetItem)(DynamicVectorClass_BuildingTypeClass_PTR *this, int);
-};
-
-struct TypeList_BuildingTypeClass_PTR : DynamicVectorClass_BuildingTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_BuildingTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_BuildingTypeClass_PTR)(TypeList_BuildingTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_BuildingTypeClass_PTR *this, VectorClass_BuildingTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_BuildingTypeClass_PTR *this, int, BuildingTypeClass **);
-  void (__thiscall *Clear)(TypeList_BuildingTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_BuildingTypeClass_PTR *this, BuildingTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_BuildingTypeClass_PTR *this, BuildingTypeClass **);
-  BuildingTypeClass *(__thiscall *GetItem)(TypeList_BuildingTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ParticleSystemTypeClass_PTR
-{
-  VectorClass_ParticleSystemTypeClass_PTR_vtbl *__vftable;
   ParticleSystemTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ParticleSystemTypeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ParticleSystemTypeClass_PTR)(VectorClass_ParticleSystemTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ParticleSystemTypeClass_PTR *this, VectorClass_ParticleSystemTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ParticleSystemTypeClass_PTR *this, int, ParticleSystemTypeClass **);
-  void (__thiscall *Clear)(VectorClass_ParticleSystemTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ParticleSystemTypeClass_PTR *this, ParticleSystemTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ParticleSystemTypeClass_PTR *this, ParticleSystemTypeClass **);
-  ParticleSystemTypeClass *(__thiscall *GetItem)(VectorClass_ParticleSystemTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ParticleSystemTypeClass_PTR : VectorClass_ParticleSystemTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ParticleSystemTypeClass_PTR)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this, VectorClass_ParticleSystemTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this, int, ParticleSystemTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this, ParticleSystemTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this, ParticleSystemTypeClass **);
-  ParticleSystemTypeClass *(__thiscall *GetItem)(DynamicVectorClass_ParticleSystemTypeClass_PTR *this, int);
-};
-
-struct TypeList_ParticleSystemTypeClass_PTR : DynamicVectorClass_ParticleSystemTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_ParticleSystemTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_ParticleSystemTypeClass_PTR)(TypeList_ParticleSystemTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_ParticleSystemTypeClass_PTR *this, VectorClass_ParticleSystemTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_ParticleSystemTypeClass_PTR *this, int, ParticleSystemTypeClass **);
-  void (__thiscall *Clear)(TypeList_ParticleSystemTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_ParticleSystemTypeClass_PTR *this, ParticleSystemTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_ParticleSystemTypeClass_PTR *this, ParticleSystemTypeClass **);
-  ParticleSystemTypeClass *(__thiscall *GetItem)(TypeList_ParticleSystemTypeClass_PTR *this, int);
-};
+struct VectorBase_ParticleSystemTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ParticleSystemTypeClass_PTR : VectorBase_ParticleSystemTypeClass_PTR, VectorAddon {};
+struct VectorClass_ParticleSystemTypeClass_PTR_vtbl : VectorBase_ParticleSystemTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_ParticleSystemTypeClass_PTR : VectorClass_ParticleSystemTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl : VectorClass_ParticleSystemTypeClass_PTR_vtbl {};
+struct TypeList_ParticleSystemTypeClass_PTR : DynamicVectorClass_ParticleSystemTypeClass_PTR, TypeListAddon {};
+struct TypeList_ParticleSystemTypeClass_PTR_vtbl : DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl {};
 
 struct BuildType
 {
@@ -6466,42 +5696,15 @@ struct __declspec(align(4)) SubzoneConnectionStruct
   bool IsDiagonal;
 };
 
-struct __declspec(align(4)) VectorClass_SubzoneConnectionStruct
+struct VectorBase_SubzoneConnectionStruct : VectorBase_ELE
 {
-  VectorClass_SubzoneConnectionStruct_vtbl *__vftable;
   SubzoneConnectionStruct *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_SubzoneConnectionStruct_vtbl
-{
-  void (__thiscall *~VectorClass_SubzoneConnectionStruct)(VectorClass_SubzoneConnectionStruct *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SubzoneConnectionStruct *this, VectorClass_SubzoneConnectionStruct *);
-  bool (__thiscall *SetCapacity)(VectorClass_SubzoneConnectionStruct *this, int, SubzoneConnectionStruct *);
-  void (__thiscall *Clear)(VectorClass_SubzoneConnectionStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SubzoneConnectionStruct *this, SubzoneConnectionStruct *);
-  int (__thiscall *GetItemIndex)(VectorClass_SubzoneConnectionStruct *this, SubzoneConnectionStruct *);
-  SubzoneConnectionStruct (__thiscall *GetItem)(VectorClass_SubzoneConnectionStruct *this, int);
-};
-
-struct DynamicVectorClass_SubzoneConnectionStruct : VectorClass_SubzoneConnectionStruct
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SubzoneConnectionStruct_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SubzoneConnectionStruct)(DynamicVectorClass_SubzoneConnectionStruct *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SubzoneConnectionStruct *this, VectorClass_SubzoneConnectionStruct *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SubzoneConnectionStruct *this, int, SubzoneConnectionStruct *);
-  void (__thiscall *Clear)(DynamicVectorClass_SubzoneConnectionStruct *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SubzoneConnectionStruct *this, SubzoneConnectionStruct *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SubzoneConnectionStruct *this, SubzoneConnectionStruct *);
-  SubzoneConnectionStruct (__thiscall *GetItem)(DynamicVectorClass_SubzoneConnectionStruct *this, int);
-};
+struct VectorBase_SubzoneConnectionStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_SubzoneConnectionStruct : VectorBase_SubzoneConnectionStruct, VectorAddon {};
+struct VectorClass_SubzoneConnectionStruct_vtbl : VectorBase_SubzoneConnectionStruct_vtbl {};
+struct DynamicVectorClass_SubzoneConnectionStruct : VectorClass_SubzoneConnectionStruct, DynamicAddon {};
+struct DynamicVectorClass_SubzoneConnectionStruct_vtbl : VectorClass_SubzoneConnectionStruct_vtbl {};
 
 struct SubzoneTrackingStruct
 {
@@ -6511,79 +5714,25 @@ struct SubzoneTrackingStruct
   unsigned int ThreatNodeIndex;
 };
 
-struct __declspec(align(4)) VectorClass_SubzoneTrackingStruct
+struct VectorBase_SubzoneTrackingStruct : VectorBase_ELE
 {
-  VectorClass_SubzoneTrackingStruct_vtbl *__vftable;
   SubzoneTrackingStruct *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SubzoneTrackingStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_SubzoneTrackingStruct : VectorBase_SubzoneTrackingStruct, VectorAddon {};
+struct VectorClass_SubzoneTrackingStruct_vtbl : VectorBase_SubzoneTrackingStruct_vtbl {};
+struct DynamicVectorClass_SubzoneTrackingStruct : VectorClass_SubzoneTrackingStruct, DynamicAddon {};
+struct DynamicVectorClass_SubzoneTrackingStruct_vtbl : VectorClass_SubzoneTrackingStruct_vtbl {};
 
-struct VectorClass_SubzoneTrackingStruct_vtbl
+struct VectorBase_Point2D : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_SubzoneTrackingStruct)(VectorClass_SubzoneTrackingStruct *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SubzoneTrackingStruct *this, VectorClass_SubzoneTrackingStruct *);
-  bool (__thiscall *SetCapacity)(VectorClass_SubzoneTrackingStruct *this, int, SubzoneTrackingStruct *);
-  void (__thiscall *Clear)(VectorClass_SubzoneTrackingStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SubzoneTrackingStruct *this, SubzoneTrackingStruct *);
-  int (__thiscall *GetItemIndex)(VectorClass_SubzoneTrackingStruct *this, SubzoneTrackingStruct *);
-  SubzoneTrackingStruct *(__thiscall *GetItem)(VectorClass_SubzoneTrackingStruct *this, SubzoneTrackingStruct *result, int);
-};
-
-struct DynamicVectorClass_SubzoneTrackingStruct : VectorClass_SubzoneTrackingStruct
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SubzoneTrackingStruct_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SubzoneTrackingStruct)(DynamicVectorClass_SubzoneTrackingStruct *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SubzoneTrackingStruct *this, VectorClass_SubzoneTrackingStruct *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SubzoneTrackingStruct *this, int, SubzoneTrackingStruct *);
-  void (__thiscall *Clear)(DynamicVectorClass_SubzoneTrackingStruct *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SubzoneTrackingStruct *this, SubzoneTrackingStruct *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SubzoneTrackingStruct *this, SubzoneTrackingStruct *);
-  SubzoneTrackingStruct *(__thiscall *GetItem)(DynamicVectorClass_SubzoneTrackingStruct *this, SubzoneTrackingStruct *result, int);
-};
-
-struct __declspec(align(4)) VectorClass_Point2D
-{
-  VectorClass_Point2D_vtbl *__vftable;
   Point2D *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_Point2D_vtbl
-{
-  void (__thiscall *~VectorClass_Point2D)(VectorClass_Point2D *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_Point2D *this, VectorClass_Point2D *);
-  bool (__thiscall *SetCapacity)(VectorClass_Point2D *this, int, Point2D *);
-  void (__thiscall *Clear)(VectorClass_Point2D *this);
-  int (__thiscall *FindItemIndex)(VectorClass_Point2D *this, Point2D *);
-  int (__thiscall *GetItemIndex)(VectorClass_Point2D *this, Point2D *);
-  Point2D (__thiscall *GetItem)(VectorClass_Point2D *this, int);
-};
-
-struct DynamicVectorClass_Point2D : VectorClass_Point2D
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_Point2D_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_Point2D)(DynamicVectorClass_Point2D *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_Point2D *this, VectorClass_Point2D *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_Point2D *this, int, Point2D *);
-  void (__thiscall *Clear)(DynamicVectorClass_Point2D *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_Point2D *this, Point2D *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_Point2D *this, Point2D *);
-  Point2D (__thiscall *GetItem)(DynamicVectorClass_Point2D *this, int);
-};
+struct VectorBase_Point2D_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_Point2D : VectorBase_Point2D, VectorAddon {};
+struct VectorClass_Point2D_vtbl : VectorBase_Point2D_vtbl {};
+struct DynamicVectorClass_Point2D : VectorClass_Point2D, DynamicAddon {};
+struct DynamicVectorClass_Point2D_vtbl : VectorClass_Point2D_vtbl {};
 
 struct ZoneConnectionClass
 {
@@ -6593,79 +5742,25 @@ struct ZoneConnectionClass
   CellClass *Cell;
 };
 
-struct __declspec(align(4)) VectorClass_ZoneConnectionClass
+struct VectorBase_ZoneConnectionClass : VectorBase_ELE
 {
-  VectorClass_ZoneConnectionClass_vtbl *__vftable;
   ZoneConnectionClass *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ZoneConnectionClass_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_ZoneConnectionClass : VectorBase_ZoneConnectionClass, VectorAddon {};
+struct VectorClass_ZoneConnectionClass_vtbl : VectorBase_ZoneConnectionClass_vtbl {};
+struct DynamicVectorClass_ZoneConnectionClass : VectorClass_ZoneConnectionClass, DynamicAddon {};
+struct DynamicVectorClass_ZoneConnectionClass_vtbl : VectorClass_ZoneConnectionClass_vtbl {};
 
-struct VectorClass_ZoneConnectionClass_vtbl
+struct VectorBase_InfantryClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ZoneConnectionClass)(VectorClass_ZoneConnectionClass *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ZoneConnectionClass *this, VectorClass_ZoneConnectionClass *);
-  bool (__thiscall *SetCapacity)(VectorClass_ZoneConnectionClass *this, int, ZoneConnectionClass *);
-  void (__thiscall *Clear)(VectorClass_ZoneConnectionClass *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ZoneConnectionClass *this, ZoneConnectionClass *);
-  int (__thiscall *GetItemIndex)(VectorClass_ZoneConnectionClass *this, ZoneConnectionClass *);
-  ZoneConnectionClass *(__thiscall *GetItem)(VectorClass_ZoneConnectionClass *this, ZoneConnectionClass *result, int);
-};
-
-struct DynamicVectorClass_ZoneConnectionClass : VectorClass_ZoneConnectionClass
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ZoneConnectionClass_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ZoneConnectionClass)(DynamicVectorClass_ZoneConnectionClass *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ZoneConnectionClass *this, VectorClass_ZoneConnectionClass *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ZoneConnectionClass *this, int, ZoneConnectionClass *);
-  void (__thiscall *Clear)(DynamicVectorClass_ZoneConnectionClass *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ZoneConnectionClass *this, ZoneConnectionClass *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ZoneConnectionClass *this, ZoneConnectionClass *);
-  ZoneConnectionClass *(__thiscall *GetItem)(DynamicVectorClass_ZoneConnectionClass *this, ZoneConnectionClass *result, int);
-};
-
-struct __declspec(align(4)) VectorClass_InfantryClass_PTR
-{
-  VectorClass_InfantryClass_PTR_vtbl *__vftable;
   InfantryClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_InfantryClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_InfantryClass_PTR)(VectorClass_InfantryClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_InfantryClass_PTR *this, VectorClass_InfantryClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_InfantryClass_PTR *this, int, InfantryClass **);
-  void (__thiscall *Clear)(VectorClass_InfantryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_InfantryClass_PTR *this, InfantryClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_InfantryClass_PTR *this, InfantryClass **);
-  InfantryClass *(__thiscall *GetItem)(VectorClass_InfantryClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_InfantryClass_PTR : VectorClass_InfantryClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_InfantryClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_InfantryClass_PTR)(DynamicVectorClass_InfantryClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_InfantryClass_PTR *this, VectorClass_InfantryClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_InfantryClass_PTR *this, int, InfantryClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_InfantryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_InfantryClass_PTR *this, InfantryClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_InfantryClass_PTR *this, InfantryClass **);
-  InfantryClass *(__thiscall *GetItem)(DynamicVectorClass_InfantryClass_PTR *this, int);
-};
+struct VectorBase_InfantryClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_InfantryClass_PTR : VectorBase_InfantryClass_PTR, VectorAddon {};
+struct VectorClass_InfantryClass_PTR_vtbl : VectorBase_InfantryClass_PTR_vtbl {};
+struct DynamicVectorClass_InfantryClass_PTR : VectorClass_InfantryClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_InfantryClass_PTR_vtbl : VectorClass_InfantryClass_PTR_vtbl {};
 
 struct BuildingAnimFrameStruct
 {
@@ -6688,25 +5783,13 @@ struct BuildingAnimStruct
   bool PoweredSpecial;
 };
 
-struct __declspec(align(4)) VectorClass_CoordStruct
+struct VectorBase_CoordStruct : VectorBase_ELE
 {
-  VectorClass_CoordStruct_vtbl *__vftable;
   CoordStruct *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_CoordStruct_vtbl
-{
-  void (__thiscall *~VectorClass_CoordStruct)(VectorClass_CoordStruct *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CoordStruct *this, VectorClass_CoordStruct *);
-  bool (__thiscall *SetCapacity)(VectorClass_CoordStruct *this, int, CoordStruct *);
-  void (__thiscall *Clear)(VectorClass_CoordStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CoordStruct *this, CoordStruct *);
-  int (__thiscall *GetItemIndex)(VectorClass_CoordStruct *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetItem)(VectorClass_CoordStruct *this, CoordStruct *result, int);
-};
+struct VectorBase_CoordStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_CoordStruct : VectorBase_CoordStruct, VectorAddon {};
+struct VectorClass_CoordStruct_vtbl : VectorBase_CoordStruct_vtbl {};
 
 class Surface
 {
@@ -6766,9 +5849,7 @@ struct TacticalSelectableStruct
   int Y;
 };
 
-struct EventClass_EMPTY
-{
-};
+struct EventClass_EMPTY {};
 
 struct EventClass_POWERON
 {
@@ -6816,9 +5897,7 @@ struct EventClass_SCATTER
   TargetClass Whom;
 };
 
-struct EventClass_DESTRUCT
-{
-};
+struct EventClass_DESTRUCT {};
 
 struct EventClass_DEPLOY
 {
@@ -6838,9 +5917,7 @@ struct EventClass_PLACE
   CellStruct Location;
 };
 
-struct EventClass_OPTIONS
-{
-};
+struct EventClass_OPTIONS {};
 
 struct EventClass_GAMESPEED
 {
@@ -6879,9 +5956,7 @@ struct EventClass_SPECIAL_PLACE
   CellStruct Location;
 };
 
-struct EventClass_EXIT
-{
-};
+struct EventClass_EXIT {};
 
 struct EventClass_ANIMATION
 {
@@ -6910,13 +5985,9 @@ struct EventClass_SPECIAL
   ScenarioFlags SpecialFlags;
 };
 
-struct EventClass_FRAMESYNC
-{
-};
+struct EventClass_FRAMESYNC {};
 
-struct EventClass_MESSAGE
-{
-};
+struct EventClass_MESSAGE {};
 
 struct EventClass_RESPONSE_TIME
 {
@@ -6931,9 +6002,7 @@ struct __unaligned __declspec(align(1)) EventClass_FRAMEINFO
   unsigned __int8 Delay;
 };
 
-struct EventClass_SAVEGAME
-{
-};
+struct EventClass_SAVEGAME {};
 
 struct EventClass_ARCHIVE
 {
@@ -6958,9 +6027,7 @@ struct EventClass_PROCESS_TIME
   unsigned __int16 Time;
 };
 
-struct EventClass_PAGEUSER
-{
-};
+struct EventClass_PAGEUSER {};
 
 struct EventClass_REMOVEPLAYER
 {
@@ -6982,9 +6049,7 @@ struct EventClass_PACKETTIMING
   char Unknown[64];
 };
 
-struct EventClass_ABOUTTOEXIT
-{
-};
+struct EventClass_ABOUTTOEXIT {};
 
 struct EventClass_FALLBACKHOST
 {
@@ -7003,9 +6068,7 @@ struct EventClass_PLANCONNECT
   TargetClass Target2;
 };
 
-struct EventClass_PLANCOMMIT
-{
-};
+struct EventClass_PLANCOMMIT {};
 
 struct EventClass_PLANNODEDELETE
 {
@@ -7095,42 +6158,15 @@ struct __declspec(align(4)) PlanningMemberClass
   char field_C;
 };
 
-struct __declspec(align(4)) VectorClass_PlanningMemberClass_PTR
+struct VectorBase_PlanningMemberClass_PTR : VectorBase_PTR
 {
-  VectorClass_PlanningMemberClass_PTR_vtbl *__vftable;
   PlanningMemberClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_PlanningMemberClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_PlanningMemberClass_PTR)(VectorClass_PlanningMemberClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_PlanningMemberClass_PTR *this, VectorClass_PlanningMemberClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_PlanningMemberClass_PTR *this, int, PlanningMemberClass **);
-  void (__thiscall *Clear)(VectorClass_PlanningMemberClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_PlanningMemberClass_PTR *this, PlanningMemberClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_PlanningMemberClass_PTR *this, PlanningMemberClass **);
-  PlanningMemberClass *(__thiscall *GetItem)(VectorClass_PlanningMemberClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_PlanningMemberClass_PTR : VectorClass_PlanningMemberClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_PlanningMemberClass_PTR)(DynamicVectorClass_PlanningMemberClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_PlanningMemberClass_PTR *this, VectorClass_PlanningMemberClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_PlanningMemberClass_PTR *this, int, PlanningMemberClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_PlanningMemberClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_PlanningMemberClass_PTR *this, PlanningMemberClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_PlanningMemberClass_PTR *this, PlanningMemberClass **);
-  PlanningMemberClass *(__thiscall *GetItem)(DynamicVectorClass_PlanningMemberClass_PTR *this, int);
-};
+struct VectorBase_PlanningMemberClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_PlanningMemberClass_PTR : VectorBase_PlanningMemberClass_PTR, VectorAddon {};
+struct VectorClass_PlanningMemberClass_PTR_vtbl : VectorBase_PlanningMemberClass_PTR_vtbl {};
+struct DynamicVectorClass_PlanningMemberClass_PTR : VectorClass_PlanningMemberClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl : VectorClass_PlanningMemberClass_PTR_vtbl {};
 
 struct PlanningBranchClass
 {
@@ -7139,42 +6175,15 @@ struct PlanningBranchClass
   int field_74;
 };
 
-struct __declspec(align(4)) VectorClass_PlanningBranchClass_PTR
+struct VectorBase_PlanningBranchClass_PTR : VectorBase_PTR
 {
-  VectorClass_PlanningBranchClass_PTR_vtbl *__vftable;
   PlanningBranchClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_PlanningBranchClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_PlanningBranchClass_PTR)(VectorClass_PlanningBranchClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_PlanningBranchClass_PTR *this, VectorClass_PlanningBranchClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_PlanningBranchClass_PTR *this, int, PlanningBranchClass **);
-  void (__thiscall *Clear)(VectorClass_PlanningBranchClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
-  PlanningBranchClass *(__thiscall *GetItem)(VectorClass_PlanningBranchClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_PlanningBranchClass_PTR : VectorClass_PlanningBranchClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_PlanningBranchClass_PTR)(DynamicVectorClass_PlanningBranchClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_PlanningBranchClass_PTR *this, VectorClass_PlanningBranchClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_PlanningBranchClass_PTR *this, int, PlanningBranchClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_PlanningBranchClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_PlanningBranchClass_PTR *this, PlanningBranchClass **);
-  PlanningBranchClass *(__thiscall *GetItem)(DynamicVectorClass_PlanningBranchClass_PTR *this, int);
-};
+struct VectorBase_PlanningBranchClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_PlanningBranchClass_PTR : VectorBase_PlanningBranchClass_PTR, VectorAddon {};
+struct VectorClass_PlanningBranchClass_PTR_vtbl : VectorBase_PlanningBranchClass_PTR_vtbl {};
+struct DynamicVectorClass_PlanningBranchClass_PTR : VectorClass_PlanningBranchClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl : VectorClass_PlanningBranchClass_PTR_vtbl {};
 
 struct PlanningNodeClass
 {
@@ -7189,42 +6198,15 @@ struct PlanningNodeClass
   int field_B4;
 };
 
-struct __declspec(align(4)) VectorClass_PlanningNodeClass_PTR
+struct VectorBase_PlanningNodeClass_PTR : VectorBase_PTR
 {
-  VectorClass_PlanningNodeClass_PTR_vtbl *__vftable;
   PlanningNodeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_PlanningNodeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_PlanningNodeClass_PTR)(VectorClass_PlanningNodeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_PlanningNodeClass_PTR *this, VectorClass_PlanningNodeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_PlanningNodeClass_PTR *this, int, PlanningNodeClass **);
-  void (__thiscall *Clear)(VectorClass_PlanningNodeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_PlanningNodeClass_PTR *this, PlanningNodeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_PlanningNodeClass_PTR *this, PlanningNodeClass **);
-  PlanningNodeClass *(__thiscall *GetItem)(VectorClass_PlanningNodeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_PlanningNodeClass_PTR : VectorClass_PlanningNodeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_PlanningNodeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_PlanningNodeClass_PTR)(DynamicVectorClass_PlanningNodeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_PlanningNodeClass_PTR *this, VectorClass_PlanningNodeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_PlanningNodeClass_PTR *this, int, PlanningNodeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_PlanningNodeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_PlanningNodeClass_PTR *this, PlanningNodeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_PlanningNodeClass_PTR *this, PlanningNodeClass **);
-  PlanningNodeClass *(__thiscall *GetItem)(DynamicVectorClass_PlanningNodeClass_PTR *this, int);
-};
+struct VectorBase_PlanningNodeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_PlanningNodeClass_PTR : VectorBase_PlanningNodeClass_PTR, VectorAddon {};
+struct VectorClass_PlanningNodeClass_PTR_vtbl : VectorBase_PlanningNodeClass_PTR_vtbl {};
+struct DynamicVectorClass_PlanningNodeClass_PTR : VectorClass_PlanningNodeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_PlanningNodeClass_PTR_vtbl : VectorClass_PlanningNodeClass_PTR_vtbl {};
 
 struct __unaligned __declspec(align(4)) PlanningTokenClass
 {
@@ -7313,83 +6295,27 @@ struct LaserDrawClass
   float EndIntensity;
 };
 
-struct __declspec(align(4)) VectorClass_MPTeam_PTR
+struct VectorBase_MPTeam_PTR : VectorBase_PTR
 {
-  VectorClass_MPTeam_PTR_vtbl *__vftable;
   MPTeam **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_MPTeam_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MPTeam_PTR : VectorBase_MPTeam_PTR, VectorAddon {};
+struct VectorClass_MPTeam_PTR_vtbl : VectorBase_MPTeam_PTR_vtbl {};
+struct DynamicVectorClass_MPTeam_PTR : VectorClass_MPTeam_PTR, DynamicAddon {};
+struct DynamicVectorClass_MPTeam_PTR_vtbl : VectorClass_MPTeam_PTR_vtbl {};
 
-struct VectorClass_MPTeam_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_MPTeam_PTR)(VectorClass_MPTeam_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_MPTeam_PTR *this, VectorClass_MPTeam_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_MPTeam_PTR *this, int, MPTeam **);
-  void (__thiscall *Clear)(VectorClass_MPTeam_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MPTeam_PTR *this, MPTeam **);
-  int (__thiscall *GetItemIndex)(VectorClass_MPTeam_PTR *this, MPTeam **);
-  MPTeam *(__thiscall *GetItem)(VectorClass_MPTeam_PTR *this, int);
-};
+struct MultiMission {};
 
-struct DynamicVectorClass_MPTeam_PTR : VectorClass_MPTeam_PTR
+struct VectorBase_MultiMission_PTR : VectorBase_PTR
 {
-  int Count;
-  int CapacityIncrement;
+  MultiMission **Items;
 };
-
-struct DynamicVectorClass_MPTeam_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_MPTeam_PTR)(DynamicVectorClass_MPTeam_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_MPTeam_PTR *this, VectorClass_MPTeam_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_MPTeam_PTR *this, int, MPTeam **);
-  void (__thiscall *Clear)(DynamicVectorClass_MPTeam_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_MPTeam_PTR *this, MPTeam **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_MPTeam_PTR *this, MPTeam **);
-  MPTeam *(__thiscall *GetItem)(DynamicVectorClass_MPTeam_PTR *this, int);
-};
-
-struct MultiMission
-{
-};
-
-struct __declspec(align(4)) VectorClass_MultiMission_PTR
-{
-  VectorClass_MultiMission_PTR_vtbl *__vftable;
-  struct MultiMission **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
-};
-
-struct VectorClass_MultiMission_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_MultiMission_PTR)(VectorClass_MultiMission_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_MultiMission_PTR *this, VectorClass_MultiMission_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_MultiMission_PTR *this, int, struct MultiMission **);
-  void (__thiscall *Clear)(VectorClass_MultiMission_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MultiMission_PTR *this, MultiMission **);
-  int (__thiscall *GetItemIndex)(VectorClass_MultiMission_PTR *this, MultiMission **);
-  struct MultiMission *(__thiscall *GetItem)(VectorClass_MultiMission_PTR *this, int);
-};
-
-struct DynamicVectorClass_MultiMission_PTR : VectorClass_MultiMission_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_MultiMission_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_MultiMission_PTR)(DynamicVectorClass_MultiMission_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_MultiMission_PTR *this, VectorClass_MultiMission_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_MultiMission_PTR *this, int, struct MultiMission **);
-  void (__thiscall *Clear)(DynamicVectorClass_MultiMission_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_MultiMission_PTR *this, MultiMission **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_MultiMission_PTR *this, MultiMission **);
-  struct MultiMission *(__thiscall *GetItem)(DynamicVectorClass_MultiMission_PTR *this, int);
-};
+struct VectorBase_MultiMission_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MultiMission_PTR : VectorBase_MultiMission_PTR, VectorAddon {};
+struct VectorClass_MultiMission_PTR_vtbl : VectorBase_MultiMission_PTR_vtbl {};
+struct DynamicVectorClass_MultiMission_PTR : VectorClass_MultiMission_PTR, DynamicAddon {};
+struct DynamicVectorClass_MultiMission_PTR_vtbl : VectorClass_MultiMission_PTR_vtbl {};
 
 class MPGameModeClass
 {
@@ -7459,7 +6385,7 @@ struct MPGameModeClass_vtbl
   bool (__thiscall *vt_entry_B4)(MPGameModeClass *this, int, void *, int, __int16, int, int, int);
   int (__thiscall *vt_entry_B8)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_BC)(MPGameModeClass *this);
-  void (__thiscall *CreateMPTeams)(MPGameModeClass *this, struct DynamicVectorClass_MPTeam *);
+  void (__thiscall *CreateMPTeams)(MPGameModeClass *this, DynamicVectorClass_MPTeam_PTR *);
   CellStruct *(__thiscall *AssignStartingPositionsToHouse)(MPGameModeClass *this, CellStruct *, int, DynamicVectorClass_CellStruct *, unsigned __int8 *);
   bool (__thiscall *SpawnBaseUnits)(MPGameModeClass *this, HouseClass *, unsigned int);
   bool (__thiscall *GenerateStartingUnits)(MPGameModeClass *this, HouseClass *, int *);
@@ -7482,127 +6408,29 @@ struct RocketStruct
   AircraftTypeClass *Type;
 };
 
-struct __declspec(align(4)) VectorClass_SmudgeTypeClass_PTR
+struct VectorBase_SmudgeTypeClass_PTR : VectorBase_PTR
 {
-  VectorClass_SmudgeTypeClass_PTR_vtbl *__vftable;
   SmudgeTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SmudgeTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SmudgeTypeClass_PTR : VectorBase_SmudgeTypeClass_PTR, VectorAddon {};
+struct VectorClass_SmudgeTypeClass_PTR_vtbl : VectorBase_SmudgeTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_SmudgeTypeClass_PTR : VectorClass_SmudgeTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl : VectorClass_SmudgeTypeClass_PTR_vtbl {};
+struct TypeList_SmudgeTypeClass_PTR : DynamicVectorClass_SmudgeTypeClass_PTR, TypeListAddon {};
+struct TypeList_SmudgeTypeClass_PTR_vtbl : DynamicVectorClass_SmudgeTypeClass_PTR_vtbl {};
 
-struct VectorClass_SmudgeTypeClass_PTR_vtbl
+struct VectorBase_TerrainTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_SmudgeTypeClass_PTR)(VectorClass_SmudgeTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SmudgeTypeClass_PTR *this, VectorClass_SmudgeTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SmudgeTypeClass_PTR *this, int, SmudgeTypeClass **);
-  void (__thiscall *Clear)(VectorClass_SmudgeTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SmudgeTypeClass_PTR *this, SmudgeTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SmudgeTypeClass_PTR *this, SmudgeTypeClass **);
-  SmudgeTypeClass *(__thiscall *GetItem)(VectorClass_SmudgeTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SmudgeTypeClass_PTR : VectorClass_SmudgeTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SmudgeTypeClass_PTR)(DynamicVectorClass_SmudgeTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SmudgeTypeClass_PTR *this, VectorClass_SmudgeTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SmudgeTypeClass_PTR *this, int, SmudgeTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SmudgeTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SmudgeTypeClass_PTR *this, SmudgeTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SmudgeTypeClass_PTR *this, SmudgeTypeClass **);
-  SmudgeTypeClass *(__thiscall *GetItem)(DynamicVectorClass_SmudgeTypeClass_PTR *this, int);
-};
-
-struct TypeList_SmudgeTypeClass_PTR : DynamicVectorClass_SmudgeTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_SmudgeTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_SmudgeTypeClass_PTR)(TypeList_SmudgeTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_SmudgeTypeClass_PTR *this, VectorClass_SmudgeTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_SmudgeTypeClass_PTR *this, int, SmudgeTypeClass **);
-  void (__thiscall *Clear)(TypeList_SmudgeTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_SmudgeTypeClass_PTR *this, SmudgeTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_SmudgeTypeClass_PTR *this, SmudgeTypeClass **);
-  SmudgeTypeClass *(__thiscall *GetItem)(TypeList_SmudgeTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TerrainTypeClass_PTR
-{
-  VectorClass_TerrainTypeClass_PTR_vtbl *__vftable;
   TerrainTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_TerrainTypeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_TerrainTypeClass_PTR)(VectorClass_TerrainTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TerrainTypeClass_PTR *this, VectorClass_TerrainTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TerrainTypeClass_PTR *this, int, TerrainTypeClass **);
-  void (__thiscall *Clear)(VectorClass_TerrainTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TerrainTypeClass_PTR *this, TerrainTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TerrainTypeClass_PTR *this, TerrainTypeClass **);
-  TerrainTypeClass *(__thiscall *GetItem)(VectorClass_TerrainTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TerrainTypeClass_PTR : VectorClass_TerrainTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TerrainTypeClass_PTR)(DynamicVectorClass_TerrainTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TerrainTypeClass_PTR *this, VectorClass_TerrainTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TerrainTypeClass_PTR *this, int, TerrainTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TerrainTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TerrainTypeClass_PTR *this, TerrainTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TerrainTypeClass_PTR *this, TerrainTypeClass **);
-  TerrainTypeClass *(__thiscall *GetItem)(DynamicVectorClass_TerrainTypeClass_PTR *this, int);
-};
-
-struct TypeList_TerrainTypeClass_PTR : DynamicVectorClass_TerrainTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_TerrainTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_TerrainTypeClass_PTR)(TypeList_TerrainTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_TerrainTypeClass_PTR *this, VectorClass_TerrainTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_TerrainTypeClass_PTR *this, int, TerrainTypeClass **);
-  void (__thiscall *Clear)(TypeList_TerrainTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_TerrainTypeClass_PTR *this, TerrainTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_TerrainTypeClass_PTR *this, TerrainTypeClass **);
-  TerrainTypeClass *(__thiscall *GetItem)(TypeList_TerrainTypeClass_PTR *this, int);
-};
-
-struct TypeList_TechnoTypeClass_PTR : DynamicVectorClass_TechnoTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_TechnoTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_TechnoTypeClass_PTR)(TypeList_TechnoTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_TechnoTypeClass_PTR *this, VectorClass_TechnoTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_TechnoTypeClass_PTR *this, int, TechnoTypeClass **);
-  void (__thiscall *Clear)(TypeList_TechnoTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_TechnoTypeClass_PTR *this, TechnoTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_TechnoTypeClass_PTR *this, TechnoTypeClass **);
-  TechnoTypeClass *(__thiscall *GetItem)(TypeList_TechnoTypeClass_PTR *this, int);
-};
+struct VectorBase_TerrainTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TerrainTypeClass_PTR : VectorBase_TerrainTypeClass_PTR, VectorAddon {};
+struct VectorClass_TerrainTypeClass_PTR_vtbl : VectorBase_TerrainTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_TerrainTypeClass_PTR : VectorClass_TerrainTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl : VectorClass_TerrainTypeClass_PTR_vtbl {};
+struct TypeList_TerrainTypeClass_PTR : DynamicVectorClass_TerrainTypeClass_PTR, TypeListAddon {};
+struct TypeList_TerrainTypeClass_PTR_vtbl : DynamicVectorClass_TerrainTypeClass_PTR_vtbl {};
 
 struct __declspec(align(8)) RulesClass
 {
@@ -8484,15 +7312,10 @@ struct ZBuffer
   int Height;
 };
 
-struct IPiggyback : IUnknown
-{
-};
+struct IPiggyback : IUnknown {};
 
-struct IPiggyback_vtbl
+struct IPiggyback_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
   HRESULT (__stdcall *Begin_Piggyback)(IPiggyback *this, ILocomotion *);
   HRESULT (__stdcall *End_Piggyback)(IPiggyback *this, ILocomotion **);
   bool (__stdcall *Is_Ok_To_End)(IPiggyback *this);
@@ -8510,16 +7333,8 @@ class AbstractClass : IPersistStream, IRTTITypeInfo, INoticeSink, INoticeSource
   unsigned __int8 padding_21[3];
 };
 
-struct AbstractClass_vtbl
+struct AbstractClass_vtbl : IPersistStream_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
   void (__thiscall *~AbstractClass)(AbstractClass *this);
   void (__thiscall *Init)(AbstractClass *this);
   void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
@@ -8547,32 +7362,8 @@ class __declspec(align(4)) AbstractTypeClass : AbstractClass
   char Name[49];
 };
 
-struct AbstractTypeClass_vtbl
+struct AbstractTypeClass_vtbl : AbstractClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
   void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
   bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
   bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
@@ -8589,33 +7380,7 @@ class TagClass : AbstractClass
   unsigned __int8 padding_36[2];
 };
 
-struct TagClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TagClass_vtbl : AbstractClass_vtbl {};
 
 class __unaligned __declspec(align(4)) TagTypeClass : AbstractTypeClass
 {
@@ -8624,36 +7389,7 @@ class __unaligned __declspec(align(4)) TagTypeClass : AbstractTypeClass
   struct TriggerTypeClass *FirstTrigger;
 };
 
-struct TagTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct TagTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class TriggerClass : AbstractClass
 {
@@ -8668,33 +7404,7 @@ class TriggerClass : AbstractClass
   unsigned __int8 padding_45[3];
 };
 
-struct TriggerClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TriggerClass_vtbl : AbstractClass_vtbl {};
 
 class WaypointPathClass : AbstractClass
 {
@@ -8702,33 +7412,7 @@ class WaypointPathClass : AbstractClass
   DynamicVectorClass_WaypointClass Waypoints;
 };
 
-struct WaypointPathClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct WaypointPathClass_vtbl : AbstractClass_vtbl {};
 
 class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContainer
 {
@@ -8979,32 +7663,8 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   unsigned int unknown_power_160B4;
 };
 
-struct HouseClass_vtbl
+struct HouseClass_vtbl : AbstractClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
   HRESULT (__stdcall *FindConnectionPoint)(HouseClass *this, _GUID *, IConnectionPoint **);
 };
 
@@ -9055,36 +7715,7 @@ class HouseTypeClass : AbstractTypeClass
   unsigned __int8 padding_1A9[7];
 };
 
-struct HouseTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct HouseTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class __declspec(align(4)) BombClass : AbstractClass
 {
@@ -9100,33 +7731,7 @@ class __declspec(align(4)) BombClass : AbstractClass
   bool Harmless;
 };
 
-struct BombClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct BombClass_vtbl : AbstractClass_vtbl {};
 
 class ObjectClass : AbstractClass
 {
@@ -9168,32 +7773,8 @@ class ObjectClass : AbstractClass
   LineTrail *LineTrailer;
 };
 
-struct ObjectClass_vtbl
+struct ObjectClass_vtbl : AbstractClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
   void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
   bool (__thiscall *IsSelectable)(ObjectClass *this);
   VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
@@ -9342,35 +7923,8 @@ class __unaligned __declspec(align(4)) ObjectTypeClass : AbstractTypeClass
   IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_ VoxelTurretBarrelCache;
 };
 
-struct ObjectTypeClass_vtbl
+struct ObjectTypeClass_vtbl : AbstractTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
   CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
   unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
   int (__thiscall *GetPipMax)(ObjectTypeClass *this);
@@ -9431,130 +7985,8 @@ class AnimClass : ObjectClass
   AudioController StopSoundAudioController;
 };
 
-struct AnimClass_vtbl
+struct AnimClass_vtbl : ObjectClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
   int (__thiscall *AnimExtras)(AnimClass *this);
   int (__thiscall *GetEnd)(AnimClass *this);
 };
@@ -9633,48 +8065,8 @@ class __declspec(align(4)) AnimTypeClass : ObjectTypeClass
   bool ShouldFogRemove;
 };
 
-struct AnimTypeClass_vtbl
+struct AnimTypeClass_vtbl : ObjectTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
   void (__thiscall *Load2DArt)(AnimTypeClass *this);
 };
 
@@ -9683,131 +8075,7 @@ class SmudgeClass : ObjectClass
   SmudgeTypeClass *Type;
 };
 
-struct SmudgeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct SmudgeClass_vtbl : ObjectClass_vtbl {};
 
 class __declspec(align(4)) SmudgeTypeClass : ObjectTypeClass
 {
@@ -9818,48 +8086,8 @@ class __declspec(align(4)) SmudgeTypeClass : ObjectTypeClass
   bool Burn;
 };
 
-struct SmudgeTypeClass_vtbl
+struct SmudgeTypeClass_vtbl : ObjectTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
   void (__thiscall *DrawIt)(SmudgeTypeClass *this, Point2D *, RectangleStruct *, int, int, CellStruct *);
 };
 
@@ -9891,33 +8119,7 @@ class SuperClass : AbstractClass
   ChargeDrainState ChargeDrainState;
 };
 
-struct SuperClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct SuperClass_vtbl : AbstractClass_vtbl {};
 
 class SuperWeaponTypeClass : AbstractTypeClass
 {
@@ -9950,35 +8152,8 @@ class SuperWeaponTypeClass : AbstractTypeClass
   int LineMultiplier;
 };
 
-struct SuperWeaponTypeClass_vtbl
+struct SuperWeaponTypeClass_vtbl : AbstractTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
   Action (__thiscall *MouseOverObject)(SuperWeaponTypeClass *this, CellStruct *, ObjectClass *);
 };
 
@@ -9989,33 +8164,7 @@ class ScriptClass : AbstractClass
   int CurrentMission;
 };
 
-struct ScriptClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct ScriptClass_vtbl : AbstractClass_vtbl {};
 
 class __unaligned __declspec(align(4)) ScriptTypeClass : AbstractTypeClass
 {
@@ -10025,36 +8174,7 @@ class __unaligned __declspec(align(4)) ScriptTypeClass : AbstractTypeClass
   ScriptActionNode ScriptActions[50];
 };
 
-struct ScriptTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct ScriptTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class TeamClass : AbstractClass
 {
@@ -10094,33 +8214,7 @@ class TeamClass : AbstractClass
   int CountObjects[6];
 };
 
-struct TeamClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TeamClass_vtbl : AbstractClass_vtbl {};
 
 class TeamTypeClass : AbstractTypeClass
 {
@@ -10168,36 +8262,7 @@ class TeamTypeClass : AbstractTypeClass
   bool OnlyTargetHouseEnemy;
 };
 
-struct TeamTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct TeamTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class TActionClass : AbstractClass
 {
@@ -10216,33 +8281,7 @@ class TActionClass : AbstractClass
   int Value;
 };
 
-struct TActionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TActionClass_vtbl : AbstractClass_vtbl {};
 
 class __unaligned __declspec(align(4)) TaskForceClass : AbstractTypeClass
 {
@@ -10252,36 +8291,7 @@ class __unaligned __declspec(align(4)) TaskForceClass : AbstractTypeClass
   __declspec(align(4)) TaskForceEntryStruct Entries[6];
 };
 
-struct TaskForceClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct TaskForceClass_vtbl : AbstractTypeClass_vtbl {};
 
 class TEventClass : AbstractClass
 {
@@ -10294,33 +8304,7 @@ class TEventClass : AbstractClass
   HouseClass *House;
 };
 
-struct TEventClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TEventClass_vtbl : AbstractClass_vtbl {};
 
 class WaypointPathClass : AbstractClass
 {
@@ -10328,33 +8312,7 @@ class WaypointPathClass : AbstractClass
   DynamicVectorClass_WaypointClass Waypoints;
 };
 
-struct WaypointPathClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct WaypointPathClass_vtbl : AbstractClass_vtbl {};
 
 class AirstrikeClass : AbstractClass
 {
@@ -10376,33 +8334,7 @@ class AirstrikeClass : AbstractClass
   FootClass *FirstObject;
 };
 
-struct AirstrikeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct AirstrikeClass_vtbl : AbstractClass_vtbl {};
 
 class CaptureManagerClass : AbstractClass
 {
@@ -10415,33 +8347,7 @@ class CaptureManagerClass : AbstractClass
   int OverloadDamageDelay;
 };
 
-struct CaptureManagerClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct CaptureManagerClass_vtbl : AbstractClass_vtbl {};
 
 class SpawnManagerClass : AbstractClass
 {
@@ -10458,33 +8364,7 @@ class SpawnManagerClass : AbstractClass
   SpawnManagerStatus Status;
 };
 
-struct SpawnManagerClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct SpawnManagerClass_vtbl : AbstractClass_vtbl {};
 
 class SlaveManagerClass : AbstractClass
 {
@@ -10499,33 +8379,7 @@ class SlaveManagerClass : AbstractClass
   int LastScanFrame;
 };
 
-struct SlaveManagerClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct SlaveManagerClass_vtbl : AbstractClass_vtbl {};
 
 class __declspec(align(4)) ParasiteClass : AbstractClass
 {
@@ -10540,33 +8394,7 @@ class __declspec(align(4)) ParasiteClass : AbstractClass
   bool GrappleAnimGotInvalid;
 };
 
-struct ParasiteClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct ParasiteClass_vtbl : AbstractClass_vtbl {};
 
 class __unaligned __declspec(align(4)) FactoryClass : AbstractClass
 {
@@ -10585,33 +8413,7 @@ class __unaligned __declspec(align(4)) FactoryClass : AbstractClass
   unsigned __int8 padding_72[2];
 };
 
-struct FactoryClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct FactoryClass_vtbl : AbstractClass_vtbl {};
 
 class __unaligned __declspec(align(4)) LightSourceClass : AbstractClass
 {
@@ -10623,33 +8425,7 @@ class __unaligned __declspec(align(4)) LightSourceClass : AbstractClass
   bool Activated;
 };
 
-struct LightSourceClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct LightSourceClass_vtbl : AbstractClass_vtbl {};
 
 class __unaligned __declspec(align(4)) RadSiteClass : AbstractClass
 {
@@ -10669,33 +8445,7 @@ class __unaligned __declspec(align(4)) RadSiteClass : AbstractClass
   int RadTimeLeft;
 };
 
-struct RadSiteClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct RadSiteClass_vtbl : AbstractClass_vtbl {};
 
 class __declspec(align(4)) AlphaShapeClass : AbstractClass
 {
@@ -10705,33 +8455,7 @@ class __declspec(align(4)) AlphaShapeClass : AbstractClass
   bool IsObjectGone;
 };
 
-struct AlphaShapeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct AlphaShapeClass_vtbl : AbstractClass_vtbl {};
 
 class EMPulseClass : AbstractClass
 {
@@ -10741,33 +8465,7 @@ class EMPulseClass : AbstractClass
   int Duration;
 };
 
-struct EMPulseClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct EMPulseClass_vtbl : AbstractClass_vtbl {};
 
 class TemporalClass : AbstractClass
 {
@@ -10782,33 +8480,7 @@ class TemporalClass : AbstractClass
   int WarpPerStep;
 };
 
-struct TemporalClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TemporalClass_vtbl : AbstractClass_vtbl {};
 
 class NeuronClass : AbstractClass
 {
@@ -10818,33 +8490,7 @@ class NeuronClass : AbstractClass
   CDTimerClass unknown_timer_30;
 };
 
-struct NeuronClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct NeuronClass_vtbl : AbstractClass_vtbl {};
 
 class DiskLaserClass : AbstractClass
 {
@@ -10857,69 +8503,14 @@ class DiskLaserClass : AbstractClass
   int Damage;
 };
 
-struct DiskLaserClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct DiskLaserClass_vtbl : AbstractClass_vtbl {};
 
 class SideClass : AbstractTypeClass
 {
   TypeList_int HouseTypes;
 };
 
-struct SideClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct SideClass_vtbl : AbstractTypeClass_vtbl {};
 
 class AITriggerTypeClass : AbstractTypeClass
 {
@@ -10948,36 +8539,7 @@ class AITriggerTypeClass : AbstractTypeClass
   int unknown_10C;
 };
 
-struct AITriggerTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct AITriggerTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class TiberiumClass : AbstractTypeClass
 {
@@ -10998,36 +8560,7 @@ class TiberiumClass : AbstractTypeClass
   TiberiumLogic GrowthLogic;
 };
 
-struct TiberiumClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct TiberiumClass_vtbl : AbstractTypeClass_vtbl {};
 
 class VoxelAnimClass : ObjectClass
 {
@@ -11047,131 +8580,7 @@ class VoxelAnimClass : ObjectClass
   unsigned int unused_144;
 };
 
-struct VoxelAnimClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct VoxelAnimClass_vtbl : ObjectClass_vtbl {};
 
 class __declspec(align(8)) VoxelAnimTypeClass : ObjectTypeClass
 {
@@ -11204,49 +8613,7 @@ class __declspec(align(8)) VoxelAnimTypeClass : ObjectTypeClass
   unsigned __int8 unused_301[3];
 };
 
-struct VoxelAnimTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-};
+struct VoxelAnimTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
 class WarheadTypeClass : AbstractTypeClass
 {
@@ -11312,36 +8679,7 @@ class WarheadTypeClass : AbstractTypeClass
   unsigned int unused_1CC;
 };
 
-struct WarheadTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct WarheadTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class __declspec(align(4)) WeaponTypeClass : AbstractTypeClass
 {
@@ -11410,36 +8748,7 @@ class __declspec(align(4)) WeaponTypeClass : AbstractTypeClass
   bool IsMagBeam;
 };
 
-struct WeaponTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct WeaponTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class ParticleClass : ObjectClass
 {
@@ -11474,130 +8783,8 @@ class ParticleClass : ObjectClass
   unsigned int unused_134;
 };
 
-struct ParticleClass_vtbl
+struct ParticleClass_vtbl : ObjectClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
   int (__thiscall *vt_entry_1E8)(ParticleClass *this);
 };
 
@@ -11635,49 +8822,7 @@ class ParticleTypeClass : ObjectTypeClass
   BehavesLike BehavesLike;
 };
 
-struct ParticleTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-};
+struct ParticleTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
 class ParticleSystemClass : ObjectClass
 {
@@ -11696,131 +8841,7 @@ class ParticleSystemClass : ObjectClass
   HouseClass *OwnerHouse;
 };
 
-struct ParticleSystemClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct ParticleSystemClass_vtbl : ObjectClass_vtbl {};
 
 class __declspec(align(4)) ParticleSystemTypeClass : ObjectTypeClass
 {
@@ -11849,49 +8870,7 @@ class __declspec(align(4)) ParticleSystemTypeClass : ObjectTypeClass
   bool OneFrameLight;
 };
 
-struct ParticleSystemTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-};
+struct ParticleSystemTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
 class BulletClass : ObjectClass
 {
@@ -11925,130 +8904,8 @@ class BulletClass : ObjectClass
   int Range;
 };
 
-struct BulletClass_vtbl
+struct BulletClass_vtbl : ObjectClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
   unsigned __int8 (__thiscall *GetAnimFrame)(BulletClass *this);
   void (__thiscall *SetTarget)(BulletClass *this, AbstractClass *);
   bool (__thiscall *MoveTo)(BulletClass *this, CoordStruct *, BulletVelocity *);
@@ -12100,180 +8957,14 @@ class BulletTypeClass : ObjectTypeClass
   bool Flat;
 };
 
-struct BulletTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-};
+struct BulletTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
 class OverlayClass : ObjectClass
 {
   OverlayTypeClass *Type;
 };
 
-struct OverlayClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct OverlayClass_vtbl : ObjectClass_vtbl {};
 
 class __unaligned __declspec(align(4)) OverlayTypeClass : ObjectTypeClass
 {
@@ -12299,48 +8990,8 @@ class __unaligned __declspec(align(4)) OverlayTypeClass : ObjectTypeClass
   ColorStruct RadarColor;
 };
 
-struct OverlayTypeClass_vtbl
+struct OverlayTypeClass_vtbl : ObjectTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
   void (__thiscall *Draw)(OverlayTypeClass *this, Point2D *, RectangleStruct *, int);
 };
 
@@ -12409,33 +9060,7 @@ class CellClass : AbstractClass
   unsigned __int8 padding_144[4];
 };
 
-struct CellClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct CellClass_vtbl : AbstractClass_vtbl {};
 
 class WaveClass : ObjectClass
 {
@@ -12477,131 +9102,7 @@ class WaveClass : ObjectClass
   int ColorData[14];
 };
 
-struct WaveClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct WaveClass_vtbl : ObjectClass_vtbl {};
 
 class MissionClass : ObjectClass
 {
@@ -12615,130 +9116,8 @@ class MissionClass : ObjectClass
   CDTimerClass UpdateTimer;
 };
 
-struct MissionClass_vtbl
+struct MissionClass_vtbl : ObjectClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
   bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
   bool (__thiscall *NextMission)(MissionClass *this);
   void (__thiscall *ForceMission)(MissionClass *this, Mission);
@@ -12782,165 +9161,8 @@ class RadioClass : MissionClass
   VectorClass_TechnoClass_PTR RadioLinks;
 };
 
-struct RadioClass_vtbl
+struct RadioClass_vtbl : MissionClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
   RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
   RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
   RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
@@ -13130,169 +9352,8 @@ class TechnoClass : RadioClass
   HouseClass *DisguisedAsHouse;
 };
 
-struct TechnoClass_vtbl
+struct TechnoClass_vtbl : RadioClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
   bool (__thiscall *IsUnitFactory)(TechnoClass *this);
   bool (__thiscall *IsCloakable)(TechnoClass *this);
   bool (__thiscall *CanScatter)(TechnoClass *this);
@@ -13777,48 +9838,8 @@ class TechnoTypeClass : ObjectTypeClass
   unsigned int align_DF4;
 };
 
-struct TechnoTypeClass_vtbl
+struct TechnoTypeClass_vtbl : ObjectTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
   bool (__thiscall *CanUseWaypoint)(TechnoTypeClass *this);
   bool (__thiscall *CanAttackMove)(TechnoTypeClass *this);
   bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *, HouseClass *);
@@ -13862,18 +9883,8 @@ class GadgetClass : LinkClass
   GadgetFlag Flags;
 };
 
-struct GadgetClass_vtbl
+struct GadgetClass_vtbl : LinkClass_vtbl
 {
-  void (__thiscall *~GadgetClass)(GadgetClass *this);
-  LinkClass *(__thiscall *GetNext)(GadgetClass *this);
-  LinkClass *(__thiscall *GetPrev)(GadgetClass *this);
-  LinkClass *(__thiscall *Add)(GadgetClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(GadgetClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(GadgetClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(GadgetClass *this);
-  LinkClass *(__thiscall *TailOfList)(GadgetClass *this);
-  void (__thiscall *Zap)(GadgetClass *this);
-  LinkClass *(__thiscall *Remove)(GadgetClass *this);
   unsigned int (__thiscall *Input)(GadgetClass *this);
   void (__thiscall *DrawAll)(GadgetClass *this, bool);
   void (__thiscall *DeleteList)(GadgetClass *this);
@@ -13938,42 +9949,15 @@ struct ZoneConnectionTable
   int TargetSourcePair;
 };
 
-struct __declspec(align(4)) VectorClass_ZoneConnectionTable
+struct VectorBase_ZoneConnectionTable : VectorBase_ELE
 {
-  VectorClass_ZoneConnectionTable_vtbl *__vftable;
   ZoneConnectionTable *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ZoneConnectionTable_vtbl
-{
-  void (__thiscall *~VectorClass_ZoneConnectionTable)(VectorClass_ZoneConnectionTable *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ZoneConnectionTable *this, VectorClass_ZoneConnectionTable *);
-  bool (__thiscall *SetCapacity)(VectorClass_ZoneConnectionTable *this, int, ZoneConnectionTable *);
-  void (__thiscall *Clear)(VectorClass_ZoneConnectionTable *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
-  int (__thiscall *GetItemIndex)(VectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
-  ZoneConnectionTable *(__thiscall *GetItem)(VectorClass_ZoneConnectionTable *this, ZoneConnectionTable *result, int);
-};
-
-struct DynamicVectorClass_ZoneConnectionTable : VectorClass_ZoneConnectionTable
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ZoneConnectionTable_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ZoneConnectionTable)(DynamicVectorClass_ZoneConnectionTable *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ZoneConnectionTable *this, VectorClass_ZoneConnectionTable *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ZoneConnectionTable *this, int, ZoneConnectionTable *);
-  void (__thiscall *Clear)(DynamicVectorClass_ZoneConnectionTable *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ZoneConnectionTable *this, ZoneConnectionTable *);
-  ZoneConnectionTable *(__thiscall *GetItem)(DynamicVectorClass_ZoneConnectionTable *this, ZoneConnectionTable *result, int);
-};
+struct VectorBase_ZoneConnectionTable_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_ZoneConnectionTable : VectorBase_ZoneConnectionTable, VectorAddon {};
+struct VectorClass_ZoneConnectionTable_vtbl : VectorBase_ZoneConnectionTable_vtbl {};
+struct DynamicVectorClass_ZoneConnectionTable : VectorClass_ZoneConnectionTable, DynamicAddon {};
+struct DynamicVectorClass_ZoneConnectionTable_vtbl : VectorClass_ZoneConnectionTable_vtbl {};
 
 struct ZoneConnectionTables
 {
@@ -13996,42 +9980,15 @@ struct SubzoneConnectionTable
   bool IsDiagonal;
 };
 
-struct __declspec(align(4)) VectorClass_SubzoneConnectionTable
+struct VectorBase_SubzoneConnectionTable : VectorBase_ELE
 {
-  VectorClass_SubzoneConnectionTable_vtbl *__vftable;
   SubzoneConnectionTable *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_SubzoneConnectionTable_vtbl
-{
-  void (__thiscall *~VectorClass_SubzoneConnectionTable)(VectorClass_SubzoneConnectionTable *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SubzoneConnectionTable *this, VectorClass_SubzoneConnectionTable *);
-  bool (__thiscall *SetCapacity)(VectorClass_SubzoneConnectionTable *this, int, SubzoneConnectionTable *);
-  void (__thiscall *Clear)(VectorClass_SubzoneConnectionTable *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
-  int (__thiscall *GetItemIndex)(VectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
-  SubzoneConnectionTable *(__thiscall *GetItem)(VectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *result, int);
-};
-
-struct DynamicVectorClass_SubzoneConnectionTable : VectorClass_SubzoneConnectionTable
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SubzoneConnectionTable_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SubzoneConnectionTable)(DynamicVectorClass_SubzoneConnectionTable *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SubzoneConnectionTable *this, VectorClass_SubzoneConnectionTable *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SubzoneConnectionTable *this, int, SubzoneConnectionTable *);
-  void (__thiscall *Clear)(DynamicVectorClass_SubzoneConnectionTable *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *);
-  SubzoneConnectionTable *(__thiscall *GetItem)(DynamicVectorClass_SubzoneConnectionTable *this, SubzoneConnectionTable *result, int);
-};
+struct VectorBase_SubzoneConnectionTable_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_SubzoneConnectionTable : VectorBase_SubzoneConnectionTable, VectorAddon {};
+struct VectorClass_SubzoneConnectionTable_vtbl : VectorBase_SubzoneConnectionTable_vtbl {};
+struct DynamicVectorClass_SubzoneConnectionTable : VectorClass_SubzoneConnectionTable, DynamicAddon {};
+struct DynamicVectorClass_SubzoneConnectionTable_vtbl : VectorClass_SubzoneConnectionTable_vtbl {};
 
 struct HierarchyConnectionTables
 {
@@ -14714,32 +10671,8 @@ class TacticalClass : AbstractClass
   unsigned int field_E14;
 };
 
-struct TacticalClass_vtbl
+struct TacticalClass_vtbl : AbstractClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
   bool (__thiscall *sub_6DBB60)(TacticalClass *this, CoordStruct *, CoordStruct *, unsigned int, unsigned int);
 };
 
@@ -14755,131 +10688,7 @@ class BuildingLightClass : ObjectClass
   TechnoClass *OwnerObject;
 };
 
-struct BuildingLightClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct BuildingLightClass_vtbl : ObjectClass_vtbl {};
 
 class __declspec(align(8)) BuildingClass : TechnoClass
 {
@@ -14959,317 +10768,8 @@ class __declspec(align(8)) BuildingClass : TechnoClass
   int BunkerState;
 };
 
-struct BuildingClass_vtbl
+struct BuildingClass_vtbl : TechnoClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
-  bool (__thiscall *IsUnitFactory)(TechnoClass *this);
-  bool (__thiscall *IsCloakable)(TechnoClass *this);
-  bool (__thiscall *CanScatter)(TechnoClass *this);
-  bool (__thiscall *BelongsToATeam)(TechnoClass *this);
-  bool (__thiscall *ShouldSelfHealOneStep)(TechnoClass *this);
-  bool (__thiscall *IsVoxel)(TechnoClass *this);
-  bool (__thiscall *vt_entry_29C)(TechnoClass *this);
-  bool (__thiscall *IsReadyToCloak)(TechnoClass *this);
-  bool (__thiscall *ShouldNotBeCloaked)(TechnoClass *this);
-  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *);
-  bool (__thiscall *IsArmed)(TechnoClass *this);
-  bool (__thiscall *vt_entry_2B0)(TechnoClass *this);
-  double (__thiscall *GetStoragePercentage)(TechnoClass *this);
-  int (__thiscall *GetPipFillLevel)(TechnoClass *this);
-  int (__thiscall *GetRefund)(TechnoClass *this);
-  int (__thiscall *GetThreatValue)(TechnoClass *this);
-  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *);
-  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int, unsigned int);
-  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *);
-  int (__thiscall *GetCrewCount)(TechnoClass *this);
-  int (__thiscall *GetAntiAirValue)(TechnoClass *this);
-  int (__thiscall *GetAntiArmorValue)(TechnoClass *this);
-  int (__thiscall *GetAntiInfantryValue)(TechnoClass *this);
-  void (__thiscall *GotHijacked)(TechnoClass *this);
-  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *GetZAdjustment)(TechnoClass *this);
-  ZGradient (__thiscall *GetZGradient)(TechnoClass *this);
-  CellStruct *(__thiscall *GetLastFlightMapCoords)(TechnoClass *this);
-  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct);
-  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *, unsigned int);
-  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int, unsigned int);
-  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *);
-  InfantryTypeClass *(__thiscall *GetCrew)(TechnoClass *this);
-  bool (__thiscall *vt_entry_310)(TechnoClass *this);
-  bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
-  int (__thiscall *GetROF)(TechnoClass *this, int);
-  int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
-  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
-  bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
-  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
-  bool (__thiscall *IsEngineer)(TechnoClass *this);
-  void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  bool (__thiscall *EnterGrinder)(TechnoClass *this);
-  bool (__thiscall *EnterBioReactor)(TechnoClass *this);
-  bool (__thiscall *EnterTankBunker)(TechnoClass *this);
-  bool (__thiscall *EnterBattleBunker)(TechnoClass *this);
-  bool (__thiscall *GarrisonStructure)(TechnoClass *this);
-  bool (__thiscall *IsPowerOnline)(TechnoClass *this);
-  void (__thiscall *QueueVoice)(TechnoClass *this, int);
-  int (__thiscall *VoiceEnter)(TechnoClass *this);
-  int (__thiscall *VoiceHarvest)(TechnoClass *this);
-  int (__thiscall *VoiceSelect)(TechnoClass *this);
-  int (__thiscall *VoiceCapture)(TechnoClass *this);
-  int (__thiscall *VoiceMove)(TechnoClass *this);
-  int (__thiscall *VoiceDeploy)(TechnoClass *this);
-  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType);
-  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission, AbstractClass *, AbstractClass *, CellClass *);
-  bool (__thiscall *IsUnderEMP)(TechnoClass *this);
-  bool (__thiscall *IsParalyzed)(TechnoClass *this);
-  bool (__thiscall *CanCheer)(TechnoClass *this);
-  void (__thiscall *Cheer)(TechnoClass *this, bool);
-  int (__thiscall *GetDefaultSpeed)(TechnoClass *this);
-  void (__thiscall *DecreaseAmmo)(TechnoClass *this);
-  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
-  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
-  void (__thiscall *Stun)(TechnoClass *this);
-  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
-  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
-  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
-  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
-  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
-  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
-  void (__thiscall *Guard)(TechnoClass *this);
-  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
-  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *IsAreaFire)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
-  int (__thiscall *GetSecondaryWeaponIndex)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack2)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetDeployWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetTurretWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int);
-  bool (__thiscall *HasTurret)(TechnoClass *this);
-  bool (__thiscall *CanOccupyFire)(TechnoClass *this);
-  int (__thiscall *GetOccupyRangeBonus)(TechnoClass *this);
-  int (__thiscall *GetOccupantCount)(TechnoClass *this);
-  void (__thiscall *OnFinishRepair)(TechnoClass *this);
-  void (__thiscall *UpdateCloak)(TechnoClass *this, bool);
-  void (__thiscall *CreateGap)(TechnoClass *this);
-  void (__thiscall *DestroyGap)(TechnoClass *this);
-  void (__thiscall *vt_entry_41C)(TechnoClass *this);
-  void (__thiscall *Sensed)(TechnoClass *this);
-  void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
-  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
-  void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
-  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags);
-  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, BlitterFlags);
-  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
-  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *Uncloak)(TechnoClass *this, bool);
-  void (__thiscall *Cloak)(TechnoClass *this, bool);
-  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int);
-  void (__thiscall *UpdateRefinerySmokeSystems)(TechnoClass *this);
-  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *ClearDisguise)(TechnoClass *this);
-  bool (__thiscall *IsItTimeForIdleActionYet)(TechnoClass *this);
-  bool (__thiscall *UpdateIdleAction)(TechnoClass *this);
-  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *, bool);
-  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool, bool);
-  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int);
-  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *, unsigned int);
-  void (__thiscall *RadarTrackingStart)(TechnoClass *this);
-  void (__thiscall *RadarTrackingStop)(TechnoClass *this);
-  void (__thiscall *RadarTrackingFlash)(TechnoClass *this);
-  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool);
-  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *);
-  void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
-  bool (__thiscall *HaveMegaMission)(TechnoClass *this);
-  bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
-  bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
-  bool (__thiscall *MegaMissionIsAttackMove)(TechnoClass *this);
-  bool (__thiscall *ContinueMegaMission)(TechnoClass *this);
-  void (__thiscall *UpdateAttackMove)(TechnoClass *this);
-  bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
   CellStruct *(__thiscall *FindExitCell)(BuildingClass *this, CellStruct *, TechnoClass *);
   int (__thiscall *DistanceToDockingCoord)(BuildingClass *this, ObjectClass *);
   void (__thiscall *Place)(BuildingClass *this, bool);
@@ -15485,56 +10985,8 @@ class BuildingTypeClass : TechnoTypeClass
   unsigned int align_1794;
 };
 
-struct BuildingTypeClass_vtbl
+struct BuildingTypeClass_vtbl : TechnoTypeClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-  bool (__thiscall *CanUseWaypoint)(TechnoTypeClass *this);
-  bool (__thiscall *CanAttackMove)(TechnoTypeClass *this);
-  bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStepCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStep)(TechnoTypeClass *this);
-  int (__thiscall *GetRefund)(TechnoTypeClass *this, HouseClass *, bool);
-  int (__thiscall *GetFlightLevel)(TechnoTypeClass *this);
   SHPStruct *(__thiscall *LoadBuildup)(BuildingTypeClass *this);
 };
 
@@ -15612,317 +11064,8 @@ class FootClass : TechnoClass
   unsigned int unused_6BC;
 };
 
-struct FootClass_vtbl
+struct FootClass_vtbl : TechnoClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
-  bool (__thiscall *IsUnitFactory)(TechnoClass *this);
-  bool (__thiscall *IsCloakable)(TechnoClass *this);
-  bool (__thiscall *CanScatter)(TechnoClass *this);
-  bool (__thiscall *BelongsToATeam)(TechnoClass *this);
-  bool (__thiscall *ShouldSelfHealOneStep)(TechnoClass *this);
-  bool (__thiscall *IsVoxel)(TechnoClass *this);
-  bool (__thiscall *vt_entry_29C)(TechnoClass *this);
-  bool (__thiscall *IsReadyToCloak)(TechnoClass *this);
-  bool (__thiscall *ShouldNotBeCloaked)(TechnoClass *this);
-  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *);
-  bool (__thiscall *IsArmed)(TechnoClass *this);
-  bool (__thiscall *vt_entry_2B0)(TechnoClass *this);
-  double (__thiscall *GetStoragePercentage)(TechnoClass *this);
-  int (__thiscall *GetPipFillLevel)(TechnoClass *this);
-  int (__thiscall *GetRefund)(TechnoClass *this);
-  int (__thiscall *GetThreatValue)(TechnoClass *this);
-  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *);
-  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int, unsigned int);
-  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *);
-  int (__thiscall *GetCrewCount)(TechnoClass *this);
-  int (__thiscall *GetAntiAirValue)(TechnoClass *this);
-  int (__thiscall *GetAntiArmorValue)(TechnoClass *this);
-  int (__thiscall *GetAntiInfantryValue)(TechnoClass *this);
-  void (__thiscall *GotHijacked)(TechnoClass *this);
-  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *GetZAdjustment)(TechnoClass *this);
-  ZGradient (__thiscall *GetZGradient)(TechnoClass *this);
-  CellStruct *(__thiscall *GetLastFlightMapCoords)(TechnoClass *this);
-  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct);
-  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *, unsigned int);
-  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int, unsigned int);
-  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *);
-  InfantryTypeClass *(__thiscall *GetCrew)(TechnoClass *this);
-  bool (__thiscall *vt_entry_310)(TechnoClass *this);
-  bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
-  int (__thiscall *GetROF)(TechnoClass *this, int);
-  int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
-  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
-  bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
-  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
-  bool (__thiscall *IsEngineer)(TechnoClass *this);
-  void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  bool (__thiscall *EnterGrinder)(TechnoClass *this);
-  bool (__thiscall *EnterBioReactor)(TechnoClass *this);
-  bool (__thiscall *EnterTankBunker)(TechnoClass *this);
-  bool (__thiscall *EnterBattleBunker)(TechnoClass *this);
-  bool (__thiscall *GarrisonStructure)(TechnoClass *this);
-  bool (__thiscall *IsPowerOnline)(TechnoClass *this);
-  void (__thiscall *QueueVoice)(TechnoClass *this, int);
-  int (__thiscall *VoiceEnter)(TechnoClass *this);
-  int (__thiscall *VoiceHarvest)(TechnoClass *this);
-  int (__thiscall *VoiceSelect)(TechnoClass *this);
-  int (__thiscall *VoiceCapture)(TechnoClass *this);
-  int (__thiscall *VoiceMove)(TechnoClass *this);
-  int (__thiscall *VoiceDeploy)(TechnoClass *this);
-  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType);
-  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission, AbstractClass *, AbstractClass *, CellClass *);
-  bool (__thiscall *IsUnderEMP)(TechnoClass *this);
-  bool (__thiscall *IsParalyzed)(TechnoClass *this);
-  bool (__thiscall *CanCheer)(TechnoClass *this);
-  void (__thiscall *Cheer)(TechnoClass *this, bool);
-  int (__thiscall *GetDefaultSpeed)(TechnoClass *this);
-  void (__thiscall *DecreaseAmmo)(TechnoClass *this);
-  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
-  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
-  void (__thiscall *Stun)(TechnoClass *this);
-  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
-  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
-  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
-  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
-  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
-  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
-  void (__thiscall *Guard)(TechnoClass *this);
-  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
-  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *IsAreaFire)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
-  int (__thiscall *GetSecondaryWeaponIndex)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack2)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetDeployWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetTurretWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int);
-  bool (__thiscall *HasTurret)(TechnoClass *this);
-  bool (__thiscall *CanOccupyFire)(TechnoClass *this);
-  int (__thiscall *GetOccupyRangeBonus)(TechnoClass *this);
-  int (__thiscall *GetOccupantCount)(TechnoClass *this);
-  void (__thiscall *OnFinishRepair)(TechnoClass *this);
-  void (__thiscall *UpdateCloak)(TechnoClass *this, bool);
-  void (__thiscall *CreateGap)(TechnoClass *this);
-  void (__thiscall *DestroyGap)(TechnoClass *this);
-  void (__thiscall *vt_entry_41C)(TechnoClass *this);
-  void (__thiscall *Sensed)(TechnoClass *this);
-  void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
-  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
-  void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
-  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags);
-  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, BlitterFlags);
-  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
-  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *Uncloak)(TechnoClass *this, bool);
-  void (__thiscall *Cloak)(TechnoClass *this, bool);
-  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int);
-  void (__thiscall *UpdateRefinerySmokeSystems)(TechnoClass *this);
-  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *ClearDisguise)(TechnoClass *this);
-  bool (__thiscall *IsItTimeForIdleActionYet)(TechnoClass *this);
-  bool (__thiscall *UpdateIdleAction)(TechnoClass *this);
-  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *, bool);
-  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool, bool);
-  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int);
-  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *, unsigned int);
-  void (__thiscall *RadarTrackingStart)(TechnoClass *this);
-  void (__thiscall *RadarTrackingStop)(TechnoClass *this);
-  void (__thiscall *RadarTrackingFlash)(TechnoClass *this);
-  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool);
-  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *);
-  void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
-  bool (__thiscall *HaveMegaMission)(TechnoClass *this);
-  bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
-  bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
-  bool (__thiscall *MegaMissionIsAttackMove)(TechnoClass *this);
-  bool (__thiscall *ContinueMegaMission)(TechnoClass *this);
-  void (__thiscall *UpdateAttackMove)(TechnoClass *this);
-  bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
   void (__thiscall *ReceiveGunner)(FootClass *this, FootClass *);
   void (__thiscall *RemoveGunner)(FootClass *this, FootClass *);
   bool (__thiscall *IsLeavingMap)(FootClass *this);
@@ -15975,349 +11118,8 @@ class InfantryClass : FootClass
   unsigned int unused_6EC;
 };
 
-struct InfantryClass_vtbl
+struct InfantryClass_vtbl : FootClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
-  bool (__thiscall *IsUnitFactory)(TechnoClass *this);
-  bool (__thiscall *IsCloakable)(TechnoClass *this);
-  bool (__thiscall *CanScatter)(TechnoClass *this);
-  bool (__thiscall *BelongsToATeam)(TechnoClass *this);
-  bool (__thiscall *ShouldSelfHealOneStep)(TechnoClass *this);
-  bool (__thiscall *IsVoxel)(TechnoClass *this);
-  bool (__thiscall *vt_entry_29C)(TechnoClass *this);
-  bool (__thiscall *IsReadyToCloak)(TechnoClass *this);
-  bool (__thiscall *ShouldNotBeCloaked)(TechnoClass *this);
-  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *);
-  bool (__thiscall *IsArmed)(TechnoClass *this);
-  bool (__thiscall *vt_entry_2B0)(TechnoClass *this);
-  double (__thiscall *GetStoragePercentage)(TechnoClass *this);
-  int (__thiscall *GetPipFillLevel)(TechnoClass *this);
-  int (__thiscall *GetRefund)(TechnoClass *this);
-  int (__thiscall *GetThreatValue)(TechnoClass *this);
-  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *);
-  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int, unsigned int);
-  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *);
-  int (__thiscall *GetCrewCount)(TechnoClass *this);
-  int (__thiscall *GetAntiAirValue)(TechnoClass *this);
-  int (__thiscall *GetAntiArmorValue)(TechnoClass *this);
-  int (__thiscall *GetAntiInfantryValue)(TechnoClass *this);
-  void (__thiscall *GotHijacked)(TechnoClass *this);
-  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *GetZAdjustment)(TechnoClass *this);
-  ZGradient (__thiscall *GetZGradient)(TechnoClass *this);
-  CellStruct *(__thiscall *GetLastFlightMapCoords)(TechnoClass *this);
-  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct);
-  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *, unsigned int);
-  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int, unsigned int);
-  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *);
-  InfantryTypeClass *(__thiscall *GetCrew)(TechnoClass *this);
-  bool (__thiscall *vt_entry_310)(TechnoClass *this);
-  bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
-  int (__thiscall *GetROF)(TechnoClass *this, int);
-  int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
-  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
-  bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
-  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
-  bool (__thiscall *IsEngineer)(TechnoClass *this);
-  void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  bool (__thiscall *EnterGrinder)(TechnoClass *this);
-  bool (__thiscall *EnterBioReactor)(TechnoClass *this);
-  bool (__thiscall *EnterTankBunker)(TechnoClass *this);
-  bool (__thiscall *EnterBattleBunker)(TechnoClass *this);
-  bool (__thiscall *GarrisonStructure)(TechnoClass *this);
-  bool (__thiscall *IsPowerOnline)(TechnoClass *this);
-  void (__thiscall *QueueVoice)(TechnoClass *this, int);
-  int (__thiscall *VoiceEnter)(TechnoClass *this);
-  int (__thiscall *VoiceHarvest)(TechnoClass *this);
-  int (__thiscall *VoiceSelect)(TechnoClass *this);
-  int (__thiscall *VoiceCapture)(TechnoClass *this);
-  int (__thiscall *VoiceMove)(TechnoClass *this);
-  int (__thiscall *VoiceDeploy)(TechnoClass *this);
-  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType);
-  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission, AbstractClass *, AbstractClass *, CellClass *);
-  bool (__thiscall *IsUnderEMP)(TechnoClass *this);
-  bool (__thiscall *IsParalyzed)(TechnoClass *this);
-  bool (__thiscall *CanCheer)(TechnoClass *this);
-  void (__thiscall *Cheer)(TechnoClass *this, bool);
-  int (__thiscall *GetDefaultSpeed)(TechnoClass *this);
-  void (__thiscall *DecreaseAmmo)(TechnoClass *this);
-  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
-  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
-  void (__thiscall *Stun)(TechnoClass *this);
-  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
-  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
-  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
-  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
-  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
-  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
-  void (__thiscall *Guard)(TechnoClass *this);
-  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
-  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *IsAreaFire)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
-  int (__thiscall *GetSecondaryWeaponIndex)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack2)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetDeployWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetTurretWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int);
-  bool (__thiscall *HasTurret)(TechnoClass *this);
-  bool (__thiscall *CanOccupyFire)(TechnoClass *this);
-  int (__thiscall *GetOccupyRangeBonus)(TechnoClass *this);
-  int (__thiscall *GetOccupantCount)(TechnoClass *this);
-  void (__thiscall *OnFinishRepair)(TechnoClass *this);
-  void (__thiscall *UpdateCloak)(TechnoClass *this, bool);
-  void (__thiscall *CreateGap)(TechnoClass *this);
-  void (__thiscall *DestroyGap)(TechnoClass *this);
-  void (__thiscall *vt_entry_41C)(TechnoClass *this);
-  void (__thiscall *Sensed)(TechnoClass *this);
-  void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
-  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
-  void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
-  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags);
-  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, BlitterFlags);
-  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
-  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *Uncloak)(TechnoClass *this, bool);
-  void (__thiscall *Cloak)(TechnoClass *this, bool);
-  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int);
-  void (__thiscall *UpdateRefinerySmokeSystems)(TechnoClass *this);
-  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *ClearDisguise)(TechnoClass *this);
-  bool (__thiscall *IsItTimeForIdleActionYet)(TechnoClass *this);
-  bool (__thiscall *UpdateIdleAction)(TechnoClass *this);
-  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *, bool);
-  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool, bool);
-  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int);
-  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *, unsigned int);
-  void (__thiscall *RadarTrackingStart)(TechnoClass *this);
-  void (__thiscall *RadarTrackingStop)(TechnoClass *this);
-  void (__thiscall *RadarTrackingFlash)(TechnoClass *this);
-  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool);
-  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *);
-  void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
-  bool (__thiscall *HaveMegaMission)(TechnoClass *this);
-  bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
-  bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
-  bool (__thiscall *MegaMissionIsAttackMove)(TechnoClass *this);
-  bool (__thiscall *ContinueMegaMission)(TechnoClass *this);
-  void (__thiscall *UpdateAttackMove)(TechnoClass *this);
-  bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
-  void (__thiscall *ReceiveGunner)(FootClass *this, FootClass *);
-  void (__thiscall *RemoveGunner)(FootClass *this, FootClass *);
-  bool (__thiscall *IsLeavingMap)(FootClass *this);
-  bool (__thiscall *vt_entry_4E0)(FootClass *this);
-  bool (__thiscall *CanDeployNow)(FootClass *this);
-  void (__thiscall *AddSensorsAt)(FootClass *this, CellStruct);
-  void (__thiscall *RemoveSensorsAt)(FootClass *this, CellStruct);
-  CoordStruct *(__thiscall *vt_entry_4F0)(FootClass *this, CoordStruct *);
-  void (__thiscall *vt_entry_4F4)(FootClass *this);
-  bool (__thiscall *vt_entry_4F8)(FootClass *this);
-  bool (__thiscall *MoveTo)(FootClass *this, CoordStruct *);
-  bool (__thiscall *StopMoving)(FootClass *this);
-  bool (__thiscall *vt_entry_504)(FootClass *this);
-  bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
-  void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, BlitterFlags, unsigned int);
-  void (__thiscall *GoBerzerk)(FootClass *this);
-  void (__thiscall *Panic)(FootClass *this);
-  void (__thiscall *UnPanic)(FootClass *this);
-  void (__thiscall *PlayIdleAnim)(FootClass *this, int);
-  unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *FindNearestDockBuilding)(FootClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
-  int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathFinderData *);
-  void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
-  void (__thiscall *vt_entry_548)(FootClass *this);
-  void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
   bool (__thiscall *IsDeployed)(InfantryClass *this);
   bool (__thiscall *PlayAnim)(InfantryClass *this, Sequence, bool, bool);
 };
@@ -16365,57 +11167,7 @@ class InfantryTypeClass : TechnoTypeClass
   unsigned int align_ECC;
 };
 
-struct InfantryTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-  bool (__thiscall *CanUseWaypoint)(TechnoTypeClass *this);
-  bool (__thiscall *CanAttackMove)(TechnoTypeClass *this);
-  bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStepCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStep)(TechnoTypeClass *this);
-  int (__thiscall *GetRefund)(TechnoTypeClass *this, HouseClass *, bool);
-  int (__thiscall *GetFlightLevel)(TechnoTypeClass *this);
-};
+struct InfantryTypeClass_vtbl : TechnoTypeClass_vtbl {};
 
 class UnitClass : FootClass
 {
@@ -16437,349 +11189,8 @@ class UnitClass : FootClass
   wchar_t ToolTipText[256];
 };
 
-struct UnitClass_vtbl
+struct UnitClass_vtbl : FootClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
-  bool (__thiscall *IsUnitFactory)(TechnoClass *this);
-  bool (__thiscall *IsCloakable)(TechnoClass *this);
-  bool (__thiscall *CanScatter)(TechnoClass *this);
-  bool (__thiscall *BelongsToATeam)(TechnoClass *this);
-  bool (__thiscall *ShouldSelfHealOneStep)(TechnoClass *this);
-  bool (__thiscall *IsVoxel)(TechnoClass *this);
-  bool (__thiscall *vt_entry_29C)(TechnoClass *this);
-  bool (__thiscall *IsReadyToCloak)(TechnoClass *this);
-  bool (__thiscall *ShouldNotBeCloaked)(TechnoClass *this);
-  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *);
-  bool (__thiscall *IsArmed)(TechnoClass *this);
-  bool (__thiscall *vt_entry_2B0)(TechnoClass *this);
-  double (__thiscall *GetStoragePercentage)(TechnoClass *this);
-  int (__thiscall *GetPipFillLevel)(TechnoClass *this);
-  int (__thiscall *GetRefund)(TechnoClass *this);
-  int (__thiscall *GetThreatValue)(TechnoClass *this);
-  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *);
-  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int, unsigned int);
-  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *);
-  int (__thiscall *GetCrewCount)(TechnoClass *this);
-  int (__thiscall *GetAntiAirValue)(TechnoClass *this);
-  int (__thiscall *GetAntiArmorValue)(TechnoClass *this);
-  int (__thiscall *GetAntiInfantryValue)(TechnoClass *this);
-  void (__thiscall *GotHijacked)(TechnoClass *this);
-  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *GetZAdjustment)(TechnoClass *this);
-  ZGradient (__thiscall *GetZGradient)(TechnoClass *this);
-  CellStruct *(__thiscall *GetLastFlightMapCoords)(TechnoClass *this);
-  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct);
-  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *, unsigned int);
-  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int, unsigned int);
-  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *);
-  InfantryTypeClass *(__thiscall *GetCrew)(TechnoClass *this);
-  bool (__thiscall *vt_entry_310)(TechnoClass *this);
-  bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
-  int (__thiscall *GetROF)(TechnoClass *this, int);
-  int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
-  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
-  bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
-  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
-  bool (__thiscall *IsEngineer)(TechnoClass *this);
-  void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  bool (__thiscall *EnterGrinder)(TechnoClass *this);
-  bool (__thiscall *EnterBioReactor)(TechnoClass *this);
-  bool (__thiscall *EnterTankBunker)(TechnoClass *this);
-  bool (__thiscall *EnterBattleBunker)(TechnoClass *this);
-  bool (__thiscall *GarrisonStructure)(TechnoClass *this);
-  bool (__thiscall *IsPowerOnline)(TechnoClass *this);
-  void (__thiscall *QueueVoice)(TechnoClass *this, int);
-  int (__thiscall *VoiceEnter)(TechnoClass *this);
-  int (__thiscall *VoiceHarvest)(TechnoClass *this);
-  int (__thiscall *VoiceSelect)(TechnoClass *this);
-  int (__thiscall *VoiceCapture)(TechnoClass *this);
-  int (__thiscall *VoiceMove)(TechnoClass *this);
-  int (__thiscall *VoiceDeploy)(TechnoClass *this);
-  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType);
-  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission, AbstractClass *, AbstractClass *, CellClass *);
-  bool (__thiscall *IsUnderEMP)(TechnoClass *this);
-  bool (__thiscall *IsParalyzed)(TechnoClass *this);
-  bool (__thiscall *CanCheer)(TechnoClass *this);
-  void (__thiscall *Cheer)(TechnoClass *this, bool);
-  int (__thiscall *GetDefaultSpeed)(TechnoClass *this);
-  void (__thiscall *DecreaseAmmo)(TechnoClass *this);
-  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
-  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
-  void (__thiscall *Stun)(TechnoClass *this);
-  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
-  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
-  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
-  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
-  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
-  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
-  void (__thiscall *Guard)(TechnoClass *this);
-  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
-  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *IsAreaFire)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
-  int (__thiscall *GetSecondaryWeaponIndex)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack2)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetDeployWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetTurretWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int);
-  bool (__thiscall *HasTurret)(TechnoClass *this);
-  bool (__thiscall *CanOccupyFire)(TechnoClass *this);
-  int (__thiscall *GetOccupyRangeBonus)(TechnoClass *this);
-  int (__thiscall *GetOccupantCount)(TechnoClass *this);
-  void (__thiscall *OnFinishRepair)(TechnoClass *this);
-  void (__thiscall *UpdateCloak)(TechnoClass *this, bool);
-  void (__thiscall *CreateGap)(TechnoClass *this);
-  void (__thiscall *DestroyGap)(TechnoClass *this);
-  void (__thiscall *vt_entry_41C)(TechnoClass *this);
-  void (__thiscall *Sensed)(TechnoClass *this);
-  void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
-  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
-  void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
-  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags);
-  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, BlitterFlags);
-  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
-  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *Uncloak)(TechnoClass *this, bool);
-  void (__thiscall *Cloak)(TechnoClass *this, bool);
-  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int);
-  void (__thiscall *UpdateRefinerySmokeSystems)(TechnoClass *this);
-  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *ClearDisguise)(TechnoClass *this);
-  bool (__thiscall *IsItTimeForIdleActionYet)(TechnoClass *this);
-  bool (__thiscall *UpdateIdleAction)(TechnoClass *this);
-  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *, bool);
-  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool, bool);
-  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int);
-  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *, unsigned int);
-  void (__thiscall *RadarTrackingStart)(TechnoClass *this);
-  void (__thiscall *RadarTrackingStop)(TechnoClass *this);
-  void (__thiscall *RadarTrackingFlash)(TechnoClass *this);
-  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool);
-  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *);
-  void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
-  bool (__thiscall *HaveMegaMission)(TechnoClass *this);
-  bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
-  bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
-  bool (__thiscall *MegaMissionIsAttackMove)(TechnoClass *this);
-  bool (__thiscall *ContinueMegaMission)(TechnoClass *this);
-  void (__thiscall *UpdateAttackMove)(TechnoClass *this);
-  bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
-  void (__thiscall *ReceiveGunner)(FootClass *this, FootClass *);
-  void (__thiscall *RemoveGunner)(FootClass *this, FootClass *);
-  bool (__thiscall *IsLeavingMap)(FootClass *this);
-  bool (__thiscall *vt_entry_4E0)(FootClass *this);
-  bool (__thiscall *CanDeployNow)(FootClass *this);
-  void (__thiscall *AddSensorsAt)(FootClass *this, CellStruct);
-  void (__thiscall *RemoveSensorsAt)(FootClass *this, CellStruct);
-  CoordStruct *(__thiscall *vt_entry_4F0)(FootClass *this, CoordStruct *);
-  void (__thiscall *vt_entry_4F4)(FootClass *this);
-  bool (__thiscall *vt_entry_4F8)(FootClass *this);
-  bool (__thiscall *MoveTo)(FootClass *this, CoordStruct *);
-  bool (__thiscall *StopMoving)(FootClass *this);
-  bool (__thiscall *vt_entry_504)(FootClass *this);
-  bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
-  void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, BlitterFlags, unsigned int);
-  void (__thiscall *GoBerzerk)(FootClass *this);
-  void (__thiscall *Panic)(FootClass *this);
-  void (__thiscall *UnPanic)(FootClass *this);
-  void (__thiscall *PlayIdleAnim)(FootClass *this, int);
-  unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *FindNearestDockBuilding)(FootClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
-  int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathFinderData *);
-  void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
-  void (__thiscall *vt_entry_548)(FootClass *this);
-  void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
   void (__thiscall *DrawAsVXL)(UnitClass *this, Point2D, RectangleStruct, int, int);
   void (__thiscall *DrawAsSHP)(UnitClass *this, Point2D, RectangleStruct, int, int);
   void (__thiscall *DrawObject)(UnitClass *this, Surface *, Point2D, RectangleStruct, int, int);
@@ -16827,57 +11238,7 @@ class __declspec(align(2)) UnitTypeClass : TechnoTypeClass
   char AltImageFile[25];
 };
 
-struct UnitTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-  bool (__thiscall *CanUseWaypoint)(TechnoTypeClass *this);
-  bool (__thiscall *CanAttackMove)(TechnoTypeClass *this);
-  bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStepCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStep)(TechnoTypeClass *this);
-  int (__thiscall *GetRefund)(TechnoTypeClass *this, HouseClass *, bool);
-  int (__thiscall *GetFlightLevel)(TechnoTypeClass *this);
-};
+struct UnitTypeClass_vtbl : TechnoTypeClass_vtbl {};
 
 class __declspec(align(4)) AircraftClass : FootClass, IFlyControl
 {
@@ -16894,350 +11255,7 @@ class __declspec(align(4)) AircraftClass : FootClass, IFlyControl
   bool IsReturningFromAttackRun;
 };
 
-struct AircraftClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
-  bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
-  bool (__thiscall *Mission_Revert)(MissionClass *this);
-  bool (__thiscall *MissionIsOverriden)(MissionClass *this);
-  bool (__thiscall *ReadyToNextMission)(MissionClass *this);
-  int (__thiscall *Mission_Sleep)(MissionClass *this);
-  int (__thiscall *Mission_Harmless)(MissionClass *this);
-  int (__thiscall *Mission_Ambush)(MissionClass *this);
-  int (__thiscall *Mission_Attack)(MissionClass *this);
-  int (__thiscall *Mission_Capture)(MissionClass *this);
-  int (__thiscall *Mission_Eaten)(MissionClass *this);
-  int (__thiscall *Mission_Guard)(MissionClass *this);
-  int (__thiscall *Mission_AreaGuard)(MissionClass *this);
-  int (__thiscall *Mission_Harvest)(MissionClass *this);
-  int (__thiscall *Mission_Hunt)(MissionClass *this);
-  int (__thiscall *Mission_Move)(MissionClass *this);
-  int (__thiscall *Mission_Retreat)(MissionClass *this);
-  int (__thiscall *Mission_Return)(MissionClass *this);
-  int (__thiscall *Mission_Stop)(MissionClass *this);
-  int (__thiscall *Mission_Unload)(MissionClass *this);
-  int (__thiscall *Mission_Enter)(MissionClass *this);
-  int (__thiscall *Mission_Construction)(MissionClass *this);
-  int (__thiscall *Mission_Selling)(MissionClass *this);
-  int (__thiscall *Mission_Repair)(MissionClass *this);
-  int (__thiscall *Mission_Missile)(MissionClass *this);
-  int (__thiscall *Mission_Open)(MissionClass *this);
-  int (__thiscall *Mission_Rescue)(MissionClass *this);
-  int (__thiscall *Mission_Patrol)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropApproach)(MissionClass *this);
-  int (__thiscall *Mission_ParaDropOverfly)(MissionClass *this);
-  int (__thiscall *Mission_Wait)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneApproach)(MissionClass *this);
-  int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
-  bool (__thiscall *IsUnitFactory)(TechnoClass *this);
-  bool (__thiscall *IsCloakable)(TechnoClass *this);
-  bool (__thiscall *CanScatter)(TechnoClass *this);
-  bool (__thiscall *BelongsToATeam)(TechnoClass *this);
-  bool (__thiscall *ShouldSelfHealOneStep)(TechnoClass *this);
-  bool (__thiscall *IsVoxel)(TechnoClass *this);
-  bool (__thiscall *vt_entry_29C)(TechnoClass *this);
-  bool (__thiscall *IsReadyToCloak)(TechnoClass *this);
-  bool (__thiscall *ShouldNotBeCloaked)(TechnoClass *this);
-  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *);
-  bool (__thiscall *IsArmed)(TechnoClass *this);
-  bool (__thiscall *vt_entry_2B0)(TechnoClass *this);
-  double (__thiscall *GetStoragePercentage)(TechnoClass *this);
-  int (__thiscall *GetPipFillLevel)(TechnoClass *this);
-  int (__thiscall *GetRefund)(TechnoClass *this);
-  int (__thiscall *GetThreatValue)(TechnoClass *this);
-  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *);
-  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int, unsigned int);
-  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *);
-  int (__thiscall *GetCrewCount)(TechnoClass *this);
-  int (__thiscall *GetAntiAirValue)(TechnoClass *this);
-  int (__thiscall *GetAntiArmorValue)(TechnoClass *this);
-  int (__thiscall *GetAntiInfantryValue)(TechnoClass *this);
-  void (__thiscall *GotHijacked)(TechnoClass *this);
-  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *GetZAdjustment)(TechnoClass *this);
-  ZGradient (__thiscall *GetZGradient)(TechnoClass *this);
-  CellStruct *(__thiscall *GetLastFlightMapCoords)(TechnoClass *this);
-  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct);
-  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *, unsigned int);
-  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int, unsigned int);
-  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *);
-  InfantryTypeClass *(__thiscall *GetCrew)(TechnoClass *this);
-  bool (__thiscall *vt_entry_310)(TechnoClass *this);
-  bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
-  int (__thiscall *GetROF)(TechnoClass *this, int);
-  int (__thiscall *GetGuardRange)(TechnoClass *this, int);
-  bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
-  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
-  bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
-  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
-  bool (__thiscall *IsEngineer)(TechnoClass *this);
-  void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  bool (__thiscall *EnterGrinder)(TechnoClass *this);
-  bool (__thiscall *EnterBioReactor)(TechnoClass *this);
-  bool (__thiscall *EnterTankBunker)(TechnoClass *this);
-  bool (__thiscall *EnterBattleBunker)(TechnoClass *this);
-  bool (__thiscall *GarrisonStructure)(TechnoClass *this);
-  bool (__thiscall *IsPowerOnline)(TechnoClass *this);
-  void (__thiscall *QueueVoice)(TechnoClass *this, int);
-  int (__thiscall *VoiceEnter)(TechnoClass *this);
-  int (__thiscall *VoiceHarvest)(TechnoClass *this);
-  int (__thiscall *VoiceSelect)(TechnoClass *this);
-  int (__thiscall *VoiceCapture)(TechnoClass *this);
-  int (__thiscall *VoiceMove)(TechnoClass *this);
-  int (__thiscall *VoiceDeploy)(TechnoClass *this);
-  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType);
-  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission, AbstractClass *, AbstractClass *, CellClass *);
-  bool (__thiscall *IsUnderEMP)(TechnoClass *this);
-  bool (__thiscall *IsParalyzed)(TechnoClass *this);
-  bool (__thiscall *CanCheer)(TechnoClass *this);
-  void (__thiscall *Cheer)(TechnoClass *this, bool);
-  int (__thiscall *GetDefaultSpeed)(TechnoClass *this);
-  void (__thiscall *DecreaseAmmo)(TechnoClass *this);
-  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
-  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
-  void (__thiscall *Stun)(TechnoClass *this);
-  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
-  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
-  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
-  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
-  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
-  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
-  void (__thiscall *Guard)(TechnoClass *this);
-  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
-  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *IsAreaFire)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
-  int (__thiscall *GetSecondaryWeaponIndex)(TechnoClass *this);
-  int (__thiscall *IsNotSprayAttack2)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetDeployWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetTurretWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int);
-  bool (__thiscall *HasTurret)(TechnoClass *this);
-  bool (__thiscall *CanOccupyFire)(TechnoClass *this);
-  int (__thiscall *GetOccupyRangeBonus)(TechnoClass *this);
-  int (__thiscall *GetOccupantCount)(TechnoClass *this);
-  void (__thiscall *OnFinishRepair)(TechnoClass *this);
-  void (__thiscall *UpdateCloak)(TechnoClass *this, bool);
-  void (__thiscall *CreateGap)(TechnoClass *this);
-  void (__thiscall *DestroyGap)(TechnoClass *this);
-  void (__thiscall *vt_entry_41C)(TechnoClass *this);
-  void (__thiscall *Sensed)(TechnoClass *this);
-  void (__thiscall *Reload)(TechnoClass *this);
-  void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
-  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
-  void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
-  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags);
-  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, BlitterFlags);
-  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
-  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *Uncloak)(TechnoClass *this, bool);
-  void (__thiscall *Cloak)(TechnoClass *this, bool);
-  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int);
-  void (__thiscall *UpdateRefinerySmokeSystems)(TechnoClass *this);
-  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *ClearDisguise)(TechnoClass *this);
-  bool (__thiscall *IsItTimeForIdleActionYet)(TechnoClass *this);
-  bool (__thiscall *UpdateIdleAction)(TechnoClass *this);
-  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *, bool);
-  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool, bool);
-  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int);
-  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *, unsigned int);
-  void (__thiscall *RadarTrackingStart)(TechnoClass *this);
-  void (__thiscall *RadarTrackingStop)(TechnoClass *this);
-  void (__thiscall *RadarTrackingFlash)(TechnoClass *this);
-  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool);
-  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *);
-  void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
-  bool (__thiscall *HaveMegaMission)(TechnoClass *this);
-  bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
-  Mission (__thiscall *GetMegaMission)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
-  bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
-  bool (__thiscall *MegaMissionIsAttackMove)(TechnoClass *this);
-  bool (__thiscall *ContinueMegaMission)(TechnoClass *this);
-  void (__thiscall *UpdateAttackMove)(TechnoClass *this);
-  bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
-  void (__thiscall *ReceiveGunner)(FootClass *this, FootClass *);
-  void (__thiscall *RemoveGunner)(FootClass *this, FootClass *);
-  bool (__thiscall *IsLeavingMap)(FootClass *this);
-  bool (__thiscall *vt_entry_4E0)(FootClass *this);
-  bool (__thiscall *CanDeployNow)(FootClass *this);
-  void (__thiscall *AddSensorsAt)(FootClass *this, CellStruct);
-  void (__thiscall *RemoveSensorsAt)(FootClass *this, CellStruct);
-  CoordStruct *(__thiscall *vt_entry_4F0)(FootClass *this, CoordStruct *);
-  void (__thiscall *vt_entry_4F4)(FootClass *this);
-  bool (__thiscall *vt_entry_4F8)(FootClass *this);
-  bool (__thiscall *MoveTo)(FootClass *this, CoordStruct *);
-  bool (__thiscall *StopMoving)(FootClass *this);
-  bool (__thiscall *vt_entry_504)(FootClass *this);
-  bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
-  void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, BlitterFlags, unsigned int);
-  void (__thiscall *GoBerzerk)(FootClass *this);
-  void (__thiscall *Panic)(FootClass *this);
-  void (__thiscall *UnPanic)(FootClass *this);
-  void (__thiscall *PlayIdleAnim)(FootClass *this, int);
-  unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  unsigned int (__thiscall *FindNearestDockBuilding)(FootClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
-  int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathFinderData *);
-  void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
-  void (__thiscall *vt_entry_548)(FootClass *this);
-  void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
-};
+struct AircraftClass_vtbl : FootClass_vtbl {};
 
 class __declspec(align(2)) AircraftTypeClass : TechnoTypeClass
 {
@@ -17254,57 +11272,7 @@ class __declspec(align(2)) AircraftTypeClass : TechnoTypeClass
   bool Fighter;
 };
 
-struct AircraftTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-  bool (__thiscall *CanUseWaypoint)(TechnoTypeClass *this);
-  bool (__thiscall *CanAttackMove)(TechnoTypeClass *this);
-  bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStepCost)(TechnoTypeClass *this);
-  int (__thiscall *GetRepairStep)(TechnoTypeClass *this);
-  int (__thiscall *GetRefund)(TechnoTypeClass *this, HouseClass *, bool);
-  int (__thiscall *GetFlightLevel)(TechnoTypeClass *this);
-};
+struct AircraftTypeClass_vtbl : TechnoTypeClass_vtbl {};
 
 class TerrainClass : ObjectClass
 {
@@ -17315,131 +11283,7 @@ class TerrainClass : ObjectClass
   RectangleStruct unknown_rect_D0;
 };
 
-struct TerrainClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct TerrainClass_vtbl : ObjectClass_vtbl {};
 
 class TerrainTypeClass : ObjectTypeClass
 {
@@ -17458,49 +11302,7 @@ class TerrainTypeClass : ObjectTypeClass
   CellStruct *FoundationData;
 };
 
-struct TerrainTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-};
+struct TerrainTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
 class XSurface : Surface
 {
@@ -17508,42 +11310,8 @@ class XSurface : Surface
   int BytesPerPixel;
 };
 
-struct XSurface_vtbl
+struct XSurface_vtbl : Surface_vtbl
 {
-  void (__thiscall *~XSurface)(XSurface *this, bool);
-  bool (__thiscall *CopyFromWhole)(XSurface *this, Surface *, bool, bool);
-  bool (__thiscall *CopyFromPart)(XSurface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
-  bool (__thiscall *CopyFrom)(XSurface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
-  bool (__thiscall *FillRectEx)(XSurface *this, RectangleStruct *, RectangleStruct *, unsigned int);
-  bool (__thiscall *FillRect)(XSurface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Fill)(XSurface *this, unsigned int);
-  bool (__thiscall *FillRectTrans)(XSurface *this, RectangleStruct *, ColorStruct *, int);
-  bool (__thiscall *DrawEllipse)(XSurface *this, int, int, int, int, RectangleStruct, unsigned int);
-  bool (__thiscall *SetPixel)(XSurface *this, Point2D *, unsigned int);
-  unsigned int (__thiscall *GetPixel)(XSurface *this, Point2D *);
-  bool (__thiscall *DrawLineEx)(XSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLine)(XSurface *this, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLineColor_AZ)(XSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawMultiplyingLine_AZ)(XSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawSubtractiveLine_AZ)(XSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, unsigned int, unsigned int, bool, bool, bool, bool, float);
-  bool (__thiscall *DrawRGBMultiplyingLine_AZ)(XSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, float, unsigned int, unsigned int);
-  bool (__thiscall *PlotLine)(XSurface *this, RectangleStruct *, Point2D *, Point2D *, bool (__fastcall *)(int *));
-  bool (__thiscall *DrawDashedLine)(XSurface *this, Point2D *, Point2D *, int, bool *, int);
-  bool (__thiscall *DrawDashedLine_)(XSurface *this, Point2D *, Point2D *, int, bool *, int, bool);
-  bool (__thiscall *DrawLine_)(XSurface *this, Point2D *, Point2D *, int, bool);
-  bool (__thiscall *DrawRectEx)(XSurface *this, RectangleStruct *, RectangleStruct *, int);
-  bool (__thiscall *DrawRect)(XSurface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(XSurface *this, int, int);
-  bool (__thiscall *Unlock)(XSurface *this);
-  bool (__thiscall *CanLock)(XSurface *this, unsigned int, unsigned int);
-  bool (__thiscall *vt_entry_68)(XSurface *this, unsigned int, unsigned int);
-  bool (__thiscall *IsLocked)(XSurface *this);
-  int (__thiscall *GetBytesPerPixel)(XSurface *this);
-  int (__thiscall *GetPitch)(XSurface *this);
-  RectangleStruct *(__thiscall *GetRect)(XSurface *this, RectangleStruct *);
-  int (__thiscall *GetWidth)(XSurface *this);
-  int (__thiscall *GetHeight)(XSurface *this);
-  bool (__thiscall *IsDSurface)(XSurface *this);
   bool (__thiscall *PutPixelClip)(XSurface *this, Point2D *, __int16, RectangleStruct *);
   __int16 (__thiscall *GetPixelClip)(XSurface *this, Point2D *, RectangleStruct *);
 };
@@ -17558,44 +11326,8 @@ class DSurface : XSurface
   SUR_D_D_SURFACE_DESC2 *VideoSurfaceDescription;
 };
 
-struct DSurface_vtbl
+struct DSurface_vtbl : XSurface_vtbl
 {
-  void (__thiscall *~DSurface)(DSurface *this, bool);
-  bool (__thiscall *CopyFromWhole)(DSurface *this, Surface *, bool, bool);
-  bool (__thiscall *CopyFromPart)(DSurface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
-  bool (__thiscall *CopyFrom)(DSurface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
-  bool (__thiscall *FillRectEx)(DSurface *this, RectangleStruct *, RectangleStruct *, unsigned int);
-  bool (__thiscall *FillRect)(DSurface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Fill)(DSurface *this, unsigned int);
-  bool (__thiscall *FillRectTrans)(DSurface *this, RectangleStruct *, ColorStruct *, int);
-  bool (__thiscall *DrawEllipse)(DSurface *this, int, int, int, int, RectangleStruct, unsigned int);
-  bool (__thiscall *SetPixel)(DSurface *this, Point2D *, unsigned int);
-  unsigned int (__thiscall *GetPixel)(DSurface *this, Point2D *);
-  bool (__thiscall *DrawLineEx)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLine)(DSurface *this, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLineColor_AZ)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawMultiplyingLine_AZ)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawSubtractiveLine_AZ)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, unsigned int, unsigned int, bool, bool, bool, bool, float);
-  bool (__thiscall *DrawRGBMultiplyingLine_AZ)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, float, unsigned int, unsigned int);
-  bool (__thiscall *PlotLine)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, bool (__fastcall *)(int *));
-  bool (__thiscall *DrawDashedLine)(DSurface *this, Point2D *, Point2D *, int, bool *, int);
-  bool (__thiscall *DrawDashedLine_)(DSurface *this, Point2D *, Point2D *, int, bool *, int, bool);
-  bool (__thiscall *DrawLine_)(DSurface *this, Point2D *, Point2D *, int, bool);
-  bool (__thiscall *DrawRectEx)(DSurface *this, RectangleStruct *, RectangleStruct *, int);
-  bool (__thiscall *DrawRect)(DSurface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(DSurface *this, int, int);
-  bool (__thiscall *Unlock)(DSurface *this);
-  bool (__thiscall *CanLock)(DSurface *this, unsigned int, unsigned int);
-  bool (__thiscall *vt_entry_68)(DSurface *this, unsigned int, unsigned int);
-  bool (__thiscall *IsLocked)(DSurface *this);
-  int (__thiscall *GetBytesPerPixel)(DSurface *this);
-  int (__thiscall *GetPitch)(DSurface *this);
-  RectangleStruct *(__thiscall *GetRect)(DSurface *this, RectangleStruct *);
-  int (__thiscall *GetWidth)(DSurface *this);
-  int (__thiscall *GetHeight)(DSurface *this);
-  bool (__thiscall *IsDSurface)(DSurface *this);
-  bool (__thiscall *PutPixelClip)(DSurface *this, Point2D *, __int16, RectangleStruct *);
-  __int16 (__thiscall *GetPixelClip)(DSurface *this, Point2D *, RectangleStruct *);
   bool (__thiscall *DrawGradientLine)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, ColorStruct *, float, int);
   bool (__thiscall *CanBlit)(DSurface *this);
 };
@@ -17605,45 +11337,7 @@ class BSurface : XSurface
   MemoryBuffer Buffer;
 };
 
-struct BSurface_vtbl
-{
-  void (__thiscall *~BSurface)(BSurface *this, bool);
-  bool (__thiscall *CopyFromWhole)(BSurface *this, Surface *, bool, bool);
-  bool (__thiscall *CopyFromPart)(BSurface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
-  bool (__thiscall *CopyFrom)(BSurface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
-  bool (__thiscall *FillRectEx)(BSurface *this, RectangleStruct *, RectangleStruct *, unsigned int);
-  bool (__thiscall *FillRect)(BSurface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Fill)(BSurface *this, unsigned int);
-  bool (__thiscall *FillRectTrans)(BSurface *this, RectangleStruct *, ColorStruct *, int);
-  bool (__thiscall *DrawEllipse)(BSurface *this, int, int, int, int, RectangleStruct, unsigned int);
-  bool (__thiscall *SetPixel)(BSurface *this, Point2D *, unsigned int);
-  unsigned int (__thiscall *GetPixel)(BSurface *this, Point2D *);
-  bool (__thiscall *DrawLineEx)(BSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLine)(BSurface *this, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLineColor_AZ)(BSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawMultiplyingLine_AZ)(BSurface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawSubtractiveLine_AZ)(BSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, unsigned int, unsigned int, bool, bool, bool, bool, float);
-  bool (__thiscall *DrawRGBMultiplyingLine_AZ)(BSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, float, unsigned int, unsigned int);
-  bool (__thiscall *PlotLine)(BSurface *this, RectangleStruct *, Point2D *, Point2D *, bool (__fastcall *)(int *));
-  bool (__thiscall *DrawDashedLine)(BSurface *this, Point2D *, Point2D *, int, bool *, int);
-  bool (__thiscall *DrawDashedLine_)(BSurface *this, Point2D *, Point2D *, int, bool *, int, bool);
-  bool (__thiscall *DrawLine_)(BSurface *this, Point2D *, Point2D *, int, bool);
-  bool (__thiscall *DrawRectEx)(BSurface *this, RectangleStruct *, RectangleStruct *, int);
-  bool (__thiscall *DrawRect)(BSurface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(BSurface *this, int, int);
-  bool (__thiscall *Unlock)(BSurface *this);
-  bool (__thiscall *CanLock)(BSurface *this, unsigned int, unsigned int);
-  bool (__thiscall *vt_entry_68)(BSurface *this, unsigned int, unsigned int);
-  bool (__thiscall *IsLocked)(BSurface *this);
-  int (__thiscall *GetBytesPerPixel)(BSurface *this);
-  int (__thiscall *GetPitch)(BSurface *this);
-  RectangleStruct *(__thiscall *GetRect)(BSurface *this, RectangleStruct *);
-  int (__thiscall *GetWidth)(BSurface *this);
-  int (__thiscall *GetHeight)(BSurface *this);
-  bool (__thiscall *IsDSurface)(BSurface *this);
-  bool (__thiscall *PutPixelClip)(BSurface *this, Point2D *, __int16, RectangleStruct *);
-  __int16 (__thiscall *GetPixelClip)(BSurface *this, Point2D *, RectangleStruct *);
-};
+struct BSurface_vtbl : XSurface_vtbl {};
 
 class LocomotionClass : IPersistStream, ILocomotion
 {
@@ -17654,16 +11348,8 @@ class LocomotionClass : IPersistStream, ILocomotion
   int RefCount;
 };
 
-struct LocomotionClass_vtbl
+struct LocomotionClass_vtbl : IPersistStream
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
   void (__thiscall *~LocomotionClass)(LocomotionClass *this);
   int (__thiscall *Size)(LocomotionClass *this);
 };
@@ -17708,19 +11394,7 @@ class JumpjetLocomotionClass : LocomotionClass, IPiggyback
   ILocomotion *Piggybackee;
 };
 
-struct JumpjetLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct JumpjetLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class FlyLocomotionClass : LocomotionClass
 {
@@ -17743,19 +11417,7 @@ class FlyLocomotionClass : LocomotionClass
   bool unknown_bool_5F;
 };
 
-struct FlyLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct FlyLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class TeleportLocomotionClass : LocomotionClass, IPiggyback
 {
@@ -17769,18 +11431,8 @@ class TeleportLocomotionClass : LocomotionClass, IPiggyback
   ILocomotion *Piggybackee;
 };
 
-struct TeleportLocomotionClass_vtbl
+struct TeleportLocomotionClass_vtbl : LocomotionClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
   void (__stdcall *vt_entry_28)(TeleportLocomotionClass *this);
   bool (__stdcall *IsStill)(TeleportLocomotionClass *this);
 };
@@ -17805,19 +11457,7 @@ class __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
   ILocomotion *Piggybackee;
 };
 
-struct ShipLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct ShipLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class DriveLocomotionClass : LocomotionClass, IPiggyback
 {
@@ -17839,19 +11479,7 @@ class DriveLocomotionClass : LocomotionClass, IPiggyback
   ILocomotion *Piggybackee;
 };
 
-struct DriveLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct DriveLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class __declspec(align(4)) TunnelLocomotionClass : LocomotionClass
 {
@@ -17861,19 +11489,7 @@ class __declspec(align(4)) TunnelLocomotionClass : LocomotionClass
   bool bool38;
 };
 
-struct TunnelLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct TunnelLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class DropPodLocomotionClass : LocomotionClass, IPiggyback
 {
@@ -17882,19 +11498,7 @@ class DropPodLocomotionClass : LocomotionClass, IPiggyback
   LocomotionID Piggybackee;
 };
 
-struct DropPodLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct DropPodLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class RocketLocomotionClass : LocomotionClass
 {
@@ -17911,19 +11515,7 @@ class RocketLocomotionClass : LocomotionClass
   unsigned int unknown_5C;
 };
 
-struct RocketLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct RocketLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class HoverLocomotionClass : LocomotionClass
 {
@@ -17939,19 +11531,7 @@ class HoverLocomotionClass : LocomotionClass
   bool unknown_bool_70;
 };
 
-struct HoverLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct HoverLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class MechLocomotionClass : LocomotionClass
 {
@@ -17960,19 +11540,7 @@ class MechLocomotionClass : LocomotionClass
   bool IsMoving;
 };
 
-struct MechLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct MechLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 class WalkLocomotionClass : LocomotionClass, IPiggyback
 {
@@ -17984,19 +11552,7 @@ class WalkLocomotionClass : LocomotionClass, IPiggyback
   ILocomotion* Piggybackee;
 };
 
-struct WalkLocomotionClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
-  int (__thiscall *Size)(LocomotionClass *this);
-};
+struct WalkLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
 struct WWMouseClass
 {
@@ -18059,115 +11615,34 @@ class TextLabelClass : GadgetClass
   unsigned int AnimTiming;
 };
 
-struct TextLabelClass_vtbl
+struct TextLabelClass_vtbl : GadgetClass_vtbl
 {
-  void (__thiscall *~TextLabelClass)(TextLabelClass *this);
-  LinkClass *(__thiscall *GetNext)(TextLabelClass *this);
-  LinkClass *(__thiscall *GetPrev)(TextLabelClass *this);
-  LinkClass *(__thiscall *Add)(TextLabelClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(TextLabelClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(TextLabelClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(TextLabelClass *this);
-  LinkClass *(__thiscall *TailOfList)(TextLabelClass *this);
-  void (__thiscall *Zap)(TextLabelClass *this);
-  LinkClass *(__thiscall *Remove)(TextLabelClass *this);
-  unsigned int (__thiscall *Input)(TextLabelClass *this);
-  void (__thiscall *DrawAll)(TextLabelClass *this, bool);
-  void (__thiscall *DeleteList)(TextLabelClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(TextLabelClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(TextLabelClass *this);
-  void (__thiscall *Disable)(TextLabelClass *this);
-  void (__thiscall *Enable)(TextLabelClass *this);
-  unsigned int (__thiscall *GetID)(TextLabelClass *this);
-  void (__thiscall *MarkRedraw)(TextLabelClass *this);
-  void (__thiscall *PeerToPeer)(TextLabelClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(TextLabelClass *this);
-  void (__thiscall *KillFocus)(TextLabelClass *this);
-  bool (__thiscall *IsFocused)(TextLabelClass *this);
-  bool (__thiscall *IsListToRedraw)(TextLabelClass *this);
-  bool (__thiscall *IsToRedraw)(TextLabelClass *this);
-  void (__thiscall *SetPosition)(TextLabelClass *this, int, int);
-  void (__thiscall *SetDimension)(TextLabelClass *this, int, int);
-  bool (__thiscall *Draw)(TextLabelClass *this, bool);
-  void (__thiscall *OnMouseEnter)(TextLabelClass *this);
-  void (__thiscall *OnMouseLeave)(TextLabelClass *this);
-  void (__thiscall *StickyProcess)(TextLabelClass *this, GadgetFlag);
-  bool (__thiscall *Action)(TextLabelClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(TextLabelClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *SetText)(TextLabelClass *this, wchar_t *);
 };
 
-struct __declspec(align(4)) VectorClass_ObjectClass_PTR
+struct VectorBase_ObjectClass_PTR : VectorBase_PTR
 {
-  VectorClass_ObjectClass_PTR_vtbl *__vftable;
   ObjectClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ObjectClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ObjectClass_PTR : VectorBase_ObjectClass_PTR, VectorAddon {};
+struct VectorClass_ObjectClass_PTR_vtbl : VectorBase_ObjectClass_PTR_vtbl {};
+struct DynamicVectorClass_ObjectClass_PTR : VectorClass_ObjectClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ObjectClass_PTR_vtbl : VectorClass_ObjectClass_PTR_vtbl {};
 
-struct VectorClass_ObjectClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ObjectClass_PTR)(VectorClass_ObjectClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ObjectClass_PTR *this, VectorClass_ObjectClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ObjectClass_PTR *this, int, ObjectClass **);
-  void (__thiscall *Clear)(VectorClass_ObjectClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ObjectClass_PTR *this, ObjectClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ObjectClass_PTR *this, ObjectClass **);
-  ObjectClass *(__thiscall *GetItem)(VectorClass_ObjectClass_PTR *this, int);
-};
+class LayerClass : DynamicVectorClass_ObjectClass_PTR {};
 
-struct DynamicVectorClass_ObjectClass_PTR : VectorClass_ObjectClass_PTR
+struct LayerClass_vtbl : DynamicVectorClass_ObjectClass_PTR_vtbl
 {
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ObjectClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ObjectClass_PTR)(DynamicVectorClass_ObjectClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ObjectClass_PTR *this, VectorClass_ObjectClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ObjectClass_PTR *this, int, ObjectClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ObjectClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ObjectClass_PTR *this, ObjectClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ObjectClass_PTR *this, ObjectClass **);
-  ObjectClass *(__thiscall *GetItem)(DynamicVectorClass_ObjectClass_PTR *this, int);
-};
-
-class LayerClass : DynamicVectorClass_ObjectClass_PTR
-{
-};
-
-struct LayerClass_vtbl
-{
-  void (__thiscall *~LayerClass)(LayerClass *this);
-  bool (__thiscall *OperatorEqual)(LayerClass *this, VectorClass_ObjectClass_PTR *);
-  bool (__thiscall *SetCapacity)(LayerClass *this, int, ObjectClass **);
-  void (__thiscall *Clear)(LayerClass *this);
-  int (__thiscall *FindItemIndex)(LayerClass *this, ObjectClass **);
-  int (__thiscall *GetItemIndex)(LayerClass *this, ObjectClass **);
-  ObjectClass *(__thiscall *GetItem)(LayerClass *this, int);
   bool (__thiscall *AddObject)(LayerClass *this, ObjectClass *, bool);
   void (__thiscall *RemoveAll)(LayerClass *this);
   void (__thiscall *vt_entry_24)(LayerClass *this);
 };
 
-class LogicClass : LayerClass
-{
-};
+class LogicClass : LayerClass {};
 
-struct LogicClass_vtbl
+struct LogicClass_vtbl : LayerClass_vtbl
 {
-  void (__thiscall *~LogicClass)(LogicClass *this);
-  bool (__thiscall *OperatorEqual)(LogicClass *this, VectorClass_ObjectClass_PTR *);
-  bool (__thiscall *SetCapacity)(LogicClass *this, int, ObjectClass **);
-  void (__thiscall *Clear)(LogicClass *this);
-  int (__thiscall *FindItemIndex)(LogicClass *this, ObjectClass **);
-  int (__thiscall *GetItemIndex)(LogicClass *this, ObjectClass **);
-  ObjectClass *(__thiscall *GetItem)(LogicClass *this, int);
-  bool (__thiscall *AddObject)(LogicClass *this, ObjectClass *, bool);
-  void (__thiscall *RemoveAll)(LogicClass *this);
-  void (__thiscall *vt_entry_24)(LogicClass *this);
   void (__thiscall *PointerGotInvalid)(LogicClass *this, AbstractClass *, bool);
 };
 
@@ -18201,42 +11676,15 @@ struct FileEntryClass
   GameMode GameMode;
 };
 
-struct __declspec(align(4)) VectorClass_FileEntryClass_PTR
+struct VectorBase_FileEntryClass_PTR : VectorBase_PTR
 {
-  VectorClass_FileEntryClass_PTR_vtbl *__vftable;
   FileEntryClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_FileEntryClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_FileEntryClass_PTR)(VectorClass_FileEntryClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_FileEntryClass_PTR *this, VectorClass_FileEntryClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_FileEntryClass_PTR *this, int, FileEntryClass **);
-  void (__thiscall *Clear)(VectorClass_FileEntryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_FileEntryClass_PTR *this, FileEntryClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_FileEntryClass_PTR *this, FileEntryClass **);
-  FileEntryClass *(__thiscall *GetItem)(VectorClass_FileEntryClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_FileEntryClass_PTR : VectorClass_FileEntryClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_FileEntryClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_FileEntryClass_PTR)(DynamicVectorClass_FileEntryClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FileEntryClass_PTR *this, VectorClass_FileEntryClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_FileEntryClass_PTR *this, int, FileEntryClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_FileEntryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_FileEntryClass_PTR *this, FileEntryClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_FileEntryClass_PTR *this, FileEntryClass **);
-  FileEntryClass *(__thiscall *GetItem)(DynamicVectorClass_FileEntryClass_PTR *this, int);
-};
+struct VectorBase_FileEntryClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_FileEntryClass_PTR : VectorBase_FileEntryClass_PTR, VectorAddon {};
+struct VectorClass_FileEntryClass_PTR_vtbl : VectorBase_FileEntryClass_PTR_vtbl {};
+struct DynamicVectorClass_FileEntryClass_PTR : VectorClass_FileEntryClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_FileEntryClass_PTR_vtbl : VectorClass_FileEntryClass_PTR_vtbl {};
 
 struct LoadOptionsClass
 {
@@ -18297,131 +11745,7 @@ class VeinholeMonsterClass : ObjectClass
   int VeinCount;
 };
 
-struct VeinholeMonsterClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct VeinholeMonsterClass_vtbl : ObjectClass_vtbl {};
 
 struct EventList_OutList
 {
@@ -18453,23 +11777,6 @@ public:
   int Timings[0x100];
 };
 
-struct DynamicVectorClass_TechnoClass_PTR : VectorClass_TechnoClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TechnoClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TechnoClass_PTR)(DynamicVectorClass_TechnoClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TechnoClass_PTR *this, VectorClass_TechnoClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TechnoClass_PTR *this, int, TechnoClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TechnoClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TechnoClass_PTR *this, TechnoClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TechnoClass_PTR *this, TechnoClass **);
-  TechnoClass *(__thiscall *GetItem)(DynamicVectorClass_TechnoClass_PTR *this, int);
-};
-
 struct AircraftTrackerClass
 {
   DynamicVectorClass_TechnoClass_PTR TrackerVectors[20][20];
@@ -18484,42 +11791,15 @@ struct __declspec(align(4)) ToolTip
   bool field_18;
 };
 
-struct __declspec(align(4)) VectorClass_ToolTip_PTR
+struct VectorBase_ToolTip_PTR : VectorBase_PTR
 {
-  VectorClass_ToolTip_PTR_vtbl *__vftable;
   ToolTip **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ToolTip_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ToolTip_PTR)(VectorClass_ToolTip_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ToolTip_PTR *this, VectorClass_ToolTip_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ToolTip_PTR *this, int, ToolTip **);
-  void (__thiscall *Clear)(VectorClass_ToolTip_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ToolTip_PTR *this, ToolTip **);
-  int (__thiscall *GetItemIndex)(VectorClass_ToolTip_PTR *this, ToolTip **);
-  ToolTip *(__thiscall *GetItem)(VectorClass_ToolTip_PTR *this, int);
-};
-
-struct DynamicVectorClass_ToolTip_PTR : VectorClass_ToolTip_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ToolTip_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ToolTip_PTR)(DynamicVectorClass_ToolTip_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ToolTip_PTR *this, VectorClass_ToolTip_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ToolTip_PTR *this, int, ToolTip **);
-  void (__thiscall *Clear)(DynamicVectorClass_ToolTip_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ToolTip_PTR *this, ToolTip **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ToolTip_PTR *this, ToolTip **);
-  ToolTip *(__thiscall *GetItem)(DynamicVectorClass_ToolTip_PTR *this, int);
-};
+struct VectorBase_ToolTip_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ToolTip_PTR : VectorBase_ToolTip_PTR, VectorAddon {};
+struct VectorClass_ToolTip_PTR_vtbl : VectorBase_ToolTip_PTR_vtbl {};
+struct DynamicVectorClass_ToolTip_PTR : VectorClass_ToolTip_PTR, DynamicAddon {};
+struct DynamicVectorClass_ToolTip_PTR_vtbl : VectorClass_ToolTip_PTR_vtbl {};
 
 struct IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement
 {
@@ -18584,46 +11864,17 @@ struct CCToolTip_vtbl
   wchar_t *(__thiscall *GetToolTipText)(CCToolTip *this, unsigned int);
 };
 
-struct __declspec(align(4)) VectorClass_ThemeClass_PTR
+struct VectorBase_ThemeClass_PTR : VectorBase_PTR
 {
-  VectorClass_ThemeClass_PTR_vtbl *__vftable;
   ThemeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ThemeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ThemeClass_PTR : VectorBase_ThemeClass_PTR, VectorAddon {};
+struct VectorClass_ThemeClass_PTR_vtbl : VectorBase_ThemeClass_PTR_vtbl {};
+struct DynamicVectorClass_ThemeClass_PTR : VectorClass_ThemeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ThemeClass_PTR_vtbl : VectorClass_ThemeClass_PTR_vtbl {};
 
-struct VectorClass_ThemeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ThemeClass_PTR)(VectorClass_ThemeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ThemeClass_PTR *this, VectorClass_ThemeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ThemeClass_PTR *this, int, ThemeClass **);
-  void (__thiscall *Clear)(VectorClass_ThemeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ThemeClass_PTR *this, ThemeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ThemeClass_PTR *this, ThemeClass **);
-  ThemeClass *(__thiscall *GetItem)(VectorClass_ThemeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ThemeClass_PTR : VectorClass_ThemeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ThemeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ThemeClass_PTR)(DynamicVectorClass_ThemeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ThemeClass_PTR *this, VectorClass_ThemeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ThemeClass_PTR *this, int, ThemeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ThemeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ThemeClass_PTR *this, ThemeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ThemeClass_PTR *this, ThemeClass **);
-  ThemeClass *(__thiscall *GetItem)(DynamicVectorClass_ThemeClass_PTR *this, int);
-};
-
-struct AudioStream
-{
-};
+struct AudioStream {};
 
 struct ThemeClass
 {
@@ -18645,42 +11896,15 @@ struct Color16Struct
   unsigned __int16 R : 5;
 };
 
-struct __declspec(align(4)) VectorClass_Color16Struct_PTR
+struct VectorBase_Color16Struct_PTR : VectorBase_PTR
 {
-  VectorClass_Color16Struct_PTR_vtbl *__vftable;
   Color16Struct **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_Color16Struct_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_Color16Struct_PTR)(VectorClass_Color16Struct_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_Color16Struct_PTR *this, VectorClass_Color16Struct_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_Color16Struct_PTR *this, int, Color16Struct **);
-  void (__thiscall *Clear)(VectorClass_Color16Struct_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_Color16Struct_PTR *this, Color16Struct **);
-  int (__thiscall *GetItemIndex)(VectorClass_Color16Struct_PTR *this, Color16Struct **);
-  Color16Struct *(__thiscall *GetItem)(VectorClass_Color16Struct_PTR *this, int);
-};
-
-struct DynamicVectorClass_Color16Struct_PTR : VectorClass_Color16Struct_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_Color16Struct_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_Color16Struct_PTR)(DynamicVectorClass_Color16Struct_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_Color16Struct_PTR *this, VectorClass_Color16Struct_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_Color16Struct_PTR *this, int, Color16Struct **);
-  void (__thiscall *Clear)(DynamicVectorClass_Color16Struct_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_Color16Struct_PTR *this, Color16Struct **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_Color16Struct_PTR *this, Color16Struct **);
-  Color16Struct *(__thiscall *GetItem)(DynamicVectorClass_Color16Struct_PTR *this, int);
-};
+struct VectorBase_Color16Struct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_Color16Struct_PTR : VectorBase_Color16Struct_PTR, VectorAddon {};
+struct VectorClass_Color16Struct_PTR_vtbl : VectorBase_Color16Struct_PTR_vtbl {};
+struct DynamicVectorClass_Color16Struct_PTR : VectorClass_Color16Struct_PTR, DynamicAddon {};
+struct DynamicVectorClass_Color16Struct_PTR_vtbl : VectorClass_Color16Struct_PTR_vtbl {};
 
 class IsometricTileTypeClass : ObjectTypeClass
 {
@@ -18714,1179 +11938,317 @@ class IsometricTileTypeClass : ObjectTypeClass
   unsigned int unk_308;
 };
 
-struct IsometricTileTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
-  unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
-  int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
-  int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
-  SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
-  SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
-};
+struct IsometricTileTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
-struct __declspec(align(4)) VectorClass_UnitClass_PTR
+struct VectorBase_UnitClass_PTR : VectorBase_PTR
 {
-  VectorClass_UnitClass_PTR_vtbl *__vftable;
   UnitClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_UnitClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_UnitClass_PTR : VectorBase_UnitClass_PTR, VectorAddon {};
+struct VectorClass_UnitClass_PTR_vtbl : VectorBase_UnitClass_PTR_vtbl {};
+struct DynamicVectorClass_UnitClass_PTR : VectorClass_UnitClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_UnitClass_PTR_vtbl : VectorClass_UnitClass_PTR_vtbl {};
 
-struct VectorClass_UnitClass_PTR_vtbl
+struct VectorBase_AircraftClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_UnitClass_PTR)(VectorClass_UnitClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_UnitClass_PTR *this, VectorClass_UnitClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_UnitClass_PTR *this, int, UnitClass **);
-  void (__thiscall *Clear)(VectorClass_UnitClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_UnitClass_PTR *this, UnitClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_UnitClass_PTR *this, UnitClass **);
-  UnitClass *(__thiscall *GetItem)(VectorClass_UnitClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_UnitClass_PTR : VectorClass_UnitClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_UnitClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_UnitClass_PTR)(DynamicVectorClass_UnitClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_UnitClass_PTR *this, VectorClass_UnitClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_UnitClass_PTR *this, int, UnitClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_UnitClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_UnitClass_PTR *this, UnitClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_UnitClass_PTR *this, UnitClass **);
-  UnitClass *(__thiscall *GetItem)(DynamicVectorClass_UnitClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AircraftClass_PTR
-{
-  VectorClass_AircraftClass_PTR_vtbl *__vftable;
   AircraftClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AircraftClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AircraftClass_PTR : VectorBase_AircraftClass_PTR, VectorAddon {};
+struct VectorClass_AircraftClass_PTR_vtbl : VectorBase_AircraftClass_PTR_vtbl {};
+struct DynamicVectorClass_AircraftClass_PTR : VectorClass_AircraftClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AircraftClass_PTR_vtbl : VectorClass_AircraftClass_PTR_vtbl {};
 
-struct VectorClass_AircraftClass_PTR_vtbl
+struct VectorBase_SuperWeaponTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AircraftClass_PTR)(VectorClass_AircraftClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AircraftClass_PTR *this, VectorClass_AircraftClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AircraftClass_PTR *this, int, AircraftClass **);
-  void (__thiscall *Clear)(VectorClass_AircraftClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AircraftClass_PTR *this, AircraftClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AircraftClass_PTR *this, AircraftClass **);
-  AircraftClass *(__thiscall *GetItem)(VectorClass_AircraftClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AircraftClass_PTR : VectorClass_AircraftClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AircraftClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AircraftClass_PTR)(DynamicVectorClass_AircraftClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AircraftClass_PTR *this, VectorClass_AircraftClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AircraftClass_PTR *this, int, AircraftClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AircraftClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AircraftClass_PTR *this, AircraftClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AircraftClass_PTR *this, AircraftClass **);
-  AircraftClass *(__thiscall *GetItem)(DynamicVectorClass_AircraftClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_SuperWeaponTypeClass_PTR
-{
-  VectorClass_SuperWeaponTypeClass_PTR_vtbl *__vftable;
   SuperWeaponTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SuperWeaponTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SuperWeaponTypeClass_PTR : VectorBase_SuperWeaponTypeClass_PTR, VectorAddon {};
+struct VectorClass_SuperWeaponTypeClass_PTR_vtbl : VectorBase_SuperWeaponTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_SuperWeaponTypeClass_PTR : VectorClass_SuperWeaponTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SuperWeaponTypeClass_PTR_vtbl : VectorClass_SuperWeaponTypeClass_PTR_vtbl {};
 
-struct VectorClass_SuperWeaponTypeClass_PTR_vtbl
+struct VectorBase_ParticleTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_SuperWeaponTypeClass_PTR)(VectorClass_SuperWeaponTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SuperWeaponTypeClass_PTR *this, VectorClass_SuperWeaponTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SuperWeaponTypeClass_PTR *this, int, SuperWeaponTypeClass **);
-  void (__thiscall *Clear)(VectorClass_SuperWeaponTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SuperWeaponTypeClass_PTR *this, SuperWeaponTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SuperWeaponTypeClass_PTR *this, SuperWeaponTypeClass **);
-  SuperWeaponTypeClass *(__thiscall *GetItem)(VectorClass_SuperWeaponTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SuperWeaponTypeClass_PTR : VectorClass_SuperWeaponTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SuperWeaponTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SuperWeaponTypeClass_PTR)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this, VectorClass_SuperWeaponTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this, int, SuperWeaponTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this, SuperWeaponTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this, SuperWeaponTypeClass **);
-  SuperWeaponTypeClass *(__thiscall *GetItem)(DynamicVectorClass_SuperWeaponTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ParticleTypeClass_PTR
-{
-  VectorClass_ParticleTypeClass_PTR_vtbl *__vftable;
   ParticleTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ParticleTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ParticleTypeClass_PTR : VectorBase_ParticleTypeClass_PTR, VectorAddon {};
+struct VectorClass_ParticleTypeClass_PTR_vtbl : VectorBase_ParticleTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_ParticleTypeClass_PTR : VectorClass_ParticleTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ParticleTypeClass_PTR_vtbl : VectorClass_ParticleTypeClass_PTR_vtbl {};
 
-struct VectorClass_ParticleTypeClass_PTR_vtbl
+struct VectorBase_HouseClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ParticleTypeClass_PTR)(VectorClass_ParticleTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ParticleTypeClass_PTR *this, VectorClass_ParticleTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ParticleTypeClass_PTR *this, int, ParticleTypeClass **);
-  void (__thiscall *Clear)(VectorClass_ParticleTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ParticleTypeClass_PTR *this, ParticleTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ParticleTypeClass_PTR *this, ParticleTypeClass **);
-  ParticleTypeClass *(__thiscall *GetItem)(VectorClass_ParticleTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ParticleTypeClass_PTR : VectorClass_ParticleTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ParticleTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ParticleTypeClass_PTR)(DynamicVectorClass_ParticleTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ParticleTypeClass_PTR *this, VectorClass_ParticleTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ParticleTypeClass_PTR *this, int, ParticleTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ParticleTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ParticleTypeClass_PTR *this, ParticleTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ParticleTypeClass_PTR *this, ParticleTypeClass **);
-  ParticleTypeClass *(__thiscall *GetItem)(DynamicVectorClass_ParticleTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_HouseClass_PTR
-{
-  VectorClass_HouseClass_PTR_vtbl *__vftable;
   HouseClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_HouseClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_HouseClass_PTR : VectorBase_HouseClass_PTR, VectorAddon {};
+struct VectorClass_HouseClass_PTR_vtbl : VectorBase_HouseClass_PTR_vtbl {};
+struct DynamicVectorClass_HouseClass_PTR : VectorClass_HouseClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_HouseClass_PTR_vtbl : VectorClass_HouseClass_PTR_vtbl {};
 
-struct VectorClass_HouseClass_PTR_vtbl
+struct VectorBase_HouseTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_HouseClass_PTR)(VectorClass_HouseClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_HouseClass_PTR *this, VectorClass_HouseClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_HouseClass_PTR *this, int, HouseClass **);
-  void (__thiscall *Clear)(VectorClass_HouseClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HouseClass_PTR *this, HouseClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_HouseClass_PTR *this, HouseClass **);
-  HouseClass *(__thiscall *GetItem)(VectorClass_HouseClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_HouseClass_PTR : VectorClass_HouseClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_HouseClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_HouseClass_PTR)(DynamicVectorClass_HouseClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_HouseClass_PTR *this, VectorClass_HouseClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_HouseClass_PTR *this, int, HouseClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_HouseClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_HouseClass_PTR *this, HouseClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_HouseClass_PTR *this, HouseClass **);
-  HouseClass *(__thiscall *GetItem)(DynamicVectorClass_HouseClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_HouseTypeClass_PTR
-{
-  VectorClass_HouseTypeClass_PTR_vtbl *__vftable;
   HouseTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_HouseTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_HouseTypeClass_PTR : VectorBase_HouseTypeClass_PTR, VectorAddon {};
+struct VectorClass_HouseTypeClass_PTR_vtbl : VectorBase_HouseTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_HouseTypeClass_PTR : VectorClass_HouseTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_HouseTypeClass_PTR_vtbl : VectorClass_HouseTypeClass_PTR_vtbl {};
 
-struct VectorClass_HouseTypeClass_PTR_vtbl
+struct VectorBase_WeaponTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_HouseTypeClass_PTR)(VectorClass_HouseTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_HouseTypeClass_PTR *this, VectorClass_HouseTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_HouseTypeClass_PTR *this, int, HouseTypeClass **);
-  void (__thiscall *Clear)(VectorClass_HouseTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HouseTypeClass_PTR *this, HouseTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_HouseTypeClass_PTR *this, HouseTypeClass **);
-  HouseTypeClass *(__thiscall *GetItem)(VectorClass_HouseTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_HouseTypeClass_PTR : VectorClass_HouseTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_HouseTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_HouseTypeClass_PTR)(DynamicVectorClass_HouseTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_HouseTypeClass_PTR *this, VectorClass_HouseTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_HouseTypeClass_PTR *this, int, HouseTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_HouseTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_HouseTypeClass_PTR *this, HouseTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_HouseTypeClass_PTR *this, HouseTypeClass **);
-  HouseTypeClass *(__thiscall *GetItem)(DynamicVectorClass_HouseTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_WeaponTypeClass_PTR
-{
-  VectorClass_WeaponTypeClass_PTR_vtbl *__vftable;
   WeaponTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_WeaponTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_WeaponTypeClass_PTR : VectorBase_WeaponTypeClass_PTR, VectorAddon {};
+struct VectorClass_WeaponTypeClass_PTR_vtbl : VectorBase_WeaponTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_WeaponTypeClass_PTR : VectorClass_WeaponTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_WeaponTypeClass_PTR_vtbl : VectorClass_WeaponTypeClass_PTR_vtbl {};
 
-struct VectorClass_WeaponTypeClass_PTR_vtbl
+struct VectorBase_WarheadTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_WeaponTypeClass_PTR)(VectorClass_WeaponTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_WeaponTypeClass_PTR *this, VectorClass_WeaponTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_WeaponTypeClass_PTR *this, int, WeaponTypeClass **);
-  void (__thiscall *Clear)(VectorClass_WeaponTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_WeaponTypeClass_PTR *this, WeaponTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_WeaponTypeClass_PTR *this, WeaponTypeClass **);
-  WeaponTypeClass *(__thiscall *GetItem)(VectorClass_WeaponTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_WeaponTypeClass_PTR : VectorClass_WeaponTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_WeaponTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_WeaponTypeClass_PTR)(DynamicVectorClass_WeaponTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_WeaponTypeClass_PTR *this, VectorClass_WeaponTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_WeaponTypeClass_PTR *this, int, WeaponTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_WeaponTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_WeaponTypeClass_PTR *this, WeaponTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_WeaponTypeClass_PTR *this, WeaponTypeClass **);
-  WeaponTypeClass *(__thiscall *GetItem)(DynamicVectorClass_WeaponTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_WarheadTypeClass_PTR
-{
-  VectorClass_WarheadTypeClass_PTR_vtbl *__vftable;
   WarheadTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_WarheadTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_WarheadTypeClass_PTR : VectorBase_WarheadTypeClass_PTR, VectorAddon {};
+struct VectorClass_WarheadTypeClass_PTR_vtbl : VectorBase_WarheadTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_WarheadTypeClass_PTR : VectorClass_WarheadTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_WarheadTypeClass_PTR_vtbl : VectorClass_WarheadTypeClass_PTR_vtbl {};
 
-struct VectorClass_WarheadTypeClass_PTR_vtbl
+struct VectorBase_BulletClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_WarheadTypeClass_PTR)(VectorClass_WarheadTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_WarheadTypeClass_PTR *this, VectorClass_WarheadTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_WarheadTypeClass_PTR *this, int, WarheadTypeClass **);
-  void (__thiscall *Clear)(VectorClass_WarheadTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_WarheadTypeClass_PTR *this, WarheadTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_WarheadTypeClass_PTR *this, WarheadTypeClass **);
-  WarheadTypeClass *(__thiscall *GetItem)(VectorClass_WarheadTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_WarheadTypeClass_PTR : VectorClass_WarheadTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_WarheadTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_WarheadTypeClass_PTR)(DynamicVectorClass_WarheadTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_WarheadTypeClass_PTR *this, VectorClass_WarheadTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_WarheadTypeClass_PTR *this, int, WarheadTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_WarheadTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_WarheadTypeClass_PTR *this, WarheadTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_WarheadTypeClass_PTR *this, WarheadTypeClass **);
-  WarheadTypeClass *(__thiscall *GetItem)(DynamicVectorClass_WarheadTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_BulletClass_PTR
-{
-  VectorClass_BulletClass_PTR_vtbl *__vftable;
   BulletClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_BulletClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BulletClass_PTR : VectorBase_BulletClass_PTR, VectorAddon {};
+struct VectorClass_BulletClass_PTR_vtbl : VectorBase_BulletClass_PTR_vtbl {};
+struct DynamicVectorClass_BulletClass_PTR : VectorClass_BulletClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_BulletClass_PTR_vtbl : VectorClass_BulletClass_PTR_vtbl {};
 
-struct VectorClass_BulletClass_PTR_vtbl
+struct VectorBase_BulletTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_BulletClass_PTR)(VectorClass_BulletClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BulletClass_PTR *this, VectorClass_BulletClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_BulletClass_PTR *this, int, BulletClass **);
-  void (__thiscall *Clear)(VectorClass_BulletClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BulletClass_PTR *this, BulletClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_BulletClass_PTR *this, BulletClass **);
-  BulletClass *(__thiscall *GetItem)(VectorClass_BulletClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_BulletClass_PTR : VectorClass_BulletClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BulletClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BulletClass_PTR)(DynamicVectorClass_BulletClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BulletClass_PTR *this, VectorClass_BulletClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BulletClass_PTR *this, int, BulletClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_BulletClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BulletClass_PTR *this, BulletClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BulletClass_PTR *this, BulletClass **);
-  BulletClass *(__thiscall *GetItem)(DynamicVectorClass_BulletClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_BulletTypeClass_PTR
-{
-  VectorClass_BulletTypeClass_PTR_vtbl *__vftable;
   BulletTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_BulletTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BulletTypeClass_PTR : VectorBase_BulletTypeClass_PTR, VectorAddon {};
+struct VectorClass_BulletTypeClass_PTR_vtbl : VectorBase_BulletTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_BulletTypeClass_PTR : VectorClass_BulletTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_BulletTypeClass_PTR_vtbl : VectorClass_BulletTypeClass_PTR_vtbl {};
 
-struct VectorClass_BulletTypeClass_PTR_vtbl
+struct VectorBase_TeamClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_BulletTypeClass_PTR)(VectorClass_BulletTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BulletTypeClass_PTR *this, VectorClass_BulletTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_BulletTypeClass_PTR *this, int, BulletTypeClass **);
-  void (__thiscall *Clear)(VectorClass_BulletTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BulletTypeClass_PTR *this, BulletTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_BulletTypeClass_PTR *this, BulletTypeClass **);
-  BulletTypeClass *(__thiscall *GetItem)(VectorClass_BulletTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_BulletTypeClass_PTR : VectorClass_BulletTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BulletTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BulletTypeClass_PTR)(DynamicVectorClass_BulletTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BulletTypeClass_PTR *this, VectorClass_BulletTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BulletTypeClass_PTR *this, int, BulletTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_BulletTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BulletTypeClass_PTR *this, BulletTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BulletTypeClass_PTR *this, BulletTypeClass **);
-  BulletTypeClass *(__thiscall *GetItem)(DynamicVectorClass_BulletTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TeamClass_PTR
-{
-  VectorClass_TeamClass_PTR_vtbl *__vftable;
   TeamClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TeamClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TeamClass_PTR : VectorBase_TeamClass_PTR, VectorAddon {};
+struct VectorClass_TeamClass_PTR_vtbl : VectorBase_TeamClass_PTR_vtbl {};
+struct DynamicVectorClass_TeamClass_PTR : VectorClass_TeamClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TeamClass_PTR_vtbl : VectorClass_TeamClass_PTR_vtbl {};
 
-struct VectorClass_TeamClass_PTR_vtbl
+struct VectorBase_TeamTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TeamClass_PTR)(VectorClass_TeamClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TeamClass_PTR *this, VectorClass_TeamClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TeamClass_PTR *this, int, TeamClass **);
-  void (__thiscall *Clear)(VectorClass_TeamClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TeamClass_PTR *this, TeamClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TeamClass_PTR *this, TeamClass **);
-  TeamClass *(__thiscall *GetItem)(VectorClass_TeamClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TeamClass_PTR : VectorClass_TeamClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TeamClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TeamClass_PTR)(DynamicVectorClass_TeamClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TeamClass_PTR *this, VectorClass_TeamClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TeamClass_PTR *this, int, TeamClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TeamClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TeamClass_PTR *this, TeamClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TeamClass_PTR *this, TeamClass **);
-  TeamClass *(__thiscall *GetItem)(DynamicVectorClass_TeamClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TeamTypeClass_PTR
-{
-  VectorClass_TeamTypeClass_PTR_vtbl *__vftable;
   TeamTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TeamTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TeamTypeClass_PTR : VectorBase_TeamTypeClass_PTR, VectorAddon {};
+struct VectorClass_TeamTypeClass_PTR_vtbl : VectorBase_TeamTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_TeamTypeClass_PTR : VectorClass_TeamTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TeamTypeClass_PTR_vtbl : VectorClass_TeamTypeClass_PTR_vtbl {};
+struct TypeList_TeamTypeClass_PTR : DynamicVectorClass_TeamTypeClass_PTR, TypeListAddon {};
+struct TypeList_TeamTypeClass_PTR_vtbl : DynamicVectorClass_TeamTypeClass_PTR_vtbl {};
 
-struct VectorClass_TeamTypeClass_PTR_vtbl
+struct VectorBase_TaskForceClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TeamTypeClass_PTR)(VectorClass_TeamTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TeamTypeClass_PTR *this, VectorClass_TeamTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TeamTypeClass_PTR *this, int, TeamTypeClass **);
-  void (__thiscall *Clear)(VectorClass_TeamTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TeamTypeClass_PTR *this, TeamTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TeamTypeClass_PTR *this, TeamTypeClass **);
-  TeamTypeClass *(__thiscall *GetItem)(VectorClass_TeamTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TeamTypeClass_PTR : VectorClass_TeamTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TeamTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TeamTypeClass_PTR)(DynamicVectorClass_TeamTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TeamTypeClass_PTR *this, VectorClass_TeamTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TeamTypeClass_PTR *this, int, TeamTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TeamTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TeamTypeClass_PTR *this, TeamTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TeamTypeClass_PTR *this, TeamTypeClass **);
-  TeamTypeClass *(__thiscall *GetItem)(DynamicVectorClass_TeamTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TaskForceClass_PTR
-{
-  VectorClass_TaskForceClass_PTR_vtbl *__vftable;
   TaskForceClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TaskForceClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TaskForceClass_PTR : VectorBase_TaskForceClass_PTR, VectorAddon {};
+struct VectorClass_TaskForceClass_PTR_vtbl : VectorBase_TaskForceClass_PTR_vtbl {};
+struct DynamicVectorClass_TaskForceClass_PTR : VectorClass_TaskForceClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TaskForceClass_PTR_vtbl : VectorClass_TaskForceClass_PTR_vtbl {};
 
-struct VectorClass_TaskForceClass_PTR_vtbl
+struct VectorBase_SideClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TaskForceClass_PTR)(VectorClass_TaskForceClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TaskForceClass_PTR *this, VectorClass_TaskForceClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TaskForceClass_PTR *this, int, TaskForceClass **);
-  void (__thiscall *Clear)(VectorClass_TaskForceClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TaskForceClass_PTR *this, TaskForceClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TaskForceClass_PTR *this, TaskForceClass **);
-  TaskForceClass *(__thiscall *GetItem)(VectorClass_TaskForceClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TaskForceClass_PTR : VectorClass_TaskForceClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TaskForceClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TaskForceClass_PTR)(DynamicVectorClass_TaskForceClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TaskForceClass_PTR *this, VectorClass_TaskForceClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TaskForceClass_PTR *this, int, TaskForceClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TaskForceClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TaskForceClass_PTR *this, TaskForceClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TaskForceClass_PTR *this, TaskForceClass **);
-  TaskForceClass *(__thiscall *GetItem)(DynamicVectorClass_TaskForceClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_SideClass_PTR
-{
-  VectorClass_SideClass_PTR_vtbl *__vftable;
   SideClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SideClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SideClass_PTR : VectorBase_SideClass_PTR, VectorAddon {};
+struct VectorClass_SideClass_PTR_vtbl : VectorBase_SideClass_PTR_vtbl {};
+struct DynamicVectorClass_SideClass_PTR : VectorClass_SideClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SideClass_PTR_vtbl : VectorClass_SideClass_PTR_vtbl {};
 
-struct VectorClass_SideClass_PTR_vtbl
+struct VectorBase_ScriptTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_SideClass_PTR)(VectorClass_SideClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SideClass_PTR *this, VectorClass_SideClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SideClass_PTR *this, int, SideClass **);
-  void (__thiscall *Clear)(VectorClass_SideClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SideClass_PTR *this, SideClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SideClass_PTR *this, SideClass **);
-  SideClass *(__thiscall *GetItem)(VectorClass_SideClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SideClass_PTR : VectorClass_SideClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SideClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SideClass_PTR)(DynamicVectorClass_SideClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SideClass_PTR *this, VectorClass_SideClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SideClass_PTR *this, int, SideClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SideClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SideClass_PTR *this, SideClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SideClass_PTR *this, SideClass **);
-  SideClass *(__thiscall *GetItem)(DynamicVectorClass_SideClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ScriptTypeClass_PTR
-{
-  VectorClass_ScriptTypeClass_PTR_vtbl *__vftable;
   ScriptTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ScriptTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ScriptTypeClass_PTR : VectorBase_ScriptTypeClass_PTR, VectorAddon {};
+struct VectorClass_ScriptTypeClass_PTR_vtbl : VectorBase_ScriptTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_ScriptTypeClass_PTR : VectorClass_ScriptTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ScriptTypeClass_PTR_vtbl : VectorClass_ScriptTypeClass_PTR_vtbl {};
 
-struct VectorClass_ScriptTypeClass_PTR_vtbl
+struct VectorBase_TiberiumClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ScriptTypeClass_PTR)(VectorClass_ScriptTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ScriptTypeClass_PTR *this, VectorClass_ScriptTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ScriptTypeClass_PTR *this, int, ScriptTypeClass **);
-  void (__thiscall *Clear)(VectorClass_ScriptTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ScriptTypeClass_PTR *this, ScriptTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ScriptTypeClass_PTR *this, ScriptTypeClass **);
-  ScriptTypeClass *(__thiscall *GetItem)(VectorClass_ScriptTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ScriptTypeClass_PTR : VectorClass_ScriptTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ScriptTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ScriptTypeClass_PTR)(DynamicVectorClass_ScriptTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ScriptTypeClass_PTR *this, VectorClass_ScriptTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ScriptTypeClass_PTR *this, int, ScriptTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ScriptTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ScriptTypeClass_PTR *this, ScriptTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ScriptTypeClass_PTR *this, ScriptTypeClass **);
-  ScriptTypeClass *(__thiscall *GetItem)(DynamicVectorClass_ScriptTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TiberiumClass_PTR
-{
-  VectorClass_TiberiumClass_PTR_vtbl *__vftable;
   TiberiumClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TiberiumClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TiberiumClass_PTR : VectorBase_TiberiumClass_PTR, VectorAddon {};
+struct VectorClass_TiberiumClass_PTR_vtbl : VectorBase_TiberiumClass_PTR_vtbl {};
+struct DynamicVectorClass_TiberiumClass_PTR : VectorClass_TiberiumClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TiberiumClass_PTR_vtbl : VectorClass_TiberiumClass_PTR_vtbl {};
 
-struct VectorClass_TiberiumClass_PTR_vtbl
+struct VectorBase_FactoryClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TiberiumClass_PTR)(VectorClass_TiberiumClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TiberiumClass_PTR *this, VectorClass_TiberiumClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TiberiumClass_PTR *this, int, TiberiumClass **);
-  void (__thiscall *Clear)(VectorClass_TiberiumClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TiberiumClass_PTR *this, TiberiumClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TiberiumClass_PTR *this, TiberiumClass **);
-  TiberiumClass *(__thiscall *GetItem)(VectorClass_TiberiumClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TiberiumClass_PTR : VectorClass_TiberiumClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TiberiumClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TiberiumClass_PTR)(DynamicVectorClass_TiberiumClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TiberiumClass_PTR *this, VectorClass_TiberiumClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TiberiumClass_PTR *this, int, TiberiumClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TiberiumClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TiberiumClass_PTR *this, TiberiumClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TiberiumClass_PTR *this, TiberiumClass **);
-  TiberiumClass *(__thiscall *GetItem)(DynamicVectorClass_TiberiumClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_FactoryClass_PTR
-{
-  VectorClass_FactoryClass_PTR_vtbl *__vftable;
   FactoryClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_FactoryClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_FactoryClass_PTR : VectorBase_FactoryClass_PTR, VectorAddon {};
+struct VectorClass_FactoryClass_PTR_vtbl : VectorBase_FactoryClass_PTR_vtbl {};
+struct DynamicVectorClass_FactoryClass_PTR : VectorClass_FactoryClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_FactoryClass_PTR_vtbl : VectorClass_FactoryClass_PTR_vtbl {};
 
-struct VectorClass_FactoryClass_PTR_vtbl
+struct VectorBase_IsometricTileTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_FactoryClass_PTR)(VectorClass_FactoryClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_FactoryClass_PTR *this, VectorClass_FactoryClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_FactoryClass_PTR *this, int, FactoryClass **);
-  void (__thiscall *Clear)(VectorClass_FactoryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_FactoryClass_PTR *this, FactoryClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_FactoryClass_PTR *this, FactoryClass **);
-  FactoryClass *(__thiscall *GetItem)(VectorClass_FactoryClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_FactoryClass_PTR : VectorClass_FactoryClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_FactoryClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_FactoryClass_PTR)(DynamicVectorClass_FactoryClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FactoryClass_PTR *this, VectorClass_FactoryClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_FactoryClass_PTR *this, int, FactoryClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_FactoryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_FactoryClass_PTR *this, FactoryClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_FactoryClass_PTR *this, FactoryClass **);
-  FactoryClass *(__thiscall *GetItem)(DynamicVectorClass_FactoryClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_IsometricTileTypeClass_PTR
-{
-  VectorClass_IsometricTileTypeClass_PTR_vtbl *__vftable;
   IsometricTileTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_IsometricTileTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_IsometricTileTypeClass_PTR : VectorBase_IsometricTileTypeClass_PTR, VectorAddon {};
+struct VectorClass_IsometricTileTypeClass_PTR_vtbl : VectorBase_IsometricTileTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_IsometricTileTypeClass_PTR : VectorClass_IsometricTileTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_IsometricTileTypeClass_PTR_vtbl : VectorClass_IsometricTileTypeClass_PTR_vtbl {};
 
-struct VectorClass_IsometricTileTypeClass_PTR_vtbl
+struct VectorBase_BombClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_IsometricTileTypeClass_PTR)(VectorClass_IsometricTileTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_IsometricTileTypeClass_PTR *this, VectorClass_IsometricTileTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_IsometricTileTypeClass_PTR *this, int, IsometricTileTypeClass **);
-  void (__thiscall *Clear)(VectorClass_IsometricTileTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_IsometricTileTypeClass_PTR *this, IsometricTileTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_IsometricTileTypeClass_PTR *this, IsometricTileTypeClass **);
-  IsometricTileTypeClass *(__thiscall *GetItem)(VectorClass_IsometricTileTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_IsometricTileTypeClass_PTR : VectorClass_IsometricTileTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_IsometricTileTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_IsometricTileTypeClass_PTR)(DynamicVectorClass_IsometricTileTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_IsometricTileTypeClass_PTR *this, VectorClass_IsometricTileTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_IsometricTileTypeClass_PTR *this, int, IsometricTileTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_IsometricTileTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_IsometricTileTypeClass_PTR *this, IsometricTileTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_IsometricTileTypeClass_PTR *this, IsometricTileTypeClass **);
-  IsometricTileTypeClass *(__thiscall *GetItem)(DynamicVectorClass_IsometricTileTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_BombClass_PTR
-{
-  VectorClass_BombClass_PTR_vtbl *__vftable;
   BombClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_BombClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BombClass_PTR : VectorBase_BombClass_PTR, VectorAddon {};
+struct VectorClass_BombClass_PTR_vtbl : VectorBase_BombClass_PTR_vtbl {};
+struct DynamicVectorClass_BombClass_PTR : VectorClass_BombClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_BombClass_PTR_vtbl : VectorClass_BombClass_PTR_vtbl {};
 
-struct VectorClass_BombClass_PTR_vtbl
+struct VectorBase_NeuronClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_BombClass_PTR)(VectorClass_BombClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BombClass_PTR *this, VectorClass_BombClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_BombClass_PTR *this, int, BombClass **);
-  void (__thiscall *Clear)(VectorClass_BombClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BombClass_PTR *this, BombClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_BombClass_PTR *this, BombClass **);
-  BombClass *(__thiscall *GetItem)(VectorClass_BombClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_BombClass_PTR : VectorClass_BombClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BombClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BombClass_PTR)(DynamicVectorClass_BombClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BombClass_PTR *this, VectorClass_BombClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BombClass_PTR *this, int, BombClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_BombClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BombClass_PTR *this, BombClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BombClass_PTR *this, BombClass **);
-  BombClass *(__thiscall *GetItem)(DynamicVectorClass_BombClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_NeuronClass_PTR
-{
-  VectorClass_NeuronClass_PTR_vtbl *__vftable;
   NeuronClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_NeuronClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_NeuronClass_PTR : VectorBase_NeuronClass_PTR, VectorAddon {};
+struct VectorClass_NeuronClass_PTR_vtbl : VectorBase_NeuronClass_PTR_vtbl {};
 
-struct VectorClass_NeuronClass_PTR_vtbl
+struct VectorBase_CommandClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_NeuronClass_PTR)(VectorClass_NeuronClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_NeuronClass_PTR *this, VectorClass_NeuronClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_NeuronClass_PTR *this, int, NeuronClass **);
-  void (__thiscall *Clear)(VectorClass_NeuronClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_NeuronClass_PTR *this, NeuronClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_NeuronClass_PTR *this, NeuronClass **);
-  NeuronClass *(__thiscall *GetItem)(VectorClass_NeuronClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_CommandClass_PTR
-{
-  VectorClass_CommandClass_PTR_vtbl *__vftable;
   CommandClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_CommandClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CommandClass_PTR : VectorBase_CommandClass_PTR, VectorAddon {};
+struct VectorClass_CommandClass_PTR_vtbl : VectorBase_CommandClass_PTR_vtbl {};
+struct DynamicVectorClass_CommandClass_PTR : VectorClass_CommandClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_CommandClass_PTR_vtbl : VectorClass_CommandClass_PTR_vtbl {};
 
-struct VectorClass_CommandClass_PTR_vtbl
+struct VectorBase_AITriggerTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_CommandClass_PTR)(VectorClass_CommandClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CommandClass_PTR *this, VectorClass_CommandClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_CommandClass_PTR *this, int, CommandClass **);
-  void (__thiscall *Clear)(VectorClass_CommandClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CommandClass_PTR *this, CommandClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_CommandClass_PTR *this, CommandClass **);
-  CommandClass *(__thiscall *GetItem)(VectorClass_CommandClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_CommandClass_PTR : VectorClass_CommandClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_CommandClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_CommandClass_PTR)(DynamicVectorClass_CommandClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_CommandClass_PTR *this, VectorClass_CommandClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_CommandClass_PTR *this, int, CommandClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_CommandClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_CommandClass_PTR *this, CommandClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_CommandClass_PTR *this, CommandClass **);
-  CommandClass *(__thiscall *GetItem)(DynamicVectorClass_CommandClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AITriggerTypeClass_PTR
-{
-  VectorClass_AITriggerTypeClass_PTR_vtbl *__vftable;
   AITriggerTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AITriggerTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AITriggerTypeClass_PTR : VectorBase_AITriggerTypeClass_PTR, VectorAddon {};
+struct VectorClass_AITriggerTypeClass_PTR_vtbl : VectorBase_AITriggerTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_AITriggerTypeClass_PTR : VectorClass_AITriggerTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AITriggerTypeClass_PTR_vtbl : VectorClass_AITriggerTypeClass_PTR_vtbl {};
 
-struct VectorClass_AITriggerTypeClass_PTR_vtbl
+struct VectorBase_OverlayTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AITriggerTypeClass_PTR)(VectorClass_AITriggerTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AITriggerTypeClass_PTR *this, VectorClass_AITriggerTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AITriggerTypeClass_PTR *this, int, AITriggerTypeClass **);
-  void (__thiscall *Clear)(VectorClass_AITriggerTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AITriggerTypeClass_PTR *this, AITriggerTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AITriggerTypeClass_PTR *this, AITriggerTypeClass **);
-  AITriggerTypeClass *(__thiscall *GetItem)(VectorClass_AITriggerTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AITriggerTypeClass_PTR : VectorClass_AITriggerTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AITriggerTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AITriggerTypeClass_PTR)(DynamicVectorClass_AITriggerTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AITriggerTypeClass_PTR *this, VectorClass_AITriggerTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AITriggerTypeClass_PTR *this, int, AITriggerTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AITriggerTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AITriggerTypeClass_PTR *this, AITriggerTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AITriggerTypeClass_PTR *this, AITriggerTypeClass **);
-  AITriggerTypeClass *(__thiscall *GetItem)(DynamicVectorClass_AITriggerTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_OverlayTypeClass_PTR
-{
-  VectorClass_OverlayTypeClass_PTR_vtbl *__vftable;
   OverlayTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_OverlayTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_OverlayTypeClass_PTR : VectorBase_OverlayTypeClass_PTR, VectorAddon {};
+struct VectorClass_OverlayTypeClass_PTR_vtbl : VectorBase_OverlayTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_OverlayTypeClass_PTR : VectorClass_OverlayTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_OverlayTypeClass_PTR_vtbl : VectorClass_OverlayTypeClass_PTR_vtbl {};
 
-struct VectorClass_OverlayTypeClass_PTR_vtbl
+struct VectorBase_RadSiteClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_OverlayTypeClass_PTR)(VectorClass_OverlayTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_OverlayTypeClass_PTR *this, VectorClass_OverlayTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_OverlayTypeClass_PTR *this, int, OverlayTypeClass **);
-  void (__thiscall *Clear)(VectorClass_OverlayTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_OverlayTypeClass_PTR *this, OverlayTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_OverlayTypeClass_PTR *this, OverlayTypeClass **);
-  OverlayTypeClass *(__thiscall *GetItem)(VectorClass_OverlayTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_OverlayTypeClass_PTR : VectorClass_OverlayTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_OverlayTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_OverlayTypeClass_PTR)(DynamicVectorClass_OverlayTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_OverlayTypeClass_PTR *this, VectorClass_OverlayTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_OverlayTypeClass_PTR *this, int, OverlayTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_OverlayTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_OverlayTypeClass_PTR *this, OverlayTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_OverlayTypeClass_PTR *this, OverlayTypeClass **);
-  OverlayTypeClass *(__thiscall *GetItem)(DynamicVectorClass_OverlayTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_RadSiteClass_PTR
-{
-  VectorClass_RadSiteClass_PTR_vtbl *__vftable;
   RadSiteClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_RadSiteClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_RadSiteClass_PTR : VectorBase_RadSiteClass_PTR, VectorAddon {};
+struct VectorClass_RadSiteClass_PTR_vtbl : VectorBase_RadSiteClass_PTR_vtbl {};
+struct DynamicVectorClass_RadSiteClass_PTR : VectorClass_RadSiteClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_RadSiteClass_PTR_vtbl : VectorClass_RadSiteClass_PTR_vtbl {};
 
-struct VectorClass_RadSiteClass_PTR_vtbl
+struct VectorBase_AnimClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_RadSiteClass_PTR)(VectorClass_RadSiteClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_RadSiteClass_PTR *this, VectorClass_RadSiteClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_RadSiteClass_PTR *this, int, RadSiteClass **);
-  void (__thiscall *Clear)(VectorClass_RadSiteClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_RadSiteClass_PTR *this, RadSiteClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_RadSiteClass_PTR *this, RadSiteClass **);
-  RadSiteClass *(__thiscall *GetItem)(VectorClass_RadSiteClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_RadSiteClass_PTR : VectorClass_RadSiteClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_RadSiteClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_RadSiteClass_PTR)(DynamicVectorClass_RadSiteClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_RadSiteClass_PTR *this, VectorClass_RadSiteClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_RadSiteClass_PTR *this, int, RadSiteClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_RadSiteClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_RadSiteClass_PTR *this, RadSiteClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_RadSiteClass_PTR *this, RadSiteClass **);
-  RadSiteClass *(__thiscall *GetItem)(DynamicVectorClass_RadSiteClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AnimClass_PTR
-{
-  VectorClass_AnimClass_PTR_vtbl *__vftable;
   AnimClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AnimClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AnimClass_PTR : VectorBase_AnimClass_PTR, VectorAddon {};
+struct VectorClass_AnimClass_PTR_vtbl : VectorBase_AnimClass_PTR_vtbl {};
+struct DynamicVectorClass_AnimClass_PTR : VectorClass_AnimClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AnimClass_PTR_vtbl : VectorClass_AnimClass_PTR_vtbl {};
 
-struct VectorClass_AnimClass_PTR_vtbl
+struct VectorBase_FootClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AnimClass_PTR)(VectorClass_AnimClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AnimClass_PTR *this, VectorClass_AnimClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AnimClass_PTR *this, int, AnimClass **);
-  void (__thiscall *Clear)(VectorClass_AnimClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AnimClass_PTR *this, AnimClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AnimClass_PTR *this, AnimClass **);
-  AnimClass *(__thiscall *GetItem)(VectorClass_AnimClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AnimClass_PTR : VectorClass_AnimClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AnimClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AnimClass_PTR)(DynamicVectorClass_AnimClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AnimClass_PTR *this, VectorClass_AnimClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AnimClass_PTR *this, int, AnimClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AnimClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AnimClass_PTR *this, AnimClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AnimClass_PTR *this, AnimClass **);
-  AnimClass *(__thiscall *GetItem)(DynamicVectorClass_AnimClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_FootClass_PTR
-{
-  VectorClass_FootClass_PTR_vtbl *__vftable;
   FootClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_FootClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_FootClass_PTR : VectorBase_FootClass_PTR, VectorAddon {};
+struct VectorClass_FootClass_PTR_vtbl : VectorBase_FootClass_PTR_vtbl {};
+struct DynamicVectorClass_FootClass_PTR : VectorClass_FootClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_FootClass_PTR_vtbl : VectorClass_FootClass_PTR_vtbl {};
 
-struct VectorClass_FootClass_PTR_vtbl
+struct VectorBase_VocClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_FootClass_PTR)(VectorClass_FootClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_FootClass_PTR *this, VectorClass_FootClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_FootClass_PTR *this, int, FootClass **);
-  void (__thiscall *Clear)(VectorClass_FootClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_FootClass_PTR *this, FootClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_FootClass_PTR *this, FootClass **);
-  FootClass *(__thiscall *GetItem)(VectorClass_FootClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_FootClass_PTR : VectorClass_FootClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_FootClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_FootClass_PTR)(DynamicVectorClass_FootClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FootClass_PTR *this, VectorClass_FootClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_FootClass_PTR *this, int, FootClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_FootClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_FootClass_PTR *this, FootClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_FootClass_PTR *this, FootClass **);
-  FootClass *(__thiscall *GetItem)(DynamicVectorClass_FootClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_VocClass_PTR
-{
-  VectorClass_VocClass_PTR_vtbl *__vftable;
   VocClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_VocClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_VocClass_PTR : VectorBase_VocClass_PTR, VectorAddon {};
+struct VectorClass_VocClass_PTR_vtbl : VectorBase_VocClass_PTR_vtbl {};
+struct DynamicVectorClass_VocClass_PTR : VectorClass_VocClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_VocClass_PTR_vtbl : VectorClass_VocClass_PTR_vtbl {};
 
-struct VectorClass_VocClass_PTR_vtbl
+struct VectorBase_VoxClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_VocClass_PTR)(VectorClass_VocClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_VocClass_PTR *this, VectorClass_VocClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_VocClass_PTR *this, int, VocClass **);
-  void (__thiscall *Clear)(VectorClass_VocClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_VocClass_PTR *this, VocClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_VocClass_PTR *this, VocClass **);
-  VocClass *(__thiscall *GetItem)(VectorClass_VocClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_VocClass_PTR : VectorClass_VocClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_VocClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_VocClass_PTR)(DynamicVectorClass_VocClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_VocClass_PTR *this, VectorClass_VocClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_VocClass_PTR *this, int, VocClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_VocClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_VocClass_PTR *this, VocClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_VocClass_PTR *this, VocClass **);
-  VocClass *(__thiscall *GetItem)(DynamicVectorClass_VocClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_VoxClass_PTR
-{
-  VectorClass_VoxClass_PTR_vtbl *__vftable;
   VoxClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_VoxClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_VoxClass_PTR : VectorBase_VoxClass_PTR, VectorAddon {};
+struct VectorClass_VoxClass_PTR_vtbl : VectorBase_VoxClass_PTR_vtbl {};
+struct DynamicVectorClass_VoxClass_PTR : VectorClass_VoxClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_VoxClass_PTR_vtbl : VectorClass_VoxClass_PTR_vtbl {};
 
-struct VectorClass_VoxClass_PTR_vtbl
+struct VectorBase_char_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_VoxClass_PTR)(VectorClass_VoxClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_VoxClass_PTR *this, VectorClass_VoxClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_VoxClass_PTR *this, int, VoxClass **);
-  void (__thiscall *Clear)(VectorClass_VoxClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_VoxClass_PTR *this, VoxClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_VoxClass_PTR *this, VoxClass **);
-  VoxClass *(__thiscall *GetItem)(VectorClass_VoxClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_VoxClass_PTR : VectorClass_VoxClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_VoxClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_VoxClass_PTR)(DynamicVectorClass_VoxClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_VoxClass_PTR *this, VectorClass_VoxClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_VoxClass_PTR *this, int, VoxClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_VoxClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_VoxClass_PTR *this, VoxClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_VoxClass_PTR *this, VoxClass **);
-  VoxClass *(__thiscall *GetItem)(DynamicVectorClass_VoxClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_char_PTR
-{
-  VectorClass_char_PTR_vtbl *__vftable;
   char **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_char_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_char_PTR : VectorBase_char_PTR, VectorAddon {};
+struct VectorClass_char_PTR_vtbl : VectorBase_char_PTR_vtbl {};
+struct DynamicVectorClass_char_PTR : VectorClass_char_PTR, DynamicAddon {};
+struct DynamicVectorClass_char_PTR_vtbl : VectorClass_char_PTR_vtbl {};
 
-struct VectorClass_char_PTR_vtbl
+struct VectorBase_LightSourceClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_char_PTR)(VectorClass_char_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_char_PTR *this, VectorClass_char_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_char_PTR *this, int, char **);
-  void (__thiscall *Clear)(VectorClass_char_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_char_PTR *this, char **);
-  int (__thiscall *GetItemIndex)(VectorClass_char_PTR *this, char **);
-  char *(__thiscall *GetItem)(VectorClass_char_PTR *this, int);
-};
-
-struct DynamicVectorClass_char_PTR : VectorClass_char_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_char_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_char_PTR)(DynamicVectorClass_char_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_char_PTR *this, VectorClass_char_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_char_PTR *this, int, char **);
-  void (__thiscall *Clear)(DynamicVectorClass_char_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_char_PTR *this, char **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_char_PTR *this, char **);
-  char *(__thiscall *GetItem)(DynamicVectorClass_char_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_LightSourceClass_PTR
-{
-  VectorClass_LightSourceClass_PTR_vtbl *__vftable;
   LightSourceClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_LightSourceClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_LightSourceClass_PTR : VectorBase_LightSourceClass_PTR, VectorAddon {};
+struct VectorClass_LightSourceClass_PTR_vtbl : VectorBase_LightSourceClass_PTR_vtbl {};
+struct DynamicVectorClass_LightSourceClass_PTR : VectorClass_LightSourceClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_LightSourceClass_PTR_vtbl : VectorClass_LightSourceClass_PTR_vtbl {};
 
-struct VectorClass_LightSourceClass_PTR_vtbl
+struct VectorBase_VeinholeMonsterClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_LightSourceClass_PTR)(VectorClass_LightSourceClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_LightSourceClass_PTR *this, VectorClass_LightSourceClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_LightSourceClass_PTR *this, int, LightSourceClass **);
-  void (__thiscall *Clear)(VectorClass_LightSourceClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_LightSourceClass_PTR *this, LightSourceClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_LightSourceClass_PTR *this, LightSourceClass **);
-  LightSourceClass *(__thiscall *GetItem)(VectorClass_LightSourceClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_LightSourceClass_PTR : VectorClass_LightSourceClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_LightSourceClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_LightSourceClass_PTR)(DynamicVectorClass_LightSourceClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_LightSourceClass_PTR *this, VectorClass_LightSourceClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_LightSourceClass_PTR *this, int, LightSourceClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_LightSourceClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_LightSourceClass_PTR *this, LightSourceClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_LightSourceClass_PTR *this, LightSourceClass **);
-  LightSourceClass *(__thiscall *GetItem)(DynamicVectorClass_LightSourceClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_VeinholeMonsterClass_PTR
-{
-  VectorClass_VeinholeMonsterClass_PTR_vtbl *__vftable;
   VeinholeMonsterClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_VeinholeMonsterClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_VeinholeMonsterClass_PTR)(VectorClass_VeinholeMonsterClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_VeinholeMonsterClass_PTR *this, VectorClass_VeinholeMonsterClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_VeinholeMonsterClass_PTR *this, int, VeinholeMonsterClass **);
-  void (__thiscall *Clear)(VectorClass_VeinholeMonsterClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_VeinholeMonsterClass_PTR *this, VeinholeMonsterClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_VeinholeMonsterClass_PTR *this, VeinholeMonsterClass **);
-  VeinholeMonsterClass *(__thiscall *GetItem)(VectorClass_VeinholeMonsterClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_VeinholeMonsterClass_PTR : VectorClass_VeinholeMonsterClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_VeinholeMonsterClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_VeinholeMonsterClass_PTR)(DynamicVectorClass_VeinholeMonsterClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_VeinholeMonsterClass_PTR *this, VectorClass_VeinholeMonsterClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_VeinholeMonsterClass_PTR *this, int, VeinholeMonsterClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_VeinholeMonsterClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_VeinholeMonsterClass_PTR *this, VeinholeMonsterClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_VeinholeMonsterClass_PTR *this, VeinholeMonsterClass **);
-  VeinholeMonsterClass *(__thiscall *GetItem)(DynamicVectorClass_VeinholeMonsterClass_PTR *this, int);
-};
+struct VectorBase_VeinholeMonsterClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_VeinholeMonsterClass_PTR : VectorBase_VeinholeMonsterClass_PTR, VectorAddon {};
+struct VectorClass_VeinholeMonsterClass_PTR_vtbl : VectorBase_VeinholeMonsterClass_PTR_vtbl {};
+struct DynamicVectorClass_VeinholeMonsterClass_PTR : VectorClass_VeinholeMonsterClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_VeinholeMonsterClass_PTR_vtbl : VectorClass_VeinholeMonsterClass_PTR_vtbl {};
 
 class ControlClass : GadgetClass
 {
@@ -19894,41 +12256,8 @@ class ControlClass : GadgetClass
   GadgetClass *SendTo;
 };
 
-struct ControlClass_vtbl
+struct ControlClass_vtbl : GadgetClass_vtbl
 {
-  void (__thiscall *~ControlClass)(ControlClass *this);
-  LinkClass *(__thiscall *GetNext)(ControlClass *this);
-  LinkClass *(__thiscall *GetPrev)(ControlClass *this);
-  LinkClass *(__thiscall *Add)(ControlClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(ControlClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(ControlClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(ControlClass *this);
-  LinkClass *(__thiscall *TailOfList)(ControlClass *this);
-  void (__thiscall *Zap)(ControlClass *this);
-  LinkClass *(__thiscall *Remove)(ControlClass *this);
-  unsigned int (__thiscall *Input)(ControlClass *this);
-  void (__thiscall *DrawAll)(ControlClass *this, bool);
-  void (__thiscall *DeleteList)(ControlClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(ControlClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(ControlClass *this);
-  void (__thiscall *Disable)(ControlClass *this);
-  void (__thiscall *Enable)(ControlClass *this);
-  unsigned int (__thiscall *GetID)(ControlClass *this);
-  void (__thiscall *MarkRedraw)(ControlClass *this);
-  void (__thiscall *PeerToPeer)(ControlClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(ControlClass *this);
-  void (__thiscall *KillFocus)(ControlClass *this);
-  bool (__thiscall *IsFocused)(ControlClass *this);
-  bool (__thiscall *IsListToRedraw)(ControlClass *this);
-  bool (__thiscall *IsToRedraw)(ControlClass *this);
-  void (__thiscall *SetPosition)(ControlClass *this, int, int);
-  void (__thiscall *SetDimension)(ControlClass *this, int, int);
-  bool (__thiscall *Draw)(ControlClass *this, bool);
-  void (__thiscall *OnMouseEnter)(ControlClass *this);
-  void (__thiscall *OnMouseLeave)(ControlClass *this);
-  void (__thiscall *StickyProcess)(ControlClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ControlClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(ControlClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *MakePeer)(ControlClass *this, GadgetClass *);
 };
 
@@ -19939,43 +12268,7 @@ class ToggleClass : ControlClass
   unsigned int ToggleType;
 };
 
-struct ToggleClass_vtbl
-{
-  void (__thiscall *~ToggleClass)(ToggleClass *this);
-  LinkClass *(__thiscall *GetNext)(ToggleClass *this);
-  LinkClass *(__thiscall *GetPrev)(ToggleClass *this);
-  LinkClass *(__thiscall *Add)(ToggleClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(ToggleClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(ToggleClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(ToggleClass *this);
-  LinkClass *(__thiscall *TailOfList)(ToggleClass *this);
-  void (__thiscall *Zap)(ToggleClass *this);
-  LinkClass *(__thiscall *Remove)(ToggleClass *this);
-  unsigned int (__thiscall *Input)(ToggleClass *this);
-  void (__thiscall *DrawAll)(ToggleClass *this, bool);
-  void (__thiscall *DeleteList)(ToggleClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(ToggleClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(ToggleClass *this);
-  void (__thiscall *Disable)(ToggleClass *this);
-  void (__thiscall *Enable)(ToggleClass *this);
-  unsigned int (__thiscall *GetID)(ToggleClass *this);
-  void (__thiscall *MarkRedraw)(ToggleClass *this);
-  void (__thiscall *PeerToPeer)(ToggleClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(ToggleClass *this);
-  void (__thiscall *KillFocus)(ToggleClass *this);
-  bool (__thiscall *IsFocused)(ToggleClass *this);
-  bool (__thiscall *IsListToRedraw)(ToggleClass *this);
-  bool (__thiscall *IsToRedraw)(ToggleClass *this);
-  void (__thiscall *SetPosition)(ToggleClass *this, int, int);
-  void (__thiscall *SetDimension)(ToggleClass *this, int, int);
-  bool (__thiscall *Draw)(ToggleClass *this, bool);
-  void (__thiscall *OnMouseEnter)(ToggleClass *this);
-  void (__thiscall *OnMouseLeave)(ToggleClass *this);
-  void (__thiscall *StickyProcess)(ToggleClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ToggleClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(ToggleClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(ToggleClass *this, GadgetClass *);
-};
+struct ToggleClass_vtbl : ControlClass_vtbl {};
 
 class ShapeButtonClass : ToggleClass
 {
@@ -19992,42 +12285,8 @@ class ShapeButtonClass : ToggleClass
   bool IsShapeLoaded;
 };
 
-struct ShapeButtonClass_vtbl
+struct ShapeButtonClass_vtbl : ToggleClass_vtbl
 {
-  void (__thiscall *~ShapeButtonClass)(ShapeButtonClass *this);
-  LinkClass *(__thiscall *GetNext)(ShapeButtonClass *this);
-  LinkClass *(__thiscall *GetPrev)(ShapeButtonClass *this);
-  LinkClass *(__thiscall *Add)(ShapeButtonClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(ShapeButtonClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(ShapeButtonClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(ShapeButtonClass *this);
-  LinkClass *(__thiscall *TailOfList)(ShapeButtonClass *this);
-  void (__thiscall *Zap)(ShapeButtonClass *this);
-  LinkClass *(__thiscall *Remove)(ShapeButtonClass *this);
-  unsigned int (__thiscall *Input)(ShapeButtonClass *this);
-  void (__thiscall *DrawAll)(ShapeButtonClass *this, bool);
-  void (__thiscall *DeleteList)(ShapeButtonClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(ShapeButtonClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(ShapeButtonClass *this);
-  void (__thiscall *Disable)(ShapeButtonClass *this);
-  void (__thiscall *Enable)(ShapeButtonClass *this);
-  unsigned int (__thiscall *GetID)(ShapeButtonClass *this);
-  void (__thiscall *MarkRedraw)(ShapeButtonClass *this);
-  void (__thiscall *PeerToPeer)(ShapeButtonClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(ShapeButtonClass *this);
-  void (__thiscall *KillFocus)(ShapeButtonClass *this);
-  bool (__thiscall *IsFocused)(ShapeButtonClass *this);
-  bool (__thiscall *IsListToRedraw)(ShapeButtonClass *this);
-  bool (__thiscall *IsToRedraw)(ShapeButtonClass *this);
-  void (__thiscall *SetPosition)(ShapeButtonClass *this, int, int);
-  void (__thiscall *SetDimension)(ShapeButtonClass *this, int, int);
-  bool (__thiscall *Draw)(ShapeButtonClass *this, bool);
-  void (__thiscall *OnMouseEnter)(ShapeButtonClass *this);
-  void (__thiscall *OnMouseLeave)(ShapeButtonClass *this);
-  void (__thiscall *StickyProcess)(ShapeButtonClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ShapeButtonClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(ShapeButtonClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(ShapeButtonClass *this, GadgetClass *);
   void (__thiscall *SetShape)(ShapeButtonClass *this, SHPStruct*, int, int);
 };
 
@@ -20042,42 +12301,8 @@ class EditClass : ControlClass
   bool IsReadOnly;
 };
 
-struct EditClass_vtbl
+struct EditClass_vtbl : ControlClass_vtbl
 {
-  void (__thiscall *~EditClass)(EditClass *this);
-  LinkClass *(__thiscall *GetNext)(EditClass *this);
-  LinkClass *(__thiscall *GetPrev)(EditClass *this);
-  LinkClass *(__thiscall *Add)(EditClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(EditClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(EditClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(EditClass *this);
-  LinkClass *(__thiscall *TailOfList)(EditClass *this);
-  void (__thiscall *Zap)(EditClass *this);
-  LinkClass *(__thiscall *Remove)(EditClass *this);
-  unsigned int (__thiscall *Input)(EditClass *this);
-  void (__thiscall *DrawAll)(EditClass *this, bool);
-  void (__thiscall *DeleteList)(EditClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(EditClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(EditClass *this);
-  void (__thiscall *Disable)(EditClass *this);
-  void (__thiscall *Enable)(EditClass *this);
-  unsigned int (__thiscall *GetID)(EditClass *this);
-  void (__thiscall *MarkRedraw)(EditClass *this);
-  void (__thiscall *PeerToPeer)(EditClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(EditClass *this);
-  void (__thiscall *KillFocus)(EditClass *this);
-  bool (__thiscall *IsFocused)(EditClass *this);
-  bool (__thiscall *IsListToRedraw)(EditClass *this);
-  bool (__thiscall *IsToRedraw)(EditClass *this);
-  void (__thiscall *SetPosition)(EditClass *this, int, int);
-  void (__thiscall *SetDimension)(EditClass *this, int, int);
-  bool (__thiscall *Draw)(EditClass *this, bool);
-  void (__thiscall *OnMouseEnter)(EditClass *this);
-  void (__thiscall *OnMouseLeave)(EditClass *this);
-  void (__thiscall *StickyProcess)(EditClass *this, GadgetFlag);
-  bool (__thiscall *Action)(EditClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(EditClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(EditClass *this, GadgetClass *);
   void (__thiscall *SetText)(EditClass *this, wchar_t*, int);
   wchar_t *(__thiscall *GetText)(EditClass *this);
   void (__thiscall *DrawBackground)(EditClass *this);
@@ -20095,42 +12320,8 @@ class GaugeClass : ControlClass
   int ClickDiff;
 };
 
-struct GaugeClass_vtbl
+struct GaugeClass_vtbl : ControlClass_vtbl
 {
-  void (__thiscall *~GaugeClass)(GaugeClass *this);
-  LinkClass *(__thiscall *GetNext)(GaugeClass *this);
-  LinkClass *(__thiscall *GetPrev)(GaugeClass *this);
-  LinkClass *(__thiscall *Add)(GaugeClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(GaugeClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(GaugeClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(GaugeClass *this);
-  LinkClass *(__thiscall *TailOfList)(GaugeClass *this);
-  void (__thiscall *Zap)(GaugeClass *this);
-  LinkClass *(__thiscall *Remove)(GaugeClass *this);
-  unsigned int (__thiscall *Input)(GaugeClass *this);
-  void (__thiscall *DrawAll)(GaugeClass *this, bool);
-  void (__thiscall *DeleteList)(GaugeClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(GaugeClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(GaugeClass *this);
-  void (__thiscall *Disable)(GaugeClass *this);
-  void (__thiscall *Enable)(GaugeClass *this);
-  unsigned int (__thiscall *GetID)(GaugeClass *this);
-  void (__thiscall *MarkRedraw)(GaugeClass *this);
-  void (__thiscall *PeerToPeer)(GaugeClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(GaugeClass *this);
-  void (__thiscall *KillFocus)(GaugeClass *this);
-  bool (__thiscall *IsFocused)(GaugeClass *this);
-  bool (__thiscall *IsListToRedraw)(GaugeClass *this);
-  bool (__thiscall *IsToRedraw)(GaugeClass *this);
-  void (__thiscall *SetPosition)(GaugeClass *this, int, int);
-  void (__thiscall *SetDimension)(GaugeClass *this, int, int);
-  bool (__thiscall *Draw)(GaugeClass *this, bool);
-  void (__thiscall *OnMouseEnter)(GaugeClass *this);
-  void (__thiscall *OnMouseLeave)(GaugeClass *this);
-  void (__thiscall *StickyProcess)(GaugeClass *this, GadgetFlag);
-  bool (__thiscall *Action)(GaugeClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(GaugeClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(GaugeClass *this, GadgetClass *);
   bool (__thiscall *SetMaximum)(GaugeClass *this, int);
   bool (__thiscall *SetValue)(GaugeClass *this, int);
   int (__thiscall *GetValue)(GaugeClass *this);
@@ -20151,50 +12342,8 @@ class SliderClass : GaugeClass
   int ThumbStart;
 };
 
-struct SliderClass_vtbl
+struct SliderClass_vtbl : GaugeClass_vtbl
 {
-  void (__thiscall *~SliderClass)(SliderClass *this);
-  LinkClass *(__thiscall *GetNext)(SliderClass *this);
-  LinkClass *(__thiscall *GetPrev)(SliderClass *this);
-  LinkClass *(__thiscall *Add)(SliderClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(SliderClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(SliderClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(SliderClass *this);
-  LinkClass *(__thiscall *TailOfList)(SliderClass *this);
-  void (__thiscall *Zap)(SliderClass *this);
-  LinkClass *(__thiscall *Remove)(SliderClass *this);
-  unsigned int (__thiscall *Input)(SliderClass *this);
-  void (__thiscall *DrawAll)(SliderClass *this, bool);
-  void (__thiscall *DeleteList)(SliderClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(SliderClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(SliderClass *this);
-  void (__thiscall *Disable)(SliderClass *this);
-  void (__thiscall *Enable)(SliderClass *this);
-  unsigned int (__thiscall *GetID)(SliderClass *this);
-  void (__thiscall *MarkRedraw)(SliderClass *this);
-  void (__thiscall *PeerToPeer)(SliderClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(SliderClass *this);
-  void (__thiscall *KillFocus)(SliderClass *this);
-  bool (__thiscall *IsFocused)(SliderClass *this);
-  bool (__thiscall *IsListToRedraw)(SliderClass *this);
-  bool (__thiscall *IsToRedraw)(SliderClass *this);
-  void (__thiscall *SetPosition)(SliderClass *this, int, int);
-  void (__thiscall *SetDimension)(SliderClass *this, int, int);
-  bool (__thiscall *Draw)(SliderClass *this, bool);
-  void (__thiscall *OnMouseEnter)(SliderClass *this);
-  void (__thiscall *OnMouseLeave)(SliderClass *this);
-  void (__thiscall *StickyProcess)(SliderClass *this, GadgetFlag);
-  bool (__thiscall *Action)(SliderClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(SliderClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(SliderClass *this, GadgetClass *);
-  bool (__thiscall *SetMaximum)(SliderClass *this, int);
-  bool (__thiscall *SetValue)(SliderClass *this, int);
-  int (__thiscall *GetValue)(SliderClass *this);
-  void (__thiscall *SetThumb)(SliderClass *this, bool);
-  int (__thiscall *GetThumbPixel)(SliderClass *this);
-  void (__thiscall *DrawThumb)(SliderClass *this);
-  int (__thiscall *PixelToValue)(SliderClass *this, int);
-  int (__thiscall *ValueToPixel)(SliderClass *this, int);
   int (__thiscall *vt_entry_A8)(SliderClass *this, int);
   bool (__thiscall *Bump)(SliderClass *this, bool);
   bool (__thiscall *Step)(SliderClass *this, bool);
@@ -20215,42 +12364,8 @@ class ListClass : ControlClass
   int CurrentTopIndex;
 };
 
-struct ListClass_vtbl
+struct ListClass_vtbl : ControlClass_vtbl
 {
-  void (__thiscall *~ListClass)(ListClass *this);
-  LinkClass *(__thiscall *GetNext)(ListClass *this);
-  LinkClass *(__thiscall *GetPrev)(ListClass *this);
-  LinkClass *(__thiscall *Add)(ListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(ListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(ListClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(ListClass *this);
-  LinkClass *(__thiscall *TailOfList)(ListClass *this);
-  void (__thiscall *Zap)(ListClass *this);
-  LinkClass *(__thiscall *Remove)(ListClass *this);
-  unsigned int (__thiscall *Input)(ListClass *this);
-  void (__thiscall *DrawAll)(ListClass *this, bool);
-  void (__thiscall *DeleteList)(ListClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(ListClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(ListClass *this);
-  void (__thiscall *Disable)(ListClass *this);
-  void (__thiscall *Enable)(ListClass *this);
-  unsigned int (__thiscall *GetID)(ListClass *this);
-  void (__thiscall *MarkRedraw)(ListClass *this);
-  void (__thiscall *PeerToPeer)(ListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(ListClass *this);
-  void (__thiscall *KillFocus)(ListClass *this);
-  bool (__thiscall *IsFocused)(ListClass *this);
-  bool (__thiscall *IsListToRedraw)(ListClass *this);
-  bool (__thiscall *IsToRedraw)(ListClass *this);
-  void (__thiscall *SetPosition)(ListClass *this, int, int);
-  void (__thiscall *SetDimension)(ListClass *this, int, int);
-  bool (__thiscall *Draw)(ListClass *this, bool);
-  void (__thiscall *OnMouseEnter)(ListClass *this);
-  void (__thiscall *OnMouseLeave)(ListClass *this);
-  void (__thiscall *StickyProcess)(ListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(ListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(ListClass *this, GadgetClass *);
   int (__thiscall *AddItem)(ListClass *this, char*);
   bool (__thiscall *EnableScrollBar)(ListClass *this);
   bool (__thiscall *Bump)(ListClass *this, bool);
@@ -20278,47 +12393,8 @@ class DropListClass : EditClass
   ListClass List;
 };
 
-struct DropListClass_vtbl
+struct DropListClass_vtbl : EditClass_vtbl
 {
-  void (__thiscall *~DropListClass)(DropListClass *this);
-  LinkClass *(__thiscall *GetNext)(DropListClass *this);
-  LinkClass *(__thiscall *GetPrev)(DropListClass *this);
-  LinkClass *(__thiscall *Add)(DropListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(DropListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(DropListClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(DropListClass *this);
-  LinkClass *(__thiscall *TailOfList)(DropListClass *this);
-  void (__thiscall *Zap)(DropListClass *this);
-  LinkClass *(__thiscall *Remove)(DropListClass *this);
-  unsigned int (__thiscall *Input)(DropListClass *this);
-  void (__thiscall *DrawAll)(DropListClass *this, bool);
-  void (__thiscall *DeleteList)(DropListClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(DropListClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(DropListClass *this);
-  void (__thiscall *Disable)(DropListClass *this);
-  void (__thiscall *Enable)(DropListClass *this);
-  unsigned int (__thiscall *GetID)(DropListClass *this);
-  void (__thiscall *MarkRedraw)(DropListClass *this);
-  void (__thiscall *PeerToPeer)(DropListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(DropListClass *this);
-  void (__thiscall *KillFocus)(DropListClass *this);
-  bool (__thiscall *IsFocused)(DropListClass *this);
-  bool (__thiscall *IsListToRedraw)(DropListClass *this);
-  bool (__thiscall *IsToRedraw)(DropListClass *this);
-  void (__thiscall *SetPosition)(DropListClass *this, int, int);
-  void (__thiscall *SetDimension)(DropListClass *this, int, int);
-  bool (__thiscall *Draw)(DropListClass *this, bool);
-  void (__thiscall *OnMouseEnter)(DropListClass *this);
-  void (__thiscall *OnMouseLeave)(DropListClass *this);
-  void (__thiscall *StickyProcess)(DropListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(DropListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(DropListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(DropListClass *this, GadgetClass *);
-  void (__thiscall *SetText)(DropListClass *this, wchar_t*, int);
-  wchar_t *(__thiscall *GetText)(DropListClass *this);
-  void (__thiscall *DrawBackground)(DropListClass *this);
-  void (__thiscall *DrawText)(DropListClass *this, wchar_t*);
-  bool (__thiscall *HandleKeyInput)(DropListClass *this, int);
   int (__thiscall *AddItem)(DropListClass *this, wchar_t*);
   wchar_t *(__thiscall *CurrentItem)(DropListClass *this);
   int (__thiscall *CurrentIndex)(DropListClass *this);
@@ -20334,50 +12410,8 @@ class TriColorGaugeClass : GaugeClass
   int YellowLimit;
 };
 
-struct TriColorGaugeClass_vtbl
+struct TriColorGaugeClass_vtbl : GaugeClass_vtbl
 {
-  void (__thiscall *~TriColorGaugeClass)(TriColorGaugeClass *this);
-  LinkClass *(__thiscall *GetNext)(TriColorGaugeClass *this);
-  LinkClass *(__thiscall *GetPrev)(TriColorGaugeClass *this);
-  LinkClass *(__thiscall *Add)(TriColorGaugeClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(TriColorGaugeClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(TriColorGaugeClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(TriColorGaugeClass *this);
-  LinkClass *(__thiscall *TailOfList)(TriColorGaugeClass *this);
-  void (__thiscall *Zap)(TriColorGaugeClass *this);
-  LinkClass *(__thiscall *Remove)(TriColorGaugeClass *this);
-  unsigned int (__thiscall *Input)(TriColorGaugeClass *this);
-  void (__thiscall *DrawAll)(TriColorGaugeClass *this, bool);
-  void (__thiscall *DeleteList)(TriColorGaugeClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(TriColorGaugeClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(TriColorGaugeClass *this);
-  void (__thiscall *Disable)(TriColorGaugeClass *this);
-  void (__thiscall *Enable)(TriColorGaugeClass *this);
-  unsigned int (__thiscall *GetID)(TriColorGaugeClass *this);
-  void (__thiscall *MarkRedraw)(TriColorGaugeClass *this);
-  void (__thiscall *PeerToPeer)(TriColorGaugeClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(TriColorGaugeClass *this);
-  void (__thiscall *KillFocus)(TriColorGaugeClass *this);
-  bool (__thiscall *IsFocused)(TriColorGaugeClass *this);
-  bool (__thiscall *IsListToRedraw)(TriColorGaugeClass *this);
-  bool (__thiscall *IsToRedraw)(TriColorGaugeClass *this);
-  void (__thiscall *SetPosition)(TriColorGaugeClass *this, int, int);
-  void (__thiscall *SetDimension)(TriColorGaugeClass *this, int, int);
-  bool (__thiscall *Draw)(TriColorGaugeClass *this, bool);
-  void (__thiscall *OnMouseEnter)(TriColorGaugeClass *this);
-  void (__thiscall *OnMouseLeave)(TriColorGaugeClass *this);
-  void (__thiscall *StickyProcess)(TriColorGaugeClass *this, GadgetFlag);
-  bool (__thiscall *Action)(TriColorGaugeClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(TriColorGaugeClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(TriColorGaugeClass *this, GadgetClass *);
-  bool (__thiscall *SetMaximum)(TriColorGaugeClass *this, int);
-  bool (__thiscall *SetValue)(TriColorGaugeClass *this, int);
-  int (__thiscall *GetValue)(TriColorGaugeClass *this);
-  void (__thiscall *SetThumb)(TriColorGaugeClass *this, bool);
-  int (__thiscall *GetThumbPixel)(TriColorGaugeClass *this);
-  void (__thiscall *DrawThumb)(TriColorGaugeClass *this);
-  int (__thiscall *PixelToValue)(TriColorGaugeClass *this, int);
-  int (__thiscall *ValueToPixel)(TriColorGaugeClass *this, int);
   bool (__thiscall *SetRedLimit)(TriColorGaugeClass *this, int);
   bool (__thiscall *SetYellowLimit)(TriColorGaugeClass *this, int);
 };
@@ -20387,60 +12421,7 @@ class CheckListClass : ListClass
   bool IsReadOnly;
 };
 
-struct CheckListClass_vtbl
-{
-  void (__thiscall *~CheckListClass)(CheckListClass *this);
-  LinkClass *(__thiscall *GetNext)(CheckListClass *this);
-  LinkClass *(__thiscall *GetPrev)(CheckListClass *this);
-  LinkClass *(__thiscall *Add)(CheckListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(CheckListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(CheckListClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(CheckListClass *this);
-  LinkClass *(__thiscall *TailOfList)(CheckListClass *this);
-  void (__thiscall *Zap)(CheckListClass *this);
-  LinkClass *(__thiscall *Remove)(CheckListClass *this);
-  unsigned int (__thiscall *Input)(CheckListClass *this);
-  void (__thiscall *DrawAll)(CheckListClass *this, bool);
-  void (__thiscall *DeleteList)(CheckListClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(CheckListClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(CheckListClass *this);
-  void (__thiscall *Disable)(CheckListClass *this);
-  void (__thiscall *Enable)(CheckListClass *this);
-  unsigned int (__thiscall *GetID)(CheckListClass *this);
-  void (__thiscall *MarkRedraw)(CheckListClass *this);
-  void (__thiscall *PeerToPeer)(CheckListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(CheckListClass *this);
-  void (__thiscall *KillFocus)(CheckListClass *this);
-  bool (__thiscall *IsFocused)(CheckListClass *this);
-  bool (__thiscall *IsListToRedraw)(CheckListClass *this);
-  bool (__thiscall *IsToRedraw)(CheckListClass *this);
-  void (__thiscall *SetPosition)(CheckListClass *this, int, int);
-  void (__thiscall *SetDimension)(CheckListClass *this, int, int);
-  bool (__thiscall *Draw)(CheckListClass *this, bool);
-  void (__thiscall *OnMouseEnter)(CheckListClass *this);
-  void (__thiscall *OnMouseLeave)(CheckListClass *this);
-  void (__thiscall *StickyProcess)(CheckListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(CheckListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(CheckListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(CheckListClass *this, GadgetClass *);
-  int (__thiscall *AddItem)(CheckListClass *this, char*);
-  bool (__thiscall *EnableScrollBar)(CheckListClass *this);
-  bool (__thiscall *Bump)(CheckListClass *this, bool);
-  int (__thiscall *GetCount)(CheckListClass *this);
-  int (__thiscall *GetCurrentIndex)(CheckListClass *this);
-  char *(__thiscall *GetCurrentItem)(CheckListClass *this);
-  char *(__thiscall *GetItem)(CheckListClass *this, int);
-  int (__thiscall *StepSelectedIndex)(CheckListClass *this, int);
-  void (__thiscall *RemoveItem)(CheckListClass *this, char*);
-  void (__thiscall *RemoveItemAt)(CheckListClass *this, int);
-  bool (__thiscall *DisableScrollBar)(CheckListClass *this);
-  void (__thiscall *SetSelectedIndex)(CheckListClass *this, int);
-  void (__thiscall *SetSelectedItem)(CheckListClass *this, char*);
-  void (__thiscall *SetTabs)(CheckListClass *this, void*);
-  bool (__thiscall *SetViewIndex)(CheckListClass *this, int);
-  bool (__thiscall *Step)(CheckListClass *this, bool);
-  void (__thiscall *DrawEntry)(CheckListClass *this, int, int, int, int, bool);
-};
+struct CheckListClass_vtbl : ListClass_vtbl {};
 
 class ColorListClass : ListClass
 {
@@ -20449,59 +12430,8 @@ class ColorListClass : ListClass
   int SelectColor;
 };
 
-struct ColorListClass_vtbl
+struct ColorListClass_vtbl : ListClass_vtbl
 {
-  void (__thiscall *~ColorListClass)(ColorListClass *this);
-  LinkClass *(__thiscall *GetNext)(ColorListClass *this);
-  LinkClass *(__thiscall *GetPrev)(ColorListClass *this);
-  LinkClass *(__thiscall *Add)(ColorListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(ColorListClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(ColorListClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(ColorListClass *this);
-  LinkClass *(__thiscall *TailOfList)(ColorListClass *this);
-  void (__thiscall *Zap)(ColorListClass *this);
-  LinkClass *(__thiscall *Remove)(ColorListClass *this);
-  unsigned int (__thiscall *Input)(ColorListClass *this);
-  void (__thiscall *DrawAll)(ColorListClass *this, bool);
-  void (__thiscall *DeleteList)(ColorListClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(ColorListClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(ColorListClass *this);
-  void (__thiscall *Disable)(ColorListClass *this);
-  void (__thiscall *Enable)(ColorListClass *this);
-  unsigned int (__thiscall *GetID)(ColorListClass *this);
-  void (__thiscall *MarkRedraw)(ColorListClass *this);
-  void (__thiscall *PeerToPeer)(ColorListClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(ColorListClass *this);
-  void (__thiscall *KillFocus)(ColorListClass *this);
-  bool (__thiscall *IsFocused)(ColorListClass *this);
-  bool (__thiscall *IsListToRedraw)(ColorListClass *this);
-  bool (__thiscall *IsToRedraw)(ColorListClass *this);
-  void (__thiscall *SetPosition)(ColorListClass *this, int, int);
-  void (__thiscall *SetDimension)(ColorListClass *this, int, int);
-  bool (__thiscall *Draw)(ColorListClass *this, bool);
-  void (__thiscall *OnMouseEnter)(ColorListClass *this);
-  void (__thiscall *OnMouseLeave)(ColorListClass *this);
-  void (__thiscall *StickyProcess)(ColorListClass *this, GadgetFlag);
-  bool (__thiscall *Action)(ColorListClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(ColorListClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(ColorListClass *this, GadgetClass *);
-  int (__thiscall *AddItem)(ColorListClass *this, char*);
-  bool (__thiscall *EnableScrollBar)(ColorListClass *this);
-  bool (__thiscall *Bump)(ColorListClass *this, bool);
-  int (__thiscall *GetCount)(ColorListClass *this);
-  int (__thiscall *GetCurrentIndex)(ColorListClass *this);
-  char *(__thiscall *GetCurrentItem)(ColorListClass *this);
-  char *(__thiscall *GetItem)(ColorListClass *this, int);
-  int (__thiscall *StepSelectedIndex)(ColorListClass *this, int);
-  void (__thiscall *RemoveItem)(ColorListClass *this, char*);
-  void (__thiscall *RemoveItemAt)(ColorListClass *this, int);
-  bool (__thiscall *DisableScrollBar)(ColorListClass *this);
-  void (__thiscall *SetSelectedIndex)(ColorListClass *this, int);
-  void (__thiscall *SetSelectedItem)(ColorListClass *this, char*);
-  void (__thiscall *SetTabs)(ColorListClass *this, void*);
-  bool (__thiscall *SetViewIndex)(ColorListClass *this, int);
-  bool (__thiscall *Step)(ColorListClass *this, bool);
-  void (__thiscall *DrawEntry)(ColorListClass *this, int, int, int, int, bool);
   int (__thiscall *AddNewItem)(ColorListClass *this, char*, int);
   void (__thiscall *SetSelectedStyle)(ColorListClass *this, int, int);
 };
@@ -20511,574 +12441,125 @@ class IsometricTileClass : ObjectClass
   IsometricTileTypeClass* Type;
 };
 
-struct IsometricTileClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
-  bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
-  SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
-  Layer (__thiscall *InWhichLayer)(ObjectClass *this);
-  bool (__thiscall *IsSurfaced)(ObjectClass *this);
-  bool (__thiscall *IsStrange)(ObjectClass *this);
-  TechnoTypeClass *(__thiscall *GetTechnoType)(ObjectClass *this);
-  ObjectTypeClass *(__thiscall *GetType)(ObjectClass *this);
-  unsigned int (__thiscall *GetTypeOwners)(ObjectClass *this);
-  wchar_t *(__thiscall *GetUIName)(ObjectClass *this);
-  bool (__thiscall *CanBeRepaired)(ObjectClass *this);
-  bool (__thiscall *CanBeSold)(ObjectClass *this);
-  bool (__thiscall *IsActive)(ObjectClass *this);
-  bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
-  int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
-  bool (__thiscall *IsStandingStill)(ObjectClass *this);
-  bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
-  bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnInit)(ObjectClass *this);
-  void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
-  void (__thiscall *MarkForRedraw)(ObjectClass *this);
-  bool (__thiscall *CanBeSelected)(ObjectClass *this);
-  bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
-  bool (__thiscall *Select)(ObjectClass *this);
-  void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
-  void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
-  bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
-  void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
-  bool (__thiscall *Ignite)(ObjectClass *this);
-  void (__thiscall *Extinguish)(ObjectClass *this);
-  unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
-  Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
-  CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
-  int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
-  int (__thiscall *GetZ)(ObjectClass *this);
-  bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
-  bool (__thiscall *IsWarpingIn)(ObjectClass *this);
-  bool (__thiscall *IsWarpingSomethingOut)(ObjectClass *this);
-  bool (__thiscall *IsNotWarping)(ObjectClass *this);
-  LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
-};
+struct IsometricTileClass_vtbl : ObjectClass_vtbl {};
 
-struct __declspec(align(4)) VectorClass_AbstractTypeClass_PTR
+struct VectorBase_AbstractTypeClass_PTR : VectorBase_PTR
 {
-  VectorClass_AbstractTypeClass_PTR_vtbl *__vftable;
   AbstractTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AbstractTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AbstractTypeClass_PTR : VectorBase_AbstractTypeClass_PTR, VectorAddon {};
+struct VectorClass_AbstractTypeClass_PTR_vtbl : VectorBase_AbstractTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_AbstractTypeClass_PTR : VectorClass_AbstractTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AbstractTypeClass_PTR_vtbl : VectorClass_AbstractTypeClass_PTR_vtbl {};
 
-struct VectorClass_AbstractTypeClass_PTR_vtbl
+struct VectorBase_ObjectTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AbstractTypeClass_PTR)(VectorClass_AbstractTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AbstractTypeClass_PTR *this, VectorClass_AbstractTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AbstractTypeClass_PTR *this, int, AbstractTypeClass **);
-  void (__thiscall *Clear)(VectorClass_AbstractTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AbstractTypeClass_PTR *this, AbstractTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AbstractTypeClass_PTR *this, AbstractTypeClass **);
-  AbstractTypeClass *(__thiscall *GetItem)(VectorClass_AbstractTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AbstractTypeClass_PTR : VectorClass_AbstractTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AbstractTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AbstractTypeClass_PTR)(DynamicVectorClass_AbstractTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AbstractTypeClass_PTR *this, VectorClass_AbstractTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AbstractTypeClass_PTR *this, int, AbstractTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AbstractTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AbstractTypeClass_PTR *this, AbstractTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AbstractTypeClass_PTR *this, AbstractTypeClass **);
-  AbstractTypeClass *(__thiscall *GetItem)(DynamicVectorClass_AbstractTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ObjectTypeClass_PTR
-{
-  VectorClass_ObjectTypeClass_PTR_vtbl *__vftable;
   ObjectTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ObjectTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ObjectTypeClass_PTR : VectorBase_ObjectTypeClass_PTR, VectorAddon {};
+struct VectorClass_ObjectTypeClass_PTR_vtbl : VectorBase_ObjectTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_ObjectTypeClass_PTR : VectorClass_ObjectTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ObjectTypeClass_PTR_vtbl : VectorClass_ObjectTypeClass_PTR_vtbl {};
 
-struct VectorClass_ObjectTypeClass_PTR_vtbl
+struct VectorBase_ParticleSystemClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ObjectTypeClass_PTR)(VectorClass_ObjectTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ObjectTypeClass_PTR *this, VectorClass_ObjectTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ObjectTypeClass_PTR *this, int, ObjectTypeClass **);
-  void (__thiscall *Clear)(VectorClass_ObjectTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ObjectTypeClass_PTR *this, ObjectTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ObjectTypeClass_PTR *this, ObjectTypeClass **);
-  ObjectTypeClass *(__thiscall *GetItem)(VectorClass_ObjectTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ObjectTypeClass_PTR : VectorClass_ObjectTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ObjectTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ObjectTypeClass_PTR)(DynamicVectorClass_ObjectTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ObjectTypeClass_PTR *this, VectorClass_ObjectTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ObjectTypeClass_PTR *this, int, ObjectTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ObjectTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ObjectTypeClass_PTR *this, ObjectTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ObjectTypeClass_PTR *this, ObjectTypeClass **);
-  ObjectTypeClass *(__thiscall *GetItem)(DynamicVectorClass_ObjectTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ParticleSystemClass_PTR
-{
-  VectorClass_ParticleSystemClass_PTR_vtbl *__vftable;
   ParticleSystemClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ParticleSystemClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ParticleSystemClass_PTR : VectorBase_ParticleSystemClass_PTR, VectorAddon {};
+struct VectorClass_ParticleSystemClass_PTR_vtbl : VectorBase_ParticleSystemClass_PTR_vtbl {};
+struct DynamicVectorClass_ParticleSystemClass_PTR : VectorClass_ParticleSystemClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ParticleSystemClass_PTR_vtbl : VectorClass_ParticleSystemClass_PTR_vtbl {};
 
-struct VectorClass_ParticleSystemClass_PTR_vtbl
+struct VectorBase_TerrainClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ParticleSystemClass_PTR)(VectorClass_ParticleSystemClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ParticleSystemClass_PTR *this, VectorClass_ParticleSystemClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ParticleSystemClass_PTR *this, int, ParticleSystemClass **);
-  void (__thiscall *Clear)(VectorClass_ParticleSystemClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ParticleSystemClass_PTR *this, ParticleSystemClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ParticleSystemClass_PTR *this, ParticleSystemClass **);
-  ParticleSystemClass *(__thiscall *GetItem)(VectorClass_ParticleSystemClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ParticleSystemClass_PTR : VectorClass_ParticleSystemClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ParticleSystemClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ParticleSystemClass_PTR)(DynamicVectorClass_ParticleSystemClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ParticleSystemClass_PTR *this, VectorClass_ParticleSystemClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ParticleSystemClass_PTR *this, int, ParticleSystemClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ParticleSystemClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ParticleSystemClass_PTR *this, ParticleSystemClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ParticleSystemClass_PTR *this, ParticleSystemClass **);
-  ParticleSystemClass *(__thiscall *GetItem)(DynamicVectorClass_ParticleSystemClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TerrainClass_PTR
-{
-  VectorClass_TerrainClass_PTR_vtbl *__vftable;
   TerrainClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TerrainClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TerrainClass_PTR : VectorBase_TerrainClass_PTR, VectorAddon {};
+struct VectorClass_TerrainClass_PTR_vtbl : VectorBase_TerrainClass_PTR_vtbl {};
+struct DynamicVectorClass_TerrainClass_PTR : VectorClass_TerrainClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TerrainClass_PTR_vtbl : VectorClass_TerrainClass_PTR_vtbl {};
 
-struct VectorClass_TerrainClass_PTR_vtbl
+struct VectorBase_OverlayClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TerrainClass_PTR)(VectorClass_TerrainClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TerrainClass_PTR *this, VectorClass_TerrainClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TerrainClass_PTR *this, int, TerrainClass **);
-  void (__thiscall *Clear)(VectorClass_TerrainClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TerrainClass_PTR *this, TerrainClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TerrainClass_PTR *this, TerrainClass **);
-  TerrainClass *(__thiscall *GetItem)(VectorClass_TerrainClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TerrainClass_PTR : VectorClass_TerrainClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TerrainClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TerrainClass_PTR)(DynamicVectorClass_TerrainClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TerrainClass_PTR *this, VectorClass_TerrainClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TerrainClass_PTR *this, int, TerrainClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TerrainClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TerrainClass_PTR *this, TerrainClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TerrainClass_PTR *this, TerrainClass **);
-  TerrainClass *(__thiscall *GetItem)(DynamicVectorClass_TerrainClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_OverlayClass_PTR
-{
-  VectorClass_OverlayClass_PTR_vtbl *__vftable;
   OverlayClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_OverlayClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_OverlayClass_PTR : VectorBase_OverlayClass_PTR, VectorAddon {};
+struct VectorClass_OverlayClass_PTR_vtbl : VectorBase_OverlayClass_PTR_vtbl {};
+struct DynamicVectorClass_OverlayClass_PTR : VectorClass_OverlayClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_OverlayClass_PTR_vtbl : VectorClass_OverlayClass_PTR_vtbl {};
 
-struct VectorClass_OverlayClass_PTR_vtbl
+struct VectorBase_IsometricTileClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_OverlayClass_PTR)(VectorClass_OverlayClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_OverlayClass_PTR *this, VectorClass_OverlayClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_OverlayClass_PTR *this, int, OverlayClass **);
-  void (__thiscall *Clear)(VectorClass_OverlayClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_OverlayClass_PTR *this, OverlayClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_OverlayClass_PTR *this, OverlayClass **);
-  OverlayClass *(__thiscall *GetItem)(VectorClass_OverlayClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_OverlayClass_PTR : VectorClass_OverlayClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_OverlayClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_OverlayClass_PTR)(DynamicVectorClass_OverlayClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_OverlayClass_PTR *this, VectorClass_OverlayClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_OverlayClass_PTR *this, int, OverlayClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_OverlayClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_OverlayClass_PTR *this, OverlayClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_OverlayClass_PTR *this, OverlayClass **);
-  OverlayClass *(__thiscall *GetItem)(DynamicVectorClass_OverlayClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_IsometricTileClass_PTR
-{
-  VectorClass_IsometricTileClass_PTR_vtbl *__vftable;
   IsometricTileClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_IsometricTileClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_IsometricTileClass_PTR : VectorBase_IsometricTileClass_PTR, VectorAddon {};
+struct VectorClass_IsometricTileClass_PTR_vtbl : VectorBase_IsometricTileClass_PTR_vtbl {};
+struct DynamicVectorClass_IsometricTileClass_PTR : VectorClass_IsometricTileClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_IsometricTileClass_PTR_vtbl : VectorClass_IsometricTileClass_PTR_vtbl {};
 
-struct VectorClass_IsometricTileClass_PTR_vtbl
+struct VectorBase_unsigned_char : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_IsometricTileClass_PTR)(VectorClass_IsometricTileClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_IsometricTileClass_PTR *this, VectorClass_IsometricTileClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_IsometricTileClass_PTR *this, int, IsometricTileClass **);
-  void (__thiscall *Clear)(VectorClass_IsometricTileClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_IsometricTileClass_PTR *this, IsometricTileClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_IsometricTileClass_PTR *this, IsometricTileClass **);
-  IsometricTileClass *(__thiscall *GetItem)(VectorClass_IsometricTileClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_IsometricTileClass_PTR : VectorClass_IsometricTileClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_IsometricTileClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_IsometricTileClass_PTR)(DynamicVectorClass_IsometricTileClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_IsometricTileClass_PTR *this, VectorClass_IsometricTileClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_IsometricTileClass_PTR *this, int, IsometricTileClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_IsometricTileClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_IsometricTileClass_PTR *this, IsometricTileClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_IsometricTileClass_PTR *this, IsometricTileClass **);
-  IsometricTileClass *(__thiscall *GetItem)(DynamicVectorClass_IsometricTileClass_PTR *this, int);
-};
-
-struct TypeList_TeamTypeClass_PTR : DynamicVectorClass_TeamTypeClass_PTR
-{
-  int unknown_18;
-};
-
-struct TypeList_TeamTypeClass_PTR_vtbl
-{
-  void (__thiscall *~TypeList_TeamTypeClass_PTR)(TypeList_TeamTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(TypeList_TeamTypeClass_PTR *this, VectorClass_TeamTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(TypeList_TeamTypeClass_PTR *this, int, TeamTypeClass **);
-  void (__thiscall *Clear)(TypeList_TeamTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_TeamTypeClass_PTR *this, TeamTypeClass **);
-  int (__thiscall *GetItemIndex)(TypeList_TeamTypeClass_PTR *this, TeamTypeClass **);
-  TeamTypeClass *(__thiscall *GetItem)(TypeList_TeamTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_unsigned_char
-{
-  VectorClass_unsigned_char_vtbl *__vftable;
   unsigned char *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_unsigned_char_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_unsigned_char : VectorBase_unsigned_char, VectorAddon {};
+struct VectorClass_unsigned_char_vtbl : VectorBase_unsigned_char_vtbl {};
 
-struct VectorClass_unsigned_char_vtbl
+struct VectorBase_unsigned_int : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_unsigned_char)(VectorClass_unsigned_char *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_unsigned_char *this, VectorClass_unsigned_char *);
-  bool (__thiscall *SetCapacity)(VectorClass_unsigned_char *this, int, unsigned char *);
-  void (__thiscall *Clear)(VectorClass_unsigned_char *this);
-  int (__thiscall *FindItemIndex)(VectorClass_unsigned_char *this, unsigned char *);
-  int (__thiscall *GetItemIndex)(VectorClass_unsigned_char *this, unsigned char *);
-  unsigned char (__thiscall *GetItem)(VectorClass_unsigned_char *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_unsigned_int
-{
-  VectorClass_unsigned_int_vtbl *__vftable;
   unsigned int *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_unsigned_int_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_unsigned_int : VectorBase_unsigned_int, VectorAddon {};
+struct VectorClass_unsigned_int_vtbl : VectorBase_unsigned_int_vtbl {};
+struct DynamicVectorClass_unsigned_int : VectorClass_unsigned_int, DynamicAddon {};
+struct DynamicVectorClass_unsigned_int_vtbl : VectorClass_unsigned_int_vtbl {};
 
-struct VectorClass_unsigned_int_vtbl
+struct VectorBase_unsigned_short : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_unsigned_int)(VectorClass_unsigned_int *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_unsigned_int *this, VectorClass_unsigned_int *);
-  bool (__thiscall *SetCapacity)(VectorClass_unsigned_int *this, int, unsigned int *);
-  void (__thiscall *Clear)(VectorClass_unsigned_int *this);
-  int (__thiscall *FindItemIndex)(VectorClass_unsigned_int *this, unsigned int *);
-  int (__thiscall *GetItemIndex)(VectorClass_unsigned_int *this, unsigned int *);
-  unsigned int (__thiscall *GetItem)(VectorClass_unsigned_int *this, int);
-};
-
-struct DynamicVectorClass_unsigned_int : VectorClass_unsigned_int
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_unsigned_int_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_unsigned_int)(DynamicVectorClass_unsigned_int *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_unsigned_int *this, VectorClass_unsigned_int *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_unsigned_int *this, int, unsigned int *);
-  void (__thiscall *Clear)(DynamicVectorClass_unsigned_int *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_unsigned_int *this, unsigned int *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_unsigned_int *this, unsigned int *);
-  unsigned int (__thiscall *GetItem)(DynamicVectorClass_unsigned_int *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_unsigned_short
-{
-  VectorClass_unsigned_short_vtbl *__vftable;
   unsigned short *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_unsigned_short_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_unsigned_short : VectorBase_unsigned_short, VectorAddon {};
+struct VectorClass_unsigned_short_vtbl : VectorBase_unsigned_short_vtbl {};
+struct DynamicVectorClass_unsigned_short : VectorClass_unsigned_short, DynamicAddon {};
+struct DynamicVectorClass_unsigned_short_vtbl : VectorClass_unsigned_short_vtbl {};
 
-struct VectorClass_unsigned_short_vtbl
+struct VectorBase_bool : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_unsigned_short)(VectorClass_unsigned_short *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_unsigned_short *this, VectorClass_unsigned_short *);
-  bool (__thiscall *SetCapacity)(VectorClass_unsigned_short *this, int, unsigned short *);
-  void (__thiscall *Clear)(VectorClass_unsigned_short *this);
-  int (__thiscall *FindItemIndex)(VectorClass_unsigned_short *this, unsigned short *);
-  int (__thiscall *GetItemIndex)(VectorClass_unsigned_short *this, unsigned short *);
-  unsigned short (__thiscall *GetItem)(VectorClass_unsigned_short *this, int);
-};
-
-struct DynamicVectorClass_unsigned_short : VectorClass_unsigned_short
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_unsigned_short_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_unsigned_short)(DynamicVectorClass_unsigned_short *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_unsigned_short *this, VectorClass_unsigned_short *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_unsigned_short *this, int, unsigned short *);
-  void (__thiscall *Clear)(DynamicVectorClass_unsigned_short *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_unsigned_short *this, unsigned short *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_unsigned_short *this, unsigned short *);
-  unsigned short (__thiscall *GetItem)(DynamicVectorClass_unsigned_short *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_bool
-{
-  VectorClass_bool_vtbl *__vftable;
   bool *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_bool_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_bool : VectorBase_bool, VectorAddon {};
+struct VectorClass_bool_vtbl : VectorBase_bool_vtbl {};
+struct DynamicVectorClass_bool : VectorClass_bool, DynamicAddon {};
+struct DynamicVectorClass_bool_vtbl : VectorClass_bool_vtbl {};
 
-struct VectorClass_bool_vtbl
+struct VectorBase_double : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_bool)(VectorClass_bool *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_bool *this, VectorClass_bool *);
-  bool (__thiscall *SetCapacity)(VectorClass_bool *this, int, bool *);
-  void (__thiscall *Clear)(VectorClass_bool *this);
-  int (__thiscall *FindItemIndex)(VectorClass_bool *this, bool *);
-  int (__thiscall *GetItemIndex)(VectorClass_bool *this, bool *);
-  bool (__thiscall *GetItem)(VectorClass_bool *this, int);
-};
-
-struct DynamicVectorClass_bool : VectorClass_bool
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_bool_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_bool)(DynamicVectorClass_bool *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_bool *this, VectorClass_bool *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_bool *this, int, bool *);
-  void (__thiscall *Clear)(DynamicVectorClass_bool *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_bool *this, bool *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_bool *this, bool *);
-  bool (__thiscall *GetItem)(DynamicVectorClass_bool *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_double
-{
-  VectorClass_double_vtbl *__vftable;
   double *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_double_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_double : VectorBase_double, VectorAddon {};
+struct VectorClass_double_vtbl : VectorBase_double_vtbl {};
+struct DynamicVectorClass_double : VectorClass_double, DynamicAddon {};
+struct DynamicVectorClass_double_vtbl : VectorClass_double_vtbl {};
 
-struct VectorClass_double_vtbl
+struct VectorBase_PassabilityType : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_double)(VectorClass_double *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_double *this, VectorClass_double *);
-  bool (__thiscall *SetCapacity)(VectorClass_double *this, int, double *);
-  void (__thiscall *Clear)(VectorClass_double *this);
-  int (__thiscall *FindItemIndex)(VectorClass_double *this, double *);
-  int (__thiscall *GetItemIndex)(VectorClass_double *this, double *);
-  double (__thiscall *GetItem)(VectorClass_double *this, int);
-};
-
-struct DynamicVectorClass_double : VectorClass_double
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_double_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_double)(DynamicVectorClass_double *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_double *this, VectorClass_double *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_double *this, int, double *);
-  void (__thiscall *Clear)(DynamicVectorClass_double *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_double *this, double *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_double *this, double *);
-  double (__thiscall *GetItem)(DynamicVectorClass_double *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_PassabilityType
-{
-  VectorClass_PassabilityType_vtbl *__vftable;
   PassabilityType *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_PassabilityType_vtbl
-{
-  void (__thiscall *~VectorClass_PassabilityType)(VectorClass_PassabilityType *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_PassabilityType *this, VectorClass_PassabilityType *);
-  bool (__thiscall *SetCapacity)(VectorClass_PassabilityType *this, int, PassabilityType *);
-  void (__thiscall *Clear)(VectorClass_PassabilityType *this);
-  int (__thiscall *FindItemIndex)(VectorClass_PassabilityType *this, PassabilityType *);
-  int (__thiscall *GetItemIndex)(VectorClass_PassabilityType *this, PassabilityType *);
-  PassabilityType (__thiscall *GetItem)(VectorClass_PassabilityType *this, int);
-};
-
-struct DynamicVectorClass_PassabilityType : VectorClass_PassabilityType
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_PassabilityType_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_PassabilityType)(DynamicVectorClass_PassabilityType *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_PassabilityType *this, VectorClass_PassabilityType *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_PassabilityType *this, int, PassabilityType *);
-  void (__thiscall *Clear)(DynamicVectorClass_PassabilityType *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_PassabilityType *this, PassabilityType *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_PassabilityType *this, PassabilityType *);
-  PassabilityType (__thiscall *GetItem)(DynamicVectorClass_PassabilityType *this, int);
-};
+struct VectorBase_PassabilityType_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_PassabilityType : VectorBase_PassabilityType, VectorAddon {};
+struct VectorClass_PassabilityType_vtbl : VectorBase_PassabilityType_vtbl {};
+struct DynamicVectorClass_PassabilityType : VectorClass_PassabilityType, DynamicAddon {};
+struct DynamicVectorClass_PassabilityType_vtbl : VectorClass_PassabilityType_vtbl {};
 
 class TriggerTypeClass : AbstractTypeClass
 {
@@ -21093,36 +12574,7 @@ class TriggerTypeClass : AbstractTypeClass
   TActionClass *FirstAction;
 };
 
-struct TriggerTypeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~TriggerTypeClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct TriggerTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
 class CampaignClass : AbstractTypeClass
 {
@@ -21132,36 +12584,7 @@ class CampaignClass : AbstractTypeClass
   wchar_t Description[128];
 };
 
-struct CampaignClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~CampaignClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
-};
+struct CampaignClass_vtbl : AbstractTypeClass_vtbl {};
 
 struct ThemeControl
 {
@@ -21182,79 +12605,25 @@ struct KamikazeControl
   AbstractClass *Target;
 };
 
-struct __declspec(align(4)) VectorClass_Kamikaze_PTR
+struct VectorBase_Kamikaze_PTR : VectorBase_PTR
 {
-  VectorClass_Kamikaze_PTR_vtbl *__vftable;
   Kamikaze **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_Kamikaze_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_Kamikaze_PTR : VectorBase_Kamikaze_PTR, VectorAddon {};
+struct VectorClass_Kamikaze_PTR_vtbl : VectorBase_Kamikaze_PTR_vtbl {};
+struct DynamicVectorClass_Kamikaze_PTR : VectorClass_Kamikaze_PTR, DynamicAddon {};
+struct DynamicVectorClass_Kamikaze_PTR_vtbl : VectorClass_Kamikaze_PTR_vtbl {};
 
-struct VectorClass_Kamikaze_PTR_vtbl
+struct VectorBase_KamikazeControl_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_Kamikaze_PTR)(VectorClass_Kamikaze_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_Kamikaze_PTR *this, VectorClass_Kamikaze_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_Kamikaze_PTR *this, int, Kamikaze **);
-  void (__thiscall *Clear)(VectorClass_Kamikaze_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_Kamikaze_PTR *this, Kamikaze **);
-  int (__thiscall *GetItemIndex)(VectorClass_Kamikaze_PTR *this, Kamikaze **);
-  Kamikaze *(__thiscall *GetItem)(VectorClass_Kamikaze_PTR *this, int);
-};
-
-struct DynamicVectorClass_Kamikaze_PTR : VectorClass_Kamikaze_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_Kamikaze_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_Kamikaze_PTR)(DynamicVectorClass_Kamikaze_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_Kamikaze_PTR *this, VectorClass_Kamikaze_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_Kamikaze_PTR *this, int, Kamikaze **);
-  void (__thiscall *Clear)(DynamicVectorClass_Kamikaze_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_Kamikaze_PTR *this, Kamikaze **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_Kamikaze_PTR *this, Kamikaze **);
-  Kamikaze *(__thiscall *GetItem)(DynamicVectorClass_Kamikaze_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_KamikazeControl_PTR
-{
-  VectorClass_KamikazeControl_PTR_vtbl *__vftable;
   KamikazeControl **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_KamikazeControl_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_KamikazeControl_PTR)(VectorClass_KamikazeControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_KamikazeControl_PTR *this, VectorClass_KamikazeControl_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_KamikazeControl_PTR *this, int, KamikazeControl **);
-  void (__thiscall *Clear)(VectorClass_KamikazeControl_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_KamikazeControl_PTR *this, KamikazeControl **);
-  int (__thiscall *GetItemIndex)(VectorClass_KamikazeControl_PTR *this, KamikazeControl **);
-  KamikazeControl *(__thiscall *GetItem)(VectorClass_KamikazeControl_PTR *this, int);
-};
-
-struct DynamicVectorClass_KamikazeControl_PTR : VectorClass_KamikazeControl_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_KamikazeControl_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_KamikazeControl_PTR)(DynamicVectorClass_KamikazeControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_KamikazeControl_PTR *this, VectorClass_KamikazeControl_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_KamikazeControl_PTR *this, int, KamikazeControl **);
-  void (__thiscall *Clear)(DynamicVectorClass_KamikazeControl_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_KamikazeControl_PTR *this, KamikazeControl **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_KamikazeControl_PTR *this, KamikazeControl **);
-  KamikazeControl *(__thiscall *GetItem)(DynamicVectorClass_KamikazeControl_PTR *this, int);
-};
+struct VectorBase_KamikazeControl_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_KamikazeControl_PTR : VectorBase_KamikazeControl_PTR, VectorAddon {};
+struct VectorClass_KamikazeControl_PTR_vtbl : VectorBase_KamikazeControl_PTR_vtbl {};
+struct DynamicVectorClass_KamikazeControl_PTR : VectorClass_KamikazeControl_PTR, DynamicAddon {};
+struct DynamicVectorClass_KamikazeControl_PTR_vtbl : VectorClass_KamikazeControl_PTR_vtbl {};
 
 struct Kamikaze
 {
@@ -21276,1485 +12645,405 @@ struct DirtyAreaStruct
   bool alphabool10;
 };
 
-struct __declspec(align(4)) VectorClass_LightConvertClass_PTR
+struct VectorBase_LightConvertClass_PTR : VectorBase_PTR
 {
-  VectorClass_LightConvertClass_PTR_vtbl *__vftable;
   LightConvertClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_LightConvertClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_LightConvertClass_PTR : VectorBase_LightConvertClass_PTR, VectorAddon {};
+struct VectorClass_LightConvertClass_PTR_vtbl : VectorBase_LightConvertClass_PTR_vtbl {};
+struct DynamicVectorClass_LightConvertClass_PTR : VectorClass_LightConvertClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_LightConvertClass_PTR_vtbl : VectorClass_LightConvertClass_PTR_vtbl {};
 
-struct VectorClass_LightConvertClass_PTR_vtbl
+struct VectorBase_ScriptClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_LightConvertClass_PTR)(VectorClass_LightConvertClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_LightConvertClass_PTR *this, VectorClass_LightConvertClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_LightConvertClass_PTR *this, int, LightConvertClass **);
-  void (__thiscall *Clear)(VectorClass_LightConvertClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_LightConvertClass_PTR *this, LightConvertClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_LightConvertClass_PTR *this, LightConvertClass **);
-  LightConvertClass *(__thiscall *GetItem)(VectorClass_LightConvertClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_LightConvertClass_PTR : VectorClass_LightConvertClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_LightConvertClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_LightConvertClass_PTR)(DynamicVectorClass_LightConvertClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_LightConvertClass_PTR *this, VectorClass_LightConvertClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_LightConvertClass_PTR *this, int, LightConvertClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_LightConvertClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_LightConvertClass_PTR *this, LightConvertClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_LightConvertClass_PTR *this, LightConvertClass **);
-  LightConvertClass *(__thiscall *GetItem)(DynamicVectorClass_LightConvertClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ScriptClass_PTR
-{
-  VectorClass_ScriptClass_PTR_vtbl *__vftable;
   ScriptClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ScriptClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ScriptClass_PTR : VectorBase_ScriptClass_PTR, VectorAddon {};
+struct VectorClass_ScriptClass_PTR_vtbl : VectorBase_ScriptClass_PTR_vtbl {};
+struct DynamicVectorClass_ScriptClass_PTR : VectorClass_ScriptClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ScriptClass_PTR_vtbl : VectorClass_ScriptClass_PTR_vtbl {};
 
-struct VectorClass_ScriptClass_PTR_vtbl
+struct VectorBase_VoxelAnimClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ScriptClass_PTR)(VectorClass_ScriptClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ScriptClass_PTR *this, VectorClass_ScriptClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ScriptClass_PTR *this, int, ScriptClass **);
-  void (__thiscall *Clear)(VectorClass_ScriptClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ScriptClass_PTR *this, ScriptClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ScriptClass_PTR *this, ScriptClass **);
-  ScriptClass *(__thiscall *GetItem)(VectorClass_ScriptClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ScriptClass_PTR : VectorClass_ScriptClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ScriptClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ScriptClass_PTR)(DynamicVectorClass_ScriptClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ScriptClass_PTR *this, VectorClass_ScriptClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ScriptClass_PTR *this, int, ScriptClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ScriptClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ScriptClass_PTR *this, ScriptClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ScriptClass_PTR *this, ScriptClass **);
-  ScriptClass *(__thiscall *GetItem)(DynamicVectorClass_ScriptClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_VoxelAnimClass_PTR
-{
-  VectorClass_VoxelAnimClass_PTR_vtbl *__vftable;
   VoxelAnimClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_VoxelAnimClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_VoxelAnimClass_PTR : VectorBase_VoxelAnimClass_PTR, VectorAddon {};
+struct VectorClass_VoxelAnimClass_PTR_vtbl : VectorBase_VoxelAnimClass_PTR_vtbl {};
+struct DynamicVectorClass_VoxelAnimClass_PTR : VectorClass_VoxelAnimClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_VoxelAnimClass_PTR_vtbl : VectorClass_VoxelAnimClass_PTR_vtbl {};
 
-struct VectorClass_VoxelAnimClass_PTR_vtbl
+struct VectorBase_AirstrikeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_VoxelAnimClass_PTR)(VectorClass_VoxelAnimClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_VoxelAnimClass_PTR *this, VectorClass_VoxelAnimClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_VoxelAnimClass_PTR *this, int, VoxelAnimClass **);
-  void (__thiscall *Clear)(VectorClass_VoxelAnimClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_VoxelAnimClass_PTR *this, VoxelAnimClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_VoxelAnimClass_PTR *this, VoxelAnimClass **);
-  VoxelAnimClass *(__thiscall *GetItem)(VectorClass_VoxelAnimClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_VoxelAnimClass_PTR : VectorClass_VoxelAnimClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_VoxelAnimClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_VoxelAnimClass_PTR)(DynamicVectorClass_VoxelAnimClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_VoxelAnimClass_PTR *this, VectorClass_VoxelAnimClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_VoxelAnimClass_PTR *this, int, VoxelAnimClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_VoxelAnimClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_VoxelAnimClass_PTR *this, VoxelAnimClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_VoxelAnimClass_PTR *this, VoxelAnimClass **);
-  VoxelAnimClass *(__thiscall *GetItem)(DynamicVectorClass_VoxelAnimClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AirstrikeClass_PTR
-{
-  VectorClass_AirstrikeClass_PTR_vtbl *__vftable;
   AirstrikeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AirstrikeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AirstrikeClass_PTR : VectorBase_AirstrikeClass_PTR, VectorAddon {};
+struct VectorClass_AirstrikeClass_PTR_vtbl : VectorBase_AirstrikeClass_PTR_vtbl {};
+struct DynamicVectorClass_AirstrikeClass_PTR : VectorClass_AirstrikeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AirstrikeClass_PTR_vtbl : VectorClass_AirstrikeClass_PTR_vtbl {};
 
-struct VectorClass_AirstrikeClass_PTR_vtbl
+struct VectorBase_AlphaShapeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AirstrikeClass_PTR)(VectorClass_AirstrikeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AirstrikeClass_PTR *this, VectorClass_AirstrikeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AirstrikeClass_PTR *this, int, AirstrikeClass **);
-  void (__thiscall *Clear)(VectorClass_AirstrikeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AirstrikeClass_PTR *this, AirstrikeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AirstrikeClass_PTR *this, AirstrikeClass **);
-  AirstrikeClass *(__thiscall *GetItem)(VectorClass_AirstrikeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AirstrikeClass_PTR : VectorClass_AirstrikeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AirstrikeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AirstrikeClass_PTR)(DynamicVectorClass_AirstrikeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AirstrikeClass_PTR *this, VectorClass_AirstrikeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AirstrikeClass_PTR *this, int, AirstrikeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AirstrikeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AirstrikeClass_PTR *this, AirstrikeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AirstrikeClass_PTR *this, AirstrikeClass **);
-  AirstrikeClass *(__thiscall *GetItem)(DynamicVectorClass_AirstrikeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_AlphaShapeClass_PTR
-{
-  VectorClass_AlphaShapeClass_PTR_vtbl *__vftable;
   AlphaShapeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_AlphaShapeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AlphaShapeClass_PTR : VectorBase_AlphaShapeClass_PTR, VectorAddon {};
+struct VectorClass_AlphaShapeClass_PTR_vtbl : VectorBase_AlphaShapeClass_PTR_vtbl {};
+struct DynamicVectorClass_AlphaShapeClass_PTR : VectorClass_AlphaShapeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AlphaShapeClass_PTR_vtbl : VectorClass_AlphaShapeClass_PTR_vtbl {};
 
-struct VectorClass_AlphaShapeClass_PTR_vtbl
+struct VectorBase_CaptureManagerClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_AlphaShapeClass_PTR)(VectorClass_AlphaShapeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AlphaShapeClass_PTR *this, VectorClass_AlphaShapeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AlphaShapeClass_PTR *this, int, AlphaShapeClass **);
-  void (__thiscall *Clear)(VectorClass_AlphaShapeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AlphaShapeClass_PTR *this, AlphaShapeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AlphaShapeClass_PTR *this, AlphaShapeClass **);
-  AlphaShapeClass *(__thiscall *GetItem)(VectorClass_AlphaShapeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AlphaShapeClass_PTR : VectorClass_AlphaShapeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AlphaShapeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AlphaShapeClass_PTR)(DynamicVectorClass_AlphaShapeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AlphaShapeClass_PTR *this, VectorClass_AlphaShapeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AlphaShapeClass_PTR *this, int, AlphaShapeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AlphaShapeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AlphaShapeClass_PTR *this, AlphaShapeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AlphaShapeClass_PTR *this, AlphaShapeClass **);
-  AlphaShapeClass *(__thiscall *GetItem)(DynamicVectorClass_AlphaShapeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_CaptureManagerClass_PTR
-{
-  VectorClass_CaptureManagerClass_PTR_vtbl *__vftable;
   CaptureManagerClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_CaptureManagerClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CaptureManagerClass_PTR : VectorBase_CaptureManagerClass_PTR, VectorAddon {};
+struct VectorClass_CaptureManagerClass_PTR_vtbl : VectorBase_CaptureManagerClass_PTR_vtbl {};
+struct DynamicVectorClass_CaptureManagerClass_PTR : VectorClass_CaptureManagerClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_CaptureManagerClass_PTR_vtbl : VectorClass_CaptureManagerClass_PTR_vtbl {};
 
-struct VectorClass_CaptureManagerClass_PTR_vtbl
+struct VectorBase_ConvertClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_CaptureManagerClass_PTR)(VectorClass_CaptureManagerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CaptureManagerClass_PTR *this, VectorClass_CaptureManagerClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_CaptureManagerClass_PTR *this, int, CaptureManagerClass **);
-  void (__thiscall *Clear)(VectorClass_CaptureManagerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CaptureManagerClass_PTR *this, CaptureManagerClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_CaptureManagerClass_PTR *this, CaptureManagerClass **);
-  CaptureManagerClass *(__thiscall *GetItem)(VectorClass_CaptureManagerClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_CaptureManagerClass_PTR : VectorClass_CaptureManagerClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_CaptureManagerClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_CaptureManagerClass_PTR)(DynamicVectorClass_CaptureManagerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_CaptureManagerClass_PTR *this, VectorClass_CaptureManagerClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_CaptureManagerClass_PTR *this, int, CaptureManagerClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_CaptureManagerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_CaptureManagerClass_PTR *this, CaptureManagerClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_CaptureManagerClass_PTR *this, CaptureManagerClass **);
-  CaptureManagerClass *(__thiscall *GetItem)(DynamicVectorClass_CaptureManagerClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ConvertClass_PTR
-{
-  VectorClass_ConvertClass_PTR_vtbl *__vftable;
   ConvertClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ConvertClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ConvertClass_PTR : VectorBase_ConvertClass_PTR, VectorAddon {};
+struct VectorClass_ConvertClass_PTR_vtbl : VectorBase_ConvertClass_PTR_vtbl {};
+struct DynamicVectorClass_ConvertClass_PTR : VectorClass_ConvertClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ConvertClass_PTR_vtbl : VectorClass_ConvertClass_PTR_vtbl {};
 
-struct VectorClass_ConvertClass_PTR_vtbl
+struct VectorBase_DiskLaserClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ConvertClass_PTR)(VectorClass_ConvertClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ConvertClass_PTR *this, VectorClass_ConvertClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ConvertClass_PTR *this, int, ConvertClass **);
-  void (__thiscall *Clear)(VectorClass_ConvertClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ConvertClass_PTR *this, ConvertClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ConvertClass_PTR *this, ConvertClass **);
-  ConvertClass *(__thiscall *GetItem)(VectorClass_ConvertClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ConvertClass_PTR : VectorClass_ConvertClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ConvertClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ConvertClass_PTR)(DynamicVectorClass_ConvertClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ConvertClass_PTR *this, VectorClass_ConvertClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ConvertClass_PTR *this, int, ConvertClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ConvertClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ConvertClass_PTR *this, ConvertClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ConvertClass_PTR *this, ConvertClass **);
-  ConvertClass *(__thiscall *GetItem)(DynamicVectorClass_ConvertClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_DiskLaserClass_PTR
-{
-  VectorClass_DiskLaserClass_PTR_vtbl *__vftable;
   DiskLaserClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_DiskLaserClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DiskLaserClass_PTR : VectorBase_DiskLaserClass_PTR, VectorAddon {};
+struct VectorClass_DiskLaserClass_PTR_vtbl : VectorBase_DiskLaserClass_PTR_vtbl {};
+struct DynamicVectorClass_DiskLaserClass_PTR : VectorClass_DiskLaserClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_DiskLaserClass_PTR_vtbl : VectorClass_DiskLaserClass_PTR_vtbl {};
 
-struct VectorClass_DiskLaserClass_PTR_vtbl
+struct VectorBase_EBolt_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_DiskLaserClass_PTR)(VectorClass_DiskLaserClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_DiskLaserClass_PTR *this, VectorClass_DiskLaserClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_DiskLaserClass_PTR *this, int, DiskLaserClass **);
-  void (__thiscall *Clear)(VectorClass_DiskLaserClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DiskLaserClass_PTR *this, DiskLaserClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_DiskLaserClass_PTR *this, DiskLaserClass **);
-  DiskLaserClass *(__thiscall *GetItem)(VectorClass_DiskLaserClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_DiskLaserClass_PTR : VectorClass_DiskLaserClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_DiskLaserClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_DiskLaserClass_PTR)(DynamicVectorClass_DiskLaserClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_DiskLaserClass_PTR *this, VectorClass_DiskLaserClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_DiskLaserClass_PTR *this, int, DiskLaserClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_DiskLaserClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_DiskLaserClass_PTR *this, DiskLaserClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_DiskLaserClass_PTR *this, DiskLaserClass **);
-  DiskLaserClass *(__thiscall *GetItem)(DynamicVectorClass_DiskLaserClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_EBolt_PTR
-{
-  VectorClass_EBolt_PTR_vtbl *__vftable;
   EBolt **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_EBolt_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_EBolt_PTR : VectorBase_EBolt_PTR, VectorAddon {};
+struct VectorClass_EBolt_PTR_vtbl : VectorBase_EBolt_PTR_vtbl {};
+struct DynamicVectorClass_EBolt_PTR : VectorClass_EBolt_PTR, DynamicAddon {};
+struct DynamicVectorClass_EBolt_PTR_vtbl : VectorClass_EBolt_PTR_vtbl {};
 
-struct VectorClass_EBolt_PTR_vtbl
+struct VectorBase_EMPulseClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_EBolt_PTR)(VectorClass_EBolt_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_EBolt_PTR *this, VectorClass_EBolt_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_EBolt_PTR *this, int, EBolt **);
-  void (__thiscall *Clear)(VectorClass_EBolt_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_EBolt_PTR *this, EBolt **);
-  int (__thiscall *GetItemIndex)(VectorClass_EBolt_PTR *this, EBolt **);
-  EBolt *(__thiscall *GetItem)(VectorClass_EBolt_PTR *this, int);
-};
-
-struct DynamicVectorClass_EBolt_PTR : VectorClass_EBolt_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_EBolt_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_EBolt_PTR)(DynamicVectorClass_EBolt_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_EBolt_PTR *this, VectorClass_EBolt_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_EBolt_PTR *this, int, EBolt **);
-  void (__thiscall *Clear)(DynamicVectorClass_EBolt_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_EBolt_PTR *this, EBolt **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_EBolt_PTR *this, EBolt **);
-  EBolt *(__thiscall *GetItem)(DynamicVectorClass_EBolt_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_EMPulseClass_PTR
-{
-  VectorClass_EMPulseClass_PTR_vtbl *__vftable;
   EMPulseClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_EMPulseClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_EMPulseClass_PTR : VectorBase_EMPulseClass_PTR, VectorAddon {};
+struct VectorClass_EMPulseClass_PTR_vtbl : VectorBase_EMPulseClass_PTR_vtbl {};
+struct DynamicVectorClass_EMPulseClass_PTR : VectorClass_EMPulseClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_EMPulseClass_PTR_vtbl : VectorClass_EMPulseClass_PTR_vtbl {};
 
-struct VectorClass_EMPulseClass_PTR_vtbl
+struct VectorBase_TriggerTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_EMPulseClass_PTR)(VectorClass_EMPulseClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_EMPulseClass_PTR *this, VectorClass_EMPulseClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_EMPulseClass_PTR *this, int, EMPulseClass **);
-  void (__thiscall *Clear)(VectorClass_EMPulseClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_EMPulseClass_PTR *this, EMPulseClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_EMPulseClass_PTR *this, EMPulseClass **);
-  EMPulseClass *(__thiscall *GetItem)(VectorClass_EMPulseClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_EMPulseClass_PTR : VectorClass_EMPulseClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_EMPulseClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_EMPulseClass_PTR)(DynamicVectorClass_EMPulseClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_EMPulseClass_PTR *this, VectorClass_EMPulseClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_EMPulseClass_PTR *this, int, EMPulseClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_EMPulseClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_EMPulseClass_PTR *this, EMPulseClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_EMPulseClass_PTR *this, EMPulseClass **);
-  EMPulseClass *(__thiscall *GetItem)(DynamicVectorClass_EMPulseClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TriggerTypeClass_PTR
-{
-  VectorClass_TriggerTypeClass_PTR_vtbl *__vftable;
   TriggerTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TriggerTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TriggerTypeClass_PTR : VectorBase_TriggerTypeClass_PTR, VectorAddon {};
+struct VectorClass_TriggerTypeClass_PTR_vtbl : VectorBase_TriggerTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_TriggerTypeClass_PTR : VectorClass_TriggerTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TriggerTypeClass_PTR_vtbl : VectorClass_TriggerTypeClass_PTR_vtbl {};
 
-struct VectorClass_TriggerTypeClass_PTR_vtbl
+struct VectorBase_TriggerClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TriggerTypeClass_PTR)(VectorClass_TriggerTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TriggerTypeClass_PTR *this, VectorClass_TriggerTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TriggerTypeClass_PTR *this, int, TriggerTypeClass **);
-  void (__thiscall *Clear)(VectorClass_TriggerTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TriggerTypeClass_PTR *this, TriggerTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TriggerTypeClass_PTR *this, TriggerTypeClass **);
-  TriggerTypeClass *(__thiscall *GetItem)(VectorClass_TriggerTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TriggerTypeClass_PTR : VectorClass_TriggerTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TriggerTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TriggerTypeClass_PTR)(DynamicVectorClass_TriggerTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TriggerTypeClass_PTR *this, VectorClass_TriggerTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TriggerTypeClass_PTR *this, int, TriggerTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TriggerTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TriggerTypeClass_PTR *this, TriggerTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TriggerTypeClass_PTR *this, TriggerTypeClass **);
-  TriggerTypeClass *(__thiscall *GetItem)(DynamicVectorClass_TriggerTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TriggerClass_PTR
-{
-  VectorClass_TriggerClass_PTR_vtbl *__vftable;
   TriggerClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TriggerClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TriggerClass_PTR : VectorBase_TriggerClass_PTR, VectorAddon {};
+struct VectorClass_TriggerClass_PTR_vtbl : VectorBase_TriggerClass_PTR_vtbl {};
+struct DynamicVectorClass_TriggerClass_PTR : VectorClass_TriggerClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TriggerClass_PTR_vtbl : VectorClass_TriggerClass_PTR_vtbl {};
 
-struct VectorClass_TriggerClass_PTR_vtbl
+struct VectorBase_BuildingLightClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TriggerClass_PTR)(VectorClass_TriggerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TriggerClass_PTR *this, VectorClass_TriggerClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TriggerClass_PTR *this, int, TriggerClass **);
-  void (__thiscall *Clear)(VectorClass_TriggerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TriggerClass_PTR *this, TriggerClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TriggerClass_PTR *this, TriggerClass **);
-  TriggerClass *(__thiscall *GetItem)(VectorClass_TriggerClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TriggerClass_PTR : VectorClass_TriggerClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TriggerClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TriggerClass_PTR)(DynamicVectorClass_TriggerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TriggerClass_PTR *this, VectorClass_TriggerClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TriggerClass_PTR *this, int, TriggerClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TriggerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TriggerClass_PTR *this, TriggerClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TriggerClass_PTR *this, TriggerClass **);
-  TriggerClass *(__thiscall *GetItem)(DynamicVectorClass_TriggerClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_BuildingLightClass_PTR
-{
-  VectorClass_BuildingLightClass_PTR_vtbl *__vftable;
   BuildingLightClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_BuildingLightClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BuildingLightClass_PTR : VectorBase_BuildingLightClass_PTR, VectorAddon {};
+struct VectorClass_BuildingLightClass_PTR_vtbl : VectorBase_BuildingLightClass_PTR_vtbl {};
+struct DynamicVectorClass_BuildingLightClass_PTR : VectorClass_BuildingLightClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_BuildingLightClass_PTR_vtbl : VectorClass_BuildingLightClass_PTR_vtbl {};
 
-struct VectorClass_BuildingLightClass_PTR_vtbl
+struct VectorBase_WaveClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_BuildingLightClass_PTR)(VectorClass_BuildingLightClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_BuildingLightClass_PTR *this, VectorClass_BuildingLightClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_BuildingLightClass_PTR *this, int, BuildingLightClass **);
-  void (__thiscall *Clear)(VectorClass_BuildingLightClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_BuildingLightClass_PTR *this, BuildingLightClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_BuildingLightClass_PTR *this, BuildingLightClass **);
-  BuildingLightClass *(__thiscall *GetItem)(VectorClass_BuildingLightClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_BuildingLightClass_PTR : VectorClass_BuildingLightClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_BuildingLightClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_BuildingLightClass_PTR)(DynamicVectorClass_BuildingLightClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_BuildingLightClass_PTR *this, VectorClass_BuildingLightClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_BuildingLightClass_PTR *this, int, BuildingLightClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_BuildingLightClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_BuildingLightClass_PTR *this, BuildingLightClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_BuildingLightClass_PTR *this, BuildingLightClass **);
-  BuildingLightClass *(__thiscall *GetItem)(DynamicVectorClass_BuildingLightClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_WaveClass_PTR
-{
-  VectorClass_WaveClass_PTR_vtbl *__vftable;
   WaveClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_WaveClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_WaveClass_PTR : VectorBase_WaveClass_PTR, VectorAddon {};
+struct VectorClass_WaveClass_PTR_vtbl : VectorBase_WaveClass_PTR_vtbl {};
+struct DynamicVectorClass_WaveClass_PTR : VectorClass_WaveClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_WaveClass_PTR_vtbl : VectorClass_WaveClass_PTR_vtbl {};
 
-struct VectorClass_WaveClass_PTR_vtbl
+struct VectorBase_SmudgeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_WaveClass_PTR)(VectorClass_WaveClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_WaveClass_PTR *this, VectorClass_WaveClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_WaveClass_PTR *this, int, WaveClass **);
-  void (__thiscall *Clear)(VectorClass_WaveClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_WaveClass_PTR *this, WaveClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_WaveClass_PTR *this, WaveClass **);
-  WaveClass *(__thiscall *GetItem)(VectorClass_WaveClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_WaveClass_PTR : VectorClass_WaveClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_WaveClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_WaveClass_PTR)(DynamicVectorClass_WaveClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_WaveClass_PTR *this, VectorClass_WaveClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_WaveClass_PTR *this, int, WaveClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_WaveClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_WaveClass_PTR *this, WaveClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_WaveClass_PTR *this, WaveClass **);
-  WaveClass *(__thiscall *GetItem)(DynamicVectorClass_WaveClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_SmudgeClass_PTR
-{
-  VectorClass_SmudgeClass_PTR_vtbl *__vftable;
   SmudgeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SmudgeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SmudgeClass_PTR : VectorBase_SmudgeClass_PTR, VectorAddon {};
+struct VectorClass_SmudgeClass_PTR_vtbl : VectorBase_SmudgeClass_PTR_vtbl {};
+struct DynamicVectorClass_SmudgeClass_PTR : VectorClass_SmudgeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SmudgeClass_PTR_vtbl : VectorClass_SmudgeClass_PTR_vtbl {};
 
-struct VectorClass_SmudgeClass_PTR_vtbl
+struct VectorBase_CampaignClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_SmudgeClass_PTR)(VectorClass_SmudgeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SmudgeClass_PTR *this, VectorClass_SmudgeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SmudgeClass_PTR *this, int, SmudgeClass **);
-  void (__thiscall *Clear)(VectorClass_SmudgeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SmudgeClass_PTR *this, SmudgeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SmudgeClass_PTR *this, SmudgeClass **);
-  SmudgeClass *(__thiscall *GetItem)(VectorClass_SmudgeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SmudgeClass_PTR : VectorClass_SmudgeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SmudgeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SmudgeClass_PTR)(DynamicVectorClass_SmudgeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SmudgeClass_PTR *this, VectorClass_SmudgeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SmudgeClass_PTR *this, int, SmudgeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SmudgeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SmudgeClass_PTR *this, SmudgeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SmudgeClass_PTR *this, SmudgeClass **);
-  SmudgeClass *(__thiscall *GetItem)(DynamicVectorClass_SmudgeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_CampaignClass_PTR
-{
-  VectorClass_CampaignClass_PTR_vtbl *__vftable;
   CampaignClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_CampaignClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CampaignClass_PTR : VectorBase_CampaignClass_PTR, VectorAddon {};
+struct VectorClass_CampaignClass_PTR_vtbl : VectorBase_CampaignClass_PTR_vtbl {};
+struct DynamicVectorClass_CampaignClass_PTR : VectorClass_CampaignClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_CampaignClass_PTR_vtbl : VectorClass_CampaignClass_PTR_vtbl {};
 
-struct VectorClass_CampaignClass_PTR_vtbl
+struct VectorBase_ThemeControl_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_CampaignClass_PTR)(VectorClass_CampaignClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CampaignClass_PTR *this, VectorClass_CampaignClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_CampaignClass_PTR *this, int, CampaignClass **);
-  void (__thiscall *Clear)(VectorClass_CampaignClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CampaignClass_PTR *this, CampaignClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_CampaignClass_PTR *this, CampaignClass **);
-  CampaignClass *(__thiscall *GetItem)(VectorClass_CampaignClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_CampaignClass_PTR : VectorClass_CampaignClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_CampaignClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_CampaignClass_PTR)(DynamicVectorClass_CampaignClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_CampaignClass_PTR *this, VectorClass_CampaignClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_CampaignClass_PTR *this, int, CampaignClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_CampaignClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_CampaignClass_PTR *this, CampaignClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_CampaignClass_PTR *this, CampaignClass **);
-  CampaignClass *(__thiscall *GetItem)(DynamicVectorClass_CampaignClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ThemeControl_PTR
-{
-  VectorClass_ThemeControl_PTR_vtbl *__vftable;
   ThemeControl **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ThemeControl_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ThemeControl_PTR : VectorBase_ThemeControl_PTR, VectorAddon {};
+struct VectorClass_ThemeControl_PTR_vtbl : VectorBase_ThemeControl_PTR_vtbl {};
+struct DynamicVectorClass_ThemeControl_PTR : VectorClass_ThemeControl_PTR, DynamicAddon {};
+struct DynamicVectorClass_ThemeControl_PTR_vtbl : VectorClass_ThemeControl_PTR_vtbl {};
 
-struct VectorClass_ThemeControl_PTR_vtbl
+struct VectorBase_CCINIClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ThemeControl_PTR)(VectorClass_ThemeControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ThemeControl_PTR *this, VectorClass_ThemeControl_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ThemeControl_PTR *this, int, ThemeControl **);
-  void (__thiscall *Clear)(VectorClass_ThemeControl_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ThemeControl_PTR *this, ThemeControl **);
-  int (__thiscall *GetItemIndex)(VectorClass_ThemeControl_PTR *this, ThemeControl **);
-  ThemeControl *(__thiscall *GetItem)(VectorClass_ThemeControl_PTR *this, int);
-};
-
-struct DynamicVectorClass_ThemeControl_PTR : VectorClass_ThemeControl_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ThemeControl_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ThemeControl_PTR)(DynamicVectorClass_ThemeControl_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ThemeControl_PTR *this, VectorClass_ThemeControl_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ThemeControl_PTR *this, int, ThemeControl **);
-  void (__thiscall *Clear)(DynamicVectorClass_ThemeControl_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ThemeControl_PTR *this, ThemeControl **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ThemeControl_PTR *this, ThemeControl **);
-  ThemeControl *(__thiscall *GetItem)(DynamicVectorClass_ThemeControl_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_CCINIClass_PTR
-{
-  VectorClass_CCINIClass_PTR_vtbl *__vftable;
   CCINIClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_CCINIClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CCINIClass_PTR : VectorBase_CCINIClass_PTR, VectorAddon {};
+struct VectorClass_CCINIClass_PTR_vtbl : VectorBase_CCINIClass_PTR_vtbl {};
+struct DynamicVectorClass_CCINIClass_PTR : VectorClass_CCINIClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_CCINIClass_PTR_vtbl : VectorClass_CCINIClass_PTR_vtbl {};
 
-struct VectorClass_CCINIClass_PTR_vtbl
+struct VectorBase_IonBlastClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_CCINIClass_PTR)(VectorClass_CCINIClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_CCINIClass_PTR *this, VectorClass_CCINIClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_CCINIClass_PTR *this, int, CCINIClass **);
-  void (__thiscall *Clear)(VectorClass_CCINIClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CCINIClass_PTR *this, CCINIClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_CCINIClass_PTR *this, CCINIClass **);
-  CCINIClass *(__thiscall *GetItem)(VectorClass_CCINIClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_CCINIClass_PTR : VectorClass_CCINIClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_CCINIClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_CCINIClass_PTR)(DynamicVectorClass_CCINIClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_CCINIClass_PTR *this, VectorClass_CCINIClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_CCINIClass_PTR *this, int, CCINIClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_CCINIClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_CCINIClass_PTR *this, CCINIClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_CCINIClass_PTR *this, CCINIClass **);
-  CCINIClass *(__thiscall *GetItem)(DynamicVectorClass_CCINIClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_IonBlastClass_PTR
-{
-  VectorClass_IonBlastClass_PTR_vtbl *__vftable;
   IonBlastClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_IonBlastClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_IonBlastClass_PTR : VectorBase_IonBlastClass_PTR, VectorAddon {};
+struct VectorClass_IonBlastClass_PTR_vtbl : VectorBase_IonBlastClass_PTR_vtbl {};
+struct DynamicVectorClass_IonBlastClass_PTR : VectorClass_IonBlastClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_IonBlastClass_PTR_vtbl : VectorClass_IonBlastClass_PTR_vtbl {};
 
-struct VectorClass_IonBlastClass_PTR_vtbl
+struct VectorBase_unsigned_short_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_IonBlastClass_PTR)(VectorClass_IonBlastClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_IonBlastClass_PTR *this, VectorClass_IonBlastClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_IonBlastClass_PTR *this, int, IonBlastClass **);
-  void (__thiscall *Clear)(VectorClass_IonBlastClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_IonBlastClass_PTR *this, IonBlastClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_IonBlastClass_PTR *this, IonBlastClass **);
-  IonBlastClass *(__thiscall *GetItem)(VectorClass_IonBlastClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_IonBlastClass_PTR : VectorClass_IonBlastClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_IonBlastClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_IonBlastClass_PTR)(DynamicVectorClass_IonBlastClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_IonBlastClass_PTR *this, VectorClass_IonBlastClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_IonBlastClass_PTR *this, int, IonBlastClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_IonBlastClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_IonBlastClass_PTR *this, IonBlastClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_IonBlastClass_PTR *this, IonBlastClass **);
-  IonBlastClass *(__thiscall *GetItem)(DynamicVectorClass_IonBlastClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_unsigned_short_PTR
-{
-  VectorClass_unsigned_short_PTR_vtbl *__vftable;
   unsigned short **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_unsigned_short_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_unsigned_short_PTR : VectorBase_unsigned_short_PTR, VectorAddon {};
+struct VectorClass_unsigned_short_PTR_vtbl : VectorBase_unsigned_short_PTR_vtbl {};
+struct DynamicVectorClass_unsigned_short_PTR : VectorClass_unsigned_short_PTR, DynamicAddon {};
+struct DynamicVectorClass_unsigned_short_PTR_vtbl : VectorClass_unsigned_short_PTR_vtbl {};
 
-struct VectorClass_unsigned_short_PTR_vtbl
+struct VectorBase_LaserDrawClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_unsigned_short_PTR)(VectorClass_unsigned_short_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_unsigned_short_PTR *this, VectorClass_unsigned_short_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_unsigned_short_PTR *this, int, unsigned short **);
-  void (__thiscall *Clear)(VectorClass_unsigned_short_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_unsigned_short_PTR *this, unsigned short **);
-  int (__thiscall *GetItemIndex)(VectorClass_unsigned_short_PTR *this, unsigned short **);
-  unsigned short *(__thiscall *GetItem)(VectorClass_unsigned_short_PTR *this, int);
-};
-
-struct DynamicVectorClass_unsigned_short_PTR : VectorClass_unsigned_short_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_unsigned_short_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_unsigned_short_PTR)(DynamicVectorClass_unsigned_short_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_unsigned_short_PTR *this, VectorClass_unsigned_short_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_unsigned_short_PTR *this, int, unsigned short **);
-  void (__thiscall *Clear)(DynamicVectorClass_unsigned_short_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_unsigned_short_PTR *this, unsigned short **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_unsigned_short_PTR *this, unsigned short **);
-  unsigned short *(__thiscall *GetItem)(DynamicVectorClass_unsigned_short_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_LaserDrawClass_PTR
-{
-  VectorClass_LaserDrawClass_PTR_vtbl *__vftable;
   LaserDrawClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_LaserDrawClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_LaserDrawClass_PTR : VectorBase_LaserDrawClass_PTR, VectorAddon {};
+struct VectorClass_LaserDrawClass_PTR_vtbl : VectorBase_LaserDrawClass_PTR_vtbl {};
+struct DynamicVectorClass_LaserDrawClass_PTR : VectorClass_LaserDrawClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_LaserDrawClass_PTR_vtbl : VectorClass_LaserDrawClass_PTR_vtbl {};
 
-struct VectorClass_LaserDrawClass_PTR_vtbl
+struct VectorBase_LineTrail_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_LaserDrawClass_PTR)(VectorClass_LaserDrawClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_LaserDrawClass_PTR *this, VectorClass_LaserDrawClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_LaserDrawClass_PTR *this, int, LaserDrawClass **);
-  void (__thiscall *Clear)(VectorClass_LaserDrawClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_LaserDrawClass_PTR *this, LaserDrawClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_LaserDrawClass_PTR *this, LaserDrawClass **);
-  LaserDrawClass *(__thiscall *GetItem)(VectorClass_LaserDrawClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_LaserDrawClass_PTR : VectorClass_LaserDrawClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_LaserDrawClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_LaserDrawClass_PTR)(DynamicVectorClass_LaserDrawClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_LaserDrawClass_PTR *this, VectorClass_LaserDrawClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_LaserDrawClass_PTR *this, int, LaserDrawClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_LaserDrawClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_LaserDrawClass_PTR *this, LaserDrawClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_LaserDrawClass_PTR *this, LaserDrawClass **);
-  LaserDrawClass *(__thiscall *GetItem)(DynamicVectorClass_LaserDrawClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_LineTrail_PTR
-{
-  VectorClass_LineTrail_PTR_vtbl *__vftable;
   LineTrail **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_LineTrail_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_LineTrail_PTR : VectorBase_LineTrail_PTR, VectorAddon {};
+struct VectorClass_LineTrail_PTR_vtbl : VectorBase_LineTrail_PTR_vtbl {};
+struct DynamicVectorClass_LineTrail_PTR : VectorClass_LineTrail_PTR, DynamicAddon {};
+struct DynamicVectorClass_LineTrail_PTR_vtbl : VectorClass_LineTrail_PTR_vtbl {};
 
-struct VectorClass_LineTrail_PTR_vtbl
+struct VectorBase_HWND___PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_LineTrail_PTR)(VectorClass_LineTrail_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_LineTrail_PTR *this, VectorClass_LineTrail_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_LineTrail_PTR *this, int, LineTrail **);
-  void (__thiscall *Clear)(VectorClass_LineTrail_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_LineTrail_PTR *this, LineTrail **);
-  int (__thiscall *GetItemIndex)(VectorClass_LineTrail_PTR *this, LineTrail **);
-  LineTrail *(__thiscall *GetItem)(VectorClass_LineTrail_PTR *this, int);
-};
-
-struct DynamicVectorClass_LineTrail_PTR : VectorClass_LineTrail_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_LineTrail_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_LineTrail_PTR)(DynamicVectorClass_LineTrail_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_LineTrail_PTR *this, VectorClass_LineTrail_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_LineTrail_PTR *this, int, LineTrail **);
-  void (__thiscall *Clear)(DynamicVectorClass_LineTrail_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_LineTrail_PTR *this, LineTrail **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_LineTrail_PTR *this, LineTrail **);
-  LineTrail *(__thiscall *GetItem)(DynamicVectorClass_LineTrail_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_HWND___PTR
-{
-  VectorClass_HWND___PTR_vtbl *__vftable;
   HWND__ **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_HWND___PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_HWND___PTR : VectorBase_HWND___PTR, VectorAddon {};
+struct VectorClass_HWND___PTR_vtbl : VectorBase_HWND___PTR_vtbl {};
+struct DynamicVectorClass_HWND___PTR : VectorClass_HWND___PTR, DynamicAddon {};
+struct DynamicVectorClass_HWND___PTR_vtbl : VectorClass_HWND___PTR_vtbl {};
 
-struct VectorClass_HWND___PTR_vtbl
+struct VectorBase_SpotLightClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_HWND___PTR)(VectorClass_HWND___PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_HWND___PTR *this, VectorClass_HWND___PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_HWND___PTR *this, int, HWND__ **);
-  void (__thiscall *Clear)(VectorClass_HWND___PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HWND___PTR *this, HWND__ **);
-  int (__thiscall *GetItemIndex)(VectorClass_HWND___PTR *this, HWND__ **);
-  HWND__ *(__thiscall *GetItem)(VectorClass_HWND___PTR *this, int);
-};
-
-struct DynamicVectorClass_HWND___PTR : VectorClass_HWND___PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_HWND___PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_HWND___PTR)(DynamicVectorClass_HWND___PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_HWND___PTR *this, VectorClass_HWND___PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_HWND___PTR *this, int, HWND__ **);
-  void (__thiscall *Clear)(DynamicVectorClass_HWND___PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_HWND___PTR *this, HWND__ **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_HWND___PTR *this, HWND__ **);
-  HWND__ *(__thiscall *GetItem)(DynamicVectorClass_HWND___PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_SpotLightClass_PTR
-{
-  VectorClass_SpotLightClass_PTR_vtbl *__vftable;
   SpotLightClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SpotLightClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SpotLightClass_PTR : VectorBase_SpotLightClass_PTR, VectorAddon {};
+struct VectorClass_SpotLightClass_PTR_vtbl : VectorBase_SpotLightClass_PTR_vtbl {};
+struct DynamicVectorClass_SpotLightClass_PTR : VectorClass_SpotLightClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SpotLightClass_PTR_vtbl : VectorClass_SpotLightClass_PTR_vtbl {};
 
-struct VectorClass_SpotLightClass_PTR_vtbl
+struct VectorBase_ParasiteClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_SpotLightClass_PTR)(VectorClass_SpotLightClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SpotLightClass_PTR *this, VectorClass_SpotLightClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SpotLightClass_PTR *this, int, SpotLightClass **);
-  void (__thiscall *Clear)(VectorClass_SpotLightClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SpotLightClass_PTR *this, SpotLightClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SpotLightClass_PTR *this, SpotLightClass **);
-  SpotLightClass *(__thiscall *GetItem)(VectorClass_SpotLightClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SpotLightClass_PTR : VectorClass_SpotLightClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SpotLightClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SpotLightClass_PTR)(DynamicVectorClass_SpotLightClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SpotLightClass_PTR *this, VectorClass_SpotLightClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SpotLightClass_PTR *this, int, SpotLightClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SpotLightClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SpotLightClass_PTR *this, SpotLightClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SpotLightClass_PTR *this, SpotLightClass **);
-  SpotLightClass *(__thiscall *GetItem)(DynamicVectorClass_SpotLightClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_ParasiteClass_PTR
-{
-  VectorClass_ParasiteClass_PTR_vtbl *__vftable;
   ParasiteClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_ParasiteClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ParasiteClass_PTR : VectorBase_ParasiteClass_PTR, VectorAddon {};
+struct VectorClass_ParasiteClass_PTR_vtbl : VectorBase_ParasiteClass_PTR_vtbl {};
+struct DynamicVectorClass_ParasiteClass_PTR : VectorClass_ParasiteClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_ParasiteClass_PTR_vtbl : VectorClass_ParasiteClass_PTR_vtbl {};
 
-struct VectorClass_ParasiteClass_PTR_vtbl
+struct VectorBase_EventClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_ParasiteClass_PTR)(VectorClass_ParasiteClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ParasiteClass_PTR *this, VectorClass_ParasiteClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ParasiteClass_PTR *this, int, ParasiteClass **);
-  void (__thiscall *Clear)(VectorClass_ParasiteClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ParasiteClass_PTR *this, ParasiteClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_ParasiteClass_PTR *this, ParasiteClass **);
-  ParasiteClass *(__thiscall *GetItem)(VectorClass_ParasiteClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_ParasiteClass_PTR : VectorClass_ParasiteClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ParasiteClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ParasiteClass_PTR)(DynamicVectorClass_ParasiteClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ParasiteClass_PTR *this, VectorClass_ParasiteClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ParasiteClass_PTR *this, int, ParasiteClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_ParasiteClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ParasiteClass_PTR *this, ParasiteClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ParasiteClass_PTR *this, ParasiteClass **);
-  ParasiteClass *(__thiscall *GetItem)(DynamicVectorClass_ParasiteClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_EventClass_PTR
-{
-  VectorClass_EventClass_PTR_vtbl *__vftable;
   EventClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_EventClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_EventClass_PTR : VectorBase_EventClass_PTR, VectorAddon {};
+struct VectorClass_EventClass_PTR_vtbl : VectorBase_EventClass_PTR_vtbl {};
+struct DynamicVectorClass_EventClass_PTR : VectorClass_EventClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_EventClass_PTR_vtbl : VectorClass_EventClass_PTR_vtbl {};
 
-struct VectorClass_EventClass_PTR_vtbl
+struct VectorBase_PlanningTokenClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_EventClass_PTR)(VectorClass_EventClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_EventClass_PTR *this, VectorClass_EventClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_EventClass_PTR *this, int, EventClass **);
-  void (__thiscall *Clear)(VectorClass_EventClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_EventClass_PTR *this, EventClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_EventClass_PTR *this, EventClass **);
-  EventClass *(__thiscall *GetItem)(VectorClass_EventClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_EventClass_PTR : VectorClass_EventClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_EventClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_EventClass_PTR)(DynamicVectorClass_EventClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_EventClass_PTR *this, VectorClass_EventClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_EventClass_PTR *this, int, EventClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_EventClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_EventClass_PTR *this, EventClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_EventClass_PTR *this, EventClass **);
-  EventClass *(__thiscall *GetItem)(DynamicVectorClass_EventClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_PlanningTokenClass_PTR
-{
-  VectorClass_PlanningTokenClass_PTR_vtbl *__vftable;
   PlanningTokenClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_PlanningTokenClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_PlanningTokenClass_PTR : VectorBase_PlanningTokenClass_PTR, VectorAddon {};
+struct VectorClass_PlanningTokenClass_PTR_vtbl : VectorBase_PlanningTokenClass_PTR_vtbl {};
+struct DynamicVectorClass_PlanningTokenClass_PTR : VectorClass_PlanningTokenClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_PlanningTokenClass_PTR_vtbl : VectorClass_PlanningTokenClass_PTR_vtbl {};
 
-struct VectorClass_PlanningTokenClass_PTR_vtbl
+struct VectorBase_RadBeam_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_PlanningTokenClass_PTR)(VectorClass_PlanningTokenClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_PlanningTokenClass_PTR *this, VectorClass_PlanningTokenClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_PlanningTokenClass_PTR *this, int, PlanningTokenClass **);
-  void (__thiscall *Clear)(VectorClass_PlanningTokenClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_PlanningTokenClass_PTR *this, PlanningTokenClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_PlanningTokenClass_PTR *this, PlanningTokenClass **);
-  PlanningTokenClass *(__thiscall *GetItem)(VectorClass_PlanningTokenClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_PlanningTokenClass_PTR : VectorClass_PlanningTokenClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_PlanningTokenClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_PlanningTokenClass_PTR)(DynamicVectorClass_PlanningTokenClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_PlanningTokenClass_PTR *this, VectorClass_PlanningTokenClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_PlanningTokenClass_PTR *this, int, PlanningTokenClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_PlanningTokenClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_PlanningTokenClass_PTR *this, PlanningTokenClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_PlanningTokenClass_PTR *this, PlanningTokenClass **);
-  PlanningTokenClass *(__thiscall *GetItem)(DynamicVectorClass_PlanningTokenClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_RadBeam_PTR
-{
-  VectorClass_RadBeam_PTR_vtbl *__vftable;
   RadBeam **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_RadBeam_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_RadBeam_PTR : VectorBase_RadBeam_PTR, VectorAddon {};
+struct VectorClass_RadBeam_PTR_vtbl : VectorBase_RadBeam_PTR_vtbl {};
+struct DynamicVectorClass_RadBeam_PTR : VectorClass_RadBeam_PTR, DynamicAddon {};
+struct DynamicVectorClass_RadBeam_PTR_vtbl : VectorClass_RadBeam_PTR_vtbl {};
 
-struct VectorClass_RadBeam_PTR_vtbl
+struct VectorBase_RadarEventClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_RadBeam_PTR)(VectorClass_RadBeam_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_RadBeam_PTR *this, VectorClass_RadBeam_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_RadBeam_PTR *this, int, RadBeam **);
-  void (__thiscall *Clear)(VectorClass_RadBeam_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_RadBeam_PTR *this, RadBeam **);
-  int (__thiscall *GetItemIndex)(VectorClass_RadBeam_PTR *this, RadBeam **);
-  RadBeam *(__thiscall *GetItem)(VectorClass_RadBeam_PTR *this, int);
-};
-
-struct DynamicVectorClass_RadBeam_PTR : VectorClass_RadBeam_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_RadBeam_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_RadBeam_PTR)(DynamicVectorClass_RadBeam_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_RadBeam_PTR *this, VectorClass_RadBeam_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_RadBeam_PTR *this, int, RadBeam **);
-  void (__thiscall *Clear)(DynamicVectorClass_RadBeam_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_RadBeam_PTR *this, RadBeam **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_RadBeam_PTR *this, RadBeam **);
-  RadBeam *(__thiscall *GetItem)(DynamicVectorClass_RadBeam_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_RadarEventClass_PTR
-{
-  VectorClass_RadarEventClass_PTR_vtbl *__vftable;
   RadarEventClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_RadarEventClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_RadarEventClass_PTR : VectorBase_RadarEventClass_PTR, VectorAddon {};
+struct VectorClass_RadarEventClass_PTR_vtbl : VectorBase_RadarEventClass_PTR_vtbl {};
+struct DynamicVectorClass_RadarEventClass_PTR : VectorClass_RadarEventClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_RadarEventClass_PTR_vtbl : VectorClass_RadarEventClass_PTR_vtbl {};
 
-struct VectorClass_RadarEventClass_PTR_vtbl
+struct VectorBase_SlaveManagerClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_RadarEventClass_PTR)(VectorClass_RadarEventClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_RadarEventClass_PTR *this, VectorClass_RadarEventClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_RadarEventClass_PTR *this, int, RadarEventClass **);
-  void (__thiscall *Clear)(VectorClass_RadarEventClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_RadarEventClass_PTR *this, RadarEventClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_RadarEventClass_PTR *this, RadarEventClass **);
-  RadarEventClass *(__thiscall *GetItem)(VectorClass_RadarEventClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_RadarEventClass_PTR : VectorClass_RadarEventClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_RadarEventClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_RadarEventClass_PTR)(DynamicVectorClass_RadarEventClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_RadarEventClass_PTR *this, VectorClass_RadarEventClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_RadarEventClass_PTR *this, int, RadarEventClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_RadarEventClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_RadarEventClass_PTR *this, RadarEventClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_RadarEventClass_PTR *this, RadarEventClass **);
-  RadarEventClass *(__thiscall *GetItem)(DynamicVectorClass_RadarEventClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_SlaveManagerClass_PTR
-{
-  VectorClass_SlaveManagerClass_PTR_vtbl *__vftable;
   SlaveManagerClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SlaveManagerClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SlaveManagerClass_PTR : VectorBase_SlaveManagerClass_PTR, VectorAddon {};
+struct VectorClass_SlaveManagerClass_PTR_vtbl : VectorBase_SlaveManagerClass_PTR_vtbl {};
+struct DynamicVectorClass_SlaveManagerClass_PTR : VectorClass_SlaveManagerClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SlaveManagerClass_PTR_vtbl : VectorClass_SlaveManagerClass_PTR_vtbl {};
 
-struct VectorClass_SlaveManagerClass_PTR_vtbl
+struct VectorBase_SpawnManagerClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_SlaveManagerClass_PTR)(VectorClass_SlaveManagerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SlaveManagerClass_PTR *this, VectorClass_SlaveManagerClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SlaveManagerClass_PTR *this, int, SlaveManagerClass **);
-  void (__thiscall *Clear)(VectorClass_SlaveManagerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SlaveManagerClass_PTR *this, SlaveManagerClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SlaveManagerClass_PTR *this, SlaveManagerClass **);
-  SlaveManagerClass *(__thiscall *GetItem)(VectorClass_SlaveManagerClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SlaveManagerClass_PTR : VectorClass_SlaveManagerClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SlaveManagerClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SlaveManagerClass_PTR)(DynamicVectorClass_SlaveManagerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SlaveManagerClass_PTR *this, VectorClass_SlaveManagerClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SlaveManagerClass_PTR *this, int, SlaveManagerClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SlaveManagerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SlaveManagerClass_PTR *this, SlaveManagerClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SlaveManagerClass_PTR *this, SlaveManagerClass **);
-  SlaveManagerClass *(__thiscall *GetItem)(DynamicVectorClass_SlaveManagerClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_SpawnManagerClass_PTR
-{
-  VectorClass_SpawnManagerClass_PTR_vtbl *__vftable;
   SpawnManagerClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_SpawnManagerClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SpawnManagerClass_PTR : VectorBase_SpawnManagerClass_PTR, VectorAddon {};
+struct VectorClass_SpawnManagerClass_PTR_vtbl : VectorBase_SpawnManagerClass_PTR_vtbl {};
+struct DynamicVectorClass_SpawnManagerClass_PTR : VectorClass_SpawnManagerClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_SpawnManagerClass_PTR_vtbl : VectorClass_SpawnManagerClass_PTR_vtbl {};
 
-struct VectorClass_SpawnManagerClass_PTR_vtbl
+struct VectorBase_unsigned_long : VectorBase_ELE
 {
-  void (__thiscall *~VectorClass_SpawnManagerClass_PTR)(VectorClass_SpawnManagerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_SpawnManagerClass_PTR *this, VectorClass_SpawnManagerClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_SpawnManagerClass_PTR *this, int, SpawnManagerClass **);
-  void (__thiscall *Clear)(VectorClass_SpawnManagerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SpawnManagerClass_PTR *this, SpawnManagerClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_SpawnManagerClass_PTR *this, SpawnManagerClass **);
-  SpawnManagerClass *(__thiscall *GetItem)(VectorClass_SpawnManagerClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_SpawnManagerClass_PTR : VectorClass_SpawnManagerClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_SpawnManagerClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_SpawnManagerClass_PTR)(DynamicVectorClass_SpawnManagerClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_SpawnManagerClass_PTR *this, VectorClass_SpawnManagerClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_SpawnManagerClass_PTR *this, int, SpawnManagerClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_SpawnManagerClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_SpawnManagerClass_PTR *this, SpawnManagerClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_SpawnManagerClass_PTR *this, SpawnManagerClass **);
-  SpawnManagerClass *(__thiscall *GetItem)(DynamicVectorClass_SpawnManagerClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_unsigned_long
-{
-  VectorClass_unsigned_long_vtbl *__vftable;
   unsigned long *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_unsigned_long_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_unsigned_long : VectorBase_unsigned_long, VectorAddon {};
+struct VectorClass_unsigned_long_vtbl : VectorBase_unsigned_long_vtbl {};
+struct DynamicVectorClass_unsigned_long : VectorClass_unsigned_long, DynamicAddon {};
+struct DynamicVectorClass_unsigned_long_vtbl : VectorClass_unsigned_long_vtbl {};
 
-struct VectorClass_unsigned_long_vtbl
+struct VectorBase_DirtyAreaStruct_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_unsigned_long)(VectorClass_unsigned_long *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_unsigned_long *this, VectorClass_unsigned_long *);
-  bool (__thiscall *SetCapacity)(VectorClass_unsigned_long *this, int, unsigned long *);
-  void (__thiscall *Clear)(VectorClass_unsigned_long *this);
-  int (__thiscall *FindItemIndex)(VectorClass_unsigned_long *this, unsigned long *);
-  int (__thiscall *GetItemIndex)(VectorClass_unsigned_long *this, unsigned long *);
-  unsigned long (__thiscall *GetItem)(VectorClass_unsigned_long *this, int);
-};
-
-struct DynamicVectorClass_unsigned_long : VectorClass_unsigned_long
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_unsigned_long_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_unsigned_long)(DynamicVectorClass_unsigned_long *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_unsigned_long *this, VectorClass_unsigned_long *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_unsigned_long *this, int, unsigned long *);
-  void (__thiscall *Clear)(DynamicVectorClass_unsigned_long *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_unsigned_long *this, unsigned long *);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_unsigned_long *this, unsigned long *);
-  unsigned long (__thiscall *GetItem)(DynamicVectorClass_unsigned_long *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_DirtyAreaStruct_PTR
-{
-  VectorClass_DirtyAreaStruct_PTR_vtbl *__vftable;
   DirtyAreaStruct **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_DirtyAreaStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DirtyAreaStruct_PTR : VectorBase_DirtyAreaStruct_PTR, VectorAddon {};
+struct VectorClass_DirtyAreaStruct_PTR_vtbl : VectorBase_DirtyAreaStruct_PTR_vtbl {};
+struct DynamicVectorClass_DirtyAreaStruct_PTR : VectorClass_DirtyAreaStruct_PTR, DynamicAddon {};
+struct DynamicVectorClass_DirtyAreaStruct_PTR_vtbl : VectorClass_DirtyAreaStruct_PTR_vtbl {};
 
-struct VectorClass_DirtyAreaStruct_PTR_vtbl
+struct VectorBase_TActionClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_DirtyAreaStruct_PTR)(VectorClass_DirtyAreaStruct_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_DirtyAreaStruct_PTR *this, VectorClass_DirtyAreaStruct_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_DirtyAreaStruct_PTR *this, int, DirtyAreaStruct **);
-  void (__thiscall *Clear)(VectorClass_DirtyAreaStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DirtyAreaStruct_PTR *this, DirtyAreaStruct **);
-  int (__thiscall *GetItemIndex)(VectorClass_DirtyAreaStruct_PTR *this, DirtyAreaStruct **);
-  DirtyAreaStruct *(__thiscall *GetItem)(VectorClass_DirtyAreaStruct_PTR *this, int);
-};
-
-struct DynamicVectorClass_DirtyAreaStruct_PTR : VectorClass_DirtyAreaStruct_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_DirtyAreaStruct_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_DirtyAreaStruct_PTR)(DynamicVectorClass_DirtyAreaStruct_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_DirtyAreaStruct_PTR *this, VectorClass_DirtyAreaStruct_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_DirtyAreaStruct_PTR *this, int, DirtyAreaStruct **);
-  void (__thiscall *Clear)(DynamicVectorClass_DirtyAreaStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_DirtyAreaStruct_PTR *this, DirtyAreaStruct **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_DirtyAreaStruct_PTR *this, DirtyAreaStruct **);
-  DirtyAreaStruct *(__thiscall *GetItem)(DynamicVectorClass_DirtyAreaStruct_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TActionClass_PTR
-{
-  VectorClass_TActionClass_PTR_vtbl *__vftable;
   TActionClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TActionClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TActionClass_PTR : VectorBase_TActionClass_PTR, VectorAddon {};
+struct VectorClass_TActionClass_PTR_vtbl : VectorBase_TActionClass_PTR_vtbl {};
+struct DynamicVectorClass_TActionClass_PTR : VectorClass_TActionClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TActionClass_PTR_vtbl : VectorClass_TActionClass_PTR_vtbl {};
 
-struct VectorClass_TActionClass_PTR_vtbl
+struct VectorBase_TagTypeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TActionClass_PTR)(VectorClass_TActionClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TActionClass_PTR *this, VectorClass_TActionClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TActionClass_PTR *this, int, TActionClass **);
-  void (__thiscall *Clear)(VectorClass_TActionClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TActionClass_PTR *this, TActionClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TActionClass_PTR *this, TActionClass **);
-  TActionClass *(__thiscall *GetItem)(VectorClass_TActionClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TActionClass_PTR : VectorClass_TActionClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TActionClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TActionClass_PTR)(DynamicVectorClass_TActionClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TActionClass_PTR *this, VectorClass_TActionClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TActionClass_PTR *this, int, TActionClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TActionClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TActionClass_PTR *this, TActionClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TActionClass_PTR *this, TActionClass **);
-  TActionClass *(__thiscall *GetItem)(DynamicVectorClass_TActionClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TagTypeClass_PTR
-{
-  VectorClass_TagTypeClass_PTR_vtbl *__vftable;
   TagTypeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TagTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TagTypeClass_PTR : VectorBase_TagTypeClass_PTR, VectorAddon {};
+struct VectorClass_TagTypeClass_PTR_vtbl : VectorBase_TagTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_TagTypeClass_PTR : VectorClass_TagTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TagTypeClass_PTR_vtbl : VectorClass_TagTypeClass_PTR_vtbl {};
 
-struct VectorClass_TagTypeClass_PTR_vtbl
+struct VectorBase_TemporalClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TagTypeClass_PTR)(VectorClass_TagTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TagTypeClass_PTR *this, VectorClass_TagTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TagTypeClass_PTR *this, int, TagTypeClass **);
-  void (__thiscall *Clear)(VectorClass_TagTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TagTypeClass_PTR *this, TagTypeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TagTypeClass_PTR *this, TagTypeClass **);
-  TagTypeClass *(__thiscall *GetItem)(VectorClass_TagTypeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TagTypeClass_PTR : VectorClass_TagTypeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TagTypeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TagTypeClass_PTR)(DynamicVectorClass_TagTypeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TagTypeClass_PTR *this, VectorClass_TagTypeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TagTypeClass_PTR *this, int, TagTypeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TagTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TagTypeClass_PTR *this, TagTypeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TagTypeClass_PTR *this, TagTypeClass **);
-  TagTypeClass *(__thiscall *GetItem)(DynamicVectorClass_TagTypeClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TemporalClass_PTR
-{
-  VectorClass_TemporalClass_PTR_vtbl *__vftable;
   TemporalClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TemporalClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TemporalClass_PTR : VectorBase_TemporalClass_PTR, VectorAddon {};
+struct VectorClass_TemporalClass_PTR_vtbl : VectorBase_TemporalClass_PTR_vtbl {};
+struct DynamicVectorClass_TemporalClass_PTR : VectorClass_TemporalClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TemporalClass_PTR_vtbl : VectorClass_TemporalClass_PTR_vtbl {};
 
-struct VectorClass_TemporalClass_PTR_vtbl
+struct VectorBase_TEventClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TemporalClass_PTR)(VectorClass_TemporalClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TemporalClass_PTR *this, VectorClass_TemporalClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TemporalClass_PTR *this, int, TemporalClass **);
-  void (__thiscall *Clear)(VectorClass_TemporalClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TemporalClass_PTR *this, TemporalClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TemporalClass_PTR *this, TemporalClass **);
-  TemporalClass *(__thiscall *GetItem)(VectorClass_TemporalClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TemporalClass_PTR : VectorClass_TemporalClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TemporalClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TemporalClass_PTR)(DynamicVectorClass_TemporalClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TemporalClass_PTR *this, VectorClass_TemporalClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TemporalClass_PTR *this, int, TemporalClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TemporalClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TemporalClass_PTR *this, TemporalClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TemporalClass_PTR *this, TemporalClass **);
-  TemporalClass *(__thiscall *GetItem)(DynamicVectorClass_TemporalClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_TEventClass_PTR
-{
-  VectorClass_TEventClass_PTR_vtbl *__vftable;
   TEventClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_TEventClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TEventClass_PTR : VectorBase_TEventClass_PTR, VectorAddon {};
+struct VectorClass_TEventClass_PTR_vtbl : VectorBase_TEventClass_PTR_vtbl {};
+struct DynamicVectorClass_TEventClass_PTR : VectorClass_TEventClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TEventClass_PTR_vtbl : VectorClass_TEventClass_PTR_vtbl {};
 
-struct VectorClass_TEventClass_PTR_vtbl
+struct VectorBase_WaypointPathClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_TEventClass_PTR)(VectorClass_TEventClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TEventClass_PTR *this, VectorClass_TEventClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TEventClass_PTR *this, int, TEventClass **);
-  void (__thiscall *Clear)(VectorClass_TEventClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TEventClass_PTR *this, TEventClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TEventClass_PTR *this, TEventClass **);
-  TEventClass *(__thiscall *GetItem)(VectorClass_TEventClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TEventClass_PTR : VectorClass_TEventClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TEventClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TEventClass_PTR)(DynamicVectorClass_TEventClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TEventClass_PTR *this, VectorClass_TEventClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TEventClass_PTR *this, int, TEventClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TEventClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TEventClass_PTR *this, TEventClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TEventClass_PTR *this, TEventClass **);
-  TEventClass *(__thiscall *GetItem)(DynamicVectorClass_TEventClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_WaypointPathClass_PTR
-{
-  VectorClass_WaypointPathClass_PTR_vtbl *__vftable;
   WaypointPathClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_WaypointPathClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_WaypointPathClass_PTR : VectorBase_WaypointPathClass_PTR, VectorAddon {};
+struct VectorClass_WaypointPathClass_PTR_vtbl : VectorBase_WaypointPathClass_PTR_vtbl {};
+struct DynamicVectorClass_WaypointPathClass_PTR : VectorClass_WaypointPathClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_WaypointPathClass_PTR_vtbl : VectorClass_WaypointPathClass_PTR_vtbl {};
 
-struct VectorClass_WaypointPathClass_PTR_vtbl
+struct VectorBase_unsigned_char_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_WaypointPathClass_PTR)(VectorClass_WaypointPathClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_WaypointPathClass_PTR *this, VectorClass_WaypointPathClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_WaypointPathClass_PTR *this, int, WaypointPathClass **);
-  void (__thiscall *Clear)(VectorClass_WaypointPathClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_WaypointPathClass_PTR *this, WaypointPathClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_WaypointPathClass_PTR *this, WaypointPathClass **);
-  WaypointPathClass *(__thiscall *GetItem)(VectorClass_WaypointPathClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_WaypointPathClass_PTR : VectorClass_WaypointPathClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_WaypointPathClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_WaypointPathClass_PTR)(DynamicVectorClass_WaypointPathClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_WaypointPathClass_PTR *this, VectorClass_WaypointPathClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_WaypointPathClass_PTR *this, int, WaypointPathClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_WaypointPathClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_WaypointPathClass_PTR *this, WaypointPathClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_WaypointPathClass_PTR *this, WaypointPathClass **);
-  WaypointPathClass *(__thiscall *GetItem)(DynamicVectorClass_WaypointPathClass_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_unsigned_char_PTR
-{
-  VectorClass_unsigned_char_PTR_vtbl *__vftable;
   unsigned char **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
+struct VectorBase_unsigned_char_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_unsigned_char_PTR : VectorBase_unsigned_char_PTR, VectorAddon {};
+struct VectorClass_unsigned_char_PTR_vtbl : VectorBase_unsigned_char_PTR_vtbl {};
+struct DynamicVectorClass_unsigned_char_PTR : VectorClass_unsigned_char_PTR, DynamicAddon {};
+struct DynamicVectorClass_unsigned_char_PTR_vtbl : VectorClass_unsigned_char_PTR_vtbl {};
 
-struct VectorClass_unsigned_char_PTR_vtbl
+struct VectorBase_MPGameModeClass_PTR : VectorBase_PTR
 {
-  void (__thiscall *~VectorClass_unsigned_char_PTR)(VectorClass_unsigned_char_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_unsigned_char_PTR *this, VectorClass_unsigned_char_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_unsigned_char_PTR *this, int, unsigned char **);
-  void (__thiscall *Clear)(VectorClass_unsigned_char_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_unsigned_char_PTR *this, unsigned char **);
-  int (__thiscall *GetItemIndex)(VectorClass_unsigned_char_PTR *this, unsigned char **);
-  unsigned char *(__thiscall *GetItem)(VectorClass_unsigned_char_PTR *this, int);
-};
-
-struct DynamicVectorClass_unsigned_char_PTR : VectorClass_unsigned_char_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_unsigned_char_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_unsigned_char_PTR)(DynamicVectorClass_unsigned_char_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_unsigned_char_PTR *this, VectorClass_unsigned_char_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_unsigned_char_PTR *this, int, unsigned char **);
-  void (__thiscall *Clear)(DynamicVectorClass_unsigned_char_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_unsigned_char_PTR *this, unsigned char **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_unsigned_char_PTR *this, unsigned char **);
-  unsigned char *(__thiscall *GetItem)(DynamicVectorClass_unsigned_char_PTR *this, int);
-};
-
-struct __declspec(align(4)) VectorClass_MPGameModeClass_PTR
-{
-  VectorClass_MPGameModeClass_PTR_vtbl *__vftable;
   MPGameModeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_MPGameModeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_MPGameModeClass_PTR)(VectorClass_MPGameModeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_MPGameModeClass_PTR *this, VectorClass_MPGameModeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_MPGameModeClass_PTR *this, int, MPGameModeClass **);
-  void (__thiscall *Clear)(VectorClass_MPGameModeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MPGameModeClass_PTR *this, MPGameModeClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_MPGameModeClass_PTR *this, MPGameModeClass **);
-  MPGameModeClass *(__thiscall *GetItem)(VectorClass_MPGameModeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_MPGameModeClass_PTR : VectorClass_MPGameModeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_MPGameModeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_MPGameModeClass_PTR)(DynamicVectorClass_MPGameModeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_MPGameModeClass_PTR *this, VectorClass_MPGameModeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_MPGameModeClass_PTR *this, int, MPGameModeClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_MPGameModeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_MPGameModeClass_PTR *this, MPGameModeClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_MPGameModeClass_PTR *this, MPGameModeClass **);
-  MPGameModeClass *(__thiscall *GetItem)(DynamicVectorClass_MPGameModeClass_PTR *this, int);
-};
+struct VectorBase_MPGameModeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MPGameModeClass_PTR : VectorBase_MPGameModeClass_PTR, VectorAddon {};
+struct VectorClass_MPGameModeClass_PTR_vtbl : VectorBase_MPGameModeClass_PTR_vtbl {};
+struct DynamicVectorClass_MPGameModeClass_PTR : VectorClass_MPGameModeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_MPGameModeClass_PTR_vtbl : VectorClass_MPGameModeClass_PTR_vtbl {};
 
 struct BombListClass
 {
@@ -22804,42 +13093,7 @@ class GGadgetClass : GadgetClass
   GadgetFlag Flags;
 };
 
-struct GGadgetClass_vtbl
-{
-  void (__thiscall *~GGadgetClass)(GGadgetClass *this);
-  LinkClass *(__thiscall *GetNext)(GGadgetClass *this);
-  LinkClass *(__thiscall *GetPrev)(GGadgetClass *this);
-  LinkClass *(__thiscall *Add)(GGadgetClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(GGadgetClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(GGadgetClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(GGadgetClass *this);
-  LinkClass *(__thiscall *TailOfList)(GGadgetClass *this);
-  void (__thiscall *Zap)(GGadgetClass *this);
-  LinkClass *(__thiscall *Remove)(GGadgetClass *this);
-  unsigned int (__thiscall *Input)(GGadgetClass *this);
-  void (__thiscall *DrawAll)(GGadgetClass *this, bool);
-  void (__thiscall *DeleteList)(GGadgetClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(GGadgetClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(GGadgetClass *this);
-  void (__thiscall *Disable)(GGadgetClass *this);
-  void (__thiscall *Enable)(GGadgetClass *this);
-  unsigned int (__thiscall *GetID)(GGadgetClass *this);
-  void (__thiscall *MarkRedraw)(GGadgetClass *this);
-  void (__thiscall *PeerToPeer)(GGadgetClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(GGadgetClass *this);
-  void (__thiscall *KillFocus)(GGadgetClass *this);
-  bool (__thiscall *IsFocused)(GGadgetClass *this);
-  bool (__thiscall *IsListToRedraw)(GGadgetClass *this);
-  bool (__thiscall *IsToRedraw)(GGadgetClass *this);
-  void (__thiscall *SetPosition)(GGadgetClass *this, int, int);
-  void (__thiscall *SetDimension)(GGadgetClass *this, int, int);
-  bool (__thiscall *Draw)(GGadgetClass *this, bool);
-  void (__thiscall *OnMouseEnter)(GGadgetClass *this);
-  void (__thiscall *OnMouseLeave)(GGadgetClass *this);
-  void (__thiscall *StickyProcess)(GGadgetClass *this, GadgetFlag);
-  bool (__thiscall *Action)(GGadgetClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(GGadgetClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-};
+struct GGadgetClass_vtbl : GadgetClass_vtbl {};
 
 struct AlphaLightingRemapClass
 {
@@ -22848,42 +13102,15 @@ struct AlphaLightingRemapClass
 	int RefCount;
 };
 
-struct __declspec(align(4)) VectorClass_AlphaLightingRemapClass_PTR
+struct VectorBase_AlphaLightingRemapClass_PTR : VectorBase_PTR
 {
-  VectorClass_AlphaLightingRemapClass_PTR_vtbl *__vftable;
   AlphaLightingRemapClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_AlphaLightingRemapClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_AlphaLightingRemapClass_PTR)(VectorClass_AlphaLightingRemapClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_AlphaLightingRemapClass_PTR *this, VectorClass_AlphaLightingRemapClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_AlphaLightingRemapClass_PTR *this, int, AlphaLightingRemapClass **);
-  void (__thiscall *Clear)(VectorClass_AlphaLightingRemapClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
-  AlphaLightingRemapClass *(__thiscall *GetItem)(VectorClass_AlphaLightingRemapClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_AlphaLightingRemapClass_PTR : VectorClass_AlphaLightingRemapClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_AlphaLightingRemapClass_PTR)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, VectorClass_AlphaLightingRemapClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, int, AlphaLightingRemapClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, AlphaLightingRemapClass **);
-  AlphaLightingRemapClass *(__thiscall *GetItem)(DynamicVectorClass_AlphaLightingRemapClass_PTR *this, int);
-};
+struct VectorBase_AlphaLightingRemapClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AlphaLightingRemapClass_PTR : VectorBase_AlphaLightingRemapClass_PTR, VectorAddon {};
+struct VectorClass_AlphaLightingRemapClass_PTR_vtbl : VectorBase_AlphaLightingRemapClass_PTR_vtbl {};
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR : VectorClass_AlphaLightingRemapClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl : VectorClass_AlphaLightingRemapClass_PTR_vtbl {};
 
 struct GameOptionsClass
 {
@@ -22943,43 +13170,7 @@ class SelectClass : ControlClass
   bool MouseEntered;
 };
 
-struct SelectClass_vtbl
-{
-  void (__thiscall *~SelectClass)(SelectClass *this);
-  LinkClass *(__thiscall *GetNext)(SelectClass *this);
-  LinkClass *(__thiscall *GetPrev)(SelectClass *this);
-  LinkClass *(__thiscall *Add)(SelectClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(SelectClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(SelectClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(SelectClass *this);
-  LinkClass *(__thiscall *TailOfList)(SelectClass *this);
-  void (__thiscall *Zap)(SelectClass *this);
-  LinkClass *(__thiscall *Remove)(SelectClass *this);
-  unsigned int (__thiscall *Input)(SelectClass *this);
-  void (__thiscall *DrawAll)(SelectClass *this, bool);
-  void (__thiscall *DeleteList)(SelectClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(SelectClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(SelectClass *this);
-  void (__thiscall *Disable)(SelectClass *this);
-  void (__thiscall *Enable)(SelectClass *this);
-  unsigned int (__thiscall *GetID)(SelectClass *this);
-  void (__thiscall *MarkRedraw)(SelectClass *this);
-  void (__thiscall *PeerToPeer)(SelectClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(SelectClass *this);
-  void (__thiscall *KillFocus)(SelectClass *this);
-  bool (__thiscall *IsFocused)(SelectClass *this);
-  bool (__thiscall *IsListToRedraw)(SelectClass *this);
-  bool (__thiscall *IsToRedraw)(SelectClass *this);
-  void (__thiscall *SetPosition)(SelectClass *this, int, int);
-  void (__thiscall *SetDimension)(SelectClass *this, int, int);
-  bool (__thiscall *Draw)(SelectClass *this, bool);
-  void (__thiscall *OnMouseEnter)(SelectClass *this);
-  void (__thiscall *OnMouseLeave)(SelectClass *this);
-  void (__thiscall *StickyProcess)(SelectClass *this, GadgetFlag);
-  bool (__thiscall *Action)(SelectClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(SelectClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
-  void (__thiscall *MakePeer)(SelectClass *this, GadgetClass *);
-};
+struct SelectClass_vtbl : ControlClass_vtbl {};
 
 struct BasePlanningCell
 {
@@ -23197,42 +13388,15 @@ struct FoggedObjectDraw
   int ZAdjust;
 };
 
-struct __declspec(align(4)) VectorClass_FoggedObjectDraw
+struct VectorBase_FoggedObjectDraw : VectorBase_ELE
 {
-  VectorClass_FoggedObjectDraw_vtbl *__vftable;
   FoggedObjectDraw *Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_FoggedObjectDraw_vtbl
-{
-  void (__thiscall *~VectorClass_FoggedObjectDraw)(VectorClass_FoggedObjectDraw *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_FoggedObjectDraw *this, VectorClass_FoggedObjectDraw *);
-  bool (__thiscall *SetCapacity)(VectorClass_FoggedObjectDraw *this, int, AbstractClass **);
-  void (__thiscall *Clear)(VectorClass_FoggedObjectDraw *this);
-  int (__thiscall *FindItemIndex)(VectorClass_FoggedObjectDraw *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_FoggedObjectDraw *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(VectorClass_FoggedObjectDraw *this, int);
-};
-
-struct DynamicVectorClass_FoggedObjectDraw : VectorClass_FoggedObjectDraw
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_FoggedObjectDraw_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_FoggedObjectDraw)(DynamicVectorClass_FoggedObjectDraw *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FoggedObjectDraw *this, VectorClass_FoggedObjectDraw *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_FoggedObjectDraw *this, int, AbstractClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_FoggedObjectDraw *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_FoggedObjectDraw *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_FoggedObjectDraw *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_FoggedObjectDraw *this, int);
-};
+struct VectorBase_FoggedObjectDraw_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_FoggedObjectDraw : VectorBase_FoggedObjectDraw, VectorAddon {};
+struct VectorClass_FoggedObjectDraw_vtbl : VectorBase_FoggedObjectDraw_vtbl {};
+struct DynamicVectorClass_FoggedObjectDraw : VectorClass_FoggedObjectDraw, DynamicAddon {};
+struct DynamicVectorClass_FoggedObjectDraw_vtbl : VectorClass_FoggedObjectDraw_vtbl {};
 
 class FoggedObjectClass : AbstractClass
 {
@@ -23249,71 +13413,20 @@ class FoggedObjectClass : AbstractClass
   bool Visible;
 };
 
-struct FoggedObjectClass_vtbl
+struct FoggedObjectClass_vtbl : AbstractClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
   CellStruct *(__thiscall *GetCellStruct)(FoggedObjectClass *this, CellStruct *);
 };
 
-struct __declspec(align(4)) VectorClass_FoggedObjectClass_PTR
+struct VectorBase_FoggedObjectClass_PTR : VectorBase_PTR
 {
-  VectorClass_FoggedObjectClass_PTR_vtbl *__vftable;
   FoggedObjectClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_FoggedObjectClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_FoggedObjectClass_PTR)(VectorClass_FoggedObjectClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_FoggedObjectClass_PTR *this, VectorClass_FoggedObjectClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_FoggedObjectClass_PTR *this, int, AbstractClass **);
-  void (__thiscall *Clear)(VectorClass_FoggedObjectClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(VectorClass_FoggedObjectClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_FoggedObjectClass_PTR : VectorClass_FoggedObjectClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_FoggedObjectClass_PTR)(DynamicVectorClass_FoggedObjectClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_FoggedObjectClass_PTR *this, VectorClass_FoggedObjectClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_FoggedObjectClass_PTR *this, int, AbstractClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_FoggedObjectClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_FoggedObjectClass_PTR *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_FoggedObjectClass_PTR *this, int);
-};
+struct VectorBase_FoggedObjectClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_FoggedObjectClass_PTR : VectorBase_FoggedObjectClass_PTR, VectorAddon {};
+struct VectorClass_FoggedObjectClass_PTR_vtbl : VectorBase_FoggedObjectClass_PTR_vtbl {};
+struct DynamicVectorClass_FoggedObjectClass_PTR : VectorClass_FoggedObjectClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl : VectorClass_FoggedObjectClass_PTR_vtbl {};
 
 struct FoggedObjectRenderVector
 {
@@ -23523,41 +13636,8 @@ class StaticButtonClass : GadgetClass
   TextPrintType PrintType;
 };
 
-struct StaticButtonClass_vtbl
+struct StaticButtonClass_vtbl : GadgetClass_vtbl
 {
-  void (__thiscall *~StaticButtonClass)(StaticButtonClass *this);
-  LinkClass *(__thiscall *GetNext)(StaticButtonClass *this);
-  LinkClass *(__thiscall *GetPrev)(StaticButtonClass *this);
-  LinkClass *(__thiscall *Add)(StaticButtonClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(StaticButtonClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(StaticButtonClass *this, LinkClass *);
-  LinkClass *(__thiscall *HeadOfList)(StaticButtonClass *this);
-  LinkClass *(__thiscall *TailOfList)(StaticButtonClass *this);
-  void (__thiscall *Zap)(StaticButtonClass *this);
-  LinkClass *(__thiscall *Remove)(StaticButtonClass *this);
-  unsigned int (__thiscall *Input)(StaticButtonClass *this);
-  void (__thiscall *DrawAll)(StaticButtonClass *this, bool);
-  void (__thiscall *DeleteList)(StaticButtonClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(StaticButtonClass *this, unsigned int);
-  void (__thiscall *MarkListToRedraw)(StaticButtonClass *this);
-  void (__thiscall *Disable)(StaticButtonClass *this);
-  void (__thiscall *Enable)(StaticButtonClass *this);
-  unsigned int (__thiscall *GetID)(StaticButtonClass *this);
-  void (__thiscall *MarkRedraw)(StaticButtonClass *this);
-  void (__thiscall *PeerToPeer)(StaticButtonClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
-  void (__thiscall *SetFocus)(StaticButtonClass *this);
-  void (__thiscall *KillFocus)(StaticButtonClass *this);
-  bool (__thiscall *IsFocused)(StaticButtonClass *this);
-  bool (__thiscall *IsListToRedraw)(StaticButtonClass *this);
-  bool (__thiscall *IsToRedraw)(StaticButtonClass *this);
-  void (__thiscall *SetPosition)(StaticButtonClass *this, int, int);
-  void (__thiscall *SetDimension)(StaticButtonClass *this, int, int);
-  bool (__thiscall *Draw)(StaticButtonClass *this, bool);
-  void (__thiscall *OnMouseEnter)(StaticButtonClass *this);
-  void (__thiscall *OnMouseLeave)(StaticButtonClass *this);
-  void (__thiscall *StickyProcess)(StaticButtonClass *this, GadgetFlag);
-  bool (__thiscall *Action)(StaticButtonClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(StaticButtonClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
   void (__thiscall *SetString)(StaticButtonClass *this, wchar_t *, bool);
   bool (__thiscall *CopySurface)(StaticButtonClass *this);
   bool (__thiscall *PrintString)(StaticButtonClass *this, wchar_t *);
@@ -23569,42 +13649,15 @@ struct DamageGroup
   int Distance;
 };
 
-struct __declspec(align(4)) VectorClass_DamageGroup_PTR
+struct VectorBase_DamageGroup_PTR : VectorBase_PTR
 {
-  VectorClass_DamageGroup_PTR_vtbl *__vftable;
   DamageGroup **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_DamageGroup_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_DamageGroup_PTR)(VectorClass_DamageGroup_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_DamageGroup_PTR *this, VectorClass_DamageGroup_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_DamageGroup_PTR *this, int, DamageGroup **);
-  void (__thiscall *Clear)(VectorClass_DamageGroup_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DamageGroup_PTR *this, DamageGroup **);
-  int (__thiscall *GetItemIndex)(VectorClass_DamageGroup_PTR *this, DamageGroup **);
-  DamageGroup *(__thiscall *GetItem)(VectorClass_DamageGroup_PTR *this, int);
-};
-
-struct DynamicVectorClass_DamageGroup_PTR : VectorClass_DamageGroup_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_DamageGroup_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_DamageGroup_PTR)(DynamicVectorClass_DamageGroup_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_DamageGroup_PTR *this, VectorClass_DamageGroup_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_DamageGroup_PTR *this, int, DamageGroup **);
-  void (__thiscall *Clear)(DynamicVectorClass_DamageGroup_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_DamageGroup_PTR *this, DamageGroup **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_DamageGroup_PTR *this, DamageGroup **);
-  DamageGroup *(__thiscall *GetItem)(DynamicVectorClass_DamageGroup_PTR *this, int);
-};
+struct VectorBase_DamageGroup_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DamageGroup_PTR : VectorBase_DamageGroup_PTR, VectorAddon {};
+struct VectorClass_DamageGroup_PTR_vtbl : VectorBase_DamageGroup_PTR_vtbl {};
+struct DynamicVectorClass_DamageGroup_PTR : VectorClass_DamageGroup_PTR, DynamicAddon {};
+struct DynamicVectorClass_DamageGroup_PTR_vtbl : VectorClass_DamageGroup_PTR_vtbl {};
 
 struct FoundationStruct
 {
@@ -23643,42 +13696,15 @@ struct ChangeLinkHouseStruct
   bool IsTether;
 };
 
-struct __declspec(align(4)) VectorClass_ChangeLinkHouseStruct_PTR
+struct VectorBase_ChangeLinkHouseStruct_PTR : VectorBase_PTR
 {
-  VectorClass_ChangeLinkHouseStruct_PTR_vtbl *__vftable;
   ChangeLinkHouseStruct **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_ChangeLinkHouseStruct_PTR)(VectorClass_ChangeLinkHouseStruct_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_ChangeLinkHouseStruct_PTR *this, VectorClass_ChangeLinkHouseStruct_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_ChangeLinkHouseStruct_PTR *this, int, ChangeLinkHouseStruct **);
-  void (__thiscall *Clear)(VectorClass_ChangeLinkHouseStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
-  int (__thiscall *GetItemIndex)(VectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
-  ChangeLinkHouseStruct *(__thiscall *GetItem)(VectorClass_ChangeLinkHouseStruct_PTR *this, int);
-};
-
-struct DynamicVectorClass_ChangeLinkHouseStruct_PTR : VectorClass_ChangeLinkHouseStruct_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_ChangeLinkHouseStruct_PTR)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, VectorClass_ChangeLinkHouseStruct_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, int, ChangeLinkHouseStruct **);
-  void (__thiscall *Clear)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, ChangeLinkHouseStruct **);
-  ChangeLinkHouseStruct *(__thiscall *GetItem)(DynamicVectorClass_ChangeLinkHouseStruct_PTR *this, int);
-};
+struct VectorBase_ChangeLinkHouseStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ChangeLinkHouseStruct_PTR : VectorBase_ChangeLinkHouseStruct_PTR, VectorAddon {};
+struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl : VectorBase_ChangeLinkHouseStruct_PTR_vtbl {};
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR : VectorClass_ChangeLinkHouseStruct_PTR, DynamicAddon {};
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl : VectorClass_ChangeLinkHouseStruct_PTR_vtbl {};
 
 struct GroundType
 {
@@ -23717,70 +13743,17 @@ class TubeClass : AbstractClass
   int FaceCount;
 };
 
-struct TubeClass_vtbl
-{
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
-  unsigned int (__stdcall *AddRef)(IUnknown *this);
-  unsigned int (__stdcall *Release)(IUnknown *this);
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
-  HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
-  void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
-  AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
-  int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
-  int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
-  HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
-  int (__thiscall *GetArrayIndex)(AbstractClass *this);
-  bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
-  bool (__thiscall *IsOnFloor)(AbstractClass *this);
-  bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
-  void (__thiscall *Update)(AbstractClass *this);
-};
+struct TubeClass_vtbl : AbstractClass_vtbl {};
 
-struct __declspec(align(4)) VectorClass_TubeClass_PTR
+struct VectorBase_TubeClass_PTR : VectorBase_PTR
 {
-  VectorClass_TubeClass_PTR_vtbl *__vftable;
   TubeClass **Items;
-  int Capacity;
-  bool IsInitialized;
-  bool IsAllocated;
 };
-
-struct VectorClass_TubeClass_PTR_vtbl
-{
-  void (__thiscall *~VectorClass_TubeClass_PTR)(VectorClass_TubeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(VectorClass_TubeClass_PTR *this, VectorClass_TubeClass_PTR *);
-  bool (__thiscall *SetCapacity)(VectorClass_TubeClass_PTR *this, int, AbstractClass **);
-  void (__thiscall *Clear)(VectorClass_TubeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TubeClass_PTR *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(VectorClass_TubeClass_PTR *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(VectorClass_TubeClass_PTR *this, int);
-};
-
-struct DynamicVectorClass_TubeClass_PTR : VectorClass_TubeClass_PTR
-{
-  int Count;
-  int CapacityIncrement;
-};
-
-struct DynamicVectorClass_TubeClass_PTR_vtbl
-{
-  void (__thiscall *~DynamicVectorClass_TubeClass_PTR)(DynamicVectorClass_TubeClass_PTR *this);
-  bool (__thiscall *OperatorEqual)(DynamicVectorClass_TubeClass_PTR *this, VectorClass_TubeClass_PTR *);
-  bool (__thiscall *SetCapacity)(DynamicVectorClass_TubeClass_PTR *this, int, AbstractClass **);
-  void (__thiscall *Clear)(DynamicVectorClass_TubeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_TubeClass_PTR *this, AbstractClass **);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_TubeClass_PTR *this, AbstractClass **);
-  AbstractClass *(__thiscall *GetItem)(DynamicVectorClass_TubeClass_PTR *this, int);
-};
+struct VectorBase_TubeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TubeClass_PTR : VectorBase_TubeClass_PTR, VectorAddon {};
+struct VectorClass_TubeClass_PTR_vtbl : VectorBase_TubeClass_PTR_vtbl {};
+struct DynamicVectorClass_TubeClass_PTR : VectorClass_TubeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_TubeClass_PTR_vtbl : VectorClass_TubeClass_PTR_vtbl {};
 
 struct VoxelBoundaryData
 {
