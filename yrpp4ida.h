@@ -3478,29 +3478,29 @@ struct __declspec(align(4)) VectorBase
 struct VectorBase_vtbl
 {
   void (__thiscall *~VectorBase)(VectorBase *this);
-  bool (__thiscall *OperatorEqual)(VectorBase *this, VectorBase *);
+  bool (__thiscall *OperatorEqual)(VectorBase *this, VectorBase *pOther);
 };
 
 struct VectorBase_ELE : VectorBase {};
 
 struct VectorBase_ELE_vtbl : VectorBase_vtbl
 {
-  bool (__thiscall *SetCapacity)(VectorBase_ELE *this, int, void *);
+  bool (__thiscall *SetCapacity)(VectorBase_ELE *this, int Capacity, void *pMem);
   void (__thiscall *Clear)(VectorBase_ELE *this);
-  int (__thiscall *FindItemIndex)(VectorBase_ELE *this, void *);
-  int (__thiscall *GetItemIndex)(VectorBase_ELE *this, void *);
-  void *(__thiscall *GetItem)(VectorBase_ELE *this, void *, int);
+  int (__thiscall *FindItemIndex)(VectorBase_ELE *this, void *pItem);
+  int (__thiscall *GetItemIndex)(VectorBase_ELE *this, void *pItem);
+  void *(__thiscall *GetItem)(VectorBase_ELE *this, void *pItem, int Index);
 };
 
 struct VectorBase_PTR : VectorBase {};
 
 struct VectorBase_PTR_vtbl : VectorBase_vtbl
 {
-  bool (__thiscall *SetCapacity)(VectorBase_PTR *this, int, void **);
+  bool (__thiscall *SetCapacity)(VectorBase_PTR *this, int Capacity, void **pMem);
   void (__thiscall *Clear)(VectorBase_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorBase_PTR *this, void **);
-  int (__thiscall *GetItemIndex)(VectorBase_PTR *this, void **);
-  void *(__thiscall *GetItem)(VectorBase_PTR *this, int);
+  int (__thiscall *FindItemIndex)(VectorBase_PTR *this, void **pItem);
+  int (__thiscall *GetItemIndex)(VectorBase_PTR *this, void **pItem);
+  void *(__thiscall *GetItem)(VectorBase_PTR *this, int I);
 };
 
 struct VectorAddon
@@ -4417,7 +4417,7 @@ class LightConvertClass : ConvertClass
 
 struct LightConvertClass_vtbl : ConvertClass_vtbl
 {
-  void (__thiscall *UpdateColors)(LightConvertClass *this, int, int, int, bool);
+  void (__thiscall *UpdateColors)(LightConvertClass *this, int Red, int Green, int Blue, bool Tinted);
 };
 
 struct ColorScheme
@@ -4515,21 +4515,21 @@ struct FileClass_vtbl
 {
   void (__thiscall *~FileClass)(FileClass *this);
   char *(__thiscall *GetFileName)(FileClass *this);
-  char *(__thiscall *SetFileName)(FileClass *this, char *);
+  char *(__thiscall *SetFileName)(FileClass *this, char *pSource);
   int (__thiscall *CreateFileA)(FileClass *this);
   int (__thiscall *DeleteFileA)(FileClass *this);
-  bool (__thiscall *Exists)(FileClass *this, bool);
+  bool (__thiscall *Exists)(FileClass *this, bool WriteShared);
   bool (__thiscall *HasHandle)(FileClass *this);
-  bool (__thiscall *Open)(FileClass *this, FileAccessMode);
-  bool (__thiscall *OpenEx)(FileClass *this, char *, FileAccessMode);
-  int (__thiscall *ReadBytes)(FileClass *this, void *, int);
-  int (__thiscall *Seek)(FileClass *this, int, FileSeekMode);
+  bool (__thiscall *Open)(FileClass *this, FileAccessMode Access);
+  bool (__thiscall *OpenEx)(FileClass *this, char *pFileName, FileAccessMode Access);
+  int (__thiscall *ReadBytes)(FileClass *this, void *lpBuffer, int NumberOfBytesToRead);
+  int (__thiscall *Seek)(FileClass *this, int DistanceToMove, FileSeekMode MoveMethod);
   int (__thiscall *GetFileSize)(FileClass *this);
-  int (__thiscall *WriteBytes)(FileClass *this, void *, int);
+  int (__thiscall *WriteBytes)(FileClass *this, void *lpBuffer, int NumberOfBytesToWrite);
   void (__thiscall *Close)(FileClass *this);
   unsigned int (__thiscall *GetFileTime)(FileClass *this);
-  bool (__thiscall *SetFileTime)(FileClass *this, unsigned int);
-  void (__thiscall *CDCheck)(FileClass *this, unsigned int, bool, char *);
+  bool (__thiscall *SetFileTime)(FileClass *this, unsigned int FatTime);
+  void (__thiscall *CDCheck)(FileClass *this, unsigned int ErrorCode, bool bUnk, char *pFilename);
 };
 
 class RawFileClass : FileClass
@@ -4677,8 +4677,8 @@ struct MPTeam
 struct MPTeam_vtbl
 {
   void (__thiscall *~MPTeam)(MPTeam *this);
-  bool (__thiscall *IsTeamIncluded)(MPTeam *this, int);
-  bool (__thiscall *SetPlayerTeam)(MPTeam *this, int);
+  bool (__thiscall *IsTeamIncluded)(MPTeam *this, int Idx);
+  bool (__thiscall *SetPlayerTeam)(MPTeam *this, int IdxPlayer);
 };
 
 struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_
@@ -4837,7 +4837,7 @@ struct IUnknown
 
 struct IUnknown_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
 };
@@ -4846,7 +4846,7 @@ struct IPersist : IUnknown {};
 
 struct IPersist_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *);
+  HRESULT (__stdcall *GetClassID)(IPersist *this, _GUID *pClassID);
 };
 
 struct IPersistStream : IPersist {};
@@ -4854,32 +4854,32 @@ struct IPersistStream : IPersist {};
 struct IPersistStream_vtbl : IPersist_vtbl
 {
   HRESULT (__stdcall *IsDirty)(IPersistStream *this);
-  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *);
-  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *, int);
-  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *);
+  HRESULT (__stdcall *Load)(IPersistStream *this, IStream *pStm);
+  HRESULT (__stdcall *Save)(IPersistStream *this, IStream *pStm, int ClearDirty);
+  HRESULT (__stdcall *GetSizeMax)(IPersistStream *this, Union_U_Large_Int *pPcbSize);
 };
 
 struct ISequentialStream : IUnknown {};
 
 struct ISequentialStream_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
-  HRESULT (__stdcall *Write)(ISequentialStream *this, void *, unsigned int, unsigned int *);
+  HRESULT (__stdcall *Read)(ISequentialStream *this, void *pBuffer, unsigned int Cb, unsigned int *PcbRead);
+  HRESULT (__stdcall *Write)(ISequentialStream *this, void *pBuffer, unsigned int Cb, unsigned int *PcbWritten);
 };
 
 struct IStream : ISequentialStream {};
 
 struct IStream_vtbl : ISequentialStream_vtbl
 {
-  HRESULT (__stdcall *Seek)(IStream *this, Union_Large_Int, unsigned int, Union_U_Large_Int *);
-  HRESULT (__stdcall *SetSize)(IStream *this, Union_U_Large_Int);
-  HRESULT (__stdcall *CopyTo)(IStream *this, IStream *, Union_U_Large_Int, Union_U_Large_Int *, Union_U_Large_Int *);
-  HRESULT (__stdcall *Commit)(IStream *this, unsigned int);
+  HRESULT (__stdcall *Seek)(IStream *this, Union_Large_Int DlibMove, unsigned int DwOrigin, Union_U_Large_Int *PLibNewPosition);
+  HRESULT (__stdcall *SetSize)(IStream *this, Union_U_Large_Int LibNewSize);
+  HRESULT (__stdcall *CopyTo)(IStream *this, IStream *pStream, Union_U_Large_Int Cb, Union_U_Large_Int *PcbRead, Union_U_Large_Int *PcbWritten);
+  HRESULT (__stdcall *Commit)(IStream *this, unsigned int GrfCommitFlags);
   HRESULT (__stdcall *Revert)(IStream *this);
-  HRESULT (__stdcall *LockRegion)(IStream *this, Union_U_Large_Int, Union_U_Large_Int, unsigned int);
-  HRESULT (__stdcall *UnlockRegion)(IStream *this, Union_U_Large_Int, Union_U_Large_Int, unsigned int);
-  HRESULT (__stdcall *Stat)(IStream *this, TagSTATSTG *, unsigned int);
-  HRESULT (__stdcall *Clone)(IStream *this, IStream **);
+  HRESULT (__stdcall *LockRegion)(IStream *this, Union_U_Large_Int LibOffset, Union_U_Large_Int Cb, unsigned int DwLockType);
+  HRESULT (__stdcall *UnlockRegion)(IStream *this, Union_U_Large_Int LibOffset, Union_U_Large_Int Cb, unsigned int DwLockType);
+  HRESULT (__stdcall *Stat)(IStream *this, TagSTATSTG *pStatStg, unsigned int GrfStatFlag);
+  HRESULT (__stdcall *Clone)(IStream *this, IStream **PpStream);
 };
 
 struct IRTTITypeInfo : IUnknown {};
@@ -4898,7 +4898,7 @@ struct INoticeSink
 
 struct INoticeSink_vtbl
 {
-  bool (__stdcall *INoticeSink_Unknown)(INoticeSink *this, unsigned int);
+  bool (__stdcall *INoticeSink_Unknown)(INoticeSink *this, unsigned int DwUnknown);
 };
 
 struct INoticeSource
@@ -4915,18 +4915,18 @@ struct IAIHouse : IUnknown {};
 
 struct IAIHouse_vtbl : IUnknown_vtbl
 {
-  void (__stdcall *Link_House)(IAIHouse *this, void *);
-  void (__stdcall *AI)(IAIHouse *this, int *);
+  void (__stdcall *Link_House)(IAIHouse *this, void *pObject);
+  void (__stdcall *AI)(IAIHouse *this, int *pUnknown);
 };
 
 struct IEnumConnections : IUnknown {};
 
 struct IEnumConnections_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *Next)(IEnumConnections *this, unsigned int, TagCONNECTDATA *, unsigned int *);
-  HRESULT (__stdcall *Skip)(IEnumConnections *this, unsigned int);
+  HRESULT (__stdcall *Next)(IEnumConnections *this, unsigned int Celt, TagCONNECTDATA *pEl, unsigned int *PceltFetched);
+  HRESULT (__stdcall *Skip)(IEnumConnections *this, unsigned int Celt);
   HRESULT (__stdcall *Reset)(IEnumConnections *this);
-  HRESULT (__stdcall *Clone)(IEnumConnections *this, IEnumConnections **);
+  HRESULT (__stdcall *Clone)(IEnumConnections *this, IEnumConnections **PpEnum);
 };
 
 struct ISwizzle : IUnknown {};
@@ -4934,24 +4934,24 @@ struct ISwizzle : IUnknown {};
 struct ISwizzle_vtbl : IUnknown_vtbl
 {
   HRESULT (__stdcall *Reset)(ISwizzle *this);
-  HRESULT (__stdcall *Swizzle)(ISwizzle *this, void **);
-  HRESULT (__stdcall *Fetch_Swizzle_ID)(ISwizzle *this, void *, int *);
-  HRESULT (__stdcall *Here_I_Am)(ISwizzle *this, int, void *);
-  HRESULT (__stdcall *Save_Interface)(ISwizzle *this, IStream *, IUnknown *);
-  HRESULT (__stdcall *Load_Interface)(ISwizzle *this, IStream *, _GUID *, void **);
-  HRESULT (__stdcall *Get_Save_Size)(ISwizzle *this, int *);
+  HRESULT (__stdcall *Swizzle)(ISwizzle *this, void **pPointer);
+  HRESULT (__stdcall *Fetch_Swizzle_ID)(ISwizzle *this, void *pPointer, int *pId);
+  HRESULT (__stdcall *Here_I_Am)(ISwizzle *this, int Id, void *pPointer);
+  HRESULT (__stdcall *Save_Interface)(ISwizzle *this, IStream *pStream, IUnknown *pPointer);
+  HRESULT (__stdcall *Load_Interface)(ISwizzle *this, IStream *pStream, _GUID *pRiid, void **pPointer);
+  HRESULT (__stdcall *Get_Save_Size)(ISwizzle *this, int *pPsize);
 };
 
 struct IApplication : IUnknown {};
 
 struct IApplication_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *FullName)(IApplication *this, wchar_t **);
-  HRESULT (__stdcall *Name)(IApplication *this, wchar_t **);
+  HRESULT (__stdcall *FullName)(IApplication *this, wchar_t **Ppwsz);
+  HRESULT (__stdcall *Name)(IApplication *this, wchar_t **Ppwsz);
   HRESULT (__stdcall *Quit)(IApplication *this);
-  HRESULT (__stdcall *ScenarioName)(IApplication *this, wchar_t **);
-  HRESULT (__stdcall *FrameCount)(IApplication *this, int *);
-  HRESULT (__stdcall *Swizzle_Interface)(IApplication *this, ISwizzle **);
+  HRESULT (__stdcall *ScenarioName)(IApplication *this, wchar_t **Ppwsz);
+  HRESULT (__stdcall *FrameCount)(IApplication *this, int *PpValue);
+  HRESULT (__stdcall *Swizzle_Interface)(IApplication *this, ISwizzle **PpSwizzle);
 };
 
 struct IHouse : IUnknown {};
@@ -4965,8 +4965,8 @@ struct IHouse_vtbl : IUnknown_vtbl
   int (__stdcall *Available_Storage)(IHouse *this);
   int (__stdcall *Power_Output)(IHouse *this);
   int (__stdcall *Power_Drain)(IHouse *this);
-  int (__stdcall *Category_Quantity)(IHouse *this, Category);
-  int (__stdcall *Category_Power)(IHouse *this, Category);
+  int (__stdcall *Category_Quantity)(IHouse *this, Category Category);
+  int (__stdcall *Category_Power)(IHouse *this, Category Category);
   CellStruct (__stdcall *Base_Center)(IHouse *this);
   HRESULT (__stdcall *Fire_Sale)(IHouse *this);
   HRESULT (__stdcall *All_To_Hunt)(IHouse *this);
@@ -4978,8 +4978,8 @@ struct IPublicHouse_vtbl : IUnknown_vtbl
 {
   int (__stdcall *ID_Number)(IPublicHouse *this);
   wchar_t *(__stdcall *Name)(IPublicHouse *this);
-  int (__stdcall *Apparent_Category_Quantity)(IPublicHouse *this, Category);
-  int (__stdcall *Apparent_Category_Power)(IPublicHouse *this, Category);
+  int (__stdcall *Apparent_Category_Quantity)(IPublicHouse *this, Category Category);
+  int (__stdcall *Apparent_Category_Power)(IPublicHouse *this, Category Category);
   CellStruct (__stdcall *Apparent_Base_Center)(IPublicHouse *this);
   bool (__stdcall *Is_Powered)(IPublicHouse *this);
 };
@@ -4988,36 +4988,36 @@ struct IEnumConnectionPoints : IUnknown {};
 
 struct IEnumConnectionPoints_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *Next)(IEnumConnectionPoints *this, unsigned int, IConnectionPoint **, unsigned int *);
-  HRESULT (__stdcall *Skip)(IEnumConnectionPoints *this, unsigned int);
+  HRESULT (__stdcall *Next)(IEnumConnectionPoints *this, unsigned int Celt, IConnectionPoint **PpCp, unsigned int *PceltFetched);
+  HRESULT (__stdcall *Skip)(IEnumConnectionPoints *this, unsigned int Celt);
   HRESULT (__stdcall *Reset)(IEnumConnectionPoints *this);
-  HRESULT (__stdcall *Clone)(IEnumConnectionPoints *this, IEnumConnectionPoints **);
+  HRESULT (__stdcall *Clone)(IEnumConnectionPoints *this, IEnumConnectionPoints **PpEnum);
 };
 
 struct IConnectionPointContainer : IUnknown {};
 
 struct IConnectionPointContainer_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *EnumConnectionPoints)(IConnectionPointContainer *this, IEnumConnectionPoints **);
-  HRESULT (__stdcall *FindConnectionPoint)(IConnectionPointContainer *this, _GUID *, IConnectionPoint **);
+  HRESULT (__stdcall *EnumConnectionPoints)(IConnectionPointContainer *this, IEnumConnectionPoints **PpEnum);
+  HRESULT (__stdcall *FindConnectionPoint)(IConnectionPointContainer *this, _GUID *pRguid, IConnectionPoint **PpCp);
 };
 
 struct IConnectionPoint : IUnknown {};
 
 struct IConnectionPoint_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *GetConnectionInterface)(IConnectionPoint *this, _GUID *);
-  HRESULT (__stdcall *GetConnectionPointContainer)(IConnectionPoint *this, IConnectionPointContainer **);
-  HRESULT (__stdcall *Advise)(IConnectionPoint *this, IUnknown *, unsigned int *);
-  HRESULT (__stdcall *Unadvise)(IConnectionPoint *this, unsigned int);
-  HRESULT (__stdcall *EnumConnections)(IConnectionPoint *this, IEnumConnections **);
+  HRESULT (__stdcall *GetConnectionInterface)(IConnectionPoint *this, _GUID *pIid);
+  HRESULT (__stdcall *GetConnectionPointContainer)(IConnectionPoint *this, IConnectionPointContainer **PpCpc);
+  HRESULT (__stdcall *Advise)(IConnectionPoint *this, IUnknown *pUnkSink, unsigned int *PdwCookie);
+  HRESULT (__stdcall *Unadvise)(IConnectionPoint *this, unsigned int DwCookie);
+  HRESULT (__stdcall *EnumConnections)(IConnectionPoint *this, IEnumConnections **PpEnum);
 };
 
 struct IGameMap : IUnknown {};
 
 struct IGameMap_vtbl : IUnknown_vtbl
 {
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
 };
 
 struct IFlyControl : IUnknown {};
@@ -5044,10 +5044,10 @@ struct CommandClass_vtbl
   wchar_t *(__thiscall *GetUIName)(CommandClass *this);
   wchar_t *(__thiscall *GetUICategory)(CommandClass *this);
   wchar_t *(__thiscall *GetUIDescription)(CommandClass *this);
-  bool (__thiscall *PreventCombinationOverride)(CommandClass *this, KeyNumType);
-  bool (__thiscall *ExtraTriggerCondition)(CommandClass *this, KeyNumType);
-  bool (__thiscall *CheckLoop55E020)(CommandClass *this, KeyNumType);
-  void (__thiscall *Execute)(CommandClass *this, KeyNumType);
+  bool (__thiscall *PreventCombinationOverride)(CommandClass *this, KeyNumType EInput);
+  bool (__thiscall *ExtraTriggerCondition)(CommandClass *this, KeyNumType EInput);
+  bool (__thiscall *CheckLoop55E020)(CommandClass *this, KeyNumType EInput);
+  void (__thiscall *Execute)(CommandClass *this, KeyNumType EInput);
 };
 
 struct SwizzlePointerClass
@@ -5191,35 +5191,35 @@ struct ILocomotion : IUnknown {};
 
 struct ILocomotion_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *Link_To_Object)(ILocomotion *this, void *);
+  HRESULT (__stdcall *Link_To_Object)(ILocomotion *this, void *pObject);
   bool (__stdcall *Is_Moving)(ILocomotion *this);
   CoordStruct *(__stdcall *Destination)(ILocomotion *this, CoordStruct *result);
   CoordStruct *(__stdcall *Head_To_Coord)(ILocomotion *this, CoordStruct *result);
-  Move (__stdcall *Can_Enter_Cell)(ILocomotion *this, CellStruct);
+  Move (__stdcall *Can_Enter_Cell)(ILocomotion *this, CellStruct Cell);
   bool (__stdcall *Is_To_Have_Shadow)(ILocomotion *this);
-  Matrix3D *(__stdcall *Draw_Matrix)(ILocomotion *this, Matrix3D *result, Union_VoxelIndexKey *);
-  Matrix3D *(__stdcall *Shadow_Matrix)(ILocomotion *this, Matrix3D *result, Union_VoxelIndexKey *);
-  Point2D *(__stdcall *Draw_Point)(ILocomotion *this, Point2D *);
-  Point2D *(__stdcall *Shadow_Point)(ILocomotion *this, Point2D *);
-  VisualType (__stdcall *Visual_Character)(ILocomotion *this, bool);
+  Matrix3D *(__stdcall *Draw_Matrix)(ILocomotion *this, Matrix3D *result, Union_VoxelIndexKey *pIndex);
+  Matrix3D *(__stdcall *Shadow_Matrix)(ILocomotion *this, Matrix3D *result, Union_VoxelIndexKey *pIndex);
+  Point2D *(__stdcall *Draw_Point)(ILocomotion *this, Point2D *pResult);
+  Point2D *(__stdcall *Shadow_Point)(ILocomotion *this, Point2D *pResult);
+  VisualType (__stdcall *Visual_Character)(ILocomotion *this, bool Raw);
   int (__stdcall *Z_Adjust)(ILocomotion *this);
   ZGradient (__stdcall *Z_Gradient)(ILocomotion *this);
   bool (__stdcall *Process)(ILocomotion *this);
-  void (__stdcall *Move_To)(ILocomotion *this, int, int, int);
+  void (__stdcall *Move_To)(ILocomotion *this, int X, int Y, int Z);
   void (__stdcall *Stop_Moving)(ILocomotion *this);
-  void (__stdcall *Do_Turn)(ILocomotion *this, DirStruct);
+  void (__stdcall *Do_Turn)(ILocomotion *this, DirStruct Dir);
   void (__stdcall *Unlimbo)(ILocomotion *this);
   void (__stdcall *Tilt_Pitch_AI)(ILocomotion *this);
   bool (__stdcall *Power_On)(ILocomotion *this);
   bool (__stdcall *Power_Off)(ILocomotion *this);
   bool (__stdcall *Is_Powered)(ILocomotion *this);
   bool (__stdcall *Is_Ion_Sensitive)(ILocomotion *this);
-  bool (__stdcall *Push)(ILocomotion *this, DirStruct);
-  bool (__stdcall *Shove)(ILocomotion *this, DirStruct);
-  void (__stdcall *Force_Track)(ILocomotion *this, int, CoordStruct);
+  bool (__stdcall *Push)(ILocomotion *this, DirStruct Dir);
+  bool (__stdcall *Shove)(ILocomotion *this, DirStruct Dir);
+  void (__stdcall *Force_Track)(ILocomotion *this, int Track, CoordStruct Coord);
   Layer (__stdcall *In_Which_Layer)(ILocomotion *this);
-  void (__stdcall *Force_Immediate_Destination)(ILocomotion *this, CoordStruct);
-  void (__stdcall *Force_New_Slope)(ILocomotion *this, int);
+  void (__stdcall *Force_Immediate_Destination)(ILocomotion *this, CoordStruct Coord);
+  void (__stdcall *Force_New_Slope)(ILocomotion *this, int Ramp);
   bool (__stdcall *Is_Moving_Now)(ILocomotion *this);
   int (__stdcall *Apparent_Speed)(ILocomotion *this);
   int (__stdcall *Drawing_Code)(ILocomotion *this);
@@ -5227,8 +5227,8 @@ struct ILocomotion_vtbl : IUnknown_vtbl
   int (__stdcall *Get_Status)(ILocomotion *this);
   void (__stdcall *Acquire_Hunter_Seeker_Target)(ILocomotion *this);
   bool (__stdcall *Is_Surfacing)(ILocomotion *this);
-  void (__stdcall *Mark_All_Occupation_Bits)(ILocomotion *this, MarkType);
-  bool (__stdcall *Is_Moving_Here)(ILocomotion *this, CoordStruct);
+  void (__stdcall *Mark_All_Occupation_Bits)(ILocomotion *this, MarkType Mark);
+  bool (__stdcall *Is_Moving_Here)(ILocomotion *this, CoordStruct Coord);
   bool (__stdcall *Will_Jump_Tracks)(ILocomotion *this);
   bool (__stdcall *Is_Really_Moving_Now)(ILocomotion *this);
   void (__stdcall *Stop_Movement_Animation)(ILocomotion *this);
@@ -5322,9 +5322,9 @@ struct BaseClass
 
 struct BaseClass_vtbl
 {
-  HRESULT (__stdcall *Load)(BaseClass *this, IStream *);
-  HRESULT (__stdcall *Save)(BaseClass *this, IStream *);
-  void (__thiscall *ComputeCRC)(BaseClass *this, CRCEngine *);
+  HRESULT (__stdcall *Load)(BaseClass *this, IStream *pStm);
+  HRESULT (__stdcall *Save)(BaseClass *this, IStream *pStm);
+  void (__thiscall *ComputeCRC)(BaseClass *this, CRCEngine *pCrc);
 };
 
 struct VectorBase_SuperClass_PTR : VectorBase_PTR
@@ -5800,37 +5800,37 @@ class Surface
 
 struct Surface_vtbl
 {
-  void (__thiscall *~Surface)(Surface *this, bool);
-  bool (__thiscall *CopyFromWhole)(Surface *this, Surface *, bool, bool);
-  bool (__thiscall *CopyFromPart)(Surface *this, RectangleStruct *, Surface *, RectangleStruct *, bool, bool);
-  bool (__thiscall *CopyFrom)(Surface *this, RectangleStruct *, RectangleStruct *, Surface *, RectangleStruct *, RectangleStruct *, bool, bool);
-  bool (__thiscall *FillRectEx)(Surface *this, RectangleStruct *, RectangleStruct *, unsigned int);
-  bool (__thiscall *FillRect)(Surface *this, RectangleStruct *, unsigned int);
-  bool (__thiscall *Fill)(Surface *this, unsigned int);
-  bool (__thiscall *FillRectTrans)(Surface *this, RectangleStruct *, ColorStruct *, int);
-  bool (__thiscall *DrawEllipse)(Surface *this, int, int, int, int, RectangleStruct, unsigned int);
-  bool (__thiscall *SetPixel)(Surface *this, Point2D *, unsigned int);
-  unsigned int (__thiscall *GetPixel)(Surface *this, Point2D *);
-  bool (__thiscall *DrawLineEx)(Surface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLine)(Surface *this, Point2D *, Point2D *, unsigned int);
-  bool (__thiscall *DrawLineColor_AZ)(Surface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawMultiplyingLine_AZ)(Surface *this, RectangleStruct *, Point2D *, Point2D *, unsigned int, unsigned int, unsigned int, bool);
-  bool (__thiscall *DrawSubtractiveLine_AZ)(Surface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, unsigned int, unsigned int, bool, bool, bool, bool, float);
-  bool (__thiscall *DrawRGBMultiplyingLine_AZ)(Surface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, float, unsigned int, unsigned int);
-  bool (__thiscall *PlotLine)(Surface *this, RectangleStruct *, Point2D *, Point2D *, bool (__fastcall *)(int *));
-  bool (__thiscall *DrawDashedLine)(Surface *this, Point2D *, Point2D *, int, bool *, int);
-  bool (__thiscall *DrawDashedLine_)(Surface *this, Point2D *, Point2D *, int, bool *, int, bool);
-  bool (__thiscall *DrawLine_)(Surface *this, Point2D *, Point2D *, int, bool);
-  bool (__thiscall *DrawRectEx)(Surface *this, RectangleStruct *, RectangleStruct *, int);
-  bool (__thiscall *DrawRect)(Surface *this, RectangleStruct *, unsigned int);
-  void *(__thiscall *Lock)(Surface *this, int, int);
+  void (__thiscall *~Surface)(Surface *this, bool bUnk);
+  bool (__thiscall *CopyFromWhole)(Surface *this, Surface *pSrc, bool bUnk1, bool bUnk2);
+  bool (__thiscall *CopyFromPart)(Surface *this, RectangleStruct *pClipRect, Surface *pSrc, RectangleStruct *pSrcRect, bool bUnk1, bool bUnk2);
+  bool (__thiscall *CopyFrom)(Surface *this, RectangleStruct *pClipRect, RectangleStruct *pClipRect2, Surface *pSrc, RectangleStruct *pDestRect, RectangleStruct *pSrcRect, bool bUnk1, bool bUnk2);
+  bool (__thiscall *FillRectEx)(Surface *this, RectangleStruct *pClipRect, RectangleStruct *pFillRect, unsigned int Color);
+  bool (__thiscall *FillRect)(Surface *this, RectangleStruct *pFillRect, unsigned int Color);
+  bool (__thiscall *Fill)(Surface *this, unsigned int Color);
+  bool (__thiscall *FillRectTrans)(Surface *this, RectangleStruct *pRect, ColorStruct *pColor, int Trans);
+  bool (__thiscall *DrawEllipse)(Surface *this, int XOff, int YOff, int CenterX, int CenterY, RectangleStruct Rect, unsigned int Color);
+  bool (__thiscall *SetPixel)(Surface *this, Point2D *pPoint, unsigned int Color);
+  unsigned int (__thiscall *GetPixel)(Surface *this, Point2D *pPoint);
+  bool (__thiscall *DrawLineEx)(Surface *this, RectangleStruct *pClipRect, Point2D *pStart, Point2D *pEnd, unsigned int Color);
+  bool (__thiscall *DrawLine)(Surface *this, Point2D *pStart, Point2D *pEnd, unsigned int Color);
+  bool (__thiscall *DrawLineColor_AZ)(Surface *this, RectangleStruct *pRect, Point2D *pStart, Point2D *pEnd, unsigned int Color, unsigned int StartZ, unsigned int EndZ, bool bUnk);
+  bool (__thiscall *DrawMultiplyingLine_AZ)(Surface *this, RectangleStruct *pRect, Point2D *pStart, Point2D *pEnd, unsigned int Multiplier, unsigned int dwUnk1, unsigned int dwUnk2, bool bUnk);
+  bool (__thiscall *DrawSubtractiveLine_AZ)(Surface *this, RectangleStruct *pRect, Point2D *pStart, Point2D *pEnd, ColorStruct *pColor, unsigned int dwUnk1, unsigned int dwUnk2, bool bUnk1, bool bUnk2, bool bUnk3, bool bUnk4, float fUnk);
+  bool (__thiscall *DrawRGBMultiplyingLine_AZ)(Surface *this, RectangleStruct *pRect, Point2D *pStart, Point2D *pEnd, ColorStruct *pColor, float Intensity, unsigned int ZSource, unsigned int ZTarget);
+  bool (__thiscall *PlotLine)(Surface *this, RectangleStruct *pRect, Point2D *pStart, Point2D *pEnd, bool (__fastcall *)(int *));
+  bool (__thiscall *DrawDashedLine)(Surface *this, Point2D *pStart, Point2D *pEnd, int Color, bool *pPattern, int Offset);
+  bool (__thiscall *DrawDashedLine_)(Surface *this, Point2D *pStart, Point2D *pEnd, int Color, bool *pPattern, int Offset, bool bUnk);
+  bool (__thiscall *DrawLine_)(Surface *this, Point2D *pStart, Point2D *pEnd, int Color, bool bUnk);
+  bool (__thiscall *DrawRectEx)(Surface *this, RectangleStruct *pClipRect, RectangleStruct *pDrawRect, int Color);
+  bool (__thiscall *DrawRect)(Surface *this, RectangleStruct *pDrawRect, unsigned int Color);
+  void *(__thiscall *Lock)(Surface *this, int X, int Y);
   bool (__thiscall *Unlock)(Surface *this);
-  bool (__thiscall *CanLock)(Surface *this, unsigned int, unsigned int);
-  bool (__thiscall *vt_entry_68)(Surface *this, unsigned int, unsigned int);
+  bool (__thiscall *CanLock)(Surface *this, unsigned int dwUnk1, unsigned int dwUnk2);
+  bool (__thiscall *vt_entry_68)(Surface *this, unsigned int dwUnk1, unsigned int dwUnk2);
   bool (__thiscall *IsLocked)(Surface *this);
   int (__thiscall *GetBytesPerPixel)(Surface *this);
   int (__thiscall *GetPitch)(Surface *this);
-  RectangleStruct *(__thiscall *GetRect)(Surface *this, RectangleStruct *);
+  RectangleStruct *(__thiscall *GetRect)(Surface *this, RectangleStruct *pRect);
   int (__thiscall *GetWidth)(Surface *this);
   int (__thiscall *GetHeight)(Surface *this);
   bool (__thiscall *IsDSurface)(Surface *this);
@@ -6340,55 +6340,55 @@ struct MPGameModeClass_vtbl
   void (__thiscall *~MPGameModeClass)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_04)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_08)(MPGameModeClass *this);
-  bool (__thiscall *vt_entry_0C)(MPGameModeClass *this, unsigned int);
+  bool (__thiscall *vt_entry_0C)(MPGameModeClass *this, unsigned int dwUnk);
   bool (__thiscall *vt_entry_10)(MPGameModeClass *this);
-  bool (__thiscall *vt_entry_14)(MPGameModeClass *this, unsigned int);
+  bool (__thiscall *vt_entry_14)(MPGameModeClass *this, unsigned int dwUnk);
   bool (__thiscall *vt_entry_18)(MPGameModeClass *this);
-  bool (__thiscall *vt_entry_1C)(MPGameModeClass *this, unsigned int);
+  bool (__thiscall *vt_entry_1C)(MPGameModeClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_20)(MPGameModeClass *this);
   void (__thiscall *vt_entry_24)(MPGameModeClass *this);
   int (__thiscall *vt_entry_28)(MPGameModeClass *this);
   int (__thiscall *vt_entry_2C)(MPGameModeClass *this);
   int (__thiscall *vt_entry_30)(MPGameModeClass *this);
-  bool (__thiscall *CanAllyWith)(MPGameModeClass *this, int);
-  void (__thiscall *vt_entry_38)(MPGameModeClass *this, unsigned int);
+  bool (__thiscall *CanAllyWith)(MPGameModeClass *this, int Idx);
+  void (__thiscall *vt_entry_38)(MPGameModeClass *this, unsigned int dwUnk);
   bool (__thiscall *IsAIAllowed)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_40)(MPGameModeClass *this);
   int (__thiscall *FirstValidMapIndex)(MPGameModeClass *this);
-  void (__thiscall *PopulateTeamDropdown)(MPGameModeClass *this, HWND__ *, DynamicVectorClass_MPTeam_PTR *, MPTeam *);
-  void (__thiscall *DrawTeamDropdown)(MPGameModeClass *this, HWND__ *, DynamicVectorClass_MPTeam_PTR *, MPTeam *);
-  void (__thiscall *PopulateTeamDropdownForPlayer)(MPGameModeClass *this, HWND__ *, int);
-  bool (__thiscall *vt_entry_54)(MPGameModeClass *this, int, int, void *, int, __int16, int, int);
-  bool (__thiscall *vt_entry_58)(MPGameModeClass *this, int, int, void *, int, __int16, int, int, int, int);
-  bool (__thiscall *vt_entry_5C)(MPGameModeClass *this, unsigned int, unsigned int, unsigned int);
+  void (__thiscall *PopulateTeamDropdown)(MPGameModeClass *this, HWND__ *hWnd, DynamicVectorClass_MPTeam_PTR *pVecTeams, MPTeam *pTeam);
+  void (__thiscall *DrawTeamDropdown)(MPGameModeClass *this, HWND__ *hWnd, DynamicVectorClass_MPTeam_PTR *pVecTeams, MPTeam *pTeam);
+  void (__thiscall *PopulateTeamDropdownForPlayer)(MPGameModeClass *this, HWND__ *hWnd, int Idx);
+  bool (__thiscall *vt_entry_54)(MPGameModeClass *this, int a1, int a2, void *pPtr, int a4, __int16 a5, int a6, int a7);
+  bool (__thiscall *vt_entry_58)(MPGameModeClass *this, int a1, int a2, void *pPtr, int a4, __int16 a5, int a6, int a7, int a8, int a9);
+  bool (__thiscall *vt_entry_5C)(MPGameModeClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
   bool (__thiscall *vt_entry_60)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_64)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_68)(MPGameModeClass *this);
   int (__thiscall *RandomHumanCountryIndex)(MPGameModeClass *this);
   int (__thiscall *RandomAICountryIndex)(MPGameModeClass *this);
-  void (__thiscall *vt_entry_74)(MPGameModeClass *this, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_78)(MPGameModeClass *this, unsigned int);
+  void (__thiscall *vt_entry_74)(MPGameModeClass *this, unsigned int dwUnk1, unsigned int dwUnk2);
+  void (__thiscall *vt_entry_78)(MPGameModeClass *this, unsigned int dwUnk1);
   bool (__thiscall *UnfixAlliances)(MPGameModeClass *this);
-  bool (__thiscall *StartingPositionsToHouseBaseCells)(MPGameModeClass *this, char);
-  bool (__thiscall *StartingPositionsToHouseBaseCells2)(MPGameModeClass *this, bool);
+  bool (__thiscall *StartingPositionsToHouseBaseCells)(MPGameModeClass *this, char Unused);
+  bool (__thiscall *StartingPositionsToHouseBaseCells2)(MPGameModeClass *this, bool Arg);
   bool (__thiscall *AllyTeams)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_8C)(MPGameModeClass *this);
   void (__thiscall *vt_entry_90)(MPGameModeClass *this);
   void (__thiscall *vt_entry_94)(MPGameModeClass *this);
   int (__thiscall *vt_entry_98)(MPGameModeClass *this);
   void (__thiscall *vt_entry_9C)(MPGameModeClass *this);
-  void (__thiscall *vt_entry_A0)(MPGameModeClass *this, unsigned int);
-  void (__thiscall *vt_entry_A4)(MPGameModeClass *this, unsigned int);
+  void (__thiscall *vt_entry_A0)(MPGameModeClass *this, unsigned int dwUnk);
+  void (__thiscall *vt_entry_A4)(MPGameModeClass *this, unsigned int dwUnk);
   bool (__thiscall *vt_entry_A8)(MPGameModeClass *this);
   void (__thiscall *vt_entry_AC)(MPGameModeClass *this);
   void (__thiscall *vt_entry_B0)(MPGameModeClass *this);
-  bool (__thiscall *vt_entry_B4)(MPGameModeClass *this, int, void *, int, __int16, int, int, int);
+  bool (__thiscall *vt_entry_B4)(MPGameModeClass *this, int a1, void *pPtr, int a3, __int16 a4, int a5, int a6, int a7);
   int (__thiscall *vt_entry_B8)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_BC)(MPGameModeClass *this);
-  void (__thiscall *CreateMPTeams)(MPGameModeClass *this, DynamicVectorClass_MPTeam_PTR *);
-  CellStruct *(__thiscall *AssignStartingPositionsToHouse)(MPGameModeClass *this, CellStruct *, int, DynamicVectorClass_CellStruct *, unsigned __int8 *);
-  bool (__thiscall *SpawnBaseUnits)(MPGameModeClass *this, HouseClass *, unsigned int);
-  bool (__thiscall *GenerateStartingUnits)(MPGameModeClass *this, HouseClass *, int *);
+  void (__thiscall *CreateMPTeams)(MPGameModeClass *this, DynamicVectorClass_MPTeam_PTR *pVecTeams);
+  CellStruct *(__thiscall *AssignStartingPositionsToHouse)(MPGameModeClass *this, CellStruct *pResult, int IdxHouse, DynamicVectorClass_CellStruct *pVecCoords, unsigned __int8 *pHousesSatisfied);
+  bool (__thiscall *SpawnBaseUnits)(MPGameModeClass *this, HouseClass *pHouse, unsigned int Unused);
+  bool (__thiscall *GenerateStartingUnits)(MPGameModeClass *this, HouseClass *pHouse, int *pAmountToSpend);
 };
 
 struct RocketStruct
@@ -7316,10 +7316,10 @@ struct IPiggyback : IUnknown {};
 
 struct IPiggyback_vtbl : IUnknown_vtbl
 {
-  HRESULT (__stdcall *Begin_Piggyback)(IPiggyback *this, ILocomotion *);
-  HRESULT (__stdcall *End_Piggyback)(IPiggyback *this, ILocomotion **);
+  HRESULT (__stdcall *Begin_Piggyback)(IPiggyback *this, ILocomotion *pLocomotion);
+  HRESULT (__stdcall *End_Piggyback)(IPiggyback *this, ILocomotion **PpLocomotion);
   bool (__stdcall *Is_Ok_To_End)(IPiggyback *this);
-  HRESULT (__stdcall *Piggyback_CLSID)(IPiggyback *this, _GUID *);
+  HRESULT (__stdcall *Piggyback_CLSID)(IPiggyback *this, _GUID *pClsid);
   bool (__stdcall *Is_Piggybacking)(IPiggyback *this);
 };
 
@@ -7337,19 +7337,19 @@ struct AbstractClass_vtbl : IPersistStream_vtbl
 {
   void (__thiscall *~AbstractClass)(AbstractClass *this);
   void (__thiscall *Init)(AbstractClass *this);
-  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *pAbstract, bool Removed);
   AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
   int (__thiscall *Size)(AbstractClass *this);
-  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *);
+  void (__thiscall *ComputeCRC)(AbstractClass *this, CRCEngine *pCrc);
   int (__thiscall *GetOwningHouseIndex)(AbstractClass *this);
   HouseClass *(__thiscall *GetOwningHouse)(AbstractClass *this);
   int (__thiscall *GetArrayIndex)(AbstractClass *this);
   bool (__thiscall *IsDead)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *, TechnoClass *);
+  CoordStruct *(__thiscall *GetCoords)(AbstractClass *this, CoordStruct *pCrd);
+  CoordStruct *(__thiscall *GetDestination)(AbstractClass *this, CoordStruct *pCrd, TechnoClass *pDocker);
   bool (__thiscall *IsOnFloor)(AbstractClass *this);
   bool (__thiscall *IsInAir)(AbstractClass *this);
-  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *);
+  CoordStruct *(__thiscall *GetCenterCoords)(AbstractClass *this, CoordStruct *pCrd);
   void (__thiscall *Update)(AbstractClass *this);
 };
 
@@ -7364,9 +7364,9 @@ class __declspec(align(4)) AbstractTypeClass : AbstractClass
 
 struct AbstractTypeClass_vtbl : AbstractClass_vtbl
 {
-  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType);
-  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *);
-  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *);
+  void (__thiscall *LoadTheaterSpecificArt)(AbstractTypeClass *this, TheaterType Th_type);
+  bool (__thiscall *LoadFromINI)(AbstractTypeClass *this, CCINIClass *pINI);
+  bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *pINI);
 };
 
 class TagClass : AbstractClass
@@ -7665,7 +7665,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
 
 struct HouseClass_vtbl : AbstractClass_vtbl
 {
-  HRESULT (__stdcall *FindConnectionPoint)(HouseClass *this, _GUID *, IConnectionPoint **);
+  HRESULT (__stdcall *FindConnectionPoint)(HouseClass *this, _GUID *pRiid, IConnectionPoint **ppCP);
 };
 
 class HouseTypeClass : AbstractTypeClass
@@ -7775,12 +7775,12 @@ class ObjectClass : AbstractClass
 
 struct ObjectClass_vtbl : AbstractClass_vtbl
 {
-  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *);
+  void (__thiscall *AnimPointerExpired)(ObjectClass *this, AnimClass *pAnim);
   bool (__thiscall *IsSelectable)(ObjectClass *this);
-  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16, HouseClass *);
+  VisualType (__thiscall *VisualCharacter)(ObjectClass *this, __int16 SpecificOwner, HouseClass *pWhoIsAsking);
   SHPStruct *(__thiscall *GetImage)(ObjectClass *this);
-  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *, bool, bool);
-  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *, bool);
+  Action (__thiscall *MouseOverCell)(ObjectClass *this, CellStruct *pCell, bool CheckFog, bool IgnoreForce);
+  Action (__thiscall *MouseOverObject)(ObjectClass *this, ObjectClass *pTarget, bool IgnoreKeyPressed);
   Layer (__thiscall *InWhichLayer)(ObjectClass *this);
   bool (__thiscall *IsSurfaced)(ObjectClass *this);
   bool (__thiscall *IsStrange)(ObjectClass *this);
@@ -7792,81 +7792,81 @@ struct ObjectClass_vtbl : AbstractClass_vtbl
   bool (__thiscall *CanBeSold)(ObjectClass *this);
   bool (__thiscall *IsActive)(ObjectClass *this);
   bool (__thiscall *IsControllable)(ObjectClass *this);
-  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *, TechnoClass *);
-  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *);
-  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *, int, CoordStruct);
-  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *, unsigned int);
+  CoordStruct *(__thiscall *GetTargetCoords)(ObjectClass *this, CoordStruct *pCrd);
+  CoordStruct *(__thiscall *GetDockCoords)(ObjectClass *this, CoordStruct *pCrd, TechnoClass *pDocker);
+  CoordStruct *(__thiscall *GetRenderCoords)(ObjectClass *this, CoordStruct *pCrd);
+  CoordStruct *(__thiscall *GetFLH)(ObjectClass *this, CoordStruct *pDest, int IdxWeapon, CoordStruct BaseCoords);
+  CoordStruct *(__thiscall *GetExitCoords)(ObjectClass *this, CoordStruct *pCrd, unsigned int dwUnk);
   int (__thiscall *GetYSort)(ObjectClass *this);
-  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *);
+  bool (__thiscall *IsOnBridge)(ObjectClass *this, TechnoClass *pDocker);
   bool (__thiscall *IsStandingStill)(ObjectClass *this);
   bool (__thiscall *IsDisguised)(ObjectClass *this);
-  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *);
-  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool);
-  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool);
+  bool (__thiscall *IsDisguisedAs)(ObjectClass *this, HouseClass *pHouse);
+  ObjectTypeClass *(__thiscall *GetDisguise)(ObjectClass *this, bool DisguisedAgainstAllies);
+  HouseClass *(__thiscall *GetDisguiseHouse)(ObjectClass *this, bool DisguisedAgainstAllies);
   bool (__thiscall *Limbo)(ObjectClass *this);
-  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *, DirType);
-  void (__thiscall *Disappear)(ObjectClass *this, bool);
-  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *);
-  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *);
-  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *);
+  bool (__thiscall *Unlimbo)(ObjectClass *this, CoordStruct *pCoords, DirType Dir);
+  void (__thiscall *Disappear)(ObjectClass *this, bool Permanently);
+  void (__thiscall *RegisterDestruction)(ObjectClass *this, TechnoClass *pDestroyer);
+  void (__thiscall *RegisterKill)(ObjectClass *this, HouseClass *pDestroyer);
+  bool (__thiscall *SpawnParachuted)(ObjectClass *this, CoordStruct *pCoords);
   void (__thiscall *DropAsBomb)(ObjectClass *this);
-  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
-  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *);
+  void (__thiscall *MarkAllOccupationBits)(ObjectClass *this, CoordStruct *pCoord);
+  void (__thiscall *UnmarkAllOccupationBits)(ObjectClass *this, CoordStruct *pCoord);
   void (__thiscall *UnInit)(ObjectClass *this);
   void (__thiscall *Reveal)(ObjectClass *this);
-  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *, CellStruct);
-  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *, bool, unsigned int);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool);
-  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *, RectangleStruct *);
+  KickOutResult (__thiscall *KickOutUnit)(ObjectClass *this, TechnoClass *pTechno, CellStruct Cell);
+  bool (__thiscall *DrawIfVisible)(ObjectClass *this, RectangleStruct *pBounds, bool EvenIfCloaked, unsigned int dwUnk3);
+  CellStruct *(__thiscall *GetFoundationData)(ObjectClass *this, bool IncludeBib);
+  void (__thiscall *DrawBehind)(ObjectClass *this, Point2D *pLocation, RectangleStruct *pBounds);
+  void (__thiscall *DrawExtras)(ObjectClass *this, Point2D *pLocation, RectangleStruct *pBounds);
+  void (__thiscall *DrawIt)(ObjectClass *this, Point2D *pPosition, RectangleStruct *pBoundingRect);
+  void (__thiscall *DrawAgain)(ObjectClass *this, Point2D *pLocation, RectangleStruct *pBounds);
   void (__thiscall *Undiscover)(ObjectClass *this);
-  void (__thiscall *See)(ObjectClass *this, unsigned int, unsigned int);
-  bool (__thiscall *Mark)(ObjectClass *this, MarkType);
-  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *);
-  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *);
-  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int);
+  void (__thiscall *See)(ObjectClass *this, unsigned int dwUnk, unsigned int dwUnk2);
+  bool (__thiscall *Mark)(ObjectClass *this, MarkType Mark);
+  RectangleStruct *(__thiscall *GetDimensions)(ObjectClass *this, RectangleStruct *pRect);
+  RectangleStruct *(__thiscall *GetRenderDimensions)(ObjectClass *this, RectangleStruct *pRect);
+  void (__thiscall *DrawRadialIndicator)(ObjectClass *this, unsigned int DrawLine);
   void (__thiscall *MarkForRedraw)(ObjectClass *this);
   bool (__thiscall *CanBeSelected)(ObjectClass *this);
   bool (__thiscall *CanBeSelectedNow)(ObjectClass *this);
-  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action, CellStruct *, CellStruct *, bool);
-  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action, ObjectClass *, bool);
-  void (__thiscall *Flash)(ObjectClass *this, int);
+  bool (__thiscall *CellClickedAction)(ObjectClass *this, Action Action, CellStruct *pCell, CellStruct *pCell1, bool bUnk);
+  bool (__thiscall *ObjectClickedAction)(ObjectClass *this, Action Action, ObjectClass *pTarget, bool bUnk);
+  void (__thiscall *Flash)(ObjectClass *this, int Duration);
   bool (__thiscall *Select)(ObjectClass *this);
   void (__thiscall *Deselect)(ObjectClass *this);
-  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int, HouseClass *, bool);
+  DamageState (__thiscall *IronCurtain)(ObjectClass *this, int Duration, HouseClass *pSource, bool ForceShield);
   void (__thiscall *StopAirstrikeTimer)(ObjectClass *this);
-  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int);
+  void (__thiscall *StartAirstrikeTimer)(ObjectClass *this, int Duration);
   bool (__thiscall *IsIronCurtained)(ObjectClass *this);
-  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int, unsigned int);
-  int (__thiscall *GetWeaponRange)(ObjectClass *this, int);
-  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *, int, WarheadTypeClass *, ObjectClass *, bool, bool, HouseClass *);
+  bool (__thiscall *IsCloseEnough3D)(ObjectClass *this, unsigned int dwUnk, unsigned int dwUnk2);
+  int (__thiscall *GetWeaponRange)(ObjectClass *this, int IdxWeapon);
+  DamageState (__thiscall *ReceiveDamage)(ObjectClass *this, int *pDamage, int DistanceFromEpicenter, WarheadTypeClass *pWH, ObjectClass *pAttacker, bool IgnoreDefenses, bool PreventPassengerEscape, HouseClass *pAttackingHouse);
   void (__thiscall *Destroy)(ObjectClass *this);
-  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *, bool, bool);
+  void (__thiscall *Scatter)(ObjectClass *this, CoordStruct *pCrd, bool IgnoreMission, bool IgnoreDestination);
   bool (__thiscall *Ignite)(ObjectClass *this);
   void (__thiscall *Extinguish)(ObjectClass *this);
   unsigned int (__thiscall *GetPointsValue)(ObjectClass *this);
   Mission (__thiscall *GetCurrentMission)(ObjectClass *this);
-  void (__thiscall *RestoreMission)(ObjectClass *this, Mission);
-  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType);
-  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool, bool);
-  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *, RadioCommand, AbstractClass **);
-  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *);
-  void (__thiscall *SetRepairState)(ObjectClass *this, int);
-  void (__thiscall *Sell)(ObjectClass *this, unsigned int);
-  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int, char);
-  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType);
-  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *, FacingType, int, CellClass *, bool);
-  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *, FacingType, int *, bool *, CellClass *);
-  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *);
-  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *);
+  void (__thiscall *RestoreMission)(ObjectClass *this, Mission Mission);
+  void (__thiscall *UpdatePosition)(ObjectClass *this, PCPType Pcp);
+  BuildingClass *(__thiscall *FindFactory)(ObjectClass *this, bool AllowOccupied, bool RequirePower);
+  RadioCommand (__thiscall *ReceiveCommand)(ObjectClass *this, TechnoClass *pCall, RadioCommand Command, AbstractClass **pP_pData);
+  bool (__thiscall *DiscoveredBy)(ObjectClass *this, HouseClass *pTagOwner);
+  void (__thiscall *SetRepairState)(ObjectClass *this, int State);
+  void (__thiscall *Sell)(ObjectClass *this, unsigned int Control);
+  void (__thiscall *AssignPlanningPath)(ObjectClass *this, int IdxPath, char IdxWP);
+  void (__thiscall *MoveToDirection)(ObjectClass *this, FacingType Facing);
+  Move (__thiscall *IsCellOccupied)(ObjectClass *this, CellClass *pDestCell, FacingType Facing, int Level, CellClass *pSourceCell, bool Alt);
+  Move (__thiscall *CanCellBeOccupied)(ObjectClass *this, CellClass *pCell, FacingType Facing, int *pSpeed, bool *pOccupied, CellClass *pOccupier);
+  void (__thiscall *SetLocation)(ObjectClass *this, CoordStruct *pCrd);
+  CellStruct *(__thiscall *GetMapCoords)(ObjectClass *this, CellStruct *pUCell);
   CellClass *(__thiscall *GetCell)(ObjectClass *this);
-  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *);
+  CellStruct *(__thiscall *GetMapCoordsAgain)(ObjectClass *this, CellStruct *pUCell);
   CellClass *(__thiscall *GetCellAgain)(ObjectClass *this);
   int (__thiscall *GetHeight)(ObjectClass *this);
-  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int);
+  void (__thiscall *SetHeight)(ObjectClass *this, unsigned int dwUnk);
   int (__thiscall *GetZ)(ObjectClass *this);
   bool (__thiscall *IsBeingWarpedOut)(ObjectClass *this);
   bool (__thiscall *IsWarpingIn)(ObjectClass *this);
@@ -7925,17 +7925,17 @@ class __unaligned __declspec(align(4)) ObjectTypeClass : AbstractTypeClass
 
 struct ObjectTypeClass_vtbl : AbstractTypeClass_vtbl
 {
-  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *, CoordStruct *);
+  CoordStruct *(__thiscall *vt_entry_6C)(ObjectTypeClass *this, CoordStruct *pDest, CoordStruct *pSrc);
   unsigned int (__thiscall *GetOwners)(ObjectTypeClass *this);
   int (__thiscall *GetPipMax)(ObjectTypeClass *this);
-  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int);
-  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *);
-  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *, HouseClass *);
-  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *);
+  void (__thiscall *vt_entry_78)(ObjectTypeClass *this, unsigned int dwUnk);
+  CoordStruct *(__thiscall *Dimension2)(ObjectTypeClass *this, CoordStruct *pDest);
+  bool (__thiscall *SpawnAtMapCoords)(ObjectTypeClass *this, CellStruct *pType, HouseClass *pMapCoord);
+  int (__thiscall *GetActualCost)(ObjectTypeClass *this, HouseClass *pHouse);
   int (__thiscall *GetBuildSpeed)(ObjectTypeClass *this);
-  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *);
-  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool);
-  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool, bool, bool, HouseClass *);
+  ObjectClass *(__thiscall *CreateObject)(ObjectTypeClass *this, HouseClass *pType);
+  CellStruct *(__thiscall *GetFoundationData)(ObjectTypeClass *this, bool IncludeBib);
+  BuildingClass *(__thiscall *FindFactory)(ObjectTypeClass *this, bool AllowOccupied, bool RequirePower, bool RequireCanBuild, HouseClass *pHouse);
   SHPStruct *(__thiscall *GetCameo)(ObjectTypeClass *this);
   SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
 };
@@ -8088,7 +8088,7 @@ class __declspec(align(4)) SmudgeTypeClass : ObjectTypeClass
 
 struct SmudgeTypeClass_vtbl : ObjectTypeClass_vtbl
 {
-  void (__thiscall *DrawIt)(SmudgeTypeClass *this, Point2D *, RectangleStruct *, int, int, CellStruct *);
+  void (__thiscall *DrawIt)(SmudgeTypeClass *this, Point2D *pPosition, RectangleStruct *pBoundingRect, int Data, int Level, CellStruct *pCell);
 };
 
 class SuperClass : AbstractClass
@@ -8154,7 +8154,7 @@ class SuperWeaponTypeClass : AbstractTypeClass
 
 struct SuperWeaponTypeClass_vtbl : AbstractTypeClass_vtbl
 {
-  Action (__thiscall *MouseOverObject)(SuperWeaponTypeClass *this, CellStruct *, ObjectClass *);
+  Action (__thiscall *MouseOverObject)(SuperWeaponTypeClass *this, CellStruct *pCell, ObjectClass *pObjBelowMouse);
 };
 
 class ScriptClass : AbstractClass
@@ -8907,8 +8907,8 @@ class BulletClass : ObjectClass
 struct BulletClass_vtbl : ObjectClass_vtbl
 {
   unsigned __int8 (__thiscall *GetAnimFrame)(BulletClass *this);
-  void (__thiscall *SetTarget)(BulletClass *this, AbstractClass *);
-  bool (__thiscall *MoveTo)(BulletClass *this, CoordStruct *, BulletVelocity *);
+  void (__thiscall *SetTarget)(BulletClass *this, AbstractClass *pTarget);
+  bool (__thiscall *MoveTo)(BulletClass *this, CoordStruct *pObject, BulletVelocity *pCrdSrc);
 };
 
 class BulletTypeClass : ObjectTypeClass
@@ -8992,7 +8992,7 @@ class __unaligned __declspec(align(4)) OverlayTypeClass : ObjectTypeClass
 
 struct OverlayTypeClass_vtbl : ObjectTypeClass_vtbl
 {
-  void (__thiscall *Draw)(OverlayTypeClass *this, Point2D *, RectangleStruct *, int);
+  void (__thiscall *Draw)(OverlayTypeClass *this, Point2D *pClientCoords, RectangleStruct *pClipRect, int Frame);
 };
 
 class CellClass : AbstractClass
@@ -9118,10 +9118,10 @@ class MissionClass : ObjectClass
 
 struct MissionClass_vtbl : ObjectClass_vtbl
 {
-  bool (__thiscall *QueueMission)(MissionClass *this, Mission, bool);
+  bool (__thiscall *QueueMission)(MissionClass *this, Mission Mission, bool Start_mission);
   bool (__thiscall *NextMission)(MissionClass *this);
-  void (__thiscall *ForceMission)(MissionClass *this, Mission);
-  void (__thiscall *Override_Mission)(MissionClass *this, Mission, AbstractClass *, AbstractClass *);
+  void (__thiscall *ForceMission)(MissionClass *this, Mission Mission);
+  void (__thiscall *Override_Mission)(MissionClass *this, Mission Mission, AbstractClass *pTarget, AbstractClass *pDestination);
   bool (__thiscall *Mission_Revert)(MissionClass *this);
   bool (__thiscall *MissionIsOverriden)(MissionClass *this);
   bool (__thiscall *ReadyToNextMission)(MissionClass *this);
@@ -9163,10 +9163,10 @@ class RadioClass : MissionClass
 
 struct RadioClass_vtbl : MissionClass_vtbl
 {
-  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand);
-  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand, TechnoClass *);
-  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand, AbstractClass **, TechnoClass *);
-  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand);
+  RadioCommand (__thiscall *SendToFirstLink)(RadioClass *this, RadioCommand Command);
+  RadioCommand (__thiscall *SendCommand)(RadioClass *this, RadioCommand Command, TechnoClass *pRecipient);
+  RadioCommand (__thiscall *SendCommandWithData)(RadioClass *this, RadioCommand Command, AbstractClass **pP_pData, TechnoClass *pReceive);
+  void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand Command);
 };
 
 class TechnoClass : RadioClass
@@ -9363,139 +9363,139 @@ struct TechnoClass_vtbl : RadioClass_vtbl
   bool (__thiscall *vt_entry_29C)(TechnoClass *this);
   bool (__thiscall *IsReadyToCloak)(TechnoClass *this);
   bool (__thiscall *ShouldNotBeCloaked)(TechnoClass *this);
-  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *);
+  DirStruct *(__thiscall *TurretFacing)(TechnoClass *this, DirStruct *pBuffer);
   bool (__thiscall *IsArmed)(TechnoClass *this);
   bool (__thiscall *vt_entry_2B0)(TechnoClass *this);
   double (__thiscall *GetStoragePercentage)(TechnoClass *this);
   int (__thiscall *GetPipFillLevel)(TechnoClass *this);
   int (__thiscall *GetRefund)(TechnoClass *this);
   int (__thiscall *GetThreatValue)(TechnoClass *this);
-  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *);
-  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int, unsigned int);
-  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *);
+  bool (__thiscall *IsInSameZoneAs)(TechnoClass *this, AbstractClass *pTarget);
+  unsigned int (__thiscall *vt_entry_2C8)(TechnoClass *this, unsigned int dwUnk, unsigned int dwUnk2);
+  bool (__thiscall *IsInSameZoneAsCoords)(TechnoClass *this, CoordStruct *pCoord);
   int (__thiscall *GetCrewCount)(TechnoClass *this);
   int (__thiscall *GetAntiAirValue)(TechnoClass *this);
   int (__thiscall *GetAntiArmorValue)(TechnoClass *this);
   int (__thiscall *GetAntiInfantryValue)(TechnoClass *this);
   void (__thiscall *GotHijacked)(TechnoClass *this);
-  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *);
-  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *);
+  int (__thiscall *SelectWeapon)(TechnoClass *this, AbstractClass *pTarget);
+  int (__thiscall *SelectNavalTargeting)(TechnoClass *this, AbstractClass *pTarget);
   int (__thiscall *GetZAdjustment)(TechnoClass *this);
   ZGradient (__thiscall *GetZGradient)(TechnoClass *this);
   CellStruct *(__thiscall *GetLastFlightMapCoords)(TechnoClass *this);
-  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct);
-  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
-  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *, unsigned int);
-  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int, unsigned int);
-  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *);
+  void (__thiscall *SetLastFlightMapCoords)(TechnoClass *this, CellStruct Coord);
+  CellStruct *(__thiscall *vt_entry_2FC)(TechnoClass *this, CellStruct *pBuffer, unsigned int dwUnk2, unsigned int dwUnk3);
+  CoordStruct *(__thiscall *vt_entry_300)(TechnoClass *this, CoordStruct *pBuffer, unsigned int dwUnk2);
+  unsigned int (__thiscall *vt_entry_304)(TechnoClass *this, unsigned int dwUnk, unsigned int dwUnk2);
+  DirStruct *(__thiscall *GetRealFacing)(TechnoClass *this, DirStruct *pBuffer);
   InfantryTypeClass *(__thiscall *GetCrew)(TechnoClass *this);
   bool (__thiscall *vt_entry_310)(TechnoClass *this);
   bool (__thiscall *CanDeploySlashUnload)(TechnoClass *this);
-  int (__thiscall *GetROF)(TechnoClass *this, int);
-  int (__thiscall *GetGuardRange)(TechnoClass *this, int);
+  int (__thiscall *GetROF)(TechnoClass *this, int Weapon);
+  int (__thiscall *GetGuardRange)(TechnoClass *this, int Control);
   bool (__thiscall *CanGetOutOfMap)(TechnoClass *this);
-  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *);
+  bool (__thiscall *IsRadarVisible)(TechnoClass *this, int *pOutDetection);
   bool (__thiscall *IsSensorVisibleToPlayer)(TechnoClass *this);
-  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *);
+  bool (__thiscall *IsSensorVisibleToHouse)(TechnoClass *this, HouseClass *pHouse);
   bool (__thiscall *IsEngineer)(TechnoClass *this);
   void (__thiscall *ProceedToNextPlanningWaypoint)(TechnoClass *this);
-  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int, unsigned int);
+  CellStruct *(__thiscall *ScanForTiberium)(TechnoClass *this, CellStruct *, unsigned int Range, unsigned int dwUnk3);
   bool (__thiscall *EnterGrinder)(TechnoClass *this);
   bool (__thiscall *EnterBioReactor)(TechnoClass *this);
   bool (__thiscall *EnterTankBunker)(TechnoClass *this);
   bool (__thiscall *EnterBattleBunker)(TechnoClass *this);
   bool (__thiscall *GarrisonStructure)(TechnoClass *this);
   bool (__thiscall *IsPowerOnline)(TechnoClass *this);
-  void (__thiscall *QueueVoice)(TechnoClass *this, int);
+  void (__thiscall *QueueVoice)(TechnoClass *this, int IdxVoc);
   int (__thiscall *VoiceEnter)(TechnoClass *this);
   int (__thiscall *VoiceHarvest)(TechnoClass *this);
   int (__thiscall *VoiceSelect)(TechnoClass *this);
   int (__thiscall *VoiceCapture)(TechnoClass *this);
   int (__thiscall *VoiceMove)(TechnoClass *this);
   int (__thiscall *VoiceDeploy)(TechnoClass *this);
-  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *);
-  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType);
-  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission, AbstractClass *, AbstractClass *, CellClass *);
+  int (__thiscall *VoiceAttack)(TechnoClass *this, ObjectClass *pTarget);
+  bool (__thiscall *ClickedEvent)(TechnoClass *this, EventType Rtti);
+  bool (__thiscall *ClickedMission)(TechnoClass *this, Mission SourceRTTI, AbstractClass *pMission, AbstractClass *pTarget, CellClass *pTargetCell);
   bool (__thiscall *IsUnderEMP)(TechnoClass *this);
   bool (__thiscall *IsParalyzed)(TechnoClass *this);
   bool (__thiscall *CanCheer)(TechnoClass *this);
-  void (__thiscall *Cheer)(TechnoClass *this, bool);
+  void (__thiscall *Cheer)(TechnoClass *this, bool Force);
   int (__thiscall *GetDefaultSpeed)(TechnoClass *this);
   void (__thiscall *DecreaseAmmo)(TechnoClass *this);
-  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *);
-  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *, ThreatType);
+  void (__thiscall *AddPassenger)(TechnoClass *this, FootClass *pPassenger);
+  bool (__thiscall *CanDisguiseAs)(TechnoClass *this, AbstractClass *pTarget);
+  bool (__thiscall *TargetAndEstimateDamage)(TechnoClass *this, CoordStruct *pCoord, ThreatType Threat);
   void (__thiscall *Stun)(TechnoClass *this);
-  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *, int);
-  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *);
-  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *);
-  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *);
-  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *, int);
-  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *, int, bool);
-  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType, CoordStruct *, bool);
-  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *);
-  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *, int);
+  bool (__thiscall *TriggersCellInset)(TechnoClass *this, AbstractClass *pTarget);
+  bool (__thiscall *IsCloseEnough)(TechnoClass *this, AbstractClass *pTarget, int IdxWeapon);
+  bool (__thiscall *IsCloseEnoughToAttack)(TechnoClass *this, AbstractClass *pTarget);
+  bool (__thiscall *IsCloseEnoughToAttackCoords)(TechnoClass *this, CoordStruct *pCoords);
+  bool (__thiscall *InAuxiliarySearchRange)(TechnoClass *this, AbstractClass *pTarget);
+  void (__thiscall *Destroyed)(TechnoClass *this, ObjectClass *pKiller);
+  FireError (__thiscall *GetFireErrorWithoutRange)(TechnoClass *this, AbstractClass *pTarget, int WeaponIndex);
+  FireError (__thiscall *GetFireError)(TechnoClass *this, AbstractClass *pTarget, int WeaponIndex, bool CheckRange);
+  AbstractClass *(__thiscall *SelectAutoTarget)(TechnoClass *this, ThreatType ThreatType, CoordStruct *pSourceCoords, bool OnlyTargetHouseEnemy);
+  void (__thiscall *SetTarget)(TechnoClass *this, AbstractClass *pTarget);
+  BulletClass *(__thiscall *Fire)(TechnoClass *this, AbstractClass *pTarget, int WeaponIndex);
   void (__thiscall *Guard)(TechnoClass *this);
-  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *, bool);
-  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *, float, bool);
-  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *);
+  bool (__thiscall *SetOwningHouse)(TechnoClass *this, HouseClass *pHouse, bool Announce);
+  void (__thiscall *ShakeVXL)(TechnoClass *this, CoordStruct *pCoord, float Intensity, bool bUnk);
+  bool (__thiscall *Crash)(TechnoClass *this, ObjectClass *pSource);
   bool (__thiscall *IsAreaFire)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack)(TechnoClass *this);
   int (__thiscall *GetSecondaryWeaponIndex)(TechnoClass *this);
   int (__thiscall *IsNotSprayAttack2)(TechnoClass *this);
   WeaponStruct *(__thiscall *GetDeployWeapon)(TechnoClass *this);
   WeaponStruct *(__thiscall *GetTurretWeapon)(TechnoClass *this);
-  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int);
+  WeaponStruct *(__thiscall *GetWeapon)(TechnoClass *this, int Index);
   bool (__thiscall *HasTurret)(TechnoClass *this);
   bool (__thiscall *CanOccupyFire)(TechnoClass *this);
   int (__thiscall *GetOccupyRangeBonus)(TechnoClass *this);
   int (__thiscall *GetOccupantCount)(TechnoClass *this);
   void (__thiscall *OnFinishRepair)(TechnoClass *this);
-  void (__thiscall *UpdateCloak)(TechnoClass *this, bool);
+  void (__thiscall *UpdateCloak)(TechnoClass *this, bool bUnk);
   void (__thiscall *CreateGap)(TechnoClass *this);
   void (__thiscall *DestroyGap)(TechnoClass *this);
   void (__thiscall *vt_entry_41C)(TechnoClass *this);
   void (__thiscall *Sensed)(TechnoClass *this);
   void (__thiscall *Reload)(TechnoClass *this);
   void (__thiscall *CheckTargetInDeployment)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *);
+  CoordStruct *(__thiscall *GetAttackCoordinates)(TechnoClass *this, CoordStruct *pCrd);
   bool (__thiscall *IsNotWarpingIn)(TechnoClass *this);
-  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int);
-  void (__thiscall *DrawActionLines)(TechnoClass *this, bool, unsigned int);
-  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags);
-  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *, unsigned int, __int16, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, int, unsigned int, BlitterFlags);
-  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *, RectangleStruct *, bool);
-  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *, RectangleStruct *);
-  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *, Point2D *, RectangleStruct *);
-  void (__thiscall *Uncloak)(TechnoClass *this, bool);
-  void (__thiscall *Cloak)(TechnoClass *this, bool);
-  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int);
+  bool (__thiscall *vt_entry_434)(TechnoClass *this, unsigned int dwUnk);
+  void (__thiscall *DrawActionLines)(TechnoClass *this, bool Force, unsigned int dwUnk2);
+  BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags ExistingFlags);
+  bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *pHouse);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *pVoxel, unsigned int dwUnk2, __int16 Facing, IndexClass_TL_int_A_int_TR_ *pVoxelIndex, RectangleStruct *pRect, Point2D *pLocation, Matrix3D *pMatrix, int Intensity, unsigned int dwUnk9, BlitterFlags dwUnk10);
+  void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *pPoint, RectangleStruct *pRect);
+  void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *pLocation, RectangleStruct *pBoundingRect, bool bUnk3);
+  void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *pLocation, Point2D *pOriginalLocation, RectangleStruct *pBounds);
+  void (__thiscall *DrawVeterancyPips)(TechnoClass *this, Point2D *pLocation, RectangleStruct *pBounds);
+  void (__thiscall *DrawExtraInfo)(TechnoClass *this, Point2D *pLocation, Point2D *pOriginalLocation, RectangleStruct *pBounds);
+  void (__thiscall *Uncloak)(TechnoClass *this, bool PlaySound);
+  void (__thiscall *Cloak)(TechnoClass *this, bool PlaySound);
+  int (__thiscall *GetBrightIntensity)(TechnoClass *this, int Intensity);
   void (__thiscall *UpdateRefinerySmokeSystems)(TechnoClass *this);
-  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *);
+  unsigned int (__thiscall *DisguiseAs)(TechnoClass *this, AbstractClass *pTarget);
   void (__thiscall *ClearDisguise)(TechnoClass *this);
   bool (__thiscall *IsItTimeForIdleActionYet)(TechnoClass *this);
   bool (__thiscall *UpdateIdleAction)(TechnoClass *this);
-  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *);
-  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *, bool);
-  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool, bool);
-  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int, unsigned int, unsigned int, unsigned int);
-  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *, unsigned int);
+  void (__thiscall *SetFollowTarget)(TechnoClass *this, AbstractClass *pTarget);
+  void (__thiscall *SetDestination)(TechnoClass *this, AbstractClass *pDest, bool bUnk);
+  bool (__thiscall *EnterIdleMode)(TechnoClass *this, bool Construction, bool NextPlanningPath);
+  void (__thiscall *UpdateSight)(TechnoClass *this, unsigned int dwUnk, unsigned int dwUnk2, unsigned int dwUnk3, unsigned int dwUnk4, unsigned int dwUnk5);
+  void (__thiscall *vt_entry_48C)(TechnoClass *this, unsigned int dwUnk, unsigned int dwUnk2, unsigned int dwUnk3, unsigned int dwUnk4);
+  bool (__thiscall *ForceCreate)(TechnoClass *this, CoordStruct *pCoord, unsigned int dwUnk);
   void (__thiscall *RadarTrackingStart)(TechnoClass *this);
   void (__thiscall *RadarTrackingStop)(TechnoClass *this);
   void (__thiscall *RadarTrackingFlash)(TechnoClass *this);
-  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool);
-  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *);
+  void (__thiscall *RadarTrackingUpdate)(TechnoClass *this, bool MapCoords);
+  Mission (__thiscall *RespondMegaEventMission)(TechnoClass *this, EventClass *pRespondTo);
   void (__thiscall *ClearMegaMissionData)(TechnoClass *this);
   bool (__thiscall *HaveMegaMission)(TechnoClass *this);
   bool (__thiscall *HaveAttackMoveTarget)(TechnoClass *this);
   Mission (__thiscall *GetMegaMission)(TechnoClass *this);
-  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *);
+  CoordStruct *(__thiscall *GetAttackMoveCoords)(TechnoClass *this, CoordStruct *pBuffer);
   bool (__thiscall *CanUseWaypoint)(TechnoClass *this);
   bool (__thiscall *CanAttackOnTheMove)(TechnoClass *this);
   bool (__thiscall *MegaMissionIsAttackMove)(TechnoClass *this);
@@ -9842,11 +9842,11 @@ struct TechnoTypeClass_vtbl : ObjectTypeClass_vtbl
 {
   bool (__thiscall *CanUseWaypoint)(TechnoTypeClass *this);
   bool (__thiscall *CanAttackMove)(TechnoTypeClass *this);
-  bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *CanCreateHere)(TechnoTypeClass *this, CellStruct *pObject, HouseClass *pPosition);
   int (__thiscall *GetCost)(TechnoTypeClass *this);
   int (__thiscall *GetRepairStepCost)(TechnoTypeClass *this);
   int (__thiscall *GetRepairStep)(TechnoTypeClass *this);
-  int (__thiscall *GetRefund)(TechnoTypeClass *this, HouseClass *, bool);
+  int (__thiscall *GetRefund)(TechnoTypeClass *this, HouseClass *pHouse, bool Max);
   int (__thiscall *GetFlightLevel)(TechnoTypeClass *this);
 };
 
@@ -9862,9 +9862,9 @@ struct LinkClass_vtbl
   void (__thiscall *~LinkClass)(LinkClass *this);
   LinkClass *(__thiscall *GetNext)(LinkClass *this);
   LinkClass *(__thiscall *GetPrev)(LinkClass *this);
-  LinkClass *(__thiscall *Add)(LinkClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddTail)(LinkClass *this, LinkClass *);
-  LinkClass *(__thiscall *AddHead)(LinkClass *this, LinkClass *);
+  LinkClass *(__thiscall *Add)(LinkClass *this, LinkClass *pAnother);
+  LinkClass *(__thiscall *AddTail)(LinkClass *this, LinkClass *pToLink);
+  LinkClass *(__thiscall *AddHead)(LinkClass *this, LinkClass *pAnother);
   LinkClass *(__thiscall *HeadOfList)(LinkClass *this);
   LinkClass *(__thiscall *TailOfList)(LinkClass *this);
   void (__thiscall *Zap)(LinkClass *this);
@@ -9886,28 +9886,28 @@ class GadgetClass : LinkClass
 struct GadgetClass_vtbl : LinkClass_vtbl
 {
   unsigned int (__thiscall *Input)(GadgetClass *this);
-  void (__thiscall *DrawAll)(GadgetClass *this, bool);
+  void (__thiscall *DrawAll)(GadgetClass *this, bool Forced);
   void (__thiscall *DeleteList)(GadgetClass *this);
-  GadgetClass *(__thiscall *ExtractGadget)(GadgetClass *this, unsigned int);
+  GadgetClass *(__thiscall *ExtractGadget)(GadgetClass *this, unsigned int ID);
   void (__thiscall *MarkListToRedraw)(GadgetClass *this);
   void (__thiscall *Disable)(GadgetClass *this);
   void (__thiscall *Enable)(GadgetClass *this);
   unsigned int (__thiscall *GetID)(GadgetClass *this);
   void (__thiscall *MarkRedraw)(GadgetClass *this);
-  void (__thiscall *PeerToPeer)(GadgetClass *this, GadgetFlag, KeyNumType *, GadgetClass *);
+  void (__thiscall *PeerToPeer)(GadgetClass *this, GadgetFlag Flags, KeyNumType *pKey, GadgetClass *pSendTo);
   void (__thiscall *SetFocus)(GadgetClass *this);
   void (__thiscall *KillFocus)(GadgetClass *this);
   bool (__thiscall *IsFocused)(GadgetClass *this);
   bool (__thiscall *IsListToRedraw)(GadgetClass *this);
   bool (__thiscall *IsToRedraw)(GadgetClass *this);
-  void (__thiscall *SetPosition)(GadgetClass *this, int, int);
-  void (__thiscall *SetDimension)(GadgetClass *this, int, int);
-  bool (__thiscall *Draw)(GadgetClass *this, bool);
+  void (__thiscall *SetPosition)(GadgetClass *this, int X, int Y);
+  void (__thiscall *SetDimension)(GadgetClass *this, int Width, int Height);
+  bool (__thiscall *Draw)(GadgetClass *this, bool Forced);
   void (__thiscall *OnMouseEnter)(GadgetClass *this);
   void (__thiscall *OnMouseLeave)(GadgetClass *this);
-  void (__thiscall *StickyProcess)(GadgetClass *this, GadgetFlag);
-  bool (__thiscall *Action)(GadgetClass *this, GadgetFlag, KeyNumType *, KeyModifier);
-  bool (__thiscall *Clicked)(GadgetClass *this, KeyNumType *, GadgetFlag, int, int, KeyModifier);
+  void (__thiscall *StickyProcess)(GadgetClass *this, GadgetFlag Flags);
+  bool (__thiscall *Action)(GadgetClass *this, GadgetFlag Flags, KeyNumType *pKey, KeyModifier Modifier);
+  bool (__thiscall *Clicked)(GadgetClass *this, KeyNumType *pKey, GadgetFlag Flags, int X, int Y, KeyModifier Modifier);
 };
 
 class GScreenClass : IGameMap
@@ -9919,28 +9919,28 @@ class GScreenClass : IGameMap
 
 struct GScreenClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int Mode);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
 };
 
 struct ZoneConnectionTable
@@ -10040,36 +10040,36 @@ class MapClass : GScreenClass
 
 struct MapClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
 };
 
 class DisplayClass : MapClass
@@ -10111,56 +10111,56 @@ class DisplayClass : MapClass
 
 struct DisplayClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pCellStruct, HouseClass *pHouse, bool LeaveCell);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pCellStruct, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
 };
 
 class RadarClass : DisplayClass
@@ -10209,59 +10209,59 @@ class RadarClass : DisplayClass
 
 struct RadarClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pCellStruct, HouseClass *pHouse, bool LeaveCell);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
-  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
-  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
+  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *out_pUnk, Point2D *pPoint);
+  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int dwUnk);
   void (__thiscall *Init_For_House)(RadarClass *this);
 };
 
@@ -10283,59 +10283,59 @@ class PowerClass : RadarClass
 
 struct PowerClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse, bool IncreaseShroudCounter);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
-  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
-  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
+  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *out_pUnk, Point2D *pPoint);
+  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int dwUnk);
   void (__thiscall *Init_For_House)(RadarClass *this);
 };
 
@@ -10371,61 +10371,61 @@ class SidebarClass : PowerClass
 
 struct SidebarClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse, bool IncreaseShroudCounter);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
-  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
-  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
+  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *out_pUnk, Point2D *pPoint);
+  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int dwUnk);
   void (__thiscall *Init_For_House)(RadarClass *this);
-  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int);
+  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
 class TabClass : SidebarClass, INoticeSink
@@ -10441,61 +10441,61 @@ class TabClass : SidebarClass, INoticeSink
 
 struct TabClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse, bool IncreaseShroudCounter);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
-  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
-  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
+  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *out_pUnk, Point2D *pPoint);
+  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int dwUnk);
   void (__thiscall *Init_For_House)(RadarClass *this);
-  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int);
+  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
 class ScrollClass : TabClass
@@ -10512,61 +10512,61 @@ class ScrollClass : TabClass
 
 struct ScrollClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse, bool IncreaseShroudCounter);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
-  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
-  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
+  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *out_pUnk, Point2D *pPoint);
+  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int dwUnk);
   void (__thiscall *Init_For_House)(RadarClass *this);
-  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int);
+  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
 class MouseClass : ScrollClass
@@ -10580,61 +10580,61 @@ class MouseClass : ScrollClass
 
 struct MouseClass_vtbl
 {
-  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *, void **);
+  HRESULT (__stdcall *QueryInterface)(IUnknown *this, _GUID *pIid, void **ppvObject);
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct);
+  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *~GScreenClass)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
   void (__thiscall *Init_IO)(GScreenClass *this);
-  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *, int *, int *);
-  void (__thiscall *Update)(GScreenClass *this, KeyNumType *, Point2D *);
-  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *);
-  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *);
-  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int);
+  void (__thiscall *GetInputAndUpdate)(GScreenClass *this, unsigned int *pOutKeyCode, int *pOutMouseX, int *pOutMouseY);
+  void (__thiscall *Update)(GScreenClass *this, KeyNumType *pKeyCode, Point2D *pMouseCoords);
+  bool (__thiscall *SetButtons)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *AddButton)(GScreenClass *this, GadgetClass *pGadget);
+  bool (__thiscall *RemoveButton)(GScreenClass *this, GadgetClass *pGadget);
+  void (__thiscall *MarkNeedsRedraw)(GScreenClass *this, int dwUnk);
   void (__thiscall *DrawOnTop)(GScreenClass *this);
-  void (__thiscall *Draw)(GScreenClass *this, unsigned int);
+  void (__thiscall *Draw)(GScreenClass *this, unsigned int dwUnk);
   void (__thiscall *vt_entry_44)(GScreenClass *this);
-  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType, bool);
-  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType, bool);
+  bool (__thiscall *SetCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
+  bool (__thiscall *UpdateCursor)(GScreenClass *this, MouseCursorType IdxCursor, bool MiniMap);
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
-  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool);
+  void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
   void (__thiscall *~Cells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
-  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
   void (__thiscall *UpdateCrates)(MapClass *this);
-  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *, bool, char, bool);
-  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *);
-  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *);
-  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *);
-  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *);
-  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int);
+  void (__thiscall *CreateEmptyMap)(MapClass *this, RectangleStruct *pMapRect, bool Reuse, char Level, bool bUnk2);
+  void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
+  HRESULT (__thiscall *Load)(DisplayClass *this, IStream *pStm);
+  HRESULT (__thiscall *Save)(DisplayClass *this, IStream *pStm);
+  void (__thiscall *LoadFromINI)(DisplayClass *this, CCINIClass *pINI);
+  wchar_t *(__thiscall *GetToolTip)(DisplayClass *this, unsigned int DlgID);
   void (__thiscall *CloseWindow)(DisplayClass *this);
   void (__thiscall *ClearDragBand)(DisplayClass *this);
-  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *, HouseClass *, bool);
-  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *, HouseClass *);
-  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *, HouseClass *);
+  bool (__thiscall *MapCell)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *RevealFogShroud)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse, bool IncreaseShroudCounter);
+  bool (__thiscall *MapCellFoggedness)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
+  bool (__thiscall *MapCellVisibility)(DisplayClass *this, CellStruct *pMapCoord, HouseClass *pHouse);
   MouseCursorType (__thiscall *GetLastMouseCursor)(DisplayClass *this);
-  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *);
-  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int);
-  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *);
-  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *, bool, ObjectClass *, Action, bool);
-  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *);
-  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *, CellStruct *, ObjectClass *, Action, unsigned int);
-  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *);
+  bool (__thiscall *ScrollMap)(DisplayClass *this, unsigned int dwUnk1, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *Set_View_Dimensions)(DisplayClass *this, RectangleStruct *pRect);
+  void (__thiscall *vt_entry_AC)(DisplayClass *this, unsigned int dwUnk);
+  void (__thiscall *RightMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonClick)(DisplayClass *this, Point2D *pPoint);
+  bool (__thiscall *ConvertAction)(DisplayClass *this, CellStruct *pCell, bool Shrouded, ObjectClass *pObject, Action Action, bool dwUnk);
+  void (__thiscall *LeftMouseButtonDown)(DisplayClass *this, Point2D *pPoint);
+  void (__thiscall *LeftMouseButtonUp)(DisplayClass *this, CoordStruct *pCoords, CellStruct *pCell, ObjectClass *pObject, Action Action, unsigned int dwUnk2);
+  void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
   void (__thiscall *DisposeOfArt)(RadarClass *this);
-  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *, Point2D *);
-  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int);
+  void *(__thiscall *vt_entry_CC)(RadarClass *this, void *out_pUnk, Point2D *pPoint);
+  void (__thiscall *vt_entry_D0)(RadarClass *this, unsigned int dwUnk);
   void (__thiscall *Init_For_House)(RadarClass *this);
-  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int);
+  bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
 class TacticalClass : AbstractClass
@@ -10673,7 +10673,7 @@ class TacticalClass : AbstractClass
 
 struct TacticalClass_vtbl : AbstractClass_vtbl
 {
-  bool (__thiscall *sub_6DBB60)(TacticalClass *this, CoordStruct *, CoordStruct *, unsigned int, unsigned int);
+  bool (__thiscall *sub_6DBB60)(TacticalClass *this, CoordStruct *pa2, CoordStruct *pa3, unsigned int a4, unsigned int dwUnk);
 };
 
 class BuildingLightClass : ObjectClass
@@ -10770,18 +10770,18 @@ class __declspec(align(8)) BuildingClass : TechnoClass
 
 struct BuildingClass_vtbl : TechnoClass_vtbl
 {
-  CellStruct *(__thiscall *FindExitCell)(BuildingClass *this, CellStruct *, TechnoClass *);
-  int (__thiscall *DistanceToDockingCoord)(BuildingClass *this, ObjectClass *);
-  void (__thiscall *Place)(BuildingClass *this, bool);
+  CellStruct *(__thiscall *FindExitCell)(BuildingClass *this, CellStruct *pBuffer, TechnoClass *pTechno);
+  int (__thiscall *DistanceToDockingCoord)(BuildingClass *this, ObjectClass *pObj);
+  void (__thiscall *Place)(BuildingClass *this, bool Captured);
   void (__thiscall *UpdateConstructionOptions)(BuildingClass *this);
-  void (__thiscall *Draw)(BuildingClass *this, Point2D *, RectangleStruct *);
-  DirStruct *(__thiscall *FireAngleTo)(BuildingClass *this, DirStruct *result, ObjectClass *);
-  void (__thiscall *Destory)(BuildingClass *this, unsigned int, TechnoClass *, bool, CellStruct *);
+  void (__thiscall *Draw)(BuildingClass *this, Point2D *pPoint, RectangleStruct *pRect);
+  DirStruct *(__thiscall *FireAngleTo)(BuildingClass *this, DirStruct *result, ObjectClass *pObject);
+  void (__thiscall *Destory)(BuildingClass *this, unsigned int Unused, TechnoClass *pTechno, bool NoSurvivor, CellStruct *pCell);
   bool (__thiscall *TogglePrimaryFactory)(BuildingClass *this);
-  void (__thiscall *SensorArrayActivate)(BuildingClass *this, CellStruct);
-  void (__thiscall *SensorArrayDeactivate)(BuildingClass *this, CellStruct);
-  void (__thiscall *DisguiseDetectorActivate)(BuildingClass *this, CellStruct);
-  void (__thiscall *DisguiseDetectorDeactivate)(BuildingClass *this, CellStruct);
+  void (__thiscall *SensorArrayActivate)(BuildingClass *this, CellStruct Cell);
+  void (__thiscall *SensorArrayDeactivate)(BuildingClass *this, CellStruct Cell);
+  void (__thiscall *DisguiseDetectorActivate)(BuildingClass *this, CellStruct Cell);
+  void (__thiscall *DisguiseDetectorDeactivate)(BuildingClass *this, CellStruct Cell);
   int (__thiscall *AlwaysZero)(BuildingClass *this);
 };
 
@@ -10824,7 +10824,7 @@ class BuildingTypeClass : TechnoTypeClass
   CoordStruct TargetCoordOffset;
   CoordStruct ExitCoord;
   CellStruct *FoundationOutside;
-  int field_ED8;
+  int StartFacing;
   int DeployFacing;
   int PowerBonus;
   int PowerDrain;
@@ -11066,38 +11066,38 @@ class FootClass : TechnoClass
 
 struct FootClass_vtbl : TechnoClass_vtbl
 {
-  void (__thiscall *ReceiveGunner)(FootClass *this, FootClass *);
-  void (__thiscall *RemoveGunner)(FootClass *this, FootClass *);
+  void (__thiscall *ReceiveGunner)(FootClass *this, FootClass *pGunner);
+  void (__thiscall *RemoveGunner)(FootClass *this, FootClass *pGunner);
   bool (__thiscall *IsLeavingMap)(FootClass *this);
   bool (__thiscall *vt_entry_4E0)(FootClass *this);
   bool (__thiscall *CanDeployNow)(FootClass *this);
-  void (__thiscall *AddSensorsAt)(FootClass *this, CellStruct);
-  void (__thiscall *RemoveSensorsAt)(FootClass *this, CellStruct);
-  CoordStruct *(__thiscall *vt_entry_4F0)(FootClass *this, CoordStruct *);
+  void (__thiscall *AddSensorsAt)(FootClass *this, CellStruct Cell);
+  void (__thiscall *RemoveSensorsAt)(FootClass *this, CellStruct Cell);
+  CoordStruct *(__thiscall *vt_entry_4F0)(FootClass *this, CoordStruct *pCrd);
   void (__thiscall *vt_entry_4F4)(FootClass *this);
   bool (__thiscall *vt_entry_4F8)(FootClass *this);
-  bool (__thiscall *MoveTo)(FootClass *this, CoordStruct *);
+  bool (__thiscall *MoveTo)(FootClass *this, CoordStruct *pCrd);
   bool (__thiscall *StopMoving)(FootClass *this);
   bool (__thiscall *TryEnterIdle)(FootClass *this);
-  bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct);
-  void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *, int, Point2D *, RectangleStruct *, unsigned int, unsigned int, unsigned int, ZGradient, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *, int, int, IndexClass_TL_int_A_int_TR_ *, RectangleStruct *, Point2D *, Matrix3D *, unsigned int, BlitterFlags, unsigned int);
+  bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct Dest);
+  void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *pSHP, int IdxFacing, Point2D *pCoords, RectangleStruct *pRectangle, unsigned int dwUnk5, unsigned int dwUnk6, unsigned int dwUnk7, ZGradient ZGradient, unsigned int dwUnk9, int ExtraLight, unsigned int dwUnk11, unsigned int dwUnk12, unsigned int dwUnk13, unsigned int dwUnk14, unsigned int dwUnk15, unsigned int dwUnk16);
+  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *pVXL, int HVAFrameIndex, int Flags, IndexClass_TL_int_A_int_TR_ *pCache, RectangleStruct *pRectangle, Point2D *pCenterPoint, Matrix3D *pMatrix, unsigned int Brightness, BlitterFlags DrawFlags, unsigned int dwUnk10);
   void (__thiscall *GoBerzerk)(FootClass *this);
   void (__thiscall *Panic)(FootClass *this);
   void (__thiscall *UnPanic)(FootClass *this);
-  void (__thiscall *PlayIdleAnim)(FootClass *this, int);
+  void (__thiscall *PlayIdleAnim)(FootClass *this, int IdleAnimNumber);
   unsigned int (__thiscall *vt_entry_524)(FootClass *this);
-  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *, unsigned int, unsigned int);
-  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int, int *);
-  BuildingClass *(__thiscall *FindNearestDockBuilding)(FootClass *this, BuildingTypeClass *, unsigned int, unsigned int);
-  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *, bool);
+  BuildingClass *(__thiscall *TryNearestDockBuilding)(FootClass *this, TypeList_BuildingTypeClass_PTR *pBList, unsigned int dwUnk2, unsigned int dwUnk3);
+  BuildingClass *(__thiscall *FindCloserDockBuilding)(FootClass *this, BuildingTypeClass *pBType, unsigned int dwUnk2, unsigned int dwUnk3, int *pDistance);
+  BuildingClass *(__thiscall *FindNearestDockBuilding)(FootClass *this, BuildingTypeClass *pBType, unsigned int dwUnk2, unsigned int dwUnk3);
+  void (__thiscall *TryCrushCell)(FootClass *this, CellStruct *pCell, bool Warn);
   int (__thiscall *GetCurrentSpeed)(FootClass *this);
-  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool);
-  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathFinderData *);
-  void (__thiscall *SetSpeedPercentage)(FootClass *this, long double);
+  AbstractClass *(__thiscall *ApproachTarget)(FootClass *this, bool Foot);
+  void (__thiscall *vt_entry_540)(FootClass *this, AStarClass_PathFinderData *dwUnk);
+  void (__thiscall *SetSpeedPercentage)(FootClass *this, long double Percentage);
   void (__thiscall *vt_entry_548)(FootClass *this);
   void (__thiscall *vt_entry_54C)(FootClass *this);
-  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *);
+  bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *pDestination);
 };
 
 class InfantryClass : FootClass
@@ -11121,7 +11121,7 @@ class InfantryClass : FootClass
 struct InfantryClass_vtbl : FootClass_vtbl
 {
   bool (__thiscall *IsDeployed)(InfantryClass *this);
-  bool (__thiscall *PlayAnim)(InfantryClass *this, Sequence, bool, bool);
+  bool (__thiscall *PlayAnim)(InfantryClass *this, Sequence Index, bool Force, bool RandomStartFrame);
 };
 
 class InfantryTypeClass : TechnoTypeClass
@@ -11191,9 +11191,9 @@ class UnitClass : FootClass
 
 struct UnitClass_vtbl : FootClass_vtbl
 {
-  void (__thiscall *DrawAsVXL)(UnitClass *this, Point2D, RectangleStruct, int, int);
-  void (__thiscall *DrawAsSHP)(UnitClass *this, Point2D, RectangleStruct, int, int);
-  void (__thiscall *DrawObject)(UnitClass *this, Surface *, Point2D, RectangleStruct, int, int);
+  void (__thiscall *DrawAsVXL)(UnitClass *this, Point2D Coords, RectangleStruct BoundingRect, int Brightness, int Tint);
+  void (__thiscall *DrawAsSHP)(UnitClass *this, Point2D Coords, RectangleStruct BoundingRect, int Brightness, int Tint);
+  void (__thiscall *DrawObject)(UnitClass *this, Surface *pSurface, Point2D Coords, RectangleStruct CacheRect, int Brightness, int Tint);
 };
 
 class __declspec(align(2)) UnitTypeClass : TechnoTypeClass
@@ -11312,8 +11312,8 @@ class XSurface : Surface
 
 struct XSurface_vtbl : Surface_vtbl
 {
-  bool (__thiscall *PutPixelClip)(XSurface *this, Point2D *, __int16, RectangleStruct *);
-  __int16 (__thiscall *GetPixelClip)(XSurface *this, Point2D *, RectangleStruct *);
+  bool (__thiscall *PutPixelClip)(XSurface *this, Point2D *pPoint, __int16 nUnk, RectangleStruct *pRect);
+  __int16 (__thiscall *GetPixelClip)(XSurface *this, Point2D *pPoint, RectangleStruct *pRect);
 };
 
 class DSurface : XSurface
@@ -11328,7 +11328,7 @@ class DSurface : XSurface
 
 struct DSurface_vtbl : XSurface_vtbl
 {
-  bool (__thiscall *DrawGradientLine)(DSurface *this, RectangleStruct *, Point2D *, Point2D *, ColorStruct *, ColorStruct *, float, int);
+  bool (__thiscall *DrawGradientLine)(DSurface *this, RectangleStruct *pRect, Point2D *pStart, Point2D *pEnd, ColorStruct *pStartColor, ColorStruct *pEndColor, float Step, int Color);
   bool (__thiscall *CanBlit)(DSurface *this);
 };
 
@@ -11581,23 +11581,23 @@ struct WWMouseClass
 struct WWMouseClass_vtbl
 {
   void (__thiscall *~WWMouseClass)(WWMouseClass *this);
-  void (__thiscall *Draw)(WWMouseClass *this, Point2D *, SHPStruct *, int);
+  void (__thiscall *Draw)(WWMouseClass *this, Point2D *pCoords, SHPStruct *pImage, int IdxFrame);
   bool (__thiscall *IsRefCountNegative)(WWMouseClass *this);
   void (__thiscall *HideCursor)(WWMouseClass *this);
   void (__thiscall *ShowCursor)(WWMouseClass *this);
   void (__thiscall *ReleaseMouse)(WWMouseClass *this);
   void (__thiscall *CaptureMouse)(WWMouseClass *this);
   bool (__thiscall *IsMouseCaptured)(WWMouseClass *this);
-  void (__thiscall *HideCursorAgain)(WWMouseClass *this, RectangleStruct);
+  void (__thiscall *HideCursorAgain)(WWMouseClass *this, RectangleStruct Useless);
   void (__thiscall *ShowCursorAgain)(WWMouseClass *this);
   int (__thiscall *GetRefCount)(WWMouseClass *this);
   int (__thiscall *GetX)(WWMouseClass *this);
   int (__thiscall *GetY)(WWMouseClass *this);
-  Point2D *(__thiscall *GetCoords)(WWMouseClass *this, Point2D *);
-  void (__thiscall *SetCoords)(WWMouseClass *this, Point2D);
-  void (__thiscall *func_3C)(WWMouseClass *this, DSurface *, bool);
-  void (__thiscall *func_40)(WWMouseClass *this, DSurface *, bool);
-  void (__thiscall *func_44)(WWMouseClass *this, int *, int *);
+  Point2D *(__thiscall *GetCoords)(WWMouseClass *this, Point2D *pBuffer);
+  void (__thiscall *SetCoords)(WWMouseClass *this, Point2D Buffer);
+  void (__thiscall *func_3C)(WWMouseClass *this, DSurface *pSurface, bool bUnk);
+  void (__thiscall *func_40)(WWMouseClass *this, DSurface *pSurface, bool bUnk);
+  void (__thiscall *func_44)(WWMouseClass *this, int *pArg1, int *pArg2);
 };
 
 class TextLabelClass : GadgetClass
@@ -11617,7 +11617,7 @@ class TextLabelClass : GadgetClass
 
 struct TextLabelClass_vtbl : GadgetClass_vtbl
 {
-  void (__thiscall *SetText)(TextLabelClass *this, wchar_t *);
+  void (__thiscall *SetText)(TextLabelClass *this, wchar_t *pText);
 };
 
 struct VectorBase_ObjectClass_PTR : VectorBase_PTR
@@ -11634,7 +11634,7 @@ class LayerClass : DynamicVectorClass_ObjectClass_PTR {};
 
 struct LayerClass_vtbl : DynamicVectorClass_ObjectClass_PTR_vtbl
 {
-  bool (__thiscall *AddObject)(LayerClass *this, ObjectClass *, bool);
+  bool (__thiscall *AddObject)(LayerClass *this, ObjectClass *pObject, bool Sorted);
   void (__thiscall *RemoveAll)(LayerClass *this);
   void (__thiscall *vt_entry_24)(LayerClass *this);
 };
@@ -11643,7 +11643,7 @@ class LogicClass : LayerClass {};
 
 struct LogicClass_vtbl : LayerClass_vtbl
 {
-  void (__thiscall *PointerGotInvalid)(LogicClass *this, AbstractClass *, bool);
+  void (__thiscall *PointerGotInvalid)(LogicClass *this, AbstractClass *pInvalid, bool Removed);
 };
 
 struct FixedString_32_A_char
@@ -11702,10 +11702,10 @@ struct LoadOptionsClass
 struct LoadOptionsClass_vtbl
 {
   void (__thiscall *~LoadOptionsClass)(LoadOptionsClass *this);
-  bool (__thiscall *LoadMission)(LoadOptionsClass *this, char *);
-  bool (__thiscall *SaveMission)(LoadOptionsClass *this, char *, wchar_t *);
-  bool (__thiscall *DeleteMission)(LoadOptionsClass *this, char *);
-  bool (__thiscall *GetFileEntry)(LoadOptionsClass *this, FileEntryClass *, Tag_WIN32_FIND_DATAA *);
+  bool (__thiscall *LoadMission)(LoadOptionsClass *this, char *lpMultiByteStr);
+  bool (__thiscall *SaveMission)(LoadOptionsClass *this, char *lpMultiByteStr, wchar_t *pSource);
+  bool (__thiscall *DeleteMission)(LoadOptionsClass *this, char *lpFileName);
+  bool (__thiscall *GetFileEntry)(LoadOptionsClass *this, FileEntryClass *pFileEntry, Tag_WIN32_FIND_DATAA *pFindData);
   wchar_t *(__thiscall *GetUIString_Load)(LoadOptionsClass *this);
   wchar_t *(__thiscall *GetUIString_Save)(LoadOptionsClass *this);
   wchar_t *(__thiscall *GetUIString_Delete)(LoadOptionsClass *this);
@@ -11841,11 +11841,11 @@ struct ToolTipManager
 struct ToolTipManager_vtbl
 {
   void (__thiscall *~ToolTipManager)(ToolTipManager *this);
-  bool (__thiscall *Update)(ToolTipManager *this, ToolTipManagerData *);
-  void (__thiscall *MarkToRedraw)(ToolTipManager *this, ToolTipManagerData *);
-  void (__thiscall *Draw)(ToolTipManager *this, bool);
-  void (__thiscall *DrawTextA)(ToolTipManager *this, ToolTipManagerData *);
-  wchar_t *(__thiscall *GetToolTipText)(ToolTipManager *this, unsigned int);
+  bool (__thiscall *Update)(ToolTipManager *this, ToolTipManagerData *pFrom);
+  void (__thiscall *MarkToRedraw)(ToolTipManager *this, ToolTipManagerData *pFrom);
+  void (__thiscall *Draw)(ToolTipManager *this, bool OnSidebar);
+  void (__thiscall *DrawTextA)(ToolTipManager *this, ToolTipManagerData *pData);
+  wchar_t *(__thiscall *GetToolTipText)(ToolTipManager *this, unsigned int ID);
 };
 
 struct CCToolTip : ToolTipManager
@@ -11857,11 +11857,11 @@ struct CCToolTip : ToolTipManager
 struct CCToolTip_vtbl
 {
   void (__thiscall *~CCToolTip)(CCToolTip *this);
-  bool (__thiscall *Update)(CCToolTip *this, ToolTipManagerData *);
-  void (__thiscall *MarkToRedraw)(CCToolTip *this, ToolTipManagerData *);
-  void (__thiscall *Draw)(CCToolTip *this, bool);
-  void (__thiscall *DrawTextA)(CCToolTip *this, ToolTipManagerData *);
-  wchar_t *(__thiscall *GetToolTipText)(CCToolTip *this, unsigned int);
+  bool (__thiscall *Update)(CCToolTip *this, ToolTipManagerData *pHeight);
+  void (__thiscall *MarkToRedraw)(CCToolTip *this, ToolTipManagerData *pFrom);
+  void (__thiscall *Draw)(CCToolTip *this, bool OnSidebar);
+  void (__thiscall *DrawTextA)(CCToolTip *this, ToolTipManagerData *pData);
+  wchar_t *(__thiscall *GetToolTipText)(CCToolTip *this, unsigned int ID);
 };
 
 struct VectorBase_ThemeClass_PTR : VectorBase_PTR
@@ -12258,7 +12258,7 @@ class ControlClass : GadgetClass
 
 struct ControlClass_vtbl : GadgetClass_vtbl
 {
-  void (__thiscall *MakePeer)(ControlClass *this, GadgetClass *);
+  void (__thiscall *MakePeer)(ControlClass *this, GadgetClass *pGadget);
 };
 
 class ToggleClass : ControlClass
@@ -12287,7 +12287,7 @@ class ShapeButtonClass : ToggleClass
 
 struct ShapeButtonClass_vtbl : ToggleClass_vtbl
 {
-  void (__thiscall *SetShape)(ShapeButtonClass *this, SHPStruct*, int, int);
+  void (__thiscall *SetShape)(ShapeButtonClass *this, SHPStruct*pSHP, int Width, int Height);
 };
 
 class EditClass : ControlClass
@@ -12303,11 +12303,11 @@ class EditClass : ControlClass
 
 struct EditClass_vtbl : ControlClass_vtbl
 {
-  void (__thiscall *SetText)(EditClass *this, wchar_t*, int);
+  void (__thiscall *SetText)(EditClass *this, wchar_t*lpStr, int MaxLength);
   wchar_t *(__thiscall *GetText)(EditClass *this);
   void (__thiscall *DrawBackground)(EditClass *this);
-  void (__thiscall *DrawText)(EditClass *this, wchar_t*);
-  bool (__thiscall *HandleKeyInput)(EditClass *this, int);
+  void (__thiscall *DrawText)(EditClass *this, wchar_t*pString);
+  bool (__thiscall *HandleKeyInput)(EditClass *this, int C);
 };
 
 class GaugeClass : ControlClass
@@ -12322,14 +12322,14 @@ class GaugeClass : ControlClass
 
 struct GaugeClass_vtbl : ControlClass_vtbl
 {
-  bool (__thiscall *SetMaximum)(GaugeClass *this, int);
-  bool (__thiscall *SetValue)(GaugeClass *this, int);
+  bool (__thiscall *SetMaximum)(GaugeClass *this, int Value);
+  bool (__thiscall *SetValue)(GaugeClass *this, int Value);
   int (__thiscall *GetValue)(GaugeClass *this);
-  void (__thiscall *SetThumb)(GaugeClass *this, bool);
+  void (__thiscall *SetThumb)(GaugeClass *this, bool Value);
   int (__thiscall *GetThumbPixel)(GaugeClass *this);
   void (__thiscall *DrawThumb)(GaugeClass *this);
-  int (__thiscall *PixelToValue)(GaugeClass *this, int);
-  int (__thiscall *ValueToPixel)(GaugeClass *this, int);
+  int (__thiscall *PixelToValue)(GaugeClass *this, int Pixel);
+  int (__thiscall *ValueToPixel)(GaugeClass *this, int Value);
 };
 
 class SliderClass : GaugeClass
@@ -12344,9 +12344,9 @@ class SliderClass : GaugeClass
 
 struct SliderClass_vtbl : GaugeClass_vtbl
 {
-  int (__thiscall *vt_entry_A8)(SliderClass *this, int);
-  bool (__thiscall *Bump)(SliderClass *this, bool);
-  bool (__thiscall *Step)(SliderClass *this, bool);
+  int (__thiscall *vt_entry_A8)(SliderClass *this, int Value);
+  bool (__thiscall *Bump)(SliderClass *this, bool Minus);
+  bool (__thiscall *Step)(SliderClass *this, bool Minus);
 };
 
 class ListClass : ControlClass
@@ -12366,23 +12366,23 @@ class ListClass : ControlClass
 
 struct ListClass_vtbl : ControlClass_vtbl
 {
-  int (__thiscall *AddItem)(ListClass *this, char*);
+  int (__thiscall *AddItem)(ListClass *this, char*lpStr);
   bool (__thiscall *EnableScrollBar)(ListClass *this);
-  bool (__thiscall *Bump)(ListClass *this, bool);
+  bool (__thiscall *Bump)(ListClass *this, bool Minus);
   int (__thiscall *GetCount)(ListClass *this);
   int (__thiscall *GetCurrentIndex)(ListClass *this);
   char *(__thiscall *GetCurrentItem)(ListClass *this);
-  char *(__thiscall *GetItem)(ListClass *this, int);
-  int (__thiscall *StepSelectedIndex)(ListClass *this, int);
-  void (__thiscall *RemoveItem)(ListClass *this, char*);
-  void (__thiscall *RemoveItemAt)(ListClass *this, int);
+  char *(__thiscall *GetItem)(ListClass *this, int Index);
+  int (__thiscall *StepSelectedIndex)(ListClass *this, int Step);
+  void (__thiscall *RemoveItem)(ListClass *this, char*lpStr);
+  void (__thiscall *RemoveItemAt)(ListClass *this, int String2);
   bool (__thiscall *DisableScrollBar)(ListClass *this);
-  void (__thiscall *SetSelectedIndex)(ListClass *this, int);
-  void (__thiscall *SetSelectedItem)(ListClass *this, char*);
-  void (__thiscall *SetTabs)(ListClass *this, void*);
-  bool (__thiscall *SetViewIndex)(ListClass *this, int);
-  bool (__thiscall *Step)(ListClass *this, bool);
-  void (__thiscall *DrawEntry)(ListClass *this, int, int, int, int, bool);
+  void (__thiscall *SetSelectedIndex)(ListClass *this, int String2);
+  void (__thiscall *SetSelectedItem)(ListClass *this, char*lpStr);
+  void (__thiscall *SetTabs)(ListClass *this, void*pTabs);
+  bool (__thiscall *SetViewIndex)(ListClass *this, int Index);
+  bool (__thiscall *Step)(ListClass *this, bool Minus);
+  void (__thiscall *DrawEntry)(ListClass *this, int Index, int X, int Y, int Width, bool bUnk);
 };
 
 class DropListClass : EditClass
@@ -12395,13 +12395,13 @@ class DropListClass : EditClass
 
 struct DropListClass_vtbl : EditClass_vtbl
 {
-  int (__thiscall *AddItem)(DropListClass *this, wchar_t*);
+  int (__thiscall *AddItem)(DropListClass *this, wchar_t*pSource);
   wchar_t *(__thiscall *CurrentItem)(DropListClass *this);
   int (__thiscall *CurrentIndex)(DropListClass *this);
-  void (__thiscall *SetSelectedItem)(DropListClass *this, wchar_t*);
-  void (__thiscall *SetSelectedIndex)(DropListClass *this, int);
+  void (__thiscall *SetSelectedItem)(DropListClass *this, wchar_t*pString1);
+  void (__thiscall *SetSelectedIndex)(DropListClass *this, int Index);
   int (__thiscall *GetCount)(DropListClass *this);
-  wchar_t *(__thiscall *GetItem)(DropListClass *this, int);
+  wchar_t *(__thiscall *GetItem)(DropListClass *this, int Index);
 };
 
 class TriColorGaugeClass : GaugeClass
@@ -12412,8 +12412,8 @@ class TriColorGaugeClass : GaugeClass
 
 struct TriColorGaugeClass_vtbl : GaugeClass_vtbl
 {
-  bool (__thiscall *SetRedLimit)(TriColorGaugeClass *this, int);
-  bool (__thiscall *SetYellowLimit)(TriColorGaugeClass *this, int);
+  bool (__thiscall *SetRedLimit)(TriColorGaugeClass *this, int Value);
+  bool (__thiscall *SetYellowLimit)(TriColorGaugeClass *this, int Value);
 };
 
 class CheckListClass : ListClass
@@ -12432,8 +12432,8 @@ class ColorListClass : ListClass
 
 struct ColorListClass_vtbl : ListClass_vtbl
 {
-  int (__thiscall *AddNewItem)(ColorListClass *this, char*, int);
-  void (__thiscall *SetSelectedStyle)(ColorListClass *this, int, int);
+  int (__thiscall *AddNewItem)(ColorListClass *this, char*pName, int Index);
+  void (__thiscall *SetSelectedStyle)(ColorListClass *this, int Style, int Color);
 };
 
 class IsometricTileClass : ObjectClass
@@ -13415,7 +13415,7 @@ class FoggedObjectClass : AbstractClass
 
 struct FoggedObjectClass_vtbl : AbstractClass_vtbl
 {
-  CellStruct *(__thiscall *GetCellStruct)(FoggedObjectClass *this, CellStruct *);
+  CellStruct *(__thiscall *GetCellStruct)(FoggedObjectClass *this, CellStruct *pResult);
 };
 
 struct VectorBase_FoggedObjectClass_PTR : VectorBase_PTR
@@ -13638,9 +13638,9 @@ class StaticButtonClass : GadgetClass
 
 struct StaticButtonClass_vtbl : GadgetClass_vtbl
 {
-  void (__thiscall *SetString)(StaticButtonClass *this, wchar_t *, bool);
+  void (__thiscall *SetString)(StaticButtonClass *this, wchar_t *pText, bool bCenter);
   bool (__thiscall *CopySurface)(StaticButtonClass *this);
-  bool (__thiscall *PrintString)(StaticButtonClass *this, wchar_t *);
+  bool (__thiscall *PrintString)(StaticButtonClass *this, wchar_t *pText);
 };
 
 struct DamageGroup
