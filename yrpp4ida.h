@@ -206,6 +206,27 @@ struct AISlotsStruct;
 struct GameModeOptionsClass;
 struct SessionOptionsClass;
 struct IPXAddressClass;
+struct IPXManagerClass;
+struct IPXManagerClass_vtbl;
+struct IPXConnClass;
+struct IPXConnClass_vtbl;
+struct IPXGlobalConnClass;
+struct IPXGlobalConnClass_vtbl;
+struct ConnectionClass;
+struct ConnectionClass_vtbl;
+struct CommBufferClass;
+struct CommBufferClass_vtbl;
+struct ConnManClass;
+struct ConnManClass_vtbl;
+struct WinsockBufferType;
+struct WinsockInterfaceClass;
+struct WinsockInterfaceClass_vtbl;
+struct IPXInterfaceClass;
+struct IPXInterfaceClass_vtbl;
+struct UDPInterfaceClass;
+struct UDPInterfaceClass_vtbl;
+struct DynamicVectorClass_unsigned_char_PTR;
+struct DynamicVectorClass_unsigned_char_PTR_vtbl;
 struct MultiMission;
 struct In_addr_unnamed_type_un_u_b;
 struct In_addr_unnamed_type_un_u_w;
@@ -363,6 +384,22 @@ struct ZoneConnectionTableManager;
 struct SubzoneConnectionTable;
 struct HierarchyConnectionTables;
 struct HierarchyConnectionTableManager;
+struct LoadProgressManager;
+struct LoadProgressManager_vtbl;
+struct ProgressScreenClass;
+struct EvadeClass;
+struct GetCDClass;
+struct VersionClass;
+struct VersionClass_vtbl;
+struct WWMessageBox;
+struct PointerExpiredNotification;
+struct OwnerDrawTooltipBlitState;
+struct BitText;
+struct BitText_vtbl;
+struct CSFLabel;
+struct CSFString;
+struct DirectDrawWrap;
+struct DirectDrawWrap_vtbl;
 
 // TODO STRUCT
 
@@ -3466,6 +3503,14 @@ enum AITriggerConditionComparatorType : unsigned int
 	GreaterOrEqual = 3,
 	Greater = 4,
 	NotEqual = 5
+};
+
+enum CommProtocolType : int
+{
+  CommProtocol_SingleNoComp = 0x0,
+  CommProtocol_SingleEComp = 0x1,
+  CommProtocol_MultiEComp = 0x2,
+  CommProtocol_Count = 0x3,
 };
 
 // TODO ENUM
@@ -13463,7 +13508,7 @@ struct __declspec(align(4)) SessionClass
   unsigned int unknown_08;
   unsigned int unknown_0C;
   unsigned int unknown_10;
-  unsigned int unknown_14;
+  CommProtocolType CommProtocol;
   GameModeOptionsClass Config;
   unsigned int UniqueID;
   char Handle[20];
@@ -13540,7 +13585,7 @@ struct __declspec(align(4)) SessionClass
   unsigned __int8 unknown_23D6;
   unsigned __int16 unknown_23D8;
   unsigned int unknown_23DC[124];
-  IPXAddressClass unknown_25CC;
+  IPXAddressClass GlobalReceiveAddress;
   unsigned __int16 unknown_25D8;
   unsigned int unknown_25DC[140];
   DynamicVectorClass_NodeNameType_PTR unknown_vector_280C;
@@ -13564,7 +13609,7 @@ struct __declspec(align(4)) SessionClass
   DynamicVectorClass_unsigned_int unknown_vector_2914;
   DynamicVectorClass_unsigned_int unknown_vector_292C;
   unsigned int unknown_2944[8];
-  unsigned int unknown_2964;
+  int LatencyFudge;
   unsigned __int8 unknown_2968;
   unsigned __int16 unknown_296A;
   IPXAddressClass unknown_296C;
@@ -13853,3 +13898,479 @@ struct __declspec(align(4)) MouseThreadClass
   unsigned int ThreadID;
 };
 #pragma pack(pop)
+
+struct LoadProgressManager_vtbl
+{
+  void (__thiscall *dtor)(LoadProgressManager *this);
+};
+
+struct __declspec(align(4)) LoadProgressManager
+{
+  LoadProgressManager_vtbl *__vftable;
+  unsigned int field_4;
+  unsigned int field_8;
+  RectangleStruct TitleBarRect;
+  RectangleStruct LoadBarSHPRect;
+  RectangleStruct LoadScreenSHPRect;
+  wchar_t *LoadMessage;
+  wchar_t *LoadBriefing;
+  SHPStruct *TitleBarSHP;
+  SHPStruct *LoadScreenSHP;
+  SHPStruct *LoadBarSHP;
+  bool TitleBarSHP_loaded;
+  bool LoadScreenSHP_loaded;
+  bool LoadBarSHP_loaded;
+  unsigned int field_54;
+  unsigned int field_58;
+  unsigned int field_5C;
+  DSurface *ProgressSurface;
+};
+
+struct __declspec(align(4)) ProgressScreenClass
+{
+  int field_0;
+  LoadProgressManager *LoadManager;
+  double PlayerProgresses[8];
+  int MainProgress;
+  int field_4C;
+  void *PlayerStartSpot;
+  SHPStruct *someSHP;
+  char field_58;
+  char field_59;
+  char field_5A;
+  char field_5B;
+  int field_5C;
+  char field_60;
+  unsigned __int8 TotalPlayers;
+  char field_62;
+  char field_63;
+  HWND__ *hWnd;
+  int field_68;
+  int field_6C;
+  char field_70;
+  char field_71;
+  char field_72;
+  char field_73;
+  int field_74;
+  int field_78;
+  int field_7C;
+  int PlayerSide;
+};
+
+struct __declspec(align(4)) EvadeClass
+{
+  char CarryOverGlobals[50];
+  int CarryOverMoney;
+  int CarryOverTimer;
+  int CarryOverDifficulty;
+  short CarryOverStage;
+};
+
+struct __declspec(align(4)) GetCDClass
+{
+  int Drives[26];
+  int Count;
+  int unknown_6C;
+};
+
+struct VersionClass_vtbl
+{
+  void (__thiscall *dtor)(VersionClass *this);
+};
+
+struct __declspec(align(4)) VersionClass
+{
+  VersionClass_vtbl *__vftable;
+  unsigned int Version;
+  unsigned __int16 MajorVer;
+  unsigned __int16 MinorVer;
+  char VersionName[30];
+  char VersionText[16];
+  unsigned int MinClipVer;
+  unsigned int MaxClipVer;
+  unsigned int VersionInit : 1;
+  unsigned int MajorInit : 1;
+  unsigned int MinorInit : 1;
+  unsigned int TextInit : 1;
+};
+
+struct __declspec(align(4)) WWMessageBox
+{
+  wchar_t *Captain;
+};
+
+struct __declspec(align(4)) PointerExpiredNotification
+{
+  DynamicVectorClass_AbstractClass_PTR Array;
+};
+
+struct __declspec(align(4)) OwnerDrawTooltipBlitState
+{
+  RectangleStruct Rect;
+  Surface *BackingSurface;
+  wchar_t Text[128];
+  int Active;
+  int BackgroundRestored;
+  HWND__ *OwnerHwnd;
+};
+
+struct BitText_vtbl
+{
+  void (__thiscall *dtor)(BitText *this);
+};
+
+struct __declspec(align(4)) BitText
+{
+  BitText_vtbl *__vftable;
+};
+
+struct __declspec(align(4)) CSFLabel
+{
+  char Name[0x20];
+  int NumValues;
+  int FirstValueIndex;
+};
+
+struct __declspec(align(4)) CSFString
+{
+  CSFString *PreviousEntry;
+  wchar_t Text[102];
+};
+
+struct __declspec(align(4)) DirectDrawWrap
+{
+  DirectDrawWrap_vtbl *__vftable;
+};
+
+struct DirectDrawWrap_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(DirectDrawWrap *this, unsigned int riid, void **ppvObj);
+  unsigned long (__stdcall *AddRef)(DirectDrawWrap *this);
+  unsigned long (__stdcall *Release)(DirectDrawWrap *this);
+};
+
+struct __declspec(align(4)) CommBufferClass
+{
+  CommBufferClass_vtbl *__vftable;
+  int OutQueueCapacity;
+  int InQueueCapacity;
+  int PacketSize;
+  int MaxOverhead;
+  int field_14;
+  int field_18;
+  int field_1C;
+  int field_20;
+  void *OutQueue;
+  int field_28;
+  int field_2C;
+  int *OutQueueIndex;
+  void *InQueue;
+  int field_38;
+  int field_3C;
+  int *InQueueIndex;
+  int field_44;
+  int field_48;
+  int field_4C;
+  int field_50;
+  int field_54;
+};
+
+struct CommBufferClass_vtbl
+{
+  void (__thiscall *Destructor)(CommBufferClass *this);
+};
+
+struct __declspec(align(4)) ConnectionClass
+{
+  ConnectionClass_vtbl *__vftable;
+  CommBufferClass *Buffer;
+  int Resends;
+  int Lost;
+  int PercentLost;
+  int field_14;
+  int field_18;
+  int PacketBufferSize;
+  void *PacketBuffer;
+  int field_24;
+  int RetryDelta;
+  int MaxRetries;
+  int Timeout;
+  int field_34;
+  int field_38;
+  int field_3C;
+  int field_40;
+  int field_44;
+  int field_48;
+};
+
+struct ConnectionClass_vtbl
+{
+  void (__thiscall *Destructor)(ConnectionClass *this, unsigned int flags);
+  int (__thiscall *Reset)(ConnectionClass *this);
+  int (__thiscall *SendPacket)(ConnectionClass *this, const void *pBuf, int Length, int a4, char a5);
+  int (__thiscall *ReceivePacket)(ConnectionClass *this, void *pBuf, int Length);
+  int (__thiscall *fn_04)(ConnectionClass *this);
+  int (__thiscall *fn_05)(ConnectionClass *this);
+  int (__thiscall *fn_06)(ConnectionClass *this);
+  int (__thiscall *ServiceSendQueue)(ConnectionClass *this);
+  int (__thiscall *fn_08)(ConnectionClass *this);
+};
+
+struct __declspec(align(4)) IPXConnClass : ConnectionClass
+{
+  IPXAddressClass Address;
+  int field_58;
+  int field_5C;
+  int field_60;
+  int HouseIndex;
+  wchar_t Name[1];
+};
+
+struct IPXConnClass_vtbl : ConnectionClass_vtbl
+{
+  int (__thiscall *Send)(IPXConnClass *this, int a2, int a3, int a4, int a5, int a6, int a7);
+};
+
+struct __declspec(align(4)) IPXGlobalConnClass : IPXConnClass
+{
+  int field_6C;
+  int field_70;
+  int field_74;
+  int field_78;
+  int field_7C;
+  int field_80;
+  int field_84;
+  int field_88;
+  int field_8C;
+  int field_90;
+  int field_94;
+  int field_98;
+  int field_9C;
+  int field_A0;
+  int field_A4;
+  int field_A8;
+  int field_AC;
+  int field_B0;
+  int field_B4;
+  int field_B8;
+  int field_BC;
+  int field_C0;
+  int field_C4;
+  int *Addresses;
+  int **Connections;
+  int field_D4;
+};
+
+struct IPXGlobalConnClass_vtbl : IPXConnClass_vtbl
+{
+  int (__thiscall *fn_10)(IPXGlobalConnClass *this);
+  int (__thiscall *fn_11)(IPXGlobalConnClass *this);
+  int (__thiscall *SendGlobalAck)(IPXGlobalConnClass *this);
+  int (__thiscall *fn_13)(IPXGlobalConnClass *this);
+  int (__thiscall *fn_14)(IPXGlobalConnClass *this);
+  int (__thiscall *fn_15)(IPXGlobalConnClass *this);
+  int (__thiscall *fn_16)(IPXGlobalConnClass *this);
+  int (__thiscall *StripOldPackets)(IPXGlobalConnClass *this);
+};
+
+struct __declspec(align(4)) ConnManClass
+{
+  ConnManClass_vtbl *__vftable;
+};
+
+struct ConnManClass_vtbl
+{
+  void (__thiscall *Destructor)(ConnManClass *this, unsigned int flags);
+  int (__thiscall *fn_01)(ConnManClass *this);
+  int (__thiscall *fn_02)(ConnManClass *this);
+  int (__thiscall *fn_03)(ConnManClass *this);
+  int (__thiscall *fn_04)(ConnManClass *this);
+  int (__thiscall *fn_05)(ConnManClass *this);
+  int (__thiscall *fn_06)(ConnManClass *this);
+  int (__thiscall *fn_07)(ConnManClass *this);
+  int (__thiscall *fn_08)(ConnManClass *this);
+  int (__thiscall *fn_09)(ConnManClass *this);
+  int (__thiscall *fn_10)(ConnManClass *this);
+  int (__thiscall *fn_11)(ConnManClass *this);
+  int (__thiscall *fn_12)(ConnManClass *this);
+  int (__thiscall *fn_13)(ConnManClass *this);
+  int (__thiscall *fn_14)(ConnManClass *this);
+  int (__thiscall *fn_15)(ConnManClass *this);
+};
+
+struct __declspec(align(4)) IPXManagerClass
+{
+  IPXManagerClass_vtbl *__vftable;
+  unsigned __int8 IPXStatus;
+  unsigned __int8 Listening;
+  unsigned int Glb_MaxPacketLen;
+  int Glb_NumPackets;
+  unsigned int Pvt_MaxPacketLen;
+  unsigned int Pvt_NumPackets;
+  unsigned int __Ext_MaxPacketLen;
+  unsigned int __Ext_MaxPackets;
+  unsigned __int16 ProductID;
+  unsigned __int16 Socket;
+  unsigned int ConnectionNum;
+  IPXConnClass *Connection[7];
+  unsigned int NumConnections;
+  IPXGlobalConnClass *__GlobalChannel;
+  IPXGlobalConnClass *__IPXGlobalConn2;
+  ConnectionClass *__MulticastConnection;
+  unsigned int CurConnection;
+  unsigned int RetryDelta;
+  unsigned int MaxRetries;
+  unsigned int Timeout;
+  int __Global1RetryDelta;
+  int __Global1Timing;
+  int __Global1RetryTimeout;
+  unsigned int unknown_70;
+  char field_74;
+  char field_75;
+  char field_76;
+  char field_77;
+  int field_78;
+  char field_7C;
+  char field_7D;
+  char field_7E;
+  char field_7F;
+  int field_80;
+  int field_84;
+  int field_88;
+  int field_8C;
+  int field_90;
+  int field_94;
+  int field_98;
+  int field_9C;
+  int field_A0;
+  unsigned int SendOverflows;
+  unsigned int ReceiveOverflows;
+  unsigned int BadConnection;
+};
+
+struct IPXManagerClass_vtbl
+{
+  void (__thiscall *Destructor)(IPXManagerClass *this, unsigned int flags);
+  void (__thiscall *Service)(IPXManagerClass *this);
+  int (__thiscall *Send)(IPXManagerClass *this, void *pBuf, int Length, int a4, int HouseIndex);
+  int (__thiscall *Receive)(IPXManagerClass *this, int a2, int a3, int *pOut);
+  int (__thiscall *GetNumConnections)(IPXManagerClass *this);
+  int (__thiscall *GetHouseIndex)(IPXManagerClass *this, int ConnIndex);
+  int (__thiscall *GetConnectionIndex)(IPXManagerClass *this, int HouseIndex);
+  int (__thiscall *GetGlobalChannelStat0)(IPXManagerClass *this);
+  int (__thiscall *GetGlobalChannelStat1)(IPXManagerClass *this);
+  int (__thiscall *GetMaxStat0)(IPXManagerClass *this, int HouseIndex);
+  int (__thiscall *GetMaxStat1)(IPXManagerClass *this, int HouseIndex);
+  int (__thiscall *FlushBuffers)(IPXManagerClass *this, char bDiscard);
+  unsigned int (__thiscall *ResponseTime)(IPXManagerClass *this);
+  ConnectionClass *(__thiscall *SetTiming)(IPXManagerClass *this, int RetryDelta, int MaxRetries, int Timeout, bool a5);
+  int (__thiscall *SetGlobalChannelTiming)(IPXManagerClass *this, int a2, int a3, int a4);
+  int (__thiscall *SetConnectionTiming)(IPXManagerClass *this, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *SaveGlobalChannelTiming)(IPXManagerClass *this);
+  int (__thiscall *RestoreGlobalChannelTiming)(IPXManagerClass *this);
+  int (__thiscall *SetGlobalConn2Timing)(IPXManagerClass *this, int a2, int a3, int a4);
+  int (__thiscall *GetConnType)(IPXManagerClass *this, int a2);
+  int (__thiscall *GetGlobalConn2Stat0)(IPXManagerClass *this);
+  int (__thiscall *GetGlobalConn2Stat1)(IPXManagerClass *this);
+  int (__thiscall *fn_22)(IPXManagerClass *this);
+  void (__thiscall *UpdateMultiplayerStats)(IPXManagerClass *this);
+  void (__thiscall *fn_24)(IPXManagerClass *this);
+};
+
+struct __declspec(align(4)) WinsockBufferType
+{
+  char Header[16];
+  int BufferLen;
+  char IsBroadcast;
+  unsigned __int8 InUse;
+  unsigned __int8 Allocated;
+  char Bool1;
+  char Bool2;
+  __int16 SrcPort;
+  int CRC;
+  char Buffer[640];
+};
+
+struct __declspec(align(4)) WinsockInterfaceClass
+{
+  WinsockInterfaceClass_vtbl *__vftable;
+  unsigned int MaxPacketSize;
+  DynamicVectorClass_unsigned_char_PTR InBuffers;
+  DynamicVectorClass_unsigned_char_PTR OutBuffers;
+  DynamicVectorClass_unsigned_char_PTR AltOutBuffers;
+  WinsockBufferType StaticInBuffer[128];
+  WinsockBufferType StaticOutBuffer[128];
+  WinsockBufferType StaticAltOutBuffer[128];
+  unsigned int StaticInBufferPos;
+  unsigned int StaticOutBufferPos;
+  int StaticAltOutBufferPos;
+  unsigned int StaticInBuffersInUse;
+  unsigned int StaticOutBuffersInUse;
+  unsigned int StaticAltOutBuffersInUse;
+  unsigned __int8 WinsockInitialised;
+  int Socket;
+  unsigned int AlternateSocket;
+  char ReceiveBuffer[640];
+  int field_3F2F4;
+  int NetCard;
+};
+
+struct WinsockInterfaceClass_vtbl
+{
+  void (__thiscall *Destructor)(WinsockInterfaceClass *this, unsigned int flags);
+  int (__thiscall *fn_01)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_02)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_03)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_04)(WinsockInterfaceClass *this);
+  void (__thiscall *DiscardInBuffers)(WinsockInterfaceClass *this);
+  void (__thiscall *DiscardOutBuffers)(WinsockInterfaceClass *this);
+  bool (__thiscall *StartListening)(WinsockInterfaceClass *this);
+  void (__thiscall *StopListening)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_09)(WinsockInterfaceClass *this);
+  int (__thiscall *SetSocketBuffers)(WinsockInterfaceClass *this, int a2, int a3);
+  int (__thiscall *ParseIPAddress)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_12)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_13)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_14)(WinsockInterfaceClass *this);
+  int (__thiscall *GetLocalHostAddress)(WinsockInterfaceClass *this);
+  int (__thiscall *FlushSendBuffer)(WinsockInterfaceClass *this);
+  int (__thiscall *GetHostName)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_18)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_19)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_20)(WinsockInterfaceClass *this);
+  int (__thiscall *fn_21)(WinsockInterfaceClass *this);
+  int (__thiscall *CheckCRC)(WinsockInterfaceClass *this);
+};
+
+struct __declspec(align(4)) IPXInterfaceClass : WinsockInterfaceClass
+{
+  __int16 Port;
+  int SpareSockets[8];
+};
+
+struct IPXInterfaceClass_vtbl : WinsockInterfaceClass_vtbl {};
+
+struct __declspec(align(4)) UDPInterfaceClass : IPXInterfaceClass
+{
+  __int16 SpareSocketPorts[8];
+  unsigned int NextSpareSocket;
+  unsigned int Socket2;
+  DynamicVectorClass_unsigned_char_PTR BroadcastAddresses;
+  __int16 words3F350[256];
+  DynamicVectorClass_unsigned_char_PTR LocalAddresses;
+  unsigned int NextAddressPort;
+  int Addresses[16];
+  __int16 Ports[16];
+};
+
+struct UDPInterfaceClass_vtbl : IPXInterfaceClass_vtbl
+{
+  bool (__thiscall *OpenSocket)(UDPInterfaceClass *this, int Port);
+  int (__thiscall *fn_24)(UDPInterfaceClass *this);
+  int (__thiscall *fn_25)(UDPInterfaceClass *this);
+  int (__thiscall *OpenSpareSocket)(UDPInterfaceClass *this);
+  int (__thiscall *CloseSpareSocket)(UDPInterfaceClass *this);
+  int (__thiscall *CloseSpareSocket2)(UDPInterfaceClass *this);
+  int (__thiscall *fn_29)(UDPInterfaceClass *this);
+  int (__thiscall *MarkAddressUnreachable)(UDPInterfaceClass *this);
+};
