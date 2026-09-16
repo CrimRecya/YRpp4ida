@@ -259,6 +259,9 @@ struct IPiggyback_vtbl; // XXX Adjacent to LocoVTable
 struct FixedString_32_A_char;
 struct FixedString_128_A_wchar_t;
 struct FixedString_64_A_wchar_t;
+struct StringClass;
+struct WideStringClass;
+struct WideWstring;
 struct FileEntryClass;
 struct LoadOptionsClass;
 struct LoadOptionsClass_vtbl; // 0x7ED2E4
@@ -400,6 +403,20 @@ struct CSFLabel;
 struct CSFString;
 struct DirectDrawWrap;
 struct DirectDrawWrap_vtbl;
+struct RECT;
+struct OwnerDrawDialogElement;
+struct OwnerDrawLayoutSize;
+struct OwnerDrawHWNDVector;
+struct OwnerDrawWindowMessageKey;
+struct OwnerDrawTooltipRequest;
+struct WWUIIntArray;
+struct WWUIListBoxCell;
+struct WWUIListBoxColumn;
+struct WWUIListBoxColumnArray;
+struct WWUIListBoxTextEntry;
+struct WWUIComboBoxItem;
+struct WWMovieHandle;
+struct WWMovieHandle_vtbl;
 
 // TODO STRUCT
 
@@ -14373,4 +14390,212 @@ struct UDPInterfaceClass_vtbl : IPXInterfaceClass_vtbl
   int (__thiscall *CloseSpareSocket2)(UDPInterfaceClass *this);
   int (__thiscall *fn_29)(UDPInterfaceClass *this);
   int (__thiscall *MarkAddressUnreachable)(UDPInterfaceClass *this);
+};
+
+struct StringClass
+{
+  char *Buffer;
+};
+
+struct WideStringClass
+{
+  wchar_t *Buffer;
+};
+
+typedef void *HWND;
+typedef unsigned int UINT;
+typedef unsigned int WPARAM;
+typedef int LPARAM;
+typedef unsigned long COLORREF;
+typedef int (__stdcall *WNDPROC)(void *hWnd, unsigned int Msg, unsigned int wParam, int lParam);
+
+struct RECT
+{
+  int left;
+  int top;
+  int right;
+  int bottom;
+};
+
+struct WideWstring
+{
+  wchar_t *Buffer;
+};
+
+struct OwnerDrawLayoutSize
+{
+  int Width;
+  int Height;
+};
+
+struct OwnerDrawHWNDVector
+{
+  int Count;
+  int Capacity;
+  HWND *Items;
+};
+
+struct OwnerDrawWindowMessageKey
+{
+  UINT Message;
+  HWND Hwnd;
+};
+
+struct OwnerDrawTooltipRequest
+{
+  HWND ControlHwnd;
+  LPARAM HitCode;
+  WideWstring Text;
+};
+
+struct WWUIIntArray
+{
+  int Count;
+  int Capacity;
+  int *Items;
+};
+
+struct WWUIListBoxCell
+{
+  int Format;
+  WideWstring PrimaryText;
+  WideWstring SecondaryText;
+  COLORREF TextColor;
+  Surface *Image;
+  int Value;
+};
+
+struct WWUIListBoxColumn
+{
+  int X;
+  int Width;
+  int CellCount;
+  int CellCapacity;
+  WWUIListBoxCell *Cells;
+};
+
+struct WWUIListBoxColumnArray
+{
+  int Count;
+  int Capacity;
+  WWUIListBoxColumn *Items;
+};
+
+struct WWUIListBoxTextEntry
+{
+  WWUIListBoxTextEntry *Next;
+  int ItemData;
+  wchar_t *Text;
+  int IsWide;
+};
+
+struct WWUIComboBoxItem
+{
+  WWUIComboBoxItem *Next;
+  int ItemData;
+  wchar_t *Text;
+  int IsWideText;
+};
+
+struct WWMovieHandle
+{
+  WWMovieHandle_vtbl *__vftable;
+  bool State;
+  char Padding[3];
+  int Width;
+  int Height;
+  void *Player;
+};
+
+struct WWMovieHandle_vtbl
+{
+  void (__thiscall *Destructor)(WWMovieHandle *this, int deleting);
+  bool (__thiscall *AdvanceFrame)(WWMovieHandle *this);
+  bool (__thiscall *Waiting)(WWMovieHandle *this);
+  void (__thiscall *Pause)(WWMovieHandle *this, int pause);
+  void (__thiscall *Stop)(WWMovieHandle *this);
+  bool (__thiscall *FramesLeft)(WWMovieHandle *this);
+  void (__thiscall *SetPosition)(WWMovieHandle *this, int x, int y);
+  void (__thiscall *SeekToFrame)(WWMovieHandle *this, int frame);
+  void (__thiscall *InitSubtitles)(WWMovieHandle *this);
+  int (__thiscall *Timing)(WWMovieHandle *this);
+  void (__thiscall *Blit)(WWMovieHandle *this);
+};
+
+struct OwnerDrawDialogElement
+{
+  int EnumParam;
+  char TypeSpecific_004[12];
+  Surface *CacheSurface;
+  Surface *ControlImage;
+  Surface *StateImageSurface;
+  int ComboBoxHeightInitialized;
+  int NeedsControlImage;
+  LPARAM Unknown_024;
+  wchar_t *TextBuffer;
+  int HasText;
+  int NewEditAsciiOnly;
+  void *SubItemTextListHead;
+  int HasFocus;
+  WideWstring *NewEditText;
+  int NewEditCaretIndex;
+  int EditTextScrollStart;
+  int NewEditTextLimit;
+  int NewEditCaretBlinkState;
+  wchar_t *NewEditRejectChars;
+  int NewEditStyleFlags;
+  WWMovieHandle *StaticMovieHandle;
+  int StaticLoopMovie;
+  void *StaticMovieAuxHandle;
+  void *Font;
+  int ControlType;
+  int DialogID;
+  int StaticDrawMode;
+  ConvertClass *StaticShapeDrawer;
+  SHPStruct *StaticShape;
+  int StaticShapeFlags;
+  int StaticTextRevealCount;
+  int StaticTextRevealDelay;
+  int StaticTextRevealStep;
+  int StaticColorAdjust;
+  int StaticSoundIndex;
+  int StaticFrameCount;
+  int StaticCurrentFrame;
+  int StaticLastFrameTick;
+  int StaticFrameDelayMs;
+  HWND StaticFrameNotifyHwnd;
+  bool StaticAnimationRunning;
+  char Unknown_0A9[3];
+  int StaticTextFlags;
+  int LayoutBand;
+  bool StaticFillBackground;
+  char Unknown_0B5[3];
+  COLORREF StaticFillColor;
+  bool SkipDraw;
+  bool HasOpenAnimation;
+  bool HasFadeAnimation;
+  bool Unknown_0BF;
+  int TooltipVariant;
+  bool ButtonTimerActive;
+  bool ButtonAlternateFrame;
+  char Unknown_0C6[2];
+  int Alpha;
+  char TypeSpecific_0CC[4];
+  int ComboBoxMaxVisibleDropItems;
+  bool HasControlHwnd;
+  bool HasTopPanelAnimation;
+  bool HasButtonAnimation;
+  bool HasMainScreenAnimation;
+  bool FlagD8;
+  bool CheckboxUseExtendedArt;
+  bool CheckboxArtVariant;
+  bool Unknown_0DB;
+  int ExtraWidth;
+  Surface *DialogBackground;
+  Surface *DialogBackgroundEx;
+  int ProgressBarMin;
+  int ProgressBarMax;
+  int ProgressBarPosition;
+  char TypeSpecific_0F4[20];
+  int Extra[62];
 };
