@@ -73,7 +73,7 @@ struct FrameTimer;
 struct TimerStruct_FrameTimer;
 struct SystemTimer;
 struct TimerStruct_SystemTimer;
-struct StartingTechnoStruct;
+struct HouseClass_StartingTechnoStruct;
 struct BaseNodeClass;
 struct BaseClass;
 struct BaseClass_vtbl; // 0x7E3880
@@ -150,7 +150,7 @@ struct RandomStruct;
 struct ScriptActionNode;
 struct TaskForceEntryStruct;
 struct ControlNode;
-struct SpawnControl;
+struct SpawnManagerClass_SpawnControl;
 struct SlaveManagerClass_SlaveControl;
 struct AITriggerConditionComparator;
 struct PriorityQueueClassNode;
@@ -445,6 +445,12 @@ struct VectorClass_char_PTR;
 struct VectorClass_char_PTR_vtbl; // 0x7E5C24 / 0x7EE0D4
 struct DynamicVectorClass_char_PTR;
 struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5C04 / 0x7EE0B4
+struct VectorBase_char_CPTR;
+struct VectorBase_char_CPTR_vtbl;
+struct VectorClass_char_CPTR;
+struct VectorClass_char_CPTR_vtbl;
+struct DynamicVectorClass_char_CPTR;
+struct DynamicVectorClass_char_CPTR_vtbl;
 struct VectorBase_unsigned_char_PTR;
 struct VectorBase_unsigned_char_PTR_vtbl;
 struct VectorClass_unsigned_char_PTR;
@@ -491,6 +497,12 @@ struct VectorClass_unsigned_short_PTR;
 struct VectorClass_unsigned_short_PTR_vtbl; // 0x7ECD0C / 0x7ED1FC
 struct DynamicVectorClass_unsigned_short_PTR;
 struct DynamicVectorClass_unsigned_short_PTR_vtbl; // 0x7ECCEC / 0x7ED1DC
+struct VectorBase_unsigned_short_CPTR;
+struct VectorBase_unsigned_short_CPTR_vtbl;
+struct VectorClass_unsigned_short_CPTR;
+struct VectorClass_unsigned_short_CPTR_vtbl;
+struct DynamicVectorClass_unsigned_short_CPTR;
+struct DynamicVectorClass_unsigned_short_CPTR_vtbl;
 struct VectorBase_HWND___PTR;
 struct VectorBase_HWND___PTR_vtbl;
 struct VectorClass_HWND___PTR;
@@ -533,6 +545,12 @@ struct VectorClass_MultiMission_PTR;
 struct VectorClass_MultiMission_PTR_vtbl; // 0x7EEF50 / 0x7F1214
 struct DynamicVectorClass_MultiMission_PTR;
 struct DynamicVectorClass_MultiMission_PTR_vtbl; // 0x7EEF70 / 0x7F11F4
+struct VectorBase_MultiMission_CPTR;
+struct VectorBase_MultiMission_CPTR_vtbl;
+struct VectorClass_MultiMission_CPTR;
+struct VectorClass_MultiMission_CPTR_vtbl;
+struct DynamicVectorClass_MultiMission_CPTR;
+struct DynamicVectorClass_MultiMission_CPTR_vtbl;
 struct VectorBase_NodeNameType_PTR;
 struct VectorBase_NodeNameType_PTR_vtbl;
 struct VectorClass_NodeNameType_PTR;
@@ -545,6 +563,12 @@ struct VectorClass_SmudgeTypeClass_PTR;
 struct VectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0D7C / 0x7EA1C4
 struct DynamicVectorClass_SmudgeTypeClass_PTR; // 0xA8EC18
 struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0DEC / 0x7EA1A4
+struct VectorBase_SmudgeTypeClass_CPTR;
+struct VectorBase_SmudgeTypeClass_CPTR_vtbl;
+struct VectorClass_SmudgeTypeClass_CPTR;
+struct VectorClass_SmudgeTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_SmudgeTypeClass_CPTR;
+struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl;
 struct TypeList_SmudgeTypeClass_PTR;
 struct TypeList_SmudgeTypeClass_PTR_vtbl; // 0x7F0D1C
 struct VectorBase_CommandClass_PTR;
@@ -553,6 +577,12 @@ struct VectorClass_CommandClass_PTR;
 struct VectorClass_CommandClass_PTR_vtbl; // 0x7E184C
 struct DynamicVectorClass_CommandClass_PTR; // 0x87F658
 struct DynamicVectorClass_CommandClass_PTR_vtbl; // 0x7E182C
+struct VectorBase_CommandClass_CPTR;
+struct VectorBase_CommandClass_CPTR_vtbl;
+struct VectorClass_CommandClass_CPTR;
+struct VectorClass_CommandClass_CPTR_vtbl;
+struct DynamicVectorClass_CommandClass_CPTR;
+struct DynamicVectorClass_CommandClass_CPTR_vtbl;
 struct VectorBase_AngerStruct;
 struct VectorBase_AngerStruct_vtbl;
 struct VectorClass_AngerStruct;
@@ -615,6 +645,12 @@ struct VectorClass_ToolTip_PTR;
 struct VectorClass_ToolTip_PTR_vtbl; // 0x7F57E8
 struct DynamicVectorClass_ToolTip_PTR;
 struct DynamicVectorClass_ToolTip_PTR_vtbl; // 0x7F57C8
+struct VectorBase_ToolTip_CPTR;
+struct VectorBase_ToolTip_CPTR_vtbl;
+struct VectorClass_ToolTip_CPTR;
+struct VectorClass_ToolTip_CPTR_vtbl;
+struct DynamicVectorClass_ToolTip_CPTR;
+struct DynamicVectorClass_ToolTip_CPTR_vtbl;
 struct VectorBase_SwizzlePointerClass;
 struct VectorBase_SwizzlePointerClass_vtbl;
 struct VectorClass_SwizzlePointerClass;
@@ -681,12 +717,12 @@ struct VectorClass_ThemeClass_PTR;
 struct VectorClass_ThemeClass_PTR_vtbl;
 struct DynamicVectorClass_ThemeClass_PTR;
 struct DynamicVectorClass_ThemeClass_PTR_vtbl;
-struct VectorBase_StartingTechnoStruct_PTR;
-struct VectorBase_StartingTechnoStruct_PTR_vtbl;
-struct VectorClass_StartingTechnoStruct_PTR;
-struct VectorClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA964
-struct DynamicVectorClass_StartingTechnoStruct_PTR;
-struct DynamicVectorClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA944
+struct VectorBase_HouseClass_StartingTechnoStruct_PTR;
+struct VectorBase_HouseClass_StartingTechnoStruct_PTR_vtbl;
+struct VectorClass_HouseClass_StartingTechnoStruct_PTR;
+struct VectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA964
+struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR;
+struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA944
 struct VectorBase_CellStruct;
 struct VectorBase_CellStruct_vtbl;
 struct VectorClass_CellStruct;
@@ -745,6 +781,12 @@ struct VectorClass_TechnoTypeClass_PTR;
 struct VectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E4DF8 / 0x7E8954
 struct DynamicVectorClass_TechnoTypeClass_PTR; // 0xA8EB00
 struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E858C / 0x7E8934
+struct VectorBase_TechnoTypeClass_CPTR;
+struct VectorBase_TechnoTypeClass_CPTR_vtbl;
+struct VectorClass_TechnoTypeClass_CPTR;
+struct VectorClass_TechnoTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_TechnoTypeClass_CPTR;
+struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl;
 struct TypeList_TechnoTypeClass_PTR;
 struct TypeList_TechnoTypeClass_PTR_vtbl; // 0x7E4E18
 struct VectorBase_FootClass_PTR;
@@ -765,6 +807,12 @@ struct VectorClass_InfantryTypeClass_PTR;
 struct VectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC28 / 0x7EA344
 struct DynamicVectorClass_InfantryTypeClass_PTR; // 0xA8E348
 struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC88 / 0x7EA324
+struct VectorBase_InfantryTypeClass_CPTR;
+struct VectorBase_InfantryTypeClass_CPTR_vtbl;
+struct VectorClass_InfantryTypeClass_CPTR;
+struct VectorClass_InfantryTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_InfantryTypeClass_CPTR;
+struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl;
 struct TypeList_InfantryTypeClass_PTR;
 struct TypeList_InfantryTypeClass_PTR_vtbl; // 0x7EAC08
 struct VectorBase_UnitClass_PTR;
@@ -779,6 +827,12 @@ struct VectorClass_UnitTypeClass_PTR;
 struct VectorClass_UnitTypeClass_PTR_vtbl; // 0x7EAC48 / 0x7EA2C4
 struct DynamicVectorClass_UnitTypeClass_PTR; // 0xA83CE0
 struct DynamicVectorClass_UnitTypeClass_PTR_vtbl; // 0x7EACA8 / 0x7EA2A4
+struct VectorBase_UnitTypeClass_CPTR;
+struct VectorBase_UnitTypeClass_CPTR_vtbl;
+struct VectorClass_UnitTypeClass_CPTR;
+struct VectorClass_UnitTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_UnitTypeClass_CPTR;
+struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl;
 struct TypeList_UnitTypeClass_PTR;
 struct TypeList_UnitTypeClass_PTR_vtbl; // 0x7EABE8
 struct VectorBase_AircraftClass_PTR;
@@ -793,6 +847,12 @@ struct VectorClass_AircraftTypeClass_PTR;
 struct VectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EAC68 / 0x7EA284
 struct DynamicVectorClass_AircraftTypeClass_PTR; // 0xA8B218
 struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EACC8 / 0x7EA264
+struct VectorBase_AircraftTypeClass_CPTR;
+struct VectorBase_AircraftTypeClass_CPTR_vtbl;
+struct VectorClass_AircraftTypeClass_CPTR;
+struct VectorClass_AircraftTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_AircraftTypeClass_CPTR;
+struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl;
 struct TypeList_AircraftTypeClass_PTR;
 struct TypeList_AircraftTypeClass_PTR_vtbl; // 0x7EABC8
 struct VectorBase_BuildingClass_PTR;
@@ -807,6 +867,12 @@ struct VectorClass_BuildingTypeClass_PTR;
 struct VectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA244 / 0x7EAA08
 struct DynamicVectorClass_BuildingTypeClass_PTR; // 0xA83C68
 struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA224 / 0x7EAA28
+struct VectorBase_BuildingTypeClass_CPTR;
+struct VectorBase_BuildingTypeClass_CPTR_vtbl;
+struct VectorClass_BuildingTypeClass_CPTR;
+struct VectorClass_BuildingTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_BuildingTypeClass_CPTR;
+struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl;
 struct TypeList_BuildingTypeClass_PTR;
 struct TypeList_BuildingTypeClass_PTR_vtbl; // 0x7ED90C
 struct VectorBase_SuperClass_PTR;
@@ -863,18 +929,18 @@ struct VectorClass_ControlNode_PTR;
 struct VectorClass_ControlNode_PTR_vtbl; // 0x7E4BC4
 struct DynamicVectorClass_ControlNode_PTR;
 struct DynamicVectorClass_ControlNode_PTR_vtbl; // 0x7E4BA4
-struct VectorBase_SpawnControl_PTR;
-struct VectorBase_SpawnControl_PTR_vtbl;
-struct VectorClass_SpawnControl_PTR;
-struct VectorClass_SpawnControl_PTR_vtbl; // 0x7F36D4
-struct DynamicVectorClass_SpawnControl_PTR;
-struct DynamicVectorClass_SpawnControl_PTR_vtbl; // 0x7F36B4
-struct VectorBase_SlaveControl_PTR;
-struct VectorBase_SlaveControl_PTR_vtbl;
-struct VectorClass_SlaveControl_PTR;
-struct VectorClass_SlaveControl_PTR_vtbl; // 0x7F324C
-struct DynamicVectorClass_SlaveControl_PTR;
-struct DynamicVectorClass_SlaveControl_PTR_vtbl; // 0x7F322C
+struct VectorBase_SpawnManagerClass_SpawnControl_PTR;
+struct VectorBase_SpawnManagerClass_SpawnControl_PTR_vtbl;
+struct VectorClass_SpawnManagerClass_SpawnControl_PTR;
+struct VectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl; // 0x7F36D4
+struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR;
+struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl; // 0x7F36B4
+struct VectorBase_SlaveManagerClass_SlaveControl_PTR;
+struct VectorBase_SlaveManagerClass_SlaveControl_PTR_vtbl;
+struct VectorClass_SlaveManagerClass_SlaveControl_PTR;
+struct VectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F324C
+struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR;
+struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F322C
 struct VectorBase_ParticleClass_PTR;
 struct VectorBase_ParticleClass_PTR_vtbl;
 struct VectorClass_ParticleClass_PTR;
@@ -899,6 +965,12 @@ struct VectorClass_ParticleSystemTypeClass_PTR;
 struct VectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4424 / 0x7EA484
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR; // 0xA83D68
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4444 / 0x7EA464
+struct VectorBase_ParticleSystemTypeClass_CPTR;
+struct VectorBase_ParticleSystemTypeClass_CPTR_vtbl;
+struct VectorClass_ParticleSystemTypeClass_CPTR;
+struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR;
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl;
 struct TypeList_ParticleSystemTypeClass_PTR;
 struct TypeList_ParticleSystemTypeClass_PTR_vtbl; // 0x7F4F9C
 struct VectorBase_TiberiumClass_PTR;
@@ -919,6 +991,12 @@ struct VectorClass_TerrainTypeClass_PTR;
 struct VectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0D9C / 0x7EA204
 struct DynamicVectorClass_TerrainTypeClass_PTR; // 0xA8E318
 struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0E0C / 0x7EA1E4
+struct VectorBase_TerrainTypeClass_CPTR;
+struct VectorBase_TerrainTypeClass_CPTR_vtbl;
+struct VectorClass_TerrainTypeClass_CPTR;
+struct VectorClass_TerrainTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_TerrainTypeClass_CPTR;
+struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl;
 struct TypeList_TerrainTypeClass_PTR;
 struct TypeList_TerrainTypeClass_PTR_vtbl; // 0x7F0CFC
 struct VectorBase_OverlayClass_PTR;
@@ -1081,12 +1159,24 @@ struct VectorClass_AnimClass_PTR;
 struct VectorClass_AnimClass_PTR_vtbl; // 0x7E9F44 / 0x7EBFEC
 struct DynamicVectorClass_AnimClass_PTR; // 0xA8E9A8 / 0xA9F9D0 / 0xA9FA18 / 0xA9FA60
 struct DynamicVectorClass_AnimClass_PTR_vtbl; // 0x7E9F24 / 0x7EBFCC
+struct VectorBase_AnimClass_CPTR;
+struct VectorBase_AnimClass_CPTR_vtbl;
+struct VectorClass_AnimClass_CPTR;
+struct VectorClass_AnimClass_CPTR_vtbl;
+struct DynamicVectorClass_AnimClass_CPTR;
+struct DynamicVectorClass_AnimClass_CPTR_vtbl;
 struct VectorBase_AnimTypeClass_PTR;
 struct VectorBase_AnimTypeClass_PTR_vtbl;
 struct VectorClass_AnimTypeClass_PTR;
 struct VectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA304 / 0x7EB6F4
 struct DynamicVectorClass_AnimTypeClass_PTR; // 0x8B4150
 struct DynamicVectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA2E4 / 0x7EB714
+struct VectorBase_AnimTypeClass_CPTR;
+struct VectorBase_AnimTypeClass_CPTR_vtbl;
+struct VectorClass_AnimTypeClass_CPTR;
+struct VectorClass_AnimTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_AnimTypeClass_CPTR;
+struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl;
 struct TypeList_AnimTypeClass_PTR;
 struct TypeList_AnimTypeClass_PTR_vtbl;
 struct VectorBase_VoxelAnimClass_PTR;
@@ -1101,6 +1191,12 @@ struct VectorClass_VoxelAnimTypeClass_PTR;
 struct VectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D5C / 0x7EA3C4
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR; // 0xA8EB28
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0DCC / 0x7EA3A4
+struct VectorBase_VoxelAnimTypeClass_CPTR;
+struct VectorBase_VoxelAnimTypeClass_CPTR_vtbl;
+struct VectorClass_VoxelAnimTypeClass_CPTR;
+struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR;
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl;
 struct TypeList_VoxelAnimTypeClass_PTR;
 struct TypeList_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D3C
 struct VectorBase_AlphaShapeClass_PTR;
@@ -1163,6 +1259,12 @@ struct VectorClass_TeamTypeClass_PTR;
 struct VectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA104 / 0x7EA9E4
 struct DynamicVectorClass_TeamTypeClass_PTR; // 0xA8ECA0
 struct DynamicVectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA0E4 / 0x7EAAE8
+struct VectorBase_TeamTypeClass_CPTR;
+struct VectorBase_TeamTypeClass_CPTR_vtbl;
+struct VectorClass_TeamTypeClass_CPTR;
+struct VectorClass_TeamTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_TeamTypeClass_CPTR;
+struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl;
 struct TypeList_TeamTypeClass_PTR;
 struct TypeList_TeamTypeClass_PTR_vtbl; // 0x7EA9C4
 struct VectorBase_TaskForceClass_PTR;
@@ -1297,6 +1399,118 @@ struct VectorClass_SubzoneConnectionTable;
 struct VectorClass_SubzoneConnectionTable_vtbl;
 struct DynamicVectorClass_SubzoneConnectionTable;
 struct DynamicVectorClass_SubzoneConnectionTable_vtbl;
+
+struct ReferenceCounted;
+struct ReferenceCounted_vtbl;
+struct rc_ptr_base;
+struct rc_ptr_base_vtbl;
+struct rc_ptr_PlayerProfile_PTR;
+struct rc_ptr_PlayerProfile_PTR_vtbl;
+struct rc_ptr_WDTState_PTR;
+struct rc_ptr_WDTState_PTR_vtbl;
+struct rc_ptr_WDTTerritory_PTR;
+struct rc_ptr_WDTTerritory_PTR_vtbl;
+struct rc_ptr_WDT_CampaignProperties_PTR;
+struct rc_ptr_WDT_CampaignProperties_PTR_vtbl;
+struct rc_ptr_WDT_Campaign_PTR;
+struct rc_ptr_WDT_Campaign_PTR_vtbl;
+struct rc_ptr_WDT_Conflict_PTR;
+struct rc_ptr_WDT_Conflict_PTR_vtbl;
+struct rc_ptr_WDT_FlagGameOption_PTR;
+struct rc_ptr_WDT_FlagGameOption_PTR_vtbl;
+struct rc_ptr_WDT_GameOption_PTR;
+struct rc_ptr_WDT_GameOption_PTR_vtbl;
+struct rc_ptr_WDT_History_PTR;
+struct rc_ptr_WDT_History_PTR_vtbl;
+struct rc_ptr_WDT_MapSizeGameOption_PTR;
+struct rc_ptr_WDT_MapSizeGameOption_PTR_vtbl;
+struct rc_ptr_WDT_Map_PTR;
+struct rc_ptr_WDT_Map_PTR_vtbl;
+struct rc_ptr_WDT_State_PTR;
+struct rc_ptr_WDT_State_PTR_vtbl;
+struct rc_ptr_WDT_Territory_PTR;
+struct rc_ptr_WDT_Territory_PTR_vtbl;
+struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR;
+struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR_vtbl;
+struct VectorBase_rc_ptr_WDT_Conflict_PTR;
+struct VectorBase_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct VectorClass_rc_ptr_WDT_Conflict_PTR;
+struct VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR;
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct VectorBase_rc_ptr_WDT_GameOption_PTR;
+struct VectorBase_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct VectorClass_rc_ptr_WDT_GameOption_PTR;
+struct VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR;
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct VectorBase_rc_ptr_WDT_Territory_PTR;
+struct VectorBase_rc_ptr_WDT_Territory_PTR_vtbl;
+struct VectorClass_rc_ptr_WDT_Territory_PTR;
+struct VectorClass_rc_ptr_WDT_Territory_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR;
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR_vtbl;
+struct VectorBase_rc_ptr_WDTTerritory_PTR;
+struct VectorBase_rc_ptr_WDTTerritory_PTR_vtbl;
+struct VectorClass_rc_ptr_WDTTerritory_PTR;
+struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR;
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl;
+struct VectorCursor;
+struct VectorCursor_vtbl;
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR;
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR;
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct VectorCursor_rc_ptr_WDT_Territory_PTR;
+struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl;
+
+struct TRect_int;
+struct MSAnim;
+struct MSAnimEntry;
+struct MSSfxEntry;
+struct VectorBase_GraphicMenuItem_PTR;
+struct VectorBase_GraphicMenuItem_PTR_vtbl;
+struct VectorClass_GraphicMenuItem_PTR;
+struct VectorClass_GraphicMenuItem_PTR_vtbl;
+struct DynamicVectorClass_GraphicMenuItem_PTR;
+struct DynamicVectorClass_GraphicMenuItem_PTR_vtbl;
+struct VectorBase_MSAnim_PTR;
+struct VectorBase_MSAnim_PTR_vtbl;
+struct VectorClass_MSAnim_PTR;
+struct VectorClass_MSAnim_PTR_vtbl;
+struct DynamicVectorClass_MSAnim_PTR;
+struct DynamicVectorClass_MSAnim_PTR_vtbl;
+struct VectorBase_MSAnimEntry_PTR;
+struct VectorBase_MSAnimEntry_PTR_vtbl;
+struct VectorClass_MSAnimEntry_PTR;
+struct VectorClass_MSAnimEntry_PTR_vtbl;
+struct DynamicVectorClass_MSAnimEntry_PTR;
+struct DynamicVectorClass_MSAnimEntry_PTR_vtbl;
+struct VectorBase_MSSfxEntry_PTR;
+struct VectorBase_MSSfxEntry_PTR_vtbl;
+struct VectorClass_MSSfxEntry_PTR;
+struct VectorClass_MSSfxEntry_PTR_vtbl;
+struct DynamicVectorClass_MSSfxEntry_PTR;
+struct DynamicVectorClass_MSSfxEntry_PTR_vtbl;
+struct VectorBase_TRect_int;
+struct VectorBase_TRect_int_vtbl;
+struct VectorClass_TRect_int;
+struct VectorClass_TRect_int_vtbl;
+struct DynamicVectorClass_TRect_int;
+struct DynamicVectorClass_TRect_int_vtbl;
+struct VectorCursor_GraphicMenuItem_PTR;
+struct VectorCursor_GraphicMenuItem_PTR_vtbl;
+struct VectorCursor_MSAnim_PTR;
+struct VectorCursor_MSAnim_PTR_vtbl;
+struct VectorCursor_MSSfxEntry_PTR;
+struct VectorCursor_MSSfxEntry_PTR_vtbl;
+struct VectorCursor_TRect_int;
+struct VectorCursor_TRect_int_vtbl;
+struct VectorCursor_TRect_int_VectorClass_TRect_int;
+struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl;
+struct VectorCursor_unsigned_int;
+struct VectorCursor_unsigned_int_vtbl;
 
 // TODO VECTOR
 
@@ -1440,6 +1654,13 @@ class LinkClass; // Link Tree Base
 struct LinkClass_vtbl; // 0x7E9344
 class GadgetClass; // : LinkClass
 struct GadgetClass_vtbl; // 0x7E92BC
+class GraphicMenu; // 0x7EA5FC
+struct GraphicMenu_vtbl;
+class GraphicMenuItem; // 0x7EA690
+struct GraphicMenuItem_vtbl;
+class GraphicMenuAnimItem; // 0x7EA658
+class GraphicMenuImageItem; // 0x7EA674
+class GraphicMenuShortcutItem; // 0x7EA6AC
 class GScreenClass; // GScreen Tree Base
 struct GScreenClass_vtbl; // 0x7EA6FC
 class MapClass; // : GScreenClass
@@ -5355,21 +5576,21 @@ struct VectorClass_BuildingClass_PTR_vtbl : VectorBase_BuildingClass_PTR_vtbl {}
 struct DynamicVectorClass_BuildingClass_PTR : VectorClass_BuildingClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_BuildingClass_PTR_vtbl : VectorClass_BuildingClass_PTR_vtbl {};
 
-struct StartingTechnoStruct
+struct HouseClass_StartingTechnoStruct
 {
   TechnoTypeClass *Unit;
   CellStruct Cell;
 };
 
-struct VectorBase_StartingTechnoStruct_PTR : VectorBase_PTR
+struct VectorBase_HouseClass_StartingTechnoStruct_PTR : VectorBase_PTR
 {
-  StartingTechnoStruct **Items;
+  HouseClass_StartingTechnoStruct **Items;
 };
-struct VectorBase_StartingTechnoStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
-struct VectorClass_StartingTechnoStruct_PTR : VectorBase_StartingTechnoStruct_PTR, VectorAddon {};
-struct VectorClass_StartingTechnoStruct_PTR_vtbl : VectorBase_StartingTechnoStruct_PTR_vtbl {};
-struct DynamicVectorClass_StartingTechnoStruct_PTR : VectorClass_StartingTechnoStruct_PTR, DynamicAddon {};
-struct DynamicVectorClass_StartingTechnoStruct_PTR_vtbl : VectorClass_StartingTechnoStruct_PTR_vtbl {};
+struct VectorBase_HouseClass_StartingTechnoStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_HouseClass_StartingTechnoStruct_PTR : VectorBase_HouseClass_StartingTechnoStruct_PTR, VectorAddon {};
+struct VectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl : VectorBase_HouseClass_StartingTechnoStruct_PTR_vtbl {};
+struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR : VectorClass_HouseClass_StartingTechnoStruct_PTR, DynamicAddon {};
+struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl : VectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl {};
 
 struct BaseClass
 {
@@ -5468,6 +5689,15 @@ struct VectorClass_InfantryTypeClass_PTR : VectorBase_InfantryTypeClass_PTR, Vec
 struct VectorClass_InfantryTypeClass_PTR_vtbl : VectorBase_InfantryTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_InfantryTypeClass_PTR : VectorClass_InfantryTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl : VectorClass_InfantryTypeClass_PTR_vtbl {};
+struct VectorBase_InfantryTypeClass_CPTR : VectorBase_PTR
+{
+  const InfantryTypeClass **Items;
+};
+struct VectorBase_InfantryTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_InfantryTypeClass_CPTR : VectorBase_InfantryTypeClass_CPTR, VectorAddon {};
+struct VectorClass_InfantryTypeClass_CPTR_vtbl : VectorBase_InfantryTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_InfantryTypeClass_CPTR : VectorClass_InfantryTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl : VectorClass_InfantryTypeClass_CPTR_vtbl {};
 struct TypeList_InfantryTypeClass_PTR : DynamicVectorClass_InfantryTypeClass_PTR, TypeListAddon {};
 struct TypeList_InfantryTypeClass_PTR_vtbl : DynamicVectorClass_InfantryTypeClass_PTR_vtbl {};
 
@@ -5480,6 +5710,15 @@ struct VectorClass_UnitTypeClass_PTR : VectorBase_UnitTypeClass_PTR, VectorAddon
 struct VectorClass_UnitTypeClass_PTR_vtbl : VectorBase_UnitTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_UnitTypeClass_PTR : VectorClass_UnitTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_UnitTypeClass_PTR_vtbl : VectorClass_UnitTypeClass_PTR_vtbl {};
+struct VectorBase_UnitTypeClass_CPTR : VectorBase_PTR
+{
+  const UnitTypeClass **Items;
+};
+struct VectorBase_UnitTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_UnitTypeClass_CPTR : VectorBase_UnitTypeClass_CPTR, VectorAddon {};
+struct VectorClass_UnitTypeClass_CPTR_vtbl : VectorBase_UnitTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_UnitTypeClass_CPTR : VectorClass_UnitTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl : VectorClass_UnitTypeClass_CPTR_vtbl {};
 struct TypeList_UnitTypeClass_PTR : DynamicVectorClass_UnitTypeClass_PTR, TypeListAddon {};
 struct TypeList_UnitTypeClass_PTR_vtbl : DynamicVectorClass_UnitTypeClass_PTR_vtbl {};
 
@@ -5492,6 +5731,15 @@ struct VectorClass_AircraftTypeClass_PTR : VectorBase_AircraftTypeClass_PTR, Vec
 struct VectorClass_AircraftTypeClass_PTR_vtbl : VectorBase_AircraftTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_AircraftTypeClass_PTR : VectorClass_AircraftTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl : VectorClass_AircraftTypeClass_PTR_vtbl {};
+struct VectorBase_AircraftTypeClass_CPTR : VectorBase_PTR
+{
+  const AircraftTypeClass **Items;
+};
+struct VectorBase_AircraftTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AircraftTypeClass_CPTR : VectorBase_AircraftTypeClass_CPTR, VectorAddon {};
+struct VectorClass_AircraftTypeClass_CPTR_vtbl : VectorBase_AircraftTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_AircraftTypeClass_CPTR : VectorClass_AircraftTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl : VectorClass_AircraftTypeClass_CPTR_vtbl {};
 struct TypeList_AircraftTypeClass_PTR : DynamicVectorClass_AircraftTypeClass_PTR, TypeListAddon {};
 struct TypeList_AircraftTypeClass_PTR_vtbl : DynamicVectorClass_AircraftTypeClass_PTR_vtbl {};
 
@@ -5519,6 +5767,15 @@ struct VectorClass_TechnoTypeClass_PTR : VectorBase_TechnoTypeClass_PTR, VectorA
 struct VectorClass_TechnoTypeClass_PTR_vtbl : VectorBase_TechnoTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_TechnoTypeClass_PTR : VectorClass_TechnoTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl : VectorClass_TechnoTypeClass_PTR_vtbl {};
+struct VectorBase_TechnoTypeClass_CPTR : VectorBase_PTR
+{
+  const TechnoTypeClass **Items;
+};
+struct VectorBase_TechnoTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TechnoTypeClass_CPTR : VectorBase_TechnoTypeClass_CPTR, VectorAddon {};
+struct VectorClass_TechnoTypeClass_CPTR_vtbl : VectorBase_TechnoTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_TechnoTypeClass_CPTR : VectorClass_TechnoTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl : VectorClass_TechnoTypeClass_CPTR_vtbl {};
 struct TypeList_TechnoTypeClass_PTR : DynamicVectorClass_TechnoTypeClass_PTR, TypeListAddon {};
 struct TypeList_TechnoTypeClass_PTR_vtbl : DynamicVectorClass_TechnoTypeClass_PTR_vtbl {};
 
@@ -5539,7 +5796,7 @@ struct VectorClass_ControlNode_PTR_vtbl : VectorBase_ControlNode_PTR_vtbl {};
 struct DynamicVectorClass_ControlNode_PTR : VectorClass_ControlNode_PTR, DynamicAddon {};
 struct DynamicVectorClass_ControlNode_PTR_vtbl : VectorClass_ControlNode_PTR_vtbl {};
 
-struct SpawnControl
+struct SpawnManagerClass_SpawnControl
 {
   AircraftClass *Unit;
   SpawnNodeStatus Status;
@@ -5547,15 +5804,15 @@ struct SpawnControl
   int IsSpawnMissile;
 };
 
-struct VectorBase_SpawnControl_PTR : VectorBase_PTR
+struct VectorBase_SpawnManagerClass_SpawnControl_PTR : VectorBase_PTR
 {
-  SpawnControl **Items;
+  SpawnManagerClass_SpawnControl **Items;
 };
-struct VectorBase_SpawnControl_PTR_vtbl : VectorBase_PTR_vtbl {};
-struct VectorClass_SpawnControl_PTR : VectorBase_SpawnControl_PTR, VectorAddon {};
-struct VectorClass_SpawnControl_PTR_vtbl : VectorBase_SpawnControl_PTR_vtbl {};
-struct DynamicVectorClass_SpawnControl_PTR : VectorClass_SpawnControl_PTR, DynamicAddon {};
-struct DynamicVectorClass_SpawnControl_PTR_vtbl : VectorClass_SpawnControl_PTR_vtbl {};
+struct VectorBase_SpawnManagerClass_SpawnControl_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SpawnManagerClass_SpawnControl_PTR : VectorBase_SpawnManagerClass_SpawnControl_PTR, VectorAddon {};
+struct VectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl : VectorBase_SpawnManagerClass_SpawnControl_PTR_vtbl {};
+struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR : VectorClass_SpawnManagerClass_SpawnControl_PTR, DynamicAddon {};
+struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl : VectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl {};
 
 struct SlaveManagerClass_SlaveControl
 {
@@ -5564,15 +5821,15 @@ struct SlaveManagerClass_SlaveControl
   CDTimerClass RespawnTimer;
 };
 
-struct VectorBase_SlaveControl_PTR : VectorBase_PTR
+struct VectorBase_SlaveManagerClass_SlaveControl_PTR : VectorBase_PTR
 {
   SlaveManagerClass_SlaveControl **Items;
 };
-struct VectorBase_SlaveControl_PTR_vtbl : VectorBase_PTR_vtbl {};
-struct VectorClass_SlaveControl_PTR : VectorBase_SlaveControl_PTR, VectorAddon {};
-struct VectorClass_SlaveControl_PTR_vtbl : VectorBase_SlaveControl_PTR_vtbl {};
-struct DynamicVectorClass_SlaveControl_PTR : VectorClass_SlaveControl_PTR, DynamicAddon {};
-struct DynamicVectorClass_SlaveControl_PTR_vtbl : VectorClass_SlaveControl_PTR_vtbl {};
+struct VectorBase_SlaveManagerClass_SlaveControl_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SlaveManagerClass_SlaveControl_PTR : VectorBase_SlaveManagerClass_SlaveControl_PTR, VectorAddon {};
+struct VectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl : VectorBase_SlaveManagerClass_SlaveControl_PTR_vtbl {};
+struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR : VectorClass_SlaveManagerClass_SlaveControl_PTR, DynamicAddon {};
+struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl : VectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl {};
 
 struct AITriggerConditionComparator
 {
@@ -5589,6 +5846,15 @@ struct VectorClass_AnimTypeClass_PTR : VectorBase_AnimTypeClass_PTR, VectorAddon
 struct VectorClass_AnimTypeClass_PTR_vtbl : VectorBase_AnimTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_AnimTypeClass_PTR : VectorClass_AnimTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_AnimTypeClass_PTR_vtbl : VectorClass_AnimTypeClass_PTR_vtbl {};
+struct VectorBase_AnimTypeClass_CPTR : VectorBase_PTR
+{
+  const AnimTypeClass **Items;
+};
+struct VectorBase_AnimTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AnimTypeClass_CPTR : VectorBase_AnimTypeClass_CPTR, VectorAddon {};
+struct VectorClass_AnimTypeClass_CPTR_vtbl : VectorBase_AnimTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_AnimTypeClass_CPTR : VectorClass_AnimTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl : VectorClass_AnimTypeClass_CPTR_vtbl {};
 struct TypeList_AnimTypeClass_PTR : DynamicVectorClass_AnimTypeClass_PTR, TypeListAddon {};
 struct TypeList_AnimTypeClass_PTR_vtbl : DynamicVectorClass_AnimTypeClass_PTR_vtbl {};
 
@@ -5601,6 +5867,15 @@ struct VectorClass_VoxelAnimTypeClass_PTR : VectorBase_VoxelAnimTypeClass_PTR, V
 struct VectorClass_VoxelAnimTypeClass_PTR_vtbl : VectorBase_VoxelAnimTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR : VectorClass_VoxelAnimTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl : VectorClass_VoxelAnimTypeClass_PTR_vtbl {};
+struct VectorBase_VoxelAnimTypeClass_CPTR : VectorBase_PTR
+{
+  const VoxelAnimTypeClass **Items;
+};
+struct VectorBase_VoxelAnimTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_VoxelAnimTypeClass_CPTR : VectorBase_VoxelAnimTypeClass_CPTR, VectorAddon {};
+struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl : VectorBase_VoxelAnimTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR : VectorClass_VoxelAnimTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl : VectorClass_VoxelAnimTypeClass_CPTR_vtbl {};
 struct TypeList_VoxelAnimTypeClass_PTR : DynamicVectorClass_VoxelAnimTypeClass_PTR, TypeListAddon {};
 struct TypeList_VoxelAnimTypeClass_PTR_vtbl : DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl {};
 
@@ -5696,6 +5971,15 @@ struct VectorClass_BuildingTypeClass_PTR : VectorBase_BuildingTypeClass_PTR, Vec
 struct VectorClass_BuildingTypeClass_PTR_vtbl : VectorBase_BuildingTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_BuildingTypeClass_PTR : VectorClass_BuildingTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl : VectorClass_BuildingTypeClass_PTR_vtbl {};
+struct VectorBase_BuildingTypeClass_CPTR : VectorBase_PTR
+{
+  const BuildingTypeClass **Items;
+};
+struct VectorBase_BuildingTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_BuildingTypeClass_CPTR : VectorBase_BuildingTypeClass_CPTR, VectorAddon {};
+struct VectorClass_BuildingTypeClass_CPTR_vtbl : VectorBase_BuildingTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_BuildingTypeClass_CPTR : VectorClass_BuildingTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl : VectorClass_BuildingTypeClass_CPTR_vtbl {};
 struct TypeList_BuildingTypeClass_PTR : DynamicVectorClass_BuildingTypeClass_PTR, TypeListAddon {};
 struct TypeList_BuildingTypeClass_PTR_vtbl : DynamicVectorClass_BuildingTypeClass_PTR_vtbl {};
 
@@ -5708,6 +5992,15 @@ struct VectorClass_ParticleSystemTypeClass_PTR : VectorBase_ParticleSystemTypeCl
 struct VectorClass_ParticleSystemTypeClass_PTR_vtbl : VectorBase_ParticleSystemTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR : VectorClass_ParticleSystemTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl : VectorClass_ParticleSystemTypeClass_PTR_vtbl {};
+struct VectorBase_ParticleSystemTypeClass_CPTR : VectorBase_PTR
+{
+  const ParticleSystemTypeClass **Items;
+};
+struct VectorBase_ParticleSystemTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ParticleSystemTypeClass_CPTR : VectorBase_ParticleSystemTypeClass_CPTR, VectorAddon {};
+struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl : VectorBase_ParticleSystemTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR : VectorClass_ParticleSystemTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl : VectorClass_ParticleSystemTypeClass_CPTR_vtbl {};
 struct TypeList_ParticleSystemTypeClass_PTR : DynamicVectorClass_ParticleSystemTypeClass_PTR, TypeListAddon {};
 struct TypeList_ParticleSystemTypeClass_PTR_vtbl : DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl {};
 
@@ -6380,6 +6673,15 @@ struct VectorClass_MultiMission_PTR : VectorBase_MultiMission_PTR, VectorAddon {
 struct VectorClass_MultiMission_PTR_vtbl : VectorBase_MultiMission_PTR_vtbl {};
 struct DynamicVectorClass_MultiMission_PTR : VectorClass_MultiMission_PTR, DynamicAddon {};
 struct DynamicVectorClass_MultiMission_PTR_vtbl : VectorClass_MultiMission_PTR_vtbl {};
+struct VectorBase_MultiMission_CPTR : VectorBase_PTR
+{
+  const MultiMission **Items;
+};
+struct VectorBase_MultiMission_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MultiMission_CPTR : VectorBase_MultiMission_CPTR, VectorAddon {};
+struct VectorClass_MultiMission_CPTR_vtbl : VectorBase_MultiMission_CPTR_vtbl {};
+struct DynamicVectorClass_MultiMission_CPTR : VectorClass_MultiMission_CPTR, DynamicAddon {};
+struct DynamicVectorClass_MultiMission_CPTR_vtbl : VectorClass_MultiMission_CPTR_vtbl {};
 
 class MPGameModeClass
 {
@@ -6481,6 +6783,15 @@ struct VectorClass_SmudgeTypeClass_PTR : VectorBase_SmudgeTypeClass_PTR, VectorA
 struct VectorClass_SmudgeTypeClass_PTR_vtbl : VectorBase_SmudgeTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_SmudgeTypeClass_PTR : VectorClass_SmudgeTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl : VectorClass_SmudgeTypeClass_PTR_vtbl {};
+struct VectorBase_SmudgeTypeClass_CPTR : VectorBase_PTR
+{
+  const SmudgeTypeClass **Items;
+};
+struct VectorBase_SmudgeTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SmudgeTypeClass_CPTR : VectorBase_SmudgeTypeClass_CPTR, VectorAddon {};
+struct VectorClass_SmudgeTypeClass_CPTR_vtbl : VectorBase_SmudgeTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_SmudgeTypeClass_CPTR : VectorClass_SmudgeTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl : VectorClass_SmudgeTypeClass_CPTR_vtbl {};
 struct TypeList_SmudgeTypeClass_PTR : DynamicVectorClass_SmudgeTypeClass_PTR, TypeListAddon {};
 struct TypeList_SmudgeTypeClass_PTR_vtbl : DynamicVectorClass_SmudgeTypeClass_PTR_vtbl {};
 
@@ -6493,6 +6804,15 @@ struct VectorClass_TerrainTypeClass_PTR : VectorBase_TerrainTypeClass_PTR, Vecto
 struct VectorClass_TerrainTypeClass_PTR_vtbl : VectorBase_TerrainTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_TerrainTypeClass_PTR : VectorClass_TerrainTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl : VectorClass_TerrainTypeClass_PTR_vtbl {};
+struct VectorBase_TerrainTypeClass_CPTR : VectorBase_PTR
+{
+  const TerrainTypeClass **Items;
+};
+struct VectorBase_TerrainTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TerrainTypeClass_CPTR : VectorBase_TerrainTypeClass_CPTR, VectorAddon {};
+struct VectorClass_TerrainTypeClass_CPTR_vtbl : VectorBase_TerrainTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_TerrainTypeClass_CPTR : VectorClass_TerrainTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl : VectorClass_TerrainTypeClass_CPTR_vtbl {};
 struct TypeList_TerrainTypeClass_PTR : DynamicVectorClass_TerrainTypeClass_PTR, TypeListAddon {};
 struct TypeList_TerrainTypeClass_PTR_vtbl : DynamicVectorClass_TerrainTypeClass_PTR_vtbl {};
 
@@ -7499,7 +7819,7 @@ class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContaine
   int CountWarfactories;
   int InfantrySelfHeal;
   int UnitsSelfHeal;
-  DynamicVectorClass_StartingTechnoStruct_PTR StartingUnits;
+  DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR StartingUnits;
   AIDifficulty AIDifficulty;
   double FirepowerMultiplier;
   double GroundspeedMultiplier;
@@ -8420,7 +8740,7 @@ class SpawnManagerClass : AbstractClass
   int SpawnCount;
   int RegenRate;
   int ReloadRate;
-  DynamicVectorClass_SpawnControl_PTR SpawnedNodes;
+  DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR SpawnedNodes;
   CDTimerClass UpdateTimer;
   CDTimerClass SpawnTimer;
   AbstractClass *Target;
@@ -8437,7 +8757,7 @@ class SlaveManagerClass : AbstractClass
   int SlaveCount;
   int RegenRate;
   int ReloadRate;
-  DynamicVectorClass_SlaveControl_PTR SlaveNodes;
+  DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR SlaveNodes;
   CDTimerClass RespawnTimer;
   SlaveManagerStatus State;
   int LastScanFrame;
@@ -11864,6 +12184,15 @@ struct VectorClass_ToolTip_PTR : VectorBase_ToolTip_PTR, VectorAddon {};
 struct VectorClass_ToolTip_PTR_vtbl : VectorBase_ToolTip_PTR_vtbl {};
 struct DynamicVectorClass_ToolTip_PTR : VectorClass_ToolTip_PTR, DynamicAddon {};
 struct DynamicVectorClass_ToolTip_PTR_vtbl : VectorClass_ToolTip_PTR_vtbl {};
+struct VectorBase_ToolTip_CPTR : VectorBase_PTR
+{
+  const ToolTip **Items;
+};
+struct VectorBase_ToolTip_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ToolTip_CPTR : VectorBase_ToolTip_CPTR, VectorAddon {};
+struct VectorClass_ToolTip_CPTR_vtbl : VectorBase_ToolTip_CPTR_vtbl {};
+struct DynamicVectorClass_ToolTip_CPTR : VectorClass_ToolTip_CPTR, DynamicAddon {};
+struct DynamicVectorClass_ToolTip_CPTR_vtbl : VectorClass_ToolTip_CPTR_vtbl {};
 
 struct IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement
 {
@@ -12123,6 +12452,15 @@ struct VectorClass_TeamTypeClass_PTR : VectorBase_TeamTypeClass_PTR, VectorAddon
 struct VectorClass_TeamTypeClass_PTR_vtbl : VectorBase_TeamTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_TeamTypeClass_PTR : VectorClass_TeamTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_TeamTypeClass_PTR_vtbl : VectorClass_TeamTypeClass_PTR_vtbl {};
+struct VectorBase_TeamTypeClass_CPTR : VectorBase_PTR
+{
+  const TeamTypeClass **Items;
+};
+struct VectorBase_TeamTypeClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_TeamTypeClass_CPTR : VectorBase_TeamTypeClass_CPTR, VectorAddon {};
+struct VectorClass_TeamTypeClass_CPTR_vtbl : VectorBase_TeamTypeClass_CPTR_vtbl {};
+struct DynamicVectorClass_TeamTypeClass_CPTR : VectorClass_TeamTypeClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl : VectorClass_TeamTypeClass_CPTR_vtbl {};
 struct TypeList_TeamTypeClass_PTR : DynamicVectorClass_TeamTypeClass_PTR, TypeListAddon {};
 struct TypeList_TeamTypeClass_PTR_vtbl : DynamicVectorClass_TeamTypeClass_PTR_vtbl {};
 
@@ -12213,6 +12551,15 @@ struct VectorClass_CommandClass_PTR : VectorBase_CommandClass_PTR, VectorAddon {
 struct VectorClass_CommandClass_PTR_vtbl : VectorBase_CommandClass_PTR_vtbl {};
 struct DynamicVectorClass_CommandClass_PTR : VectorClass_CommandClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_CommandClass_PTR_vtbl : VectorClass_CommandClass_PTR_vtbl {};
+struct VectorBase_CommandClass_CPTR : VectorBase_PTR
+{
+  const CommandClass **Items;
+};
+struct VectorBase_CommandClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CommandClass_CPTR : VectorBase_CommandClass_CPTR, VectorAddon {};
+struct VectorClass_CommandClass_CPTR_vtbl : VectorBase_CommandClass_CPTR_vtbl {};
+struct DynamicVectorClass_CommandClass_CPTR : VectorClass_CommandClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_CommandClass_CPTR_vtbl : VectorClass_CommandClass_CPTR_vtbl {};
 
 struct VectorBase_AITriggerTypeClass_PTR : VectorBase_PTR
 {
@@ -12253,6 +12600,15 @@ struct VectorClass_AnimClass_PTR : VectorBase_AnimClass_PTR, VectorAddon {};
 struct VectorClass_AnimClass_PTR_vtbl : VectorBase_AnimClass_PTR_vtbl {};
 struct DynamicVectorClass_AnimClass_PTR : VectorClass_AnimClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_AnimClass_PTR_vtbl : VectorClass_AnimClass_PTR_vtbl {};
+struct VectorBase_AnimClass_CPTR : VectorBase_PTR
+{
+  const AnimClass **Items;
+};
+struct VectorBase_AnimClass_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_AnimClass_CPTR : VectorBase_AnimClass_CPTR, VectorAddon {};
+struct VectorClass_AnimClass_CPTR_vtbl : VectorBase_AnimClass_CPTR_vtbl {};
+struct DynamicVectorClass_AnimClass_CPTR : VectorClass_AnimClass_CPTR, DynamicAddon {};
+struct DynamicVectorClass_AnimClass_CPTR_vtbl : VectorClass_AnimClass_CPTR_vtbl {};
 
 struct VectorBase_FootClass_PTR : VectorBase_PTR
 {
@@ -12293,6 +12649,15 @@ struct VectorClass_char_PTR : VectorBase_char_PTR, VectorAddon {};
 struct VectorClass_char_PTR_vtbl : VectorBase_char_PTR_vtbl {};
 struct DynamicVectorClass_char_PTR : VectorClass_char_PTR, DynamicAddon {};
 struct DynamicVectorClass_char_PTR_vtbl : VectorClass_char_PTR_vtbl {};
+struct VectorBase_char_CPTR : VectorBase_PTR
+{
+  const char **Items;
+};
+struct VectorBase_char_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_char_CPTR : VectorBase_char_CPTR, VectorAddon {};
+struct VectorClass_char_CPTR_vtbl : VectorBase_char_CPTR_vtbl {};
+struct DynamicVectorClass_char_CPTR : VectorClass_char_CPTR, DynamicAddon {};
+struct DynamicVectorClass_char_CPTR_vtbl : VectorClass_char_CPTR_vtbl {};
 
 struct VectorBase_LightSourceClass_PTR : VectorBase_PTR
 {
@@ -12908,6 +13273,15 @@ struct VectorClass_unsigned_short_PTR : VectorBase_unsigned_short_PTR, VectorAdd
 struct VectorClass_unsigned_short_PTR_vtbl : VectorBase_unsigned_short_PTR_vtbl {};
 struct DynamicVectorClass_unsigned_short_PTR : VectorClass_unsigned_short_PTR, DynamicAddon {};
 struct DynamicVectorClass_unsigned_short_PTR_vtbl : VectorClass_unsigned_short_PTR_vtbl {};
+struct VectorBase_unsigned_short_CPTR : VectorBase_PTR
+{
+  const unsigned short **Items;
+};
+struct VectorBase_unsigned_short_CPTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_unsigned_short_CPTR : VectorBase_unsigned_short_CPTR, VectorAddon {};
+struct VectorClass_unsigned_short_CPTR_vtbl : VectorBase_unsigned_short_CPTR_vtbl {};
+struct DynamicVectorClass_unsigned_short_CPTR : VectorClass_unsigned_short_CPTR, DynamicAddon {};
+struct DynamicVectorClass_unsigned_short_CPTR_vtbl : VectorClass_unsigned_short_CPTR_vtbl {};
 
 struct VectorBase_LaserDrawClass_PTR : VectorBase_PTR
 {
@@ -14616,3 +14990,207 @@ struct TClassFactory
   TClassFactory_vtbl *__vftable;
   int nRefCount;
 };
+
+struct GraphicMenuItem_vtbl
+{
+  GraphicMenuItem *(__thiscall *ScalarDeletingDestructor)(GraphicMenuItem *this, char a2);
+  char (__thiscall *MatchKey)(GraphicMenuItem *this, int Key);
+  char (__thiscall *HitTest)(GraphicMenuItem *this, Point2D *pPoint);
+  void (__thiscall *vt_entry_C)(GraphicMenuItem *this, void *pOwner);
+  void (__thiscall *vt_entry_10)(GraphicMenuItem *this, char Value);
+  void (__thiscall *vt_entry_14)(GraphicMenuItem *this, char Value);
+};
+
+struct GraphicMenuItem
+{
+  GraphicMenuItem_vtbl *__vftable;
+  int ID;
+  int Unknown_008;
+  StringClass *Text;
+  RectangleStruct Bounds;
+  int Selected;
+  int Enabled;
+};
+
+struct GraphicMenu_vtbl
+{
+  GraphicMenu *(__thiscall *ScalarDeletingDestructor)(GraphicMenu *this, char a2);
+};
+
+struct ReferenceCounted_vtbl
+{
+  ReferenceCounted *(__thiscall *ScalarDeletingDestructor)(ReferenceCounted *this, char a2);
+  char (__thiscall *vt_entry_4)(ReferenceCounted *this);
+  int (__thiscall *Release)(ReferenceCounted *this);
+};
+
+struct ReferenceCounted
+{
+  ReferenceCounted_vtbl *__vftable;
+  int ReferenceCount;
+};
+
+struct rc_ptr_base_vtbl
+{
+  rc_ptr_base *(__thiscall *ScalarDeletingDestructor)(rc_ptr_base *this, char a2);
+};
+
+struct rc_ptr_base
+{
+  rc_ptr_base_vtbl *__vftable;
+  ReferenceCounted *pValue;
+};
+
+struct rc_ptr_PlayerProfile_PTR : rc_ptr_base {};
+struct rc_ptr_PlayerProfile_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDTState_PTR : rc_ptr_base {};
+struct rc_ptr_WDTState_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDTTerritory_PTR : rc_ptr_base {};
+struct rc_ptr_WDTTerritory_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_CampaignProperties_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_CampaignProperties_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_Campaign_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_Campaign_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_Conflict_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_Conflict_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_FlagGameOption_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_FlagGameOption_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_GameOption_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_GameOption_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_History_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_History_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_MapSizeGameOption_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_MapSizeGameOption_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_Map_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_Map_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_State_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_State_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_Territory_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_Territory_PTR_vtbl : rc_ptr_base_vtbl {};
+struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR : rc_ptr_base {};
+struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR_vtbl : rc_ptr_base_vtbl {};
+
+struct VectorBase_rc_ptr_WDT_Conflict_PTR : VectorBase_ELE
+{
+  rc_ptr_WDT_Conflict_PTR *Items;
+};
+struct VectorBase_rc_ptr_WDT_Conflict_PTR_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_rc_ptr_WDT_Conflict_PTR : VectorBase_rc_ptr_WDT_Conflict_PTR, VectorAddon {};
+struct VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl : VectorBase_rc_ptr_WDT_Conflict_PTR_vtbl {};
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR : VectorClass_rc_ptr_WDT_Conflict_PTR, DynamicAddon {};
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR_vtbl : VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl {};
+
+struct VectorBase_rc_ptr_WDT_GameOption_PTR : VectorBase_ELE
+{
+  rc_ptr_WDT_GameOption_PTR *Items;
+};
+struct VectorBase_rc_ptr_WDT_GameOption_PTR_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_rc_ptr_WDT_GameOption_PTR : VectorBase_rc_ptr_WDT_GameOption_PTR, VectorAddon {};
+struct VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl : VectorBase_rc_ptr_WDT_GameOption_PTR_vtbl {};
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR : VectorClass_rc_ptr_WDT_GameOption_PTR, DynamicAddon {};
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR_vtbl : VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl {};
+
+struct VectorBase_rc_ptr_WDT_Territory_PTR : VectorBase_ELE
+{
+  rc_ptr_WDT_Territory_PTR *Items;
+};
+struct VectorBase_rc_ptr_WDT_Territory_PTR_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_rc_ptr_WDT_Territory_PTR : VectorBase_rc_ptr_WDT_Territory_PTR, VectorAddon {};
+struct VectorClass_rc_ptr_WDT_Territory_PTR_vtbl : VectorBase_rc_ptr_WDT_Territory_PTR_vtbl {};
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR : VectorClass_rc_ptr_WDT_Territory_PTR, DynamicAddon {};
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR_vtbl : VectorClass_rc_ptr_WDT_Territory_PTR_vtbl {};
+
+struct VectorBase_rc_ptr_WDTTerritory_PTR : VectorBase_ELE
+{
+  rc_ptr_WDTTerritory_PTR *Items;
+};
+struct VectorBase_rc_ptr_WDTTerritory_PTR_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_rc_ptr_WDTTerritory_PTR : VectorBase_rc_ptr_WDTTerritory_PTR, VectorAddon {};
+struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl : VectorBase_rc_ptr_WDTTerritory_PTR_vtbl {};
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR : VectorClass_rc_ptr_WDTTerritory_PTR, DynamicAddon {};
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl : VectorClass_rc_ptr_WDTTerritory_PTR_vtbl {};
+
+struct VectorCursor_vtbl
+{
+  VectorCursor *(__thiscall *ScalarDeletingDestructor)(VectorCursor *this, char a2);
+  bool (__thiscall *IsValid)(VectorCursor *this);
+  VectorCursor *(__thiscall *operator_plusplus)(VectorCursor *this);
+  VectorCursor *(__thiscall *operator_minusminus)(VectorCursor *this);
+};
+
+struct VectorCursor
+{
+  VectorCursor_vtbl *__vftable;
+  void *pVector;
+  int Index;
+};
+
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR : VectorCursor {};
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR : VectorCursor {};
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_rc_ptr_WDT_Territory_PTR : VectorCursor {};
+struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl : VectorCursor_vtbl {};
+
+struct VectorBase_GraphicMenuItem_PTR : VectorBase_PTR
+{
+  GraphicMenuItem **Items;
+};
+struct VectorBase_GraphicMenuItem_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_GraphicMenuItem_PTR : VectorBase_GraphicMenuItem_PTR, VectorAddon {};
+struct VectorClass_GraphicMenuItem_PTR_vtbl : VectorBase_GraphicMenuItem_PTR_vtbl {};
+struct DynamicVectorClass_GraphicMenuItem_PTR : VectorClass_GraphicMenuItem_PTR, DynamicAddon {};
+struct DynamicVectorClass_GraphicMenuItem_PTR_vtbl : VectorClass_GraphicMenuItem_PTR_vtbl {};
+
+struct VectorBase_MSAnim_PTR : VectorBase_PTR
+{
+  MSAnim **Items;
+};
+struct VectorBase_MSAnim_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MSAnim_PTR : VectorBase_MSAnim_PTR, VectorAddon {};
+struct VectorClass_MSAnim_PTR_vtbl : VectorBase_MSAnim_PTR_vtbl {};
+struct DynamicVectorClass_MSAnim_PTR : VectorClass_MSAnim_PTR, DynamicAddon {};
+struct DynamicVectorClass_MSAnim_PTR_vtbl : VectorClass_MSAnim_PTR_vtbl {};
+
+struct VectorBase_MSAnimEntry_PTR : VectorBase_PTR
+{
+  MSAnimEntry **Items;
+};
+struct VectorBase_MSAnimEntry_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MSAnimEntry_PTR : VectorBase_MSAnimEntry_PTR, VectorAddon {};
+struct VectorClass_MSAnimEntry_PTR_vtbl : VectorBase_MSAnimEntry_PTR_vtbl {};
+struct DynamicVectorClass_MSAnimEntry_PTR : VectorClass_MSAnimEntry_PTR, DynamicAddon {};
+struct DynamicVectorClass_MSAnimEntry_PTR_vtbl : VectorClass_MSAnimEntry_PTR_vtbl {};
+
+struct VectorBase_MSSfxEntry_PTR : VectorBase_PTR
+{
+  MSSfxEntry **Items;
+};
+struct VectorBase_MSSfxEntry_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MSSfxEntry_PTR : VectorBase_MSSfxEntry_PTR, VectorAddon {};
+struct VectorClass_MSSfxEntry_PTR_vtbl : VectorBase_MSSfxEntry_PTR_vtbl {};
+struct DynamicVectorClass_MSSfxEntry_PTR : VectorClass_MSSfxEntry_PTR, DynamicAddon {};
+struct DynamicVectorClass_MSSfxEntry_PTR_vtbl : VectorClass_MSSfxEntry_PTR_vtbl {};
+
+struct VectorBase_TRect_int : VectorBase_ELE
+{
+  TRect_int *Items;
+};
+struct VectorBase_TRect_int_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_TRect_int : VectorBase_TRect_int, VectorAddon {};
+struct VectorClass_TRect_int_vtbl : VectorBase_TRect_int_vtbl {};
+struct DynamicVectorClass_TRect_int : VectorClass_TRect_int, DynamicAddon {};
+struct DynamicVectorClass_TRect_int_vtbl : VectorClass_TRect_int_vtbl {};
+
+struct VectorCursor_GraphicMenuItem_PTR : VectorCursor {};
+struct VectorCursor_GraphicMenuItem_PTR_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_MSAnim_PTR : VectorCursor {};
+struct VectorCursor_MSAnim_PTR_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_MSSfxEntry_PTR : VectorCursor {};
+struct VectorCursor_MSSfxEntry_PTR_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_TRect_int : VectorCursor {};
+struct VectorCursor_TRect_int_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_TRect_int_VectorClass_TRect_int : VectorCursor {};
+struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl : VectorCursor_vtbl {};
+struct VectorCursor_unsigned_int : VectorCursor {};
+struct VectorCursor_unsigned_int_vtbl : VectorCursor_vtbl {};
