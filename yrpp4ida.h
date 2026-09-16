@@ -14,6 +14,8 @@ struct Registers;
 struct _GUID;
 struct IUnknown;
 struct IUnknown_vtbl;
+struct TClassFactory;
+struct TClassFactory_vtbl;
 struct IPersist;
 struct IPersist_vtbl;
 struct ISequentialStream;
@@ -14598,4 +14600,19 @@ struct OwnerDrawDialogElement
   int ProgressBarPosition;
   char TypeSpecific_0F4[20];
   int Extra[62];
+};
+
+struct TClassFactory_vtbl
+{
+  HRESULT (__stdcall *QueryInterface)(TClassFactory *this, _GUID *pIid, void **ppvObject);
+  unsigned int (__stdcall *AddRef)(TClassFactory *this);
+  unsigned int (__stdcall *Release)(TClassFactory *this);
+  HRESULT (__stdcall *CreateInstance)(TClassFactory *this, IUnknown *pUnkOuter, _GUID *pIid, void **ppvObject);
+  HRESULT (__stdcall *LockServer)(TClassFactory *this, int fLock);
+};
+
+struct TClassFactory
+{
+  TClassFactory_vtbl *__vftable;
+  int nRefCount;
 };
