@@ -227,8 +227,6 @@ struct IPXInterfaceClass;
 struct IPXInterfaceClass_vtbl;
 struct UDPInterfaceClass;
 struct UDPInterfaceClass_vtbl;
-struct DynamicVectorClass_unsigned_char_PTR;
-struct DynamicVectorClass_unsigned_char_PTR_vtbl;
 struct MultiMission;
 struct In_addr_unnamed_type_un_u_b;
 struct In_addr_unnamed_type_un_u_w;
@@ -1399,6 +1397,44 @@ struct VectorClass_SubzoneConnectionTable;
 struct VectorClass_SubzoneConnectionTable_vtbl;
 struct DynamicVectorClass_SubzoneConnectionTable;
 struct DynamicVectorClass_SubzoneConnectionTable_vtbl;
+struct AnimationPalette;
+struct WDT_Centroid;
+struct WDT_GameOption;
+struct WDT_GameOption_vtbl;
+struct WDT_ValueGameOption_unsigned_char;
+struct WDT_ValueGameOption_unsigned_char_vtbl;
+struct WDT_FlagGameOption;
+struct WDT_FlagGameOption_vtbl;
+struct WDT_MapSizeGameOption;
+struct WDT_MapSizeGameOption_vtbl;
+struct WDT_Conflict;
+struct WDT_Conflict_vtbl;
+struct WDT_History;
+struct WDT_History_vtbl;
+struct WDT_Campaign;
+struct WDT_Campaign_vtbl;
+struct WDT_CampaignProperties;
+struct WDT_CampaignProperties_vtbl;
+struct WDT_Map;
+struct WDT_Map_vtbl;
+struct WDTTerritory;
+struct WDTTerritory_vtbl;
+struct WDTState;
+struct WDTState_vtbl;
+struct WDT_State;
+struct WDT_State_vtbl;
+struct WDT_Voices_Anim;
+struct WDT_Voices_Anim_vtbl;
+struct VectorBase_WDT_Centroid;
+struct VectorBase_WDT_Centroid_vtbl;
+struct VectorClass_WDT_Centroid;
+struct VectorClass_WDT_Centroid_vtbl;
+struct VectorBase_WDT_Map_AnimationPalette_PTR;
+struct VectorBase_WDT_Map_AnimationPalette_PTR_vtbl;
+struct VectorClass_WDT_Map_AnimationPalette_PTR;
+struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR;
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
 
 struct ReferenceCounted;
 struct ReferenceCounted_vtbl;
@@ -1580,8 +1616,6 @@ class TaskForceClass; // : AbstractTypeClass : AbstractClass
 struct TaskForceClass_vtbl; // 0x7F4680
 class TEventClass; // : AbstractClass
 struct TEventClass_vtbl; // 0x7F5578
-class WaypointPathClass; // : AbstractClass
-struct WaypointPathClass_vtbl; // 0x7F6E70
 class AirstrikeClass; // : AbstractClass
 struct AirstrikeClass_vtbl; // 0x7E29A8
 class CaptureManagerClass; // : AbstractClass
@@ -3762,7 +3796,7 @@ struct __declspec(align(4)) VectorBase
 
 struct VectorBase_vtbl
 {
-  void (__thiscall *~VectorBase)(VectorBase *this);
+  void (__thiscall *Destructor)(VectorBase *this);
   bool (__thiscall *OperatorEqual)(VectorBase *this, VectorBase *pOther);
 };
 
@@ -4685,7 +4719,7 @@ class ConvertClass
 
 struct ConvertClass_vtbl
 {
-  void (__thiscall *~ConvertClass)(ConvertClass *this);
+  void (__thiscall *Destructor)(ConvertClass *this);
 };
 
 class LightConvertClass : ConvertClass
@@ -4798,7 +4832,7 @@ class FileClass
 
 struct FileClass_vtbl
 {
-  void (__thiscall *~FileClass)(FileClass *this);
+  void (__thiscall *Destructor)(FileClass *this);
   char *(__thiscall *GetFileName)(FileClass *this);
   char *(__thiscall *SetFileName)(FileClass *this, char *pSource);
   int (__thiscall *CreateFileA)(FileClass *this);
@@ -4925,7 +4959,7 @@ struct GenericNode
 
 struct GenericNode_vtbl
 {
-  void (__thiscall *~GenericNode)(GenericNode *this);
+  void (__thiscall *Destructor)(GenericNode *this);
 };
 
 struct GenericList
@@ -4937,14 +4971,14 @@ struct GenericList
 
 struct GenericList_vtbl
 {
-  void (__thiscall *~GenericList)(GenericList *this);
+  void (__thiscall *Destructor)(GenericList *this);
 };
 
 struct List_TL_INIClass_INISection_PTR_TR_ : GenericList {};
 
 struct List_TL_INIClass_INISection_PTR_TR__vtbl
 {
-  void (__thiscall *~List_TL_INIClass_INISection_PTR_TR_)(List_TL_INIClass_INISection_PTR_TR_ *this);
+  void (__thiscall *Destructor)(List_TL_INIClass_INISection_PTR_TR_ *this);
 };
 
 struct HWND__
@@ -4961,7 +4995,7 @@ struct MPTeam
 
 struct MPTeam_vtbl
 {
-  void (__thiscall *~MPTeam)(MPTeam *this);
+  void (__thiscall *Destructor)(MPTeam *this);
   bool (__thiscall *IsTeamIncluded)(MPTeam *this, int Idx);
   bool (__thiscall *SetPlayerTeam)(MPTeam *this, int IdxPlayer);
 };
@@ -5324,7 +5358,7 @@ class CommandClass
 
 struct CommandClass_vtbl
 {
-  void (__thiscall *~CommandClass)(CommandClass *this);
+  void (__thiscall *Destructor)(CommandClass *this);
   char *(__thiscall *GetName)(CommandClass *this);
   wchar_t *(__thiscall *GetUIName)(CommandClass *this);
   wchar_t *(__thiscall *GetUICategory)(CommandClass *this);
@@ -5359,7 +5393,7 @@ struct SwizzleManagerClass : ISwizzle
 
 struct SwizzleManagerClass_vtbl : ISwizzle_vtbl
 {
-  void (__thiscall *~SwizzleManagerClass)(SwizzleManagerClass *this);
+  void (__thiscall *Destructor)(SwizzleManagerClass *this);
 };
 
 union Union_PlanningTokenClass_unknown_20_88
@@ -5372,21 +5406,21 @@ struct Node_TL_INIClass_INISection_PTR_TR_ : GenericNode {};
 
 struct Node_TL_INIClass_INISection_PTR_TR__vtbl
 {
-  void (__thiscall *~Node_TL_INIClass_INISection_PTR_TR_)(Node_TL_INIClass_INISection_PTR_TR_ *this);
+  void (__thiscall *Destructor)(Node_TL_INIClass_INISection_PTR_TR_ *this);
 };
 
 struct List_TL_INIClass_INIEntry_PTR_TR_ : GenericList {};
 
 struct List_TL_INIClass_INIEntry_PTR_TR__vtbl
 {
-  void (__thiscall *~List_TL_INIClass_INIEntry_PTR_TR_)(List_TL_INIClass_INIEntry_PTR_TR_ *this);
+  void (__thiscall *Destructor)(List_TL_INIClass_INIEntry_PTR_TR_ *this);
 };
 
 struct Node_TL_INIClass_INIEntry_PTR_TR_ : GenericNode {};
 
 struct Node_TL_INIClass_INIEntry_PTR_TR__vtbl
 {
-  void (__thiscall *~Node_TL_INIClass_INIEntry_PTR_TR_)(Node_TL_INIClass_INIEntry_PTR_TR_ *this);
+  void (__thiscall *Destructor)(Node_TL_INIClass_INIEntry_PTR_TR_ *this);
 };
 
 struct INIClass_INIComment
@@ -5408,7 +5442,7 @@ struct INIClass_INIEntry : Node_TL_INIClass_INIEntry_PTR_TR_
 
 struct INIClass_INIEntry_vtbl
 {
-  void (__thiscall *~INIClass_INIEntry)(INIClass_INIEntry *this);
+  void (__thiscall *Destructor)(INIClass_INIEntry *this);
 };
 
 struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement
@@ -5437,7 +5471,7 @@ struct INIClass_INISection : Node_TL_INIClass_INISection_PTR_TR_
 
 struct INIClass_INISection_vtbl
 {
-  void (__thiscall *~INIClass_INISection)(INIClass_INISection *this);
+  void (__thiscall *Destructor)(INIClass_INISection *this);
 };
 
 struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement
@@ -5542,7 +5576,7 @@ struct INIClass
 
 struct INIClass_vtbl
 {
-  void (__thiscall *~INIClass)(INIClass *this);
+  void (__thiscall *Destructor)(INIClass *this);
 };
 
 struct __declspec(align(4)) CCINIClass : INIClass
@@ -5553,7 +5587,7 @@ struct __declspec(align(4)) CCINIClass : INIClass
 
 struct CCINIClass_vtbl
 {
-  void (__thiscall *~CCINIClass)(CCINIClass *this);
+  void (__thiscall *Destructor)(CCINIClass *this);
 };
 
 struct VectorBase_TagClass_PTR : VectorBase_PTR
@@ -6157,7 +6191,7 @@ class Surface
 
 struct Surface_vtbl
 {
-  void (__thiscall *~Surface)(Surface *this, bool bUnk);
+  void (__thiscall *Destructor)(Surface *this, bool bUnk);
   bool (__thiscall *CopyFromWhole)(Surface *this, Surface *pSrc, bool bUnk1, bool bUnk2);
   bool (__thiscall *CopyFromPart)(Surface *this, RectangleStruct *pClipRect, Surface *pSrc, RectangleStruct *pSrcRect, bool bUnk1, bool bUnk2);
   bool (__thiscall *CopyFrom)(Surface *this, RectangleStruct *pClipRect, RectangleStruct *pClipRect2, Surface *pSrc, RectangleStruct *pDestRect, RectangleStruct *pSrcRect, bool bUnk1, bool bUnk2);
@@ -6703,7 +6737,7 @@ class MPGameModeClass
 
 struct MPGameModeClass_vtbl
 {
-  void (__thiscall *~MPGameModeClass)(MPGameModeClass *this);
+  void (__thiscall *Destructor)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_04)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_08)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_0C)(MPGameModeClass *this, unsigned int dwUnk);
@@ -7719,7 +7753,7 @@ class AbstractClass : IPersistStream, IRTTITypeInfo, INoticeSink, INoticeSource
 
 struct AbstractClass_vtbl : IPersistStream_vtbl
 {
-  void (__thiscall *~AbstractClass)(AbstractClass *this);
+  void (__thiscall *Destructor)(AbstractClass *this);
   void (__thiscall *Init)(AbstractClass *this);
   void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *pAbstract, bool Removed);
   AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
@@ -8689,14 +8723,6 @@ class TEventClass : AbstractClass
 };
 
 struct TEventClass_vtbl : AbstractClass_vtbl {};
-
-class WaypointPathClass : AbstractClass
-{
-  int CurrentWaypointIndex;
-  DynamicVectorClass_WaypointClass Waypoints;
-};
-
-struct WaypointPathClass_vtbl : AbstractClass_vtbl {};
 
 class AirstrikeClass : AbstractClass
 {
@@ -10243,7 +10269,7 @@ class LinkClass
 
 struct LinkClass_vtbl
 {
-  void (__thiscall *~LinkClass)(LinkClass *this);
+  void (__thiscall *Destructor)(LinkClass *this);
   LinkClass *(__thiscall *GetNext)(LinkClass *this);
   LinkClass *(__thiscall *GetPrev)(LinkClass *this);
   LinkClass *(__thiscall *Add)(LinkClass *this, LinkClass *pAnother);
@@ -10307,7 +10333,7 @@ struct GScreenClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10428,7 +10454,7 @@ struct MapClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10447,7 +10473,7 @@ struct MapClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10499,7 +10525,7 @@ struct DisplayClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10518,7 +10544,7 @@ struct DisplayClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10597,7 +10623,7 @@ struct RadarClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10616,7 +10642,7 @@ struct RadarClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10671,7 +10697,7 @@ struct PowerClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10690,7 +10716,7 @@ struct PowerClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10759,7 +10785,7 @@ struct SidebarClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10778,7 +10804,7 @@ struct SidebarClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10829,7 +10855,7 @@ struct TabClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10848,7 +10874,7 @@ struct TabClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10900,7 +10926,7 @@ struct ScrollClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10919,7 +10945,7 @@ struct ScrollClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -10968,7 +10994,7 @@ struct MouseClass_vtbl
   unsigned int (__stdcall *AddRef)(IUnknown *this);
   unsigned int (__stdcall *Release)(IUnknown *this);
   int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
-  void (__thiscall *~GScreenClass)(GScreenClass *this);
+  void (__thiscall *Destructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -10987,7 +11013,7 @@ struct MouseClass_vtbl
   bool (__thiscall *RestoreCursor)(GScreenClass *this);
   void (__thiscall *UpdateCursorMinimapState)(GScreenClass *this, bool MiniMap);
   void (__thiscall *AllocateCells)(MapClass *this);
-  void (__thiscall *~Cells)(MapClass *this);
+  void (__thiscall *DestructCells)(MapClass *this);
   void (__thiscall *ConstructCells)(MapClass *this);
   void (__thiscall *PointerGotInvalid)(MapClass *this, AbstractClass *pPtr, bool bUnk);
   bool (__thiscall *DraggingInProgress)(MapClass *this);
@@ -11734,7 +11760,7 @@ class LocomotionClass : IPersistStream, ILocomotion
 
 struct LocomotionClass_vtbl : IPersistStream
 {
-  void (__thiscall *~LocomotionClass)(LocomotionClass *this);
+  void (__thiscall *Destructor)(LocomotionClass *this);
   int (__thiscall *Size)(LocomotionClass *this);
 };
 
@@ -11964,7 +11990,7 @@ struct WWMouseClass
 
 struct WWMouseClass_vtbl
 {
-  void (__thiscall *~WWMouseClass)(WWMouseClass *this);
+  void (__thiscall *Destructor)(WWMouseClass *this);
   void (__thiscall *Draw)(WWMouseClass *this, Point2D *pCoords, SHPStruct *pImage, int IdxFrame);
   bool (__thiscall *IsRefCountNegative)(WWMouseClass *this);
   void (__thiscall *HideCursor)(WWMouseClass *this);
@@ -12085,7 +12111,7 @@ struct LoadOptionsClass
 
 struct LoadOptionsClass_vtbl
 {
-  void (__thiscall *~LoadOptionsClass)(LoadOptionsClass *this);
+  void (__thiscall *Destructor)(LoadOptionsClass *this);
   bool (__thiscall *LoadMission)(LoadOptionsClass *this, char *lpMultiByteStr);
   bool (__thiscall *SaveMission)(LoadOptionsClass *this, char *lpMultiByteStr, wchar_t *pSource);
   bool (__thiscall *DeleteMission)(LoadOptionsClass *this, char *lpFileName);
@@ -12233,7 +12259,7 @@ struct ToolTipManager
 
 struct ToolTipManager_vtbl
 {
-  void (__thiscall *~ToolTipManager)(ToolTipManager *this);
+  void (__thiscall *Destructor)(ToolTipManager *this);
   bool (__thiscall *Update)(ToolTipManager *this, ToolTipManagerData *pFrom);
   void (__thiscall *MarkToRedraw)(ToolTipManager *this, ToolTipManagerData *pFrom);
   void (__thiscall *Draw)(ToolTipManager *this, bool OnSidebar);
@@ -12249,7 +12275,7 @@ struct CCToolTip : ToolTipManager
 
 struct CCToolTip_vtbl
 {
-  void (__thiscall *~CCToolTip)(CCToolTip *this);
+  void (__thiscall *Destructor)(CCToolTip *this);
   bool (__thiscall *Update)(CCToolTip *this, ToolTipManagerData *pHeight);
   void (__thiscall *MarkToRedraw)(CCToolTip *this, ToolTipManagerData *pFrom);
   void (__thiscall *Draw)(CCToolTip *this, bool OnSidebar);
@@ -13684,7 +13710,7 @@ struct BitFont
 
 struct BitFont_vtbl
 {
-  void (__thiscall *~BitFont)(BitFont *this);
+  void (__thiscall *Destructor)(BitFont *this);
 };
 
 struct BitFont_InternalData
@@ -14976,6 +15002,12 @@ struct OwnerDrawDialogElement
   int Extra[62];
 };
 
+struct TClassFactory
+{
+  TClassFactory_vtbl *__vftable;
+  int nRefCount;
+};
+
 struct TClassFactory_vtbl
 {
   HRESULT (__stdcall *QueryInterface)(TClassFactory *this, _GUID *pIid, void **ppvObject);
@@ -14983,22 +15015,6 @@ struct TClassFactory_vtbl
   unsigned int (__stdcall *Release)(TClassFactory *this);
   HRESULT (__stdcall *CreateInstance)(TClassFactory *this, IUnknown *pUnkOuter, _GUID *pIid, void **ppvObject);
   HRESULT (__stdcall *LockServer)(TClassFactory *this, int fLock);
-};
-
-struct TClassFactory
-{
-  TClassFactory_vtbl *__vftable;
-  int nRefCount;
-};
-
-struct GraphicMenuItem_vtbl
-{
-  GraphicMenuItem *(__thiscall *ScalarDeletingDestructor)(GraphicMenuItem *this, char a2);
-  char (__thiscall *MatchKey)(GraphicMenuItem *this, int Key);
-  char (__thiscall *HitTest)(GraphicMenuItem *this, Point2D *pPoint);
-  void (__thiscall *vt_entry_C)(GraphicMenuItem *this, void *pOwner);
-  void (__thiscall *vt_entry_10)(GraphicMenuItem *this, char Value);
-  void (__thiscall *vt_entry_14)(GraphicMenuItem *this, char Value);
 };
 
 struct GraphicMenuItem
@@ -15012,9 +15028,25 @@ struct GraphicMenuItem
   int Enabled;
 };
 
+struct GraphicMenuItem_vtbl
+{
+  GraphicMenuItem *(__thiscall *ScalarDeletingDestructor)(GraphicMenuItem *this, char a2);
+  char (__thiscall *MatchKey)(GraphicMenuItem *this, int Key);
+  char (__thiscall *HitTest)(GraphicMenuItem *this, Point2D *pPoint);
+  void (__thiscall *vt_entry_C)(GraphicMenuItem *this, void *pOwner);
+  void (__thiscall *vt_entry_10)(GraphicMenuItem *this, char Value);
+  void (__thiscall *vt_entry_14)(GraphicMenuItem *this, char Value);
+};
+
 struct GraphicMenu_vtbl
 {
   GraphicMenu *(__thiscall *ScalarDeletingDestructor)(GraphicMenu *this, char a2);
+};
+
+struct ReferenceCounted
+{
+  ReferenceCounted_vtbl *__vftable;
+  int ReferenceCount;
 };
 
 struct ReferenceCounted_vtbl
@@ -15024,21 +15056,15 @@ struct ReferenceCounted_vtbl
   int (__thiscall *Release)(ReferenceCounted *this);
 };
 
-struct ReferenceCounted
+struct rc_ptr_base
 {
-  ReferenceCounted_vtbl *__vftable;
-  int ReferenceCount;
+  rc_ptr_base_vtbl *__vftable;
+  ReferenceCounted *pValue;
 };
 
 struct rc_ptr_base_vtbl
 {
   rc_ptr_base *(__thiscall *ScalarDeletingDestructor)(rc_ptr_base *this, char a2);
-};
-
-struct rc_ptr_base
-{
-  rc_ptr_base_vtbl *__vftable;
-  ReferenceCounted *pValue;
 };
 
 struct rc_ptr_PlayerProfile_PTR : rc_ptr_base {};
@@ -15110,19 +15136,19 @@ struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl : VectorBase_rc_ptr_WDTTerritory
 struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR : VectorClass_rc_ptr_WDTTerritory_PTR, DynamicAddon {};
 struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl : VectorClass_rc_ptr_WDTTerritory_PTR_vtbl {};
 
+struct VectorCursor
+{
+  VectorCursor_vtbl *__vftable;
+  void *pVector;
+  int Index;
+};
+
 struct VectorCursor_vtbl
 {
   VectorCursor *(__thiscall *ScalarDeletingDestructor)(VectorCursor *this, char a2);
   bool (__thiscall *IsValid)(VectorCursor *this);
   VectorCursor *(__thiscall *operator_plusplus)(VectorCursor *this);
   VectorCursor *(__thiscall *operator_minusminus)(VectorCursor *this);
-};
-
-struct VectorCursor
-{
-  VectorCursor_vtbl *__vftable;
-  void *pVector;
-  int Index;
 };
 
 struct VectorCursor_rc_ptr_WDT_Conflict_PTR : VectorCursor {};
@@ -15194,3 +15220,189 @@ struct VectorCursor_TRect_int_VectorClass_TRect_int : VectorCursor {};
 struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl : VectorCursor_vtbl {};
 struct VectorCursor_unsigned_int : VectorCursor {};
 struct VectorCursor_unsigned_int_vtbl : VectorCursor_vtbl {};
+
+struct VectorBase_WDT_Map_AnimationPalette_PTR : VectorBase_PTR
+{
+  AnimationPalette **Items;
+};
+struct VectorBase_WDT_Map_AnimationPalette_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_WDT_Map_AnimationPalette_PTR : VectorBase_WDT_Map_AnimationPalette_PTR, VectorAddon {};
+struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl : VectorBase_WDT_Map_AnimationPalette_PTR_vtbl {};
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR : VectorClass_WDT_Map_AnimationPalette_PTR, DynamicAddon {};
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl : VectorClass_WDT_Map_AnimationPalette_PTR_vtbl {};
+
+struct VectorBase_WDT_Centroid : VectorBase_ELE
+{
+  WDT_Centroid *Items;
+};
+struct VectorBase_WDT_Centroid_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_WDT_Centroid : VectorBase_WDT_Centroid, VectorAddon {};
+struct VectorClass_WDT_Centroid_vtbl : VectorBase_WDT_Centroid_vtbl {};
+
+struct WDT_GameOption : ReferenceCounted {};
+
+struct WDT_GameOption_vtbl : ReferenceCounted_vtbl
+{
+  int (__thiscall *vt_entry_0C)(WDT_GameOption *this);
+  int (__thiscall *vt_entry_10)(WDT_GameOption *this);
+};
+
+struct WDT_ValueGameOption_unsigned_char : WDT_GameOption
+{
+  int Unknown_008;
+  int Unknown_00C;
+  int Unknown_010;
+  StringClass Unknown_014;
+};
+
+struct WDT_ValueGameOption_unsigned_char_vtbl : WDT_GameOption_vtbl {};
+
+struct WDT_FlagGameOption : WDT_GameOption
+{
+  int Unknown_008;
+  int Unknown_00C;
+  int Unknown_010;
+  StringClass Unknown_014;
+  StringClass Unknown_018;
+};
+
+struct WDT_FlagGameOption_vtbl : WDT_GameOption_vtbl {};
+
+struct WDT_MapSizeGameOption : WDT_GameOption
+{
+  int Unknown_008;
+};
+
+struct WDT_MapSizeGameOption_vtbl : WDT_GameOption_vtbl {};
+
+struct WDT_Conflict : ReferenceCounted
+{
+  rc_ptr_WDTTerritory_PTR Territory;
+};
+
+struct WDT_Conflict_vtbl : ReferenceCounted_vtbl {};
+
+struct WDT_History : ReferenceCounted
+{
+  rc_ptr_WDTState_PTR State;
+};
+
+struct WDT_History_vtbl : ReferenceCounted_vtbl {};
+
+struct WDT_CampaignProperties : ReferenceCounted
+{
+  rc_ptr_WDTState_PTR State;
+  WideStringClass Unknown_010;
+  WideStringClass Unknown_014;
+};
+
+struct WDT_CampaignProperties_vtbl : ReferenceCounted_vtbl {};
+
+struct WDT_Campaign : ReferenceCounted
+{
+  rc_ptr_WDT_CampaignProperties_PTR Properties;
+  rc_ptr_WDT_History_PTR History;
+  VectorClass_rc_ptr_WDT_Conflict_PTR Conflicts;
+  char Unknown_028[32];
+  StringClass Unknown_048;
+};
+
+struct WDT_Campaign_vtbl : ReferenceCounted_vtbl {};
+
+struct WDT_Map : ReferenceCounted
+{
+  int Unknown_008;
+  int Unknown_00C;
+  int Unknown_010;
+  void *Unknown_014;
+  int Unknown_018;
+  int Unknown_01C;
+  int Unknown_020;
+  void *Unknown_024;
+  StringClass Unknown_028;
+  DynamicVectorClass_rc_ptr_WDT_Territory_PTR Territories;
+  int Unknown_044;
+  int Unknown_048;
+  char Unknown_04C[24];
+  int Unknown_064;
+  unsigned char Unknown_068;
+  char Unknown_069[3];
+  int Unknown_06C;
+  int Unknown_070;
+  unsigned char Unknown_074;
+  char Unknown_075[3];
+  void *Unknown_078;
+  char Unknown_07C[64];
+  DynamicVectorClass_WDT_Map_AnimationPalette_PTR Animations;
+};
+
+struct WDT_Map_vtbl : ReferenceCounted_vtbl {};
+
+struct WDTTerritory : ReferenceCounted
+{
+  int Unknown_008;
+  short Unknown_00C;
+  unsigned char Unknown_00E;
+  unsigned char Unknown_00F;
+  short Unknown_010;
+  unsigned char Unknown_012;
+  unsigned char Unknown_013;
+  unsigned char Unknown_014;
+  char Unknown_015[7];
+  unsigned char Unknown_01C;
+  unsigned char Unknown_01D;
+  unsigned char Unknown_01E;
+  unsigned char Unknown_01F;
+  char Unknown_020[24];
+  int Unknown_038;
+  int Unknown_03C;
+};
+
+struct WDTTerritory_vtbl : ReferenceCounted_vtbl {};
+
+struct WDTState : ReferenceCounted
+{
+  void *Unknown_008;
+  void *Unknown_00C;
+  void *Unknown_010;
+  unsigned char Unknown_014;
+  char Unknown_015[3];
+  int Unknown_018;
+  int Unknown_01C;
+  int Unknown_020;
+  int Unknown_024;
+  int Unknown_028;
+  DynamicVectorClass_rc_ptr_WDTTerritory_PTR Territories;
+  void **Unknown_044;
+};
+
+struct WDTState_vtbl : ReferenceCounted_vtbl {};
+
+struct WDT_State : ReferenceCounted
+{
+  rc_ptr_WDTState_PTR State;
+  int Unknown_010;
+};
+
+struct WDT_State_vtbl : ReferenceCounted_vtbl {};
+
+struct WDT_Voices_Anim : ReferenceCounted
+{
+  int Unknown_008;
+  unsigned char Unknown_00C;
+  char Unknown_00D[3];
+  int Unknown_010;
+  int Unknown_014;
+  int Unknown_018;
+  void *Unknown_01C;
+};
+
+struct WDT_Voices_Anim_vtbl : ReferenceCounted_vtbl
+{
+  int (__thiscall *vt_entry_0C)(WDT_Voices_Anim *this);
+  int (__thiscall *vt_entry_10)(WDT_Voices_Anim *this);
+  int (__thiscall *vt_entry_14)(WDT_Voices_Anim *this);
+  int (__thiscall *vt_entry_18)(WDT_Voices_Anim *this);
+  int (__thiscall *vt_entry_1C)(WDT_Voices_Anim *this);
+  int (__thiscall *vt_entry_20)(WDT_Voices_Anim *this);
+};
