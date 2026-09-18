@@ -6,6 +6,12 @@
 #define __int32 int
 #define __int64 long long
 typedef int HRESULT;
+typedef void *HWND;
+typedef unsigned int UINT;
+typedef unsigned int WPARAM;
+typedef int LPARAM;
+typedef unsigned long COLORREF;
+typedef int (__stdcall *WNDPROC)(void *hWnd, unsigned int Msg, unsigned int wParam, int lParam);
 
 struct LimitedRegister;
 struct ExtendedRegister;
@@ -417,9 +423,6 @@ struct WWUIListBoxTextEntry;
 struct WWUIComboBoxItem;
 struct WWMovieHandle;
 struct WWMovieHandle_vtbl;
-
-// TODO STRUCT
-
 struct VectorBase;
 struct VectorBase_vtbl;
 struct VectorBase_ELE;
@@ -1435,7 +1438,6 @@ struct VectorClass_WDT_Map_AnimationPalette_PTR;
 struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
 struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR;
 struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
-
 struct ReferenceCounted;
 struct ReferenceCounted_vtbl;
 struct rc_ptr_base;
@@ -1500,7 +1502,6 @@ struct VectorCursor_rc_ptr_WDT_GameOption_PTR;
 struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl;
 struct VectorCursor_rc_ptr_WDT_Territory_PTR;
 struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl;
-
 struct TRect_int;
 struct MSAnim;
 struct MSAnimEntry;
@@ -1547,8 +1548,846 @@ struct VectorCursor_TRect_int_VectorClass_TRect_int;
 struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl;
 struct VectorCursor_unsigned_int;
 struct VectorCursor_unsigned_int_vtbl;
+struct AllToCheerCommandClass;
+struct AllToCheerCommandClass_vtbl; // 0x7EBA54
+struct AllianceCommandClass;
+struct AllianceCommandClass_vtbl; // 0x7EBB44
+struct AnimFile;
+struct AnimFile_vtbl; // 0x7E3584
+struct ApplicationClass;
+struct ApplicationClass_vtbl; // 0x7E36D4
+struct Base64Pipe;
+struct Base64Pipe_vtbl; // 0x7EB774
+struct Base64Straw;
+struct Base64Straw_vtbl; // 0x7EB764
+struct BeaconPlacementCommandClass;
+struct BeaconPlacementCommandClass_vtbl; // 0x7EBBBC
+struct BinkMovieHandle;
+struct BinkMovieHandle_vtbl; // 0x7EE154
+struct BlitPlainXlatAlpha_unsigned_short;
+struct BlitPlainXlatAlpha_unsigned_short_vtbl; // 0x7E57F8
+struct BlitPlainXlatZReadWrite_unsigned_short;
+struct BlitPlainXlatZReadWrite_unsigned_short_vtbl; // 0x7E58A0
+struct BlitPlainXlatZRead_unsigned_short;
+struct BlitPlainXlatZRead_unsigned_short_vtbl; // 0x7E5990
+struct BlitPlainXlat_unsigned_char;
+struct BlitPlainXlat_unsigned_char_vtbl; // 0x7E5B70
+struct BlitPlainXlat_unsigned_short;
+struct BlitPlainXlat_unsigned_short_vtbl; // 0x7E5A38
+struct BlitPlain_unsigned_char;
+struct BlitPlain_unsigned_char_vtbl; // 0x7F7BDC
+struct BlitPlain_unsigned_short;
+struct BlitPlain_unsigned_short_vtbl; // 0x7F7BC4
+struct BlitTransDarkenZReadWrite_unsigned_short;
+struct BlitTransDarkenZReadWrite_unsigned_short_vtbl; // 0x7E5858
+struct BlitTransDarkenZRead_unsigned_short;
+struct BlitTransDarkenZRead_unsigned_short_vtbl; // 0x7E5948
+struct BlitTransDarken_unsigned_short;
+struct BlitTransDarken_unsigned_short_vtbl; // 0x7E59F0
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short;
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5648
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short;
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl; // 0x7E55D0
+struct BlitTransLucent25AlphaZRead_unsigned_short;
+struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl; // 0x7E5690
+struct BlitTransLucent25Alpha_unsigned_short;
+struct BlitTransLucent25Alpha_unsigned_short_vtbl; // 0x7E5780
+struct BlitTransLucent25ZReadWarp_unsigned_short;
+struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl; // 0x7E58B8
+struct BlitTransLucent25ZReadWrite_unsigned_short;
+struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl; // 0x7E5810
+struct BlitTransLucent25ZRead_unsigned_short;
+struct BlitTransLucent25ZRead_unsigned_short_vtbl; // 0x7E5900
+struct BlitTransLucent25_unsigned_short;
+struct BlitTransLucent25_unsigned_short_vtbl; // 0x7E59A8
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short;
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5660
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short;
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl; // 0x7E55E8
+struct BlitTransLucent50AlphaZRead_unsigned_short;
+struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl; // 0x7E56A8
+struct BlitTransLucent50Alpha_unsigned_short;
+struct BlitTransLucent50Alpha_unsigned_short_vtbl; // 0x7E5798
+struct BlitTransLucent50ZReadWarp_unsigned_short;
+struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl; // 0x7E58D0
+struct BlitTransLucent50ZReadWrite_unsigned_short;
+struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl; // 0x7E5828
+struct BlitTransLucent50ZRead_unsigned_short;
+struct BlitTransLucent50ZRead_unsigned_short_vtbl; // 0x7E5918
+struct BlitTransLucent50_unsigned_short;
+struct BlitTransLucent50_unsigned_short_vtbl; // 0x7E59C0
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short;
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5678
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short;
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5600
+struct BlitTransLucent75AlphaZRead_unsigned_short;
+struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl; // 0x7E56C0
+struct BlitTransLucent75Alpha_unsigned_short;
+struct BlitTransLucent75Alpha_unsigned_short_vtbl; // 0x7E57B0
+struct BlitTransLucent75ZReadWarp_unsigned_short;
+struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl; // 0x7E58E8
+struct BlitTransLucent75ZReadWrite_unsigned_short;
+struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl; // 0x7E5840
+struct BlitTransLucent75ZRead_unsigned_short;
+struct BlitTransLucent75ZRead_unsigned_short_vtbl; // 0x7E5930
+struct BlitTransLucent75_unsigned_short;
+struct BlitTransLucent75_unsigned_short_vtbl; // 0x7E59D8
+struct BlitTransRemapDest_unsigned_char;
+struct BlitTransRemapDest_unsigned_char_vtbl; // 0x7E5B28
+struct BlitTransRemapXlat_unsigned_char;
+struct BlitTransRemapXlat_unsigned_char_vtbl; // 0x7E5B10
+struct BlitTransXlatAlphaZReadWrite_unsigned_short;
+struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5630
+struct BlitTransXlatAlphaZRead_unsigned_short;
+struct BlitTransXlatAlphaZRead_unsigned_short_vtbl; // 0x7E56F0
+struct BlitTransXlatAlpha_unsigned_short;
+struct BlitTransXlatAlpha_unsigned_short_vtbl; // 0x7E57E0
+struct BlitTransXlatMultWriteAlpha_unsigned_short;
+struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl; // 0x7E5750
+struct BlitTransXlatWriteAlpha_unsigned_short;
+struct BlitTransXlatWriteAlpha_unsigned_short_vtbl; // 0x7E5768
+struct BlitTransXlatZReadWrite_unsigned_short;
+struct BlitTransXlatZReadWrite_unsigned_short_vtbl; // 0x7E5888
+struct BlitTransXlatZRead_unsigned_short;
+struct BlitTransXlatZRead_unsigned_short_vtbl; // 0x7E5978
+struct BlitTransXlat_unsigned_char;
+struct BlitTransXlat_unsigned_char_vtbl; // 0x7E5B58
+struct BlitTransXlat_unsigned_short;
+struct BlitTransXlat_unsigned_short_vtbl; // 0x7E5A20
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short;
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5618
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short;
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl; // 0x7E56D8
+struct BlitTransZRemapXlatAlpha_unsigned_short;
+struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl; // 0x7E57C8
+struct BlitTransZRemapXlatZReadWrite_unsigned_short;
+struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl; // 0x7E5870
+struct BlitTransZRemapXlatZRead_unsigned_short;
+struct BlitTransZRemapXlatZRead_unsigned_short_vtbl; // 0x7E5960
+struct BlitTransZRemapXlat_unsigned_char;
+struct BlitTransZRemapXlat_unsigned_char_vtbl; // 0x7E5B40
+struct BlitTransZRemapXlat_unsigned_short;
+struct BlitTransZRemapXlat_unsigned_short_vtbl; // 0x7E5A08
+struct BlitTrans_unsigned_char;
+struct BlitTrans_unsigned_char_vtbl; // 0x7F7C0C
+struct BlitTrans_unsigned_short;
+struct BlitTrans_unsigned_short_vtbl; // 0x7F7BF4
+struct BlitTranslucent50NonzeroAlpha_unsigned_short;
+struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl; // 0x7E5720
+struct BlitTranslucent50ZeroAlpha_unsigned_short;
+struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl; // 0x7E5708
+struct BlitTranslucentWriteAlpha_unsigned_short;
+struct BlitTranslucentWriteAlpha_unsigned_short_vtbl; // 0x7E5738
+struct BlowPipe;
+struct BlowPipe_vtbl; // 0x7EFDC8
+struct BlowStraw;
+struct BlowStraw_vtbl; // 0x7EDF40
+struct BufferPipe;
+struct BufferPipe_vtbl; // 0x7E6200
+struct BufferStraw;
+struct BufferStraw_vtbl; // 0x7E61E0
+struct CComObject_CChatEventSink;
+struct CComObject_CChatEventSink_vtbl; // 0x7F76B4
+struct CComObject_CDownloadEventSink;
+struct CComObject_CDownloadEventSink_vtbl; // 0x7F78E4
+struct CComObject_CNetUtilEventSink;
+struct CComObject_CNetUtilEventSink_vtbl; // 0x7F766C
+struct CD;
+struct CD_vtbl; // 0x7E4C30
+struct CStreamClass;
+struct CStreamClass_vtbl; // 0x7E5DAC
+struct CacheStraw;
+struct CacheStraw_vtbl; // 0x7EB754
+struct CampaignEndScoreClass;
+struct CampaignEndScoreClass_vtbl; // 0x7E4AB8
+struct CampaignScoreClass;
+struct CampaignScoreClass_vtbl; // 0x7E4AAC
+struct CarryoverClass;
+struct CarryoverClass_vtbl; // 0x7E4C04
+struct CenterBaseCommandClass;
+struct CenterBaseCommandClass_vtbl; // 0x7EBB1C
+struct CenterREventCommandClass;
+struct CenterREventCommandClass_vtbl; // 0x7EBBE4
+struct CenterTeamCommandClass;
+struct CenterTeamCommandClass_vtbl; // 0x7EBEB4
+struct CenterViewCommandClass;
+struct CenterViewCommandClass_vtbl; // 0x7EBAF4
+struct CombatantSelectCommandClass;
+struct CombatantSelectCommandClass_vtbl; // 0x7EB98C
+struct ConnectionPointClass;
+struct ConnectionPointClass_vtbl; // 0x7E5CE4
+struct CreateGameDialogControl;
+struct CreateGameDialogControl_vtbl; // 0x7F788C
+struct CreateTeamCommandClass;
+struct CreateTeamCommandClass_vtbl; // 0x7EB84C
+struct CursorPositionCommandClass;
+struct CursorPositionCommandClass_vtbl; // 0x7EBF54
+struct DeleteCommandClass;
+struct DeleteCommandClass_vtbl; // 0x7EBF7C
+struct DeployCommandClass;
+struct DeployCommandClass_vtbl; // 0x7EBA2C
+struct Dial8Class;
+struct Dial8Class_vtbl; // 0x7E5E3C
+struct DisplayClass_TacticalClass;
+struct DisplayClass_TacticalClass_vtbl; // 0x7E608C
+struct DynamicVectorClass_AcceleratorTracker;
+struct DynamicVectorClass_AcceleratorTracker_vtbl; // 0x7EECCC
+struct DynamicVectorClass_ButtonFadeEffect_PTR;
+struct DynamicVectorClass_ButtonFadeEffect_PTR_vtbl; // 0x7E856C
+struct DynamicVectorClass_CoopCampaignClass_PTR;
+struct DynamicVectorClass_CoopCampaignClass_PTR_vtbl; // 0x7EE350
+struct DynamicVectorClass_CrossDissolveEffect_PTR;
+struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl; // 0x7E854C
+struct DynamicVectorClass_DirtyAreaStruct;
+struct DynamicVectorClass_DirtyAreaStruct_vtbl; // 0x7F429C
+struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR;
+struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl; // 0x7F4860
+struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR;
+struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl; // 0x7EAAC4
+struct DynamicVectorClass_DistributionObject_CellClass_PTR;
+struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl; // 0x7E928C
+struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR;
+struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl; // 0x7E5BE4
+struct DynamicVectorClass_EgoClass_PTR;
+struct DynamicVectorClass_EgoClass_PTR_vtbl; // 0x7E86DC
+struct DynamicVectorClass_GlobalPacketType_PTR;
+struct DynamicVectorClass_GlobalPacketType_PTR_vtbl; // 0x7F11D4
+struct DynamicVectorClass_HSVClass;
+struct DynamicVectorClass_HSVClass_vtbl; // 0x7EF750
+struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct;
+struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl; // 0x7ED520
+struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int;
+struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl; // 0x7ED540
+struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR;
+struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl; // 0x7EA7B4
+struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR;
+struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl; // 0x7ECBDC
+struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR;
+struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl; // 0x7ECFBC
+struct DynamicVectorClass_MPlayerScoreType_PTR;
+struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3F0
+struct DynamicVectorClass_MSSfx_PTR;
+struct DynamicVectorClass_MSSfx_PTR_vtbl; // 0x7EEBE4
+struct DynamicVectorClass_MSTextEntry_PTR;
+struct DynamicVectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB34
+struct DynamicVectorClass_MapRegionClass_PTR;
+struct DynamicVectorClass_MapRegionClass_PTR_vtbl; // 0x7ED858
+struct DynamicVectorClass_MapSelection_PTR;
+struct DynamicVectorClass_MapSelection_PTR_vtbl; // 0x7EEB14
+struct DynamicVectorClass_MapStage_PTR;
+struct DynamicVectorClass_MapStage_PTR_vtbl; // 0x7EEA94
+struct DynamicVectorClass_MixFileClass_PTR;
+struct DynamicVectorClass_MixFileClass_PTR_vtbl; // 0x7E1A44
+struct DynamicVectorClass_MovieHandle_PTR;
+struct DynamicVectorClass_MovieHandle_PTR_vtbl; // 0x7F6984
+struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR;
+struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl; // 0x7F0C2C
+struct DynamicVectorClass_PhoneEntryClass_PTR;
+struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl; // 0x7F11B4
+struct DynamicVectorClass_RGBClass;
+struct DynamicVectorClass_RGBClass_vtbl; // 0x7F022C
+struct DynamicVectorClass_ShadowControlClass_PTR;
+struct DynamicVectorClass_ShadowControlClass_PTR_vtbl; // 0x7F42DC
+struct DynamicVectorClass_SubTitle_PTR;
+struct DynamicVectorClass_SubTitle_PTR_vtbl; // 0x7F3F6C
+struct DynamicVectorClass_UndoInfoStruct;
+struct DynamicVectorClass_UndoInfoStruct_vtbl; // 0x7F327C
+struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR;
+struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl; // 0x7F7A1C
+struct DynamicVectorClass_Wstring;
+struct DynamicVectorClass_Wstring_vtbl; // 0x7F12B4
+struct DynamicVectorClass__DDSURFACEDESC_PTR;
+struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5E0C
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR;
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED94C
+struct DynamicVectorClass_tConnInfoStruct_PTR;
+struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78C4
+struct DynamicVectorClass_tagCONNECTDATA;
+struct DynamicVectorClass_tagCONNECTDATA_vtbl; // 0x7E5CC4
+struct EnumConnectionPointsClass;
+struct EnumConnectionPointsClass_vtbl; // 0x7E5D28
+struct EnumConnectionsClass;
+struct EnumConnectionsClass_vtbl; // 0x7E5CA4
+struct FilePipe;
+struct FilePipe_vtbl; // 0x7E4DA0
+struct FileStraw;
+struct FileStraw_vtbl; // 0x7E4D90
+struct FollowCommandClass;
+struct FollowCommandClass_vtbl; // 0x7EBDC4
+struct GuardCommandClass;
+struct GuardCommandClass_vtbl; // 0x7EBAA4
+struct HealthNavCommandClass;
+struct HealthNavCommandClass_vtbl; // 0x7EB93C
+struct Initializer_FreeForAll;
+struct Initializer_FreeForAll_vtbl; // 0x7EEE8C
+struct Initializer_MPCooperative;
+struct Initializer_MPCooperative_vtbl; // 0x7EEE80
+struct Initializer_MultiplayerBattle;
+struct Initializer_MultiplayerBattle_vtbl; // 0x7EEEBC
+struct Initializer_MultiplayerManBattle;
+struct Initializer_MultiplayerManBattle_vtbl; // 0x7EEEB0
+struct Initializer_MultiplayerSiege;
+struct Initializer_MultiplayerSiege_vtbl; // 0x7EEEA4
+struct Initializer_UnholyAlliance;
+struct Initializer_UnholyAlliance_vtbl; // 0x7EEE98
+struct LCWPipe;
+struct LCWPipe_vtbl; // 0x7ECF2C
+struct LCWStraw;
+struct LCWStraw_vtbl; // 0x7ECF44
+struct LZOPipe;
+struct LZOPipe_vtbl; // 0x7ED37C
+struct LZOStraw;
+struct LZOStraw_vtbl; // 0x7ED394
+struct MPBattleClass;
+struct MPBattleClass_vtbl; // 0x7EE184
+struct MPCombatTeam;
+struct MPCombatTeam_vtbl; // 0x7EE258
+struct MPCooperative;
+struct MPCooperative_vtbl; // 0x7EE27C
+struct MPFreeForAllClass;
+struct MPFreeForAllClass_vtbl; // 0x7EE424
+struct MPGameModeClass_InitializerBase;
+struct MPGameModeClass_InitializerBase_vtbl; // 0x7EEE74
+struct MPManBattleClass;
+struct MPManBattleClass_vtbl; // 0x7EE50C
+struct MPMegawealthClass;
+struct MPMegawealthClass_vtbl; // 0x7EE5F4
+struct MPObserverTeam;
+struct MPObserverTeam_vtbl; // 0x7EE6C8
+struct MPSiegeAttackerTeam;
+struct MPSiegeAttackerTeam_vtbl; // 0x7EE7F4
+struct MPSiegeClass;
+struct MPSiegeClass_vtbl; // 0x7EE6FC
+struct MPSiegeDefenderTeam;
+struct MPSiegeDefenderTeam_vtbl; // 0x7EE7E4
+struct MPUnholyAllianceClass;
+struct MPUnholyAllianceClass_vtbl; // 0x7EE814
+struct MSBinkAnim;
+struct MSBinkAnim_vtbl; // 0x7EE988
+struct MSBitPrintAnim;
+struct MSBitPrintAnim_vtbl; // 0x7EE9D8
+struct MSEngine;
+struct MSEngine_vtbl; // 0x7EEBD4
+struct MSFadeAnim;
+struct MSFadeAnim_vtbl; // 0x7EE938
+struct MSFont;
+struct MSFont_vtbl; // 0x7EEC64
+struct MSFrameAnim;
+struct MSFrameAnim_vtbl; // 0x7F7104
+struct MSOverlayAnim;
+struct MSOverlayAnim_vtbl; // 0x7EE960
+struct MSPCXAnim;
+struct MSPCXAnim_vtbl; // 0x7EEA2C
+struct MSPrintAnim;
+struct MSPrintAnim_vtbl; // 0x7EEA00
+struct MSShapeAnim;
+struct MSShapeAnim_vtbl; // 0x7EE910
+struct MSVQAnim;
+struct MSVQAnim_vtbl; // 0x7EE9B0
+struct MapSeedClass;
+struct MapSeedClass_vtbl; // 0x7ED8E4
+struct MapSelect;
+struct MapSelect_vtbl; // 0x7EDB4C
+struct Mouse;
+struct Mouse_vtbl; // 0x7F7B78
+struct MultiplayerDebugCommandClass;
+struct MultiplayerDebugCommandClass_vtbl; // 0x7EBE14
+struct MultiplayerSyncCommandClass;
+struct MultiplayerSyncCommandClass_vtbl; // 0x7EBDEC
+struct NextObjectCommandClass;
+struct NextObjectCommandClass_vtbl; // 0x7EB9DC
+struct NullModemClass;
+struct NullModemClass_vtbl; // 0x7EEFDC
+struct NullModemConnClass;
+struct NullModemConnClass_vtbl; // 0x7EEF90
+struct OptionsCommandClass;
+struct OptionsCommandClass_vtbl; // 0x7EBC5C
+struct OwnerDraw_DialogControl;
+struct OwnerDraw_DialogControl_vtbl; // 0x7EF720
+struct OwnerDraw_SimpleDialogControl;
+struct OwnerDraw_SimpleDialogControl_vtbl; // 0x7EF738
+struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString;
+struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl; // 0x7EF770
+struct PAVSchemeNode_VectorClass_HashObject_HashString;
+struct PAVSchemeNode_VectorClass_HashObject_HashString_vtbl; // 0x7EF7D0
+struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct;
+struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl; // 0x7F042C
+struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct;
+struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl; // 0x7F044C
+struct PKPipe;
+struct PKPipe_vtbl; // 0x7EFDAC
+struct PKStraw;
+struct PKStraw_vtbl; // 0x7EFDE0
+struct PageUserCommandClass;
+struct PageUserCommandClass_vtbl; // 0x7EBF2C
+struct Pipe;
+struct Pipe_vtbl; // 0x7E6218
+struct PlanningModeCommandClass;
+struct PlanningModeCommandClass_vtbl; // 0x7EB9B4
+struct PlayerProfile;
+struct PlayerProfile_vtbl; // 0x7F74F4
+struct PrevObjectCommandClass;
+struct PrevObjectCommandClass_vtbl; // 0x7EBA04
+struct RAMFileClass;
+struct RAMFileClass_vtbl; // 0x7F0874
+struct RLEBlitTransDarkenZReadWrite_unsigned_short;
+struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl; // 0x7E54B0
+struct RLEBlitTransDarkenZRead_unsigned_short;
+struct RLEBlitTransDarkenZRead_unsigned_short_vtbl; // 0x7E5540
+struct RLEBlitTransDarken_unsigned_short;
+struct RLEBlitTransDarken_unsigned_short_vtbl; // 0x7E55A0
+struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short;
+struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl; // 0x7E53B0
+struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short;
+struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5360
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short;
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl; // 0x7E53E0
+struct RLEBlitTransLucent25Alpha_unsigned_short;
+struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl; // 0x7E5430
+struct RLEBlitTransLucent25ZReadWarp_unsigned_short;
+struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl; // 0x7E54E0
+struct RLEBlitTransLucent25ZReadWrite_unsigned_short;
+struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl; // 0x7E5480
+struct RLEBlitTransLucent25ZRead_unsigned_short;
+struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl; // 0x7E5510
+struct RLEBlitTransLucent25_unsigned_short;
+struct RLEBlitTransLucent25_unsigned_short_vtbl; // 0x7E5570
+struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short;
+struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl; // 0x7E53C0
+struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short;
+struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5370
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short;
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl; // 0x7E53F0
+struct RLEBlitTransLucent50Alpha_unsigned_short;
+struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl; // 0x7E5440
+struct RLEBlitTransLucent50ZReadWarp_unsigned_short;
+struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl; // 0x7E54F0
+struct RLEBlitTransLucent50ZReadWrite_unsigned_short;
+struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl; // 0x7E5490
+struct RLEBlitTransLucent50ZRead_unsigned_short;
+struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl; // 0x7E5520
+struct RLEBlitTransLucent50_unsigned_short;
+struct RLEBlitTransLucent50_unsigned_short_vtbl; // 0x7E5580
+struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short;
+struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl; // 0x7E53D0
+struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short;
+struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5380
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short;
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl; // 0x7E5400
+struct RLEBlitTransLucent75Alpha_unsigned_short;
+struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl; // 0x7E5450
+struct RLEBlitTransLucent75ZReadWarp_unsigned_short;
+struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl; // 0x7E5500
+struct RLEBlitTransLucent75ZReadWrite_unsigned_short;
+struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl; // 0x7E54A0
+struct RLEBlitTransLucent75ZRead_unsigned_short;
+struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl; // 0x7E5530
+struct RLEBlitTransLucent75_unsigned_short;
+struct RLEBlitTransLucent75_unsigned_short_vtbl; // 0x7E5590
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char;
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl; // 0x7E5A60
+struct RLEBlitTransRemapDestZRead_unsigned_char;
+struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl; // 0x7E5AA0
+struct RLEBlitTransRemapDest_unsigned_char;
+struct RLEBlitTransRemapDest_unsigned_char_vtbl; // 0x7E5AE0
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char;
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A50
+struct RLEBlitTransRemapXlatZRead_unsigned_char;
+struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl; // 0x7E5A90
+struct RLEBlitTransRemapXlat_unsigned_char;
+struct RLEBlitTransRemapXlat_unsigned_char_vtbl; // 0x7E5AD0
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short;
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E53A0
+struct RLEBlitTransXlatAlphaZRead_unsigned_short;
+struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl; // 0x7E5420
+struct RLEBlitTransXlatAlpha_unsigned_short;
+struct RLEBlitTransXlatAlpha_unsigned_short_vtbl; // 0x7E5470
+struct RLEBlitTransXlatZReadWrite_unsigned_char;
+struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A80
+struct RLEBlitTransXlatZReadWrite_unsigned_short;
+struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl; // 0x7E54D0
+struct RLEBlitTransXlatZRead_unsigned_char;
+struct RLEBlitTransXlatZRead_unsigned_char_vtbl; // 0x7E5AC0
+struct RLEBlitTransXlatZRead_unsigned_short;
+struct RLEBlitTransXlatZRead_unsigned_short_vtbl; // 0x7E5560
+struct RLEBlitTransXlat_unsigned_char;
+struct RLEBlitTransXlat_unsigned_char_vtbl; // 0x7E5B00
+struct RLEBlitTransXlat_unsigned_short;
+struct RLEBlitTransXlat_unsigned_short_vtbl; // 0x7E55C0
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short;
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5390
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short;
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl; // 0x7E5410
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short;
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl; // 0x7E5460
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char;
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A70
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short;
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl; // 0x7E54C0
+struct RLEBlitTransZRemapXlatZRead_unsigned_char;
+struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl; // 0x7E5AB0
+struct RLEBlitTransZRemapXlatZRead_unsigned_short;
+struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl; // 0x7E5550
+struct RLEBlitTransZRemapXlat_unsigned_char;
+struct RLEBlitTransZRemapXlat_unsigned_char_vtbl; // 0x7E5AF0
+struct RLEBlitTransZRemapXlat_unsigned_short;
+struct RLEBlitTransZRemapXlat_unsigned_short_vtbl; // 0x7E55B0
+struct RadarClass_RTacticalClass;
+struct RadarClass_RTacticalClass_vtbl; // 0x7F02BC
+struct RandomStraw;
+struct RandomStraw_vtbl; // 0x7F0AFC
+struct SHAPipe;
+struct SHAPipe_vtbl; // 0x7E4D78
+struct ScatterCommandClass;
+struct ScatterCommandClass_vtbl; // 0x7EBACC
+struct ScoreAnimClass;
+struct ScoreAnimClass_vtbl; // 0x7F0EDC
+struct ScoreBigFontClass;
+struct ScoreBigFontClass_vtbl; // 0x7F0F20
+struct ScoreFontClass;
+struct ScoreFontClass_vtbl; // 0x7F0EF0
+struct ScoreFullFontClass;
+struct ScoreFullFontClass_vtbl; // 0x7F0F08
+struct ScorePrintClass;
+struct ScorePrintClass_vtbl; // 0x7F0EB4
+struct ScoreTimeClass;
+struct ScoreTimeClass_vtbl; // 0x7F0EC8
+struct ScreenCaptureCommandClass;
+struct ScreenCaptureCommandClass_vtbl; // 0x7EBF04
+struct SelectTeamCommandClass;
+struct SelectTeamCommandClass_vtbl; // 0x7EBE64
+struct SetDefenseTabCommandClass;
+struct SetDefenseTabCommandClass_vtbl; // 0x7EB8C4
+struct SetInfantryTabCommandClass;
+struct SetInfantryTabCommandClass_vtbl; // 0x7EB874
+struct SetStructureTabCommandClass;
+struct SetStructureTabCommandClass_vtbl; // 0x7EB8EC
+struct SetUnitTabCommandClass;
+struct SetUnitTabCommandClass_vtbl; // 0x7EB89C
+struct SetView1CommandClass;
+struct SetView1CommandClass_vtbl; // 0x7EBCFC
+struct SetView2CommandClass;
+struct SetView2CommandClass_vtbl; // 0x7EBCD4
+struct SetView3CommandClass;
+struct SetView3CommandClass_vtbl; // 0x7EBCAC
+struct SetView4CommandClass;
+struct SetView4CommandClass_vtbl; // 0x7EBC84
+struct SidebarClass_SBGadgetClass;
+struct SidebarClass_SBGadgetClass_vtbl; // 0x7F2F44
+struct SidebarDownCommandClass;
+struct SidebarDownCommandClass_vtbl; // 0x7EBC0C
+struct SidebarUpCommandClass;
+struct SidebarUpCommandClass_vtbl; // 0x7EBC34
+struct SimpleWonlineDialogControl;
+struct SimpleWonlineDialogControl_vtbl; // 0x7F7624
+struct Std_bad_cast;
+struct Std_bad_cast_vtbl; // 0x7F9660
+struct Std_bad_typeid;
+struct Std_bad_typeid_vtbl; // 0x7F95DC
+struct Std_exception;
+struct Std_exception_vtbl; // 0x7F990C
+struct Std_non_rtti_object;
+struct Std_non_rtti_object_vtbl; // 0x7F95D0
+struct StopCommandClass;
+struct StopCommandClass_vtbl; // 0x7EBA7C
+struct Straw;
+struct Straw_vtbl; // 0x7E61F0
+struct SwizzleManager_ISwizzle;
+struct SwizzleManager_ISwizzle_vtbl; // 0x7F4108
+struct TClassFactory_AITriggerTypeClass;
+struct TClassFactory_AITriggerTypeClass_vtbl; // 0x7F3E40
+struct TClassFactory_AircraftClass;
+struct TClassFactory_AircraftClass_vtbl; // 0x7F3BE8
+struct TClassFactory_AircraftTypeClass;
+struct TClassFactory_AircraftTypeClass_vtbl; // 0x7F3B28
+struct TClassFactory_AirstrikeClass;
+struct TClassFactory_AirstrikeClass_vtbl; // 0x7F3900
+struct TClassFactory_AlphaShapeClass;
+struct TClassFactory_AlphaShapeClass_vtbl; // 0x7F3E88
+struct TClassFactory_AnimClass;
+struct TClassFactory_AnimClass_vtbl; // 0x7F3C18
+struct TClassFactory_AnimTypeClass;
+struct TClassFactory_AnimTypeClass_vtbl; // 0x7F3C30
+struct TClassFactory_BombClass;
+struct TClassFactory_BombClass_vtbl; // 0x7F3990
+struct TClassFactory_BuildingClass;
+struct TClassFactory_BuildingClass_vtbl; // 0x7F3BD0
+struct TClassFactory_BuildingLightClass;
+struct TClassFactory_BuildingLightClass_vtbl; // 0x7F38B8
+struct TClassFactory_BuildingTypeClass;
+struct TClassFactory_BuildingTypeClass_vtbl; // 0x7F3B10
+struct TClassFactory_BulletClass;
+struct TClassFactory_BulletClass_vtbl; // 0x7F3D80
+struct TClassFactory_BulletTypeClass;
+struct TClassFactory_BulletTypeClass_vtbl; // 0x7F3B58
+struct TClassFactory_CStreamClass;
+struct TClassFactory_CStreamClass_vtbl; // 0x7F3768
+struct TClassFactory_CampaignClass;
+struct TClassFactory_CampaignClass_vtbl; // 0x7F38A0
+struct TClassFactory_CaptureManagerClass;
+struct TClassFactory_CaptureManagerClass_vtbl; // 0x7F3948
+struct TClassFactory_CellClass;
+struct TClassFactory_CellClass_vtbl; // 0x7F3810
+struct TClassFactory_DiskLaserClass;
+struct TClassFactory_DiskLaserClass_vtbl; // 0x7F3960
+struct TClassFactory_DriveLocomotionClass;
+struct TClassFactory_DriveLocomotionClass_vtbl; // 0x7F3C78
+struct TClassFactory_DropPodLocomotionClass;
+struct TClassFactory_DropPodLocomotionClass_vtbl; // 0x7F3D08
+struct TClassFactory_EMPulseClass;
+struct TClassFactory_EMPulseClass_vtbl; // 0x7F3828
+struct TClassFactory_FactoryClass;
+struct TClassFactory_FactoryClass_vtbl; // 0x7F3D98
+struct TClassFactory_FlyLocomotionClass;
+struct TClassFactory_FlyLocomotionClass_vtbl; // 0x7F3D20
+struct TClassFactory_FoggedObjectClass;
+struct TClassFactory_FoggedObjectClass_vtbl; // 0x7F3E70
+struct TClassFactory_HouseClass;
+struct TClassFactory_HouseClass_vtbl; // 0x7F3C60
+struct TClassFactory_HouseTypeClass;
+struct TClassFactory_HouseTypeClass_vtbl; // 0x7F3C48
+struct TClassFactory_HoverLocomotionClass;
+struct TClassFactory_HoverLocomotionClass_vtbl; // 0x7F3CA8
+struct TClassFactory_InfantryClass;
+struct TClassFactory_InfantryClass_vtbl; // 0x7F3C00
+struct TClassFactory_InfantryTypeClass;
+struct TClassFactory_InfantryTypeClass_vtbl; // 0x7F3B40
+struct TClassFactory_IsometricTileTypeClass;
+struct TClassFactory_IsometricTileTypeClass_vtbl; // 0x7F3B70
+struct TClassFactory_JumpjetLocomotionClass;
+struct TClassFactory_JumpjetLocomotionClass_vtbl; // 0x7F3C90
+struct TClassFactory_LightSourceClass;
+struct TClassFactory_LightSourceClass_vtbl; // 0x7F3840
+struct TClassFactory_MechLocomotionClass;
+struct TClassFactory_MechLocomotionClass_vtbl; // 0x7F3D50
+struct TClassFactory_NeuronClass;
+struct TClassFactory_NeuronClass_vtbl; // 0x7F3E58
+struct TClassFactory_OverlayTypeClass;
+struct TClassFactory_OverlayTypeClass_vtbl; // 0x7F3B88
+struct TClassFactory_ParasiteClass;
+struct TClassFactory_ParasiteClass_vtbl; // 0x7F3978
+struct TClassFactory_ParticleClass;
+struct TClassFactory_ParticleClass_vtbl; // 0x7F3DE0
+struct TClassFactory_ParticleSystemClass;
+struct TClassFactory_ParticleSystemClass_vtbl; // 0x7F3E10
+struct TClassFactory_ParticleSystemTypeClass;
+struct TClassFactory_ParticleSystemTypeClass_vtbl; // 0x7F3E28
+struct TClassFactory_ParticleTypeClass;
+struct TClassFactory_ParticleTypeClass_vtbl; // 0x7F3DF8
+struct TClassFactory_RadSiteClass;
+struct TClassFactory_RadSiteClass_vtbl; // 0x7F39A8
+struct TClassFactory_RocketLocomotionClass;
+struct TClassFactory_RocketLocomotionClass_vtbl; // 0x7F3CC0
+struct TClassFactory_ScriptClass;
+struct TClassFactory_ScriptClass_vtbl; // 0x7F3A50
+struct TClassFactory_ScriptTypeClass;
+struct TClassFactory_ScriptTypeClass_vtbl; // 0x7F3A68
+struct TClassFactory_ShipLocomotionClass;
+struct TClassFactory_ShipLocomotionClass_vtbl; // 0x7F3D68
+struct TClassFactory_SideClass;
+struct TClassFactory_SideClass_vtbl; // 0x7F3858
+struct TClassFactory_SlaveManagerClass;
+struct TClassFactory_SlaveManagerClass_vtbl; // 0x7F3930
+struct TClassFactory_SmudgeTypeClass;
+struct TClassFactory_SmudgeTypeClass_vtbl; // 0x7F3BA0
+struct TClassFactory_SpawnManagerClass;
+struct TClassFactory_SpawnManagerClass_vtbl; // 0x7F3918
+struct TClassFactory_SuperClass;
+struct TClassFactory_SuperClass_vtbl; // 0x7F37E0
+struct TClassFactory_SuperWeaponTypeClass;
+struct TClassFactory_SuperWeaponTypeClass_vtbl; // 0x7F37C8
+struct TClassFactory_TActionClass;
+struct TClassFactory_TActionClass_vtbl; // 0x7F3A08
+struct TClassFactory_TEventClass;
+struct TClassFactory_TEventClass_vtbl; // 0x7F39C0
+struct TClassFactory_TacticalClass;
+struct TClassFactory_TacticalClass_vtbl; // 0x7F37F8
+struct TClassFactory_TagClass;
+struct TClassFactory_TagClass_vtbl; // 0x7F3A80
+struct TClassFactory_TagTypeClass;
+struct TClassFactory_TagTypeClass_vtbl; // 0x7F3A98
+struct TClassFactory_TaskForceClass;
+struct TClassFactory_TaskForceClass_vtbl; // 0x7F3AE0
+struct TClassFactory_TeamClass;
+struct TClassFactory_TeamClass_vtbl; // 0x7F3AB0
+struct TClassFactory_TeamTypeClass;
+struct TClassFactory_TeamTypeClass_vtbl; // 0x7F3AC8
+struct TClassFactory_TeleportLocomotionClass;
+struct TClassFactory_TeleportLocomotionClass_vtbl; // 0x7F3D38
+struct TClassFactory_TemporalClass;
+struct TClassFactory_TemporalClass_vtbl; // 0x7F38E8
+struct TClassFactory_TerrainClass;
+struct TClassFactory_TerrainClass_vtbl; // 0x7F37B0
+struct TClassFactory_TerrainTypeClass;
+struct TClassFactory_TerrainTypeClass_vtbl; // 0x7F3798
+struct TClassFactory_TiberiumClass;
+struct TClassFactory_TiberiumClass_vtbl; // 0x7F3870
+struct TClassFactory_TriggerClass;
+struct TClassFactory_TriggerClass_vtbl; // 0x7F3A20
+struct TClassFactory_TriggerTypeClass;
+struct TClassFactory_TriggerTypeClass_vtbl; // 0x7F3A38
+struct TClassFactory_TubeClass;
+struct TClassFactory_TubeClass_vtbl; // 0x7F3888
+struct TClassFactory_TunnelLocomotionClass;
+struct TClassFactory_TunnelLocomotionClass_vtbl; // 0x7F3CD8
+struct TClassFactory_UnitClass;
+struct TClassFactory_UnitClass_vtbl; // 0x7F3BB8
+struct TClassFactory_UnitTypeClass;
+struct TClassFactory_UnitTypeClass_vtbl; // 0x7F3AF8
+struct TClassFactory_VoxelAnimClass;
+struct TClassFactory_VoxelAnimClass_vtbl; // 0x7F39F0
+struct TClassFactory_VoxelAnimTypeClass;
+struct TClassFactory_VoxelAnimTypeClass_vtbl; // 0x7F39D8
+struct TClassFactory_WalkLocomotionClass;
+struct TClassFactory_WalkLocomotionClass_vtbl; // 0x7F3CF0
+struct TClassFactory_WarheadTypeClass;
+struct TClassFactory_WarheadTypeClass_vtbl; // 0x7F3DB0
+struct TClassFactory_WaveClass;
+struct TClassFactory_WaveClass_vtbl; // 0x7F3780
+struct TClassFactory_WaypointPathClass;
+struct TClassFactory_WaypointPathClass_vtbl; // 0x7F38D0
+struct TClassFactory_WeaponTypeClass;
+struct TClassFactory_WeaponTypeClass_vtbl; // 0x7F3DC8
+struct TauntCommandClass;
+struct TauntCommandClass_vtbl; // 0x7EBEDC
+struct TextButtonClass;
+struct TextButtonClass_vtbl; // 0x7F55DC
+struct TiberianSunClassFactory;
+struct TiberianSunClassFactory_vtbl; // 0x7EA564
+struct ToggleRepairCommandClass;
+struct ToggleRepairCommandClass_vtbl; // 0x7EBB6C
+struct ToggleSellCommandClass;
+struct ToggleSellCommandClass_vtbl; // 0x7EBB94
+struct TypeList_AircraftTypeClass_CPTR;
+struct TypeList_AircraftTypeClass_CPTR_vtbl; // 0x7EABC8
+struct TypeList_AnimTypeClass_CPTR;
+struct TypeList_AnimTypeClass_CPTR_vtbl; // 0x7EB6D4
+struct TypeList_BuildingTypeClass_CPTR;
+struct TypeList_BuildingTypeClass_CPTR_vtbl; // 0x7ED90C
+struct TypeList_InfantryTypeClass_CPTR;
+struct TypeList_InfantryTypeClass_CPTR_vtbl; // 0x7EAC08
+struct TypeList_ParticleSystemTypeClass_CPTR;
+struct TypeList_ParticleSystemTypeClass_CPTR_vtbl; // 0x7F4F9C
+struct TypeList_RGBClass;
+struct TypeList_RGBClass_vtbl; // 0x7E4E58
+struct TypeList_SmudgeTypeClass_CPTR;
+struct TypeList_SmudgeTypeClass_CPTR_vtbl; // 0x7F0D1C
+struct TypeList_TeamTypeClass_CPTR;
+struct TypeList_TeamTypeClass_CPTR_vtbl; // 0x7EA9C4
+struct TypeList_TerrainTypeClass_CPTR;
+struct TypeList_TerrainTypeClass_CPTR_vtbl; // 0x7F0CFC
+struct TypeList_UnitTypeClass_CPTR;
+struct TypeList_UnitTypeClass_CPTR_vtbl; // 0x7EABE8
+struct TypeList_VoxelAnimTypeClass_CPTR;
+struct TypeList_VoxelAnimTypeClass_CPTR_vtbl; // 0x7F0D3C
+struct TypeList_W_4_char_i_s_k_unsigned_int_char;
+struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl; // 0x7F12D4
+struct TypeSelectCommandClass;
+struct TypeSelectCommandClass_vtbl; // 0x7EB964
+struct VQMovieHandle;
+struct VQMovieHandle_vtbl; // 0x7EE0F4
+struct VectorClass_AcceleratorTracker;
+struct VectorClass_AcceleratorTracker_vtbl; // 0x7EECEC
+struct VectorClass_ButtonFadeEffect_PTR;
+struct VectorClass_ButtonFadeEffect_PTR_vtbl; // 0x7E8500
+struct VectorClass_CoopCampaignClass_PTR;
+struct VectorClass_CoopCampaignClass_PTR_vtbl; // 0x7EE3B0
+struct VectorClass_CrossDissolveEffect_PTR;
+struct VectorClass_CrossDissolveEffect_PTR_vtbl; // 0x7E8520
+struct VectorClass_DirtyAreaStruct;
+struct VectorClass_DirtyAreaStruct_vtbl; // 0x7F42BC
+struct VectorClass_DistributionObject_AITriggerTypeClass_PTR;
+struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl; // 0x7F4840
+struct VectorClass_DistributionObject_BuildingTypeClass_PTR;
+struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl; // 0x7EAAA4
+struct VectorClass_DistributionObject_CellClass_PTR;
+struct VectorClass_DistributionObject_CellClass_PTR_vtbl; // 0x7E9264
+struct VectorClass_DynamicVectorClass_char_PTR_PTR;
+struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl; // 0x7E5C04
+struct VectorClass_EgoClass_PTR;
+struct VectorClass_EgoClass_PTR_vtbl; // 0x7E86FC
+struct VectorClass_GlobalPacketType_PTR;
+struct VectorClass_GlobalPacketType_PTR_vtbl; // 0x7F1234
+struct VectorClass_HSVClass;
+struct VectorClass_HSVClass_vtbl; // 0x7EF7F0
+struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct;
+struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl; // 0x7ED5E0
+struct VectorClass_HashObject_unsigned_int_unsigned_int;
+struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl; // 0x7ED5C0
+struct VectorClass_HouseClass_BuildChoiceClass_PTR;
+struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl; // 0x7EA7D4
+struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR;
+struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl; // 0x7ECBFC
+struct VectorClass_LightSourceClass_PendingCellClass_PTR;
+struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl; // 0x7ECFDC
+struct VectorClass_MPlayerScoreType_PTR;
+struct VectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3D0
+struct VectorClass_MSSfx_PTR;
+struct VectorClass_MSSfx_PTR_vtbl; // 0x7EEC44
+struct VectorClass_MSTextEntry_PTR;
+struct VectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB94
+struct VectorClass_MapRegionClass_PTR;
+struct VectorClass_MapRegionClass_PTR_vtbl; // 0x7ED878
+struct VectorClass_MapSelection_PTR;
+struct VectorClass_MapSelection_PTR_vtbl; // 0x7EEBB4
+struct VectorClass_MapStage_PTR;
+struct VectorClass_MapStage_PTR_vtbl; // 0x7EEAB4
+struct VectorClass_MixFileClass_PTR;
+struct VectorClass_MixFileClass_PTR_vtbl; // 0x7E1A64
+struct VectorClass_MovieHandle_PTR;
+struct VectorClass_MovieHandle_PTR_vtbl; // 0x7F69A4
+struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR;
+struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl; // 0x7F0C4C
+struct VectorClass_PhoneEntryClass_PTR;
+struct VectorClass_PhoneEntryClass_PTR_vtbl; // 0x7F1254
+struct VectorClass_RGBClass;
+struct VectorClass_RGBClass_vtbl; // 0x7E4E38
+struct VectorClass_ShadowControlClass_PTR;
+struct VectorClass_ShadowControlClass_PTR_vtbl; // 0x7F42FC
+struct VectorClass_SubTitle_PTR;
+struct VectorClass_SubTitle_PTR_vtbl; // 0x7F3F8C
+struct VectorClass_TPoint3D_int;
+struct VectorClass_TPoint3D_int_vtbl; // 0x7E4638
+struct VectorClass_UndoInfoStruct;
+struct VectorClass_UndoInfoStruct_vtbl; // 0x7F329C
+struct VectorClass_W_4_char_i_s_k_unsigned_int_char;
+struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl; // 0x7F1274
+struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR;
+struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl; // 0x7F7A3C
+struct VectorClass_Wstring;
+struct VectorClass_Wstring_vtbl; // 0x7F1294
+struct VectorClass__DDSURFACEDESC_PTR;
+struct VectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5DEC
+struct VectorClass__WIN32_FIND_DATAA_PTR;
+struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED92C
+struct VectorClass_tConnInfoStruct_PTR;
+struct VectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78A4
+struct VectorClass_tagCONNECTDATA;
+struct VectorClass_tagCONNECTDATA_vtbl; // 0x7E5C84
+struct VeterancyNavCommandClass;
+struct VeterancyNavCommandClass_vtbl; // 0x7EB914
+struct View1CommandClass;
+struct View1CommandClass_vtbl; // 0x7EBD9C
+struct View2CommandClass;
+struct View2CommandClass_vtbl; // 0x7EBD74
+struct View3CommandClass;
+struct View3CommandClass_vtbl; // 0x7EBD4C
+struct View4CommandClass;
+struct View4CommandClass_vtbl; // 0x7EBD24
+struct WDT_FactionSelectDialogControl;
+struct WDT_FactionSelectDialogControl_vtbl; // 0x7F791C
+struct WDT_Selection;
+struct WDT_Selection_vtbl; // 0x7F72B4
+struct WDT_Territory;
+struct WDT_Territory_vtbl; // 0x7F7334
+struct WebBrowser;
+struct WebBrowser_vtbl; // 0x7F743C
+struct WinModemClass;
+struct WinModemClass_vtbl; // 0x7F7488
+struct WonlineStringDialogControl;
+struct WonlineStringDialogControl_vtbl; // 0x7F7874
 
-// TODO VECTOR
+// TODO STRUCT
 
 class AbstractClass; // Abstract Tree Base
 struct AbstractClass_vtbl; // 0x7E1F50
@@ -14803,13 +15642,6 @@ struct WideStringClass
 {
   wchar_t *Buffer;
 };
-
-typedef void *HWND;
-typedef unsigned int UINT;
-typedef unsigned int WPARAM;
-typedef int LPARAM;
-typedef unsigned long COLORREF;
-typedef int (__stdcall *WNDPROC)(void *hWnd, unsigned int Msg, unsigned int wParam, int lParam);
 
 struct RECT
 {
