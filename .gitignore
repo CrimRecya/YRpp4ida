@@ -14,10 +14,6 @@
 # ---- 逆向过程中产生的各类分析库/探针库副本 ----
 # 上面 *.i64 已覆盖，此处保留说明
 
-# ---- WorkBuddy 项目工作区(记忆/临时脚本/报告/中间产物) ----
-.workbuddy/
-tmp_autorev/
-
 # ---- 源文件手动备份(落地前快照), 不入库 ----
 *.bak
 *.bak_*
@@ -31,3 +27,13 @@ tmp_autorev/
 Thumbs.db
 *.swp
 *~
+
+# ---- Agent 记忆/指令文件(★ 严禁提交到公开仓库) ----
+# DSH 会自动加载工作区根的 AGENTS.md / CLAUDE.md 系列；它们只服务本地协作，
+# 含内部进度、用户画像与未公开结论 —— 绝不允许进入公开仓库。
+AGENTS.md
+AGENTS.local.md
+CLAUDE.md
+CLAUDE.local.md
+# Agent 记忆与工作资产目录(DSH 自有，非项目交付物)
+.dsh/
