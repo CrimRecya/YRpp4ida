@@ -18,6 +18,10 @@ struct ExtendedRegister;
 struct StackRegister;
 struct Registers;
 
+struct CChatEventSink;
+struct CChatEventSink_vtbl; // 0x7F77A4
+struct CNetUtilEventSink;
+struct CNetUtilEventSink_vtbl; // 0x7F7778
 struct _GUID;
 struct AbilitiesStruct;
 struct AbstractClass; // Abstract Tree Base
@@ -26,7 +30,7 @@ struct AbstractTypeClass; // : AbstractClass
 struct AbstractTypeClass_vtbl; // 0x7E2000
 struct ABuffer;
 struct AddTeamCommandClass;
-struct AddTeamCommandClass_vtbl; // 0x007EBE8C
+struct AddTeamCommandClass_vtbl; // 0x7EBE8C
 struct AircraftClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct AircraftClass_vtbl; // 0x7E22A4
 struct AircraftTrackerClass;
@@ -47,7 +51,7 @@ struct AlphaShapeClass; // : AbstractClass
 struct AlphaShapeClass_vtbl; // 0x7E32A4
 struct AngerStruct;
 struct Animate;
-struct Animate_vtbl; // 0x007E35A8
+struct Animate_vtbl; // 0x7E35A8
 struct AnimationPalette;
 struct AnimClass; // : ObjectClass : AbstractClass
 struct AnimClass_vtbl; // 0x7E3354
@@ -105,7 +109,7 @@ struct BlitPlainXlatZRead_unsigned_short_vtbl; // 0x7E5990
 struct BlitPlainXlatZReadWrite_unsigned_short;
 struct BlitPlainXlatZReadWrite_unsigned_short_vtbl; // 0x7E58A0
 struct Blitter;
-struct Blitter_vtbl; // 0x007E5B88
+struct Blitter_vtbl; // 0x7E5B88
 struct BlitTrans_unsigned_char;
 struct BlitTrans_unsigned_char_vtbl; // 0x7F7C0C
 struct BlitTrans_unsigned_short;
@@ -291,11 +295,11 @@ struct CommandClass_vtbl; // 0x7EBE3C
 struct CommBufferClass;
 struct CommBufferClass_vtbl;
 struct ConnectionClass;
-struct ConnectionClass_vtbl; // 0x007E51B4
+struct ConnectionClass_vtbl; // 0x7E51B4
 struct ConnectionPointClass;
 struct ConnectionPointClass_vtbl; // 0x7E5CE4
 struct ConnManClass;
-struct ConnManClass_vtbl; // 0x007EC1D4
+struct ConnManClass_vtbl; // 0x7EC1D4
 struct ControlClass; // : GadgetClass : LinkClass
 struct ControlClass_vtbl; // 0x7E528C
 struct ControlNode;
@@ -356,25 +360,25 @@ struct DynamicVectorClass_AcceleratorTracker_vtbl; // 0x7EECCC
 struct DynamicVectorClass_AircraftClass_PTR; // 0xA8E390
 struct DynamicVectorClass_AircraftClass_PTR_vtbl; // 0x7E9E64
 struct DynamicVectorClass_AircraftTypeClass_CPTR;
-struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl; // 0x007EACC8
+struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl; // 0x7EACC8
 struct DynamicVectorClass_AircraftTypeClass_PTR; // 0xA8B218
 struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EACC8 / 0x7EA264
 struct DynamicVectorClass_AirstrikeClass_PTR; // 0x889FB8
 struct DynamicVectorClass_AirstrikeClass_PTR_vtbl; // 0x7E293C
 struct DynamicVectorClass_AITriggerTypeClass_PTR; // 0xA8B200
 struct DynamicVectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B64
-struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x0x88A080
-struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl; // 0x007E2AD0
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x88A080
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl; // 0x7E2AD0
 struct DynamicVectorClass_AlphaShapeClass_PTR; // 0x88A0F0
 struct DynamicVectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3238
 struct DynamicVectorClass_AngerStruct;
 struct DynamicVectorClass_AngerStruct_vtbl; // 0x7EA924
 struct DynamicVectorClass_AnimClass_CPTR;
-struct DynamicVectorClass_AnimClass_CPTR_vtbl; // 0x007EBFCC
+struct DynamicVectorClass_AnimClass_CPTR_vtbl; // 0x7EBFCC
 struct DynamicVectorClass_AnimClass_PTR; // 0xA8E9A8 / 0xA9F9D0 / 0xA9FA18 / 0xA9FA60
 struct DynamicVectorClass_AnimClass_PTR_vtbl; // 0x7E9F24 / 0x7EBFCC
 struct DynamicVectorClass_AnimTypeClass_CPTR;
-struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl; // 0x007EB714
+struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl; // 0x7EB714
 struct DynamicVectorClass_AnimTypeClass_PTR; // 0x8B4150
 struct DynamicVectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA2E4 / 0x7EB714
 struct DynamicVectorClass_BaseNodeClass;
@@ -388,7 +392,7 @@ struct DynamicVectorClass_BuildingClass_PTR_vtbl; // 0x7E9E24
 struct DynamicVectorClass_BuildingLightClass_PTR; // 0x8B4190
 struct DynamicVectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C24
 struct DynamicVectorClass_BuildingTypeClass_CPTR;
-struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl; // 0x007EAA28
+struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl; // 0x7EAA28
 struct DynamicVectorClass_BuildingTypeClass_PTR; // 0xA83C68
 struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA224 / 0x7EAA28
 struct DynamicVectorClass_BulletClass_PTR; // 0x89DE18 / 0xA8ED40
@@ -410,7 +414,7 @@ struct DynamicVectorClass_CellStruct_vtbl; // 0x7E3890
 struct DynamicVectorClass_ChangeLinkHouseStruct_PTR;
 struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
 struct DynamicVectorClass_char_CPTR;
-struct DynamicVectorClass_char_CPTR_vtbl; // 0x007EE0B4
+struct DynamicVectorClass_char_CPTR_vtbl; // 0x7EE0B4
 struct DynamicVectorClass_char_PTR;
 struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5C04 / 0x7EE0B4
 struct DynamicVectorClass_Color16Struct_PTR;
@@ -418,7 +422,7 @@ struct DynamicVectorClass_Color16Struct_PTR_vtbl;
 struct DynamicVectorClass_ColorScheme_PTR; // 0xB054D0
 struct DynamicVectorClass_ColorScheme_PTR_vtbl; // 0x7EF790
 struct DynamicVectorClass_CommandClass_CPTR;
-struct DynamicVectorClass_CommandClass_CPTR_vtbl; // 0x007E182C
+struct DynamicVectorClass_CommandClass_CPTR_vtbl; // 0x7E182C
 struct DynamicVectorClass_CommandClass_PTR; // 0x87F658
 struct DynamicVectorClass_CommandClass_PTR_vtbl; // 0x7E182C
 struct DynamicVectorClass_ControlNode_PTR;
@@ -468,7 +472,7 @@ struct DynamicVectorClass_FootClass_PTR_vtbl; // 0x7E8C28
 struct DynamicVectorClass_GlobalPacketType_PTR;
 struct DynamicVectorClass_GlobalPacketType_PTR_vtbl; // 0x7F11D4
 struct DynamicVectorClass_GraphicMenuItem_PTR;
-struct DynamicVectorClass_GraphicMenuItem_PTR_vtbl; // 0x007EA604
+struct DynamicVectorClass_GraphicMenuItem_PTR_vtbl; // 0x7EA604
 struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct;
 struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl; // 0x7ED520
 struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int;
@@ -490,7 +494,7 @@ struct DynamicVectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D48
 struct DynamicVectorClass_InfantryClass_PTR; // 0xA83DE8
 struct DynamicVectorClass_InfantryClass_PTR_vtbl; // 0x7E43C8
 struct DynamicVectorClass_InfantryTypeClass_CPTR;
-struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl; // 0x007EAC88
+struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl; // 0x7EAC88
 struct DynamicVectorClass_InfantryTypeClass_PTR; // 0xA8E348
 struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC88 / 0x7EA324
 struct DynamicVectorClass_int;
@@ -534,17 +538,17 @@ struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3F0
 struct DynamicVectorClass_MPTeam_PTR;
 struct DynamicVectorClass_MPTeam_PTR_vtbl; // 0x7EEE34
 struct DynamicVectorClass_MSAnim_PTR;
-struct DynamicVectorClass_MSAnim_PTR_vtbl; // 0x007EEC04
+struct DynamicVectorClass_MSAnim_PTR_vtbl; // 0x7EEC04
 struct DynamicVectorClass_MSAnimEntry_PTR;
-struct DynamicVectorClass_MSAnimEntry_PTR_vtbl; // 0x007EEA74
+struct DynamicVectorClass_MSAnimEntry_PTR_vtbl; // 0x7EEA74
 struct DynamicVectorClass_MSSfx_PTR;
 struct DynamicVectorClass_MSSfx_PTR_vtbl; // 0x7EEBE4
 struct DynamicVectorClass_MSSfxEntry_PTR;
-struct DynamicVectorClass_MSSfxEntry_PTR_vtbl; // 0x007EEA54
+struct DynamicVectorClass_MSSfxEntry_PTR_vtbl; // 0x7EEA54
 struct DynamicVectorClass_MSTextEntry_PTR;
 struct DynamicVectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB34
 struct DynamicVectorClass_MultiMission_CPTR;
-struct DynamicVectorClass_MultiMission_CPTR_vtbl; // 0x007EEF70
+struct DynamicVectorClass_MultiMission_CPTR_vtbl; // 0x7EEF70
 struct DynamicVectorClass_MultiMission_PTR;
 struct DynamicVectorClass_MultiMission_PTR_vtbl; // 0x7EEF70 / 0x7F11F4
 struct DynamicVectorClass_NodeNameType_PTR; // 0xA8DA74
@@ -566,7 +570,7 @@ struct DynamicVectorClass_ParticleClass_PTR_vtbl; // 0x7E9D64
 struct DynamicVectorClass_ParticleSystemClass_PTR; // 0xA80208
 struct DynamicVectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C64
 struct DynamicVectorClass_ParticleSystemTypeClass_CPTR;
-struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl; // 0x007E4444
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl; // 0x7E4444
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR; // 0xA83D68
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4444 / 0x7EA464
 struct DynamicVectorClass_ParticleTypeClass_PTR; // 0xA83D98
@@ -592,13 +596,13 @@ struct DynamicVectorClass_RadBeam_PTR_vtbl; // 0x7F0484
 struct DynamicVectorClass_RadSiteClass_PTR; // 0xB04BD0
 struct DynamicVectorClass_RadSiteClass_PTR_vtbl; // 0x7F07A4
 struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR;
-struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR_vtbl; // 0x007F6F4C
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR_vtbl; // 0x7F6F4C
 struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR;
-struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR_vtbl; // 0x007F6FD4
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR_vtbl; // 0x7F6FD4
 struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR;
-struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR_vtbl; // 0x007F7164
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR_vtbl; // 0x7F7164
 struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR;
-struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl; // 0x007F7260
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl; // 0x7F7260
 struct DynamicVectorClass_RGBClass;
 struct DynamicVectorClass_RGBClass_vtbl; // 0x7F022C
 struct DynamicVectorClass_RGBClass_PTR;
@@ -620,7 +624,7 @@ struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F322C
 struct DynamicVectorClass_SmudgeClass_PTR; // 0xA8B1E0
 struct DynamicVectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DA4
 struct DynamicVectorClass_SmudgeTypeClass_CPTR;
-struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl; // 0x007F0DEC
+struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl; // 0x7F0DEC
 struct DynamicVectorClass_SmudgeTypeClass_PTR; // 0xA8EC18
 struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0DEC / 0x7EA1A4
 struct DynamicVectorClass_SpawnManagerClass_PTR; // 0xB0B880
@@ -658,13 +662,13 @@ struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78C4
 struct DynamicVectorClass_TeamClass_PTR; // 0x8B40E8
 struct DynamicVectorClass_TeamClass_PTR_vtbl; // 0x7E9F64
 struct DynamicVectorClass_TeamTypeClass_CPTR;
-struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl; // 0x007EAAE8
+struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl; // 0x7EAAE8
 struct DynamicVectorClass_TeamTypeClass_PTR; // 0xA8ECA0
 struct DynamicVectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA0E4 / 0x7EAAE8
 struct DynamicVectorClass_TechnoClass_PTR; // 0xA8EC78 / 0xAC4C40
 struct DynamicVectorClass_TechnoClass_PTR_vtbl; // 0x7E17AC
 struct DynamicVectorClass_TechnoTypeClass_CPTR;
-struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl; // 0x007E8934
+struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl; // 0x7E8934
 struct DynamicVectorClass_TechnoTypeClass_PTR; // 0xA8EB00
 struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E858C / 0x7E8934
 struct DynamicVectorClass_TemporalClass_PTR; // 0xB0EC60
@@ -672,7 +676,7 @@ struct DynamicVectorClass_TemporalClass_PTR_vtbl; // 0x7F5114
 struct DynamicVectorClass_TerrainClass_PTR; // 0xA8E988
 struct DynamicVectorClass_TerrainClass_PTR_vtbl; // 0x7E9DE4
 struct DynamicVectorClass_TerrainTypeClass_CPTR;
-struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl; // 0x007F0E0C
+struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl; // 0x7F0E0C
 struct DynamicVectorClass_TerrainTypeClass_PTR; // 0xA8E318
 struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0E0C / 0x7EA1E4
 struct DynamicVectorClass_TEventClass_PTR; // 0xB0F1A0
@@ -684,23 +688,23 @@ struct DynamicVectorClass_ThemeControl_PTR_vtbl; // 0x7F568C
 struct DynamicVectorClass_TiberiumClass_PTR; // 0xB0F4E8
 struct DynamicVectorClass_TiberiumClass_PTR_vtbl; // 0x7F56BC
 struct DynamicVectorClass_ToolTip_CPTR;
-struct DynamicVectorClass_ToolTip_CPTR_vtbl; // 0x007F57C8
+struct DynamicVectorClass_ToolTip_CPTR_vtbl; // 0x7F57C8
 struct DynamicVectorClass_ToolTip_PTR;
 struct DynamicVectorClass_ToolTip_PTR_vtbl; // 0x7F57C8
 struct DynamicVectorClass_TRect_int;
-struct DynamicVectorClass_TRect_int_vtbl; // 0x007ED99C
+struct DynamicVectorClass_TRect_int_vtbl; // 0x7ED99C
 struct DynamicVectorClass_TriggerClass_PTR; // 0xA8EAE8
 struct DynamicVectorClass_TriggerClass_PTR_vtbl; // 0x7E9BE4
 struct DynamicVectorClass_TriggerTypeClass_PTR; // 0x8B4178
 struct DynamicVectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BA4
 struct DynamicVectorClass_TubeClass_PTR; // 0x8B4138
-struct DynamicVectorClass_TubeClass_PTR_vtbl; // 0x007E9CA4
+struct DynamicVectorClass_TubeClass_PTR_vtbl; // 0x7E9CA4
 struct DynamicVectorClass_UndoInfoStruct;
 struct DynamicVectorClass_UndoInfoStruct_vtbl; // 0x7F327C
 struct DynamicVectorClass_UnitClass_PTR; // 0x8B4108
 struct DynamicVectorClass_UnitClass_PTR_vtbl; // 0x7E9EA4
 struct DynamicVectorClass_UnitTypeClass_CPTR;
-struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl; // 0x007EACA8
+struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl; // 0x7EACA8
 struct DynamicVectorClass_UnitTypeClass_PTR; // 0xA83CE0
 struct DynamicVectorClass_UnitTypeClass_PTR_vtbl; // 0x7EACA8 / 0x7EA2A4
 struct DynamicVectorClass_unsigned_char_PTR;
@@ -712,7 +716,7 @@ struct DynamicVectorClass_unsigned_long_vtbl; // 0x7F3728
 struct DynamicVectorClass_unsigned_short;
 struct DynamicVectorClass_unsigned_short_vtbl; // 0x7E3844
 struct DynamicVectorClass_unsigned_short_CPTR;
-struct DynamicVectorClass_unsigned_short_CPTR_vtbl; // 0x007ED1DC
+struct DynamicVectorClass_unsigned_short_CPTR_vtbl; // 0x7ED1DC
 struct DynamicVectorClass_unsigned_short_PTR;
 struct DynamicVectorClass_unsigned_short_PTR_vtbl; // 0x7ECCEC / 0x7ED1DC
 struct DynamicVectorClass_VeinholeMonsterClass_PTR; // 0xB1D290
@@ -724,7 +728,7 @@ struct DynamicVectorClass_VoxClass_PTR_vtbl; // 0x7F6904
 struct DynamicVectorClass_VoxelAnimClass_PTR; // 0x887388
 struct DynamicVectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E2C
 struct DynamicVectorClass_VoxelAnimTypeClass_CPTR;
-struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl; // 0x007F0DCC
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl; // 0x7F0DCC
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR; // 0xA8EB28
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0DCC / 0x7EA3A4
 struct DynamicVectorClass_WarheadTypeClass_PTR; // 0x8874C0
@@ -736,7 +740,7 @@ struct DynamicVectorClass_WaypointClass_vtbl; // 0x7F6ED4
 struct DynamicVectorClass_WaypointPathClass_PTR; // 0xB72608
 struct DynamicVectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E04
 struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR;
-struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl; // 0x007F7144
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl; // 0x7F7144
 struct DynamicVectorClass_WeaponTypeClass_PTR; // 0x887568
 struct DynamicVectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1ED4
 struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR;
@@ -853,13 +857,13 @@ struct GGadgetClass_vtbl; // 0x7F02BC
 struct GraphicMenu; // 0x7EA5FC
 struct GraphicMenu_vtbl;
 struct GraphicMenuAnimItem; // 0x7EA658
-struct GraphicMenuAnimItem_vtbl; // 0x007EA658
+struct GraphicMenuAnimItem_vtbl; // 0x7EA658
 struct GraphicMenuImageItem; // 0x7EA674
-struct GraphicMenuImageItem_vtbl; // 0x007EA674
+struct GraphicMenuImageItem_vtbl; // 0x7EA674
 struct GraphicMenuItem; // 0x7EA690
-struct GraphicMenuItem_vtbl; // 0x007EA690
+struct GraphicMenuItem_vtbl; // 0x7EA690
 struct GraphicMenuShortcutItem; // 0x7EA6AC
-struct GraphicMenuShortcutItem_vtbl; // 0x007EA6AC
+struct GraphicMenuShortcutItem_vtbl; // 0x7EA6AC
 struct GroundType;
 struct GScreenClass; // GScreen Tree Base
 struct GScreenClass_vtbl; // 0x7EA6FC
@@ -956,13 +960,13 @@ struct IPublicHouse;
 struct IPublicHouse_vtbl;
 struct IPXAddressClass;
 struct IPXConnClass;
-struct IPXConnClass_vtbl; // 0x007EC0CC
+struct IPXConnClass_vtbl; // 0x7EC0CC
 struct IPXGlobalConnClass;
-struct IPXGlobalConnClass_vtbl; // 0x007EC10C
+struct IPXGlobalConnClass_vtbl; // 0x7EC10C
 struct IPXInterfaceClass;
-struct IPXInterfaceClass_vtbl; // 0x007F794C
+struct IPXInterfaceClass_vtbl; // 0x7F794C
 struct IPXManagerClass;
-struct IPXManagerClass_vtbl; // 0x007EC16C
+struct IPXManagerClass_vtbl; // 0x7EC16C
 struct IRTTITypeInfo;
 struct IRTTITypeInfo_vtbl; // XXX Adjacent to AbsVTable
 struct ISequentialStream;
@@ -1071,7 +1075,7 @@ struct MPTeam_vtbl; // 0x7EEEDC
 struct MPUnholyAllianceClass;
 struct MPUnholyAllianceClass_vtbl; // 0x7EE814
 struct MSAnim;
-struct MSAnim_vtbl; // 0x007EE8E8
+struct MSAnim_vtbl; // 0x7EE8E8
 struct MSAnimEntry;
 struct MSBinkAnim;
 struct MSBinkAnim_vtbl; // 0x7EE988
@@ -1235,7 +1239,7 @@ struct RecoilData;
 struct RECT;
 struct RectangleStruct;
 struct ReferenceCounted;
-struct ReferenceCounted_vtbl; // 0x007F0954
+struct ReferenceCounted_vtbl; // 0x7F0954
 struct ReservedVoxelIndexKey;
 struct RGBClass;
 struct RLEBlitter;
@@ -1765,7 +1769,7 @@ struct TypeSelectCommandClass_vtbl; // 0x7EB964
 struct U_Large_Int_unnamed_type_s;
 struct U_Large_Int_unnamed_type_u;
 struct UDPInterfaceClass;
-struct UDPInterfaceClass_vtbl; // 0x007F7A6C
+struct UDPInterfaceClass_vtbl; // 0x7F7A6C
 struct UnitClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct UnitClass_vtbl; // 0x7F5C70
 struct UnitTrackerClass;
@@ -2136,7 +2140,7 @@ struct VectorClass_AcceleratorTracker_vtbl; // 0x7EECEC
 struct VectorClass_AircraftClass_PTR;
 struct VectorClass_AircraftClass_PTR_vtbl; // 0x7E9E84
 struct VectorClass_AircraftTypeClass_CPTR;
-struct VectorClass_AircraftTypeClass_CPTR_vtbl; // 0x007EAC68
+struct VectorClass_AircraftTypeClass_CPTR_vtbl; // 0x7EAC68
 struct VectorClass_AircraftTypeClass_PTR;
 struct VectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EAC68 / 0x7EA284
 struct VectorClass_AirstrikeClass_PTR;
@@ -2144,17 +2148,17 @@ struct VectorClass_AirstrikeClass_PTR_vtbl; // 0x7E295C
 struct VectorClass_AITriggerTypeClass_PTR;
 struct VectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B84
 struct VectorClass_AlphaLightingRemapClass_PTR;
-struct VectorClass_AlphaLightingRemapClass_PTR_vtbl; // 0x007E2AF0
+struct VectorClass_AlphaLightingRemapClass_PTR_vtbl; // 0x7E2AF0
 struct VectorClass_AlphaShapeClass_PTR;
 struct VectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3258
 struct VectorClass_AngerStruct;
 struct VectorClass_AngerStruct_vtbl; // 0x7EA984
 struct VectorClass_AnimClass_CPTR;
-struct VectorClass_AnimClass_CPTR_vtbl; // 0x007EBFEC
+struct VectorClass_AnimClass_CPTR_vtbl; // 0x7EBFEC
 struct VectorClass_AnimClass_PTR;
 struct VectorClass_AnimClass_PTR_vtbl; // 0x7E9F44 / 0x7EBFEC
 struct VectorClass_AnimTypeClass_CPTR;
-struct VectorClass_AnimTypeClass_CPTR_vtbl; // 0x007EB6F4
+struct VectorClass_AnimTypeClass_CPTR_vtbl; // 0x7EB6F4
 struct VectorClass_AnimTypeClass_PTR;
 struct VectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA304 / 0x7EB6F4
 struct VectorClass_BaseNodeClass;
@@ -2168,7 +2172,7 @@ struct VectorClass_BuildingClass_PTR_vtbl; // 0x7E9E44
 struct VectorClass_BuildingLightClass_PTR;
 struct VectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C44
 struct VectorClass_BuildingTypeClass_CPTR;
-struct VectorClass_BuildingTypeClass_CPTR_vtbl; // 0x007EAA08
+struct VectorClass_BuildingTypeClass_CPTR_vtbl; // 0x7EAA08
 struct VectorClass_BuildingTypeClass_PTR;
 struct VectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA244 / 0x7EAA08
 struct VectorClass_BulletClass_PTR;
@@ -2190,7 +2194,7 @@ struct VectorClass_CellStruct_vtbl; // 0x7E38D0
 struct VectorClass_ChangeLinkHouseStruct_PTR;
 struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4468
 struct VectorClass_char_CPTR;
-struct VectorClass_char_CPTR_vtbl; // 0x007EE0D4
+struct VectorClass_char_CPTR_vtbl; // 0x7EE0D4
 struct VectorClass_char_PTR;
 struct VectorClass_char_PTR_vtbl; // 0x7E5C24 / 0x7EE0D4
 struct VectorClass_Color16Struct_PTR;
@@ -2198,7 +2202,7 @@ struct VectorClass_Color16Struct_PTR_vtbl;
 struct VectorClass_ColorScheme_PTR;
 struct VectorClass_ColorScheme_PTR_vtbl; // 0x7EF7B0
 struct VectorClass_CommandClass_CPTR;
-struct VectorClass_CommandClass_CPTR_vtbl; // 0x007E184C
+struct VectorClass_CommandClass_CPTR_vtbl; // 0x7E184C
 struct VectorClass_CommandClass_PTR;
 struct VectorClass_CommandClass_PTR_vtbl; // 0x7E184C
 struct VectorClass_ControlNode_PTR;
@@ -2250,7 +2254,7 @@ struct VectorClass_FootClass_PTR_vtbl; // 0x7E8C48
 struct VectorClass_GlobalPacketType_PTR;
 struct VectorClass_GlobalPacketType_PTR_vtbl; // 0x7F1234
 struct VectorClass_GraphicMenuItem_PTR;
-struct VectorClass_GraphicMenuItem_PTR_vtbl; // 0x007EA624
+struct VectorClass_GraphicMenuItem_PTR_vtbl; // 0x7EA624
 struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct;
 struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl; // 0x7ED5E0
 struct VectorClass_HashObject_unsigned_int_unsigned_int;
@@ -2272,7 +2276,7 @@ struct VectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D08
 struct VectorClass_InfantryClass_PTR;
 struct VectorClass_InfantryClass_PTR_vtbl; // 0x7E43E8
 struct VectorClass_InfantryTypeClass_CPTR;
-struct VectorClass_InfantryTypeClass_CPTR_vtbl; // 0x007EAC28
+struct VectorClass_InfantryTypeClass_CPTR_vtbl; // 0x7EAC28
 struct VectorClass_InfantryTypeClass_PTR;
 struct VectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC28 / 0x7EA344
 struct VectorClass_int;
@@ -2316,17 +2320,17 @@ struct VectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3D0
 struct VectorClass_MPTeam_PTR;
 struct VectorClass_MPTeam_PTR_vtbl; // 0x7EEE54
 struct VectorClass_MSAnim_PTR;
-struct VectorClass_MSAnim_PTR_vtbl; // 0x007EEC24
+struct VectorClass_MSAnim_PTR_vtbl; // 0x7EEC24
 struct VectorClass_MSAnimEntry_PTR;
-struct VectorClass_MSAnimEntry_PTR_vtbl; // 0x007EEAD4
+struct VectorClass_MSAnimEntry_PTR_vtbl; // 0x7EEAD4
 struct VectorClass_MSSfx_PTR;
 struct VectorClass_MSSfx_PTR_vtbl; // 0x7EEC44
 struct VectorClass_MSSfxEntry_PTR;
-struct VectorClass_MSSfxEntry_PTR_vtbl; // 0x007EEAF4
+struct VectorClass_MSSfxEntry_PTR_vtbl; // 0x7EEAF4
 struct VectorClass_MSTextEntry_PTR;
 struct VectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB94
 struct VectorClass_MultiMission_CPTR;
-struct VectorClass_MultiMission_CPTR_vtbl; // 0x007EEF50
+struct VectorClass_MultiMission_CPTR_vtbl; // 0x7EEF50
 struct VectorClass_MultiMission_PTR;
 struct VectorClass_MultiMission_PTR_vtbl; // 0x7EEF50 / 0x7F1214
 struct VectorClass_NeuronClass_PTR;
@@ -2350,7 +2354,7 @@ struct VectorClass_ParticleClass_PTR_vtbl; // 0x7E9D84
 struct VectorClass_ParticleSystemClass_PTR;
 struct VectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C84
 struct VectorClass_ParticleSystemTypeClass_CPTR;
-struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl; // 0x007E4424
+struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl; // 0x7E4424
 struct VectorClass_ParticleSystemTypeClass_PTR;
 struct VectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4424 / 0x7EA484
 struct VectorClass_ParticleTypeClass_PTR;
@@ -2376,13 +2380,13 @@ struct VectorClass_RadBeam_PTR_vtbl; // 0x7F04A4
 struct VectorClass_RadSiteClass_PTR;
 struct VectorClass_RadSiteClass_PTR_vtbl; // 0x7F07C4
 struct VectorClass_rc_ptr_WDT_Conflict_PTR;
-struct VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl; // 0x007F6F7C
+struct VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl; // 0x7F6F7C
 struct VectorClass_rc_ptr_WDT_GameOption_PTR;
-struct VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl; // 0x007F6FF4
+struct VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl; // 0x7F6FF4
 struct VectorClass_rc_ptr_WDT_Territory_PTR;
-struct VectorClass_rc_ptr_WDT_Territory_PTR_vtbl; // 0x007F7184
+struct VectorClass_rc_ptr_WDT_Territory_PTR_vtbl; // 0x7F7184
 struct VectorClass_rc_ptr_WDTTerritory_PTR;
-struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl; // 0x007F7230
+struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl; // 0x7F7230
 struct VectorClass_RGBClass;
 struct VectorClass_RGBClass_vtbl; // 0x7E4E38
 struct VectorClass_RGBClass_PTR;
@@ -2404,7 +2408,7 @@ struct VectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F324C
 struct VectorClass_SmudgeClass_PTR;
 struct VectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DC4
 struct VectorClass_SmudgeTypeClass_CPTR;
-struct VectorClass_SmudgeTypeClass_CPTR_vtbl; // 0x007F0D7C
+struct VectorClass_SmudgeTypeClass_CPTR_vtbl; // 0x7F0D7C
 struct VectorClass_SmudgeTypeClass_PTR;
 struct VectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0D7C / 0x7EA1C4
 struct VectorClass_SpawnManagerClass_PTR;
@@ -2442,13 +2446,13 @@ struct VectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78A4
 struct VectorClass_TeamClass_PTR;
 struct VectorClass_TeamClass_PTR_vtbl; // 0x7E9F84
 struct VectorClass_TeamTypeClass_CPTR;
-struct VectorClass_TeamTypeClass_CPTR_vtbl; // 0x007EA9E4
+struct VectorClass_TeamTypeClass_CPTR_vtbl; // 0x7EA9E4
 struct VectorClass_TeamTypeClass_PTR;
 struct VectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA104 / 0x7EA9E4
 struct VectorClass_TechnoClass_PTR;
 struct VectorClass_TechnoClass_PTR_vtbl; // 0x7E180C
 struct VectorClass_TechnoTypeClass_CPTR;
-struct VectorClass_TechnoTypeClass_CPTR_vtbl; // 0x007E8954
+struct VectorClass_TechnoTypeClass_CPTR_vtbl; // 0x7E8954
 struct VectorClass_TechnoTypeClass_PTR;
 struct VectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E4DF8 / 0x7E8954
 struct VectorClass_TemporalClass_PTR;
@@ -2456,7 +2460,7 @@ struct VectorClass_TemporalClass_PTR_vtbl; // 0x7F5134
 struct VectorClass_TerrainClass_PTR;
 struct VectorClass_TerrainClass_PTR_vtbl; // 0x7E9E04
 struct VectorClass_TerrainTypeClass_CPTR;
-struct VectorClass_TerrainTypeClass_CPTR_vtbl; // 0x007F0D9C
+struct VectorClass_TerrainTypeClass_CPTR_vtbl; // 0x7F0D9C
 struct VectorClass_TerrainTypeClass_PTR;
 struct VectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0D9C / 0x7EA204
 struct VectorClass_TEventClass_PTR;
@@ -2468,25 +2472,25 @@ struct VectorClass_ThemeControl_PTR_vtbl; // 0x7EA584
 struct VectorClass_TiberiumClass_PTR;
 struct VectorClass_TiberiumClass_PTR_vtbl; // 0x7F56DC
 struct VectorClass_ToolTip_CPTR;
-struct VectorClass_ToolTip_CPTR_vtbl; // 0x007F57E8
+struct VectorClass_ToolTip_CPTR_vtbl; // 0x7F57E8
 struct VectorClass_ToolTip_PTR;
 struct VectorClass_ToolTip_PTR_vtbl; // 0x7F57E8
 struct VectorClass_TPoint3D_int;
 struct VectorClass_TPoint3D_int_vtbl; // 0x7E4638
 struct VectorClass_TRect_int;
-struct VectorClass_TRect_int_vtbl; // 0x007ED970
+struct VectorClass_TRect_int_vtbl; // 0x7ED970
 struct VectorClass_TriggerClass_PTR;
 struct VectorClass_TriggerClass_PTR_vtbl; // 0x7E9C04
 struct VectorClass_TriggerTypeClass_PTR;
 struct VectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BC4
 struct VectorClass_TubeClass_PTR;
-struct VectorClass_TubeClass_PTR_vtbl; // 0x007E9CC4
+struct VectorClass_TubeClass_PTR_vtbl; // 0x7E9CC4
 struct VectorClass_UndoInfoStruct;
 struct VectorClass_UndoInfoStruct_vtbl; // 0x7F329C
 struct VectorClass_UnitClass_PTR;
 struct VectorClass_UnitClass_PTR_vtbl; // 0x7E9EC4
 struct VectorClass_UnitTypeClass_CPTR;
-struct VectorClass_UnitTypeClass_CPTR_vtbl; // 0x007EAC48
+struct VectorClass_UnitTypeClass_CPTR_vtbl; // 0x7EAC48
 struct VectorClass_UnitTypeClass_PTR;
 struct VectorClass_UnitTypeClass_PTR_vtbl; // 0x7EAC48 / 0x7EA2C4
 struct VectorClass_unsigned_char;
@@ -2500,7 +2504,7 @@ struct VectorClass_unsigned_long_vtbl; // 0x7F3748
 struct VectorClass_unsigned_short;
 struct VectorClass_unsigned_short_vtbl; // 0x7E3824
 struct VectorClass_unsigned_short_CPTR;
-struct VectorClass_unsigned_short_CPTR_vtbl; // 0x007ED1FC
+struct VectorClass_unsigned_short_CPTR_vtbl; // 0x7ED1FC
 struct VectorClass_unsigned_short_PTR;
 struct VectorClass_unsigned_short_PTR_vtbl; // 0x7ECD0C / 0x7ED1FC
 struct VectorClass_VeinholeMonsterClass_PTR;
@@ -2512,7 +2516,7 @@ struct VectorClass_VoxClass_PTR_vtbl; // 0x7F6924
 struct VectorClass_VoxelAnimClass_PTR;
 struct VectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E4C
 struct VectorClass_VoxelAnimTypeClass_CPTR;
-struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl; // 0x007F0D5C
+struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl; // 0x7F0D5C
 struct VectorClass_VoxelAnimTypeClass_PTR;
 struct VectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D5C / 0x7EA3C4
 struct VectorClass_W_4_char_i_s_k_unsigned_int_char;
@@ -2526,9 +2530,9 @@ struct VectorClass_WaypointClass_vtbl; // 0x7F6EF4
 struct VectorClass_WaypointPathClass_PTR;
 struct VectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E24
 struct VectorClass_WDT_Centroid;
-struct VectorClass_WDT_Centroid_vtbl; // 0x007F71E0
+struct VectorClass_WDT_Centroid_vtbl; // 0x7F71E0
 struct VectorClass_WDT_Map_AnimationPalette_PTR;
-struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl; // 0x007F71A4
+struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl; // 0x7F71A4
 struct VectorClass_WeaponTypeClass_PTR;
 struct VectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1EF4
 struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR;
@@ -2542,23 +2546,23 @@ struct VectorClass_ZoneConnectionTable_vtbl;
 struct VectorCursor;
 struct VectorCursor_vtbl;
 struct VectorCursor_GraphicMenuItem_PTR;
-struct VectorCursor_GraphicMenuItem_PTR_vtbl; // 0x007EA644
+struct VectorCursor_GraphicMenuItem_PTR_vtbl; // 0x7EA644
 struct VectorCursor_MSAnim_PTR;
-struct VectorCursor_MSAnim_PTR_vtbl; // 0x007F72EC
+struct VectorCursor_MSAnim_PTR_vtbl; // 0x7F72EC
 struct VectorCursor_MSSfxEntry_PTR;
-struct VectorCursor_MSSfxEntry_PTR_vtbl; // 0x007F72C4
+struct VectorCursor_MSSfxEntry_PTR_vtbl; // 0x7F72C4
 struct VectorCursor_rc_ptr_WDT_Conflict_PTR;
-struct VectorCursor_rc_ptr_WDT_Conflict_PTR_vtbl; // 0x007F6F9C
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR_vtbl; // 0x7F6F9C
 struct VectorCursor_rc_ptr_WDT_GameOption_PTR;
-struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl; // 0x007F702C
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl; // 0x7F702C
 struct VectorCursor_rc_ptr_WDT_Territory_PTR;
-struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl; // 0x007F72D8
+struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl; // 0x7F72D8
 struct VectorCursor_TRect_int;
 struct VectorCursor_TRect_int_vtbl;
 struct VectorCursor_TRect_int_VectorClass_TRect_int;
-struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl; // 0x007F71CC
+struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl; // 0x7F71CC
 struct VectorCursor_unsigned_int;
-struct VectorCursor_unsigned_int_vtbl; // 0x007EA6C8
+struct VectorCursor_unsigned_int_vtbl; // 0x7EA6C8
 struct VeinholeLogic;
 struct VeinholeMonsterClass; // : ObjectClass : AbstractClass
 struct VeinholeMonsterClass_vtbl; // 0x7F66A8
@@ -2603,38 +2607,38 @@ struct WaypointClass;
 struct WaypointPathClass; // : AbstractClass
 struct WaypointPathClass_vtbl; // 0x7F6E70
 struct WDT_Campaign;
-struct WDT_Campaign_vtbl; // 0x007F6F3C
+struct WDT_Campaign_vtbl; // 0x7F6F3C
 struct WDT_CampaignProperties;
-struct WDT_CampaignProperties_vtbl; // 0x007F7294
+struct WDT_CampaignProperties_vtbl; // 0x7F7294
 struct WDT_Centroid;
 struct WDT_Conflict;
-struct WDT_Conflict_vtbl; // 0x007F6FC4
+struct WDT_Conflict_vtbl; // 0x7F6FC4
 struct WDT_FactionSelectDialogControl;
 struct WDT_FactionSelectDialogControl_vtbl; // 0x7F791C
 struct WDT_FlagGameOption;
-struct WDT_FlagGameOption_vtbl; // 0x007F709C
+struct WDT_FlagGameOption_vtbl; // 0x7F709C
 struct WDT_GameOption;
-struct WDT_GameOption_vtbl; // 0x007F7060
+struct WDT_GameOption_vtbl; // 0x7F7060
 struct WDT_History;
-struct WDT_History_vtbl; // 0x007F70DC
+struct WDT_History_vtbl; // 0x7F70DC
 struct WDT_Map;
-struct WDT_Map_vtbl; // 0x007F7134
+struct WDT_Map_vtbl; // 0x7F7134
 struct WDT_MapSizeGameOption;
-struct WDT_MapSizeGameOption_vtbl; // 0x007F70B4
+struct WDT_MapSizeGameOption_vtbl; // 0x7F70B4
 struct WDT_Selection;
 struct WDT_Selection_vtbl; // 0x7F72B4
 struct WDT_State;
-struct WDT_State_vtbl; // 0x007F7314
+struct WDT_State_vtbl; // 0x7F7314
 struct WDT_Territory;
 struct WDT_Territory_vtbl; // 0x7F7334
 struct WDT_ValueGameOption_unsigned_char;
-struct WDT_ValueGameOption_unsigned_char_vtbl; // 0x007F7048
+struct WDT_ValueGameOption_unsigned_char_vtbl; // 0x7F7048
 struct WDT_Voices_Anim;
-struct WDT_Voices_Anim_vtbl; // 0x007F7354
+struct WDT_Voices_Anim_vtbl; // 0x7F7354
 struct WDTState;
-struct WDTState_vtbl; // 0x007F7250
+struct WDTState_vtbl; // 0x7F7250
 struct WDTTerritory;
-struct WDTTerritory_vtbl; // 0x007F7220
+struct WDTTerritory_vtbl; // 0x7F7220
 struct WeaponStruct;
 struct WeaponTypeClass; // : AbstractTypeClass : AbstractClass
 struct WeaponTypeClass_vtbl; // 0x7F73B8
@@ -2646,7 +2650,7 @@ struct WinModemClass;
 struct WinModemClass_vtbl; // 0x7F7488
 struct WinsockBufferType;
 struct WinsockInterfaceClass;
-struct WinsockInterfaceClass_vtbl; // 0x007F79BC
+struct WinsockInterfaceClass_vtbl; // 0x7F79BC
 struct WonlineStringDialogControl;
 struct WonlineStringDialogControl_vtbl; // 0x7F7874
 struct Wstring_base_TL_char_A_CharTrait_TR_;
@@ -2670,6 +2674,10 @@ struct ZoneConnectionTable;
 struct ZoneConnectionTableManager;
 struct ZoneConnectionTables;
 struct ZoneInfoStruct;
+
+// BATCH83 STRUCT DEFS
+
+struct LTRBStruct : RectangleStruct {};
 
 // TODO STRUCT
 
@@ -11667,7 +11675,7 @@ struct BuildingClass_vtbl : TechnoClass_vtbl
   void (__thiscall *SensorArrayDeactivate)(BuildingClass *this, CellStruct Cell);
   void (__thiscall *DisguiseDetectorActivate)(BuildingClass *this, CellStruct Cell);
   void (__thiscall *DisguiseDetectorDeactivate)(BuildingClass *this, CellStruct Cell);
-  int (__thiscall *AlwaysZero)(BuildingClass *this);
+  int (__thiscall *vt_entry_504)(BuildingClass *vt_entry_504);
 };
 
 struct BuildingTypeClass : TechnoTypeClass
@@ -14995,11 +15003,11 @@ struct ConnectionClass_vtbl
   int (__thiscall *Reset)(ConnectionClass *this);
   int (__thiscall *SendPacket)(ConnectionClass *this, const void *pBuf, int Length, int a4, char a5);
   int (__thiscall *ReceivePacket)(ConnectionClass *this, void *pBuf, int Length);
-  int (__thiscall *fn_04)(ConnectionClass *this);
-  int (__thiscall *fn_05)(ConnectionClass *this);
-  int (__thiscall *fn_06)(ConnectionClass *this);
+  int (__thiscall *vt_entry_10)(ConnectionClass *vt_entry_10);
+  int (__thiscall *vt_entry_14)(ConnectionClass *vt_entry_14);
+  int (__thiscall *vt_entry_18)(ConnectionClass *vt_entry_18);
   int (__thiscall *ServiceSendQueue)(ConnectionClass *this);
-  int (__thiscall *fn_08)(ConnectionClass *this);
+  int (__thiscall *vt_entry_20)(ConnectionClass *vt_entry_20);
   void (__thiscall *vt_entry_24)(ConnectionClass *this);
 };
 
@@ -15050,12 +15058,12 @@ struct __declspec(align(4)) IPXGlobalConnClass : IPXConnClass
 
 struct IPXGlobalConnClass_vtbl : IPXConnClass_vtbl
 {
-  int (__thiscall *fn_11)(IPXGlobalConnClass *this);
+  int (__thiscall *vt_entry_2C)(IPXGlobalConnClass *vt_entry_2C);
   int (__thiscall *SendGlobalAck)(IPXGlobalConnClass *this);
-  int (__thiscall *fn_13)(IPXGlobalConnClass *this);
-  int (__thiscall *fn_14)(IPXGlobalConnClass *this);
-  int (__thiscall *fn_15)(IPXGlobalConnClass *this);
-  int (__thiscall *fn_16)(IPXGlobalConnClass *this);
+  int (__thiscall *vt_entry_34)(IPXGlobalConnClass *vt_entry_34);
+  int (__thiscall *vt_entry_38)(IPXGlobalConnClass *vt_entry_38);
+  int (__thiscall *vt_entry_3C)(IPXGlobalConnClass *vt_entry_3C);
+  int (__thiscall *vt_entry_40)(IPXGlobalConnClass *vt_entry_40);
   int (__thiscall *StripOldPackets)(IPXGlobalConnClass *this);
 };
 
@@ -15066,22 +15074,22 @@ struct __declspec(align(4)) ConnManClass
 
 struct ConnManClass_vtbl
 {
-    void (__thiscall *ScalarDeletingDestructor)(ConnManClass *this, unsigned int flags);
-    int (__thiscall *fn_01)(ConnManClass *this);
-    int (__thiscall *fn_02)(ConnManClass *this);
-    int (__thiscall *fn_03)(ConnManClass *this);
-    int (__thiscall *fn_04)(ConnManClass *this);
-    int (__thiscall *fn_05)(ConnManClass *this);
-    int (__thiscall *fn_06)(ConnManClass *this);
-    int (__thiscall *fn_07)(ConnManClass *this);
-    int (__thiscall *fn_08)(ConnManClass *this);
-    int (__thiscall *fn_09)(ConnManClass *this);
-    int (__thiscall *fn_10)(ConnManClass *this);
-    int (__thiscall *fn_11)(ConnManClass *this);
-    int (__thiscall *fn_12)(ConnManClass *this);
-    int (__thiscall *fn_13)(ConnManClass *this);
-    int (__thiscall *fn_14)(ConnManClass *this);
-    int (__thiscall *fn_15)(ConnManClass *this);
+      void (__thiscall *ScalarDeletingDestructor)(ConnManClass *this, unsigned int flags);
+      int (__thiscall *vt_entry_04)(ConnManClass *vt_entry_04);
+      int (__thiscall *vt_entry_08)(ConnManClass *vt_entry_08);
+      int (__thiscall *vt_entry_0C)(ConnManClass *vt_entry_0C);
+      int (__thiscall *vt_entry_10)(ConnManClass *vt_entry_10);
+      int (__thiscall *vt_entry_14)(ConnManClass *vt_entry_14);
+      int (__thiscall *vt_entry_18)(ConnManClass *vt_entry_18);
+      int (__thiscall *vt_entry_1C)(ConnManClass *vt_entry_1C);
+      int (__thiscall *vt_entry_20)(ConnManClass *vt_entry_20);
+      int (__thiscall *vt_entry_24)(ConnManClass *vt_entry_24);
+      int (__thiscall *vt_entry_28)(ConnManClass *vt_entry_28);
+      int (__thiscall *vt_entry_2C)(ConnManClass *vt_entry_2C);
+      int (__thiscall *vt_entry_30)(ConnManClass *vt_entry_30);
+      int (__thiscall *vt_entry_34)(ConnManClass *vt_entry_34);
+      int (__thiscall *vt_entry_38)(ConnManClass *vt_entry_38);
+      int (__thiscall *vt_entry_3C)(ConnManClass *vt_entry_3C);
 };
 
 struct __declspec(align(4)) IPXManagerClass
@@ -15136,31 +15144,31 @@ struct __declspec(align(4)) IPXManagerClass
 
 struct IPXManagerClass_vtbl
 {
-    void (__thiscall *ScalarDeletingDestructor)(IPXManagerClass *this, unsigned int flags);
-    void (__thiscall *Service)(IPXManagerClass *this);
-    int (__thiscall *Send)(IPXManagerClass *this, void *pBuf, int Length, int a4, int HouseIndex);
-    int (__thiscall *Receive)(IPXManagerClass *this, int a2, int a3, int *pOut);
-    int (__thiscall *GetNumConnections)(IPXManagerClass *this);
-    int (__thiscall *GetHouseIndex)(IPXManagerClass *this, int ConnIndex);
-    int (__thiscall *GetConnectionIndex)(IPXManagerClass *this, int HouseIndex);
-    int (__thiscall *GetGlobalChannelStat0)(IPXManagerClass *this);
-    int (__thiscall *GetGlobalChannelStat1)(IPXManagerClass *this);
-    int (__thiscall *GetMaxStat0)(IPXManagerClass *this, int HouseIndex);
-    int (__thiscall *GetMaxStat1)(IPXManagerClass *this, int HouseIndex);
-    int (__thiscall *FlushBuffers)(IPXManagerClass *this, char bDiscard);
-    unsigned int (__thiscall *ResponseTime)(IPXManagerClass *this);
-    ConnectionClass *(__thiscall *SetTiming)(IPXManagerClass *this, int RetryDelta, int MaxRetries, int Timeout, bool a5);
-    int (__thiscall *SetGlobalChannelTiming)(IPXManagerClass *this, int a2, int a3, int a4);
-    int (__thiscall *SetConnectionTiming)(IPXManagerClass *this, int a2, int a3, int a4, int a5, int a6, int a7);
-    int (__thiscall *SaveGlobalChannelTiming)(IPXManagerClass *this);
-    int (__thiscall *RestoreGlobalChannelTiming)(IPXManagerClass *this);
-    int (__thiscall *SetGlobalConn2Timing)(IPXManagerClass *this, int a2, int a3, int a4);
-    int (__thiscall *GetConnType)(IPXManagerClass *this, int a2);
-    int (__thiscall *GetGlobalConn2Stat0)(IPXManagerClass *this);
-    int (__thiscall *GetGlobalConn2Stat1)(IPXManagerClass *this);
-    int (__thiscall *fn_22)(IPXManagerClass *this);
-    void (__thiscall *UpdateMultiplayerStats)(IPXManagerClass *this);
-    void (__thiscall *fn_24)(IPXManagerClass *this);
+      void (__thiscall *ScalarDeletingDestructor)(IPXManagerClass *this, unsigned int flags);
+      void (__thiscall *Service)(IPXManagerClass *this);
+      int (__thiscall *Send)(IPXManagerClass *this, void *pBuf, int Length, int a4, int HouseIndex);
+      int (__thiscall *Receive)(IPXManagerClass *this, int a2, int a3, int *pOut);
+      int (__thiscall *GetNumConnections)(IPXManagerClass *this);
+      int (__thiscall *GetHouseIndex)(IPXManagerClass *this, int ConnIndex);
+      int (__thiscall *GetConnectionIndex)(IPXManagerClass *this, int HouseIndex);
+      int (__thiscall *GetGlobalChannelStat0)(IPXManagerClass *this);
+      int (__thiscall *GetGlobalChannelStat1)(IPXManagerClass *this);
+      int (__thiscall *GetMaxStat0)(IPXManagerClass *this, int HouseIndex);
+      int (__thiscall *GetMaxStat1)(IPXManagerClass *this, int HouseIndex);
+      int (__thiscall *FlushBuffers)(IPXManagerClass *this, char bDiscard);
+      unsigned int (__thiscall *ResponseTime)(IPXManagerClass *this);
+      ConnectionClass *(__thiscall *SetTiming)(IPXManagerClass *this, int RetryDelta, int MaxRetries, int Timeout, bool a5);
+      int (__thiscall *SetGlobalChannelTiming)(IPXManagerClass *this, int a2, int a3, int a4);
+      int (__thiscall *SetConnectionTiming)(IPXManagerClass *this, int a2, int a3, int a4, int a5, int a6, int a7);
+      int (__thiscall *SaveGlobalChannelTiming)(IPXManagerClass *this);
+      int (__thiscall *RestoreGlobalChannelTiming)(IPXManagerClass *this);
+      int (__thiscall *SetGlobalConn2Timing)(IPXManagerClass *this, int a2, int a3, int a4);
+      int (__thiscall *GetConnType)(IPXManagerClass *this, int a2);
+      int (__thiscall *GetGlobalConn2Stat0)(IPXManagerClass *this);
+      int (__thiscall *GetGlobalConn2Stat1)(IPXManagerClass *this);
+      int (__thiscall *vt_entry_58)(IPXManagerClass *vt_entry_58);
+      void (__thiscall *UpdateMultiplayerStats)(IPXManagerClass *this);
+      void (__thiscall *vt_entry_60)(IPXManagerClass *vt_entry_60);
 };
 
 struct __declspec(align(4)) WinsockBufferType
@@ -15203,29 +15211,29 @@ struct __declspec(align(4)) WinsockInterfaceClass
 
 struct WinsockInterfaceClass_vtbl
 {
-    void (__thiscall *ScalarDeletingDestructor)(WinsockInterfaceClass *this, unsigned int flags);
-    int (__thiscall *fn_01)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_02)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_03)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_04)(WinsockInterfaceClass *this);
-    void (__thiscall *DiscardInBuffers)(WinsockInterfaceClass *this);
-    void (__thiscall *DiscardOutBuffers)(WinsockInterfaceClass *this);
-    bool (__thiscall *StartListening)(WinsockInterfaceClass *this);
-    void (__thiscall *StopListening)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_09)(WinsockInterfaceClass *this);
-    int (__thiscall *SetSocketBuffers)(WinsockInterfaceClass *this, int a2, int a3);
-    int (__thiscall *ParseIPAddress)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_12)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_13)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_14)(WinsockInterfaceClass *this);
-    int (__thiscall *GetLocalHostAddress)(WinsockInterfaceClass *this);
-    int (__thiscall *FlushSendBuffer)(WinsockInterfaceClass *this);
-    int (__thiscall *GetHostName)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_18)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_19)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_20)(WinsockInterfaceClass *this);
-    int (__thiscall *fn_21)(WinsockInterfaceClass *this);
-    int (__thiscall *CheckCRC)(WinsockInterfaceClass *this);
+      void (__thiscall *ScalarDeletingDestructor)(WinsockInterfaceClass *this, unsigned int flags);
+      int (__thiscall *vt_entry_04)(WinsockInterfaceClass *vt_entry_04);
+      int (__thiscall *vt_entry_08)(WinsockInterfaceClass *vt_entry_08);
+      int (__thiscall *vt_entry_0C)(WinsockInterfaceClass *vt_entry_0C);
+      int (__thiscall *vt_entry_10)(WinsockInterfaceClass *vt_entry_10);
+      void (__thiscall *DiscardInBuffers)(WinsockInterfaceClass *this);
+      void (__thiscall *DiscardOutBuffers)(WinsockInterfaceClass *this);
+      bool (__thiscall *StartListening)(WinsockInterfaceClass *this);
+      void (__thiscall *StopListening)(WinsockInterfaceClass *this);
+      int (__thiscall *vt_entry_24)(WinsockInterfaceClass *vt_entry_24);
+      int (__thiscall *SetSocketBuffers)(WinsockInterfaceClass *this, int a2, int a3);
+      int (__thiscall *ParseIPAddress)(WinsockInterfaceClass *this);
+      int (__thiscall *vt_entry_30)(WinsockInterfaceClass *vt_entry_30);
+      int (__thiscall *vt_entry_34)(WinsockInterfaceClass *vt_entry_34);
+      int (__thiscall *vt_entry_38)(WinsockInterfaceClass *vt_entry_38);
+      int (__thiscall *GetLocalHostAddress)(WinsockInterfaceClass *this);
+      int (__thiscall *FlushSendBuffer)(WinsockInterfaceClass *this);
+      int (__thiscall *GetHostName)(WinsockInterfaceClass *this);
+      int (__thiscall *vt_entry_48)(WinsockInterfaceClass *vt_entry_48);
+      int (__thiscall *vt_entry_4C)(WinsockInterfaceClass *vt_entry_4C);
+      int (__thiscall *vt_entry_50)(WinsockInterfaceClass *vt_entry_50);
+      int (__thiscall *vt_entry_54)(WinsockInterfaceClass *vt_entry_54);
+      int (__thiscall *CheckCRC)(WinsockInterfaceClass *this);
 };
 
 struct __declspec(align(4)) IPXInterfaceClass : WinsockInterfaceClass
@@ -15252,12 +15260,12 @@ struct __declspec(align(4)) UDPInterfaceClass : IPXInterfaceClass
 struct UDPInterfaceClass_vtbl : IPXInterfaceClass_vtbl
 {
   bool (__thiscall *OpenSocket)(UDPInterfaceClass *this, int Port);
-  int (__thiscall *fn_24)(UDPInterfaceClass *this);
-  int (__thiscall *fn_25)(UDPInterfaceClass *this);
+  int (__thiscall *vt_entry_60)(UDPInterfaceClass *vt_entry_60);
+  int (__thiscall *vt_entry_64)(UDPInterfaceClass *vt_entry_64);
   int (__thiscall *OpenSpareSocket)(UDPInterfaceClass *this);
   int (__thiscall *CloseSpareSocket)(UDPInterfaceClass *this);
   int (__thiscall *CloseSpareSocket2)(UDPInterfaceClass *this);
-  int (__thiscall *fn_29)(UDPInterfaceClass *this);
+  int (__thiscall *vt_entry_74)(UDPInterfaceClass *vt_entry_74);
   int (__thiscall *MarkAddressUnreachable)(UDPInterfaceClass *this);
 };
 
@@ -16083,6 +16091,58 @@ struct BufferPipe_vtbl : Pipe_vtbl {};
 
 struct BufferStraw_vtbl : Straw_vtbl {};
 
+struct CChatEventSink_vtbl
+{
+  int (__thiscall *QueryInterface)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(CChatEventSink *this, int a1);
+  int (__thiscall *Release)(CChatEventSink *this, int a1);
+  int (__thiscall *OnServerList)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnUpdateList)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnServerError)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnConnection)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnMessageOfTheDay)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnChannelList)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnChannelCreate)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnChannelJoin)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnChannelLeave)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnChannelTopic)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPrivateAction)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicAction)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnUserList)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicMessage)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnPrivateMessage)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnSystemMessage)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnNetStatus)(CChatEventSink *this, int a1, int a2);
+  int (__thiscall *OnLogout)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnPrivateGameOptions)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicGameOptions)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnGameStart)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnUserKick)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnUserIP)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnFind)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnPageSend)(CChatEventSink *this, int a1, int a2);
+  int (__thiscall *OnPaged)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnServerBannedYou)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnUserFlags)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnChannelBan)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnSquadInfo)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnUserLocale)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnUserTeam)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnSetLocale)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnSetTeam)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnBuddyList)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnBuddyAdd)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnBuddyDelete)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnPublicUnicodeMessage)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnPrivateUnicodeMessage)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPrivateUnicodeAction)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicUnicodeAction)(CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnPagedUnicode)(CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnServerTime)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnInsiderStatus)(CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnSetLocalIP)(CChatEventSink *this, int a1, int a2, int a3);
+};
+
 struct CComObject_CChatEventSink_vtbl
 {
   int (__thiscall *QueryInterface)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
@@ -16142,6 +16202,17 @@ struct CComObject_CDownloadEventSink_vtbl : IUnknown_vtbl
   int (__thiscall *vt_entry_14)(CComObject_CDownloadEventSink *this, int a1, int a2, int a3, int a4, int a5);
   int (__thiscall *OnQueryResume)(CComObject_CDownloadEventSink *this, int a1);
   int (__thiscall *vt_entry_1C)(CComObject_CDownloadEventSink *this, int a1, int a2);
+};
+
+struct CNetUtilEventSink_vtbl : IUnknown_vtbl
+{
+  int (__thiscall *vt_entry_0C)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_10)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
+  int (__thiscall *vt_entry_14)(CNetUtilEventSink *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_1C)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_20)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_24)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
 
 struct CComObject_CNetUtilEventSink_vtbl : IUnknown_vtbl
