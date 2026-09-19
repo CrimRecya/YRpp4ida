@@ -16256,4695 +16256,4339 @@ struct RLEBlitter_vtbl; // 0x007E5BA0
 
 struct AddTeamCommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(AddTeamCommandClass *this, int a1);
+  int (__thiscall *GetName)(AddTeamCommandClass *this);
+  int (__thiscall *GetUIName)(AddTeamCommandClass *this);
+  int (__thiscall *GetUICategory)(AddTeamCommandClass *this);
+  int (__thiscall *GetUIDescription)(AddTeamCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(AddTeamCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(AddTeamCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(AddTeamCommandClass *this, int a1);
+  int (__thiscall *Execute)(AddTeamCommandClass *this, int a1);
 };
 
 struct AllToCheerCommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(AllToCheerCommandClass *this, int a1);
+  int (__thiscall *GetName)(AllToCheerCommandClass *this);
+  int (__thiscall *GetUIName)(AllToCheerCommandClass *this);
+  int (__thiscall *GetUICategory)(AllToCheerCommandClass *this);
+  int (__thiscall *GetUIDescription)(AllToCheerCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(AllToCheerCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(AllToCheerCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(AllToCheerCommandClass *this, int a1);
+  int (__thiscall *Execute)(AllToCheerCommandClass *this, int a1);
 };
 
 struct AllianceCommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(AllianceCommandClass *this, int a1);
+  int (__thiscall *GetName)(AllianceCommandClass *this);
+  int (__thiscall *GetUIName)(AllianceCommandClass *this);
+  int (__thiscall *GetUICategory)(AllianceCommandClass *this);
+  int (__thiscall *GetUIDescription)(AllianceCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(AllianceCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(AllianceCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(AllianceCommandClass *this, int a1);
+  int (__thiscall *Execute)(AllianceCommandClass *this, int a1);
 };
 
 struct AnimFile_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetSource;
-  void *Buddy_Reset;
-  void *Buddy_DrawFrame;
-  void *vt_entry_10;
-  void *vt_entry_14;
+  int (__thiscall *ScalarDeletingDestructor)(AnimFile *this, int a1);
+  int (__thiscall *vt_entry_04)(AnimFile *this, int a1);
+  int (__thiscall *vt_entry_08)(AnimFile *this);
+  int (__thiscall *vt_entry_0C)(AnimFile *this, int a1);
+  int (__thiscall *vt_entry_10)(AnimFile *this);
+  int (__thiscall *vt_entry_14)(AnimFile *this);
 };
 
 struct Animate_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero;
-  void *AlwaysZero_2;
-  void *AlwaysZero_3;
-  void *AlwaysZero_4;
-  void *AlwaysZero_5;
-  void *AlwaysZero_6;
-  void *AlwaysZero_7;
+  int (__thiscall *ScalarDeletingDestructor)(Animate *this, int a1);
+  int (__thiscall *vt_entry_04)(Animate *this);
+  int (__thiscall *vt_entry_08)(Animate *this);
+  int (__thiscall *vt_entry_0C)(Animate *this);
+  int (__thiscall *vt_entry_10)(Animate *this);
+  int (__thiscall *vt_entry_14)(Animate *this);
+  int (__thiscall *vt_entry_18)(Animate *this);
+  int (__thiscall *vt_entry_1C)(Animate *this);
 };
 
 struct ApplicationClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *FullName;
-  void *Name;
-  void *Quit;
-  void *ScenarioName;
-  void *FrameCount;
-  void *Swizzle_Interface;
-  void *Buddy_GetIApplication;
-  void *Buddy_GetIApplication_0;
-};
-
-struct Base64Pipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-};
-
-struct Base64Straw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Buddy_WriteUUBlock;
-};
-
-struct BeaconPlacementCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct BinkMovieHandle_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *AdvanceFrame;
-  void *Waiting;
-  void *Pause;
-  void *Stop;
-  void *FramesLeft;
-  void *SetPosition;
-  void *SeekToFrame;
-  void *InitSubtitles;
-  void *Timing;
-  void *Blit;
-};
-
-struct BlitPlainXlatAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitPlainXlatZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitPlainXlatZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitPlainXlat_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitPlainXlat_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitPlain_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitPlain_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransDarkenZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransDarkenZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransDarken_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25Alpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25ZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent25_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50Alpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50ZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent50_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75Alpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75ZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransLucent75_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransRemapDest_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransRemapXlat_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatAlphaZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatWriteAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlatZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlat_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransXlat_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlatZRead_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlat_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTransZRemapXlat_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTrans_unsigned_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTrans_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct BlitTranslucentWriteAlpha_unsigned_short_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
-  void *Blit_Move;
-  void *Blit_Move_Tinted;
-};
-
-struct Blitter_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero;
-  void *AlwaysZero_2;
-  void *AlwaysZero_3;
-  void *AlwaysZero_4;
-};
-
-struct BlowPipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-};
-
-struct BlowStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-};
-
-struct BufferPipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-};
-
-struct BufferStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-};
-
-struct CComObject_CChatEventSink_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *OnServerList;
-  void *OnUpdateList;
-  void *OnServerError;
-  void *OnConnection;
-  void *OnMessageOfTheDay;
-  void *OnChannelList;
-  void *OnChannelCreate;
-  void *OnChannelJoin;
-  void *OnChannelLeave;
-  void *OnChannelTopic;
-  void *OnPrivateAction;
-  void *OnPublicAction;
-  void *OnUserList;
-  void *OnPublicMessage;
-  void *OnPrivateMessage;
-  void *OnSystemMessage;
-  void *OnNetStatus;
-  void *OnLogout;
-  void *OnPrivateGameOptions;
-  void *OnPublicGameOptions;
-  void *OnGameStart;
-  void *OnUserKick;
-  void *OnUserIP;
-  void *OnFind;
-  void *OnPageSend;
-  void *OnPaged;
-  void *OnServerBannedYou;
-  void *OnUserFlags;
-  void *OnChannelBan;
-  void *OnSquadInfo;
-  void *OnUserLocale;
-  void *OnUserTeam;
-  void *OnSetLocale;
-  void *OnSetTeam;
-  void *OnBuddyList;
-  void *OnBuddyAdd;
-  void *OnBuddyDelete;
-  void *OnPublicUnicodeMessage;
-  void *OnPrivateUnicodeMessage;
-  void *OnPrivateUnicodeAction;
-  void *OnPublicUnicodeAction;
-  void *OnPagedUnicode;
-  void *OnServerTime;
-  void *OnInsiderStatus;
-  void *OnSetLocalIP;
-};
-
-struct CComObject_CDownloadEventSink_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *OnEnd;
-  void *OnError;
-  void *Buddy_FormatByteProgress;
-  void *OnQueryResume;
-  void *Buddy_UpdatePatchProgress;
-};
-
-struct CComObject_CNetUtilEventSink_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *Buddy_HandlePing;
-  void *Buddy_WOLGetLadderInfo;
-  void *Buddy_OnGameresSent;
-  void *Buddy_WOL_OnNewNick;
-  void *Buddy_OnAgeCheck;
-  void *Buddy_WDT_OnState;
-  void *Buddy_ReportHighScore;
-};
-
-struct CD_vtbl
-{
-  void *ForceAvailable;
-  void *Buddy_ShowInsertCDDialog;
-  void *Buddy_InitializeMixFiles;
-};
-
-struct CStreamClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *Read;
-  void *Write;
-  void *Seek;
-  void *SetSize;
-  void *CopyTo;
-  void *Commit;
-  void *Revert;
-  void *LockRegion;
-  void *UnlockRegion;
-  void *Stat;
-  void *Clone;
-  void *ScalarDeletingDestructor;
-};
-
-struct CacheStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-};
-
-struct CampaignEndScoreClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_ShowEndScoreDialog;
-};
-
-struct CampaignScoreClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_InitCampaignScoreDialog;
-};
-
-struct CarryoverClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetNext;
-  void *GetPrev;
-  void *Add;
-  void *AddTail;
-  void *AddHead;
-  void *HeadOfList;
-  void *TailOfList;
-  void *Zap;
-  void *Remove;
-};
-
-struct CenterBaseCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct CenterREventCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct CenterTeamCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct CenterViewCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct CombatantSelectCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct ConnectionPointClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *GetConnectionInterface;
-  void *GetConnectionPointContainer;
-  void *Advise;
-  void *Unadvise;
-  void *EnumConnections;
-};
-
-struct CreateGameDialogControl_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *BindControlHwnd;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *Buddy_WOLMatchTimeout;
-};
-
-struct CreateTeamCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct CursorPositionCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct DeleteCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct DeployCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct Dial8Class_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetNext;
-  void *GetPrev;
-  void *Add;
-  void *AddTail;
-  void *AddHead;
-  void *HeadOfList;
-  void *TailOfList;
-  void *Zap;
-  void *Remove;
-  void *Input;
-  void *DrawAll;
-  void *DeleteList;
-  void *ExtractGadget;
-  void *MarkListToRedraw;
-  void *Disable;
-  void *Enable;
-  void *GetID;
-  void *MarkRedraw;
-  void *PeerToPeer;
-  void *SetFocus;
-  void *KillFocus;
-  void *IsFocused;
-  void *IsListToRedraw;
-  void *IsToRedraw;
-  void *SetPosition;
-  void *SetDimension;
-  void *Buddy_Draw;
-  void *OnMouseEnter;
-  void *OnMouseLeave;
-  void *StickyProcess;
-  void *Buddy_ComputeAngleAction;
-  void *Clicked;
-  void *MakePeer;
-};
-
-struct DisplayClass_TacticalClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetNext;
-  void *GetPrev;
-  void *Add;
-  void *AddTail;
-  void *AddHead;
-  void *HeadOfList;
-  void *TailOfList;
-  void *Zap;
-  void *Remove;
-  void *Input;
-  void *DrawAll;
-  void *DeleteList;
-  void *ExtractGadget;
-  void *MarkListToRedraw;
-  void *Disable;
-  void *Enable;
-  void *GetID;
-  void *MarkRedraw;
-  void *PeerToPeer;
-  void *SetFocus;
-  void *KillFocus;
-  void *IsFocused;
-  void *IsListToRedraw;
-  void *IsToRedraw;
-  void *SetPosition;
-  void *SetDimension;
-  void *Draw;
-  void *OnMouseEnter;
-  void *OnMouseLeave;
-  void *StickyProcess;
-  void *Action;
-  void *Clicked;
-};
-
-struct DynamicVectorClass_AcceleratorTracker_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_ButtonFadeEffect_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_CoopCampaignClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_DirtyAreaStruct_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_EgoClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_GlobalPacketType_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_HSVClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
-{
-  void *VectorDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl
-{
-  void *VectorDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MSSfx_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MSTextEntry_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MapRegionClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MapSelection_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MapStage_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MixFileClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_MovieHandle_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_RGBClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_ShadowControlClass_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_SubTitle_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_UndoInfoStruct_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_Wstring_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct DynamicVectorClass_tagCONNECTDATA_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct EnumConnectionPointsClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *Next;
-  void *Skip;
-  void *Reset;
-  void *Clone;
-};
-
-struct EnumConnectionsClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *Next;
-  void *Skip;
-  void *Reset;
-  void *Clone;
-};
-
-struct FilePipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-};
-
-struct FileStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-};
-
-struct FollowCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct GraphicMenuAnimItem_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *MatchKey;
-  void *HitTest;
-  void *vt_entry_C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-};
-
-struct GraphicMenuImageItem_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *MatchKey;
-  void *HitTest;
-  void *vt_entry_C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-};
-
-struct GraphicMenuShortcutItem_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *MatchKey;
-  void *HitTest;
-  void *vt_entry_C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-};
-
-struct GuardCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct HealthNavCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct Initializer_FreeForAll_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Factory_Constructor;
-};
-
-struct Initializer_MPCooperative_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Factory_Constructor;
-};
-
-struct Initializer_MultiplayerBattle_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Constructor;
-};
-
-struct Initializer_MultiplayerManBattle_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Factory_Constructor;
-};
-
-struct Initializer_MultiplayerSiege_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Factory_Constructor;
-};
-
-struct Initializer_UnholyAlliance_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Factory_Constructor;
-};
-
-struct LCWPipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-};
-
-struct LCWStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-};
-
-struct LZOPipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-};
-
-struct LZOStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-};
-
-struct MPBattleClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_8;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *DrawTeamDropdown;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *vt_entry_64;
-  void *vt_entry_68;
-  void *RandomHumanCountryIndex;
-  void *RandomAICountryIndex;
-  void *vt_entry_74;
-  void *vt_entry_78;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *StartingPositionsToHouseBaseCells2;
-  void *AllyTeams;
-  void *vt_entry_8C;
-  void *vt_entry_90;
-  void *vt_entry_94;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *vt_entry_A0;
-  void *vt_entry_A4;
-  void *vt_entry_A8;
-  void *vt_entry_AC;
-  void *vt_entry_B0;
-  void *vt_entry_B4;
-  void *vt_entry_B8;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *SpawnBaseUnits;
-  void *GenerateStartingUnits;
-};
-
-struct MPCombatTeam_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *IsTeamIncluded;
-  void *SetPlayerTeam;
-};
-
-struct MPCooperative_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_11;
-  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_12;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *Buddy_CreateFindGameDialog;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *vt_entry_40;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *Buddy_MPCoop_LoadMapList;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *Buddy_SendCampaignAISettings;
-  void *Buddy_SetupAISlots;
-  void *Buddy_ChooseRandomPlayerHouse;
-  void *Buddy_ChooseRandomAIHouse;
-  void *vt_entry_74;
-  void *Buddy_PostMessageToDlgItem732;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *Buddy_AssignStartingPoints;
-  void *Buddy_MakeAlliances;
-  void *vt_entry_8C;
-  void *Buddy_ComposeMapFileName;
-  void *Buddy_MPCoopLoadSave;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *Buddy_MPCoopEndOfGame;
-  void *Buddy_BuildIPXPacket;
-  void *Buddy_ParsePX;
-  void *Buddy_SetupRematch;
-  void *Buddy_FormatIPXAddress_2;
-  void *vt_entry_B4;
-  void *Buddy_HandleCoopCampaignComplete;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *SpawnBaseUnits;
-  void *GenerateStartingUnits;
-};
-
-struct MPFreeForAllClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_13;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *DrawTeamDropdown;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *vt_entry_64;
-  void *vt_entry_68;
-  void *RandomHumanCountryIndex;
-  void *RandomAICountryIndex;
-  void *vt_entry_74;
-  void *vt_entry_78;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *StartingPositionsToHouseBaseCells2;
-  void *AllyTeams;
-  void *vt_entry_8C;
-  void *vt_entry_90;
-  void *vt_entry_94;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *vt_entry_A0;
-  void *vt_entry_A4;
-  void *vt_entry_A8;
-  void *vt_entry_AC;
-  void *vt_entry_B0;
-  void *vt_entry_B4;
-  void *vt_entry_B8;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *SpawnBaseUnits;
-  void *GenerateStartingUnits;
-};
-
-struct MPGameModeClass_InitializerBase_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero;
-};
-
-struct MPManBattleClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *vt_entry_40;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *DrawTeamDropdown;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *vt_entry_64;
-  void *vt_entry_68;
-  void *RandomHumanCountryIndex;
-  void *RandomAICountryIndex;
-  void *vt_entry_74;
-  void *vt_entry_78;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *StartingPositionsToHouseBaseCells2;
-  void *AllyTeams;
-  void *vt_entry_8C;
-  void *vt_entry_90;
-  void *vt_entry_94;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *vt_entry_A0;
-  void *vt_entry_A4;
-  void *vt_entry_A8;
-  void *vt_entry_AC;
-  void *vt_entry_B0;
-  void *vt_entry_B4;
-  void *vt_entry_B8;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *SpawnBaseUnits;
-  void *GenerateStartingUnits;
-};
-
-struct MPMegawealthClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *vt_entry_40;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *DrawTeamDropdown;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *vt_entry_64;
-  void *vt_entry_68;
-  void *RandomHumanCountryIndex;
-  void *RandomAICountryIndex;
-  void *vt_entry_74;
-  void *vt_entry_78;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *StartingPositionsToHouseBaseCells2;
-  void *AllyTeams;
-  void *vt_entry_8C;
-  void *vt_entry_90;
-  void *vt_entry_94;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *vt_entry_A0;
-  void *vt_entry_A4;
-  void *vt_entry_A8;
-  void *vt_entry_AC;
-  void *vt_entry_B0;
-  void *vt_entry_B4;
-  void *vt_entry_B8;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *SpawnBaseUnits;
-  void *GenerateStartingUnits;
-};
-
-struct MPObserverTeam_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *IsTeamIncluded;
-  void *SetPlayerTeam;
-};
-
-struct MPSiegeAttackerTeam_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *IsTeamIncluded;
-  void *SetPlayerTeam;
-};
-
-struct MPSiegeClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *vt_entry_40;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *DrawTeamDropdown;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *vt_entry_64;
-  void *vt_entry_68;
-  void *RandomHumanCountryIndex;
-  void *RandomAICountryIndex;
-  void *vt_entry_74;
-  void *vt_entry_78;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *StartingPositionsToHouseBaseCells2;
-  void *AllyTeams;
-  void *vt_entry_8C;
-  void *vt_entry_90;
-  void *vt_entry_94;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *vt_entry_A0;
-  void *vt_entry_A4;
-  void *vt_entry_A8;
-  void *vt_entry_AC;
-  void *vt_entry_B0;
-  void *vt_entry_B4;
-  void *vt_entry_B8;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *Buddy_SpawnBaseBuildings;
-  void *GenerateStartingUnits;
-};
-
-struct MPSiegeDefenderTeam_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *IsTeamIncluded;
-  void *SetPlayerTeam;
-};
-
-struct MPUnholyAllianceClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *CanAllyWith;
-  void *vt_entry_38;
-  void *IsAIAllowed;
-  void *vt_entry_40;
-  void *FirstValidMapIndex;
-  void *PopulateTeamDropdown;
-  void *DrawTeamDropdown;
-  void *PopulateTeamDropdownForPlayer;
-  void *vt_entry_54;
-  void *vt_entry_58;
-  void *vt_entry_5C;
-  void *vt_entry_60;
-  void *vt_entry_64;
-  void *vt_entry_68;
-  void *RandomHumanCountryIndex;
-  void *RandomAICountryIndex;
-  void *vt_entry_74;
-  void *vt_entry_78;
-  void *UnfixAlliances;
-  void *StartingPositionsToHouseBaseCells;
-  void *StartingPositionsToHouseBaseCells2;
-  void *AllyTeams;
-  void *vt_entry_8C;
-  void *vt_entry_90;
-  void *vt_entry_94;
-  void *vt_entry_98;
-  void *vt_entry_9C;
-  void *vt_entry_A0;
-  void *vt_entry_A4;
-  void *vt_entry_A8;
-  void *vt_entry_AC;
-  void *vt_entry_B0;
-  void *vt_entry_B4;
-  void *vt_entry_B8;
-  void *vt_entry_BC;
-  void *CreateMPTeams;
-  void *AssignStartingPositionsToHouse;
-  void *SpawnBaseUnits;
-  void *GenerateStartingUnits;
-};
-
-struct MSBinkAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSBitPrintAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSEngine_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-};
-
-struct MSFadeAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSFont_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_GetCharWidth;
-  void *Buddy_GetStringWidth;
-  void *Buddy_DrawString;
-  void *Buddy_DrawShapeToSurface;
-};
-
-struct MSFrameAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSOverlayAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSPCXAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSPrintAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSShapeAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MSVQAnim_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_SetActive;
-  void *Buddy_StopTimer;
-  void *Buddy_StartTimer;
-  void *Buddy_DrawRect;
-  void *Buddy_DrawRectOrFull;
-  void *Buddy_GetDefaultRect;
-  void *Buddy_CanDraw;
-  void *Buddy_Draw;
-};
-
-struct MapSeedClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *LoadMission;
-  void *SaveMission;
-  void *DeleteMission;
-  void *GetFileEntry;
-  void *GetUIString_Load;
-  void *GetUIString_Save;
-  void *GetUIString_Delete;
-  void *GetUIString_GameSaved;
-};
-
-struct MapSelect_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
-};
-
-struct Mouse_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero;
-  void *AlwaysZero_2;
-  void *AlwaysZero_3;
-  void *AlwaysZero_4;
-  void *AlwaysZero_5;
-  void *AlwaysZero_6;
-  void *AlwaysZero_7;
-  void *AlwaysZero_8;
-  void *AlwaysZero_9;
-  void *AlwaysZero_10;
-  void *AlwaysZero_11;
-  void *AlwaysZero_12;
-  void *AlwaysZero_13;
-  void *AlwaysZero_14;
-  void *AlwaysZero_15;
-  void *AlwaysZero_16;
-  void *AlwaysZero_17;
-};
-
-struct MultiplayerDebugCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct MultiplayerSyncCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct NextObjectCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct NullModemClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_Serial_ValidatePacket;
-  void *Buddy_Write;
-  void *Buddy_Read;
-  void *Buddy_GetBuffer;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *SetFlushState;
-  void *Buddy_GetBufferField;
-  void *Buddy_SetBufferParams;
-  void *Buddy_SendPacket;
-  void *SetTimingParams;
-};
-
-struct NullModemConnClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Reset;
-  void *Buddy_SendPacket;
-  void *Buddy_ReceivePacket;
-  void *Read;
-  void *Service;
-  void *Buddy_FlushOutBuffers;
-  void *Buddy_ServiceSendQueue;
-  void *ServiceReadQueue;
-  void *Buddy_SendFramedPacket;
-};
-
-struct OptionsCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct OwnerDraw_DialogControl_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero;
-  void *AlwaysZero_2;
-  void *AlwaysZero_3;
-  void *AlwaysZero_4;
-};
-
-struct OwnerDraw_SimpleDialogControl_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *BindControlHwnd;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-};
-
-struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl
-{
-  void *VectorDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct PAVSchemeNode_VectorClass_HashObject_HashString_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl
-{
-  void *VectorDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct PKPipe_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
-  void *vt_entry_14;
-};
-
-struct PKStraw_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
-  void *vt_entry_0C;
-};
-
-struct PageUserCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *QueryInterface)(ApplicationClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(ApplicationClass *this, int a1);
+  int (__thiscall *Release)(ApplicationClass *this, int a1);
+  int (__thiscall *FullName)(ApplicationClass *this, int a1, int a2);
+  int (__thiscall *Name)(ApplicationClass *this, int a1, int a2);
+  int (__thiscall *Quit)(ApplicationClass *this, int a1);
+  int (__thiscall *ScenarioName)(ApplicationClass *this, int a1, int a2);
+  int (__thiscall *FrameCount)(ApplicationClass *this, int a1, int a2);
+  int (__thiscall *Swizzle_Interface)(ApplicationClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_24)(ApplicationClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_28)(ApplicationClass *this, int a1, int a2);
 };
 
 struct Pipe_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
+  int (__thiscall *ScalarDeletingDestructor)(Pipe *this, int a1);
+  int (__thiscall *Flush)(Pipe *this);
+  int (__thiscall *End)(Pipe *this);
+  int (__thiscall *Put_To)(Pipe *this, int a1);
+  int (__thiscall *Put)(Pipe *this, int a1, int a2);
 };
 
-struct PlanningModeCommandClass_vtbl
+struct Base64Pipe_vtbl : Pipe_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop55E020;
-  void *Execute;
 };
 
-struct PlayerProfile_vtbl
+struct Base64Straw_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero_2;
-  void *Release;
+  int (__thiscall *ScalarDeletingDestructor)(Base64Straw *this, int a1);
+  int (__thiscall *Get_From)(Base64Straw *this, int a1);
+  int (__thiscall *vt_entry_08)(Base64Straw *this, int a1, int a2);
 };
 
-struct PrevObjectCommandClass_vtbl
+struct BeaconPlacementCommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(BeaconPlacementCommandClass *this, int a1);
+  int (__thiscall *GetName)(BeaconPlacementCommandClass *this);
+  int (__thiscall *GetUIName)(BeaconPlacementCommandClass *this);
+  int (__thiscall *GetUICategory)(BeaconPlacementCommandClass *this);
+  int (__thiscall *GetUIDescription)(BeaconPlacementCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(BeaconPlacementCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(BeaconPlacementCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(BeaconPlacementCommandClass *this, int a1);
+  int (__thiscall *Execute)(BeaconPlacementCommandClass *this, int a1);
 };
 
-struct RAMFileClass_vtbl
+struct BinkMovieHandle_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetFileName;
-  void *SetFileName;
-  void *CreateFile;
-  void *DeleteFile;
-  void *Exists;
-  void *HasHandle;
-  void *Open;
-  void *OpenEx;
-  void *ReadBytes;
-  void *Seek;
-  void *GetFileSize;
-  void *WriteBytes;
-  void *Close;
-  void *GetFileTime;
-  void *SetFileTime;
-  void *CDCheck;
+  int (__thiscall *ScalarDeletingDestructor)(BinkMovieHandle *this, int a1);
+  int (__thiscall *AdvanceFrame)(BinkMovieHandle *this);
+  int (__thiscall *Waiting)(BinkMovieHandle *this);
+  int (__thiscall *Pause)(BinkMovieHandle *this, int a1);
+  int (__thiscall *Stop)(BinkMovieHandle *this);
+  int (__thiscall *FramesLeft)(BinkMovieHandle *this);
+  int (__thiscall *SetPosition)(BinkMovieHandle *this, int a1, int a2);
+  int (__thiscall *SeekToFrame)(BinkMovieHandle *this, int a1);
+  int (__thiscall *InitSubtitles)(BinkMovieHandle *this, int a1);
+  int (__thiscall *Timing)(BinkMovieHandle *this);
+  int (__thiscall *Blit)(BinkMovieHandle *this);
 };
 
-struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl
+struct BlitPlainXlatAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlainXlatAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlainXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlainXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlainXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlainXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransDarkenZRead_unsigned_short_vtbl
+struct BlitPlainXlatZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlainXlatZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlainXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlainXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlainXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlainXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransDarken_unsigned_short_vtbl
+struct BlitPlainXlatZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlainXlatZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlainXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlainXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlainXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlainXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl
+struct BlitPlainXlat_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlainXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlainXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlainXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlainXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlainXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl
+struct BlitPlainXlat_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlainXlat_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlainXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlainXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlainXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlainXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl
+struct BlitPlain_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlain_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlain_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlain_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlain_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlain_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl
+struct BlitPlain_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitPlain_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitPlain_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitPlain_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitPlain_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitPlain_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl
+struct BlitTransDarkenZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransDarkenZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransDarkenZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransDarkenZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransDarkenZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransDarkenZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl
+struct BlitTransDarkenZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransDarkenZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransDarkenZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransDarkenZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransDarkenZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransDarkenZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl
+struct BlitTransDarken_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransDarken_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransDarken_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransDarken_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransDarken_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransDarken_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent25_unsigned_short_vtbl
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl
+struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25AlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl
+struct BlitTransLucent25Alpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25Alpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl
+struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25ZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl
+struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25ZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl
+struct BlitTransLucent25ZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25ZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl
+struct BlitTransLucent25_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent25_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent25_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent25_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent25_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent25_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent50_unsigned_short_vtbl
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl
+struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50AlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl
+struct BlitTransLucent50Alpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50Alpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl
+struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50ZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl
+struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50ZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl
+struct BlitTransLucent50ZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50ZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl
+struct BlitTransLucent50_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent50_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent50_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent50_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent50_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent50_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransLucent75_unsigned_short_vtbl
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl
+struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75AlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransRemapDest_unsigned_char_vtbl
+struct BlitTransLucent75Alpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75Alpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl
+struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75ZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl
+struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75ZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransRemapXlat_unsigned_char_vtbl
+struct BlitTransLucent75ZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75ZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl
+struct BlitTransLucent75_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransLucent75_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransLucent75_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransLucent75_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransLucent75_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransLucent75_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl
+struct BlitTransRemapDest_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransRemapDest_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransRemapDest_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransRemapDest_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransRemapDest_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransRemapDest_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatAlpha_unsigned_short_vtbl
+struct BlitTransRemapXlat_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransRemapXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl
+struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl
+struct BlitTransXlatAlphaZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatAlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatZRead_unsigned_char_vtbl
+struct BlitTransXlatAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlatZRead_unsigned_short_vtbl
+struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatMultWriteAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatMultWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatMultWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatMultWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatMultWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlat_unsigned_char_vtbl
+struct BlitTransXlatWriteAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatWriteAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransXlat_unsigned_short_vtbl
+struct BlitTransXlatZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl
+struct BlitTransXlatZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlatZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl
+struct BlitTransXlat_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl
+struct BlitTransXlat_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransXlat_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl
+struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlatAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl
+struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlat_unsigned_char_vtbl
+struct BlitTransZRemapXlatZRead_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlatZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitTransZRemapXlat_unsigned_short_vtbl
+struct BlitTransZRemapXlat_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Blit_Copy;
-  void *Blit_Copy_Tinted;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RLEBlitter_vtbl
+struct BlitTransZRemapXlat_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero;
-  void *AlwaysZero_2;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTransZRemapXlat_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTransZRemapXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTransZRemapXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTransZRemapXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTransZRemapXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RadarClass_RTacticalClass_vtbl
+struct BlitTrans_unsigned_char_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetNext;
-  void *GetPrev;
-  void *Add;
-  void *AddTail;
-  void *AddHead;
-  void *HeadOfList;
-  void *TailOfList;
-  void *Zap;
-  void *Remove;
-  void *Input;
-  void *DrawAll;
-  void *DeleteList;
-  void *ExtractGadget;
-  void *MarkListToRedraw;
-  void *Disable;
-  void *Enable;
-  void *GetID;
-  void *MarkRedraw;
-  void *PeerToPeer;
-  void *SetFocus;
-  void *KillFocus;
-  void *IsFocused;
-  void *IsListToRedraw;
-  void *IsToRedraw;
-  void *SetPosition;
-  void *SetDimension;
-  void *Draw;
-  void *OnMouseEnter;
-  void *OnMouseLeave;
-  void *StickyProcess;
-  void *Action;
-  void *Clicked;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTrans_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTrans_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTrans_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTrans_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTrans_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct RandomStraw_vtbl
+struct BlitTrans_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTrans_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTrans_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTrans_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTrans_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTrans_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct SHAPipe_vtbl
+struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Flush;
-  void *End;
-  void *Put_To;
-  void *Put;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTranslucent50NonzeroAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTranslucent50NonzeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTranslucent50NonzeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTranslucent50NonzeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTranslucent50NonzeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct ScatterCommandClass_vtbl
+struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTranslucent50ZeroAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTranslucent50ZeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTranslucent50ZeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTranslucent50ZeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTranslucent50ZeroAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct ScoreAnimClass_vtbl
+struct BlitTranslucentWriteAlpha_unsigned_short_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Pause;
-  void *Resume;
-  void *AlwaysZero;
+  int (__thiscall *ScalarDeletingDestructor)(BlitTranslucentWriteAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(BlitTranslucentWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+  int (__thiscall *Blit_Copy_Tinted)(BlitTranslucentWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *Blit_Move)(BlitTranslucentWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *Blit_Move_Tinted)(BlitTranslucentWriteAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 };
 
-struct ScoreBigFontClass_vtbl
+struct Blitter_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Buddy_GetCharWidth;
-  void *Buddy_GetStringWidth;
-  void *Buddy_DrawString;
-  void *Buddy_DrawString_2;
+  int (__thiscall *ScalarDeletingDestructor)(Blitter *this, int a1);
+  int (__thiscall *vt_entry_04)(Blitter *this);
+  int (__thiscall *vt_entry_08)(Blitter *this);
+  int (__thiscall *vt_entry_0C)(Blitter *this);
+  int (__thiscall *vt_entry_10)(Blitter *this);
 };
 
-struct ScoreFontClass_vtbl
+struct BlowPipe_vtbl : Pipe_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Buddy_GetCharWidth;
-  void *Buddy_GetStringWidth;
-  void *Buddy_DrawString;
-  void *Buddy_DrawString_2;
-};
-
-struct ScoreFullFontClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Buddy_GetCharWidth;
-  void *Buddy_GetStringWidth;
-  void *Buddy_DrawString;
-  void *Buddy_DrawString_2;
-};
-
-struct ScorePrintClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Pause;
-  void *Resume;
-  void *Buddy_Draw;
-};
-
-struct ScoreTimeClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *Pause;
-  void *Resume;
-  void *Buddy_Draw;
-};
-
-struct ScreenCaptureCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SelectTeamCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetDefenseTabCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetInfantryTabCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetStructureTabCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetUnitTabCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetView1CommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetView2CommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetView3CommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SetView4CommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SidebarClass_SBGadgetClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetNext;
-  void *GetPrev;
-  void *Add;
-  void *AddTail;
-  void *AddHead;
-  void *HeadOfList;
-  void *TailOfList;
-  void *Zap;
-  void *Remove;
-  void *Input;
-  void *DrawAll;
-  void *DeleteList;
-  void *ExtractGadget;
-  void *MarkListToRedraw;
-  void *Disable;
-  void *Enable;
-  void *GetID;
-  void *MarkRedraw;
-  void *PeerToPeer;
-  void *SetFocus;
-  void *KillFocus;
-  void *IsFocused;
-  void *IsListToRedraw;
-  void *IsToRedraw;
-  void *SetPosition;
-  void *SetDimension;
-  void *Draw;
-  void *OnMouseEnter;
-  void *OnMouseLeave;
-  void *StickyProcess;
-  void *SBGadgetClass_Action;
-  void *Clicked;
-};
-
-struct SidebarDownCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SidebarUpCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct SimpleWonlineDialogControl_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *BindControlHwnd;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *Buddy_WOLMatchTimeout;
-};
-
-struct Std_bad_cast_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *_what_exception__UBEPBDXZ;
-};
-
-struct Std_bad_typeid_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *_what_exception__UBEPBDXZ;
-};
-
-struct Std_exception_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *_what_exception__UBEPBDXZ;
-};
-
-struct Std_non_rtti_object_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *_what_exception__UBEPBDXZ;
-};
-
-struct StopCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
 };
 
 struct Straw_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Get_From;
-  void *Get;
+  int (__thiscall *ScalarDeletingDestructor)(Straw *this, int a1);
+  int (__thiscall *Get_From)(Straw *this, int a1);
+  int (__thiscall *Get)(Straw *this, int a1, int a2);
+};
+
+struct BlowStraw_vtbl : Straw_vtbl
+{
+};
+
+struct BufferPipe_vtbl : Pipe_vtbl
+{
+};
+
+struct BufferStraw_vtbl : Straw_vtbl
+{
+};
+
+struct CComObject_CChatEventSink_vtbl
+{
+  int (__thiscall *QueryInterface)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(CComObject_CChatEventSink *this, int a1);
+  int (__thiscall *Release)(CComObject_CChatEventSink *this, int a1);
+  int (__thiscall *OnServerList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnUpdateList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnServerError)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnConnection)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnMessageOfTheDay)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnChannelList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnChannelCreate)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnChannelJoin)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnChannelLeave)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnChannelTopic)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPrivateAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnUserList)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnPrivateMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnSystemMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnNetStatus)(CComObject_CChatEventSink *this, int a1, int a2);
+  int (__thiscall *OnLogout)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnPrivateGameOptions)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicGameOptions)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnGameStart)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnUserKick)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnUserIP)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnFind)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnPageSend)(CComObject_CChatEventSink *this, int a1, int a2);
+  int (__thiscall *OnPaged)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnServerBannedYou)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnUserFlags)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnChannelBan)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnSquadInfo)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnUserLocale)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnUserTeam)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnSetLocale)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnSetTeam)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnBuddyList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnBuddyAdd)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnBuddyDelete)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnPublicUnicodeMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnPrivateUnicodeMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPrivateUnicodeAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnPublicUnicodeAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnPagedUnicode)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *OnServerTime)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnInsiderStatus)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *OnSetLocalIP)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
 };
 
-struct SwizzleManager_ISwizzle_vtbl
+struct CComObject_CDownloadEventSink_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *Reset;
-  void *Swizzle;
-  void *Fetch_Swizzle_ID;
-  void *Here_I_Am;
-  void *Save_Interface;
-  void *Load_Interface;
-  void *Get_Save_Size;
+  int (__thiscall *QueryInterface)(CComObject_CDownloadEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(CComObject_CDownloadEventSink *this, int a1);
+  int (__thiscall *Release)(CComObject_CDownloadEventSink *this, int a1);
+  int (__thiscall *OnEnd)(CComObject_CDownloadEventSink *this, int a1);
+  int (__thiscall *OnError)(CComObject_CDownloadEventSink *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(CComObject_CDownloadEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *OnQueryResume)(CComObject_CDownloadEventSink *this, int a1);
+  int (__thiscall *vt_entry_1C)(CComObject_CDownloadEventSink *this, int a1, int a2);
 };
 
-struct TClassFactory_AITriggerTypeClass_vtbl
+struct CComObject_CNetUtilEventSink_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *QueryInterface)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(CComObject_CNetUtilEventSink *this, int a1);
+  int (__thiscall *Release)(CComObject_CNetUtilEventSink *this, int a1);
+  int (__thiscall *vt_entry_0C)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_10)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
+  int (__thiscall *vt_entry_14)(CComObject_CNetUtilEventSink *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_1C)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_20)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_24)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
 
-struct TClassFactory_AircraftClass_vtbl
+struct CD_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ForceAvailable)(CD *this, int a1);
+  int (__thiscall *vt_entry_04)(CD *this, int a1);
+  int (__thiscall *vt_entry_08)(CD *this, int a1);
 };
 
-struct TClassFactory_AircraftTypeClass_vtbl
+struct CStreamClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *QueryInterface)(CStreamClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(CStreamClass *this, int a1);
+  int (__thiscall *Release)(CStreamClass *this, int a1);
+  int (__thiscall *Read)(CStreamClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *Write)(CStreamClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *Seek)(CStreamClass *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *SetSize)(CStreamClass *this, int a1, int a2, int a3);
+  int (__thiscall *CopyTo)(CStreamClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
+  int (__thiscall *Commit)(CStreamClass *this, int a1, int a2);
+  int (__thiscall *Revert)(CStreamClass *this, int a1);
+  int (__thiscall *LockRegion)(CStreamClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
+  int (__thiscall *UnlockRegion)(CStreamClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
+  int (__thiscall *Stat)(CStreamClass *this, int a1, int a2, int a3);
+  int (__thiscall *Clone)(CStreamClass *this, int a1, int a2);
+  int (__thiscall *ScalarDeletingDestructor)(CStreamClass *this, int a1);
 };
 
-struct TClassFactory_AirstrikeClass_vtbl
+struct CacheStraw_vtbl : Straw_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
 };
 
-struct TClassFactory_AlphaShapeClass_vtbl
+struct CampaignEndScoreClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CampaignEndScoreClass *this, int a1);
+  int (__thiscall *vt_entry_04)(CampaignEndScoreClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
 };
 
-struct TClassFactory_AnimClass_vtbl
+struct CampaignScoreClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CampaignScoreClass *this, int a1);
+  int (__thiscall *vt_entry_04)(CampaignScoreClass *this);
 };
 
-struct TClassFactory_AnimTypeClass_vtbl
+struct CarryoverClass_vtbl : LinkClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
 };
 
-struct TClassFactory_BombClass_vtbl
+struct CenterBaseCommandClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CenterBaseCommandClass *this, int a1);
+  int (__thiscall *GetName)(CenterBaseCommandClass *this);
+  int (__thiscall *GetUIName)(CenterBaseCommandClass *this);
+  int (__thiscall *GetUICategory)(CenterBaseCommandClass *this);
+  int (__thiscall *GetUIDescription)(CenterBaseCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CenterBaseCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CenterBaseCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CenterBaseCommandClass *this, int a1);
+  int (__thiscall *Execute)(CenterBaseCommandClass *this, int a1);
 };
 
-struct TClassFactory_BuildingClass_vtbl
+struct CenterREventCommandClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CenterREventCommandClass *this, int a1);
+  int (__thiscall *GetName)(CenterREventCommandClass *this);
+  int (__thiscall *GetUIName)(CenterREventCommandClass *this);
+  int (__thiscall *GetUICategory)(CenterREventCommandClass *this);
+  int (__thiscall *GetUIDescription)(CenterREventCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CenterREventCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CenterREventCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CenterREventCommandClass *this, int a1);
+  int (__thiscall *Execute)(CenterREventCommandClass *this, int a1);
 };
 
-struct TClassFactory_BuildingLightClass_vtbl
+struct CenterTeamCommandClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CenterTeamCommandClass *this, int a1);
+  int (__thiscall *GetName)(CenterTeamCommandClass *this);
+  int (__thiscall *GetUIName)(CenterTeamCommandClass *this);
+  int (__thiscall *GetUICategory)(CenterTeamCommandClass *this);
+  int (__thiscall *GetUIDescription)(CenterTeamCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CenterTeamCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CenterTeamCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CenterTeamCommandClass *this, int a1);
+  int (__thiscall *Execute)(CenterTeamCommandClass *this, int a1);
 };
 
-struct TClassFactory_BuildingTypeClass_vtbl
+struct CenterViewCommandClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CenterViewCommandClass *this, int a1);
+  int (__thiscall *GetName)(CenterViewCommandClass *this);
+  int (__thiscall *GetUIName)(CenterViewCommandClass *this);
+  int (__thiscall *GetUICategory)(CenterViewCommandClass *this);
+  int (__thiscall *GetUIDescription)(CenterViewCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CenterViewCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CenterViewCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CenterViewCommandClass *this, int a1);
+  int (__thiscall *Execute)(CenterViewCommandClass *this, int a1);
 };
 
-struct TClassFactory_BulletClass_vtbl
+struct CombatantSelectCommandClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(CombatantSelectCommandClass *this, int a1);
+  int (__thiscall *GetName)(CombatantSelectCommandClass *this);
+  int (__thiscall *GetUIName)(CombatantSelectCommandClass *this);
+  int (__thiscall *GetUICategory)(CombatantSelectCommandClass *this);
+  int (__thiscall *GetUIDescription)(CombatantSelectCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CombatantSelectCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CombatantSelectCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CombatantSelectCommandClass *this, int a1);
+  int (__thiscall *Execute)(CombatantSelectCommandClass *this, int a1);
 };
 
-struct TClassFactory_BulletTypeClass_vtbl
+struct ConnectionPointClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *QueryInterface)(ConnectionPointClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(ConnectionPointClass *this, int a1);
+  int (__thiscall *Release)(ConnectionPointClass *this, int a1);
+  int (__thiscall *GetConnectionInterface)(ConnectionPointClass *this, int a1, int a2);
+  int (__thiscall *GetConnectionPointContainer)(ConnectionPointClass *this, int a1, int a2);
+  int (__thiscall *Advise)(ConnectionPointClass *this, int a1, int a2, int a3);
+  int (__thiscall *Unadvise)(ConnectionPointClass *this, int a1, int a2);
+  int (__thiscall *EnumConnections)(ConnectionPointClass *this, int a1, int a2);
 };
 
-struct TClassFactory_CStreamClass_vtbl
+struct SimpleWonlineDialogControl_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
+  int (__thiscall *ScalarDeletingDestructor)(SimpleWonlineDialogControl *this, int a1);
+  int (__thiscall *BindControlHwnd)(SimpleWonlineDialogControl *this, int a1, int a2);
+  int (__thiscall *vt_entry_08)(SimpleWonlineDialogControl *this);
+  int (__thiscall *vt_entry_0C)(SimpleWonlineDialogControl *this);
+  int (__thiscall *vt_entry_10)(SimpleWonlineDialogControl *this);
 };
 
-struct TClassFactory_CampaignClass_vtbl
+struct WonlineStringDialogControl_vtbl : SimpleWonlineDialogControl_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
 };
 
-struct TClassFactory_CaptureManagerClass_vtbl
+struct CreateGameDialogControl_vtbl : WonlineStringDialogControl_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
 };
 
-struct TClassFactory_CellClass_vtbl
+struct CreateTeamCommandClass_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_DiskLaserClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_DriveLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_DropPodLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_EMPulseClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_FactoryClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_FlyLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_FoggedObjectClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_HouseClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_HouseTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_HoverLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_InfantryClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_InfantryTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_IsometricTileTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_JumpjetLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_LightSourceClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_MechLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_NeuronClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_OverlayTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ParasiteClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ParticleClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ParticleSystemClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ParticleSystemTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ParticleTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_RadSiteClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_RocketLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ScriptClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ScriptTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_ShipLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_SideClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_SlaveManagerClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_SmudgeTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_SpawnManagerClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_SuperClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_SuperWeaponTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TActionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TEventClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TacticalClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TagClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TagTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TaskForceClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TeamClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TeamTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TeleportLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TemporalClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TerrainClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TerrainTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TiberiumClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TriggerClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TriggerTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TubeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_TunnelLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_UnitClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_UnitTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_VoxelAnimClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_VoxelAnimTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_WalkLocomotionClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_WarheadTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_WaveClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_WaypointPathClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TClassFactory_WeaponTypeClass_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct TauntCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct TextButtonClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetNext;
-  void *GetPrev;
-  void *Add;
-  void *AddTail;
-  void *AddHead;
-  void *HeadOfList;
-  void *TailOfList;
-  void *Zap;
-  void *Remove;
-  void *Input;
-  void *DrawAll;
-  void *DeleteList;
-  void *ExtractGadget;
-  void *MarkListToRedraw;
-  void *Disable;
-  void *Enable;
-  void *GetID;
-  void *MarkRedraw;
-  void *PeerToPeer;
-  void *SetFocus;
-  void *KillFocus;
-  void *IsFocused;
-  void *IsListToRedraw;
-  void *IsToRedraw;
-  void *SetPosition;
-  void *SetDimension;
-  void *Buddy_DrawImpl;
-  void *OnMouseEnter;
-  void *OnMouseLeave;
-  void *StickyProcess;
-  void *Action;
-  void *Clicked;
-  void *MakePeer;
-  void *Buddy_SetText;
-  void *Buddy_SetIndex;
-  void *Buddy_Draw;
-  void *Buddy_DrawText;
-};
-
-struct TiberianSunClassFactory_vtbl
-{
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *CreateInstance;
-  void *LockServer;
-};
-
-struct ToggleRepairCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct ToggleSellCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
-};
-
-struct TypeList_AircraftTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_AnimTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual2;
-  void *SetCapacity2;
-  void *Clear2;
-  void *FindItemIndex2;
-  void *GetItemIndex2;
-  void *GetItem2;
-};
-
-struct TypeList_BuildingTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual2;
-  void *SetCapacity2;
-  void *Clear2;
-  void *FindItemIndex2;
-  void *GetItemIndex2;
-  void *GetItem2;
-};
-
-struct TypeList_InfantryTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_ParticleSystemTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_RGBClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_SmudgeTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_TeamTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual2;
-  void *SetCapacity2;
-  void *Clear2;
-  void *FindItemIndex2;
-  void *GetItemIndex2;
-  void *GetItem2;
-};
-
-struct TypeList_TerrainTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_UnitTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_VoxelAnimTypeClass_CPTR_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
-};
-
-struct TypeSelectCommandClass_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop55E020;
-  void *Execute;
-};
-
-struct VQMovieHandle_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *AdvanceFrame;
-  void *Waiting;
-  void *Pause;
-  void *Stop;
-  void *FramesLeft;
-  void *SetPosition;
-  void *SeekToFrame;
-  void *InitSubtitles;
-  void *Timing;
-  void *Blit;
+  int (__thiscall *ScalarDeletingDestructor)(CreateTeamCommandClass *this, int a1);
+  int (__thiscall *GetName)(CreateTeamCommandClass *this);
+  int (__thiscall *GetUIName)(CreateTeamCommandClass *this);
+  int (__thiscall *GetUICategory)(CreateTeamCommandClass *this);
+  int (__thiscall *GetUIDescription)(CreateTeamCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CreateTeamCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CreateTeamCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CreateTeamCommandClass *this, int a1);
+  int (__thiscall *Execute)(CreateTeamCommandClass *this, int a1);
+};
+
+struct CursorPositionCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(CursorPositionCommandClass *this, int a1);
+  int (__thiscall *GetName)(CursorPositionCommandClass *this);
+  int (__thiscall *GetUIName)(CursorPositionCommandClass *this);
+  int (__thiscall *GetUICategory)(CursorPositionCommandClass *this);
+  int (__thiscall *GetUIDescription)(CursorPositionCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(CursorPositionCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(CursorPositionCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(CursorPositionCommandClass *this, int a1);
+  int (__thiscall *Execute)(CursorPositionCommandClass *this, int a1);
+};
+
+struct DeleteCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DeleteCommandClass *this, int a1);
+  int (__thiscall *GetName)(DeleteCommandClass *this);
+  int (__thiscall *GetUIName)(DeleteCommandClass *this);
+  int (__thiscall *GetUICategory)(DeleteCommandClass *this);
+  int (__thiscall *GetUIDescription)(DeleteCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(DeleteCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(DeleteCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(DeleteCommandClass *this, int a1);
+  int (__thiscall *Execute)(DeleteCommandClass *this, int a1);
+};
+
+struct DeployCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DeployCommandClass *this, int a1);
+  int (__thiscall *GetName)(DeployCommandClass *this);
+  int (__thiscall *GetUIName)(DeployCommandClass *this);
+  int (__thiscall *GetUICategory)(DeployCommandClass *this);
+  int (__thiscall *GetUIDescription)(DeployCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(DeployCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(DeployCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(DeployCommandClass *this, int a1);
+  int (__thiscall *Execute)(DeployCommandClass *this, int a1);
+};
+
+struct Dial8Class_vtbl : LinkClass_vtbl
+{
+  int (__thiscall *Input)(Dial8Class *this);
+  int (__thiscall *DrawAll)(Dial8Class *this, int a1);
+  int (__thiscall *DeleteList)(Dial8Class *this);
+  int (__thiscall *ExtractGadget)(Dial8Class *this, int a1);
+  int (__thiscall *MarkListToRedraw)(Dial8Class *this);
+  int (__thiscall *Disable)(Dial8Class *this);
+  int (__thiscall *Enable)(Dial8Class *this);
+  int (__thiscall *GetID)(Dial8Class *this);
+  int (__thiscall *MarkRedraw)(Dial8Class *this);
+  int (__thiscall *PeerToPeer)(Dial8Class *this, int a1, int a2, int a3);
+  int (__thiscall *SetFocus)(Dial8Class *this);
+  int (__thiscall *KillFocus)(Dial8Class *this);
+  int (__thiscall *IsFocused)(Dial8Class *this);
+  int (__thiscall *IsListToRedraw)(Dial8Class *this);
+  int (__thiscall *IsToRedraw)(Dial8Class *this);
+  int (__thiscall *SetPosition)(Dial8Class *this, int a1, int a2);
+  int (__thiscall *SetDimension)(Dial8Class *this, int a1, int a2);
+  int (__thiscall *vt_entry_6C)(Dial8Class *this, int a1);
+  int (__thiscall *OnMouseEnter)(Dial8Class *this);
+  int (__thiscall *OnMouseLeave)(Dial8Class *this);
+  int (__thiscall *StickyProcess)(Dial8Class *this, int a1);
+  int (__thiscall *vt_entry_7C)(Dial8Class *this, int a1, int a2, int a3);
+  int (__thiscall *Clicked)(Dial8Class *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *MakePeer)(Dial8Class *this, int a1);
+};
+
+struct DisplayClass_TacticalClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *GetNext)(DisplayClass_TacticalClass *this);
+  int (__thiscall *GetPrev)(DisplayClass_TacticalClass *this);
+  int (__thiscall *Add)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *AddTail)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *AddHead)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *HeadOfList)(DisplayClass_TacticalClass *this);
+  int (__thiscall *TailOfList)(DisplayClass_TacticalClass *this);
+  int (__thiscall *Zap)(DisplayClass_TacticalClass *this);
+  int (__thiscall *Remove)(DisplayClass_TacticalClass *this);
+  int (__thiscall *Input)(DisplayClass_TacticalClass *this);
+  int (__thiscall *DrawAll)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *DeleteList)(DisplayClass_TacticalClass *this);
+  int (__thiscall *ExtractGadget)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *MarkListToRedraw)(DisplayClass_TacticalClass *this);
+  int (__thiscall *Disable)(DisplayClass_TacticalClass *this);
+  int (__thiscall *Enable)(DisplayClass_TacticalClass *this);
+  int (__thiscall *GetID)(DisplayClass_TacticalClass *this);
+  int (__thiscall *MarkRedraw)(DisplayClass_TacticalClass *this);
+  int (__thiscall *PeerToPeer)(DisplayClass_TacticalClass *this, int a1, int a2, int a3);
+  int (__thiscall *SetFocus)(DisplayClass_TacticalClass *this);
+  int (__thiscall *KillFocus)(DisplayClass_TacticalClass *this);
+  int (__thiscall *IsFocused)(DisplayClass_TacticalClass *this);
+  int (__thiscall *IsListToRedraw)(DisplayClass_TacticalClass *this);
+  int (__thiscall *IsToRedraw)(DisplayClass_TacticalClass *this);
+  int (__thiscall *SetPosition)(DisplayClass_TacticalClass *this, int a1, int a2);
+  int (__thiscall *SetDimension)(DisplayClass_TacticalClass *this, int a1, int a2);
+  int (__thiscall *Draw)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *OnMouseEnter)(DisplayClass_TacticalClass *this);
+  int (__thiscall *OnMouseLeave)(DisplayClass_TacticalClass *this);
+  int (__thiscall *StickyProcess)(DisplayClass_TacticalClass *this, int a1);
+  int (__thiscall *Action)(DisplayClass_TacticalClass *this, int a1, int a2, int a3);
+  int (__thiscall *Clicked)(DisplayClass_TacticalClass *this, int a1, int a2, int a3, int a4, int a5);
 };
 
 struct VectorClass_AcceleratorTracker_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_AcceleratorTracker *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_AcceleratorTracker *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_AcceleratorTracker *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_AcceleratorTracker *this);
+  int (__thiscall *FindItemIndex)(VectorClass_AcceleratorTracker *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_AcceleratorTracker *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_AcceleratorTracker *this, int a1, int a2);
+};
+
+struct DynamicVectorClass_AcceleratorTracker_vtbl : VectorClass_AcceleratorTracker_vtbl
+{
 };
 
 struct VectorClass_ButtonFadeEffect_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_ButtonFadeEffect_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_ButtonFadeEffect_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_ButtonFadeEffect_PTR_vtbl : VectorClass_ButtonFadeEffect_PTR_vtbl
+{
 };
 
 struct VectorClass_CoopCampaignClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_CoopCampaignClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_CoopCampaignClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_CoopCampaignClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_CoopCampaignClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_CoopCampaignClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_CoopCampaignClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_CoopCampaignClass_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_CoopCampaignClass_PTR_vtbl : VectorClass_CoopCampaignClass_PTR_vtbl
+{
 };
 
 struct VectorClass_CrossDissolveEffect_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_CrossDissolveEffect_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_CrossDissolveEffect_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl : VectorClass_CrossDissolveEffect_PTR_vtbl
+{
 };
 
 struct VectorClass_DirtyAreaStruct_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DirtyAreaStruct *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_DirtyAreaStruct *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_DirtyAreaStruct *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_DirtyAreaStruct *this);
+  int (__thiscall *FindItemIndex)(VectorClass_DirtyAreaStruct *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_DirtyAreaStruct *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_DirtyAreaStruct *this, int a1, int a2);
 };
 
-struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
+struct DynamicVectorClass_DirtyAreaStruct_vtbl : VectorClass_DirtyAreaStruct_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
 };
 
-struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
+struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
 };
 
-struct VectorClass_DistributionObject_CellClass_PTR_vtbl
+struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
 };
 
-struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
+struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_DistributionObject_CellClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
+};
+
+struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
 };
 
 struct VectorClass_EgoClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_EgoClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_EgoClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_EgoClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_EgoClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_EgoClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_EgoClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_EgoClass_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_EgoClass_PTR_vtbl : VectorClass_EgoClass_PTR_vtbl
+{
 };
 
 struct VectorClass_GlobalPacketType_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_GlobalPacketType_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_GlobalPacketType_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_GlobalPacketType_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_GlobalPacketType_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_GlobalPacketType_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_GlobalPacketType_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_GlobalPacketType_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_GlobalPacketType_PTR_vtbl : VectorClass_GlobalPacketType_PTR_vtbl
+{
 };
 
 struct VectorClass_HSVClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HSVClass *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_HSVClass *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_HSVClass *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_HSVClass *this);
+  int (__thiscall *FindItemIndex)(VectorClass_HSVClass *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_HSVClass *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_HSVClass *this, int a1, int a2);
 };
 
-struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
+struct DynamicVectorClass_HSVClass_vtbl : VectorClass_HSVClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
 };
 
-struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl
+struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *VectorDeletingDestructor)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
 };
 
-struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
+struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *VectorDeletingDestructor)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
 };
 
-struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
+struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
 };
 
-struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
+struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
 };
 
 struct VectorClass_MPlayerScoreType_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MPlayerScoreType_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MPlayerScoreType_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MPlayerScoreType_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MPlayerScoreType_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MPlayerScoreType_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MPlayerScoreType_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MPlayerScoreType_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl : VectorClass_MPlayerScoreType_PTR_vtbl
+{
 };
 
 struct VectorClass_MSSfx_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MSSfx_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MSSfx_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MSSfx_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MSSfx_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MSSfx_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MSSfx_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MSSfx_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MSSfx_PTR_vtbl : VectorClass_MSSfx_PTR_vtbl
+{
 };
 
 struct VectorClass_MSTextEntry_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MSTextEntry_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MSTextEntry_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MSTextEntry_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MSTextEntry_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MSTextEntry_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MSTextEntry_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MSTextEntry_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MSTextEntry_PTR_vtbl : VectorClass_MSTextEntry_PTR_vtbl
+{
 };
 
 struct VectorClass_MapRegionClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MapRegionClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MapRegionClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MapRegionClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MapRegionClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MapRegionClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MapRegionClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MapRegionClass_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MapRegionClass_PTR_vtbl : VectorClass_MapRegionClass_PTR_vtbl
+{
 };
 
 struct VectorClass_MapSelection_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MapSelection_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MapSelection_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MapSelection_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MapSelection_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MapSelection_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MapSelection_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MapSelection_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MapSelection_PTR_vtbl : VectorClass_MapSelection_PTR_vtbl
+{
 };
 
 struct VectorClass_MapStage_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MapStage_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MapStage_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MapStage_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MapStage_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MapStage_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MapStage_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MapStage_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MapStage_PTR_vtbl : VectorClass_MapStage_PTR_vtbl
+{
 };
 
 struct VectorClass_MixFileClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MixFileClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MixFileClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MixFileClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MixFileClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MixFileClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MixFileClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MixFileClass_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_MixFileClass_PTR_vtbl : VectorClass_MixFileClass_PTR_vtbl
+{
 };
 
 struct VectorClass_MovieHandle_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MovieHandle_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_MovieHandle_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_MovieHandle_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_MovieHandle_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_MovieHandle_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_MovieHandle_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_MovieHandle_PTR *this, int a1);
 };
 
-struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+struct DynamicVectorClass_MovieHandle_PTR_vtbl : VectorClass_MovieHandle_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+};
+
+struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
 };
 
 struct VectorClass_PhoneEntryClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_PhoneEntryClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_PhoneEntryClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_PhoneEntryClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_PhoneEntryClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_PhoneEntryClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_PhoneEntryClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_PhoneEntryClass_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl : VectorClass_PhoneEntryClass_PTR_vtbl
+{
 };
 
 struct VectorClass_RGBClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_RGBClass *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_RGBClass *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_RGBClass *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_RGBClass *this);
+  int (__thiscall *FindItemIndex)(VectorClass_RGBClass *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_RGBClass *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_RGBClass *this, int a1, int a2);
+};
+
+struct DynamicVectorClass_RGBClass_vtbl : VectorClass_RGBClass_vtbl
+{
 };
 
 struct VectorClass_ShadowControlClass_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_ShadowControlClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_ShadowControlClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_ShadowControlClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_ShadowControlClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_ShadowControlClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_ShadowControlClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_ShadowControlClass_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_ShadowControlClass_PTR_vtbl : VectorClass_ShadowControlClass_PTR_vtbl
+{
 };
 
 struct VectorClass_SubTitle_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_SubTitle_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_SubTitle_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_SubTitle_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_SubTitle_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_SubTitle_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_SubTitle_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_SubTitle_PTR *this, int a1);
 };
 
-struct VectorClass_TPoint3D_int_vtbl
+struct DynamicVectorClass_SubTitle_PTR_vtbl : VectorClass_SubTitle_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
 };
 
 struct VectorClass_UndoInfoStruct_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_UndoInfoStruct *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_UndoInfoStruct *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_UndoInfoStruct *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_UndoInfoStruct *this);
+  int (__thiscall *FindItemIndex)(VectorClass_UndoInfoStruct *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_UndoInfoStruct *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_UndoInfoStruct *this, int a1, int a2);
 };
 
-struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl
+struct DynamicVectorClass_UndoInfoStruct_vtbl : VectorClass_UndoInfoStruct_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
 };
 
-struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
+struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
 };
 
 struct VectorClass_Wstring_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_Wstring *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_Wstring *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_Wstring *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_Wstring *this);
+  int (__thiscall *FindItemIndex)(VectorClass_Wstring *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_Wstring *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_Wstring *this, int a1, int a2);
+};
+
+struct DynamicVectorClass_Wstring_vtbl : VectorClass_Wstring_vtbl
+{
 };
 
 struct VectorClass__DDSURFACEDESC_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass__DDSURFACEDESC_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass__DDSURFACEDESC_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
+};
+
+struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl : VectorClass__DDSURFACEDESC_PTR_vtbl
+{
 };
 
 struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass__WIN32_FIND_DATAA_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
+};
+
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl : VectorClass__WIN32_FIND_DATAA_PTR_vtbl
+{
+};
+
+struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_tConnInfoStruct_PTR *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
+};
+
+struct DynamicVectorClass_tagCONNECTDATA_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *OperatorEqual)(DynamicVectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *SetCapacity)(DynamicVectorClass_tagCONNECTDATA *this, int a1, int a2);
+  int (__thiscall *Clear)(DynamicVectorClass_tagCONNECTDATA *this);
+  int (__thiscall *FindItemIndex)(DynamicVectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *GetItemIndex)(DynamicVectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *GetItem)(DynamicVectorClass_tagCONNECTDATA *this, int a1, int a2);
+};
+
+struct EnumConnectionPointsClass_vtbl
+{
+  int (__thiscall *QueryInterface)(EnumConnectionPointsClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(EnumConnectionPointsClass *this, int a1);
+  int (__thiscall *Release)(EnumConnectionPointsClass *this, int a1);
+  int (__thiscall *Next)(EnumConnectionPointsClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *Skip)(EnumConnectionPointsClass *this, int a1, int a2);
+  int (__thiscall *Reset)(EnumConnectionPointsClass *this, int a1);
+  int (__thiscall *Clone)(EnumConnectionPointsClass *this, int a1, int a2);
+};
+
+struct EnumConnectionsClass_vtbl
+{
+  int (__thiscall *QueryInterface)(EnumConnectionsClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(EnumConnectionsClass *this, int a1);
+  int (__thiscall *Release)(EnumConnectionsClass *this, int a1);
+  int (__thiscall *Next)(EnumConnectionsClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *Skip)(EnumConnectionsClass *this, int a1, int a2);
+  int (__thiscall *Reset)(EnumConnectionsClass *this, int a1);
+  int (__thiscall *Clone)(EnumConnectionsClass *this, int a1, int a2);
+};
+
+struct FilePipe_vtbl : Pipe_vtbl
+{
+};
+
+struct FileStraw_vtbl : Straw_vtbl
+{
+};
+
+struct FollowCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(FollowCommandClass *this, int a1);
+  int (__thiscall *GetName)(FollowCommandClass *this);
+  int (__thiscall *GetUIName)(FollowCommandClass *this);
+  int (__thiscall *GetUICategory)(FollowCommandClass *this);
+  int (__thiscall *GetUIDescription)(FollowCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(FollowCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(FollowCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(FollowCommandClass *this, int a1);
+  int (__thiscall *Execute)(FollowCommandClass *this, int a1);
+};
+
+struct GraphicMenuAnimItem_vtbl : GraphicMenuItem_vtbl
+{
+};
+
+struct GraphicMenuImageItem_vtbl : GraphicMenuItem_vtbl
+{
+};
+
+struct GraphicMenuShortcutItem_vtbl : GraphicMenuItem_vtbl
+{
+};
+
+struct GuardCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(GuardCommandClass *this, int a1);
+  int (__thiscall *GetName)(GuardCommandClass *this);
+  int (__thiscall *GetUIName)(GuardCommandClass *this);
+  int (__thiscall *GetUICategory)(GuardCommandClass *this);
+  int (__thiscall *GetUIDescription)(GuardCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(GuardCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(GuardCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(GuardCommandClass *this, int a1);
+  int (__thiscall *Execute)(GuardCommandClass *this, int a1);
+};
+
+struct HealthNavCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(HealthNavCommandClass *this, int a1);
+  int (__thiscall *GetName)(HealthNavCommandClass *this);
+  int (__thiscall *GetUIName)(HealthNavCommandClass *this);
+  int (__thiscall *GetUICategory)(HealthNavCommandClass *this);
+  int (__thiscall *GetUIDescription)(HealthNavCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(HealthNavCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(HealthNavCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(HealthNavCommandClass *this, int a1);
+  int (__thiscall *Execute)(HealthNavCommandClass *this, int a1);
+};
+
+struct Initializer_FreeForAll_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Initializer_FreeForAll *this, int a1);
+  int (__thiscall *Factory_Constructor)(Initializer_FreeForAll *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct Initializer_MPCooperative_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Initializer_MPCooperative *this, int a1);
+  int (__thiscall *Factory_Constructor)(Initializer_MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct Initializer_MultiplayerBattle_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Initializer_MultiplayerBattle *this, int a1);
+  int (__thiscall *Constructor)(Initializer_MultiplayerBattle *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct Initializer_MultiplayerManBattle_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Initializer_MultiplayerManBattle *this, int a1);
+  int (__thiscall *Factory_Constructor)(Initializer_MultiplayerManBattle *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct Initializer_MultiplayerSiege_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Initializer_MultiplayerSiege *this, int a1);
+  int (__thiscall *Factory_Constructor)(Initializer_MultiplayerSiege *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct Initializer_UnholyAlliance_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Initializer_UnholyAlliance *this, int a1);
+  int (__thiscall *Factory_Constructor)(Initializer_UnholyAlliance *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct LCWPipe_vtbl : Pipe_vtbl
+{
+};
+
+struct LCWStraw_vtbl : Straw_vtbl
+{
+};
+
+struct LZOPipe_vtbl : Pipe_vtbl
+{
+};
+
+struct LZOStraw_vtbl : Straw_vtbl
+{
+};
+
+struct MPBattleClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_04)(MPBattleClass *this);
+  int (__thiscall *vt_entry_08)(MPBattleClass *this);
+  int (__thiscall *vt_entry_0C)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_10)(MPBattleClass *this);
+  int (__thiscall *vt_entry_14)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_18)(MPBattleClass *this);
+  int (__thiscall *vt_entry_1C)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_20)(MPBattleClass *this);
+  int (__thiscall *vt_entry_24)(MPBattleClass *this);
+  int (__thiscall *vt_entry_28)(MPBattleClass *this);
+  int (__thiscall *vt_entry_2C)(MPBattleClass *this);
+  int (__thiscall *vt_entry_30)(MPBattleClass *this);
+  int (__thiscall *CanAllyWith)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_38)(MPBattleClass *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPBattleClass *this);
+  int (__thiscall *vt_entry_40)(MPBattleClass *this);
+  int (__thiscall *FirstValidMapIndex)(MPBattleClass *this);
+  int (__thiscall *PopulateTeamDropdown)(MPBattleClass *this, int a1, int a2, int a3);
+  int (__thiscall *DrawTeamDropdown)(MPBattleClass *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPBattleClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPBattleClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPBattleClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPBattleClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPBattleClass *this);
+  int (__thiscall *vt_entry_64)(MPBattleClass *this);
+  int (__thiscall *vt_entry_68)(MPBattleClass *this);
+  int (__thiscall *RandomHumanCountryIndex)(MPBattleClass *this);
+  int (__thiscall *RandomAICountryIndex)(MPBattleClass *this);
+  int (__thiscall *vt_entry_74)(MPBattleClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPBattleClass *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPBattleClass *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPBattleClass *this, int a1);
+  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPBattleClass *this, int a1);
+  int (__thiscall *AllyTeams)(MPBattleClass *this);
+  int (__thiscall *vt_entry_8C)(MPBattleClass *this);
+  int (__thiscall *vt_entry_90)(MPBattleClass *this);
+  int (__thiscall *vt_entry_94)(MPBattleClass *this);
+  int (__thiscall *vt_entry_98)(MPBattleClass *this);
+  int (__thiscall *vt_entry_9C)(MPBattleClass *this);
+  int (__thiscall *vt_entry_A0)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPBattleClass *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPBattleClass *this);
+  int (__thiscall *vt_entry_AC)(MPBattleClass *this);
+  int (__thiscall *vt_entry_B0)(MPBattleClass *this);
+  int (__thiscall *vt_entry_B4)(MPBattleClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPBattleClass *this);
+  int (__thiscall *vt_entry_BC)(MPBattleClass *this);
+  int (__thiscall *CreateMPTeams)(MPBattleClass *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPBattleClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *SpawnBaseUnits)(MPBattleClass *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPBattleClass *this, int a1, int a2);
+};
+
+struct MPCombatTeam_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPCombatTeam *this, int a1);
+  int (__thiscall *IsTeamIncluded)(MPCombatTeam *this, int a1);
+  int (__thiscall *SetPlayerTeam)(MPCombatTeam *this, int a1);
+};
+
+struct MPCooperative_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_04)(MPCooperative *this);
+  int (__thiscall *vt_entry_08)(MPCooperative *this);
+  int (__thiscall *vt_entry_0C)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_10)(MPCooperative *this);
+  int (__thiscall *vt_entry_14)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_18)(MPCooperative *this);
+  int (__thiscall *vt_entry_1C)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_20)(MPCooperative *this);
+  int (__thiscall *vt_entry_24)(MPCooperative *this);
+  int (__thiscall *vt_entry_28)(MPCooperative *this);
+  int (__thiscall *vt_entry_2C)(MPCooperative *this);
+  int (__thiscall *vt_entry_30)(MPCooperative *this);
+  int (__thiscall *CanAllyWith)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_38)(MPCooperative *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPCooperative *this);
+  int (__thiscall *vt_entry_40)(MPCooperative *this);
+  int (__thiscall *FirstValidMapIndex)(MPCooperative *this);
+  int (__thiscall *PopulateTeamDropdown)(MPCooperative *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_4C)(MPCooperative *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPCooperative *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPCooperative *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPCooperative *this);
+  int (__thiscall *vt_entry_64)(MPCooperative *this);
+  int (__thiscall *vt_entry_68)(MPCooperative *this);
+  int (__thiscall *vt_entry_6C)(MPCooperative *this);
+  int (__thiscall *vt_entry_70)(MPCooperative *this);
+  int (__thiscall *vt_entry_74)(MPCooperative *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPCooperative *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPCooperative *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_84)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_88)(MPCooperative *this);
+  int (__thiscall *vt_entry_8C)(MPCooperative *this);
+  int (__thiscall *vt_entry_90)(MPCooperative *this);
+  int (__thiscall *vt_entry_94)(MPCooperative *this);
+  int (__thiscall *vt_entry_98)(MPCooperative *this);
+  int (__thiscall *vt_entry_9C)(MPCooperative *this);
+  int (__thiscall *vt_entry_A0)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPCooperative *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPCooperative *this);
+  int (__thiscall *vt_entry_AC)(MPCooperative *this);
+  int (__thiscall *vt_entry_B0)(MPCooperative *this);
+  int (__thiscall *vt_entry_B4)(MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPCooperative *this);
+  int (__thiscall *vt_entry_BC)(MPCooperative *this);
+  int (__thiscall *CreateMPTeams)(MPCooperative *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPCooperative *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *SpawnBaseUnits)(MPCooperative *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPCooperative *this, int a1, int a2);
+};
+
+struct MPFreeForAllClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_04)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_08)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_0C)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_10)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_14)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_18)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_1C)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_20)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_24)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_28)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_2C)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_30)(MPFreeForAllClass *this);
+  int (__thiscall *CanAllyWith)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_38)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_40)(MPFreeForAllClass *this);
+  int (__thiscall *FirstValidMapIndex)(MPFreeForAllClass *this);
+  int (__thiscall *PopulateTeamDropdown)(MPFreeForAllClass *this, int a1, int a2, int a3);
+  int (__thiscall *DrawTeamDropdown)(MPFreeForAllClass *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPFreeForAllClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPFreeForAllClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPFreeForAllClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPFreeForAllClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_64)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_68)(MPFreeForAllClass *this);
+  int (__thiscall *RandomHumanCountryIndex)(MPFreeForAllClass *this);
+  int (__thiscall *RandomAICountryIndex)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_74)(MPFreeForAllClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPFreeForAllClass *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *AllyTeams)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_8C)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_90)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_94)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_98)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_9C)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_A0)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_AC)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_B0)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_B4)(MPFreeForAllClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPFreeForAllClass *this);
+  int (__thiscall *vt_entry_BC)(MPFreeForAllClass *this);
+  int (__thiscall *CreateMPTeams)(MPFreeForAllClass *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPFreeForAllClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *SpawnBaseUnits)(MPFreeForAllClass *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPFreeForAllClass *this, int a1, int a2);
+};
+
+struct MPGameModeClass_InitializerBase_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPGameModeClass_InitializerBase *this, int a1);
+  int (__thiscall *vt_entry_04)(MPGameModeClass_InitializerBase *this);
+};
+
+struct MPManBattleClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_04)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_08)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_0C)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_10)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_14)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_18)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_1C)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_20)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_24)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_28)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_2C)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_30)(MPManBattleClass *this);
+  int (__thiscall *CanAllyWith)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_38)(MPManBattleClass *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_40)(MPManBattleClass *this);
+  int (__thiscall *FirstValidMapIndex)(MPManBattleClass *this);
+  int (__thiscall *PopulateTeamDropdown)(MPManBattleClass *this, int a1, int a2, int a3);
+  int (__thiscall *DrawTeamDropdown)(MPManBattleClass *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPManBattleClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPManBattleClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPManBattleClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPManBattleClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_64)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_68)(MPManBattleClass *this);
+  int (__thiscall *RandomHumanCountryIndex)(MPManBattleClass *this);
+  int (__thiscall *RandomAICountryIndex)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_74)(MPManBattleClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPManBattleClass *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPManBattleClass *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPManBattleClass *this, int a1);
+  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPManBattleClass *this, int a1);
+  int (__thiscall *AllyTeams)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_8C)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_90)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_94)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_98)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_9C)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_A0)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPManBattleClass *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_AC)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_B0)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_B4)(MPManBattleClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPManBattleClass *this);
+  int (__thiscall *vt_entry_BC)(MPManBattleClass *this);
+  int (__thiscall *CreateMPTeams)(MPManBattleClass *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPManBattleClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *SpawnBaseUnits)(MPManBattleClass *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPManBattleClass *this, int a1, int a2);
+};
+
+struct MPMegawealthClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_04)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_08)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_0C)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_10)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_14)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_18)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_1C)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_20)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_24)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_28)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_2C)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_30)(MPMegawealthClass *this);
+  int (__thiscall *CanAllyWith)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_38)(MPMegawealthClass *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_40)(MPMegawealthClass *this);
+  int (__thiscall *FirstValidMapIndex)(MPMegawealthClass *this);
+  int (__thiscall *PopulateTeamDropdown)(MPMegawealthClass *this, int a1, int a2, int a3);
+  int (__thiscall *DrawTeamDropdown)(MPMegawealthClass *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPMegawealthClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPMegawealthClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPMegawealthClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPMegawealthClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_64)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_68)(MPMegawealthClass *this);
+  int (__thiscall *RandomHumanCountryIndex)(MPMegawealthClass *this);
+  int (__thiscall *RandomAICountryIndex)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_74)(MPMegawealthClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPMegawealthClass *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPMegawealthClass *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPMegawealthClass *this, int a1);
+  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPMegawealthClass *this, int a1);
+  int (__thiscall *AllyTeams)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_8C)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_90)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_94)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_98)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_9C)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_A0)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPMegawealthClass *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_AC)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_B0)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_B4)(MPMegawealthClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPMegawealthClass *this);
+  int (__thiscall *vt_entry_BC)(MPMegawealthClass *this);
+  int (__thiscall *CreateMPTeams)(MPMegawealthClass *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPMegawealthClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *SpawnBaseUnits)(MPMegawealthClass *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPMegawealthClass *this, int a1, int a2);
+};
+
+struct MPObserverTeam_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPObserverTeam *this, int a1);
+  int (__thiscall *IsTeamIncluded)(MPObserverTeam *this, int a1);
+  int (__thiscall *SetPlayerTeam)(MPObserverTeam *this, int a1);
+};
+
+struct MPSiegeAttackerTeam_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPSiegeAttackerTeam *this, int a1);
+  int (__thiscall *IsTeamIncluded)(MPSiegeAttackerTeam *this, int a1);
+  int (__thiscall *SetPlayerTeam)(MPSiegeAttackerTeam *this, int a1);
+};
+
+struct MPSiegeClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_04)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_08)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_0C)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_10)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_14)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_18)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_1C)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_20)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_24)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_28)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_2C)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_30)(MPSiegeClass *this);
+  int (__thiscall *CanAllyWith)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_38)(MPSiegeClass *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_40)(MPSiegeClass *this);
+  int (__thiscall *FirstValidMapIndex)(MPSiegeClass *this);
+  int (__thiscall *PopulateTeamDropdown)(MPSiegeClass *this, int a1, int a2, int a3);
+  int (__thiscall *DrawTeamDropdown)(MPSiegeClass *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPSiegeClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPSiegeClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPSiegeClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPSiegeClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_64)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_68)(MPSiegeClass *this);
+  int (__thiscall *RandomHumanCountryIndex)(MPSiegeClass *this);
+  int (__thiscall *RandomAICountryIndex)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_74)(MPSiegeClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPSiegeClass *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPSiegeClass *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPSiegeClass *this, int a1);
+  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPSiegeClass *this, int a1);
+  int (__thiscall *AllyTeams)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_8C)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_90)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_94)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_98)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_9C)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_A0)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPSiegeClass *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_AC)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_B0)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_B4)(MPSiegeClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPSiegeClass *this);
+  int (__thiscall *vt_entry_BC)(MPSiegeClass *this);
+  int (__thiscall *CreateMPTeams)(MPSiegeClass *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPSiegeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_C8)(MPSiegeClass *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPSiegeClass *this, int a1, int a2);
+};
+
+struct MPSiegeDefenderTeam_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPSiegeDefenderTeam *this, int a1);
+  int (__thiscall *IsTeamIncluded)(MPSiegeDefenderTeam *this, int a1);
+  int (__thiscall *SetPlayerTeam)(MPSiegeDefenderTeam *this, int a1);
+};
+
+struct MPUnholyAllianceClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_04)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_08)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_0C)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_10)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_14)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_18)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_1C)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_20)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_24)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_28)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_2C)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_30)(MPUnholyAllianceClass *this);
+  int (__thiscall *CanAllyWith)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_38)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *IsAIAllowed)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_40)(MPUnholyAllianceClass *this);
+  int (__thiscall *FirstValidMapIndex)(MPUnholyAllianceClass *this);
+  int (__thiscall *PopulateTeamDropdown)(MPUnholyAllianceClass *this, int a1, int a2, int a3);
+  int (__thiscall *DrawTeamDropdown)(MPUnholyAllianceClass *this, int a1, int a2, int a3);
+  int (__thiscall *PopulateTeamDropdownForPlayer)(MPUnholyAllianceClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_54)(MPUnholyAllianceClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_58)(MPUnholyAllianceClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+  int (__thiscall *vt_entry_5C)(MPUnholyAllianceClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_60)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_64)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_68)(MPUnholyAllianceClass *this);
+  int (__thiscall *RandomHumanCountryIndex)(MPUnholyAllianceClass *this);
+  int (__thiscall *RandomAICountryIndex)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_74)(MPUnholyAllianceClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_78)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *UnfixAlliances)(MPUnholyAllianceClass *this);
+  int (__thiscall *StartingPositionsToHouseBaseCells)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *AllyTeams)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_8C)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_90)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_94)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_98)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_9C)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_A0)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_A4)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *vt_entry_A8)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_AC)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_B0)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_B4)(MPUnholyAllianceClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_B8)(MPUnholyAllianceClass *this);
+  int (__thiscall *vt_entry_BC)(MPUnholyAllianceClass *this);
+  int (__thiscall *CreateMPTeams)(MPUnholyAllianceClass *this, int a1);
+  int (__thiscall *AssignStartingPositionsToHouse)(MPUnholyAllianceClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *SpawnBaseUnits)(MPUnholyAllianceClass *this, int a1, int a2);
+  int (__thiscall *GenerateStartingUnits)(MPUnholyAllianceClass *this, int a1, int a2);
+};
+
+struct MSBinkAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSBinkAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSBinkAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSBinkAnim *this);
+  int (__thiscall *vt_entry_0C)(MSBinkAnim *this);
+  int (__thiscall *vt_entry_10)(MSBinkAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSBinkAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSBinkAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSBinkAnim *this);
+  int (__thiscall *vt_entry_20)(MSBinkAnim *this, int a1);
+};
+
+struct MSBitPrintAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSBitPrintAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSBitPrintAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSBitPrintAnim *this);
+  int (__thiscall *vt_entry_0C)(MSBitPrintAnim *this);
+  int (__thiscall *vt_entry_10)(MSBitPrintAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSBitPrintAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSBitPrintAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSBitPrintAnim *this);
+  int (__thiscall *vt_entry_20)(MSBitPrintAnim *this, int a1);
+};
+
+struct MSEngine_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSEngine *this, int a1);
+  int (__thiscall *vt_entry_04)(MSEngine *this, int a1);
+  int (__thiscall *vt_entry_08)(MSEngine *this);
+};
+
+struct MSShapeAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSShapeAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSShapeAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSShapeAnim *this);
+  int (__thiscall *vt_entry_0C)(MSShapeAnim *this);
+  int (__thiscall *vt_entry_10)(MSShapeAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSShapeAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSShapeAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSShapeAnim *this);
+  int (__thiscall *vt_entry_20)(MSShapeAnim *this, int a1);
+};
+
+struct MSFadeAnim_vtbl : MSShapeAnim_vtbl
+{
+};
+
+struct MSFont_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSFont *this, int a1);
+  int (__thiscall *vt_entry_04)(MSFont *this, int a1);
+  int (__thiscall *vt_entry_08)(MSFont *this, int a1);
+  int (__thiscall *vt_entry_0C)(MSFont *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_10)(MSFont *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct MSFrameAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSFrameAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSFrameAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSFrameAnim *this);
+  int (__thiscall *vt_entry_0C)(MSFrameAnim *this);
+  int (__thiscall *vt_entry_10)(MSFrameAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSFrameAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSFrameAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSFrameAnim *this);
+  int (__thiscall *vt_entry_20)(MSFrameAnim *this, int a1);
+};
+
+struct MSOverlayAnim_vtbl : MSFadeAnim_vtbl
+{
+};
+
+struct MSPCXAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSPCXAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSPCXAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSPCXAnim *this);
+  int (__thiscall *vt_entry_0C)(MSPCXAnim *this);
+  int (__thiscall *vt_entry_10)(MSPCXAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSPCXAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSPCXAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSPCXAnim *this);
+  int (__thiscall *vt_entry_20)(MSPCXAnim *this, int a1);
+};
+
+struct MSPrintAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSPrintAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSPrintAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSPrintAnim *this);
+  int (__thiscall *vt_entry_0C)(MSPrintAnim *this);
+  int (__thiscall *vt_entry_10)(MSPrintAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSPrintAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSPrintAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSPrintAnim *this);
+  int (__thiscall *vt_entry_20)(MSPrintAnim *this, int a1);
+};
+
+struct MSVQAnim_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MSVQAnim *this, int a1);
+  int (__thiscall *vt_entry_04)(MSVQAnim *this, int a1);
+  int (__thiscall *vt_entry_08)(MSVQAnim *this);
+  int (__thiscall *vt_entry_0C)(MSVQAnim *this);
+  int (__thiscall *vt_entry_10)(MSVQAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_14)(MSVQAnim *this, int a1, int a2);
+  int (__thiscall *vt_entry_18)(MSVQAnim *this, int a1);
+  int (__thiscall *vt_entry_1C)(MSVQAnim *this);
+  int (__thiscall *vt_entry_20)(MSVQAnim *this, int a1);
+};
+
+struct MapSeedClass_vtbl : LoadOptionsClass_vtbl
+{
+};
+
+struct MapSelect_vtbl : MSEngine_vtbl
+{
+};
+
+struct Mouse_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Mouse *this, int a1);
+  int (__thiscall *vt_entry_04)(Mouse *this);
+  int (__thiscall *vt_entry_08)(Mouse *this);
+  int (__thiscall *vt_entry_0C)(Mouse *this);
+  int (__thiscall *vt_entry_10)(Mouse *this);
+  int (__thiscall *vt_entry_14)(Mouse *this);
+  int (__thiscall *vt_entry_18)(Mouse *this);
+  int (__thiscall *vt_entry_1C)(Mouse *this);
+  int (__thiscall *vt_entry_20)(Mouse *this);
+  int (__thiscall *vt_entry_24)(Mouse *this);
+  int (__thiscall *vt_entry_28)(Mouse *this);
+  int (__thiscall *vt_entry_2C)(Mouse *this);
+  int (__thiscall *vt_entry_30)(Mouse *this);
+  int (__thiscall *vt_entry_34)(Mouse *this);
+  int (__thiscall *vt_entry_38)(Mouse *this);
+  int (__thiscall *vt_entry_3C)(Mouse *this);
+  int (__thiscall *vt_entry_40)(Mouse *this);
+  int (__thiscall *vt_entry_44)(Mouse *this);
+};
+
+struct MultiplayerDebugCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MultiplayerDebugCommandClass *this, int a1);
+  int (__thiscall *GetName)(MultiplayerDebugCommandClass *this);
+  int (__thiscall *GetUIName)(MultiplayerDebugCommandClass *this);
+  int (__thiscall *GetUICategory)(MultiplayerDebugCommandClass *this);
+  int (__thiscall *GetUIDescription)(MultiplayerDebugCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(MultiplayerDebugCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(MultiplayerDebugCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(MultiplayerDebugCommandClass *this, int a1);
+  int (__thiscall *Execute)(MultiplayerDebugCommandClass *this, int a1);
+};
+
+struct MultiplayerSyncCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(MultiplayerSyncCommandClass *this, int a1);
+  int (__thiscall *GetName)(MultiplayerSyncCommandClass *this);
+  int (__thiscall *GetUIName)(MultiplayerSyncCommandClass *this);
+  int (__thiscall *GetUICategory)(MultiplayerSyncCommandClass *this);
+  int (__thiscall *GetUIDescription)(MultiplayerSyncCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(MultiplayerSyncCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(MultiplayerSyncCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(MultiplayerSyncCommandClass *this, int a1);
+  int (__thiscall *Execute)(MultiplayerSyncCommandClass *this, int a1);
+};
+
+struct NextObjectCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(NextObjectCommandClass *this, int a1);
+  int (__thiscall *GetName)(NextObjectCommandClass *this);
+  int (__thiscall *GetUIName)(NextObjectCommandClass *this);
+  int (__thiscall *GetUICategory)(NextObjectCommandClass *this);
+  int (__thiscall *GetUIDescription)(NextObjectCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(NextObjectCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(NextObjectCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(NextObjectCommandClass *this, int a1);
+  int (__thiscall *Execute)(NextObjectCommandClass *this, int a1);
+};
+
+struct NullModemClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(NullModemClass *this, int a1);
+  int (__thiscall *vt_entry_04)(NullModemClass *this);
+  int (__thiscall *vt_entry_08)(NullModemClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_0C)(NullModemClass *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_10)(NullModemClass *this);
+  int (__thiscall *vt_entry_14)(NullModemClass *this, int a1);
+  int (__thiscall *vt_entry_18)(NullModemClass *this, int a1);
+  int (__thiscall *vt_entry_1C)(NullModemClass *this);
+  int (__thiscall *vt_entry_20)(NullModemClass *this);
+  int (__thiscall *vt_entry_24)(NullModemClass *this, int a1);
+  int (__thiscall *vt_entry_28)(NullModemClass *this, int a1);
+  int (__thiscall *SetFlushState)(NullModemClass *this, int a1);
+  int (__thiscall *vt_entry_30)(NullModemClass *this);
+  int (__thiscall *vt_entry_34)(NullModemClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_38)(NullModemClass *this, int a1, int a2, int a3);
+  int (__thiscall *SetTimingParams)(NullModemClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct NullModemConnClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(NullModemConnClass *this, int a1);
+  int (__thiscall *Reset)(NullModemConnClass *this);
+  int (__thiscall *vt_entry_08)(NullModemConnClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_0C)(NullModemConnClass *this, int a1, int a2);
+  int (__thiscall *Read)(NullModemConnClass *this, int a1, int a2);
+  int (__thiscall *Service)(NullModemConnClass *this);
+  int (__thiscall *vt_entry_18)(NullModemConnClass *this);
+  int (__thiscall *vt_entry_1C)(NullModemConnClass *this);
+  int (__thiscall *ServiceReadQueue)(NullModemConnClass *this);
+  int (__thiscall *vt_entry_24)(NullModemConnClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct OptionsCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(OptionsCommandClass *this, int a1);
+  int (__thiscall *GetName)(OptionsCommandClass *this);
+  int (__thiscall *GetUIName)(OptionsCommandClass *this);
+  int (__thiscall *GetUICategory)(OptionsCommandClass *this);
+  int (__thiscall *GetUIDescription)(OptionsCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(OptionsCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(OptionsCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(OptionsCommandClass *this, int a1);
+  int (__thiscall *Execute)(OptionsCommandClass *this, int a1);
+};
+
+struct OwnerDraw_DialogControl_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_DialogControl *this, int a1);
+  int (__thiscall *vt_entry_04)(OwnerDraw_DialogControl *this);
+  int (__thiscall *vt_entry_08)(OwnerDraw_DialogControl *this);
+  int (__thiscall *vt_entry_0C)(OwnerDraw_DialogControl *this);
+  int (__thiscall *vt_entry_10)(OwnerDraw_DialogControl *this);
+};
+
+struct OwnerDraw_SimpleDialogControl_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_SimpleDialogControl *this, int a1);
+  int (__thiscall *BindControlHwnd)(OwnerDraw_SimpleDialogControl *this, int a1, int a2);
+  int (__thiscall *vt_entry_08)(OwnerDraw_SimpleDialogControl *this);
+  int (__thiscall *vt_entry_0C)(OwnerDraw_SimpleDialogControl *this);
+  int (__thiscall *vt_entry_10)(OwnerDraw_SimpleDialogControl *this);
+};
+
+struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl
+{
+  int (__thiscall *VectorDeletingDestructor)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *OperatorEqual)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *SetCapacity)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1, int a2);
+  int (__thiscall *Clear)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this);
+  int (__thiscall *FindItemIndex)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *GetItemIndex)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *GetItem)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1, int a2);
+};
+
+struct PAVSchemeNode_VectorClass_HashObject_HashString_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *OperatorEqual)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *SetCapacity)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1, int a2);
+  int (__thiscall *Clear)(PAVSchemeNode_VectorClass_HashObject_HashString *this);
+  int (__thiscall *FindItemIndex)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *GetItemIndex)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
+  int (__thiscall *GetItem)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1, int a2);
+};
+
+struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl
+{
+  int (__thiscall *VectorDeletingDestructor)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *OperatorEqual)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *SetCapacity)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
+  int (__thiscall *Clear)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this);
+  int (__thiscall *FindItemIndex)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *GetItemIndex)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *GetItem)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
+};
+
+struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *OperatorEqual)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *SetCapacity)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
+  int (__thiscall *Clear)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this);
+  int (__thiscall *FindItemIndex)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *GetItemIndex)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
+  int (__thiscall *GetItem)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
+};
+
+struct PKPipe_vtbl : Pipe_vtbl
+{
+  int (__thiscall *vt_entry_14)(PKPipe *this, int a1);
+};
+
+struct PKStraw_vtbl : Straw_vtbl
+{
+  int (__thiscall *vt_entry_0C)(PKStraw *this, int a1);
+};
+
+struct PageUserCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(PageUserCommandClass *this, int a1);
+  int (__thiscall *GetName)(PageUserCommandClass *this);
+  int (__thiscall *GetUIName)(PageUserCommandClass *this);
+  int (__thiscall *GetUICategory)(PageUserCommandClass *this);
+  int (__thiscall *GetUIDescription)(PageUserCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(PageUserCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(PageUserCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(PageUserCommandClass *this, int a1);
+  int (__thiscall *Execute)(PageUserCommandClass *this, int a1);
+};
+
+struct PlanningModeCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(PlanningModeCommandClass *this, int a1);
+  int (__thiscall *GetName)(PlanningModeCommandClass *this);
+  int (__thiscall *GetUIName)(PlanningModeCommandClass *this);
+  int (__thiscall *GetUICategory)(PlanningModeCommandClass *this);
+  int (__thiscall *GetUIDescription)(PlanningModeCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(PlanningModeCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(PlanningModeCommandClass *this, int a1);
+  int (__thiscall *CheckLoop55E020)(PlanningModeCommandClass *this, int a1);
+  int (__thiscall *Execute)(PlanningModeCommandClass *this, int a1);
+};
+
+struct PlayerProfile_vtbl : ReferenceCounted_vtbl
+{
+};
+
+struct PrevObjectCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(PrevObjectCommandClass *this, int a1);
+  int (__thiscall *GetName)(PrevObjectCommandClass *this);
+  int (__thiscall *GetUIName)(PrevObjectCommandClass *this);
+  int (__thiscall *GetUICategory)(PrevObjectCommandClass *this);
+  int (__thiscall *GetUIDescription)(PrevObjectCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(PrevObjectCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(PrevObjectCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(PrevObjectCommandClass *this, int a1);
+  int (__thiscall *Execute)(PrevObjectCommandClass *this, int a1);
+};
+
+struct RAMFileClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RAMFileClass *this, int a1);
+  int (__thiscall *GetFileName)(RAMFileClass *this);
+  int (__thiscall *SetFileName)(RAMFileClass *this, int a1);
+  int (__thiscall *CreateFile)(RAMFileClass *this);
+  int (__thiscall *DeleteFile)(RAMFileClass *this);
+  int (__thiscall *Exists)(RAMFileClass *this, int a1);
+  int (__thiscall *HasHandle)(RAMFileClass *this);
+  int (__thiscall *Open)(RAMFileClass *this, int a1);
+  int (__thiscall *OpenEx)(RAMFileClass *this, int a1, int a2);
+  int (__thiscall *ReadBytes)(RAMFileClass *this, int a1, int a2);
+  int (__thiscall *Seek)(RAMFileClass *this, int a1, int a2);
+  int (__thiscall *GetFileSize)(RAMFileClass *this);
+  int (__thiscall *WriteBytes)(RAMFileClass *this, int a1, int a2);
+  int (__thiscall *Close)(RAMFileClass *this);
+  int (__thiscall *GetFileTime)(RAMFileClass *this);
+  int (__thiscall *SetFileTime)(RAMFileClass *this, int a1);
+  int (__thiscall *CDCheck)(RAMFileClass *this, int a1, int a2, int a3);
+};
+
+struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransDarkenZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransDarkenZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransDarkenZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransDarkenZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransDarkenZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransDarkenZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransDarkenZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransDarken_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransDarken_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransDarken_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransDarken_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25AlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25Alpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25ZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25ZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25ZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent25_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent25_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent25_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent25_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50AlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50Alpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50ZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50ZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50ZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent50_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent50_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent50_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent50_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75AlphaZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75AlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75AlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75AlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75Alpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75Alpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75ZReadWarp_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75ZReadWarp_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75ZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75ZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75ZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75ZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransLucent75_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransLucent75_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransLucent75_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransLucent75_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransRemapDestZReadWrite_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransRemapDestZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransRemapDestZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransRemapDestZRead_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransRemapDestZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransRemapDestZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransRemapDest_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransRemapDest_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransRemapDest_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransRemapDest_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransRemapXlatZReadWrite_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransRemapXlatZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransRemapXlatZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransRemapXlatZRead_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransRemapXlatZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransRemapXlatZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransRemapXlat_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransRemapXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatAlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatAlpha_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatZReadWrite_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatZRead_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatZRead_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlatZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlatZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlat_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransXlat_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransXlat_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatAlphaZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatAlpha_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatAlpha_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatZReadWrite_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatZReadWrite_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatZReadWrite_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatZRead_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatZRead_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlatZRead_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlatZRead_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlat_unsigned_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlat_unsigned_char *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlat_unsigned_char *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitTransZRemapXlat_unsigned_short_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitTransZRemapXlat_unsigned_short *this, int a1);
+  int (__thiscall *Blit_Copy)(RLEBlitTransZRemapXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+  int (__thiscall *Blit_Copy_Tinted)(RLEBlitTransZRemapXlat_unsigned_short *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11);
+};
+
+struct RLEBlitter_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitter *this, int a1);
+  int (__thiscall *vt_entry_04)(RLEBlitter *this);
+  int (__thiscall *vt_entry_08)(RLEBlitter *this);
+};
+
+struct RadarClass_RTacticalClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *GetNext)(RadarClass_RTacticalClass *this);
+  int (__thiscall *GetPrev)(RadarClass_RTacticalClass *this);
+  int (__thiscall *Add)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *AddTail)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *AddHead)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *HeadOfList)(RadarClass_RTacticalClass *this);
+  int (__thiscall *TailOfList)(RadarClass_RTacticalClass *this);
+  int (__thiscall *Zap)(RadarClass_RTacticalClass *this);
+  int (__thiscall *Remove)(RadarClass_RTacticalClass *this);
+  int (__thiscall *Input)(RadarClass_RTacticalClass *this);
+  int (__thiscall *DrawAll)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *DeleteList)(RadarClass_RTacticalClass *this);
+  int (__thiscall *ExtractGadget)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *MarkListToRedraw)(RadarClass_RTacticalClass *this);
+  int (__thiscall *Disable)(RadarClass_RTacticalClass *this);
+  int (__thiscall *Enable)(RadarClass_RTacticalClass *this);
+  int (__thiscall *GetID)(RadarClass_RTacticalClass *this);
+  int (__thiscall *MarkRedraw)(RadarClass_RTacticalClass *this);
+  int (__thiscall *PeerToPeer)(RadarClass_RTacticalClass *this, int a1, int a2, int a3);
+  int (__thiscall *SetFocus)(RadarClass_RTacticalClass *this);
+  int (__thiscall *KillFocus)(RadarClass_RTacticalClass *this);
+  int (__thiscall *IsFocused)(RadarClass_RTacticalClass *this);
+  int (__thiscall *IsListToRedraw)(RadarClass_RTacticalClass *this);
+  int (__thiscall *IsToRedraw)(RadarClass_RTacticalClass *this);
+  int (__thiscall *SetPosition)(RadarClass_RTacticalClass *this, int a1, int a2);
+  int (__thiscall *SetDimension)(RadarClass_RTacticalClass *this, int a1, int a2);
+  int (__thiscall *Draw)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *OnMouseEnter)(RadarClass_RTacticalClass *this);
+  int (__thiscall *OnMouseLeave)(RadarClass_RTacticalClass *this);
+  int (__thiscall *StickyProcess)(RadarClass_RTacticalClass *this, int a1);
+  int (__thiscall *Action)(RadarClass_RTacticalClass *this, int a1, int a2, int a3);
+  int (__thiscall *Clicked)(RadarClass_RTacticalClass *this, int a1, int a2, int a3, int a4, int a5);
+};
+
+struct RandomStraw_vtbl : Straw_vtbl
+{
+};
+
+struct SHAPipe_vtbl : Pipe_vtbl
+{
+};
+
+struct ScatterCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ScatterCommandClass *this, int a1);
+  int (__thiscall *GetName)(ScatterCommandClass *this);
+  int (__thiscall *GetUIName)(ScatterCommandClass *this);
+  int (__thiscall *GetUICategory)(ScatterCommandClass *this);
+  int (__thiscall *GetUIDescription)(ScatterCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(ScatterCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(ScatterCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(ScatterCommandClass *this, int a1);
+  int (__thiscall *Execute)(ScatterCommandClass *this, int a1);
+};
+
+struct ScoreAnimClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ScoreAnimClass *this, int a1);
+  int (__thiscall *Pause)(ScoreAnimClass *this);
+  int (__thiscall *Resume)(ScoreAnimClass *this);
+  int (__thiscall *vt_entry_0C)(ScoreAnimClass *this);
+};
+
+struct ScoreFontClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ScoreFontClass *this, int a1);
+  int (__thiscall *vt_entry_04)(ScoreFontClass *this, int a1);
+  int (__thiscall *vt_entry_08)(ScoreFontClass *this, int a1);
+  int (__thiscall *vt_entry_0C)(ScoreFontClass *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_10)(ScoreFontClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
+};
+
+struct ScoreBigFontClass_vtbl : ScoreFontClass_vtbl
+{
+};
+
+struct ScoreFullFontClass_vtbl : ScoreFontClass_vtbl
+{
+};
+
+struct ScorePrintClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ScorePrintClass *this, int a1);
+  int (__thiscall *Pause)(ScorePrintClass *this);
+  int (__thiscall *Resume)(ScorePrintClass *this);
+  int (__thiscall *vt_entry_0C)(ScorePrintClass *this, int a1);
+};
+
+struct ScoreTimeClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ScoreTimeClass *this, int a1);
+  int (__thiscall *Pause)(ScoreTimeClass *this);
+  int (__thiscall *Resume)(ScoreTimeClass *this);
+  int (__thiscall *vt_entry_0C)(ScoreTimeClass *this, int a1);
+};
+
+struct ScreenCaptureCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ScreenCaptureCommandClass *this, int a1);
+  int (__thiscall *GetName)(ScreenCaptureCommandClass *this);
+  int (__thiscall *GetUIName)(ScreenCaptureCommandClass *this);
+  int (__thiscall *GetUICategory)(ScreenCaptureCommandClass *this);
+  int (__thiscall *GetUIDescription)(ScreenCaptureCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(ScreenCaptureCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(ScreenCaptureCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(ScreenCaptureCommandClass *this, int a1);
+  int (__thiscall *Execute)(ScreenCaptureCommandClass *this, int a1);
+};
+
+struct SelectTeamCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SelectTeamCommandClass *this, int a1);
+  int (__thiscall *GetName)(SelectTeamCommandClass *this);
+  int (__thiscall *GetUIName)(SelectTeamCommandClass *this);
+  int (__thiscall *GetUICategory)(SelectTeamCommandClass *this);
+  int (__thiscall *GetUIDescription)(SelectTeamCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SelectTeamCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SelectTeamCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SelectTeamCommandClass *this, int a1);
+  int (__thiscall *Execute)(SelectTeamCommandClass *this, int a1);
+};
+
+struct SetDefenseTabCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetDefenseTabCommandClass *this, int a1);
+  int (__thiscall *GetName)(SetDefenseTabCommandClass *this);
+  int (__thiscall *GetUIName)(SetDefenseTabCommandClass *this);
+  int (__thiscall *GetUICategory)(SetDefenseTabCommandClass *this);
+  int (__thiscall *GetUIDescription)(SetDefenseTabCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetDefenseTabCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetDefenseTabCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetDefenseTabCommandClass *this, int a1);
+  int (__thiscall *Execute)(SetDefenseTabCommandClass *this, int a1);
+};
+
+struct SetInfantryTabCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetInfantryTabCommandClass *this, int a1);
+  int (__thiscall *GetName)(SetInfantryTabCommandClass *this);
+  int (__thiscall *GetUIName)(SetInfantryTabCommandClass *this);
+  int (__thiscall *GetUICategory)(SetInfantryTabCommandClass *this);
+  int (__thiscall *GetUIDescription)(SetInfantryTabCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetInfantryTabCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetInfantryTabCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetInfantryTabCommandClass *this, int a1);
+  int (__thiscall *Execute)(SetInfantryTabCommandClass *this, int a1);
+};
+
+struct SetStructureTabCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetStructureTabCommandClass *this, int a1);
+  int (__thiscall *GetName)(SetStructureTabCommandClass *this);
+  int (__thiscall *GetUIName)(SetStructureTabCommandClass *this);
+  int (__thiscall *GetUICategory)(SetStructureTabCommandClass *this);
+  int (__thiscall *GetUIDescription)(SetStructureTabCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetStructureTabCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetStructureTabCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetStructureTabCommandClass *this, int a1);
+  int (__thiscall *Execute)(SetStructureTabCommandClass *this, int a1);
+};
+
+struct SetUnitTabCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetUnitTabCommandClass *this, int a1);
+  int (__thiscall *GetName)(SetUnitTabCommandClass *this);
+  int (__thiscall *GetUIName)(SetUnitTabCommandClass *this);
+  int (__thiscall *GetUICategory)(SetUnitTabCommandClass *this);
+  int (__thiscall *GetUIDescription)(SetUnitTabCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetUnitTabCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetUnitTabCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetUnitTabCommandClass *this, int a1);
+  int (__thiscall *Execute)(SetUnitTabCommandClass *this, int a1);
+};
+
+struct SetView1CommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetView1CommandClass *this, int a1);
+  int (__thiscall *GetName)(SetView1CommandClass *this);
+  int (__thiscall *GetUIName)(SetView1CommandClass *this);
+  int (__thiscall *GetUICategory)(SetView1CommandClass *this);
+  int (__thiscall *GetUIDescription)(SetView1CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetView1CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetView1CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetView1CommandClass *this, int a1);
+  int (__thiscall *Execute)(SetView1CommandClass *this, int a1);
+};
+
+struct SetView2CommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetView2CommandClass *this, int a1);
+  int (__thiscall *GetName)(SetView2CommandClass *this);
+  int (__thiscall *GetUIName)(SetView2CommandClass *this);
+  int (__thiscall *GetUICategory)(SetView2CommandClass *this);
+  int (__thiscall *GetUIDescription)(SetView2CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetView2CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetView2CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetView2CommandClass *this, int a1);
+  int (__thiscall *Execute)(SetView2CommandClass *this, int a1);
+};
+
+struct SetView3CommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetView3CommandClass *this, int a1);
+  int (__thiscall *GetName)(SetView3CommandClass *this);
+  int (__thiscall *GetUIName)(SetView3CommandClass *this);
+  int (__thiscall *GetUICategory)(SetView3CommandClass *this);
+  int (__thiscall *GetUIDescription)(SetView3CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetView3CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetView3CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetView3CommandClass *this, int a1);
+  int (__thiscall *Execute)(SetView3CommandClass *this, int a1);
+};
+
+struct SetView4CommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SetView4CommandClass *this, int a1);
+  int (__thiscall *GetName)(SetView4CommandClass *this);
+  int (__thiscall *GetUIName)(SetView4CommandClass *this);
+  int (__thiscall *GetUICategory)(SetView4CommandClass *this);
+  int (__thiscall *GetUIDescription)(SetView4CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SetView4CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SetView4CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SetView4CommandClass *this, int a1);
+  int (__thiscall *Execute)(SetView4CommandClass *this, int a1);
+};
+
+struct SidebarClass_SBGadgetClass_vtbl : LinkClass_vtbl
+{
+  int (__thiscall *Input)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *DrawAll)(SidebarClass_SBGadgetClass *this, int a1);
+  int (__thiscall *DeleteList)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *ExtractGadget)(SidebarClass_SBGadgetClass *this, int a1);
+  int (__thiscall *MarkListToRedraw)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *Disable)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *Enable)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *GetID)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *MarkRedraw)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *PeerToPeer)(SidebarClass_SBGadgetClass *this, int a1, int a2, int a3);
+  int (__thiscall *SetFocus)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *KillFocus)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *IsFocused)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *IsListToRedraw)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *IsToRedraw)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *SetPosition)(SidebarClass_SBGadgetClass *this, int a1, int a2);
+  int (__thiscall *SetDimension)(SidebarClass_SBGadgetClass *this, int a1, int a2);
+  int (__thiscall *Draw)(SidebarClass_SBGadgetClass *this, int a1);
+  int (__thiscall *OnMouseEnter)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *OnMouseLeave)(SidebarClass_SBGadgetClass *this);
+  int (__thiscall *StickyProcess)(SidebarClass_SBGadgetClass *this, int a1);
+  int (__thiscall *SBGadgetClass_Action)(SidebarClass_SBGadgetClass *this, int a1, int a2, int a3);
+  int (__thiscall *Clicked)(SidebarClass_SBGadgetClass *this, int a1, int a2, int a3, int a4, int a5);
+};
+
+struct SidebarDownCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SidebarDownCommandClass *this, int a1);
+  int (__thiscall *GetName)(SidebarDownCommandClass *this);
+  int (__thiscall *GetUIName)(SidebarDownCommandClass *this);
+  int (__thiscall *GetUICategory)(SidebarDownCommandClass *this);
+  int (__thiscall *GetUIDescription)(SidebarDownCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SidebarDownCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SidebarDownCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SidebarDownCommandClass *this, int a1);
+  int (__thiscall *Execute)(SidebarDownCommandClass *this, int a1);
+};
+
+struct SidebarUpCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(SidebarUpCommandClass *this, int a1);
+  int (__thiscall *GetName)(SidebarUpCommandClass *this);
+  int (__thiscall *GetUIName)(SidebarUpCommandClass *this);
+  int (__thiscall *GetUICategory)(SidebarUpCommandClass *this);
+  int (__thiscall *GetUIDescription)(SidebarUpCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(SidebarUpCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(SidebarUpCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(SidebarUpCommandClass *this, int a1);
+  int (__thiscall *Execute)(SidebarUpCommandClass *this, int a1);
+};
+
+struct Std_bad_cast_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Std_bad_cast *this, int a1);
+  int (__thiscall *vt_entry_04)(Std_bad_cast *this);
+};
+
+struct Std_bad_typeid_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Std_bad_typeid *this, int a1);
+  int (__thiscall *vt_entry_04)(Std_bad_typeid *this);
+};
+
+struct Std_exception_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Std_exception *this, int a1);
+  int (__thiscall *vt_entry_04)(Std_exception *this);
+};
+
+struct Std_non_rtti_object_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(Std_non_rtti_object *this, int a1);
+  int (__thiscall *vt_entry_04)(Std_non_rtti_object *this);
+};
+
+struct StopCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(StopCommandClass *this, int a1);
+  int (__thiscall *GetName)(StopCommandClass *this);
+  int (__thiscall *GetUIName)(StopCommandClass *this);
+  int (__thiscall *GetUICategory)(StopCommandClass *this);
+  int (__thiscall *GetUIDescription)(StopCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(StopCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(StopCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(StopCommandClass *this, int a1);
+  int (__thiscall *Execute)(StopCommandClass *this, int a1);
+};
+
+struct SwizzleManager_ISwizzle_vtbl
+{
+  int (__thiscall *QueryInterface)(SwizzleManager_ISwizzle *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(SwizzleManager_ISwizzle *this, int a1);
+  int (__thiscall *Release)(SwizzleManager_ISwizzle *this, int a1);
+  int (__thiscall *Reset)(SwizzleManager_ISwizzle *this, int a1);
+  int (__thiscall *Swizzle)(SwizzleManager_ISwizzle *this, int a1, int a2);
+  int (__thiscall *Fetch_Swizzle_ID)(SwizzleManager_ISwizzle *this, int a1, int a2, int a3);
+  int (__thiscall *Here_I_Am)(SwizzleManager_ISwizzle *this, int a1, int a2, int a3);
+  int (__thiscall *Save_Interface)(SwizzleManager_ISwizzle *this, int a1, int a2, int a3);
+  int (__thiscall *Load_Interface)(SwizzleManager_ISwizzle *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *Get_Save_Size)(SwizzleManager_ISwizzle *this, int a1, int a2);
+};
+
+struct TClassFactory_AITriggerTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AITriggerTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AITriggerTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AITriggerTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AITriggerTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AITriggerTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_AircraftClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AircraftClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AircraftClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AircraftClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AircraftClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AircraftClass *this, int a1, int a2);
+};
+
+struct TClassFactory_AircraftTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AircraftTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AircraftTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AircraftTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AircraftTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AircraftTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_AirstrikeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AirstrikeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AirstrikeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AirstrikeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AirstrikeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AirstrikeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_AlphaShapeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AlphaShapeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AlphaShapeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AlphaShapeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AlphaShapeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AlphaShapeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_AnimClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AnimClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AnimClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AnimClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AnimClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AnimClass *this, int a1, int a2);
+};
+
+struct TClassFactory_AnimTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_AnimTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_AnimTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_AnimTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_AnimTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_AnimTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_BombClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_BombClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_BombClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_BombClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_BombClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_BombClass *this, int a1, int a2);
+};
+
+struct TClassFactory_BuildingClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_BuildingClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_BuildingClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_BuildingClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_BuildingClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_BuildingClass *this, int a1, int a2);
+};
+
+struct TClassFactory_BuildingLightClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_BuildingLightClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_BuildingLightClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_BuildingLightClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_BuildingLightClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_BuildingLightClass *this, int a1, int a2);
+};
+
+struct TClassFactory_BuildingTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_BuildingTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_BuildingTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_BuildingTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_BuildingTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_BuildingTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_BulletClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_BulletClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_BulletClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_BulletClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_BulletClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_BulletClass *this, int a1, int a2);
+};
+
+struct TClassFactory_BulletTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_BulletTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_BulletTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_BulletTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_BulletTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_BulletTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_CStreamClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_CStreamClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_CStreamClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_CStreamClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_CStreamClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_CStreamClass *this, int a1, int a2);
+};
+
+struct TClassFactory_CampaignClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_CampaignClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_CampaignClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_CampaignClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_CampaignClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_CampaignClass *this, int a1, int a2);
+};
+
+struct TClassFactory_CaptureManagerClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_CaptureManagerClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_CaptureManagerClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_CaptureManagerClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_CaptureManagerClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_CaptureManagerClass *this, int a1, int a2);
+};
+
+struct TClassFactory_CellClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_CellClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_CellClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_CellClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_CellClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_CellClass *this, int a1, int a2);
+};
+
+struct TClassFactory_DiskLaserClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_DiskLaserClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_DiskLaserClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_DiskLaserClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_DiskLaserClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_DiskLaserClass *this, int a1, int a2);
+};
+
+struct TClassFactory_DriveLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_DriveLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_DriveLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_DriveLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_DriveLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_DriveLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_DropPodLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_DropPodLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_DropPodLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_DropPodLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_DropPodLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_DropPodLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_EMPulseClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_EMPulseClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_EMPulseClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_EMPulseClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_EMPulseClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_EMPulseClass *this, int a1, int a2);
+};
+
+struct TClassFactory_FactoryClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_FactoryClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_FactoryClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_FactoryClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_FactoryClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_FactoryClass *this, int a1, int a2);
+};
+
+struct TClassFactory_FlyLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_FlyLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_FlyLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_FlyLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_FlyLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_FlyLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_FoggedObjectClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_FoggedObjectClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_FoggedObjectClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_FoggedObjectClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_FoggedObjectClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_FoggedObjectClass *this, int a1, int a2);
+};
+
+struct TClassFactory_HouseClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_HouseClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_HouseClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_HouseClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_HouseClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_HouseClass *this, int a1, int a2);
+};
+
+struct TClassFactory_HouseTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_HouseTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_HouseTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_HouseTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_HouseTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_HouseTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_HoverLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_HoverLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_HoverLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_HoverLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_HoverLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_HoverLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_InfantryClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_InfantryClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_InfantryClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_InfantryClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_InfantryClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_InfantryClass *this, int a1, int a2);
+};
+
+struct TClassFactory_InfantryTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_InfantryTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_InfantryTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_InfantryTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_InfantryTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_InfantryTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_IsometricTileTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_IsometricTileTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_IsometricTileTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_IsometricTileTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_IsometricTileTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_IsometricTileTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_JumpjetLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_JumpjetLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_JumpjetLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_JumpjetLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_JumpjetLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_JumpjetLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_LightSourceClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_LightSourceClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_LightSourceClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_LightSourceClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_LightSourceClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_LightSourceClass *this, int a1, int a2);
+};
+
+struct TClassFactory_MechLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_MechLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_MechLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_MechLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_MechLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_MechLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_NeuronClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_NeuronClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_NeuronClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_NeuronClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_NeuronClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_NeuronClass *this, int a1, int a2);
+};
+
+struct TClassFactory_OverlayTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_OverlayTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_OverlayTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_OverlayTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_OverlayTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_OverlayTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ParasiteClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ParasiteClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ParasiteClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ParasiteClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ParasiteClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ParasiteClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ParticleClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ParticleClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ParticleClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ParticleClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ParticleClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ParticleClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ParticleSystemClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ParticleSystemClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ParticleSystemClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ParticleSystemClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ParticleSystemClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ParticleSystemClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ParticleSystemTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ParticleSystemTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ParticleSystemTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ParticleSystemTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ParticleSystemTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ParticleSystemTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ParticleTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ParticleTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ParticleTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ParticleTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ParticleTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ParticleTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_RadSiteClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_RadSiteClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_RadSiteClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_RadSiteClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_RadSiteClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_RadSiteClass *this, int a1, int a2);
+};
+
+struct TClassFactory_RocketLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_RocketLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_RocketLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_RocketLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_RocketLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_RocketLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ScriptClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ScriptClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ScriptClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ScriptClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ScriptClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ScriptClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ScriptTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ScriptTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ScriptTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ScriptTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ScriptTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ScriptTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_ShipLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_ShipLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_ShipLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_ShipLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_ShipLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_ShipLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_SideClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_SideClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_SideClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_SideClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_SideClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_SideClass *this, int a1, int a2);
+};
+
+struct TClassFactory_SlaveManagerClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_SlaveManagerClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_SlaveManagerClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_SlaveManagerClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_SlaveManagerClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_SlaveManagerClass *this, int a1, int a2);
+};
+
+struct TClassFactory_SmudgeTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_SmudgeTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_SmudgeTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_SmudgeTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_SmudgeTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_SmudgeTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_SpawnManagerClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_SpawnManagerClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_SpawnManagerClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_SpawnManagerClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_SpawnManagerClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_SpawnManagerClass *this, int a1, int a2);
+};
+
+struct TClassFactory_SuperClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_SuperClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_SuperClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_SuperClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_SuperClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_SuperClass *this, int a1, int a2);
+};
+
+struct TClassFactory_SuperWeaponTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_SuperWeaponTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_SuperWeaponTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_SuperWeaponTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_SuperWeaponTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_SuperWeaponTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TActionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TActionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TActionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TActionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TActionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TActionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TEventClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TEventClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TEventClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TEventClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TEventClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TEventClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TacticalClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TacticalClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TacticalClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TacticalClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TacticalClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TacticalClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TagClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TagClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TagClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TagClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TagClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TagClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TagTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TagTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TagTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TagTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TagTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TagTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TaskForceClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TaskForceClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TaskForceClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TaskForceClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TaskForceClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TaskForceClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TeamClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TeamClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TeamClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TeamClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TeamClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TeamClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TeamTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TeamTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TeamTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TeamTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TeamTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TeamTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TeleportLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TeleportLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TeleportLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TeleportLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TeleportLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TeleportLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TemporalClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TemporalClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TemporalClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TemporalClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TemporalClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TemporalClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TerrainClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TerrainClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TerrainClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TerrainClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TerrainClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TerrainClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TerrainTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TerrainTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TerrainTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TerrainTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TerrainTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TerrainTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TiberiumClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TiberiumClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TiberiumClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TiberiumClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TiberiumClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TiberiumClass *this);
+};
+
+struct TClassFactory_TriggerClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TriggerClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TriggerClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TriggerClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TriggerClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TriggerClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TriggerTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TriggerTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TriggerTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TriggerTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TriggerTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TriggerTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TubeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TubeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TubeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TubeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TubeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TubeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_TunnelLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_TunnelLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_TunnelLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_TunnelLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_TunnelLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_TunnelLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_UnitClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_UnitClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_UnitClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_UnitClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_UnitClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_UnitClass *this, int a1, int a2);
+};
+
+struct TClassFactory_UnitTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_UnitTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_UnitTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_UnitTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_UnitTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_UnitTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_VoxelAnimClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_VoxelAnimClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_VoxelAnimClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_VoxelAnimClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_VoxelAnimClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_VoxelAnimClass *this, int a1, int a2);
+};
+
+struct TClassFactory_VoxelAnimTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_VoxelAnimTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_VoxelAnimTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_VoxelAnimTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_VoxelAnimTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_VoxelAnimTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_WalkLocomotionClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_WalkLocomotionClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_WalkLocomotionClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_WalkLocomotionClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_WalkLocomotionClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_WalkLocomotionClass *this, int a1, int a2);
+};
+
+struct TClassFactory_WarheadTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_WarheadTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_WarheadTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_WarheadTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_WarheadTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_WarheadTypeClass *this, int a1, int a2);
+};
+
+struct TClassFactory_WaveClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_WaveClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_WaveClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_WaveClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_WaveClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_WaveClass *this, int a1, int a2);
+};
+
+struct TClassFactory_WaypointPathClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_WaypointPathClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_WaypointPathClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_WaypointPathClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_WaypointPathClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_WaypointPathClass *this, int a1, int a2);
+};
+
+struct TClassFactory_WeaponTypeClass_vtbl
+{
+  int (__thiscall *QueryInterface)(TClassFactory_WeaponTypeClass *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TClassFactory_WeaponTypeClass *this, int a1);
+  int (__thiscall *Release)(TClassFactory_WeaponTypeClass *this, int a1);
+  int (__thiscall *CreateInstance)(TClassFactory_WeaponTypeClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TClassFactory_WeaponTypeClass *this, int a1, int a2);
+};
+
+struct TauntCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TauntCommandClass *this, int a1);
+  int (__thiscall *GetName)(TauntCommandClass *this);
+  int (__thiscall *GetUIName)(TauntCommandClass *this);
+  int (__thiscall *GetUICategory)(TauntCommandClass *this);
+  int (__thiscall *GetUIDescription)(TauntCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(TauntCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(TauntCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(TauntCommandClass *this, int a1);
+  int (__thiscall *Execute)(TauntCommandClass *this, int a1);
+};
+
+struct TextButtonClass_vtbl : LinkClass_vtbl
+{
+  int (__thiscall *Input)(TextButtonClass *this);
+  int (__thiscall *DrawAll)(TextButtonClass *this, int a1);
+  int (__thiscall *DeleteList)(TextButtonClass *this);
+  int (__thiscall *ExtractGadget)(TextButtonClass *this, int a1);
+  int (__thiscall *MarkListToRedraw)(TextButtonClass *this);
+  int (__thiscall *Disable)(TextButtonClass *this);
+  int (__thiscall *Enable)(TextButtonClass *this);
+  int (__thiscall *GetID)(TextButtonClass *this);
+  int (__thiscall *MarkRedraw)(TextButtonClass *this);
+  int (__thiscall *PeerToPeer)(TextButtonClass *this, int a1, int a2, int a3);
+  int (__thiscall *SetFocus)(TextButtonClass *this);
+  int (__thiscall *KillFocus)(TextButtonClass *this);
+  int (__thiscall *IsFocused)(TextButtonClass *this);
+  int (__thiscall *IsListToRedraw)(TextButtonClass *this);
+  int (__thiscall *IsToRedraw)(TextButtonClass *this);
+  int (__thiscall *SetPosition)(TextButtonClass *this, int a1, int a2);
+  int (__thiscall *SetDimension)(TextButtonClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_6C)(TextButtonClass *this, int a1);
+  int (__thiscall *OnMouseEnter)(TextButtonClass *this);
+  int (__thiscall *OnMouseLeave)(TextButtonClass *this);
+  int (__thiscall *StickyProcess)(TextButtonClass *this, int a1);
+  int (__thiscall *Action)(TextButtonClass *this, int a1, int a2, int a3);
+  int (__thiscall *Clicked)(TextButtonClass *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *MakePeer)(TextButtonClass *this, int a1);
+  int (__thiscall *vt_entry_88)(TextButtonClass *this, int a1, int a2);
+  int (__thiscall *vt_entry_8C)(TextButtonClass *this, int a1);
+  int (__thiscall *vt_entry_90)(TextButtonClass *this);
+  int (__thiscall *vt_entry_94)(TextButtonClass *this, int a1);
+};
+
+struct TiberianSunClassFactory_vtbl
+{
+  int (__thiscall *QueryInterface)(TiberianSunClassFactory *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(TiberianSunClassFactory *this, int a1);
+  int (__thiscall *Release)(TiberianSunClassFactory *this, int a1);
+  int (__thiscall *CreateInstance)(TiberianSunClassFactory *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *LockServer)(TiberianSunClassFactory *this, int a1, int a2);
+};
+
+struct ToggleRepairCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ToggleRepairCommandClass *this, int a1);
+  int (__thiscall *GetName)(ToggleRepairCommandClass *this);
+  int (__thiscall *GetUIName)(ToggleRepairCommandClass *this);
+  int (__thiscall *GetUICategory)(ToggleRepairCommandClass *this);
+  int (__thiscall *GetUIDescription)(ToggleRepairCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(ToggleRepairCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(ToggleRepairCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(ToggleRepairCommandClass *this, int a1);
+  int (__thiscall *Execute)(ToggleRepairCommandClass *this, int a1);
+};
+
+struct ToggleSellCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(ToggleSellCommandClass *this, int a1);
+  int (__thiscall *GetName)(ToggleSellCommandClass *this);
+  int (__thiscall *GetUIName)(ToggleSellCommandClass *this);
+  int (__thiscall *GetUICategory)(ToggleSellCommandClass *this);
+  int (__thiscall *GetUIDescription)(ToggleSellCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(ToggleSellCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(ToggleSellCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(ToggleSellCommandClass *this, int a1);
+  int (__thiscall *Execute)(ToggleSellCommandClass *this, int a1);
+};
+
+struct TypeList_AircraftTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_AircraftTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_AircraftTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_AircraftTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_AircraftTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_AircraftTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_AircraftTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_AircraftTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_AnimTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_AnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual2)(TypeList_AnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity2)(TypeList_AnimTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear2)(TypeList_AnimTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex2)(TypeList_AnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex2)(TypeList_AnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem2)(TypeList_AnimTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_BuildingTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_BuildingTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual2)(TypeList_BuildingTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity2)(TypeList_BuildingTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear2)(TypeList_BuildingTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex2)(TypeList_BuildingTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex2)(TypeList_BuildingTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem2)(TypeList_BuildingTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_InfantryTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_InfantryTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_InfantryTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_InfantryTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_InfantryTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_InfantryTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_InfantryTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_InfantryTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_ParticleSystemTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_ParticleSystemTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_ParticleSystemTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_ParticleSystemTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_ParticleSystemTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_ParticleSystemTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_ParticleSystemTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_ParticleSystemTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_RGBClass_vtbl : DynamicVectorClass_RGBClass_vtbl
+{
+};
+
+struct TypeList_SmudgeTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_SmudgeTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_SmudgeTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_TeamTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_TeamTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual2)(TypeList_TeamTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity2)(TypeList_TeamTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear2)(TypeList_TeamTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex2)(TypeList_TeamTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex2)(TypeList_TeamTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem2)(TypeList_TeamTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_TerrainTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_TerrainTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_TerrainTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_TerrainTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_TerrainTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_TerrainTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_TerrainTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_TerrainTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_UnitTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_UnitTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_UnitTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_UnitTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_UnitTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_UnitTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_UnitTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_UnitTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_VoxelAnimTypeClass_CPTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_VoxelAnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_VoxelAnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_VoxelAnimTypeClass_CPTR *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_VoxelAnimTypeClass_CPTR *this);
+  int (__thiscall *FindItemIndex)(TypeList_VoxelAnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_VoxelAnimTypeClass_CPTR *this, int a1);
+  int (__thiscall *GetItem)(TypeList_VoxelAnimTypeClass_CPTR *this, int a1);
+};
+
+struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeList_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *OperatorEqual)(TypeList_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *SetCapacity)(TypeList_W_4_char_i_s_k_unsigned_int_char *this, int a1, int a2);
+  int (__thiscall *Clear)(TypeList_W_4_char_i_s_k_unsigned_int_char *this);
+  int (__thiscall *FindItemIndex)(TypeList_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *GetItemIndex)(TypeList_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *GetItem)(TypeList_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+};
+
+struct TypeSelectCommandClass_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(TypeSelectCommandClass *this, int a1);
+  int (__thiscall *GetName)(TypeSelectCommandClass *this);
+  int (__thiscall *GetUIName)(TypeSelectCommandClass *this);
+  int (__thiscall *GetUICategory)(TypeSelectCommandClass *this);
+  int (__thiscall *GetUIDescription)(TypeSelectCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(TypeSelectCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(TypeSelectCommandClass *this, int a1);
+  int (__thiscall *CheckLoop55E020)(TypeSelectCommandClass *this, int a1);
+  int (__thiscall *Execute)(TypeSelectCommandClass *this, int a1);
+};
+
+struct VQMovieHandle_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VQMovieHandle *this, int a1);
+  int (__thiscall *AdvanceFrame)(VQMovieHandle *this);
+  int (__thiscall *Waiting)(VQMovieHandle *this);
+  int (__thiscall *Pause)(VQMovieHandle *this, int a1);
+  int (__thiscall *Stop)(VQMovieHandle *this);
+  int (__thiscall *FramesLeft)(VQMovieHandle *this);
+  int (__thiscall *SetPosition)(VQMovieHandle *this, int a1, int a2);
+  int (__thiscall *SeekToFrame)(VQMovieHandle *this, int a1);
+  int (__thiscall *InitSubtitles)(VQMovieHandle *this, int a1);
+  int (__thiscall *Timing)(VQMovieHandle *this);
+  int (__thiscall *Blit)(VQMovieHandle *this);
+};
+
+struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
+};
+
+struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
+};
+
+struct VectorClass_DistributionObject_CellClass_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_DistributionObject_CellClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
+};
+
+struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_DynamicVectorClass_char_PTR_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+};
+
+struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this);
+  int (__thiscall *FindItemIndex)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
+};
+
+struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_HashObject_unsigned_int_unsigned_int *this);
+  int (__thiscall *FindItemIndex)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
+};
+
+struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_HouseClass_BuildChoiceClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
+};
+
+struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+};
+
+struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_LightSourceClass_PendingCellClass_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+};
+
+struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+};
+
+struct VectorClass_TPoint3D_int_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_TPoint3D_int *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_TPoint3D_int *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_TPoint3D_int *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_TPoint3D_int *this);
+  int (__thiscall *FindItemIndex)(VectorClass_TPoint3D_int *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_TPoint3D_int *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_TPoint3D_int *this, int a1, int a2);
+};
+
+struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this);
+  int (__thiscall *FindItemIndex)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+};
+
+struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
+{
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
 };
 
 struct VectorClass_tConnInfoStruct_PTR_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_tConnInfoStruct_PTR *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_tConnInfoStruct_PTR *this);
+  int (__thiscall *FindItemIndex)(VectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_tConnInfoStruct_PTR *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_tConnInfoStruct_PTR *this, int a1);
 };
 
 struct VectorClass_tagCONNECTDATA_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *OperatorEqual;
-  void *SetCapacity;
-  void *Clear;
-  void *FindItemIndex;
-  void *GetItemIndex;
-  void *GetItem;
+  int (__thiscall *ScalarDeletingDestructor)(VectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *OperatorEqual)(VectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *SetCapacity)(VectorClass_tagCONNECTDATA *this, int a1, int a2);
+  int (__thiscall *Clear)(VectorClass_tagCONNECTDATA *this);
+  int (__thiscall *FindItemIndex)(VectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *GetItemIndex)(VectorClass_tagCONNECTDATA *this, int a1);
+  int (__thiscall *GetItem)(VectorClass_tagCONNECTDATA *this, int a1, int a2);
 };
 
 struct VeterancyNavCommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(VeterancyNavCommandClass *this, int a1);
+  int (__thiscall *GetName)(VeterancyNavCommandClass *this);
+  int (__thiscall *GetUIName)(VeterancyNavCommandClass *this);
+  int (__thiscall *GetUICategory)(VeterancyNavCommandClass *this);
+  int (__thiscall *GetUIDescription)(VeterancyNavCommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(VeterancyNavCommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(VeterancyNavCommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(VeterancyNavCommandClass *this, int a1);
+  int (__thiscall *Execute)(VeterancyNavCommandClass *this, int a1);
 };
 
 struct View1CommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(View1CommandClass *this, int a1);
+  int (__thiscall *GetName)(View1CommandClass *this);
+  int (__thiscall *GetUIName)(View1CommandClass *this);
+  int (__thiscall *GetUICategory)(View1CommandClass *this);
+  int (__thiscall *GetUIDescription)(View1CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(View1CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(View1CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(View1CommandClass *this, int a1);
+  int (__thiscall *Execute)(View1CommandClass *this, int a1);
 };
 
 struct View2CommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(View2CommandClass *this, int a1);
+  int (__thiscall *GetName)(View2CommandClass *this);
+  int (__thiscall *GetUIName)(View2CommandClass *this);
+  int (__thiscall *GetUICategory)(View2CommandClass *this);
+  int (__thiscall *GetUIDescription)(View2CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(View2CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(View2CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(View2CommandClass *this, int a1);
+  int (__thiscall *Execute)(View2CommandClass *this, int a1);
 };
 
 struct View3CommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(View3CommandClass *this, int a1);
+  int (__thiscall *GetName)(View3CommandClass *this);
+  int (__thiscall *GetUIName)(View3CommandClass *this);
+  int (__thiscall *GetUICategory)(View3CommandClass *this);
+  int (__thiscall *GetUIDescription)(View3CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(View3CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(View3CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(View3CommandClass *this, int a1);
+  int (__thiscall *Execute)(View3CommandClass *this, int a1);
 };
 
 struct View4CommandClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *GetName;
-  void *GetUIName;
-  void *GetUICategory;
-  void *GetUIDescription;
-  void *PreventCombinationOverride;
-  void *ExtraTriggerCondition;
-  void *CheckLoop;
-  void *Execute;
+  int (__thiscall *ScalarDeletingDestructor)(View4CommandClass *this, int a1);
+  int (__thiscall *GetName)(View4CommandClass *this);
+  int (__thiscall *GetUIName)(View4CommandClass *this);
+  int (__thiscall *GetUICategory)(View4CommandClass *this);
+  int (__thiscall *GetUIDescription)(View4CommandClass *this);
+  int (__thiscall *PreventCombinationOverride)(View4CommandClass *this, int a1);
+  int (__thiscall *ExtraTriggerCondition)(View4CommandClass *this, int a1);
+  int (__thiscall *CheckLoop)(View4CommandClass *this, int a1);
+  int (__thiscall *Execute)(View4CommandClass *this, int a1);
 };
 
 struct WDT_FactionSelectDialogControl_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *BindControlHwnd;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *vt_entry_10;
+  int (__thiscall *ScalarDeletingDestructor)(WDT_FactionSelectDialogControl *this, int a1);
+  int (__thiscall *BindControlHwnd)(WDT_FactionSelectDialogControl *this, int a1, int a2);
+  int (__thiscall *vt_entry_08)(WDT_FactionSelectDialogControl *this);
+  int (__thiscall *vt_entry_0C)(WDT_FactionSelectDialogControl *this);
+  int (__thiscall *vt_entry_10)(WDT_FactionSelectDialogControl *this);
 };
 
-struct WDT_Selection_vtbl
+struct WDT_Selection_vtbl : MSEngine_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *vt_entry_04;
-  void *vt_entry_08;
 };
 
-struct WDT_Territory_vtbl
+struct WDT_Territory_vtbl : ReferenceCounted_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *AlwaysZero_2;
-  void *Release;
 };
 
 struct WebBrowser_vtbl
 {
-  void *QueryInterface;
-  void *AddRef;
-  void *Release;
-  void *vt_entry_0C;
-  void *vt_entry_10;
-  void *vt_entry_14;
-  void *vt_entry_18;
-  void *vt_entry_1C;
-  void *vt_entry_20;
-  void *vt_entry_24;
-  void *vt_entry_28;
-  void *vt_entry_2C;
-  void *vt_entry_30;
-  void *vt_entry_34;
-  void *Buddy_ShowBadWebPage;
-  void *Buddy_LogErrorMsg;
-  void *Buddy_WOL_RegisterLogin;
-  void *Buddy_DestructWOLBrowser;
+  int (__thiscall *QueryInterface)(WebBrowser *this, int a1, int a2, int a3);
+  int (__thiscall *AddRef)(WebBrowser *this, int a1);
+  int (__thiscall *Release)(WebBrowser *this, int a1);
+  int (__thiscall *vt_entry_0C)(WebBrowser *this, int a1);
+  int (__thiscall *vt_entry_10)(WebBrowser *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_14)(WebBrowser *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_18)(WebBrowser *this, int a1);
+  int (__thiscall *vt_entry_1C)(WebBrowser *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_20)(WebBrowser *this, int a1);
+  int (__thiscall *vt_entry_24)(WebBrowser *this, int a1, int a2);
+  int (__thiscall *vt_entry_28)(WebBrowser *this, int a1, int a2);
+  int (__thiscall *vt_entry_2C)(WebBrowser *this, int a1, int a2);
+  int (__thiscall *vt_entry_30)(WebBrowser *this, int a1);
+  int (__thiscall *vt_entry_34)(WebBrowser *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_38)(WebBrowser *this, int a1);
+  int (__thiscall *vt_entry_3C)(WebBrowser *this, int a1, int a2);
+  int (__thiscall *vt_entry_40)(WebBrowser *this, int a1, int a2, int a3);
+  int (__thiscall *vt_entry_44)(WebBrowser *this, int a1);
 };
 
 struct WinModemClass_vtbl
 {
-  void *ScalarDeletingDestructor;
-  void *Buddy_OpenSerialPort;
-  void *vt_entry_08;
-  void *Buddy_GetModemStatus;
-  void *Buddy_SetSerialDTR;
-  void *Buddy_DialModem;
-  void *Buddy_CreateModemDialString;
-  void *Buddy_WriteComPort;
-  void *vt_entry_20;
-  void *vt_entry_24;
-};
-
-struct WonlineStringDialogControl_vtbl
-{
-  void *ScalarDeletingDestructor;
-  void *BindControlHwnd;
-  void *vt_entry_08;
-  void *vt_entry_0C;
-  void *Buddy_WOLMatchTimeout;
+  int (__thiscall *ScalarDeletingDestructor)(WinModemClass *this, int a1);
+  int (__thiscall *vt_entry_04)(WinModemClass *this, int a1, int a2, int a3, int a4, int a5);
+  int (__thiscall *vt_entry_08)(WinModemClass *this, int a1);
+  int (__thiscall *vt_entry_0C)(WinModemClass *this);
+  int (__thiscall *vt_entry_10)(WinModemClass *this, int a1);
+  int (__thiscall *vt_entry_14)(WinModemClass *this, int a1, int a2, int a3, int a4);
+  int (__thiscall *vt_entry_18)(WinModemClass *this, int a1);
+  int (__thiscall *vt_entry_1C)(WinModemClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+  int (__thiscall *vt_entry_20)(WinModemClass *this, int a1);
+  int (__thiscall *vt_entry_24)(WinModemClass *this, int a1);
 };
