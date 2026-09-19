@@ -899,8 +899,11 @@ struct IGameMap;
 struct IGameMap_vtbl;
 struct IHouse;
 struct IHouse_vtbl; // 0x7EA834
+struct ILinkStream;
+struct ILinkStream_vtbl; // 0x7E5D94
 struct ILocomotion;
-struct ILocomotion_vtbl; // XXX Adjacent to LocoVTable
+// XXX Adjacent to LocoVTable
+struct ILocomotion_vtbl; // 0x7E7EB0 / 0x7E8278 / 0x7E89F4 / 0x7EACFC / 0x7EADF4 / 0x7ECD68 / 0x7EDB6C / 0x7F0B1C / 0x7F2D8C / 0x7F5000 / 0x7F5A24 / 0x7F69F8
 struct In_addr;
 struct In_addr_unnamed_type_un_u_b;
 struct In_addr_unnamed_type_un_u_w;
@@ -955,7 +958,8 @@ struct IPersist_vtbl;
 struct IPersistStream;
 struct IPersistStream_vtbl;
 struct IPiggyback;
-struct IPiggyback_vtbl; // XXX Adjacent to LocoVTable
+// XXX Adjacent to LocoVTable
+struct IPiggyback_vtbl; // 0x7E7E8C / 0x7E8254 / 0x7ECD44 / 0x7F2D68 / 0x7F4FDC / 0x7F69D4
 struct IPublicHouse;
 struct IPublicHouse_vtbl; // 0x7EA80C
 struct IPXAddressClass;
@@ -6373,6 +6377,14 @@ struct PassengersClass
 {
   int NumPassengers;
   FootClass *FirstPassenger;
+};
+
+struct ILinkStream : IUnknown {};
+
+struct ILinkStream_vtbl : IUnknown_vtbl
+{
+  HRESULT (__stdcall *Link_Stream)(ILinkStream *this, IUnknown *stream);
+  HRESULT (__stdcall *Unlink_Stream)(ILinkStream *this, IUnknown **stream);
 };
 
 struct ILocomotion : IUnknown {};
