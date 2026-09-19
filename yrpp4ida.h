@@ -13,1697 +13,256 @@ typedef int LPARAM;
 typedef unsigned long COLORREF;
 typedef int (__stdcall *WNDPROC)(void *hWnd, unsigned int Msg, unsigned int wParam, int lParam);
 
-struct LimitedRegister;
-struct ExtendedRegister;
-struct StackRegister;
-struct Registers;
 struct _GUID;
-struct IUnknown;
-struct IUnknown_vtbl;
-struct TClassFactory;
-struct TClassFactory_vtbl;
-struct IPersist;
-struct IPersist_vtbl;
-struct ISequentialStream;
-struct ISequentialStream_vtbl;
-struct Large_Int_unnamed_type_s;
-struct Large_Int_unnamed_type_u;
-struct U_Large_Int_unnamed_type_s;
-struct U_Large_Int_unnamed_type_u;
-struct Tag_FILETIME;
-struct TagSTATSTG;
-struct Tag_WIN32_FIND_DATAA;
-struct IStream;
-struct IStream_vtbl;
-struct IPersistStream;
-struct IPersistStream_vtbl;
-struct IRTTITypeInfo;
-struct IRTTITypeInfo_vtbl; // XXX Adjacent to AbsVTable
-struct INoticeSink;
-struct INoticeSink_vtbl; // XXX Adjacent to AbsVTable
-struct INoticeSource;
-struct INoticeSource_vtbl; // XXX Adjacent to AbsVTable
-struct CRCEngine;
-struct Vector2D_short;
-struct Vector2D_int;
-struct Vector3D_int;
-struct Vector3D_float;
-struct Vector3D_double;
-struct Vector4D_float;
-struct GenericNode;
-struct GenericNode_vtbl; // 0x7E1B0C
-struct Node_TL_INIClass_INISection_PTR_TR_;
-struct Node_TL_INIClass_INISection_PTR_TR__vtbl; // 0x7EB74C
-struct INIClass_INISection;
-struct INIClass_INISection_vtbl; // 0x7EB73C
-struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement;
-struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_;
-struct GenericList;
-struct GenericList_vtbl; // 0x7E1B04
-struct List_TL_INIClass_INISection_PTR_TR_;
-struct List_TL_INIClass_INISection_PTR_TR__vtbl; // 0x7E1AFC
-struct List_TL_INIClass_INIEntry_PTR_TR_;
-struct List_TL_INIClass_INIEntry_PTR_TR__vtbl; // 0x7EB744
-struct Node_TL_INIClass_INIEntry_PTR_TR_;
-struct Node_TL_INIClass_INIEntry_PTR_TR__vtbl;
-struct INIClass_INIEntry;
-struct INIClass_INIEntry_vtbl; // 0x7EB734
-struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement;
-struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_;
-struct INIClass_INIComment;
-struct INIClass;
-struct INIClass_vtbl; // 0x7EA5F4
-struct CCINIClass;
-struct CCINIClass_vtbl; // 0x7E1AF4
-struct FrameTimer;
-struct TimerStruct_FrameTimer;
-struct SystemTimer;
-struct TimerStruct_SystemTimer;
-struct HouseClass_StartingTechnoStruct;
-struct BaseNodeClass;
-struct BaseClass;
-struct BaseClass_vtbl; // 0x7E3880
-struct IAIHouse;
-struct IAIHouse_vtbl;
-struct WaypointClass;
-struct StorageClass;
-struct UnitTrackerClass;
-struct ZoneInfoStruct;
-struct CounterClass;
-struct CounterClass_vtbl; // 0x7E5C54
-struct AngerStruct;
-struct ScoutStruct;
-struct Color16Struct;
-struct DropshipStruct;
-struct TagCONNECTDATA;
-struct IEnumConnections;
-struct IEnumConnections_vtbl;
-struct ISwizzle;
-struct ISwizzle_vtbl;
-struct IApplication;
-struct IApplication_vtbl;
-struct IHouse;
-struct IHouse_vtbl;
-struct IPublicHouse;
-struct IPublicHouse_vtbl;
-struct IEnumConnectionPoints;
-struct IEnumConnectionPoints_vtbl;
-struct IConnectionPointContainer;
-struct IConnectionPointContainer_vtbl;
-struct IConnectionPoint;
-struct IConnectionPoint_vtbl;
-struct FixedString_TL_25_A_char_TR_;
-struct IndexBitfield_TL_HouseClass_PTR_TR_;
-struct ColorStruct;
-struct VocClassHeader;
-struct VolumeStruct;
-struct VocClass;
-struct AudioIDXEntry;
-struct AudioIDXData;
-struct AudioController;
-struct MemoryBuffer;
-struct LineTrailNode;
-struct LineTrail;
-struct SHPStruct;
-struct SHPFrame;
-struct SHPFile;
-struct RectangleStruct;
-struct RGBClass;
-struct TintStruct;
-struct Matrix3D;
-struct VoxelSectionHeader;
-struct VoxelSectionTailer;
-struct VoxLib;
-struct MotLib;
-struct VoxelStruct;
-struct VoxelCacheStruct;
-struct MainVoxelIndexKey;
-struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct TurretWeaponVoxelIndexKey;
-struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct ShadowVoxelIndexKey;
-struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct TurretBarrelVoxelIndexKey;
-struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct StageClass;
-struct Quaternion;
-struct BounceClass;
-struct RandomStruct;
-struct ScriptActionNode;
-struct TaskForceEntryStruct;
-struct ControlNode;
-struct SpawnManagerClass_SpawnControl;
-struct SlaveManagerClass_SlaveControl;
-struct AITriggerConditionComparator;
-struct PriorityQueueClassNode;
-struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_;
-struct TiberiumLogic;
-struct BulletData;
-struct BytePalette;
-struct ColorScheme;
-struct FlashData;
-struct PassengersClass;
-struct VeterancyStruct;
-struct TransitionTimer;
-struct DirStruct;
-struct FacingClass;
-struct TurretControl;
-struct RecoilData;
-struct WeaponStruct;
 struct AbilitiesStruct;
-struct IGameMap;
-struct IGameMap_vtbl;
-struct BuildType;
-struct StripClass;
-struct TabDataClass;
-struct SubzoneConnectionStruct;
-struct SubzoneTrackingStruct;
-struct LTRBStruct;
-struct Crate;
-struct ZoneConnectionClass;
-struct CellLevelPassabilityStruct;
-struct LevelAndPassabilityStruct2;
-struct RateTimer;
-struct BuildingAnimFrameStruct;
-struct BuildingAnimStruct;
-struct ReservedVoxelIndexKey;
-struct ILocomotion;
-struct ILocomotion_vtbl; // XXX Adjacent to LocoVTable
-struct LocomotionID;
-struct IFlyControl;
-struct IFlyControl_vtbl;
-struct SubSequenceStruct;
-struct SequenceStruct;
-struct PlanningMemberClass;
-struct PlanningBranchClass;
-struct PlanningNodeClass;
-struct PlanningTokenClass;
-struct RadBeam;
-struct EBolt;
-struct LaserDrawClass;
-struct HWND__;
-struct MPTeam;
-struct MPTeam_vtbl; // 0x7EEEDC
-struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_;
-struct Wstring_base_TL_char_A_CharTrait_TR_;
-struct AISlotsStruct;
-struct GameModeOptionsClass;
-struct SessionOptionsClass;
-struct IPXAddressClass;
-struct IPXManagerClass;
-struct IPXManagerClass_vtbl;
-struct IPXConnClass;
-struct IPXConnClass_vtbl;
-struct IPXGlobalConnClass;
-struct IPXGlobalConnClass_vtbl;
-struct ConnectionClass;
-struct ConnectionClass_vtbl;
-struct CommBufferClass;
-struct CommBufferClass_vtbl;
-struct ConnManClass;
-struct ConnManClass_vtbl;
-struct WinsockBufferType;
-struct WinsockInterfaceClass;
-struct WinsockInterfaceClass_vtbl;
-struct IPXInterfaceClass;
-struct IPXInterfaceClass_vtbl;
-struct UDPInterfaceClass;
-struct UDPInterfaceClass_vtbl;
-struct MultiMission;
-struct In_addr_unnamed_type_un_u_b;
-struct In_addr_unnamed_type_un_u_w;
-struct In_addr;
-struct sockaddr_in;
-struct NodeNameType;
-struct IonBlastClass;
-struct RadarEventClass;
-struct Theater;
-struct VoxClass;
-struct RocketStruct;
-struct DifficultyStruct;
-struct Randomizer;
-struct Variable;
-struct LightingStruct;
-struct RulesClass;
-struct ScenarioClass;
-struct SwizzlePointerClass;
-struct SwizzleManagerClass;
-struct SwizzleManagerClass_vtbl; // 0x7F4108
+struct AbstractClass; // Abstract Tree Base
+struct AbstractClass_vtbl; // 0x7E1F50
+struct AbstractTypeClass; // : AbstractClass
+struct AbstractTypeClass_vtbl; // 0x7E2000
 struct ABuffer;
-struct ZBuffer;
-struct SUR_D_D_PIXEL_FORMAT_unnamed_tag_u_type_MultiSampleCaps;
-struct SUR_D_D_PIXEL_FORMAT;
-struct SUR_D_D_SCAPS2;
-struct SUR_D_D_COLOR_KEY;
-struct SUR_D_D_SURFACE_DESC2;
-struct IPiggyback;
-struct IPiggyback_vtbl; // XXX Adjacent to LocoVTable
-struct FixedString_32_A_char;
-struct FixedString_128_A_wchar_t;
-struct FixedString_64_A_wchar_t;
-struct StringClass;
-struct WideStringClass;
-struct WideWstring;
-struct FileEntryClass;
-struct LoadOptionsClass;
-struct LoadOptionsClass_vtbl; // 0x7ED2E4
-struct VeinholeLogic;
-struct TargetClass;
-struct TacticalSelectableStruct;
-struct EventClass_EMPTY;
-struct EventClass_POWERON;
-struct EventClass_POWEROFF;
-struct EventClass_ALLY;
-struct EventClass_MEGAMISSION;
-struct EventClass_MEGAMISSION_F;
-struct EventClass_IDLE;
-struct EventClass_SCATTER;
-struct EventClass_DESTRUCT;
-struct EventClass_DEPLOY;
-struct EventClass_DETONATE;
-struct EventClass_PLACE;
-struct EventClass_OPTIONS;
-struct EventClass_GAMESPEED;
-struct EventClass_PRODUCE;
-struct EventClass_SUSPEND;
-struct EventClass_ABANDON;
-struct EventClass_PRIMARY;
-struct EventClass_SPECIAL_PLACE;
-struct EventClass_EXIT;
-struct EventClass_ANIMATION;
-struct EventClass_REPAIR;
-struct EventClass_SELL;
-struct EventClass_SELLCELL;
-struct EventClass_SPECIAL;
-struct EventClass_FRAMESYNC;
-struct EventClass_MESSAGE;
-struct EventClass_RESPONSE_TIME;
-struct EventClass_FRAMEINFO;
-struct EventClass_SAVEGAME;
-struct EventClass_ARCHIVE;
-struct EventClass_ADDPLAYER;
-struct EventClass_TIMING;
-struct EventClass_PROCESS_TIME;
-struct EventClass_PAGEUSER;
-struct EventClass_REMOVEPLAYER;
-struct EventClass_LATENCYFUDGE;
-struct EventClass_MEGAFRAMEINFO;
-struct EventClass_PACKETTIMING;
-struct EventClass_ABOUTTOEXIT;
-struct EventClass_FALLBACKHOST;
-struct EventClass_ADDRESSCHANGE;
-struct EventClass_PLANCONNECT;
-struct EventClass_PLANCOMMIT;
-struct EventClass_PLANNODEDELETE;
-struct EventClass_ALLCHEER;
-struct EventClass_ABANDON_ALL;
-struct EventClass;
-struct EventList_OutList;
-struct EventList_DoList;
-struct EventList_MegaMissionList;
+struct AddTeamCommandClass;
+struct AddTeamCommandClass_vtbl; // 0x007EBE8C
+struct AircraftClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
+struct AircraftClass_vtbl; // 0x7E22A4
 struct AircraftTrackerClass;
-struct ToolTip;
-struct IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement;
-struct IndexClass_TL_int_A_ToolTip_PTR_TR_;
-struct ToolTipManagerData;
-struct ToolTipManager;
-struct ToolTipManager_vtbl; // 0x7F57AC
-struct CCToolTip;
-struct CCToolTip_vtbl; // 0x7F74C4
-struct AudioStream;
-struct ThemeClass;
-struct ThemeControl;
-struct KamikazeControl;
-struct Kamikaze;
-struct SpotLightClass;
-struct DirtyAreaStruct;
-struct BombListClass;
-struct WWMouseClass;
-struct WWMouseClass_vtbl; // 0x7F7B2C
-struct IndexClass_TL_int_A_int_TR_NodeElement;
-struct IndexClass_TL_int_A_int_TR_;
-struct InputManagerClass; // 0x87F770
-struct AlphaLightingRemapClass;
-struct GameOptionsClass;
-struct BasePlanningCell;
-struct BasePlanningCellContainer;
-struct SHPReference;
-struct MessageListClass;
-struct BitFont;
-struct BitFont_vtbl;
-struct BitFont_InternalData;
-struct AStarClass_PathNode;
-struct AStarClass_PathNodeBuffer;
-struct AStarClass_PathQueueNode;
-struct AStarClass_PathQueueBuffer;
-struct AStarClass_PathQueueArray;
-struct PriorityQueueClass_PathQueueNode;
-struct AStarClass_HierarchicalNode;
-struct AStarClass_HierarchicalBuffer;
-struct AStarClass_HierarchicalArray;
-struct PriorityQueueClass_HierarchicalNode;
-struct AStarClass_PassabilityData;
-struct AStarClass;
-struct AStarClass_PathFinderData;
-struct FoggedObjectDraw;
-struct SessionClass_TL_unnamed_type_MPStats_TR_;
-struct SessionClass;
-struct PCX;
-struct DamageGroup;
-struct FoundationStruct;
-struct FoundationCellsStruct;
-struct ChangeLinkHouseStruct;
-struct GroundType;
-struct TurnTrackType;
-struct TrackType;
-struct RawTrackType;
-struct VoxelBoundaryData;
-struct VoxelBoundary;
-struct VoxelSection;
-struct MouseThreadClass;
-struct FoggedObjectRenderVector;
-struct FoggedObjectRenderStruct;
-struct ZoneConnectionTable;
-struct ZoneConnectionTables;
-struct ZoneConnectionTableManager;
-struct SubzoneConnectionTable;
-struct HierarchyConnectionTables;
-struct HierarchyConnectionTableManager;
-struct LoadProgressManager;
-struct LoadProgressManager_vtbl;
-struct ProgressScreenClass;
-struct EvadeClass;
-struct GetCDClass;
-struct VersionClass;
-struct VersionClass_vtbl;
-struct WWMessageBox;
-struct PointerExpiredNotification;
-struct OwnerDrawTooltipBlitState;
-struct BitText;
-struct BitText_vtbl;
-struct CSFLabel;
-struct CSFString;
-struct DirectDrawWrap;
-struct DirectDrawWrap_vtbl;
-struct RECT;
-struct OwnerDrawDialogElement;
-struct OwnerDrawLayoutSize;
-struct OwnerDrawHWNDVector;
-struct OwnerDrawWindowMessageKey;
-struct OwnerDrawTooltipRequest;
-struct WWUIIntArray;
-struct WWUIListBoxCell;
-struct WWUIListBoxColumn;
-struct WWUIListBoxColumnArray;
-struct WWUIListBoxTextEntry;
-struct WWUIComboBoxItem;
-struct WWMovieHandle;
-struct WWMovieHandle_vtbl;
-struct VectorBase;
-struct VectorBase_vtbl;
-struct VectorBase_ELE;
-struct VectorBase_ELE_vtbl;
-struct VectorBase_PTR;
-struct VectorBase_PTR_vtbl;
-struct VectorAddon;
-struct DynamicAddon;
-struct TypeListAddon;
-struct VectorBase_int;
-struct VectorBase_int_vtbl;
-struct VectorClass_int;
-struct VectorClass_int_vtbl; // 0x7E4DB8
-struct DynamicVectorClass_int;
-struct DynamicVectorClass_int_vtbl; // 0x7E4E78
-struct TypeList_int;
-struct TypeList_int_vtbl; // 0x7E4DD8
-struct VectorBase_char_PTR;
-struct VectorBase_char_PTR_vtbl;
-struct VectorClass_char_PTR;
-struct VectorClass_char_PTR_vtbl; // 0x7E5C24 / 0x7EE0D4
-struct DynamicVectorClass_char_PTR;
-struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5C04 / 0x7EE0B4
-struct VectorBase_char_CPTR;
-struct VectorBase_char_CPTR_vtbl;
-struct VectorClass_char_CPTR;
-struct VectorClass_char_CPTR_vtbl;
-struct DynamicVectorClass_char_CPTR;
-struct DynamicVectorClass_char_CPTR_vtbl;
-struct VectorBase_unsigned_char_PTR;
-struct VectorBase_unsigned_char_PTR_vtbl;
-struct VectorClass_unsigned_char_PTR;
-struct VectorClass_unsigned_char_PTR_vtbl; // 0x7F7B0C
-struct DynamicVectorClass_unsigned_char_PTR;
-struct DynamicVectorClass_unsigned_char_PTR_vtbl; // 0x7F7AEC
-struct VectorBase_unsigned_char;
-struct VectorBase_unsigned_char_vtbl;
-struct VectorClass_unsigned_char;
-struct VectorClass_unsigned_char_vtbl; // 0x7F65F4
-struct VectorBase_unsigned_int;
-struct VectorBase_unsigned_int_vtbl;
-struct VectorClass_unsigned_int;
-struct VectorClass_unsigned_int_vtbl; // 0x7E37EC
-struct DynamicVectorClass_unsigned_int;
-struct DynamicVectorClass_unsigned_int_vtbl; // 0x7E37CC
-struct VectorBase_unsigned_short;
-struct VectorBase_unsigned_short_vtbl;
-struct VectorClass_unsigned_short;
-struct VectorClass_unsigned_short_vtbl; // 0x7E3824
-struct DynamicVectorClass_unsigned_short;
-struct DynamicVectorClass_unsigned_short_vtbl; // 0x7E3844
-struct VectorBase_bool;
-struct VectorBase_bool_vtbl;
-struct VectorClass_bool;
-struct VectorClass_bool_vtbl; // 0x7EAA5C
-struct DynamicVectorClass_bool;
-struct DynamicVectorClass_bool_vtbl; // 0x7EAA7C
-struct VectorBase_double;
-struct VectorBase_double_vtbl;
-struct VectorClass_double;
-struct VectorClass_double_vtbl; // 0x7EDA4C
-struct DynamicVectorClass_double;
-struct DynamicVectorClass_double_vtbl; // 0x7EDA6C
-struct VectorBase_unsigned_long;
-struct VectorBase_unsigned_long_vtbl;
-struct VectorClass_unsigned_long;
-struct VectorClass_unsigned_long_vtbl; // 0x7F3748
-struct DynamicVectorClass_unsigned_long; // 0xB0BC88
-struct DynamicVectorClass_unsigned_long_vtbl; // 0x7F3728
-struct VectorBase_unsigned_short_PTR;
-struct VectorBase_unsigned_short_PTR_vtbl;
-struct VectorClass_unsigned_short_PTR;
-struct VectorClass_unsigned_short_PTR_vtbl; // 0x7ECD0C / 0x7ED1FC
-struct DynamicVectorClass_unsigned_short_PTR;
-struct DynamicVectorClass_unsigned_short_PTR_vtbl; // 0x7ECCEC / 0x7ED1DC
-struct VectorBase_unsigned_short_CPTR;
-struct VectorBase_unsigned_short_CPTR_vtbl;
-struct VectorClass_unsigned_short_CPTR;
-struct VectorClass_unsigned_short_CPTR_vtbl;
-struct DynamicVectorClass_unsigned_short_CPTR;
-struct DynamicVectorClass_unsigned_short_CPTR_vtbl;
-struct VectorBase_HWND___PTR;
-struct VectorBase_HWND___PTR_vtbl;
-struct VectorClass_HWND___PTR;
-struct VectorClass_HWND___PTR_vtbl; // 0x7EECAC
-struct DynamicVectorClass_HWND___PTR;
-struct DynamicVectorClass_HWND___PTR_vtbl; // 0x7EEC8C
-struct VectorBase_DirtyAreaStruct_PTR;
-struct VectorBase_DirtyAreaStruct_PTR_vtbl;
-struct VectorClass_DirtyAreaStruct_PTR;
-struct VectorClass_DirtyAreaStruct_PTR_vtbl; // 0x7F42BC
-struct DynamicVectorClass_DirtyAreaStruct_PTR; // 0xB0CE78
-struct DynamicVectorClass_DirtyAreaStruct_PTR_vtbl; // 0x7F429C
-struct VectorBase_CCINIClass_PTR;
-struct VectorBase_CCINIClass_PTR_vtbl;
-struct VectorClass_CCINIClass_PTR;
-struct VectorClass_CCINIClass_PTR_vtbl; // 0x7EB80C
-struct DynamicVectorClass_CCINIClass_PTR;
-struct DynamicVectorClass_CCINIClass_PTR_vtbl; // 0x7EB82C
-struct VectorBase_PassabilityType;
-struct VectorBase_PassabilityType_vtbl;
-struct VectorClass_PassabilityType;
-struct VectorClass_PassabilityType_vtbl; // 0x7ED560
-struct DynamicVectorClass_PassabilityType;
-struct DynamicVectorClass_PassabilityType_vtbl; // 0x7ED580
-struct VectorBase_IConnectionPoint_PTR;
-struct VectorBase_IConnectionPoint_PTR_vtbl;
-struct VectorClass_IConnectionPoint_PTR;
-struct VectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D08
-struct DynamicVectorClass_IConnectionPoint_PTR;
-struct DynamicVectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D48
-struct VectorBase_MPTeam_PTR;
-struct VectorBase_MPTeam_PTR_vtbl;
-struct VectorClass_MPTeam_PTR;
-struct VectorClass_MPTeam_PTR_vtbl; // 0x7EEE54
-struct DynamicVectorClass_MPTeam_PTR;
-struct DynamicVectorClass_MPTeam_PTR_vtbl; // 0x7EEE34
-struct VectorBase_MultiMission_PTR;
-struct VectorBase_MultiMission_PTR_vtbl;
-struct VectorClass_MultiMission_PTR;
-struct VectorClass_MultiMission_PTR_vtbl; // 0x7EEF50 / 0x7F1214
-struct DynamicVectorClass_MultiMission_PTR;
-struct DynamicVectorClass_MultiMission_PTR_vtbl; // 0x7EEF70 / 0x7F11F4
-struct VectorBase_MultiMission_CPTR;
-struct VectorBase_MultiMission_CPTR_vtbl;
-struct VectorClass_MultiMission_CPTR;
-struct VectorClass_MultiMission_CPTR_vtbl;
-struct DynamicVectorClass_MultiMission_CPTR;
-struct DynamicVectorClass_MultiMission_CPTR_vtbl;
-struct VectorBase_NodeNameType_PTR;
-struct VectorBase_NodeNameType_PTR_vtbl;
-struct VectorClass_NodeNameType_PTR;
-struct VectorClass_NodeNameType_PTR_vtbl; // 0x7EE390
-struct DynamicVectorClass_NodeNameType_PTR; // 0xA8DA74
-struct DynamicVectorClass_NodeNameType_PTR_vtbl; // 0x7EE370
-struct VectorBase_SmudgeTypeClass_PTR;
-struct VectorBase_SmudgeTypeClass_PTR_vtbl;
-struct VectorClass_SmudgeTypeClass_PTR;
-struct VectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0D7C / 0x7EA1C4
-struct DynamicVectorClass_SmudgeTypeClass_PTR; // 0xA8EC18
-struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0DEC / 0x7EA1A4
-struct VectorBase_SmudgeTypeClass_CPTR;
-struct VectorBase_SmudgeTypeClass_CPTR_vtbl;
-struct VectorClass_SmudgeTypeClass_CPTR;
-struct VectorClass_SmudgeTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_SmudgeTypeClass_CPTR;
-struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl;
-struct TypeList_SmudgeTypeClass_PTR;
-struct TypeList_SmudgeTypeClass_PTR_vtbl; // 0x7F0D1C
-struct VectorBase_CommandClass_PTR;
-struct VectorBase_CommandClass_PTR_vtbl;
-struct VectorClass_CommandClass_PTR;
-struct VectorClass_CommandClass_PTR_vtbl; // 0x7E184C
-struct DynamicVectorClass_CommandClass_PTR; // 0x87F658
-struct DynamicVectorClass_CommandClass_PTR_vtbl; // 0x7E182C
-struct VectorBase_CommandClass_CPTR;
-struct VectorBase_CommandClass_CPTR_vtbl;
-struct VectorClass_CommandClass_CPTR;
-struct VectorClass_CommandClass_CPTR_vtbl;
-struct DynamicVectorClass_CommandClass_CPTR;
-struct DynamicVectorClass_CommandClass_CPTR_vtbl;
-struct VectorBase_AngerStruct;
-struct VectorBase_AngerStruct_vtbl;
-struct VectorClass_AngerStruct;
-struct VectorClass_AngerStruct_vtbl; // 0x7EA984
-struct DynamicVectorClass_AngerStruct;
-struct DynamicVectorClass_AngerStruct_vtbl; // 0x7EA924
-struct VectorBase_ScoutStruct;
-struct VectorBase_ScoutStruct_vtbl;
-struct VectorClass_ScoutStruct;
-struct VectorClass_ScoutStruct_vtbl; // 0x7EA9A4
-struct DynamicVectorClass_ScoutStruct;
-struct DynamicVectorClass_ScoutStruct_vtbl; // 0x7EA904
-struct VectorBase_ColorScheme_PTR;
-struct VectorBase_ColorScheme_PTR_vtbl;
-struct VectorClass_ColorScheme_PTR;
-struct VectorClass_ColorScheme_PTR_vtbl; // 0x7EF7B0
-struct DynamicVectorClass_ColorScheme_PTR; // 0xB054D0
-struct DynamicVectorClass_ColorScheme_PTR_vtbl; // 0x7EF790
-struct VectorBase_Color16Struct_PTR;
-struct VectorBase_Color16Struct_PTR_vtbl;
-struct VectorClass_Color16Struct_PTR;
-struct VectorClass_Color16Struct_PTR_vtbl;
-struct DynamicVectorClass_Color16Struct_PTR;
-struct DynamicVectorClass_Color16Struct_PTR_vtbl;
-struct VectorBase_RGBClass_PTR;
-struct VectorBase_RGBClass_PTR_vtbl;
-struct VectorClass_RGBClass_PTR;
-struct VectorClass_RGBClass_PTR_vtbl; // 0x7E4E38
-struct DynamicVectorClass_RGBClass_PTR;
-struct DynamicVectorClass_RGBClass_PTR_vtbl; // 0x7F022C
-struct TypeList_RGBClass_PTR;
-struct TypeList_RGBClass_PTR_vtbl; // 0x7E4E58
-struct VectorBase_SubzoneConnectionStruct;
-struct VectorBase_SubzoneConnectionStruct_vtbl;
-struct VectorClass_SubzoneConnectionStruct;
-struct VectorClass_SubzoneConnectionStruct_vtbl; // 0x7E177C
-struct DynamicVectorClass_SubzoneConnectionStruct;
-struct DynamicVectorClass_SubzoneConnectionStruct_vtbl; // 0x7ED5A0
-struct VectorBase_SubzoneTrackingStruct;
-struct VectorBase_SubzoneTrackingStruct_vtbl;
-struct VectorClass_SubzoneTrackingStruct;
-struct VectorClass_SubzoneTrackingStruct_vtbl; // 0x7ED500
-struct DynamicVectorClass_SubzoneTrackingStruct;
-struct DynamicVectorClass_SubzoneTrackingStruct_vtbl; // 0x7ED4A0
-struct VectorBase_ZoneConnectionClass;
-struct VectorBase_ZoneConnectionClass_vtbl;
-struct VectorClass_ZoneConnectionClass;
-struct VectorClass_ZoneConnectionClass_vtbl; // 0x7ED4E0
-struct DynamicVectorClass_ZoneConnectionClass;
-struct DynamicVectorClass_ZoneConnectionClass_vtbl; // 0x7ED4C0
-struct VectorBase_FileEntryClass_PTR;
-struct VectorBase_FileEntryClass_PTR_vtbl;
-struct VectorClass_FileEntryClass_PTR;
-struct VectorClass_FileEntryClass_PTR_vtbl; // 0x7ED32C
-struct DynamicVectorClass_FileEntryClass_PTR;
-struct DynamicVectorClass_FileEntryClass_PTR_vtbl; // 0x7ED30C
-struct VectorBase_ToolTip_PTR;
-struct VectorBase_ToolTip_PTR_vtbl;
-struct VectorClass_ToolTip_PTR;
-struct VectorClass_ToolTip_PTR_vtbl; // 0x7F57E8
-struct DynamicVectorClass_ToolTip_PTR;
-struct DynamicVectorClass_ToolTip_PTR_vtbl; // 0x7F57C8
-struct VectorBase_ToolTip_CPTR;
-struct VectorBase_ToolTip_CPTR_vtbl;
-struct VectorClass_ToolTip_CPTR;
-struct VectorClass_ToolTip_CPTR_vtbl;
-struct DynamicVectorClass_ToolTip_CPTR;
-struct DynamicVectorClass_ToolTip_CPTR_vtbl;
-struct VectorBase_SwizzlePointerClass;
-struct VectorBase_SwizzlePointerClass_vtbl;
-struct VectorClass_SwizzlePointerClass;
-struct VectorClass_SwizzlePointerClass_vtbl; // 0x7F4154
-struct DynamicVectorClass_SwizzlePointerClass;
-struct DynamicVectorClass_SwizzlePointerClass_vtbl; // 0x7F4134
-struct VectorBase_PlanningMemberClass_PTR;
-struct VectorBase_PlanningMemberClass_PTR_vtbl;
-struct VectorClass_PlanningMemberClass_PTR;
-struct VectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFF04
-struct DynamicVectorClass_PlanningMemberClass_PTR;
-struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFEE4
-struct VectorBase_PlanningBranchClass_PTR;
-struct VectorBase_PlanningBranchClass_PTR_vtbl;
-struct VectorClass_PlanningBranchClass_PTR;
-struct VectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFF24
-struct DynamicVectorClass_PlanningBranchClass_PTR;
-struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFEC4
-struct VectorBase_PlanningNodeClass_PTR;
-struct VectorBase_PlanningNodeClass_PTR_vtbl;
-struct VectorClass_PlanningNodeClass_PTR;
-struct VectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE64
-struct DynamicVectorClass_PlanningNodeClass_PTR; // 0xAC4B30 / 0xAC4C18 / 0xAC4C98
-struct DynamicVectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE44
-struct VectorBase_PlanningTokenClass_PTR;
-struct VectorBase_PlanningTokenClass_PTR_vtbl;
-struct VectorClass_PlanningTokenClass_PTR;
-struct VectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFEA4
-struct DynamicVectorClass_PlanningTokenClass_PTR; // 0xAC4C78
-struct DynamicVectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFE84
-struct VectorBase_WaypointClass;
-struct VectorBase_WaypointClass_vtbl;
-struct VectorClass_WaypointClass;
-struct VectorClass_WaypointClass_vtbl; // 0x7F6EF4
-struct DynamicVectorClass_WaypointClass;
-struct DynamicVectorClass_WaypointClass_vtbl; // 0x7F6ED4
-struct VectorBase_WaypointPathClass_PTR;
-struct VectorBase_WaypointPathClass_PTR_vtbl;
-struct VectorClass_WaypointPathClass_PTR;
-struct VectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E24
-struct DynamicVectorClass_WaypointPathClass_PTR; // 0xB72608
-struct DynamicVectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E04
-struct VectorBase_BaseNodeClass;
-struct VectorBase_BaseNodeClass_vtbl;
-struct VectorClass_BaseNodeClass;
-struct VectorClass_BaseNodeClass_vtbl; // 0x7E38F0
-struct DynamicVectorClass_BaseNodeClass;
-struct DynamicVectorClass_BaseNodeClass_vtbl; // 0x7E38B0
-struct VectorBase_TagClass_PTR;
-struct VectorBase_TagClass_PTR_vtbl;
-struct VectorClass_TagClass_PTR;
-struct VectorClass_TagClass_PTR_vtbl; // 0x7EA5C4
-struct DynamicVectorClass_TagClass_PTR; // 0x8B40C8 / 0x8B41A8 / 0xB0E720
-struct DynamicVectorClass_TagClass_PTR_vtbl; // 0x7EA5A4
-struct VectorBase_TagTypeClass_PTR;
-struct VectorBase_TagTypeClass_PTR_vtbl;
-struct VectorClass_TagTypeClass_PTR;
-struct VectorClass_TagTypeClass_PTR_vtbl; // 0x7F4578
-struct DynamicVectorClass_TagTypeClass_PTR; // 0xB0E780
-struct DynamicVectorClass_TagTypeClass_PTR_vtbl; // 0x7F4558
-struct VectorBase_ThemeClass_PTR;
-struct VectorBase_ThemeClass_PTR_vtbl;
-struct VectorClass_ThemeClass_PTR;
-struct VectorClass_ThemeClass_PTR_vtbl;
-struct DynamicVectorClass_ThemeClass_PTR;
-struct DynamicVectorClass_ThemeClass_PTR_vtbl;
-struct VectorBase_HouseClass_StartingTechnoStruct_PTR;
-struct VectorBase_HouseClass_StartingTechnoStruct_PTR_vtbl;
-struct VectorClass_HouseClass_StartingTechnoStruct_PTR;
-struct VectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA964
-struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR;
-struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA944
-struct VectorBase_CellStruct;
-struct VectorBase_CellStruct_vtbl;
-struct VectorClass_CellStruct;
-struct VectorClass_CellStruct_vtbl; // 0x7E38D0
-struct DynamicVectorClass_CellStruct;
-struct DynamicVectorClass_CellStruct_vtbl; // 0x7E3890
-struct VectorBase_CoordStruct;
-struct VectorBase_CoordStruct_vtbl;
-struct VectorClass_CoordStruct;
-struct VectorClass_CoordStruct_vtbl;
-struct VectorBase_Point2D;
-struct VectorBase_Point2D_vtbl;
-struct VectorClass_Point2D;
-struct VectorClass_Point2D_vtbl; // 0x7EEB74
-struct DynamicVectorClass_Point2D;
-struct DynamicVectorClass_Point2D_vtbl; // 0x7EEB54
-struct VectorBase_AbstractClass_PTR;
-struct VectorBase_AbstractClass_PTR_vtbl;
-struct VectorClass_AbstractClass_PTR;
-struct VectorClass_AbstractClass_PTR_vtbl; // 0x7E920C
-struct DynamicVectorClass_AbstractClass_PTR; // 0xB0F720 / 0x8A0390
-struct DynamicVectorClass_AbstractClass_PTR_vtbl; // 0x7E91EC
-struct VectorBase_AbstractTypeClass_PTR;
-struct VectorBase_AbstractTypeClass_PTR_vtbl;
-struct VectorClass_AbstractTypeClass_PTR;
-struct VectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA544
-struct DynamicVectorClass_AbstractTypeClass_PTR; // 0xA8E968
-struct DynamicVectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA524
-struct VectorBase_CellClass_PTR;
-struct VectorBase_CellClass_PTR_vtbl;
-struct VectorClass_CellClass_PTR;
-struct VectorClass_CellClass_PTR_vtbl; // 0x7ED480
-struct DynamicVectorClass_CellClass_PTR;
-struct DynamicVectorClass_CellClass_PTR_vtbl; // 0x7ED9BC
-struct VectorBase_ObjectClass_PTR;
-struct VectorBase_ObjectClass_PTR_vtbl;
-struct VectorClass_ObjectClass_PTR;
-struct VectorClass_ObjectClass_PTR_vtbl; // 0x7E192C
-struct DynamicVectorClass_ObjectClass_PTR; // 0x87F778 (LogicClass) / 0x8A0360 / 0xA8E360 / 0xA8ECB8 / 0xB0F698 / 0xAC1418
-struct DynamicVectorClass_ObjectClass_PTR_vtbl; // 0x7E4F64
-struct VectorBase_ObjectTypeClass_PTR;
-struct VectorBase_ObjectTypeClass_PTR_vtbl;
-struct VectorClass_ObjectTypeClass_PTR;
-struct VectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF28C
-struct DynamicVectorClass_ObjectTypeClass_PTR;
-struct DynamicVectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF26C
-struct VectorBase_TechnoClass_PTR;
-struct VectorBase_TechnoClass_PTR_vtbl;
-struct VectorClass_TechnoClass_PTR;
-struct VectorClass_TechnoClass_PTR_vtbl; // 0x7E180C
-struct DynamicVectorClass_TechnoClass_PTR; // 0xA8EC78 / 0xAC4C40
-struct DynamicVectorClass_TechnoClass_PTR_vtbl; // 0x7E17AC
-struct VectorBase_TechnoTypeClass_PTR;
-struct VectorBase_TechnoTypeClass_PTR_vtbl;
-struct VectorClass_TechnoTypeClass_PTR;
-struct VectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E4DF8 / 0x7E8954
-struct DynamicVectorClass_TechnoTypeClass_PTR; // 0xA8EB00
-struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E858C / 0x7E8934
-struct VectorBase_TechnoTypeClass_CPTR;
-struct VectorBase_TechnoTypeClass_CPTR_vtbl;
-struct VectorClass_TechnoTypeClass_CPTR;
-struct VectorClass_TechnoTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_TechnoTypeClass_CPTR;
-struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl;
-struct TypeList_TechnoTypeClass_PTR;
-struct TypeList_TechnoTypeClass_PTR_vtbl; // 0x7E4E18
-struct VectorBase_FootClass_PTR;
-struct VectorBase_FootClass_PTR_vtbl;
-struct VectorClass_FootClass_PTR;
-struct VectorClass_FootClass_PTR_vtbl; // 0x7E8C48
-struct DynamicVectorClass_FootClass_PTR; // 0x8B3DC0
-struct DynamicVectorClass_FootClass_PTR_vtbl; // 0x7E8C28
-struct VectorBase_InfantryClass_PTR;
-struct VectorBase_InfantryClass_PTR_vtbl;
-struct VectorClass_InfantryClass_PTR;
-struct VectorClass_InfantryClass_PTR_vtbl; // 0x7E43E8
-struct DynamicVectorClass_InfantryClass_PTR; // 0xA83DE8
-struct DynamicVectorClass_InfantryClass_PTR_vtbl; // 0x7E43C8
-struct VectorBase_InfantryTypeClass_PTR;
-struct VectorBase_InfantryTypeClass_PTR_vtbl;
-struct VectorClass_InfantryTypeClass_PTR;
-struct VectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC28 / 0x7EA344
-struct DynamicVectorClass_InfantryTypeClass_PTR; // 0xA8E348
-struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC88 / 0x7EA324
-struct VectorBase_InfantryTypeClass_CPTR;
-struct VectorBase_InfantryTypeClass_CPTR_vtbl;
-struct VectorClass_InfantryTypeClass_CPTR;
-struct VectorClass_InfantryTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_InfantryTypeClass_CPTR;
-struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl;
-struct TypeList_InfantryTypeClass_PTR;
-struct TypeList_InfantryTypeClass_PTR_vtbl; // 0x7EAC08
-struct VectorBase_UnitClass_PTR;
-struct VectorBase_UnitClass_PTR_vtbl;
-struct VectorClass_UnitClass_PTR;
-struct VectorClass_UnitClass_PTR_vtbl; // 0x7E9EC4
-struct DynamicVectorClass_UnitClass_PTR; // 0x8B4108
-struct DynamicVectorClass_UnitClass_PTR_vtbl; // 0x7E9EA4
-struct VectorBase_UnitTypeClass_PTR;
-struct VectorBase_UnitTypeClass_PTR_vtbl;
-struct VectorClass_UnitTypeClass_PTR;
-struct VectorClass_UnitTypeClass_PTR_vtbl; // 0x7EAC48 / 0x7EA2C4
-struct DynamicVectorClass_UnitTypeClass_PTR; // 0xA83CE0
-struct DynamicVectorClass_UnitTypeClass_PTR_vtbl; // 0x7EACA8 / 0x7EA2A4
-struct VectorBase_UnitTypeClass_CPTR;
-struct VectorBase_UnitTypeClass_CPTR_vtbl;
-struct VectorClass_UnitTypeClass_CPTR;
-struct VectorClass_UnitTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_UnitTypeClass_CPTR;
-struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl;
-struct TypeList_UnitTypeClass_PTR;
-struct TypeList_UnitTypeClass_PTR_vtbl; // 0x7EABE8
-struct VectorBase_AircraftClass_PTR;
-struct VectorBase_AircraftClass_PTR_vtbl;
-struct VectorClass_AircraftClass_PTR;
-struct VectorClass_AircraftClass_PTR_vtbl; // 0x7E9E84
-struct DynamicVectorClass_AircraftClass_PTR; // 0xA8E390
-struct DynamicVectorClass_AircraftClass_PTR_vtbl; // 0x7E9E64
-struct VectorBase_AircraftTypeClass_PTR;
-struct VectorBase_AircraftTypeClass_PTR_vtbl;
-struct VectorClass_AircraftTypeClass_PTR;
-struct VectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EAC68 / 0x7EA284
-struct DynamicVectorClass_AircraftTypeClass_PTR; // 0xA8B218
-struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EACC8 / 0x7EA264
-struct VectorBase_AircraftTypeClass_CPTR;
-struct VectorBase_AircraftTypeClass_CPTR_vtbl;
-struct VectorClass_AircraftTypeClass_CPTR;
-struct VectorClass_AircraftTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_AircraftTypeClass_CPTR;
-struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl;
-struct TypeList_AircraftTypeClass_PTR;
-struct TypeList_AircraftTypeClass_PTR_vtbl; // 0x7EABC8
-struct VectorBase_BuildingClass_PTR;
-struct VectorBase_BuildingClass_PTR_vtbl;
-struct VectorClass_BuildingClass_PTR;
-struct VectorClass_BuildingClass_PTR_vtbl; // 0x7E9E44
-struct DynamicVectorClass_BuildingClass_PTR; // 0x8B41E0 / 0xA8EB40
-struct DynamicVectorClass_BuildingClass_PTR_vtbl; // 0x7E9E24
-struct VectorBase_BuildingTypeClass_PTR;
-struct VectorBase_BuildingTypeClass_PTR_vtbl;
-struct VectorClass_BuildingTypeClass_PTR;
-struct VectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA244 / 0x7EAA08
-struct DynamicVectorClass_BuildingTypeClass_PTR; // 0xA83C68
-struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA224 / 0x7EAA28
-struct VectorBase_BuildingTypeClass_CPTR;
-struct VectorBase_BuildingTypeClass_CPTR_vtbl;
-struct VectorClass_BuildingTypeClass_CPTR;
-struct VectorClass_BuildingTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_BuildingTypeClass_CPTR;
-struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl;
-struct TypeList_BuildingTypeClass_PTR;
-struct TypeList_BuildingTypeClass_PTR_vtbl; // 0x7ED90C
-struct VectorBase_SuperClass_PTR;
-struct VectorBase_SuperClass_PTR_vtbl;
-struct VectorClass_SuperClass_PTR;
-struct VectorClass_SuperClass_PTR_vtbl; // 0x7EA504
-struct DynamicVectorClass_SuperClass_PTR; // 0xA83CB8 / 0xA83D50
-struct DynamicVectorClass_SuperClass_PTR_vtbl; // 0x7EA4E4
-struct VectorBase_SuperWeaponTypeClass_PTR;
-struct VectorBase_SuperWeaponTypeClass_PTR_vtbl;
-struct VectorClass_SuperWeaponTypeClass_PTR;
-struct VectorClass_SuperWeaponTypeClass_PTR_vtbl; // 0x7EA4C4
-struct DynamicVectorClass_SuperWeaponTypeClass_PTR; // 0xA8E330
-struct DynamicVectorClass_SuperWeaponTypeClass_PTR_vtbl; // 0x7EA4A4
-struct VectorBase_WeaponTypeClass_PTR;
-struct VectorBase_WeaponTypeClass_PTR_vtbl;
-struct VectorClass_WeaponTypeClass_PTR;
-struct VectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1EF4
-struct DynamicVectorClass_WeaponTypeClass_PTR; // 0x887568
-struct DynamicVectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1ED4
-struct VectorBase_WarheadTypeClass_PTR;
-struct VectorBase_WarheadTypeClass_PTR_vtbl;
-struct VectorClass_WarheadTypeClass_PTR;
-struct VectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1EA4
-struct DynamicVectorClass_WarheadTypeClass_PTR; // 0x8874C0
-struct DynamicVectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1E84
-struct VectorBase_BulletClass_PTR;
-struct VectorBase_BulletClass_PTR_vtbl;
-struct VectorClass_BulletClass_PTR;
-struct VectorClass_BulletClass_PTR_vtbl; // 0x7E4698
-struct DynamicVectorClass_BulletClass_PTR; // 0x89DE18 / 0xA8ED40
-struct DynamicVectorClass_BulletClass_PTR_vtbl; // 0x7E4678
-struct VectorBase_BulletTypeClass_PTR;
-struct VectorBase_BulletTypeClass_PTR_vtbl;
-struct VectorClass_BulletTypeClass_PTR;
-struct VectorClass_BulletTypeClass_PTR_vtbl; // 0x7EA384
-struct DynamicVectorClass_BulletTypeClass_PTR; // 0xA83C80
-struct DynamicVectorClass_BulletTypeClass_PTR_vtbl; // 0x7EA364
-struct VectorBase_FactoryClass_PTR;
-struct VectorBase_FactoryClass_PTR_vtbl;
-struct VectorClass_FactoryClass_PTR;
-struct VectorClass_FactoryClass_PTR_vtbl; // 0x7E9FC4
-struct DynamicVectorClass_FactoryClass_PTR; // 0xA83E30
-struct DynamicVectorClass_FactoryClass_PTR_vtbl; // 0x7E9FA4
-struct VectorBase_BuildingLightClass_PTR;
-struct VectorBase_BuildingLightClass_PTR_vtbl;
-struct VectorClass_BuildingLightClass_PTR;
-struct VectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C44
-struct DynamicVectorClass_BuildingLightClass_PTR; // 0x8B4190
-struct DynamicVectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C24
-struct VectorBase_ControlNode_PTR;
-struct VectorBase_ControlNode_PTR_vtbl;
-struct VectorClass_ControlNode_PTR;
-struct VectorClass_ControlNode_PTR_vtbl; // 0x7E4BC4
-struct DynamicVectorClass_ControlNode_PTR;
-struct DynamicVectorClass_ControlNode_PTR_vtbl; // 0x7E4BA4
-struct VectorBase_SpawnManagerClass_SpawnControl_PTR;
-struct VectorBase_SpawnManagerClass_SpawnControl_PTR_vtbl;
-struct VectorClass_SpawnManagerClass_SpawnControl_PTR;
-struct VectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl; // 0x7F36D4
-struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR;
-struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl; // 0x7F36B4
-struct VectorBase_SlaveManagerClass_SlaveControl_PTR;
-struct VectorBase_SlaveManagerClass_SlaveControl_PTR_vtbl;
-struct VectorClass_SlaveManagerClass_SlaveControl_PTR;
-struct VectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F324C
-struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR;
-struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F322C
-struct VectorBase_ParticleClass_PTR;
-struct VectorBase_ParticleClass_PTR_vtbl;
-struct VectorClass_ParticleClass_PTR;
-struct VectorClass_ParticleClass_PTR_vtbl; // 0x7E9D84
-struct DynamicVectorClass_ParticleClass_PTR; // 0xA83DC8
-struct DynamicVectorClass_ParticleClass_PTR_vtbl; // 0x7E9D64
-struct VectorBase_ParticleTypeClass_PTR;
-struct VectorBase_ParticleTypeClass_PTR_vtbl;
-struct VectorClass_ParticleTypeClass_PTR;
-struct VectorClass_ParticleTypeClass_PTR_vtbl; // 0x7EA444
-struct DynamicVectorClass_ParticleTypeClass_PTR; // 0xA83D98
-struct DynamicVectorClass_ParticleTypeClass_PTR_vtbl; // 0x7EA424
-struct VectorBase_ParticleSystemClass_PTR;
-struct VectorBase_ParticleSystemClass_PTR_vtbl;
-struct VectorClass_ParticleSystemClass_PTR;
-struct VectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C84
-struct DynamicVectorClass_ParticleSystemClass_PTR; // 0xA80208
-struct DynamicVectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C64
-struct VectorBase_ParticleSystemTypeClass_PTR;
-struct VectorBase_ParticleSystemTypeClass_PTR_vtbl;
-struct VectorClass_ParticleSystemTypeClass_PTR;
-struct VectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4424 / 0x7EA484
-struct DynamicVectorClass_ParticleSystemTypeClass_PTR; // 0xA83D68
-struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4444 / 0x7EA464
-struct VectorBase_ParticleSystemTypeClass_CPTR;
-struct VectorBase_ParticleSystemTypeClass_CPTR_vtbl;
-struct VectorClass_ParticleSystemTypeClass_CPTR;
-struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_ParticleSystemTypeClass_CPTR;
-struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl;
-struct TypeList_ParticleSystemTypeClass_PTR;
-struct TypeList_ParticleSystemTypeClass_PTR_vtbl; // 0x7F4F9C
-struct VectorBase_TiberiumClass_PTR;
-struct VectorBase_TiberiumClass_PTR_vtbl;
-struct VectorClass_TiberiumClass_PTR;
-struct VectorClass_TiberiumClass_PTR_vtbl; // 0x7F56DC
-struct DynamicVectorClass_TiberiumClass_PTR; // 0xB0F4E8
-struct DynamicVectorClass_TiberiumClass_PTR_vtbl; // 0x7F56BC
-struct VectorBase_TerrainClass_PTR;
-struct VectorBase_TerrainClass_PTR_vtbl;
-struct VectorClass_TerrainClass_PTR;
-struct VectorClass_TerrainClass_PTR_vtbl; // 0x7E9E04
-struct DynamicVectorClass_TerrainClass_PTR; // 0xA8E988
-struct DynamicVectorClass_TerrainClass_PTR_vtbl; // 0x7E9DE4
-struct VectorBase_TerrainTypeClass_PTR;
-struct VectorBase_TerrainTypeClass_PTR_vtbl;
-struct VectorClass_TerrainTypeClass_PTR;
-struct VectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0D9C / 0x7EA204
-struct DynamicVectorClass_TerrainTypeClass_PTR; // 0xA8E318
-struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0E0C / 0x7EA1E4
-struct VectorBase_TerrainTypeClass_CPTR;
-struct VectorBase_TerrainTypeClass_CPTR_vtbl;
-struct VectorClass_TerrainTypeClass_CPTR;
-struct VectorClass_TerrainTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_TerrainTypeClass_CPTR;
-struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl;
-struct TypeList_TerrainTypeClass_PTR;
-struct TypeList_TerrainTypeClass_PTR_vtbl; // 0x7F0CFC
-struct VectorBase_OverlayClass_PTR;
-struct VectorBase_OverlayClass_PTR_vtbl;
-struct VectorClass_OverlayClass_PTR;
-struct VectorClass_OverlayClass_PTR_vtbl; // 0x7E9D44
-struct DynamicVectorClass_OverlayClass_PTR; // 0xA8EC50
-struct DynamicVectorClass_OverlayClass_PTR_vtbl; // 0x7E9D24
-struct VectorBase_OverlayTypeClass_PTR;
-struct VectorBase_OverlayTypeClass_PTR_vtbl;
-struct VectorClass_OverlayTypeClass_PTR;
-struct VectorClass_OverlayTypeClass_PTR_vtbl; // 0x7EA184
-struct DynamicVectorClass_OverlayTypeClass_PTR; // 0xA83D80
-struct DynamicVectorClass_OverlayTypeClass_PTR_vtbl; // 0x7EA164
-struct VectorBase_IsometricTileClass_PTR;
-struct VectorBase_IsometricTileClass_PTR_vtbl;
-struct VectorClass_IsometricTileClass_PTR;
-struct VectorClass_IsometricTileClass_PTR_vtbl; // 0x7E18DC
-struct DynamicVectorClass_IsometricTileClass_PTR; // 0x87F750
-struct DynamicVectorClass_IsometricTileClass_PTR_vtbl; // 0x7E18BC
-struct VectorBase_IsometricTileTypeClass_PTR;
-struct VectorBase_IsometricTileTypeClass_PTR_vtbl;
-struct VectorClass_IsometricTileTypeClass_PTR;
-struct VectorClass_IsometricTileTypeClass_PTR_vtbl; // 0x7EA404
-struct DynamicVectorClass_IsometricTileTypeClass_PTR; // 0xA8ED28
-struct DynamicVectorClass_IsometricTileTypeClass_PTR_vtbl; // 0x7EA3E4
-struct VectorBase_VeinholeMonsterClass_PTR;
-struct VectorBase_VeinholeMonsterClass_PTR_vtbl;
-struct VectorClass_VeinholeMonsterClass_PTR;
-struct VectorClass_VeinholeMonsterClass_PTR_vtbl; // 0x7F665C
-struct DynamicVectorClass_VeinholeMonsterClass_PTR; // 0xB1D290
-struct DynamicVectorClass_VeinholeMonsterClass_PTR_vtbl; // 0x7F663C
-struct VectorBase_BombClass_PTR;
-struct VectorBase_BombClass_PTR_vtbl;
-struct VectorClass_BombClass_PTR;
-struct VectorClass_BombClass_PTR_vtbl; // 0x7E17EC
-struct DynamicVectorClass_BombClass_PTR; // 0x89C668
-struct DynamicVectorClass_BombClass_PTR_vtbl; // 0x7E17CC
-struct VectorBase_NeuronClass_PTR;
-struct VectorBase_NeuronClass_PTR_vtbl;
-struct VectorClass_NeuronClass_PTR;
-struct VectorClass_NeuronClass_PTR_vtbl; // 0x7E3E54
-struct VectorBase_CaptureManagerClass_PTR;
-struct VectorBase_CaptureManagerClass_PTR_vtbl;
-struct VectorClass_CaptureManagerClass_PTR;
-struct VectorClass_CaptureManagerClass_PTR_vtbl; // 0x7E4AF4
-struct DynamicVectorClass_CaptureManagerClass_PTR; // 0x89E0F0
-struct DynamicVectorClass_CaptureManagerClass_PTR_vtbl; // 0x7E4AD4
-struct VectorBase_SlaveManagerClass_PTR;
-struct VectorBase_SlaveManagerClass_PTR_vtbl;
-struct VectorClass_SlaveManagerClass_PTR;
-struct VectorClass_SlaveManagerClass_PTR_vtbl; // 0x7F317C
-struct DynamicVectorClass_SlaveManagerClass_PTR; // 0xB0B5F0
-struct DynamicVectorClass_SlaveManagerClass_PTR_vtbl; // 0x7F315C
-struct VectorBase_SpawnManagerClass_PTR;
-struct VectorBase_SpawnManagerClass_PTR_vtbl;
-struct VectorClass_SpawnManagerClass_PTR;
-struct VectorClass_SpawnManagerClass_PTR_vtbl; // 0x7F3604
-struct DynamicVectorClass_SpawnManagerClass_PTR; // 0xB0B880
-struct DynamicVectorClass_SpawnManagerClass_PTR_vtbl; // 0x7F35E4
-struct VectorBase_AirstrikeClass_PTR;
-struct VectorBase_AirstrikeClass_PTR_vtbl;
-struct VectorClass_AirstrikeClass_PTR;
-struct VectorClass_AirstrikeClass_PTR_vtbl; // 0x7E295C
-struct DynamicVectorClass_AirstrikeClass_PTR; // 0x889FB8
-struct DynamicVectorClass_AirstrikeClass_PTR_vtbl; // 0x7E293C
-struct VectorBase_DiskLaserClass_PTR;
-struct VectorBase_DiskLaserClass_PTR_vtbl;
-struct VectorClass_DiskLaserClass_PTR;
-struct VectorClass_DiskLaserClass_PTR_vtbl; // 0x7E5EFC
-struct DynamicVectorClass_DiskLaserClass_PTR; // 0x8A0208
-struct DynamicVectorClass_DiskLaserClass_PTR_vtbl; // 0x7E5EDC
-struct VectorBase_EBolt_PTR;
-struct VectorBase_EBolt_PTR_vtbl;
-struct VectorClass_EBolt_PTR;
-struct VectorClass_EBolt_PTR_vtbl; // 0x7E86AC
-struct DynamicVectorClass_EBolt_PTR; // 0x8A0E88
-struct DynamicVectorClass_EBolt_PTR_vtbl; // 0x7E868C
-struct VectorBase_TemporalClass_PTR;
-struct VectorBase_TemporalClass_PTR_vtbl;
-struct VectorClass_TemporalClass_PTR;
-struct VectorClass_TemporalClass_PTR_vtbl; // 0x7F5134
-struct DynamicVectorClass_TemporalClass_PTR; // 0xB0EC60
-struct DynamicVectorClass_TemporalClass_PTR_vtbl; // 0x7F5114
-struct VectorBase_WaveClass_PTR;
-struct VectorBase_WaveClass_PTR_vtbl;
-struct VectorClass_WaveClass_PTR;
-struct VectorClass_WaveClass_PTR_vtbl; // 0x7E9D04
-struct DynamicVectorClass_WaveClass_PTR; // 0xA8EC38
-struct DynamicVectorClass_WaveClass_PTR_vtbl; // 0x7E9CE4
-struct VectorBase_LaserDrawClass_PTR;
-struct VectorBase_LaserDrawClass_PTR_vtbl;
-struct VectorClass_LaserDrawClass_PTR;
-struct VectorClass_LaserDrawClass_PTR_vtbl; // 0x7ECEFC
-struct DynamicVectorClass_LaserDrawClass_PTR; // 0xABC878
-struct DynamicVectorClass_LaserDrawClass_PTR_vtbl; // 0x7ECEDC
-struct VectorBase_LineTrail_PTR;
-struct VectorBase_LineTrail_PTR_vtbl;
-struct VectorClass_LineTrail_PTR;
-struct VectorClass_LineTrail_PTR_vtbl; // 0x7ED0EC
-struct DynamicVectorClass_LineTrail_PTR; // 0xABCB78
-struct DynamicVectorClass_LineTrail_PTR_vtbl; // 0x7ED0CC
-struct VectorBase_RadBeam_PTR;
-struct VectorBase_RadBeam_PTR_vtbl;
-struct VectorClass_RadBeam_PTR;
-struct VectorClass_RadBeam_PTR_vtbl; // 0x7F04A4
-struct DynamicVectorClass_RadBeam_PTR; // 0xB04A60
-struct DynamicVectorClass_RadBeam_PTR_vtbl; // 0x7F0484
-struct VectorBase_RadSiteClass_PTR;
-struct VectorBase_RadSiteClass_PTR_vtbl;
-struct VectorClass_RadSiteClass_PTR;
-struct VectorClass_RadSiteClass_PTR_vtbl; // 0x7F07C4
-struct DynamicVectorClass_RadSiteClass_PTR; // 0xB04BD0
-struct DynamicVectorClass_RadSiteClass_PTR_vtbl; // 0x7F07A4
-struct VectorBase_LightSourceClass_PTR;
-struct VectorBase_LightSourceClass_PTR_vtbl;
-struct VectorClass_LightSourceClass_PTR;
-struct VectorClass_LightSourceClass_PTR_vtbl; // 0x7ECF9C
-struct DynamicVectorClass_LightSourceClass_PTR; // 0xABCA10
-struct DynamicVectorClass_LightSourceClass_PTR_vtbl; // 0x7ECF7C
-struct VectorBase_ParasiteClass_PTR;
-struct VectorBase_ParasiteClass_PTR_vtbl;
-struct VectorClass_ParasiteClass_PTR;
-struct VectorClass_ParasiteClass_PTR_vtbl; // 0x7EF844
-struct DynamicVectorClass_ParasiteClass_PTR; // 0xAC4910
-struct DynamicVectorClass_ParasiteClass_PTR_vtbl; // 0x7EF824
-struct VectorBase_Kamikaze_PTR;
-struct VectorBase_Kamikaze_PTR_vtbl;
-struct VectorClass_Kamikaze_PTR;
-struct VectorClass_Kamikaze_PTR_vtbl;
-struct DynamicVectorClass_Kamikaze_PTR; // 0xABC604
-struct DynamicVectorClass_Kamikaze_PTR_vtbl;
-struct VectorBase_KamikazeControl_PTR;
-struct VectorBase_KamikazeControl_PTR_vtbl;
-struct VectorClass_KamikazeControl_PTR;
-struct VectorClass_KamikazeControl_PTR_vtbl; // 0x7ECE9C
-struct DynamicVectorClass_KamikazeControl_PTR;
-struct DynamicVectorClass_KamikazeControl_PTR_vtbl; // 0x7ECE7C
-struct VectorBase_ConvertClass_PTR;
-struct VectorBase_ConvertClass_PTR_vtbl;
-struct VectorClass_ConvertClass_PTR;
-struct VectorClass_ConvertClass_PTR_vtbl; // 0x7E5338
-struct DynamicVectorClass_ConvertClass_PTR; // 0x89ECF8
-struct DynamicVectorClass_ConvertClass_PTR_vtbl; // 0x7E5318
-struct VectorBase_LightConvertClass_PTR;
-struct VectorBase_LightConvertClass_PTR_vtbl;
-struct VectorClass_LightConvertClass_PTR;
-struct VectorClass_LightConvertClass_PTR_vtbl; // 0x7E188C
-struct DynamicVectorClass_LightConvertClass_PTR; // 0x87F698
-struct DynamicVectorClass_LightConvertClass_PTR_vtbl; // 0x7E186C
-struct VectorBase_EMPulseClass_PTR;
-struct VectorBase_EMPulseClass_PTR_vtbl;
-struct VectorClass_EMPulseClass_PTR;
-struct VectorClass_EMPulseClass_PTR_vtbl; // 0x7E875C
-struct DynamicVectorClass_EMPulseClass_PTR; // 0x8A3870
-struct DynamicVectorClass_EMPulseClass_PTR_vtbl; // 0x7E873C
-struct VectorBase_AnimClass_PTR;
-struct VectorBase_AnimClass_PTR_vtbl;
-struct VectorClass_AnimClass_PTR;
-struct VectorClass_AnimClass_PTR_vtbl; // 0x7E9F44 / 0x7EBFEC
-struct DynamicVectorClass_AnimClass_PTR; // 0xA8E9A8 / 0xA9F9D0 / 0xA9FA18 / 0xA9FA60
-struct DynamicVectorClass_AnimClass_PTR_vtbl; // 0x7E9F24 / 0x7EBFCC
-struct VectorBase_AnimClass_CPTR;
-struct VectorBase_AnimClass_CPTR_vtbl;
-struct VectorClass_AnimClass_CPTR;
-struct VectorClass_AnimClass_CPTR_vtbl;
-struct DynamicVectorClass_AnimClass_CPTR;
-struct DynamicVectorClass_AnimClass_CPTR_vtbl;
-struct VectorBase_AnimTypeClass_PTR;
-struct VectorBase_AnimTypeClass_PTR_vtbl;
-struct VectorClass_AnimTypeClass_PTR;
-struct VectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA304 / 0x7EB6F4
-struct DynamicVectorClass_AnimTypeClass_PTR; // 0x8B4150
-struct DynamicVectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA2E4 / 0x7EB714
-struct VectorBase_AnimTypeClass_CPTR;
-struct VectorBase_AnimTypeClass_CPTR_vtbl;
-struct VectorClass_AnimTypeClass_CPTR;
-struct VectorClass_AnimTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_AnimTypeClass_CPTR;
-struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl;
-struct TypeList_AnimTypeClass_PTR;
-struct TypeList_AnimTypeClass_PTR_vtbl;
-struct VectorBase_VoxelAnimClass_PTR;
-struct VectorBase_VoxelAnimClass_PTR_vtbl;
-struct VectorClass_VoxelAnimClass_PTR;
-struct VectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E4C
-struct DynamicVectorClass_VoxelAnimClass_PTR; // 0x887388
-struct DynamicVectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E2C
-struct VectorBase_VoxelAnimTypeClass_PTR;
-struct VectorBase_VoxelAnimTypeClass_PTR_vtbl;
-struct VectorClass_VoxelAnimTypeClass_PTR;
-struct VectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D5C / 0x7EA3C4
-struct DynamicVectorClass_VoxelAnimTypeClass_PTR; // 0xA8EB28
-struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0DCC / 0x7EA3A4
-struct VectorBase_VoxelAnimTypeClass_CPTR;
-struct VectorBase_VoxelAnimTypeClass_CPTR_vtbl;
-struct VectorClass_VoxelAnimTypeClass_CPTR;
-struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_VoxelAnimTypeClass_CPTR;
-struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl;
-struct TypeList_VoxelAnimTypeClass_PTR;
-struct TypeList_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D3C
-struct VectorBase_AlphaShapeClass_PTR;
-struct VectorBase_AlphaShapeClass_PTR_vtbl;
-struct VectorClass_AlphaShapeClass_PTR;
-struct VectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3258
-struct DynamicVectorClass_AlphaShapeClass_PTR; // 0x88A0F0
-struct DynamicVectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3238
-struct VectorBase_IonBlastClass_PTR;
-struct VectorBase_IonBlastClass_PTR_vtbl;
-struct VectorClass_IonBlastClass_PTR;
-struct VectorClass_IonBlastClass_PTR_vtbl; // 0x7EC07C
-struct DynamicVectorClass_IonBlastClass_PTR; // 0xAA0118
-struct DynamicVectorClass_IonBlastClass_PTR_vtbl; // 0x7EC05C
-struct VectorBase_SpotLightClass_PTR;
-struct VectorBase_SpotLightClass_PTR_vtbl;
-struct VectorClass_SpotLightClass_PTR;
-struct VectorClass_SpotLightClass_PTR_vtbl; // 0x7EF6DC
-struct DynamicVectorClass_SpotLightClass_PTR; // 0xAC1678
-struct DynamicVectorClass_SpotLightClass_PTR_vtbl; // 0x7EF6BC
-struct VectorBase_VocClass_PTR;
-struct VectorBase_VocClass_PTR_vtbl;
-struct VectorClass_VocClass_PTR;
-struct VectorClass_VocClass_PTR_vtbl; // 0x7F68CC
-struct DynamicVectorClass_VocClass_PTR; // 0xB1D378
-struct DynamicVectorClass_VocClass_PTR_vtbl; // 0x7F68AC
-struct VectorBase_VoxClass_PTR;
-struct VectorBase_VoxClass_PTR_vtbl;
-struct VectorClass_VoxClass_PTR;
-struct VectorClass_VoxClass_PTR_vtbl; // 0x7F6924
-struct DynamicVectorClass_VoxClass_PTR; // 0xB1D4A0
-struct DynamicVectorClass_VoxClass_PTR_vtbl; // 0x7F6904
-struct VectorBase_TriggerClass_PTR;
-struct VectorBase_TriggerClass_PTR_vtbl;
-struct VectorClass_TriggerClass_PTR;
-struct VectorClass_TriggerClass_PTR_vtbl; // 0x7E9C04
-struct DynamicVectorClass_TriggerClass_PTR; // 0xA8EAE8
-struct DynamicVectorClass_TriggerClass_PTR_vtbl; // 0x7E9BE4
-struct VectorBase_TriggerTypeClass_PTR;
-struct VectorBase_TriggerTypeClass_PTR_vtbl;
-struct VectorClass_TriggerTypeClass_PTR;
-struct VectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BC4
-struct DynamicVectorClass_TriggerTypeClass_PTR; // 0x8B4178
-struct DynamicVectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BA4
-struct VectorBase_AITriggerTypeClass_PTR;
-struct VectorBase_AITriggerTypeClass_PTR_vtbl;
-struct VectorClass_AITriggerTypeClass_PTR;
-struct VectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B84
-struct DynamicVectorClass_AITriggerTypeClass_PTR; // 0xA8B200
-struct DynamicVectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B64
-struct VectorBase_TeamClass_PTR;
-struct VectorBase_TeamClass_PTR_vtbl;
-struct VectorClass_TeamClass_PTR;
-struct VectorClass_TeamClass_PTR_vtbl; // 0x7E9F84
-struct DynamicVectorClass_TeamClass_PTR; // 0x8B40E8
-struct DynamicVectorClass_TeamClass_PTR_vtbl; // 0x7E9F64
-struct VectorBase_TeamTypeClass_PTR;
-struct VectorBase_TeamTypeClass_PTR_vtbl;
-struct VectorClass_TeamTypeClass_PTR;
-struct VectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA104 / 0x7EA9E4
-struct DynamicVectorClass_TeamTypeClass_PTR; // 0xA8ECA0
-struct DynamicVectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA0E4 / 0x7EAAE8
-struct VectorBase_TeamTypeClass_CPTR;
-struct VectorBase_TeamTypeClass_CPTR_vtbl;
-struct VectorClass_TeamTypeClass_CPTR;
-struct VectorClass_TeamTypeClass_CPTR_vtbl;
-struct DynamicVectorClass_TeamTypeClass_CPTR;
-struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl;
-struct TypeList_TeamTypeClass_PTR;
-struct TypeList_TeamTypeClass_PTR_vtbl; // 0x7EA9C4
-struct VectorBase_TaskForceClass_PTR;
-struct VectorBase_TaskForceClass_PTR_vtbl;
-struct VectorClass_TaskForceClass_PTR;
-struct VectorClass_TaskForceClass_PTR_vtbl; // 0x7EA0C4
-struct DynamicVectorClass_TaskForceClass_PTR; // 0xA8E8D0
-struct DynamicVectorClass_TaskForceClass_PTR_vtbl; // 0x7EA0A4
-struct VectorBase_ScriptClass_PTR;
-struct VectorBase_ScriptClass_PTR_vtbl;
-struct VectorClass_ScriptClass_PTR;
-struct VectorClass_ScriptClass_PTR_vtbl; // 0x7E1B44
-struct DynamicVectorClass_ScriptClass_PTR; // 0x8872B0
-struct DynamicVectorClass_ScriptClass_PTR_vtbl; // 0x7E1B24
-struct VectorBase_ScriptTypeClass_PTR;
-struct VectorBase_ScriptTypeClass_PTR_vtbl;
-struct VectorClass_ScriptTypeClass_PTR;
-struct VectorClass_ScriptTypeClass_PTR_vtbl; // 0x7EA144
-struct DynamicVectorClass_ScriptTypeClass_PTR; // 0x8B41C8
-struct DynamicVectorClass_ScriptTypeClass_PTR_vtbl; // 0x7EA124
-struct VectorBase_HouseClass_PTR;
-struct VectorBase_HouseClass_PTR_vtbl;
-struct VectorClass_HouseClass_PTR;
-struct VectorClass_HouseClass_PTR_vtbl; // 0x7E9F04
-struct DynamicVectorClass_HouseClass_PTR; // 0xA80228
-struct DynamicVectorClass_HouseClass_PTR_vtbl; // 0x7E9EE4
-struct VectorBase_HouseTypeClass_PTR;
-struct VectorBase_HouseTypeClass_PTR_vtbl;
-struct VectorClass_HouseTypeClass_PTR;
-struct VectorClass_HouseTypeClass_PTR_vtbl; // 0x7EA084
-struct DynamicVectorClass_HouseTypeClass_PTR; // 0xA83C98
-struct DynamicVectorClass_HouseTypeClass_PTR_vtbl; // 0x7EA064
-struct VectorBase_SideClass_PTR;
-struct VectorBase_SideClass_PTR_vtbl;
-struct VectorClass_SideClass_PTR;
-struct VectorClass_SideClass_PTR_vtbl; // 0x7EA044
-struct DynamicVectorClass_SideClass_PTR; // 0x8B4120
-struct DynamicVectorClass_SideClass_PTR_vtbl; // 0x7EA024
-struct VectorBase_EventClass_PTR;
-struct VectorBase_EventClass_PTR_vtbl;
-struct VectorClass_EventClass_PTR;
-struct VectorClass_EventClass_PTR_vtbl; // 0x7EFE24
-struct DynamicVectorClass_EventClass_PTR; // 0xAC4B48 / 0xB0F1A0
-struct DynamicVectorClass_EventClass_PTR_vtbl; // 0x7EFE04
-struct VectorBase_TEventClass_PTR;
-struct VectorBase_TEventClass_PTR_vtbl;
-struct VectorClass_TEventClass_PTR;
-struct VectorClass_TEventClass_PTR_vtbl; // 0x7F552C
-struct DynamicVectorClass_TEventClass_PTR; // 0xB0F1A0
-struct DynamicVectorClass_TEventClass_PTR_vtbl; // 0x7F550C
-struct VectorBase_TActionClass_PTR;
-struct VectorBase_TActionClass_PTR_vtbl;
-struct VectorClass_TActionClass_PTR;
-struct VectorClass_TActionClass_PTR_vtbl; // 0x7F43F0
-struct DynamicVectorClass_TActionClass_PTR; // 0xB0E658
-struct DynamicVectorClass_TActionClass_PTR_vtbl; // 0x7F43D0
-struct VectorBase_SmudgeClass_PTR;
-struct VectorBase_SmudgeClass_PTR_vtbl;
-struct VectorClass_SmudgeClass_PTR;
-struct VectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DC4
-struct DynamicVectorClass_SmudgeClass_PTR; // 0xA8B1E0
-struct DynamicVectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DA4
-struct VectorBase_RadarEventClass_PTR;
-struct VectorBase_RadarEventClass_PTR_vtbl;
-struct VectorClass_RadarEventClass_PTR;
-struct VectorClass_RadarEventClass_PTR_vtbl; // 0x7F0ACC
-struct DynamicVectorClass_RadarEventClass_PTR; // 0xB04DA8
-struct DynamicVectorClass_RadarEventClass_PTR_vtbl; // 0x7F0AAC
-struct VectorBase_ThemeControl_PTR;
-struct VectorBase_ThemeControl_PTR_vtbl;
-struct VectorClass_ThemeControl_PTR;
-struct VectorClass_ThemeControl_PTR_vtbl; // 0x7EA584
-struct DynamicVectorClass_ThemeControl_PTR;
-struct DynamicVectorClass_ThemeControl_PTR_vtbl; // 0x7F568C
-struct VectorBase_CampaignClass_PTR;
-struct VectorBase_CampaignClass_PTR_vtbl;
-struct VectorClass_CampaignClass_PTR;
-struct VectorClass_CampaignClass_PTR_vtbl; // 0x7EA004
-struct DynamicVectorClass_CampaignClass_PTR;
-struct DynamicVectorClass_CampaignClass_PTR_vtbl; // 0x7E9FE4
-struct VectorBase_MPGameModeClass_PTR;
-struct VectorBase_MPGameModeClass_PTR_vtbl;
-struct VectorClass_MPGameModeClass_PTR;
-struct VectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED40
-struct DynamicVectorClass_MPGameModeClass_PTR; // 0xABFDA0
-struct DynamicVectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED20
-struct VectorBase_AlphaLightingRemapClass_PTR;
-struct VectorBase_AlphaLightingRemapClass_PTR_vtbl;
-struct VectorClass_AlphaLightingRemapClass_PTR;
-struct VectorClass_AlphaLightingRemapClass_PTR_vtbl;
-struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x0x88A080
-struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl;
-struct VectorBase_FoggedObjectClass_PTR;
-struct VectorBase_FoggedObjectClass_PTR_vtbl;
-struct VectorClass_FoggedObjectClass_PTR;
-struct VectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E4514
-struct DynamicVectorClass_FoggedObjectClass_PTR;
-struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E44F4
-struct VectorBase_FoggedObjectDraw;
-struct VectorBase_FoggedObjectDraw_vtbl;
-struct VectorClass_FoggedObjectDraw;
-struct VectorClass_FoggedObjectDraw_vtbl; // 0x7E8BC0
-struct DynamicVectorClass_FoggedObjectDraw;
-struct DynamicVectorClass_FoggedObjectDraw_vtbl; // 0x7E8BA0
-struct VectorBase_DamageGroup_PTR;
-struct VectorBase_DamageGroup_PTR_vtbl;
-struct VectorClass_DamageGroup_PTR;
-struct VectorClass_DamageGroup_PTR_vtbl; // 0x7E5144
-struct DynamicVectorClass_DamageGroup_PTR;
-struct DynamicVectorClass_DamageGroup_PTR_vtbl; // 0x7E5170
-struct VectorBase_ChangeLinkHouseStruct_PTR;
-struct VectorBase_ChangeLinkHouseStruct_PTR_vtbl;
-struct VectorClass_ChangeLinkHouseStruct_PTR;
-struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4468
-struct DynamicVectorClass_ChangeLinkHouseStruct_PTR;
-struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
-struct VectorBase_TubeClass_PTR;
-struct VectorBase_TubeClass_PTR_vtbl;
-struct VectorClass_TubeClass_PTR;
-struct VectorClass_TubeClass_PTR_vtbl;
-struct DynamicVectorClass_TubeClass_PTR; // 0x8B4138
-struct DynamicVectorClass_TubeClass_PTR_vtbl;
-struct VectorBase_ZoneConnectionTable;
-struct VectorBase_ZoneConnectionTable_vtbl;
-struct VectorClass_ZoneConnectionTable;
-struct VectorClass_ZoneConnectionTable_vtbl;
-struct DynamicVectorClass_ZoneConnectionTable;
-struct DynamicVectorClass_ZoneConnectionTable_vtbl;
-struct VectorBase_SubzoneConnectionTable;
-struct VectorBase_SubzoneConnectionTable_vtbl;
-struct VectorClass_SubzoneConnectionTable;
-struct VectorClass_SubzoneConnectionTable_vtbl;
-struct DynamicVectorClass_SubzoneConnectionTable;
-struct DynamicVectorClass_SubzoneConnectionTable_vtbl;
-struct AnimationPalette;
-struct WDT_Centroid;
-struct WDT_GameOption;
-struct WDT_GameOption_vtbl;
-struct WDT_ValueGameOption_unsigned_char;
-struct WDT_ValueGameOption_unsigned_char_vtbl;
-struct WDT_FlagGameOption;
-struct WDT_FlagGameOption_vtbl;
-struct WDT_MapSizeGameOption;
-struct WDT_MapSizeGameOption_vtbl;
-struct WDT_Conflict;
-struct WDT_Conflict_vtbl;
-struct WDT_History;
-struct WDT_History_vtbl;
-struct WDT_Campaign;
-struct WDT_Campaign_vtbl;
-struct WDT_CampaignProperties;
-struct WDT_CampaignProperties_vtbl;
-struct WDT_Map;
-struct WDT_Map_vtbl;
-struct WDTTerritory;
-struct WDTTerritory_vtbl;
-struct WDTState;
-struct WDTState_vtbl;
-struct WDT_State;
-struct WDT_State_vtbl;
-struct WDT_Voices_Anim;
-struct WDT_Voices_Anim_vtbl;
-struct VectorBase_WDT_Centroid;
-struct VectorBase_WDT_Centroid_vtbl;
-struct VectorClass_WDT_Centroid;
-struct VectorClass_WDT_Centroid_vtbl;
-struct VectorBase_WDT_Map_AnimationPalette_PTR;
-struct VectorBase_WDT_Map_AnimationPalette_PTR_vtbl;
-struct VectorClass_WDT_Map_AnimationPalette_PTR;
-struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
-struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR;
-struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
-struct ReferenceCounted;
-struct ReferenceCounted_vtbl;
-struct rc_ptr_base;
-struct rc_ptr_base_vtbl;
-struct rc_ptr_PlayerProfile_PTR;
-struct rc_ptr_PlayerProfile_PTR_vtbl;
-struct rc_ptr_WDTState_PTR;
-struct rc_ptr_WDTState_PTR_vtbl;
-struct rc_ptr_WDTTerritory_PTR;
-struct rc_ptr_WDTTerritory_PTR_vtbl;
-struct rc_ptr_WDT_CampaignProperties_PTR;
-struct rc_ptr_WDT_CampaignProperties_PTR_vtbl;
-struct rc_ptr_WDT_Campaign_PTR;
-struct rc_ptr_WDT_Campaign_PTR_vtbl;
-struct rc_ptr_WDT_Conflict_PTR;
-struct rc_ptr_WDT_Conflict_PTR_vtbl;
-struct rc_ptr_WDT_FlagGameOption_PTR;
-struct rc_ptr_WDT_FlagGameOption_PTR_vtbl;
-struct rc_ptr_WDT_GameOption_PTR;
-struct rc_ptr_WDT_GameOption_PTR_vtbl;
-struct rc_ptr_WDT_History_PTR;
-struct rc_ptr_WDT_History_PTR_vtbl;
-struct rc_ptr_WDT_MapSizeGameOption_PTR;
-struct rc_ptr_WDT_MapSizeGameOption_PTR_vtbl;
-struct rc_ptr_WDT_Map_PTR;
-struct rc_ptr_WDT_Map_PTR_vtbl;
-struct rc_ptr_WDT_State_PTR;
-struct rc_ptr_WDT_State_PTR_vtbl;
-struct rc_ptr_WDT_Territory_PTR;
-struct rc_ptr_WDT_Territory_PTR_vtbl;
-struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR;
-struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR_vtbl;
-struct VectorBase_rc_ptr_WDT_Conflict_PTR;
-struct VectorBase_rc_ptr_WDT_Conflict_PTR_vtbl;
-struct VectorClass_rc_ptr_WDT_Conflict_PTR;
-struct VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl;
-struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR;
-struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR_vtbl;
-struct VectorBase_rc_ptr_WDT_GameOption_PTR;
-struct VectorBase_rc_ptr_WDT_GameOption_PTR_vtbl;
-struct VectorClass_rc_ptr_WDT_GameOption_PTR;
-struct VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl;
-struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR;
-struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR_vtbl;
-struct VectorBase_rc_ptr_WDT_Territory_PTR;
-struct VectorBase_rc_ptr_WDT_Territory_PTR_vtbl;
-struct VectorClass_rc_ptr_WDT_Territory_PTR;
-struct VectorClass_rc_ptr_WDT_Territory_PTR_vtbl;
-struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR;
-struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR_vtbl;
-struct VectorBase_rc_ptr_WDTTerritory_PTR;
-struct VectorBase_rc_ptr_WDTTerritory_PTR_vtbl;
-struct VectorClass_rc_ptr_WDTTerritory_PTR;
-struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl;
-struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR;
-struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl;
-struct VectorCursor;
-struct VectorCursor_vtbl;
-struct VectorCursor_rc_ptr_WDT_Conflict_PTR;
-struct VectorCursor_rc_ptr_WDT_Conflict_PTR_vtbl;
-struct VectorCursor_rc_ptr_WDT_GameOption_PTR;
-struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl;
-struct VectorCursor_rc_ptr_WDT_Territory_PTR;
-struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl;
-struct TRect_int;
-struct MSAnim;
-struct MSAnimEntry;
-struct MSSfxEntry;
-struct VectorBase_GraphicMenuItem_PTR;
-struct VectorBase_GraphicMenuItem_PTR_vtbl;
-struct VectorClass_GraphicMenuItem_PTR;
-struct VectorClass_GraphicMenuItem_PTR_vtbl;
-struct DynamicVectorClass_GraphicMenuItem_PTR;
-struct DynamicVectorClass_GraphicMenuItem_PTR_vtbl;
-struct VectorBase_MSAnim_PTR;
-struct VectorBase_MSAnim_PTR_vtbl;
-struct VectorClass_MSAnim_PTR;
-struct VectorClass_MSAnim_PTR_vtbl;
-struct DynamicVectorClass_MSAnim_PTR;
-struct DynamicVectorClass_MSAnim_PTR_vtbl;
-struct VectorBase_MSAnimEntry_PTR;
-struct VectorBase_MSAnimEntry_PTR_vtbl;
-struct VectorClass_MSAnimEntry_PTR;
-struct VectorClass_MSAnimEntry_PTR_vtbl;
-struct DynamicVectorClass_MSAnimEntry_PTR;
-struct DynamicVectorClass_MSAnimEntry_PTR_vtbl;
-struct VectorBase_MSSfxEntry_PTR;
-struct VectorBase_MSSfxEntry_PTR_vtbl;
-struct VectorClass_MSSfxEntry_PTR;
-struct VectorClass_MSSfxEntry_PTR_vtbl;
-struct DynamicVectorClass_MSSfxEntry_PTR;
-struct DynamicVectorClass_MSSfxEntry_PTR_vtbl;
-struct VectorBase_TRect_int;
-struct VectorBase_TRect_int_vtbl;
-struct VectorClass_TRect_int;
-struct VectorClass_TRect_int_vtbl;
-struct DynamicVectorClass_TRect_int;
-struct DynamicVectorClass_TRect_int_vtbl;
-struct VectorCursor_GraphicMenuItem_PTR;
-struct VectorCursor_GraphicMenuItem_PTR_vtbl;
-struct VectorCursor_MSAnim_PTR;
-struct VectorCursor_MSAnim_PTR_vtbl;
-struct VectorCursor_MSSfxEntry_PTR;
-struct VectorCursor_MSSfxEntry_PTR_vtbl;
-struct VectorCursor_TRect_int;
-struct VectorCursor_TRect_int_vtbl;
-struct VectorCursor_TRect_int_VectorClass_TRect_int;
-struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl;
-struct VectorCursor_unsigned_int;
-struct VectorCursor_unsigned_int_vtbl;
-struct AllToCheerCommandClass;
-struct AllToCheerCommandClass_vtbl; // 0x7EBA54
+struct AircraftTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct AircraftTypeClass_vtbl; // 0x7E2868
+struct AirstrikeClass; // : AbstractClass
+struct AirstrikeClass_vtbl; // 0x7E29A8
+struct AISlotsStruct;
+struct AITriggerConditionComparator;
+struct AITriggerTypeClass; // : AbstractTypeClass : AbstractClass
+struct AITriggerTypeClass_vtbl; // 0x7E2A50
 struct AllianceCommandClass;
 struct AllianceCommandClass_vtbl; // 0x7EBB44
+struct AllToCheerCommandClass;
+struct AllToCheerCommandClass_vtbl; // 0x7EBA54
+struct AlphaLightingRemapClass;
+struct AlphaShapeClass; // : AbstractClass
+struct AlphaShapeClass_vtbl; // 0x7E32A4
+struct AngerStruct;
+struct Animate;
+struct Animate_vtbl; // 0x007E35A8
+struct AnimationPalette;
+struct AnimClass; // : ObjectClass : AbstractClass
+struct AnimClass_vtbl; // 0x7E3354
 struct AnimFile;
 struct AnimFile_vtbl; // 0x7E3584
+struct AnimTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct AnimTypeClass_vtbl; // 0x7E3608
 struct ApplicationClass;
 struct ApplicationClass_vtbl; // 0x7E36D4
+struct AStarClass;
+struct AStarClass_HierarchicalArray;
+struct AStarClass_HierarchicalBuffer;
+struct AStarClass_HierarchicalNode;
+struct AStarClass_PassabilityData;
+struct AStarClass_PathFinderData;
+struct AStarClass_PathNode;
+struct AStarClass_PathNodeBuffer;
+struct AStarClass_PathQueueArray;
+struct AStarClass_PathQueueBuffer;
+struct AStarClass_PathQueueNode;
+struct AudioController;
+struct AudioIDXData;
+struct AudioIDXEntry;
+struct AudioStream;
 struct Base64Pipe;
 struct Base64Pipe_vtbl; // 0x7EB774
 struct Base64Straw;
 struct Base64Straw_vtbl; // 0x7EB764
+struct BaseClass;
+struct BaseClass_vtbl; // 0x7E3880
+struct BaseNodeClass;
+struct BasePlanningCell;
+struct BasePlanningCellContainer;
 struct BeaconPlacementCommandClass;
 struct BeaconPlacementCommandClass_vtbl; // 0x7EBBBC
 struct BinkMovieHandle;
 struct BinkMovieHandle_vtbl; // 0x7EE154
-struct BlitPlainXlatAlpha_unsigned_short;
-struct BlitPlainXlatAlpha_unsigned_short_vtbl; // 0x7E57F8
-struct BlitPlainXlatZReadWrite_unsigned_short;
-struct BlitPlainXlatZReadWrite_unsigned_short_vtbl; // 0x7E58A0
-struct BlitPlainXlatZRead_unsigned_short;
-struct BlitPlainXlatZRead_unsigned_short_vtbl; // 0x7E5990
-struct BlitPlainXlat_unsigned_char;
-struct BlitPlainXlat_unsigned_char_vtbl; // 0x7E5B70
-struct BlitPlainXlat_unsigned_short;
-struct BlitPlainXlat_unsigned_short_vtbl; // 0x7E5A38
+struct BitFont;
+struct BitFont_vtbl;
+struct BitFont_InternalData;
+struct BitText;
+struct BitText_vtbl;
 struct BlitPlain_unsigned_char;
 struct BlitPlain_unsigned_char_vtbl; // 0x7F7BDC
 struct BlitPlain_unsigned_short;
 struct BlitPlain_unsigned_short_vtbl; // 0x7F7BC4
-struct BlitTransDarkenZReadWrite_unsigned_short;
-struct BlitTransDarkenZReadWrite_unsigned_short_vtbl; // 0x7E5858
-struct BlitTransDarkenZRead_unsigned_short;
-struct BlitTransDarkenZRead_unsigned_short_vtbl; // 0x7E5948
-struct BlitTransDarken_unsigned_short;
-struct BlitTransDarken_unsigned_short_vtbl; // 0x7E59F0
-struct BlitTransLucent25AlphaZReadWarp_unsigned_short;
-struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5648
-struct BlitTransLucent25AlphaZReadWrite_unsigned_short;
-struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl; // 0x7E55D0
-struct BlitTransLucent25AlphaZRead_unsigned_short;
-struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl; // 0x7E5690
-struct BlitTransLucent25Alpha_unsigned_short;
-struct BlitTransLucent25Alpha_unsigned_short_vtbl; // 0x7E5780
-struct BlitTransLucent25ZReadWarp_unsigned_short;
-struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl; // 0x7E58B8
-struct BlitTransLucent25ZReadWrite_unsigned_short;
-struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl; // 0x7E5810
-struct BlitTransLucent25ZRead_unsigned_short;
-struct BlitTransLucent25ZRead_unsigned_short_vtbl; // 0x7E5900
-struct BlitTransLucent25_unsigned_short;
-struct BlitTransLucent25_unsigned_short_vtbl; // 0x7E59A8
-struct BlitTransLucent50AlphaZReadWarp_unsigned_short;
-struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5660
-struct BlitTransLucent50AlphaZReadWrite_unsigned_short;
-struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl; // 0x7E55E8
-struct BlitTransLucent50AlphaZRead_unsigned_short;
-struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl; // 0x7E56A8
-struct BlitTransLucent50Alpha_unsigned_short;
-struct BlitTransLucent50Alpha_unsigned_short_vtbl; // 0x7E5798
-struct BlitTransLucent50ZReadWarp_unsigned_short;
-struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl; // 0x7E58D0
-struct BlitTransLucent50ZReadWrite_unsigned_short;
-struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl; // 0x7E5828
-struct BlitTransLucent50ZRead_unsigned_short;
-struct BlitTransLucent50ZRead_unsigned_short_vtbl; // 0x7E5918
-struct BlitTransLucent50_unsigned_short;
-struct BlitTransLucent50_unsigned_short_vtbl; // 0x7E59C0
-struct BlitTransLucent75AlphaZReadWarp_unsigned_short;
-struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5678
-struct BlitTransLucent75AlphaZReadWrite_unsigned_short;
-struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5600
-struct BlitTransLucent75AlphaZRead_unsigned_short;
-struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl; // 0x7E56C0
-struct BlitTransLucent75Alpha_unsigned_short;
-struct BlitTransLucent75Alpha_unsigned_short_vtbl; // 0x7E57B0
-struct BlitTransLucent75ZReadWarp_unsigned_short;
-struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl; // 0x7E58E8
-struct BlitTransLucent75ZReadWrite_unsigned_short;
-struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl; // 0x7E5840
-struct BlitTransLucent75ZRead_unsigned_short;
-struct BlitTransLucent75ZRead_unsigned_short_vtbl; // 0x7E5930
-struct BlitTransLucent75_unsigned_short;
-struct BlitTransLucent75_unsigned_short_vtbl; // 0x7E59D8
-struct BlitTransRemapDest_unsigned_char;
-struct BlitTransRemapDest_unsigned_char_vtbl; // 0x7E5B28
-struct BlitTransRemapXlat_unsigned_char;
-struct BlitTransRemapXlat_unsigned_char_vtbl; // 0x7E5B10
-struct BlitTransXlatAlphaZReadWrite_unsigned_short;
-struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5630
-struct BlitTransXlatAlphaZRead_unsigned_short;
-struct BlitTransXlatAlphaZRead_unsigned_short_vtbl; // 0x7E56F0
-struct BlitTransXlatAlpha_unsigned_short;
-struct BlitTransXlatAlpha_unsigned_short_vtbl; // 0x7E57E0
-struct BlitTransXlatMultWriteAlpha_unsigned_short;
-struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl; // 0x7E5750
-struct BlitTransXlatWriteAlpha_unsigned_short;
-struct BlitTransXlatWriteAlpha_unsigned_short_vtbl; // 0x7E5768
-struct BlitTransXlatZReadWrite_unsigned_short;
-struct BlitTransXlatZReadWrite_unsigned_short_vtbl; // 0x7E5888
-struct BlitTransXlatZRead_unsigned_short;
-struct BlitTransXlatZRead_unsigned_short_vtbl; // 0x7E5978
-struct BlitTransXlat_unsigned_char;
-struct BlitTransXlat_unsigned_char_vtbl; // 0x7E5B58
-struct BlitTransXlat_unsigned_short;
-struct BlitTransXlat_unsigned_short_vtbl; // 0x7E5A20
-struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short;
-struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5618
-struct BlitTransZRemapXlatAlphaZRead_unsigned_short;
-struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl; // 0x7E56D8
-struct BlitTransZRemapXlatAlpha_unsigned_short;
-struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl; // 0x7E57C8
-struct BlitTransZRemapXlatZReadWrite_unsigned_short;
-struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl; // 0x7E5870
-struct BlitTransZRemapXlatZRead_unsigned_short;
-struct BlitTransZRemapXlatZRead_unsigned_short_vtbl; // 0x7E5960
-struct BlitTransZRemapXlat_unsigned_char;
-struct BlitTransZRemapXlat_unsigned_char_vtbl; // 0x7E5B40
-struct BlitTransZRemapXlat_unsigned_short;
-struct BlitTransZRemapXlat_unsigned_short_vtbl; // 0x7E5A08
+struct BlitPlainXlat_unsigned_char;
+struct BlitPlainXlat_unsigned_char_vtbl; // 0x7E5B70
+struct BlitPlainXlat_unsigned_short;
+struct BlitPlainXlat_unsigned_short_vtbl; // 0x7E5A38
+struct BlitPlainXlatAlpha_unsigned_short;
+struct BlitPlainXlatAlpha_unsigned_short_vtbl; // 0x7E57F8
+struct BlitPlainXlatZRead_unsigned_short;
+struct BlitPlainXlatZRead_unsigned_short_vtbl; // 0x7E5990
+struct BlitPlainXlatZReadWrite_unsigned_short;
+struct BlitPlainXlatZReadWrite_unsigned_short_vtbl; // 0x7E58A0
+struct Blitter;
+struct Blitter_vtbl; // 0x007E5B88
 struct BlitTrans_unsigned_char;
 struct BlitTrans_unsigned_char_vtbl; // 0x7F7C0C
 struct BlitTrans_unsigned_short;
 struct BlitTrans_unsigned_short_vtbl; // 0x7F7BF4
+struct BlitTransDarken_unsigned_short;
+struct BlitTransDarken_unsigned_short_vtbl; // 0x7E59F0
+struct BlitTransDarkenZRead_unsigned_short;
+struct BlitTransDarkenZRead_unsigned_short_vtbl; // 0x7E5948
+struct BlitTransDarkenZReadWrite_unsigned_short;
+struct BlitTransDarkenZReadWrite_unsigned_short_vtbl; // 0x7E5858
+struct BlitTransLucent25_unsigned_short;
+struct BlitTransLucent25_unsigned_short_vtbl; // 0x7E59A8
+struct BlitTransLucent25Alpha_unsigned_short;
+struct BlitTransLucent25Alpha_unsigned_short_vtbl; // 0x7E5780
+struct BlitTransLucent25AlphaZRead_unsigned_short;
+struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl; // 0x7E5690
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short;
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5648
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short;
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl; // 0x7E55D0
+struct BlitTransLucent25ZRead_unsigned_short;
+struct BlitTransLucent25ZRead_unsigned_short_vtbl; // 0x7E5900
+struct BlitTransLucent25ZReadWarp_unsigned_short;
+struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl; // 0x7E58B8
+struct BlitTransLucent25ZReadWrite_unsigned_short;
+struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl; // 0x7E5810
+struct BlitTransLucent50_unsigned_short;
+struct BlitTransLucent50_unsigned_short_vtbl; // 0x7E59C0
+struct BlitTransLucent50Alpha_unsigned_short;
+struct BlitTransLucent50Alpha_unsigned_short_vtbl; // 0x7E5798
+struct BlitTransLucent50AlphaZRead_unsigned_short;
+struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl; // 0x7E56A8
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short;
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5660
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short;
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl; // 0x7E55E8
 struct BlitTranslucent50NonzeroAlpha_unsigned_short;
 struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl; // 0x7E5720
 struct BlitTranslucent50ZeroAlpha_unsigned_short;
 struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl; // 0x7E5708
+struct BlitTransLucent50ZRead_unsigned_short;
+struct BlitTransLucent50ZRead_unsigned_short_vtbl; // 0x7E5918
+struct BlitTransLucent50ZReadWarp_unsigned_short;
+struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl; // 0x7E58D0
+struct BlitTransLucent50ZReadWrite_unsigned_short;
+struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl; // 0x7E5828
+struct BlitTransLucent75_unsigned_short;
+struct BlitTransLucent75_unsigned_short_vtbl; // 0x7E59D8
+struct BlitTransLucent75Alpha_unsigned_short;
+struct BlitTransLucent75Alpha_unsigned_short_vtbl; // 0x7E57B0
+struct BlitTransLucent75AlphaZRead_unsigned_short;
+struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl; // 0x7E56C0
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short;
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl; // 0x7E5678
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short;
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5600
+struct BlitTransLucent75ZRead_unsigned_short;
+struct BlitTransLucent75ZRead_unsigned_short_vtbl; // 0x7E5930
+struct BlitTransLucent75ZReadWarp_unsigned_short;
+struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl; // 0x7E58E8
+struct BlitTransLucent75ZReadWrite_unsigned_short;
+struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl; // 0x7E5840
 struct BlitTranslucentWriteAlpha_unsigned_short;
 struct BlitTranslucentWriteAlpha_unsigned_short_vtbl; // 0x7E5738
+struct BlitTransRemapDest_unsigned_char;
+struct BlitTransRemapDest_unsigned_char_vtbl; // 0x7E5B28
+struct BlitTransRemapXlat_unsigned_char;
+struct BlitTransRemapXlat_unsigned_char_vtbl; // 0x7E5B10
+struct BlitTransXlat_unsigned_char;
+struct BlitTransXlat_unsigned_char_vtbl; // 0x7E5B58
+struct BlitTransXlat_unsigned_short;
+struct BlitTransXlat_unsigned_short_vtbl; // 0x7E5A20
+struct BlitTransXlatAlpha_unsigned_short;
+struct BlitTransXlatAlpha_unsigned_short_vtbl; // 0x7E57E0
+struct BlitTransXlatAlphaZRead_unsigned_short;
+struct BlitTransXlatAlphaZRead_unsigned_short_vtbl; // 0x7E56F0
+struct BlitTransXlatAlphaZReadWrite_unsigned_short;
+struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5630
+struct BlitTransXlatMultWriteAlpha_unsigned_short;
+struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl; // 0x7E5750
+struct BlitTransXlatWriteAlpha_unsigned_short;
+struct BlitTransXlatWriteAlpha_unsigned_short_vtbl; // 0x7E5768
+struct BlitTransXlatZRead_unsigned_short;
+struct BlitTransXlatZRead_unsigned_short_vtbl; // 0x7E5978
+struct BlitTransXlatZReadWrite_unsigned_short;
+struct BlitTransXlatZReadWrite_unsigned_short_vtbl; // 0x7E5888
+struct BlitTransZRemapXlat_unsigned_char;
+struct BlitTransZRemapXlat_unsigned_char_vtbl; // 0x7E5B40
+struct BlitTransZRemapXlat_unsigned_short;
+struct BlitTransZRemapXlat_unsigned_short_vtbl; // 0x7E5A08
+struct BlitTransZRemapXlatAlpha_unsigned_short;
+struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl; // 0x7E57C8
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short;
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl; // 0x7E56D8
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short;
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5618
+struct BlitTransZRemapXlatZRead_unsigned_short;
+struct BlitTransZRemapXlatZRead_unsigned_short_vtbl; // 0x7E5960
+struct BlitTransZRemapXlatZReadWrite_unsigned_short;
+struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl; // 0x7E5870
 struct BlowPipe;
 struct BlowPipe_vtbl; // 0x7EFDC8
 struct BlowStraw;
 struct BlowStraw_vtbl; // 0x7EDF40
+struct BombClass; // : AbstractClass
+struct BombClass_vtbl; // 0x7E3D10
+struct BombListClass;
+struct BounceClass;
+struct BSurface; // : XSurface : Surface
+struct BSurface_vtbl; // 0x7E2070
+struct BufferIOFileClass; // : RawFileClass : FileClass
+struct BufferIOFileClass_vtbl; // 0x7E3A2C
 struct BufferPipe;
 struct BufferPipe_vtbl; // 0x7E6200
 struct BufferStraw;
 struct BufferStraw_vtbl; // 0x7E61E0
+struct BuildingAnimFrameStruct;
+struct BuildingAnimStruct;
+struct BuildingClass; // : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
+struct BuildingClass_vtbl; // 0x7E3EBC
+struct BuildingLightClass; // : ObjectClass : AbstractClass
+struct BuildingLightClass_vtbl; // 0x7E3AD0
+struct BuildingTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct BuildingTypeClass_vtbl; // 0x7E4570
+struct BuildType;
+struct BulletClass; // : ObjectClass : AbstractClass
+struct BulletClass_vtbl; // 0x7E46E4
+struct BulletData;
+struct BulletTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct BulletTypeClass_vtbl; // 0x7E4948
+struct BytePalette;
+struct CacheStraw;
+struct CacheStraw_vtbl; // 0x7EB754
+struct CampaignClass; // : AbstractTypeClass : AbstractClass
+struct CampaignClass_vtbl; // 0x7E4A28
+struct CampaignEndScoreClass;
+struct CampaignEndScoreClass_vtbl; // 0x7E4AB8
+struct CampaignScoreClass;
+struct CampaignScoreClass_vtbl; // 0x7E4AAC
+struct CaptureManagerClass; // : AbstractClass
+struct CaptureManagerClass_vtbl; // 0x7E4B40
+struct CarryoverClass;
+struct CarryoverClass_vtbl; // 0x7E4C04
+struct CCFileClass; // : CDFileClass : BufferIOFileClass : RawFileClass : FileClass
+struct CCFileClass_vtbl; // 0x7E16B0
+struct CCINIClass;
+struct CCINIClass_vtbl; // 0x7E1AF4
 struct CComObject_CChatEventSink;
 struct CComObject_CChatEventSink_vtbl; // 0x7F76B4
 struct CComObject_CDownloadEventSink;
 struct CComObject_CDownloadEventSink_vtbl; // 0x7F78E4
 struct CComObject_CNetUtilEventSink;
 struct CComObject_CNetUtilEventSink_vtbl; // 0x7F766C
+struct CCToolTip;
+struct CCToolTip_vtbl; // 0x7F74C4
 struct CD;
 struct CD_vtbl; // 0x7E4C30
-struct CStreamClass;
-struct CStreamClass_vtbl; // 0x7E5DAC
-struct CacheStraw;
-struct CacheStraw_vtbl; // 0x7EB754
-struct CampaignEndScoreClass;
-struct CampaignEndScoreClass_vtbl; // 0x7E4AB8
-struct CampaignScoreClass;
-struct CampaignScoreClass_vtbl; // 0x7E4AAC
-struct CarryoverClass;
-struct CarryoverClass_vtbl; // 0x7E4C04
+struct CDFileClass; // : BufferIOFileClass : RawFileClass : FileClass
+struct CDFileClass_vtbl; // 0x7E1668
+struct CellClass; // : AbstractClass
+struct CellClass_vtbl; // 0x7E4EEC
+struct CellLevelPassabilityStruct;
 struct CenterBaseCommandClass;
 struct CenterBaseCommandClass_vtbl; // 0x7EBB1C
 struct CenterREventCommandClass;
@@ -1712,64 +271,247 @@ struct CenterTeamCommandClass;
 struct CenterTeamCommandClass_vtbl; // 0x7EBEB4
 struct CenterViewCommandClass;
 struct CenterViewCommandClass_vtbl; // 0x7EBAF4
+struct ChangeLinkHouseStruct;
+struct CheckListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
+struct CheckListClass_vtbl; // 0x7E4F84
+struct Color16Struct;
+struct ColorListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
+struct ColorListClass_vtbl; // 0x7E5054
+struct ColorScheme;
+struct ColorStruct;
 struct CombatantSelectCommandClass;
 struct CombatantSelectCommandClass_vtbl; // 0x7EB98C
+struct CommandClass; // FIXME Command Tree Base (Subs exist)
+struct CommandClass_vtbl; // 0x7EBE3C
+struct CommBufferClass;
+struct CommBufferClass_vtbl;
+struct ConnectionClass;
+struct ConnectionClass_vtbl;
 struct ConnectionPointClass;
 struct ConnectionPointClass_vtbl; // 0x7E5CE4
+struct ConnManClass;
+struct ConnManClass_vtbl;
+struct ControlClass; // : GadgetClass : LinkClass
+struct ControlClass_vtbl; // 0x7E528C
+struct ControlNode;
+struct ConvertClass; // Convert Tree Base
+struct ConvertClass_vtbl; // 0x7E5358
+struct CounterClass;
+struct CounterClass_vtbl; // 0x7E5C54
+struct Crate;
+struct CRCEngine;
 struct CreateGameDialogControl;
 struct CreateGameDialogControl_vtbl; // 0x7F788C
 struct CreateTeamCommandClass;
 struct CreateTeamCommandClass_vtbl; // 0x7EB84C
+struct CSFLabel;
+struct CSFString;
+struct CStreamClass;
+struct CStreamClass_vtbl; // 0x7E5DAC
 struct CursorPositionCommandClass;
 struct CursorPositionCommandClass_vtbl; // 0x7EBF54
+struct DamageGroup;
 struct DeleteCommandClass;
 struct DeleteCommandClass_vtbl; // 0x7EBF7C
 struct DeployCommandClass;
 struct DeployCommandClass_vtbl; // 0x7EBA2C
 struct Dial8Class;
 struct Dial8Class_vtbl; // 0x7E5E3C
+struct DifficultyStruct;
+struct DirectDrawWrap;
+struct DirectDrawWrap_vtbl;
+struct DirStruct;
+struct DirtyAreaStruct;
+struct DiskLaserClass; // : AbstractClass
+struct DiskLaserClass_vtbl; // 0x7E5FB8
+struct DisplayClass; // : MapClass : GScreenClass
+struct DisplayClass_vtbl; // 0x7E6114
 struct DisplayClass_TacticalClass;
 struct DisplayClass_TacticalClass_vtbl; // 0x7E608C
+struct DriveLocomotionClass; // : LocomotionClass
+struct DriveLocomotionClass_vtbl; // 0x7E7F7C
+struct DropListClass; // : EditClass : ControlClass : GadgetClass : LinkClass
+struct DropListClass_vtbl; // 0x7E7FCC
+struct DropPodLocomotionClass; // : LocomotionClass
+struct DropPodLocomotionClass_vtbl; // 0x7E8344
+struct DropshipStruct;
+struct DSurface; // : XSurface : Surface
+struct DSurface_vtbl; // 0x7E85D4
+struct DynamicAddon;
+struct DynamicVectorClass__DDSURFACEDESC_PTR;
+struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5E0C
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR;
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED94C
+struct DynamicVectorClass_AbstractClass_PTR; // 0xB0F720 / 0x8A0390
+struct DynamicVectorClass_AbstractClass_PTR_vtbl; // 0x7E91EC
+struct DynamicVectorClass_AbstractTypeClass_PTR; // 0xA8E968
+struct DynamicVectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA524
 struct DynamicVectorClass_AcceleratorTracker;
 struct DynamicVectorClass_AcceleratorTracker_vtbl; // 0x7EECCC
+struct DynamicVectorClass_AircraftClass_PTR; // 0xA8E390
+struct DynamicVectorClass_AircraftClass_PTR_vtbl; // 0x7E9E64
+struct DynamicVectorClass_AircraftTypeClass_CPTR;
+struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_AircraftTypeClass_PTR; // 0xA8B218
+struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EACC8 / 0x7EA264
+struct DynamicVectorClass_AirstrikeClass_PTR; // 0x889FB8
+struct DynamicVectorClass_AirstrikeClass_PTR_vtbl; // 0x7E293C
+struct DynamicVectorClass_AITriggerTypeClass_PTR; // 0xA8B200
+struct DynamicVectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B64
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR; // 0x0x88A080
+struct DynamicVectorClass_AlphaLightingRemapClass_PTR_vtbl;
+struct DynamicVectorClass_AlphaShapeClass_PTR; // 0x88A0F0
+struct DynamicVectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3238
+struct DynamicVectorClass_AngerStruct;
+struct DynamicVectorClass_AngerStruct_vtbl; // 0x7EA924
+struct DynamicVectorClass_AnimClass_CPTR;
+struct DynamicVectorClass_AnimClass_CPTR_vtbl;
+struct DynamicVectorClass_AnimClass_PTR; // 0xA8E9A8 / 0xA9F9D0 / 0xA9FA18 / 0xA9FA60
+struct DynamicVectorClass_AnimClass_PTR_vtbl; // 0x7E9F24 / 0x7EBFCC
+struct DynamicVectorClass_AnimTypeClass_CPTR;
+struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_AnimTypeClass_PTR; // 0x8B4150
+struct DynamicVectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA2E4 / 0x7EB714
+struct DynamicVectorClass_BaseNodeClass;
+struct DynamicVectorClass_BaseNodeClass_vtbl; // 0x7E38B0
+struct DynamicVectorClass_BombClass_PTR; // 0x89C668
+struct DynamicVectorClass_BombClass_PTR_vtbl; // 0x7E17CC
+struct DynamicVectorClass_bool;
+struct DynamicVectorClass_bool_vtbl; // 0x7EAA7C
+struct DynamicVectorClass_BuildingClass_PTR; // 0x8B41E0 / 0xA8EB40
+struct DynamicVectorClass_BuildingClass_PTR_vtbl; // 0x7E9E24
+struct DynamicVectorClass_BuildingLightClass_PTR; // 0x8B4190
+struct DynamicVectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C24
+struct DynamicVectorClass_BuildingTypeClass_CPTR;
+struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_BuildingTypeClass_PTR; // 0xA83C68
+struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA224 / 0x7EAA28
+struct DynamicVectorClass_BulletClass_PTR; // 0x89DE18 / 0xA8ED40
+struct DynamicVectorClass_BulletClass_PTR_vtbl; // 0x7E4678
+struct DynamicVectorClass_BulletTypeClass_PTR; // 0xA83C80
+struct DynamicVectorClass_BulletTypeClass_PTR_vtbl; // 0x7EA364
 struct DynamicVectorClass_ButtonFadeEffect_PTR;
 struct DynamicVectorClass_ButtonFadeEffect_PTR_vtbl; // 0x7E856C
+struct DynamicVectorClass_CampaignClass_PTR;
+struct DynamicVectorClass_CampaignClass_PTR_vtbl; // 0x7E9FE4
+struct DynamicVectorClass_CaptureManagerClass_PTR; // 0x89E0F0
+struct DynamicVectorClass_CaptureManagerClass_PTR_vtbl; // 0x7E4AD4
+struct DynamicVectorClass_CCINIClass_PTR;
+struct DynamicVectorClass_CCINIClass_PTR_vtbl; // 0x7EB82C
+struct DynamicVectorClass_CellClass_PTR;
+struct DynamicVectorClass_CellClass_PTR_vtbl; // 0x7ED9BC
+struct DynamicVectorClass_CellStruct;
+struct DynamicVectorClass_CellStruct_vtbl; // 0x7E3890
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR;
+struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
+struct DynamicVectorClass_char_CPTR;
+struct DynamicVectorClass_char_CPTR_vtbl;
+struct DynamicVectorClass_char_PTR;
+struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5C04 / 0x7EE0B4
+struct DynamicVectorClass_Color16Struct_PTR;
+struct DynamicVectorClass_Color16Struct_PTR_vtbl;
+struct DynamicVectorClass_ColorScheme_PTR; // 0xB054D0
+struct DynamicVectorClass_ColorScheme_PTR_vtbl; // 0x7EF790
+struct DynamicVectorClass_CommandClass_CPTR;
+struct DynamicVectorClass_CommandClass_CPTR_vtbl;
+struct DynamicVectorClass_CommandClass_PTR; // 0x87F658
+struct DynamicVectorClass_CommandClass_PTR_vtbl; // 0x7E182C
+struct DynamicVectorClass_ControlNode_PTR;
+struct DynamicVectorClass_ControlNode_PTR_vtbl; // 0x7E4BA4
+struct DynamicVectorClass_ConvertClass_PTR; // 0x89ECF8
+struct DynamicVectorClass_ConvertClass_PTR_vtbl; // 0x7E5318
 struct DynamicVectorClass_CoopCampaignClass_PTR;
 struct DynamicVectorClass_CoopCampaignClass_PTR_vtbl; // 0x7EE350
 struct DynamicVectorClass_CrossDissolveEffect_PTR;
 struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl; // 0x7E854C
+struct DynamicVectorClass_DamageGroup_PTR;
+struct DynamicVectorClass_DamageGroup_PTR_vtbl; // 0x7E5170
 struct DynamicVectorClass_DirtyAreaStruct;
 struct DynamicVectorClass_DirtyAreaStruct_vtbl; // 0x7F429C
+struct DynamicVectorClass_DirtyAreaStruct_PTR; // 0xB0CE78
+struct DynamicVectorClass_DirtyAreaStruct_PTR_vtbl; // 0x7F429C
+struct DynamicVectorClass_DiskLaserClass_PTR; // 0x8A0208
+struct DynamicVectorClass_DiskLaserClass_PTR_vtbl; // 0x7E5EDC
 struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR;
 struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl; // 0x7F4860
 struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR;
 struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl; // 0x7EAAC4
 struct DynamicVectorClass_DistributionObject_CellClass_PTR;
 struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl; // 0x7E928C
+struct DynamicVectorClass_double;
+struct DynamicVectorClass_double_vtbl; // 0x7EDA6C
 struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR;
 struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl; // 0x7E5BE4
+struct DynamicVectorClass_EBolt_PTR; // 0x8A0E88
+struct DynamicVectorClass_EBolt_PTR_vtbl; // 0x7E868C
 struct DynamicVectorClass_EgoClass_PTR;
 struct DynamicVectorClass_EgoClass_PTR_vtbl; // 0x7E86DC
+struct DynamicVectorClass_EMPulseClass_PTR; // 0x8A3870
+struct DynamicVectorClass_EMPulseClass_PTR_vtbl; // 0x7E873C
+struct DynamicVectorClass_EventClass_PTR; // 0xAC4B48 / 0xB0F1A0
+struct DynamicVectorClass_EventClass_PTR_vtbl; // 0x7EFE04
+struct DynamicVectorClass_FactoryClass_PTR; // 0xA83E30
+struct DynamicVectorClass_FactoryClass_PTR_vtbl; // 0x7E9FA4
+struct DynamicVectorClass_FileEntryClass_PTR;
+struct DynamicVectorClass_FileEntryClass_PTR_vtbl; // 0x7ED30C
+struct DynamicVectorClass_FoggedObjectClass_PTR;
+struct DynamicVectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E44F4
+struct DynamicVectorClass_FoggedObjectDraw;
+struct DynamicVectorClass_FoggedObjectDraw_vtbl; // 0x7E8BA0
+struct DynamicVectorClass_FootClass_PTR; // 0x8B3DC0
+struct DynamicVectorClass_FootClass_PTR_vtbl; // 0x7E8C28
 struct DynamicVectorClass_GlobalPacketType_PTR;
 struct DynamicVectorClass_GlobalPacketType_PTR_vtbl; // 0x7F11D4
-struct DynamicVectorClass_HSVClass;
-struct DynamicVectorClass_HSVClass_vtbl; // 0x7EF750
+struct DynamicVectorClass_GraphicMenuItem_PTR;
+struct DynamicVectorClass_GraphicMenuItem_PTR_vtbl;
 struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct;
 struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl; // 0x7ED520
 struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int;
 struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl; // 0x7ED540
 struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR;
 struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl; // 0x7EA7B4
+struct DynamicVectorClass_HouseClass_PTR; // 0xA80228
+struct DynamicVectorClass_HouseClass_PTR_vtbl; // 0x7E9EE4
+struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR;
+struct DynamicVectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA944
+struct DynamicVectorClass_HouseTypeClass_PTR; // 0xA83C98
+struct DynamicVectorClass_HouseTypeClass_PTR_vtbl; // 0x7EA064
+struct DynamicVectorClass_HSVClass;
+struct DynamicVectorClass_HSVClass_vtbl; // 0x7EF750
+struct DynamicVectorClass_HWND___PTR;
+struct DynamicVectorClass_HWND___PTR_vtbl; // 0x7EEC8C
+struct DynamicVectorClass_IConnectionPoint_PTR;
+struct DynamicVectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D48
+struct DynamicVectorClass_InfantryClass_PTR; // 0xA83DE8
+struct DynamicVectorClass_InfantryClass_PTR_vtbl; // 0x7E43C8
+struct DynamicVectorClass_InfantryTypeClass_CPTR;
+struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_InfantryTypeClass_PTR; // 0xA8E348
+struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC88 / 0x7EA324
+struct DynamicVectorClass_int;
+struct DynamicVectorClass_int_vtbl; // 0x7E4E78
+struct DynamicVectorClass_IonBlastClass_PTR; // 0xAA0118
+struct DynamicVectorClass_IonBlastClass_PTR_vtbl; // 0x7EC05C
+struct DynamicVectorClass_IsometricTileClass_PTR; // 0x87F750
+struct DynamicVectorClass_IsometricTileClass_PTR_vtbl; // 0x7E18BC
+struct DynamicVectorClass_IsometricTileTypeClass_PTR; // 0xA8ED28
+struct DynamicVectorClass_IsometricTileTypeClass_PTR_vtbl; // 0x7EA3E4
 struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR;
 struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl; // 0x7ECBDC
+struct DynamicVectorClass_Kamikaze_PTR; // 0xABC604
+struct DynamicVectorClass_Kamikaze_PTR_vtbl;
+struct DynamicVectorClass_KamikazeControl_PTR;
+struct DynamicVectorClass_KamikazeControl_PTR_vtbl; // 0x7ECE7C
+struct DynamicVectorClass_LaserDrawClass_PTR; // 0xABC878
+struct DynamicVectorClass_LaserDrawClass_PTR_vtbl; // 0x7ECEDC
+struct DynamicVectorClass_LightConvertClass_PTR; // 0x87F698
+struct DynamicVectorClass_LightConvertClass_PTR_vtbl; // 0x7E186C
 struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR;
 struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl; // 0x7ECFBC
-struct DynamicVectorClass_MPlayerScoreType_PTR;
-struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3F0
-struct DynamicVectorClass_MSSfx_PTR;
-struct DynamicVectorClass_MSSfx_PTR_vtbl; // 0x7EEBE4
-struct DynamicVectorClass_MSTextEntry_PTR;
-struct DynamicVectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB34
+struct DynamicVectorClass_LightSourceClass_PTR; // 0xABCA10
+struct DynamicVectorClass_LightSourceClass_PTR_vtbl; // 0x7ECF7C
+struct DynamicVectorClass_LineTrail_PTR; // 0xABCB78
+struct DynamicVectorClass_LineTrail_PTR_vtbl; // 0x7ED0CC
 struct DynamicVectorClass_MapRegionClass_PTR;
 struct DynamicVectorClass_MapRegionClass_PTR_vtbl; // 0x7ED858
 struct DynamicVectorClass_MapSelection_PTR;
@@ -1780,44 +522,408 @@ struct DynamicVectorClass_MixFileClass_PTR;
 struct DynamicVectorClass_MixFileClass_PTR_vtbl; // 0x7E1A44
 struct DynamicVectorClass_MovieHandle_PTR;
 struct DynamicVectorClass_MovieHandle_PTR_vtbl; // 0x7F6984
+struct DynamicVectorClass_MPGameModeClass_PTR; // 0xABFDA0
+struct DynamicVectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED20
+struct DynamicVectorClass_MPlayerScoreType_PTR;
+struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3F0
+struct DynamicVectorClass_MPTeam_PTR;
+struct DynamicVectorClass_MPTeam_PTR_vtbl; // 0x7EEE34
+struct DynamicVectorClass_MSAnim_PTR;
+struct DynamicVectorClass_MSAnim_PTR_vtbl;
+struct DynamicVectorClass_MSAnimEntry_PTR;
+struct DynamicVectorClass_MSAnimEntry_PTR_vtbl;
+struct DynamicVectorClass_MSSfx_PTR;
+struct DynamicVectorClass_MSSfx_PTR_vtbl; // 0x7EEBE4
+struct DynamicVectorClass_MSSfxEntry_PTR;
+struct DynamicVectorClass_MSSfxEntry_PTR_vtbl;
+struct DynamicVectorClass_MSTextEntry_PTR;
+struct DynamicVectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB34
+struct DynamicVectorClass_MultiMission_CPTR;
+struct DynamicVectorClass_MultiMission_CPTR_vtbl;
+struct DynamicVectorClass_MultiMission_PTR;
+struct DynamicVectorClass_MultiMission_PTR_vtbl; // 0x7EEF70 / 0x7F11F4
+struct DynamicVectorClass_NodeNameType_PTR; // 0xA8DA74
+struct DynamicVectorClass_NodeNameType_PTR_vtbl; // 0x7EE370
+struct DynamicVectorClass_ObjectClass_PTR; // 0x87F778 (LogicClass) / 0x8A0360 / 0xA8E360 / 0xA8ECB8 / 0xB0F698 / 0xAC1418
+struct DynamicVectorClass_ObjectClass_PTR_vtbl; // 0x7E4F64
+struct DynamicVectorClass_ObjectTypeClass_PTR;
+struct DynamicVectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF26C
+struct DynamicVectorClass_OverlayClass_PTR; // 0xA8EC50
+struct DynamicVectorClass_OverlayClass_PTR_vtbl; // 0x7E9D24
+struct DynamicVectorClass_OverlayTypeClass_PTR; // 0xA83D80
+struct DynamicVectorClass_OverlayTypeClass_PTR_vtbl; // 0x7EA164
 struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR;
 struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl; // 0x7F0C2C
+struct DynamicVectorClass_ParasiteClass_PTR; // 0xAC4910
+struct DynamicVectorClass_ParasiteClass_PTR_vtbl; // 0x7EF824
+struct DynamicVectorClass_ParticleClass_PTR; // 0xA83DC8
+struct DynamicVectorClass_ParticleClass_PTR_vtbl; // 0x7E9D64
+struct DynamicVectorClass_ParticleSystemClass_PTR; // 0xA80208
+struct DynamicVectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C64
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR;
+struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_ParticleSystemTypeClass_PTR; // 0xA83D68
+struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4444 / 0x7EA464
+struct DynamicVectorClass_ParticleTypeClass_PTR; // 0xA83D98
+struct DynamicVectorClass_ParticleTypeClass_PTR_vtbl; // 0x7EA424
+struct DynamicVectorClass_PassabilityType;
+struct DynamicVectorClass_PassabilityType_vtbl; // 0x7ED580
 struct DynamicVectorClass_PhoneEntryClass_PTR;
 struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl; // 0x7F11B4
+struct DynamicVectorClass_PlanningBranchClass_PTR;
+struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFEC4
+struct DynamicVectorClass_PlanningMemberClass_PTR;
+struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFEE4
+struct DynamicVectorClass_PlanningNodeClass_PTR; // 0xAC4B30 / 0xAC4C18 / 0xAC4C98
+struct DynamicVectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE44
+struct DynamicVectorClass_PlanningTokenClass_PTR; // 0xAC4C78
+struct DynamicVectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFE84
+struct DynamicVectorClass_Point2D;
+struct DynamicVectorClass_Point2D_vtbl; // 0x7EEB54
+struct DynamicVectorClass_RadarEventClass_PTR; // 0xB04DA8
+struct DynamicVectorClass_RadarEventClass_PTR_vtbl; // 0x7F0AAC
+struct DynamicVectorClass_RadBeam_PTR; // 0xB04A60
+struct DynamicVectorClass_RadBeam_PTR_vtbl; // 0x7F0484
+struct DynamicVectorClass_RadSiteClass_PTR; // 0xB04BD0
+struct DynamicVectorClass_RadSiteClass_PTR_vtbl; // 0x7F07A4
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR;
+struct DynamicVectorClass_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR;
+struct DynamicVectorClass_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR;
+struct DynamicVectorClass_rc_ptr_WDT_Territory_PTR_vtbl;
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR;
+struct DynamicVectorClass_rc_ptr_WDTTerritory_PTR_vtbl;
 struct DynamicVectorClass_RGBClass;
 struct DynamicVectorClass_RGBClass_vtbl; // 0x7F022C
+struct DynamicVectorClass_RGBClass_PTR;
+struct DynamicVectorClass_RGBClass_PTR_vtbl; // 0x7F022C
+struct DynamicVectorClass_ScoutStruct;
+struct DynamicVectorClass_ScoutStruct_vtbl; // 0x7EA904
+struct DynamicVectorClass_ScriptClass_PTR; // 0x8872B0
+struct DynamicVectorClass_ScriptClass_PTR_vtbl; // 0x7E1B24
+struct DynamicVectorClass_ScriptTypeClass_PTR; // 0x8B41C8
+struct DynamicVectorClass_ScriptTypeClass_PTR_vtbl; // 0x7EA124
 struct DynamicVectorClass_ShadowControlClass_PTR;
 struct DynamicVectorClass_ShadowControlClass_PTR_vtbl; // 0x7F42DC
+struct DynamicVectorClass_SideClass_PTR; // 0x8B4120
+struct DynamicVectorClass_SideClass_PTR_vtbl; // 0x7EA024
+struct DynamicVectorClass_SlaveManagerClass_PTR; // 0xB0B5F0
+struct DynamicVectorClass_SlaveManagerClass_PTR_vtbl; // 0x7F315C
+struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR;
+struct DynamicVectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F322C
+struct DynamicVectorClass_SmudgeClass_PTR; // 0xA8B1E0
+struct DynamicVectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DA4
+struct DynamicVectorClass_SmudgeTypeClass_CPTR;
+struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_SmudgeTypeClass_PTR; // 0xA8EC18
+struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0DEC / 0x7EA1A4
+struct DynamicVectorClass_SpawnManagerClass_PTR; // 0xB0B880
+struct DynamicVectorClass_SpawnManagerClass_PTR_vtbl; // 0x7F35E4
+struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR;
+struct DynamicVectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl; // 0x7F36B4
+struct DynamicVectorClass_SpotLightClass_PTR; // 0xAC1678
+struct DynamicVectorClass_SpotLightClass_PTR_vtbl; // 0x7EF6BC
 struct DynamicVectorClass_SubTitle_PTR;
 struct DynamicVectorClass_SubTitle_PTR_vtbl; // 0x7F3F6C
+struct DynamicVectorClass_SubzoneConnectionStruct;
+struct DynamicVectorClass_SubzoneConnectionStruct_vtbl; // 0x7ED5A0
+struct DynamicVectorClass_SubzoneConnectionTable;
+struct DynamicVectorClass_SubzoneConnectionTable_vtbl;
+struct DynamicVectorClass_SubzoneTrackingStruct;
+struct DynamicVectorClass_SubzoneTrackingStruct_vtbl; // 0x7ED4A0
+struct DynamicVectorClass_SuperClass_PTR; // 0xA83CB8 / 0xA83D50
+struct DynamicVectorClass_SuperClass_PTR_vtbl; // 0x7EA4E4
+struct DynamicVectorClass_SuperWeaponTypeClass_PTR; // 0xA8E330
+struct DynamicVectorClass_SuperWeaponTypeClass_PTR_vtbl; // 0x7EA4A4
+struct DynamicVectorClass_SwizzlePointerClass;
+struct DynamicVectorClass_SwizzlePointerClass_vtbl; // 0x7F4134
+struct DynamicVectorClass_TActionClass_PTR; // 0xB0E658
+struct DynamicVectorClass_TActionClass_PTR_vtbl; // 0x7F43D0
+struct DynamicVectorClass_TagClass_PTR; // 0x8B40C8 / 0x8B41A8 / 0xB0E720
+struct DynamicVectorClass_TagClass_PTR_vtbl; // 0x7EA5A4
+struct DynamicVectorClass_tagCONNECTDATA;
+struct DynamicVectorClass_tagCONNECTDATA_vtbl; // 0x7E5CC4
+struct DynamicVectorClass_TagTypeClass_PTR; // 0xB0E780
+struct DynamicVectorClass_TagTypeClass_PTR_vtbl; // 0x7F4558
+struct DynamicVectorClass_TaskForceClass_PTR; // 0xA8E8D0
+struct DynamicVectorClass_TaskForceClass_PTR_vtbl; // 0x7EA0A4
+struct DynamicVectorClass_tConnInfoStruct_PTR;
+struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78C4
+struct DynamicVectorClass_TeamClass_PTR; // 0x8B40E8
+struct DynamicVectorClass_TeamClass_PTR_vtbl; // 0x7E9F64
+struct DynamicVectorClass_TeamTypeClass_CPTR;
+struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_TeamTypeClass_PTR; // 0xA8ECA0
+struct DynamicVectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA0E4 / 0x7EAAE8
+struct DynamicVectorClass_TechnoClass_PTR; // 0xA8EC78 / 0xAC4C40
+struct DynamicVectorClass_TechnoClass_PTR_vtbl; // 0x7E17AC
+struct DynamicVectorClass_TechnoTypeClass_CPTR;
+struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_TechnoTypeClass_PTR; // 0xA8EB00
+struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E858C / 0x7E8934
+struct DynamicVectorClass_TemporalClass_PTR; // 0xB0EC60
+struct DynamicVectorClass_TemporalClass_PTR_vtbl; // 0x7F5114
+struct DynamicVectorClass_TerrainClass_PTR; // 0xA8E988
+struct DynamicVectorClass_TerrainClass_PTR_vtbl; // 0x7E9DE4
+struct DynamicVectorClass_TerrainTypeClass_CPTR;
+struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_TerrainTypeClass_PTR; // 0xA8E318
+struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0E0C / 0x7EA1E4
+struct DynamicVectorClass_TEventClass_PTR; // 0xB0F1A0
+struct DynamicVectorClass_TEventClass_PTR_vtbl; // 0x7F550C
+struct DynamicVectorClass_ThemeClass_PTR;
+struct DynamicVectorClass_ThemeClass_PTR_vtbl;
+struct DynamicVectorClass_ThemeControl_PTR;
+struct DynamicVectorClass_ThemeControl_PTR_vtbl; // 0x7F568C
+struct DynamicVectorClass_TiberiumClass_PTR; // 0xB0F4E8
+struct DynamicVectorClass_TiberiumClass_PTR_vtbl; // 0x7F56BC
+struct DynamicVectorClass_ToolTip_CPTR;
+struct DynamicVectorClass_ToolTip_CPTR_vtbl;
+struct DynamicVectorClass_ToolTip_PTR;
+struct DynamicVectorClass_ToolTip_PTR_vtbl; // 0x7F57C8
+struct DynamicVectorClass_TRect_int;
+struct DynamicVectorClass_TRect_int_vtbl;
+struct DynamicVectorClass_TriggerClass_PTR; // 0xA8EAE8
+struct DynamicVectorClass_TriggerClass_PTR_vtbl; // 0x7E9BE4
+struct DynamicVectorClass_TriggerTypeClass_PTR; // 0x8B4178
+struct DynamicVectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BA4
+struct DynamicVectorClass_TubeClass_PTR; // 0x8B4138
+struct DynamicVectorClass_TubeClass_PTR_vtbl;
 struct DynamicVectorClass_UndoInfoStruct;
 struct DynamicVectorClass_UndoInfoStruct_vtbl; // 0x7F327C
+struct DynamicVectorClass_UnitClass_PTR; // 0x8B4108
+struct DynamicVectorClass_UnitClass_PTR_vtbl; // 0x7E9EA4
+struct DynamicVectorClass_UnitTypeClass_CPTR;
+struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_UnitTypeClass_PTR; // 0xA83CE0
+struct DynamicVectorClass_UnitTypeClass_PTR_vtbl; // 0x7EACA8 / 0x7EA2A4
+struct DynamicVectorClass_unsigned_char_PTR;
+struct DynamicVectorClass_unsigned_char_PTR_vtbl; // 0x7F7AEC
+struct DynamicVectorClass_unsigned_int;
+struct DynamicVectorClass_unsigned_int_vtbl; // 0x7E37CC
+struct DynamicVectorClass_unsigned_long; // 0xB0BC88
+struct DynamicVectorClass_unsigned_long_vtbl; // 0x7F3728
+struct DynamicVectorClass_unsigned_short;
+struct DynamicVectorClass_unsigned_short_vtbl; // 0x7E3844
+struct DynamicVectorClass_unsigned_short_CPTR;
+struct DynamicVectorClass_unsigned_short_CPTR_vtbl;
+struct DynamicVectorClass_unsigned_short_PTR;
+struct DynamicVectorClass_unsigned_short_PTR_vtbl; // 0x7ECCEC / 0x7ED1DC
+struct DynamicVectorClass_VeinholeMonsterClass_PTR; // 0xB1D290
+struct DynamicVectorClass_VeinholeMonsterClass_PTR_vtbl; // 0x7F663C
+struct DynamicVectorClass_VocClass_PTR; // 0xB1D378
+struct DynamicVectorClass_VocClass_PTR_vtbl; // 0x7F68AC
+struct DynamicVectorClass_VoxClass_PTR; // 0xB1D4A0
+struct DynamicVectorClass_VoxClass_PTR_vtbl; // 0x7F6904
+struct DynamicVectorClass_VoxelAnimClass_PTR; // 0x887388
+struct DynamicVectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E2C
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR;
+struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl;
+struct DynamicVectorClass_VoxelAnimTypeClass_PTR; // 0xA8EB28
+struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0DCC / 0x7EA3A4
+struct DynamicVectorClass_WarheadTypeClass_PTR; // 0x8874C0
+struct DynamicVectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1E84
+struct DynamicVectorClass_WaveClass_PTR; // 0xA8EC38
+struct DynamicVectorClass_WaveClass_PTR_vtbl; // 0x7E9CE4
+struct DynamicVectorClass_WaypointClass;
+struct DynamicVectorClass_WaypointClass_vtbl; // 0x7F6ED4
+struct DynamicVectorClass_WaypointPathClass_PTR; // 0xB72608
+struct DynamicVectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E04
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR;
+struct DynamicVectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
+struct DynamicVectorClass_WeaponTypeClass_PTR; // 0x887568
+struct DynamicVectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1ED4
 struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR;
 struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl; // 0x7F7A1C
 struct DynamicVectorClass_Wstring;
 struct DynamicVectorClass_Wstring_vtbl; // 0x7F12B4
-struct DynamicVectorClass__DDSURFACEDESC_PTR;
-struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5E0C
-struct DynamicVectorClass__WIN32_FIND_DATAA_PTR;
-struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED94C
-struct DynamicVectorClass_tConnInfoStruct_PTR;
-struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78C4
-struct DynamicVectorClass_tagCONNECTDATA;
-struct DynamicVectorClass_tagCONNECTDATA_vtbl; // 0x7E5CC4
+struct DynamicVectorClass_ZoneConnectionClass;
+struct DynamicVectorClass_ZoneConnectionClass_vtbl; // 0x7ED4C0
+struct DynamicVectorClass_ZoneConnectionTable;
+struct DynamicVectorClass_ZoneConnectionTable_vtbl;
+struct EBolt;
+struct EditClass; // : ControlClass : GadgetClass : LinkClass
+struct EditClass_vtbl; // 0x7E81A4
+struct EMPulseClass; // : AbstractClass
+struct EMPulseClass_vtbl; // 0x7E87A8
 struct EnumConnectionPointsClass;
 struct EnumConnectionPointsClass_vtbl; // 0x7E5D28
 struct EnumConnectionsClass;
 struct EnumConnectionsClass_vtbl; // 0x7E5CA4
+struct EvadeClass;
+struct EventClass;
+struct EventClass_ABANDON;
+struct EventClass_ABANDON_ALL;
+struct EventClass_ABOUTTOEXIT;
+struct EventClass_ADDPLAYER;
+struct EventClass_ADDRESSCHANGE;
+struct EventClass_ALLCHEER;
+struct EventClass_ALLY;
+struct EventClass_ANIMATION;
+struct EventClass_ARCHIVE;
+struct EventClass_DEPLOY;
+struct EventClass_DESTRUCT;
+struct EventClass_DETONATE;
+struct EventClass_EMPTY;
+struct EventClass_EXIT;
+struct EventClass_FALLBACKHOST;
+struct EventClass_FRAMEINFO;
+struct EventClass_FRAMESYNC;
+struct EventClass_GAMESPEED;
+struct EventClass_IDLE;
+struct EventClass_LATENCYFUDGE;
+struct EventClass_MEGAFRAMEINFO;
+struct EventClass_MEGAMISSION;
+struct EventClass_MEGAMISSION_F;
+struct EventClass_MESSAGE;
+struct EventClass_OPTIONS;
+struct EventClass_PACKETTIMING;
+struct EventClass_PAGEUSER;
+struct EventClass_PLACE;
+struct EventClass_PLANCOMMIT;
+struct EventClass_PLANCONNECT;
+struct EventClass_PLANNODEDELETE;
+struct EventClass_POWEROFF;
+struct EventClass_POWERON;
+struct EventClass_PRIMARY;
+struct EventClass_PROCESS_TIME;
+struct EventClass_PRODUCE;
+struct EventClass_REMOVEPLAYER;
+struct EventClass_REPAIR;
+struct EventClass_RESPONSE_TIME;
+struct EventClass_SAVEGAME;
+struct EventClass_SCATTER;
+struct EventClass_SELL;
+struct EventClass_SELLCELL;
+struct EventClass_SPECIAL;
+struct EventClass_SPECIAL_PLACE;
+struct EventClass_SUSPEND;
+struct EventClass_TIMING;
+struct EventList_DoList;
+struct EventList_MegaMissionList;
+struct EventList_OutList;
+struct ExtendedRegister;
+struct FacingClass;
+struct FactoryClass; // : AbstractClass
+struct FactoryClass_vtbl; // 0x7E88D0
+struct FileClass; // File Tree Base
+struct FileClass_vtbl; // 0x7F08BC
+struct FileEntryClass;
 struct FilePipe;
 struct FilePipe_vtbl; // 0x7E4DA0
 struct FileStraw;
 struct FileStraw_vtbl; // 0x7E4D90
+struct FixedString_128_A_wchar_t;
+struct FixedString_32_A_char;
+struct FixedString_64_A_wchar_t;
+struct FixedString_TL_25_A_char_TR_;
+struct FlashData;
+struct FlyLocomotionClass; // : LocomotionClass
+struct FlyLocomotionClass_vtbl; // 0x7E8AC0
+struct FoggedObjectClass; // : AbstractClass
+struct FoggedObjectClass_vtbl; // 0x7E8B38
+struct FoggedObjectDraw;
+struct FoggedObjectRenderStruct;
+struct FoggedObjectRenderVector;
 struct FollowCommandClass;
 struct FollowCommandClass_vtbl; // 0x7EBDC4
+struct FootClass; // : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
+struct FootClass_vtbl; // 0x7E8C94
+struct FoundationCellsStruct;
+struct FoundationStruct;
+struct FrameTimer;
+struct GadgetClass; // : LinkClass
+struct GadgetClass_vtbl; // 0x7E92BC
+struct GameModeOptionsClass;
+struct GameOptionsClass;
+struct GaugeClass; // : ControlClass : GadgetClass : LinkClass
+struct GaugeClass_vtbl; // 0x7E9384
+struct GenericList;
+struct GenericList_vtbl; // 0x7E1B04
+struct GenericNode;
+struct GenericNode_vtbl; // 0x7E1B0C
+struct GetCDClass;
+struct GGadgetClass; // : GadgetClass : LinkClass
+struct GGadgetClass_vtbl; // 0x7F02BC
+struct GraphicMenu; // 0x7EA5FC
+struct GraphicMenu_vtbl;
+struct GraphicMenuAnimItem; // 0x7EA658
+struct GraphicMenuAnimItem_vtbl; // 0x007EA658
+struct GraphicMenuImageItem; // 0x7EA674
+struct GraphicMenuImageItem_vtbl; // 0x007EA674
+struct GraphicMenuItem; // 0x7EA690
+struct GraphicMenuItem_vtbl;
+struct GraphicMenuShortcutItem; // 0x7EA6AC
+struct GraphicMenuShortcutItem_vtbl; // 0x007EA6AC
+struct GroundType;
+struct GScreenClass; // GScreen Tree Base
+struct GScreenClass_vtbl; // 0x7EA6FC
 struct GuardCommandClass;
 struct GuardCommandClass_vtbl; // 0x7EBAA4
 struct HealthNavCommandClass;
 struct HealthNavCommandClass_vtbl; // 0x7EB93C
+struct HierarchyConnectionTableManager;
+struct HierarchyConnectionTables;
+struct HouseClass; // : AbstractClass
+struct HouseClass_vtbl; // 0x7EA8A0
+struct HouseClass_StartingTechnoStruct;
+struct HouseTypeClass; // : AbstractTypeClass : AbstractClass
+struct HouseTypeClass_vtbl; // 0x7EAB58
+struct HoverLocomotionClass; // : LocomotionClass
+struct HoverLocomotionClass_vtbl; // 0x7EADC8
+struct HWND__;
+struct IAIHouse;
+struct IAIHouse_vtbl;
+struct IApplication;
+struct IApplication_vtbl;
+struct IConnectionPoint;
+struct IConnectionPoint_vtbl;
+struct IConnectionPointContainer;
+struct IConnectionPointContainer_vtbl;
+struct IEnumConnectionPoints;
+struct IEnumConnectionPoints_vtbl;
+struct IEnumConnections;
+struct IEnumConnections_vtbl;
+struct IFlyControl;
+struct IFlyControl_vtbl;
+struct IGameMap;
+struct IGameMap_vtbl;
+struct IHouse;
+struct IHouse_vtbl;
+struct ILocomotion;
+struct ILocomotion_vtbl; // XXX Adjacent to LocoVTable
+struct In_addr;
+struct In_addr_unnamed_type_un_u_b;
+struct In_addr_unnamed_type_un_u_w;
+struct IndexBitfield_TL_HouseClass_PTR_TR_;
+struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_;
+struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement;
+struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_;
+struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement;
+struct IndexClass_TL_int_A_int_TR_;
+struct IndexClass_TL_int_A_int_TR_NodeElement;
+struct IndexClass_TL_int_A_ToolTip_PTR_TR_;
+struct IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement;
+struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
+struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
+struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
+struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
+struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
+struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
+struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
+struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
+struct InfantryClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
+struct InfantryClass_vtbl; // 0x7EB058
+struct InfantryTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct InfantryTypeClass_vtbl; // 0x7EB610
+struct INIClass;
+struct INIClass_vtbl; // 0x7EA5F4
+struct INIClass_INIComment;
+struct INIClass_INIEntry;
+struct INIClass_INIEntry_vtbl; // 0x7EB734
+struct INIClass_INISection;
+struct INIClass_INISection_vtbl; // 0x7EB73C
 struct Initializer_FreeForAll;
 struct Initializer_FreeForAll_vtbl; // 0x7EEE8C
 struct Initializer_MPCooperative;
@@ -1830,14 +936,107 @@ struct Initializer_MultiplayerSiege;
 struct Initializer_MultiplayerSiege_vtbl; // 0x7EEEA4
 struct Initializer_UnholyAlliance;
 struct Initializer_UnholyAlliance_vtbl; // 0x7EEE98
+struct INoticeSink;
+struct INoticeSink_vtbl; // XXX Adjacent to AbsVTable
+struct INoticeSource;
+struct INoticeSource_vtbl; // XXX Adjacent to AbsVTable
+struct InputManagerClass; // 0x87F770
+struct IonBlastClass;
+struct IPersist;
+struct IPersist_vtbl;
+struct IPersistStream;
+struct IPersistStream_vtbl;
+struct IPiggyback;
+struct IPiggyback_vtbl; // XXX Adjacent to LocoVTable
+struct IPublicHouse;
+struct IPublicHouse_vtbl;
+struct IPXAddressClass;
+struct IPXConnClass;
+struct IPXConnClass_vtbl;
+struct IPXGlobalConnClass;
+struct IPXGlobalConnClass_vtbl;
+struct IPXInterfaceClass;
+struct IPXInterfaceClass_vtbl;
+struct IPXManagerClass;
+struct IPXManagerClass_vtbl;
+struct IRTTITypeInfo;
+struct IRTTITypeInfo_vtbl; // XXX Adjacent to AbsVTable
+struct ISequentialStream;
+struct ISequentialStream_vtbl;
+struct IsometricTileClass; // : ObjectClass : AbstractClass
+struct IsometricTileClass_vtbl; // 0x7EC258
+struct IsometricTileTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct IsometricTileTypeClass_vtbl; // 0x7ECC48
+struct IStream;
+struct IStream_vtbl;
+struct ISwizzle;
+struct ISwizzle_vtbl;
+struct IUnknown;
+struct IUnknown_vtbl;
+struct JumpjetLocomotionClass; // : LocomotionClass
+struct JumpjetLocomotionClass_vtbl; // 0x7ECE34
+struct Kamikaze;
+struct KamikazeControl;
+struct Large_Int_unnamed_type_s;
+struct Large_Int_unnamed_type_u;
+struct LaserDrawClass;
+struct LayerClass; // Layer Tree Base ( : DynamicVectorClass_ObjectClass_PTR)
+struct LayerClass_vtbl; // 0x7E6060
 struct LCWPipe;
 struct LCWPipe_vtbl; // 0x7ECF2C
 struct LCWStraw;
 struct LCWStraw_vtbl; // 0x7ECF44
+struct LevelAndPassabilityStruct2;
+struct LightConvertClass; // : ConvertClass
+struct LightConvertClass_vtbl; // 0x7ED0A4
+struct LightingStruct;
+struct LightSourceClass; // : AbstractClass
+struct LightSourceClass_vtbl; // 0x7ED028
+struct LimitedRegister;
+struct LineTrail;
+struct LineTrailNode;
+struct LinkClass; // Link Tree Base
+struct LinkClass_vtbl; // 0x7E9344
+struct List_TL_INIClass_INIEntry_PTR_TR_;
+struct List_TL_INIClass_INIEntry_PTR_TR__vtbl; // 0x7EB744
+struct List_TL_INIClass_INISection_PTR_TR_;
+struct List_TL_INIClass_INISection_PTR_TR__vtbl; // 0x7E1AFC
+struct ListClass; // : ControlClass : GadgetClass : LinkClass
+struct ListClass_vtbl; // 0x7ED10C
+struct LoadOptionsClass;
+struct LoadOptionsClass_vtbl; // 0x7ED2E4
+struct LoadProgressManager;
+struct LoadProgressManager_vtbl;
+struct LocomotionClass; // Locomotion Tree Base
+struct LocomotionClass_vtbl; // 0x7EAEC0
+struct LocomotionID;
+struct LogicClass; // : LayerClass
+struct LogicClass_vtbl; // 0x7E18FC
+struct LTRBStruct;
 struct LZOPipe;
 struct LZOPipe_vtbl; // 0x7ED37C
 struct LZOStraw;
 struct LZOStraw_vtbl; // 0x7ED394
+struct MainVoxelIndexKey;
+struct MapClass; // : GScreenClass
+struct MapClass_vtbl; // 0x7ED404
+struct MapSeedClass;
+struct MapSeedClass_vtbl; // 0x7ED8E4
+struct MapSelect;
+struct MapSelect_vtbl; // 0x7EDB4C
+struct Matrix3D;
+struct MechLocomotionClass; // : LocomotionClass
+struct MechLocomotionClass_vtbl; // 0x7EDC38
+struct MemoryBuffer;
+struct MessageListClass;
+struct MissionClass; // : ObjectClass : AbstractClass
+struct MissionClass_vtbl; // 0x7EDCC0
+struct MotLib;
+struct Mouse;
+struct Mouse_vtbl; // 0x7F7B78
+struct MouseClass; // 0x87F7E8 (4CurrentPlayer)  : ScrollClass : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
+struct MouseClass_vtbl; // 0x7E1964
+struct MouseThreadClass;
 struct MPBattleClass;
 struct MPBattleClass_vtbl; // 0x7EE184
 struct MPCombatTeam;
@@ -1846,6 +1045,8 @@ struct MPCooperative;
 struct MPCooperative_vtbl; // 0x7EE27C
 struct MPFreeForAllClass;
 struct MPFreeForAllClass_vtbl; // 0x7EE424
+struct MPGameModeClass; // FIXME MPGameMode Tree Base (Subs exist)
+struct MPGameModeClass_vtbl; // 0x7EED60
 struct MPGameModeClass_InitializerBase;
 struct MPGameModeClass_InitializerBase_vtbl; // 0x7EEE74
 struct MPManBattleClass;
@@ -1860,8 +1061,12 @@ struct MPSiegeClass;
 struct MPSiegeClass_vtbl; // 0x7EE6FC
 struct MPSiegeDefenderTeam;
 struct MPSiegeDefenderTeam_vtbl; // 0x7EE7E4
+struct MPTeam;
+struct MPTeam_vtbl; // 0x7EEEDC
 struct MPUnholyAllianceClass;
 struct MPUnholyAllianceClass_vtbl; // 0x7EE814
+struct MSAnim;
+struct MSAnimEntry;
 struct MSBinkAnim;
 struct MSBinkAnim_vtbl; // 0x7EE988
 struct MSBitPrintAnim;
@@ -1880,32 +1085,62 @@ struct MSPCXAnim;
 struct MSPCXAnim_vtbl; // 0x7EEA2C
 struct MSPrintAnim;
 struct MSPrintAnim_vtbl; // 0x7EEA00
+struct MSSfxEntry;
 struct MSShapeAnim;
 struct MSShapeAnim_vtbl; // 0x7EE910
 struct MSVQAnim;
 struct MSVQAnim_vtbl; // 0x7EE9B0
-struct MapSeedClass;
-struct MapSeedClass_vtbl; // 0x7ED8E4
-struct MapSelect;
-struct MapSelect_vtbl; // 0x7EDB4C
-struct Mouse;
-struct Mouse_vtbl; // 0x7F7B78
+struct MultiMission;
 struct MultiplayerDebugCommandClass;
 struct MultiplayerDebugCommandClass_vtbl; // 0x7EBE14
 struct MultiplayerSyncCommandClass;
 struct MultiplayerSyncCommandClass_vtbl; // 0x7EBDEC
+struct NeuronClass; // : AbstractClass
+struct NeuronClass_vtbl; // 0x7E3DF0
 struct NextObjectCommandClass;
 struct NextObjectCommandClass_vtbl; // 0x7EB9DC
+struct Node_TL_INIClass_INIEntry_PTR_TR_;
+struct Node_TL_INIClass_INIEntry_PTR_TR__vtbl;
+struct Node_TL_INIClass_INISection_PTR_TR_;
+struct Node_TL_INIClass_INISection_PTR_TR__vtbl; // 0x7EB74C
+struct NodeNameType;
 struct NullModemClass;
 struct NullModemClass_vtbl; // 0x7EEFDC
 struct NullModemConnClass;
 struct NullModemConnClass_vtbl; // 0x7EEF90
+struct ObjectClass; // : AbstractClass
+struct ObjectClass_vtbl; // 0x7EF060
+struct ObjectTypeClass; // : AbstractTypeClass : AbstractClass
+struct ObjectTypeClass_vtbl; // 0x7EF2D8
 struct OptionsCommandClass;
 struct OptionsCommandClass_vtbl; // 0x7EBC5C
+struct OverlayClass; // : ObjectClass : AbstractClass
+struct OverlayClass_vtbl; // 0x7EF3D4
+struct OverlayTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct OverlayTypeClass_vtbl; // 0x7EF600
 struct OwnerDraw_DialogControl;
 struct OwnerDraw_DialogControl_vtbl; // 0x7EF720
 struct OwnerDraw_SimpleDialogControl;
 struct OwnerDraw_SimpleDialogControl_vtbl; // 0x7EF738
+struct OwnerDrawDialogElement;
+struct OwnerDrawHWNDVector;
+struct OwnerDrawLayoutSize;
+struct OwnerDrawTooltipBlitState;
+struct OwnerDrawTooltipRequest;
+struct OwnerDrawWindowMessageKey;
+struct PageUserCommandClass;
+struct PageUserCommandClass_vtbl; // 0x7EBF2C
+struct ParasiteClass; // : AbstractClass
+struct ParasiteClass_vtbl; // 0x7EF890
+struct ParticleClass; // : ObjectClass : AbstractClass
+struct ParticleClass_vtbl; // 0x7EF954
+struct ParticleSystemClass; // : ObjectClass : AbstractClass
+struct ParticleSystemClass_vtbl; // 0x7EFB9C
+struct ParticleSystemTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct ParticleSystemTypeClass_vtbl; // 0x7F00A8
+struct ParticleTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct ParticleTypeClass_vtbl; // 0x7F0188
+struct PassengersClass;
 struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString;
 struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl; // 0x7EF770
 struct PAVSchemeNode_VectorClass_HashObject_HashString;
@@ -1914,132 +1149,201 @@ struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct;
 struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl; // 0x7F042C
 struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct;
 struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl; // 0x7F044C
+struct PCX;
+struct Pipe;
+struct Pipe_vtbl; // 0x7E6218
 struct PKPipe;
 struct PKPipe_vtbl; // 0x7EFDAC
 struct PKStraw;
 struct PKStraw_vtbl; // 0x7EFDE0
-struct PageUserCommandClass;
-struct PageUserCommandClass_vtbl; // 0x7EBF2C
-struct Pipe;
-struct Pipe_vtbl; // 0x7E6218
+struct PlanningBranchClass;
+struct PlanningMemberClass;
 struct PlanningModeCommandClass;
 struct PlanningModeCommandClass_vtbl; // 0x7EB9B4
+struct PlanningNodeClass;
+struct PlanningTokenClass;
 struct PlayerProfile;
 struct PlayerProfile_vtbl; // 0x7F74F4
+struct PointerExpiredNotification;
+struct PowerClass; // : RadarClass : DisplayClass : MapClass : GScreenClass
+struct PowerClass_vtbl; // 0x7EFF54
 struct PrevObjectCommandClass;
 struct PrevObjectCommandClass_vtbl; // 0x7EBA04
+struct PriorityQueueClass_HierarchicalNode;
+struct PriorityQueueClass_PathQueueNode;
+struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_;
+struct PriorityQueueClassNode;
+struct ProgressScreenClass;
+struct Quaternion;
+struct RadarClass; // : DisplayClass : MapClass : GScreenClass
+struct RadarClass_vtbl; // 0x7F0344
+struct RadarClass_RTacticalClass;
+struct RadarClass_RTacticalClass_vtbl; // 0x7F02BC
+struct RadarEventClass;
+struct RadBeam;
+struct RadioClass; // : MissionClass : ObjectClass : AbstractClass
+struct RadioClass_vtbl; // 0x7F0508
+struct RadSiteClass; // : AbstractClass
+struct RadSiteClass_vtbl; // 0x7F0810
 struct RAMFileClass;
 struct RAMFileClass_vtbl; // 0x7F0874
-struct RLEBlitTransDarkenZReadWrite_unsigned_short;
-struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl; // 0x7E54B0
-struct RLEBlitTransDarkenZRead_unsigned_short;
-struct RLEBlitTransDarkenZRead_unsigned_short_vtbl; // 0x7E5540
+struct Randomizer;
+struct RandomStraw;
+struct RandomStraw_vtbl; // 0x7F0AFC
+struct RandomStruct;
+struct RateTimer;
+struct RawFileClass; // : FileClass
+struct RawFileClass_vtbl; // 0x7F0904
+struct RawTrackType;
+struct rc_ptr_base;
+struct rc_ptr_base_vtbl;
+struct rc_ptr_PlayerProfile_PTR;
+struct rc_ptr_PlayerProfile_PTR_vtbl;
+struct rc_ptr_WDT_Campaign_PTR;
+struct rc_ptr_WDT_Campaign_PTR_vtbl;
+struct rc_ptr_WDT_CampaignProperties_PTR;
+struct rc_ptr_WDT_CampaignProperties_PTR_vtbl;
+struct rc_ptr_WDT_Conflict_PTR;
+struct rc_ptr_WDT_Conflict_PTR_vtbl;
+struct rc_ptr_WDT_FlagGameOption_PTR;
+struct rc_ptr_WDT_FlagGameOption_PTR_vtbl;
+struct rc_ptr_WDT_GameOption_PTR;
+struct rc_ptr_WDT_GameOption_PTR_vtbl;
+struct rc_ptr_WDT_History_PTR;
+struct rc_ptr_WDT_History_PTR_vtbl;
+struct rc_ptr_WDT_Map_PTR;
+struct rc_ptr_WDT_Map_PTR_vtbl;
+struct rc_ptr_WDT_MapSizeGameOption_PTR;
+struct rc_ptr_WDT_MapSizeGameOption_PTR_vtbl;
+struct rc_ptr_WDT_State_PTR;
+struct rc_ptr_WDT_State_PTR_vtbl;
+struct rc_ptr_WDT_Territory_PTR;
+struct rc_ptr_WDT_Territory_PTR_vtbl;
+struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR;
+struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR_vtbl;
+struct rc_ptr_WDTState_PTR;
+struct rc_ptr_WDTState_PTR_vtbl;
+struct rc_ptr_WDTTerritory_PTR;
+struct rc_ptr_WDTTerritory_PTR_vtbl;
+struct RecoilData;
+struct RECT;
+struct RectangleStruct;
+struct ReferenceCounted;
+struct ReferenceCounted_vtbl;
+struct Registers;
+struct ReservedVoxelIndexKey;
+struct RGBClass;
+struct RLEBlitter;
+struct RLEBlitter_vtbl; // 0x007E5BA0
 struct RLEBlitTransDarken_unsigned_short;
 struct RLEBlitTransDarken_unsigned_short_vtbl; // 0x7E55A0
+struct RLEBlitTransDarkenZRead_unsigned_short;
+struct RLEBlitTransDarkenZRead_unsigned_short_vtbl; // 0x7E5540
+struct RLEBlitTransDarkenZReadWrite_unsigned_short;
+struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl; // 0x7E54B0
+struct RLEBlitTransLucent25_unsigned_short;
+struct RLEBlitTransLucent25_unsigned_short_vtbl; // 0x7E5570
+struct RLEBlitTransLucent25Alpha_unsigned_short;
+struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl; // 0x7E5430
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short;
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl; // 0x7E53E0
 struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short;
 struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl; // 0x7E53B0
 struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short;
 struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5360
-struct RLEBlitTransLucent25AlphaZRead_unsigned_short;
-struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl; // 0x7E53E0
-struct RLEBlitTransLucent25Alpha_unsigned_short;
-struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl; // 0x7E5430
+struct RLEBlitTransLucent25ZRead_unsigned_short;
+struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl; // 0x7E5510
 struct RLEBlitTransLucent25ZReadWarp_unsigned_short;
 struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl; // 0x7E54E0
 struct RLEBlitTransLucent25ZReadWrite_unsigned_short;
 struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl; // 0x7E5480
-struct RLEBlitTransLucent25ZRead_unsigned_short;
-struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl; // 0x7E5510
-struct RLEBlitTransLucent25_unsigned_short;
-struct RLEBlitTransLucent25_unsigned_short_vtbl; // 0x7E5570
+struct RLEBlitTransLucent50_unsigned_short;
+struct RLEBlitTransLucent50_unsigned_short_vtbl; // 0x7E5580
+struct RLEBlitTransLucent50Alpha_unsigned_short;
+struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl; // 0x7E5440
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short;
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl; // 0x7E53F0
 struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short;
 struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl; // 0x7E53C0
 struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short;
 struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5370
-struct RLEBlitTransLucent50AlphaZRead_unsigned_short;
-struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl; // 0x7E53F0
-struct RLEBlitTransLucent50Alpha_unsigned_short;
-struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl; // 0x7E5440
+struct RLEBlitTransLucent50ZRead_unsigned_short;
+struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl; // 0x7E5520
 struct RLEBlitTransLucent50ZReadWarp_unsigned_short;
 struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl; // 0x7E54F0
 struct RLEBlitTransLucent50ZReadWrite_unsigned_short;
 struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl; // 0x7E5490
-struct RLEBlitTransLucent50ZRead_unsigned_short;
-struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl; // 0x7E5520
-struct RLEBlitTransLucent50_unsigned_short;
-struct RLEBlitTransLucent50_unsigned_short_vtbl; // 0x7E5580
+struct RLEBlitTransLucent75_unsigned_short;
+struct RLEBlitTransLucent75_unsigned_short_vtbl; // 0x7E5590
+struct RLEBlitTransLucent75Alpha_unsigned_short;
+struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl; // 0x7E5450
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short;
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl; // 0x7E5400
 struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short;
 struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl; // 0x7E53D0
 struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short;
 struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl; // 0x7E5380
-struct RLEBlitTransLucent75AlphaZRead_unsigned_short;
-struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl; // 0x7E5400
-struct RLEBlitTransLucent75Alpha_unsigned_short;
-struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl; // 0x7E5450
+struct RLEBlitTransLucent75ZRead_unsigned_short;
+struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl; // 0x7E5530
 struct RLEBlitTransLucent75ZReadWarp_unsigned_short;
 struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl; // 0x7E5500
 struct RLEBlitTransLucent75ZReadWrite_unsigned_short;
 struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl; // 0x7E54A0
-struct RLEBlitTransLucent75ZRead_unsigned_short;
-struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl; // 0x7E5530
-struct RLEBlitTransLucent75_unsigned_short;
-struct RLEBlitTransLucent75_unsigned_short_vtbl; // 0x7E5590
-struct RLEBlitTransRemapDestZReadWrite_unsigned_char;
-struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl; // 0x7E5A60
-struct RLEBlitTransRemapDestZRead_unsigned_char;
-struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl; // 0x7E5AA0
 struct RLEBlitTransRemapDest_unsigned_char;
 struct RLEBlitTransRemapDest_unsigned_char_vtbl; // 0x7E5AE0
-struct RLEBlitTransRemapXlatZReadWrite_unsigned_char;
-struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A50
-struct RLEBlitTransRemapXlatZRead_unsigned_char;
-struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl; // 0x7E5A90
+struct RLEBlitTransRemapDestZRead_unsigned_char;
+struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl; // 0x7E5AA0
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char;
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl; // 0x7E5A60
 struct RLEBlitTransRemapXlat_unsigned_char;
 struct RLEBlitTransRemapXlat_unsigned_char_vtbl; // 0x7E5AD0
-struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short;
-struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E53A0
-struct RLEBlitTransXlatAlphaZRead_unsigned_short;
-struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl; // 0x7E5420
-struct RLEBlitTransXlatAlpha_unsigned_short;
-struct RLEBlitTransXlatAlpha_unsigned_short_vtbl; // 0x7E5470
-struct RLEBlitTransXlatZReadWrite_unsigned_char;
-struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A80
-struct RLEBlitTransXlatZReadWrite_unsigned_short;
-struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl; // 0x7E54D0
-struct RLEBlitTransXlatZRead_unsigned_char;
-struct RLEBlitTransXlatZRead_unsigned_char_vtbl; // 0x7E5AC0
-struct RLEBlitTransXlatZRead_unsigned_short;
-struct RLEBlitTransXlatZRead_unsigned_short_vtbl; // 0x7E5560
+struct RLEBlitTransRemapXlatZRead_unsigned_char;
+struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl; // 0x7E5A90
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char;
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A50
 struct RLEBlitTransXlat_unsigned_char;
 struct RLEBlitTransXlat_unsigned_char_vtbl; // 0x7E5B00
 struct RLEBlitTransXlat_unsigned_short;
 struct RLEBlitTransXlat_unsigned_short_vtbl; // 0x7E55C0
-struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short;
-struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5390
-struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short;
-struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl; // 0x7E5410
-struct RLEBlitTransZRemapXlatAlpha_unsigned_short;
-struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl; // 0x7E5460
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char;
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A70
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short;
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl; // 0x7E54C0
-struct RLEBlitTransZRemapXlatZRead_unsigned_char;
-struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl; // 0x7E5AB0
-struct RLEBlitTransZRemapXlatZRead_unsigned_short;
-struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl; // 0x7E5550
+struct RLEBlitTransXlatAlpha_unsigned_short;
+struct RLEBlitTransXlatAlpha_unsigned_short_vtbl; // 0x7E5470
+struct RLEBlitTransXlatAlphaZRead_unsigned_short;
+struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl; // 0x7E5420
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short;
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E53A0
+struct RLEBlitTransXlatZRead_unsigned_char;
+struct RLEBlitTransXlatZRead_unsigned_char_vtbl; // 0x7E5AC0
+struct RLEBlitTransXlatZRead_unsigned_short;
+struct RLEBlitTransXlatZRead_unsigned_short_vtbl; // 0x7E5560
+struct RLEBlitTransXlatZReadWrite_unsigned_char;
+struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A80
+struct RLEBlitTransXlatZReadWrite_unsigned_short;
+struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl; // 0x7E54D0
 struct RLEBlitTransZRemapXlat_unsigned_char;
 struct RLEBlitTransZRemapXlat_unsigned_char_vtbl; // 0x7E5AF0
 struct RLEBlitTransZRemapXlat_unsigned_short;
 struct RLEBlitTransZRemapXlat_unsigned_short_vtbl; // 0x7E55B0
-struct RadarClass_RTacticalClass;
-struct RadarClass_RTacticalClass_vtbl; // 0x7F02BC
-struct RandomStraw;
-struct RandomStraw_vtbl; // 0x7F0AFC
-struct SHAPipe;
-struct SHAPipe_vtbl; // 0x7E4D78
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short;
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl; // 0x7E5460
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short;
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl; // 0x7E5410
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short;
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl; // 0x7E5390
+struct RLEBlitTransZRemapXlatZRead_unsigned_char;
+struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl; // 0x7E5AB0
+struct RLEBlitTransZRemapXlatZRead_unsigned_short;
+struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl; // 0x7E5550
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char;
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl; // 0x7E5A70
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short;
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl; // 0x7E54C0
+struct RocketLocomotionClass; // : LocomotionClass
+struct RocketLocomotionClass_vtbl; // 0x7F0BE8
+struct RocketStruct;
+struct RulesClass;
 struct ScatterCommandClass;
 struct ScatterCommandClass_vtbl; // 0x7EBACC
+struct ScenarioClass;
 struct ScoreAnimClass;
 struct ScoreAnimClass_vtbl; // 0x7F0EDC
 struct ScoreBigFontClass;
@@ -2052,10 +1356,24 @@ struct ScorePrintClass;
 struct ScorePrintClass_vtbl; // 0x7F0EB4
 struct ScoreTimeClass;
 struct ScoreTimeClass_vtbl; // 0x7F0EC8
+struct ScoutStruct;
 struct ScreenCaptureCommandClass;
 struct ScreenCaptureCommandClass_vtbl; // 0x7EBF04
+struct ScriptActionNode;
+struct ScriptClass; // : AbstractClass
+struct ScriptClass_vtbl; // 0x7F0F78
+struct ScriptTypeClass; // : AbstractTypeClass : AbstractClass
+struct ScriptTypeClass_vtbl; // 0x7F1008
+struct ScrollClass; // : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
+struct ScrollClass_vtbl; // 0x7F1094
+struct SelectClass; // : ControlClass : GadgetClass : LinkClass
+struct SelectClass_vtbl; // 0x7F2FCC
 struct SelectTeamCommandClass;
 struct SelectTeamCommandClass_vtbl; // 0x7EBE64
+struct SequenceStruct;
+struct SessionClass;
+struct SessionClass_TL_unnamed_type_MPStats_TR_;
+struct SessionOptionsClass;
 struct SetDefenseTabCommandClass;
 struct SetDefenseTabCommandClass_vtbl; // 0x7EB8C4
 struct SetInfantryTabCommandClass;
@@ -2072,14 +1390,47 @@ struct SetView3CommandClass;
 struct SetView3CommandClass_vtbl; // 0x7EBCAC
 struct SetView4CommandClass;
 struct SetView4CommandClass_vtbl; // 0x7EBC84
+struct ShadowVoxelIndexKey;
+struct ShapeButtonClass; // : ToggleClass : ControlClass : GadgetClass : LinkClass
+struct ShapeButtonClass_vtbl; // 0x7E8088
+struct SHAPipe;
+struct SHAPipe_vtbl; // 0x7E4D78
+struct ShipLocomotionClass; // : LocomotionClass
+struct ShipLocomotionClass_vtbl; // 0x7F2E58
+struct SHPFile;
+struct SHPFrame;
+struct SHPReference;
+struct SHPStruct;
+struct SidebarClass; // : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
+struct SidebarClass_vtbl; // 0x7F3058
 struct SidebarClass_SBGadgetClass;
 struct SidebarClass_SBGadgetClass_vtbl; // 0x7F2F44
 struct SidebarDownCommandClass;
 struct SidebarDownCommandClass_vtbl; // 0x7EBC0C
 struct SidebarUpCommandClass;
 struct SidebarUpCommandClass_vtbl; // 0x7EBC34
+struct SideClass; // : AbstractTypeClass : AbstractClass
+struct SideClass_vtbl; // 0x7F2EC0
 struct SimpleWonlineDialogControl;
 struct SimpleWonlineDialogControl_vtbl; // 0x7F7624
+struct SlaveManagerClass; // : AbstractClass
+struct SlaveManagerClass_vtbl; // 0x7F31C8
+struct SlaveManagerClass_SlaveControl;
+struct SliderClass; // : GaugeClass : ControlClass : GadgetClass : LinkClass
+struct SliderClass_vtbl; // 0x7ED21C
+struct SmudgeClass; // : ObjectClass : AbstractClass
+struct SmudgeClass_vtbl; // 0x7F32FC
+struct SmudgeTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct SmudgeTypeClass_vtbl; // 0x7F3528
+struct sockaddr_in;
+struct SpawnManagerClass; // : AbstractClass
+struct SpawnManagerClass_vtbl; // 0x7F3650
+struct SpawnManagerClass_SpawnControl;
+struct SpotLightClass;
+struct StackRegister;
+struct StageClass;
+struct StaticButtonClass; // : GadgetClass : LinkClass
+struct StaticButtonClass_vtbl; // 0x7F3EA0
 struct Std_bad_cast;
 struct Std_bad_cast_vtbl; // 0x7F9660
 struct Std_bad_typeid;
@@ -2090,18 +1441,64 @@ struct Std_non_rtti_object;
 struct Std_non_rtti_object_vtbl; // 0x7F95D0
 struct StopCommandClass;
 struct StopCommandClass_vtbl; // 0x7EBA7C
+struct StorageClass;
 struct Straw;
 struct Straw_vtbl; // 0x7E61F0
+struct StringClass;
+struct StripClass;
+struct SubSequenceStruct;
+struct SubzoneConnectionStruct;
+struct SubzoneConnectionTable;
+struct SubzoneTrackingStruct;
+struct SuperClass; // : AbstractClass
+struct SuperClass_vtbl; // 0x7F3FE8
+struct SuperWeaponTypeClass; // : AbstractTypeClass : AbstractClass
+struct SuperWeaponTypeClass_vtbl; // 0x7F4090
+struct SUR_D_D_COLOR_KEY;
+struct SUR_D_D_PIXEL_FORMAT;
+struct SUR_D_D_PIXEL_FORMAT_unnamed_tag_u_type_MultiSampleCaps;
+struct SUR_D_D_SCAPS2;
+struct SUR_D_D_SURFACE_DESC2;
+struct Surface; // Surface Tree Base
+struct Surface_vtbl; // 0x7E2198
 struct SwizzleManager_ISwizzle;
 struct SwizzleManager_ISwizzle_vtbl; // 0x7F4108
-struct TClassFactory_AITriggerTypeClass;
-struct TClassFactory_AITriggerTypeClass_vtbl; // 0x7F3E40
+struct SwizzleManagerClass;
+struct SwizzleManagerClass_vtbl; // 0x7F4108
+struct SwizzlePointerClass;
+struct SystemTimer;
+struct TabClass; // : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
+struct TabClass_vtbl; // 0x7EDFB4
+struct TabDataClass;
+struct TacticalClass; // : AbstractClass
+struct TacticalClass_vtbl; // 0x7F4348
+struct TacticalSelectableStruct;
+struct TActionClass; // : AbstractClass
+struct TActionClass_vtbl; // 0x7F443C
+struct Tag_FILETIME;
+struct Tag_WIN32_FIND_DATAA;
+struct TagClass; // : AbstractClass
+struct TagClass_vtbl; // 0x7F44E0
+struct TagCONNECTDATA;
+struct TagSTATSTG;
+struct TagTypeClass; // : AbstractTypeClass : AbstractClass
+struct TagTypeClass_vtbl; // 0x7F45C4
+struct TargetClass;
+struct TaskForceClass; // : AbstractTypeClass : AbstractClass
+struct TaskForceClass_vtbl; // 0x7F4680
+struct TaskForceEntryStruct;
+struct TauntCommandClass;
+struct TauntCommandClass_vtbl; // 0x7EBEDC
+struct TClassFactory;
+struct TClassFactory_vtbl;
 struct TClassFactory_AircraftClass;
 struct TClassFactory_AircraftClass_vtbl; // 0x7F3BE8
 struct TClassFactory_AircraftTypeClass;
 struct TClassFactory_AircraftTypeClass_vtbl; // 0x7F3B28
 struct TClassFactory_AirstrikeClass;
 struct TClassFactory_AirstrikeClass_vtbl; // 0x7F3900
+struct TClassFactory_AITriggerTypeClass;
+struct TClassFactory_AITriggerTypeClass_vtbl; // 0x7F3E40
 struct TClassFactory_AlphaShapeClass;
 struct TClassFactory_AlphaShapeClass_vtbl; // 0x7F3E88
 struct TClassFactory_AnimClass;
@@ -2120,14 +1517,14 @@ struct TClassFactory_BulletClass;
 struct TClassFactory_BulletClass_vtbl; // 0x7F3D80
 struct TClassFactory_BulletTypeClass;
 struct TClassFactory_BulletTypeClass_vtbl; // 0x7F3B58
-struct TClassFactory_CStreamClass;
-struct TClassFactory_CStreamClass_vtbl; // 0x7F3768
 struct TClassFactory_CampaignClass;
 struct TClassFactory_CampaignClass_vtbl; // 0x7F38A0
 struct TClassFactory_CaptureManagerClass;
 struct TClassFactory_CaptureManagerClass_vtbl; // 0x7F3948
 struct TClassFactory_CellClass;
 struct TClassFactory_CellClass_vtbl; // 0x7F3810
+struct TClassFactory_CStreamClass;
+struct TClassFactory_CStreamClass_vtbl; // 0x7F3768
 struct TClassFactory_DiskLaserClass;
 struct TClassFactory_DiskLaserClass_vtbl; // 0x7F3960
 struct TClassFactory_DriveLocomotionClass;
@@ -2196,12 +1593,10 @@ struct TClassFactory_SuperClass;
 struct TClassFactory_SuperClass_vtbl; // 0x7F37E0
 struct TClassFactory_SuperWeaponTypeClass;
 struct TClassFactory_SuperWeaponTypeClass_vtbl; // 0x7F37C8
-struct TClassFactory_TActionClass;
-struct TClassFactory_TActionClass_vtbl; // 0x7F3A08
-struct TClassFactory_TEventClass;
-struct TClassFactory_TEventClass_vtbl; // 0x7F39C0
 struct TClassFactory_TacticalClass;
 struct TClassFactory_TacticalClass_vtbl; // 0x7F37F8
+struct TClassFactory_TActionClass;
+struct TClassFactory_TActionClass_vtbl; // 0x7F3A08
 struct TClassFactory_TagClass;
 struct TClassFactory_TagClass_vtbl; // 0x7F3A80
 struct TClassFactory_TagTypeClass;
@@ -2220,6 +1615,8 @@ struct TClassFactory_TerrainClass;
 struct TClassFactory_TerrainClass_vtbl; // 0x7F37B0
 struct TClassFactory_TerrainTypeClass;
 struct TClassFactory_TerrainTypeClass_vtbl; // 0x7F3798
+struct TClassFactory_TEventClass;
+struct TClassFactory_TEventClass_vtbl; // 0x7F39C0
 struct TClassFactory_TiberiumClass;
 struct TClassFactory_TiberiumClass_vtbl; // 0x7F3870
 struct TClassFactory_TriggerClass;
@@ -2248,84 +1645,656 @@ struct TClassFactory_WaypointPathClass;
 struct TClassFactory_WaypointPathClass_vtbl; // 0x7F38D0
 struct TClassFactory_WeaponTypeClass;
 struct TClassFactory_WeaponTypeClass_vtbl; // 0x7F3DC8
-struct TauntCommandClass;
-struct TauntCommandClass_vtbl; // 0x7EBEDC
+struct TeamClass; // : AbstractClass
+struct TeamClass_vtbl; // 0x7F4730
+struct TeamTypeClass; // : AbstractTypeClass : AbstractClass
+struct TeamTypeClass_vtbl; // 0x7F47D0
+struct TechnoClass; // : RadioClass : MissionClass : ObjectClass : AbstractClass
+struct TechnoClass_vtbl; // 0x7F4960
+struct TechnoTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct TechnoTypeClass_vtbl; // 0x7F4ED8
+struct TeleportLocomotionClass; // : LocomotionClass
+struct TeleportLocomotionClass_vtbl; // 0x7F50CC
+struct TemporalClass; // : AbstractClass
+struct TemporalClass_vtbl; // 0x7F5180
+struct TerrainClass; // : ObjectClass : AbstractClass
+struct TerrainClass_vtbl; // 0x7F522C
+struct TerrainTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct TerrainTypeClass_vtbl; // 0x7F5458
+struct TEventClass; // : AbstractClass
+struct TEventClass_vtbl; // 0x7F5578
 struct TextButtonClass;
 struct TextButtonClass_vtbl; // 0x7F55DC
+struct TextLabelClass; // : GadgetClass : LinkClass
+struct TextLabelClass_vtbl; // 0x7F5B44
+struct Theater;
+struct ThemeClass;
+struct ThemeControl;
 struct TiberianSunClassFactory;
 struct TiberianSunClassFactory_vtbl; // 0x7EA564
+struct TiberiumClass; // : AbstractTypeClass : AbstractClass
+struct TiberiumClass_vtbl; // 0x7F5728
+struct TiberiumLogic;
+struct TimerStruct_FrameTimer;
+struct TimerStruct_SystemTimer;
+struct TintStruct;
+struct ToggleClass; // : ControlClass : GadgetClass : LinkClass
+struct ToggleClass_vtbl; // 0x7E8118
 struct ToggleRepairCommandClass;
 struct ToggleRepairCommandClass_vtbl; // 0x7EBB6C
 struct ToggleSellCommandClass;
 struct ToggleSellCommandClass_vtbl; // 0x7EBB94
+struct ToolTip;
+struct ToolTipManager;
+struct ToolTipManager_vtbl; // 0x7F57AC
+struct ToolTipManagerData;
+struct TrackType;
+struct TransitionTimer;
+struct TRect_int;
+struct TriColorGaugeClass; // : GaugeClass : ControlClass : GadgetClass : LinkClass
+struct TriColorGaugeClass_vtbl; // 0x7E9430
+struct TriggerClass; // : AbstractClass
+struct TriggerClass_vtbl; // 0x7F5858
+struct TriggerTypeClass; // : AbstractTypeClass : AbstractClass
+struct TriggerTypeClass_vtbl; // 0x7F5904
+struct TubeClass; // : AbstractClass
+struct TubeClass_vtbl; // 0x7F59B0
+struct TunnelLocomotionClass; // : LocomotionClass
+struct TunnelLocomotionClass_vtbl; // 0x7F5AF0
+struct TurnTrackType;
+struct TurretBarrelVoxelIndexKey;
+struct TurretControl;
+struct TurretWeaponVoxelIndexKey;
 struct TypeList_AircraftTypeClass_CPTR;
 struct TypeList_AircraftTypeClass_CPTR_vtbl; // 0x7EABC8
+struct TypeList_AircraftTypeClass_PTR;
+struct TypeList_AircraftTypeClass_PTR_vtbl; // 0x7EABC8
 struct TypeList_AnimTypeClass_CPTR;
 struct TypeList_AnimTypeClass_CPTR_vtbl; // 0x7EB6D4
+struct TypeList_AnimTypeClass_PTR;
+struct TypeList_AnimTypeClass_PTR_vtbl;
 struct TypeList_BuildingTypeClass_CPTR;
 struct TypeList_BuildingTypeClass_CPTR_vtbl; // 0x7ED90C
+struct TypeList_BuildingTypeClass_PTR;
+struct TypeList_BuildingTypeClass_PTR_vtbl; // 0x7ED90C
 struct TypeList_InfantryTypeClass_CPTR;
 struct TypeList_InfantryTypeClass_CPTR_vtbl; // 0x7EAC08
+struct TypeList_InfantryTypeClass_PTR;
+struct TypeList_InfantryTypeClass_PTR_vtbl; // 0x7EAC08
+struct TypeList_int;
+struct TypeList_int_vtbl; // 0x7E4DD8
 struct TypeList_ParticleSystemTypeClass_CPTR;
 struct TypeList_ParticleSystemTypeClass_CPTR_vtbl; // 0x7F4F9C
+struct TypeList_ParticleSystemTypeClass_PTR;
+struct TypeList_ParticleSystemTypeClass_PTR_vtbl; // 0x7F4F9C
 struct TypeList_RGBClass;
 struct TypeList_RGBClass_vtbl; // 0x7E4E58
+struct TypeList_RGBClass_PTR;
+struct TypeList_RGBClass_PTR_vtbl; // 0x7E4E58
 struct TypeList_SmudgeTypeClass_CPTR;
 struct TypeList_SmudgeTypeClass_CPTR_vtbl; // 0x7F0D1C
+struct TypeList_SmudgeTypeClass_PTR;
+struct TypeList_SmudgeTypeClass_PTR_vtbl; // 0x7F0D1C
 struct TypeList_TeamTypeClass_CPTR;
 struct TypeList_TeamTypeClass_CPTR_vtbl; // 0x7EA9C4
+struct TypeList_TeamTypeClass_PTR;
+struct TypeList_TeamTypeClass_PTR_vtbl; // 0x7EA9C4
+struct TypeList_TechnoTypeClass_PTR;
+struct TypeList_TechnoTypeClass_PTR_vtbl; // 0x7E4E18
 struct TypeList_TerrainTypeClass_CPTR;
 struct TypeList_TerrainTypeClass_CPTR_vtbl; // 0x7F0CFC
+struct TypeList_TerrainTypeClass_PTR;
+struct TypeList_TerrainTypeClass_PTR_vtbl; // 0x7F0CFC
 struct TypeList_UnitTypeClass_CPTR;
 struct TypeList_UnitTypeClass_CPTR_vtbl; // 0x7EABE8
+struct TypeList_UnitTypeClass_PTR;
+struct TypeList_UnitTypeClass_PTR_vtbl; // 0x7EABE8
 struct TypeList_VoxelAnimTypeClass_CPTR;
 struct TypeList_VoxelAnimTypeClass_CPTR_vtbl; // 0x7F0D3C
+struct TypeList_VoxelAnimTypeClass_PTR;
+struct TypeList_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D3C
 struct TypeList_W_4_char_i_s_k_unsigned_int_char;
 struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl; // 0x7F12D4
+struct TypeListAddon;
 struct TypeSelectCommandClass;
 struct TypeSelectCommandClass_vtbl; // 0x7EB964
-struct VQMovieHandle;
-struct VQMovieHandle_vtbl; // 0x7EE0F4
+struct U_Large_Int_unnamed_type_s;
+struct U_Large_Int_unnamed_type_u;
+struct UDPInterfaceClass;
+struct UDPInterfaceClass_vtbl;
+struct UnitClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
+struct UnitClass_vtbl; // 0x7F5C70
+struct UnitTrackerClass;
+struct UnitTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct UnitTypeClass_vtbl; // 0x7F6218
+struct Variable;
+struct Vector2D_int;
+struct Vector2D_short;
+struct Vector3D_double;
+struct Vector3D_float;
+struct Vector3D_int;
+struct Vector4D_float;
+struct VectorAddon;
+struct VectorBase;
+struct VectorBase_vtbl;
+struct VectorBase_AbstractClass_PTR;
+struct VectorBase_AbstractClass_PTR_vtbl;
+struct VectorBase_AbstractTypeClass_PTR;
+struct VectorBase_AbstractTypeClass_PTR_vtbl;
+struct VectorBase_AircraftClass_PTR;
+struct VectorBase_AircraftClass_PTR_vtbl;
+struct VectorBase_AircraftTypeClass_CPTR;
+struct VectorBase_AircraftTypeClass_CPTR_vtbl;
+struct VectorBase_AircraftTypeClass_PTR;
+struct VectorBase_AircraftTypeClass_PTR_vtbl;
+struct VectorBase_AirstrikeClass_PTR;
+struct VectorBase_AirstrikeClass_PTR_vtbl;
+struct VectorBase_AITriggerTypeClass_PTR;
+struct VectorBase_AITriggerTypeClass_PTR_vtbl;
+struct VectorBase_AlphaLightingRemapClass_PTR;
+struct VectorBase_AlphaLightingRemapClass_PTR_vtbl;
+struct VectorBase_AlphaShapeClass_PTR;
+struct VectorBase_AlphaShapeClass_PTR_vtbl;
+struct VectorBase_AngerStruct;
+struct VectorBase_AngerStruct_vtbl;
+struct VectorBase_AnimClass_CPTR;
+struct VectorBase_AnimClass_CPTR_vtbl;
+struct VectorBase_AnimClass_PTR;
+struct VectorBase_AnimClass_PTR_vtbl;
+struct VectorBase_AnimTypeClass_CPTR;
+struct VectorBase_AnimTypeClass_CPTR_vtbl;
+struct VectorBase_AnimTypeClass_PTR;
+struct VectorBase_AnimTypeClass_PTR_vtbl;
+struct VectorBase_BaseNodeClass;
+struct VectorBase_BaseNodeClass_vtbl;
+struct VectorBase_BombClass_PTR;
+struct VectorBase_BombClass_PTR_vtbl;
+struct VectorBase_bool;
+struct VectorBase_bool_vtbl;
+struct VectorBase_BuildingClass_PTR;
+struct VectorBase_BuildingClass_PTR_vtbl;
+struct VectorBase_BuildingLightClass_PTR;
+struct VectorBase_BuildingLightClass_PTR_vtbl;
+struct VectorBase_BuildingTypeClass_CPTR;
+struct VectorBase_BuildingTypeClass_CPTR_vtbl;
+struct VectorBase_BuildingTypeClass_PTR;
+struct VectorBase_BuildingTypeClass_PTR_vtbl;
+struct VectorBase_BulletClass_PTR;
+struct VectorBase_BulletClass_PTR_vtbl;
+struct VectorBase_BulletTypeClass_PTR;
+struct VectorBase_BulletTypeClass_PTR_vtbl;
+struct VectorBase_CampaignClass_PTR;
+struct VectorBase_CampaignClass_PTR_vtbl;
+struct VectorBase_CaptureManagerClass_PTR;
+struct VectorBase_CaptureManagerClass_PTR_vtbl;
+struct VectorBase_CCINIClass_PTR;
+struct VectorBase_CCINIClass_PTR_vtbl;
+struct VectorBase_CellClass_PTR;
+struct VectorBase_CellClass_PTR_vtbl;
+struct VectorBase_CellStruct;
+struct VectorBase_CellStruct_vtbl;
+struct VectorBase_ChangeLinkHouseStruct_PTR;
+struct VectorBase_ChangeLinkHouseStruct_PTR_vtbl;
+struct VectorBase_char_CPTR;
+struct VectorBase_char_CPTR_vtbl;
+struct VectorBase_char_PTR;
+struct VectorBase_char_PTR_vtbl;
+struct VectorBase_Color16Struct_PTR;
+struct VectorBase_Color16Struct_PTR_vtbl;
+struct VectorBase_ColorScheme_PTR;
+struct VectorBase_ColorScheme_PTR_vtbl;
+struct VectorBase_CommandClass_CPTR;
+struct VectorBase_CommandClass_CPTR_vtbl;
+struct VectorBase_CommandClass_PTR;
+struct VectorBase_CommandClass_PTR_vtbl;
+struct VectorBase_ControlNode_PTR;
+struct VectorBase_ControlNode_PTR_vtbl;
+struct VectorBase_ConvertClass_PTR;
+struct VectorBase_ConvertClass_PTR_vtbl;
+struct VectorBase_CoordStruct;
+struct VectorBase_CoordStruct_vtbl;
+struct VectorBase_DamageGroup_PTR;
+struct VectorBase_DamageGroup_PTR_vtbl;
+struct VectorBase_DirtyAreaStruct_PTR;
+struct VectorBase_DirtyAreaStruct_PTR_vtbl;
+struct VectorBase_DiskLaserClass_PTR;
+struct VectorBase_DiskLaserClass_PTR_vtbl;
+struct VectorBase_double;
+struct VectorBase_double_vtbl;
+struct VectorBase_EBolt_PTR;
+struct VectorBase_EBolt_PTR_vtbl;
+struct VectorBase_ELE;
+struct VectorBase_ELE_vtbl;
+struct VectorBase_EMPulseClass_PTR;
+struct VectorBase_EMPulseClass_PTR_vtbl;
+struct VectorBase_EventClass_PTR;
+struct VectorBase_EventClass_PTR_vtbl;
+struct VectorBase_FactoryClass_PTR;
+struct VectorBase_FactoryClass_PTR_vtbl;
+struct VectorBase_FileEntryClass_PTR;
+struct VectorBase_FileEntryClass_PTR_vtbl;
+struct VectorBase_FoggedObjectClass_PTR;
+struct VectorBase_FoggedObjectClass_PTR_vtbl;
+struct VectorBase_FoggedObjectDraw;
+struct VectorBase_FoggedObjectDraw_vtbl;
+struct VectorBase_FootClass_PTR;
+struct VectorBase_FootClass_PTR_vtbl;
+struct VectorBase_GraphicMenuItem_PTR;
+struct VectorBase_GraphicMenuItem_PTR_vtbl;
+struct VectorBase_HouseClass_PTR;
+struct VectorBase_HouseClass_PTR_vtbl;
+struct VectorBase_HouseClass_StartingTechnoStruct_PTR;
+struct VectorBase_HouseClass_StartingTechnoStruct_PTR_vtbl;
+struct VectorBase_HouseTypeClass_PTR;
+struct VectorBase_HouseTypeClass_PTR_vtbl;
+struct VectorBase_HWND___PTR;
+struct VectorBase_HWND___PTR_vtbl;
+struct VectorBase_IConnectionPoint_PTR;
+struct VectorBase_IConnectionPoint_PTR_vtbl;
+struct VectorBase_InfantryClass_PTR;
+struct VectorBase_InfantryClass_PTR_vtbl;
+struct VectorBase_InfantryTypeClass_CPTR;
+struct VectorBase_InfantryTypeClass_CPTR_vtbl;
+struct VectorBase_InfantryTypeClass_PTR;
+struct VectorBase_InfantryTypeClass_PTR_vtbl;
+struct VectorBase_int;
+struct VectorBase_int_vtbl;
+struct VectorBase_IonBlastClass_PTR;
+struct VectorBase_IonBlastClass_PTR_vtbl;
+struct VectorBase_IsometricTileClass_PTR;
+struct VectorBase_IsometricTileClass_PTR_vtbl;
+struct VectorBase_IsometricTileTypeClass_PTR;
+struct VectorBase_IsometricTileTypeClass_PTR_vtbl;
+struct VectorBase_Kamikaze_PTR;
+struct VectorBase_Kamikaze_PTR_vtbl;
+struct VectorBase_KamikazeControl_PTR;
+struct VectorBase_KamikazeControl_PTR_vtbl;
+struct VectorBase_LaserDrawClass_PTR;
+struct VectorBase_LaserDrawClass_PTR_vtbl;
+struct VectorBase_LightConvertClass_PTR;
+struct VectorBase_LightConvertClass_PTR_vtbl;
+struct VectorBase_LightSourceClass_PTR;
+struct VectorBase_LightSourceClass_PTR_vtbl;
+struct VectorBase_LineTrail_PTR;
+struct VectorBase_LineTrail_PTR_vtbl;
+struct VectorBase_MPGameModeClass_PTR;
+struct VectorBase_MPGameModeClass_PTR_vtbl;
+struct VectorBase_MPTeam_PTR;
+struct VectorBase_MPTeam_PTR_vtbl;
+struct VectorBase_MSAnim_PTR;
+struct VectorBase_MSAnim_PTR_vtbl;
+struct VectorBase_MSAnimEntry_PTR;
+struct VectorBase_MSAnimEntry_PTR_vtbl;
+struct VectorBase_MSSfxEntry_PTR;
+struct VectorBase_MSSfxEntry_PTR_vtbl;
+struct VectorBase_MultiMission_CPTR;
+struct VectorBase_MultiMission_CPTR_vtbl;
+struct VectorBase_MultiMission_PTR;
+struct VectorBase_MultiMission_PTR_vtbl;
+struct VectorBase_NeuronClass_PTR;
+struct VectorBase_NeuronClass_PTR_vtbl;
+struct VectorBase_NodeNameType_PTR;
+struct VectorBase_NodeNameType_PTR_vtbl;
+struct VectorBase_ObjectClass_PTR;
+struct VectorBase_ObjectClass_PTR_vtbl;
+struct VectorBase_ObjectTypeClass_PTR;
+struct VectorBase_ObjectTypeClass_PTR_vtbl;
+struct VectorBase_OverlayClass_PTR;
+struct VectorBase_OverlayClass_PTR_vtbl;
+struct VectorBase_OverlayTypeClass_PTR;
+struct VectorBase_OverlayTypeClass_PTR_vtbl;
+struct VectorBase_ParasiteClass_PTR;
+struct VectorBase_ParasiteClass_PTR_vtbl;
+struct VectorBase_ParticleClass_PTR;
+struct VectorBase_ParticleClass_PTR_vtbl;
+struct VectorBase_ParticleSystemClass_PTR;
+struct VectorBase_ParticleSystemClass_PTR_vtbl;
+struct VectorBase_ParticleSystemTypeClass_CPTR;
+struct VectorBase_ParticleSystemTypeClass_CPTR_vtbl;
+struct VectorBase_ParticleSystemTypeClass_PTR;
+struct VectorBase_ParticleSystemTypeClass_PTR_vtbl;
+struct VectorBase_ParticleTypeClass_PTR;
+struct VectorBase_ParticleTypeClass_PTR_vtbl;
+struct VectorBase_PassabilityType;
+struct VectorBase_PassabilityType_vtbl;
+struct VectorBase_PlanningBranchClass_PTR;
+struct VectorBase_PlanningBranchClass_PTR_vtbl;
+struct VectorBase_PlanningMemberClass_PTR;
+struct VectorBase_PlanningMemberClass_PTR_vtbl;
+struct VectorBase_PlanningNodeClass_PTR;
+struct VectorBase_PlanningNodeClass_PTR_vtbl;
+struct VectorBase_PlanningTokenClass_PTR;
+struct VectorBase_PlanningTokenClass_PTR_vtbl;
+struct VectorBase_Point2D;
+struct VectorBase_Point2D_vtbl;
+struct VectorBase_PTR;
+struct VectorBase_PTR_vtbl;
+struct VectorBase_RadarEventClass_PTR;
+struct VectorBase_RadarEventClass_PTR_vtbl;
+struct VectorBase_RadBeam_PTR;
+struct VectorBase_RadBeam_PTR_vtbl;
+struct VectorBase_RadSiteClass_PTR;
+struct VectorBase_RadSiteClass_PTR_vtbl;
+struct VectorBase_rc_ptr_WDT_Conflict_PTR;
+struct VectorBase_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct VectorBase_rc_ptr_WDT_GameOption_PTR;
+struct VectorBase_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct VectorBase_rc_ptr_WDT_Territory_PTR;
+struct VectorBase_rc_ptr_WDT_Territory_PTR_vtbl;
+struct VectorBase_rc_ptr_WDTTerritory_PTR;
+struct VectorBase_rc_ptr_WDTTerritory_PTR_vtbl;
+struct VectorBase_RGBClass_PTR;
+struct VectorBase_RGBClass_PTR_vtbl;
+struct VectorBase_ScoutStruct;
+struct VectorBase_ScoutStruct_vtbl;
+struct VectorBase_ScriptClass_PTR;
+struct VectorBase_ScriptClass_PTR_vtbl;
+struct VectorBase_ScriptTypeClass_PTR;
+struct VectorBase_ScriptTypeClass_PTR_vtbl;
+struct VectorBase_SideClass_PTR;
+struct VectorBase_SideClass_PTR_vtbl;
+struct VectorBase_SlaveManagerClass_PTR;
+struct VectorBase_SlaveManagerClass_PTR_vtbl;
+struct VectorBase_SlaveManagerClass_SlaveControl_PTR;
+struct VectorBase_SlaveManagerClass_SlaveControl_PTR_vtbl;
+struct VectorBase_SmudgeClass_PTR;
+struct VectorBase_SmudgeClass_PTR_vtbl;
+struct VectorBase_SmudgeTypeClass_CPTR;
+struct VectorBase_SmudgeTypeClass_CPTR_vtbl;
+struct VectorBase_SmudgeTypeClass_PTR;
+struct VectorBase_SmudgeTypeClass_PTR_vtbl;
+struct VectorBase_SpawnManagerClass_PTR;
+struct VectorBase_SpawnManagerClass_PTR_vtbl;
+struct VectorBase_SpawnManagerClass_SpawnControl_PTR;
+struct VectorBase_SpawnManagerClass_SpawnControl_PTR_vtbl;
+struct VectorBase_SpotLightClass_PTR;
+struct VectorBase_SpotLightClass_PTR_vtbl;
+struct VectorBase_SubzoneConnectionStruct;
+struct VectorBase_SubzoneConnectionStruct_vtbl;
+struct VectorBase_SubzoneConnectionTable;
+struct VectorBase_SubzoneConnectionTable_vtbl;
+struct VectorBase_SubzoneTrackingStruct;
+struct VectorBase_SubzoneTrackingStruct_vtbl;
+struct VectorBase_SuperClass_PTR;
+struct VectorBase_SuperClass_PTR_vtbl;
+struct VectorBase_SuperWeaponTypeClass_PTR;
+struct VectorBase_SuperWeaponTypeClass_PTR_vtbl;
+struct VectorBase_SwizzlePointerClass;
+struct VectorBase_SwizzlePointerClass_vtbl;
+struct VectorBase_TActionClass_PTR;
+struct VectorBase_TActionClass_PTR_vtbl;
+struct VectorBase_TagClass_PTR;
+struct VectorBase_TagClass_PTR_vtbl;
+struct VectorBase_TagTypeClass_PTR;
+struct VectorBase_TagTypeClass_PTR_vtbl;
+struct VectorBase_TaskForceClass_PTR;
+struct VectorBase_TaskForceClass_PTR_vtbl;
+struct VectorBase_TeamClass_PTR;
+struct VectorBase_TeamClass_PTR_vtbl;
+struct VectorBase_TeamTypeClass_CPTR;
+struct VectorBase_TeamTypeClass_CPTR_vtbl;
+struct VectorBase_TeamTypeClass_PTR;
+struct VectorBase_TeamTypeClass_PTR_vtbl;
+struct VectorBase_TechnoClass_PTR;
+struct VectorBase_TechnoClass_PTR_vtbl;
+struct VectorBase_TechnoTypeClass_CPTR;
+struct VectorBase_TechnoTypeClass_CPTR_vtbl;
+struct VectorBase_TechnoTypeClass_PTR;
+struct VectorBase_TechnoTypeClass_PTR_vtbl;
+struct VectorBase_TemporalClass_PTR;
+struct VectorBase_TemporalClass_PTR_vtbl;
+struct VectorBase_TerrainClass_PTR;
+struct VectorBase_TerrainClass_PTR_vtbl;
+struct VectorBase_TerrainTypeClass_CPTR;
+struct VectorBase_TerrainTypeClass_CPTR_vtbl;
+struct VectorBase_TerrainTypeClass_PTR;
+struct VectorBase_TerrainTypeClass_PTR_vtbl;
+struct VectorBase_TEventClass_PTR;
+struct VectorBase_TEventClass_PTR_vtbl;
+struct VectorBase_ThemeClass_PTR;
+struct VectorBase_ThemeClass_PTR_vtbl;
+struct VectorBase_ThemeControl_PTR;
+struct VectorBase_ThemeControl_PTR_vtbl;
+struct VectorBase_TiberiumClass_PTR;
+struct VectorBase_TiberiumClass_PTR_vtbl;
+struct VectorBase_ToolTip_CPTR;
+struct VectorBase_ToolTip_CPTR_vtbl;
+struct VectorBase_ToolTip_PTR;
+struct VectorBase_ToolTip_PTR_vtbl;
+struct VectorBase_TRect_int;
+struct VectorBase_TRect_int_vtbl;
+struct VectorBase_TriggerClass_PTR;
+struct VectorBase_TriggerClass_PTR_vtbl;
+struct VectorBase_TriggerTypeClass_PTR;
+struct VectorBase_TriggerTypeClass_PTR_vtbl;
+struct VectorBase_TubeClass_PTR;
+struct VectorBase_TubeClass_PTR_vtbl;
+struct VectorBase_UnitClass_PTR;
+struct VectorBase_UnitClass_PTR_vtbl;
+struct VectorBase_UnitTypeClass_CPTR;
+struct VectorBase_UnitTypeClass_CPTR_vtbl;
+struct VectorBase_UnitTypeClass_PTR;
+struct VectorBase_UnitTypeClass_PTR_vtbl;
+struct VectorBase_unsigned_char;
+struct VectorBase_unsigned_char_vtbl;
+struct VectorBase_unsigned_char_PTR;
+struct VectorBase_unsigned_char_PTR_vtbl;
+struct VectorBase_unsigned_int;
+struct VectorBase_unsigned_int_vtbl;
+struct VectorBase_unsigned_long;
+struct VectorBase_unsigned_long_vtbl;
+struct VectorBase_unsigned_short;
+struct VectorBase_unsigned_short_vtbl;
+struct VectorBase_unsigned_short_CPTR;
+struct VectorBase_unsigned_short_CPTR_vtbl;
+struct VectorBase_unsigned_short_PTR;
+struct VectorBase_unsigned_short_PTR_vtbl;
+struct VectorBase_VeinholeMonsterClass_PTR;
+struct VectorBase_VeinholeMonsterClass_PTR_vtbl;
+struct VectorBase_VocClass_PTR;
+struct VectorBase_VocClass_PTR_vtbl;
+struct VectorBase_VoxClass_PTR;
+struct VectorBase_VoxClass_PTR_vtbl;
+struct VectorBase_VoxelAnimClass_PTR;
+struct VectorBase_VoxelAnimClass_PTR_vtbl;
+struct VectorBase_VoxelAnimTypeClass_CPTR;
+struct VectorBase_VoxelAnimTypeClass_CPTR_vtbl;
+struct VectorBase_VoxelAnimTypeClass_PTR;
+struct VectorBase_VoxelAnimTypeClass_PTR_vtbl;
+struct VectorBase_WarheadTypeClass_PTR;
+struct VectorBase_WarheadTypeClass_PTR_vtbl;
+struct VectorBase_WaveClass_PTR;
+struct VectorBase_WaveClass_PTR_vtbl;
+struct VectorBase_WaypointClass;
+struct VectorBase_WaypointClass_vtbl;
+struct VectorBase_WaypointPathClass_PTR;
+struct VectorBase_WaypointPathClass_PTR_vtbl;
+struct VectorBase_WDT_Centroid;
+struct VectorBase_WDT_Centroid_vtbl;
+struct VectorBase_WDT_Map_AnimationPalette_PTR;
+struct VectorBase_WDT_Map_AnimationPalette_PTR_vtbl;
+struct VectorBase_WeaponTypeClass_PTR;
+struct VectorBase_WeaponTypeClass_PTR_vtbl;
+struct VectorBase_ZoneConnectionClass;
+struct VectorBase_ZoneConnectionClass_vtbl;
+struct VectorBase_ZoneConnectionTable;
+struct VectorBase_ZoneConnectionTable_vtbl;
+struct VectorClass__DDSURFACEDESC_PTR;
+struct VectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5DEC
+struct VectorClass__WIN32_FIND_DATAA_PTR;
+struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED92C
+struct VectorClass_AbstractClass_PTR;
+struct VectorClass_AbstractClass_PTR_vtbl; // 0x7E920C
+struct VectorClass_AbstractTypeClass_PTR;
+struct VectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA544
 struct VectorClass_AcceleratorTracker;
 struct VectorClass_AcceleratorTracker_vtbl; // 0x7EECEC
+struct VectorClass_AircraftClass_PTR;
+struct VectorClass_AircraftClass_PTR_vtbl; // 0x7E9E84
+struct VectorClass_AircraftTypeClass_CPTR;
+struct VectorClass_AircraftTypeClass_CPTR_vtbl;
+struct VectorClass_AircraftTypeClass_PTR;
+struct VectorClass_AircraftTypeClass_PTR_vtbl; // 0x7EAC68 / 0x7EA284
+struct VectorClass_AirstrikeClass_PTR;
+struct VectorClass_AirstrikeClass_PTR_vtbl; // 0x7E295C
+struct VectorClass_AITriggerTypeClass_PTR;
+struct VectorClass_AITriggerTypeClass_PTR_vtbl; // 0x7E9B84
+struct VectorClass_AlphaLightingRemapClass_PTR;
+struct VectorClass_AlphaLightingRemapClass_PTR_vtbl;
+struct VectorClass_AlphaShapeClass_PTR;
+struct VectorClass_AlphaShapeClass_PTR_vtbl; // 0x7E3258
+struct VectorClass_AngerStruct;
+struct VectorClass_AngerStruct_vtbl; // 0x7EA984
+struct VectorClass_AnimClass_CPTR;
+struct VectorClass_AnimClass_CPTR_vtbl;
+struct VectorClass_AnimClass_PTR;
+struct VectorClass_AnimClass_PTR_vtbl; // 0x7E9F44 / 0x7EBFEC
+struct VectorClass_AnimTypeClass_CPTR;
+struct VectorClass_AnimTypeClass_CPTR_vtbl;
+struct VectorClass_AnimTypeClass_PTR;
+struct VectorClass_AnimTypeClass_PTR_vtbl; // 0x7EA304 / 0x7EB6F4
+struct VectorClass_BaseNodeClass;
+struct VectorClass_BaseNodeClass_vtbl; // 0x7E38F0
+struct VectorClass_BombClass_PTR;
+struct VectorClass_BombClass_PTR_vtbl; // 0x7E17EC
+struct VectorClass_bool;
+struct VectorClass_bool_vtbl; // 0x7EAA5C
+struct VectorClass_BuildingClass_PTR;
+struct VectorClass_BuildingClass_PTR_vtbl; // 0x7E9E44
+struct VectorClass_BuildingLightClass_PTR;
+struct VectorClass_BuildingLightClass_PTR_vtbl; // 0x7E9C44
+struct VectorClass_BuildingTypeClass_CPTR;
+struct VectorClass_BuildingTypeClass_CPTR_vtbl;
+struct VectorClass_BuildingTypeClass_PTR;
+struct VectorClass_BuildingTypeClass_PTR_vtbl; // 0x7EA244 / 0x7EAA08
+struct VectorClass_BulletClass_PTR;
+struct VectorClass_BulletClass_PTR_vtbl; // 0x7E4698
+struct VectorClass_BulletTypeClass_PTR;
+struct VectorClass_BulletTypeClass_PTR_vtbl; // 0x7EA384
 struct VectorClass_ButtonFadeEffect_PTR;
 struct VectorClass_ButtonFadeEffect_PTR_vtbl; // 0x7E8500
+struct VectorClass_CampaignClass_PTR;
+struct VectorClass_CampaignClass_PTR_vtbl; // 0x7EA004
+struct VectorClass_CaptureManagerClass_PTR;
+struct VectorClass_CaptureManagerClass_PTR_vtbl; // 0x7E4AF4
+struct VectorClass_CCINIClass_PTR;
+struct VectorClass_CCINIClass_PTR_vtbl; // 0x7EB80C
+struct VectorClass_CellClass_PTR;
+struct VectorClass_CellClass_PTR_vtbl; // 0x7ED480
+struct VectorClass_CellStruct;
+struct VectorClass_CellStruct_vtbl; // 0x7E38D0
+struct VectorClass_ChangeLinkHouseStruct_PTR;
+struct VectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4468
+struct VectorClass_char_CPTR;
+struct VectorClass_char_CPTR_vtbl;
+struct VectorClass_char_PTR;
+struct VectorClass_char_PTR_vtbl; // 0x7E5C24 / 0x7EE0D4
+struct VectorClass_Color16Struct_PTR;
+struct VectorClass_Color16Struct_PTR_vtbl;
+struct VectorClass_ColorScheme_PTR;
+struct VectorClass_ColorScheme_PTR_vtbl; // 0x7EF7B0
+struct VectorClass_CommandClass_CPTR;
+struct VectorClass_CommandClass_CPTR_vtbl;
+struct VectorClass_CommandClass_PTR;
+struct VectorClass_CommandClass_PTR_vtbl; // 0x7E184C
+struct VectorClass_ControlNode_PTR;
+struct VectorClass_ControlNode_PTR_vtbl; // 0x7E4BC4
+struct VectorClass_ConvertClass_PTR;
+struct VectorClass_ConvertClass_PTR_vtbl; // 0x7E5338
 struct VectorClass_CoopCampaignClass_PTR;
 struct VectorClass_CoopCampaignClass_PTR_vtbl; // 0x7EE3B0
+struct VectorClass_CoordStruct;
+struct VectorClass_CoordStruct_vtbl;
 struct VectorClass_CrossDissolveEffect_PTR;
 struct VectorClass_CrossDissolveEffect_PTR_vtbl; // 0x7E8520
+struct VectorClass_DamageGroup_PTR;
+struct VectorClass_DamageGroup_PTR_vtbl; // 0x7E5144
 struct VectorClass_DirtyAreaStruct;
 struct VectorClass_DirtyAreaStruct_vtbl; // 0x7F42BC
+struct VectorClass_DirtyAreaStruct_PTR;
+struct VectorClass_DirtyAreaStruct_PTR_vtbl; // 0x7F42BC
+struct VectorClass_DiskLaserClass_PTR;
+struct VectorClass_DiskLaserClass_PTR_vtbl; // 0x7E5EFC
 struct VectorClass_DistributionObject_AITriggerTypeClass_PTR;
 struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl; // 0x7F4840
 struct VectorClass_DistributionObject_BuildingTypeClass_PTR;
 struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl; // 0x7EAAA4
 struct VectorClass_DistributionObject_CellClass_PTR;
 struct VectorClass_DistributionObject_CellClass_PTR_vtbl; // 0x7E9264
+struct VectorClass_double;
+struct VectorClass_double_vtbl; // 0x7EDA4C
 struct VectorClass_DynamicVectorClass_char_PTR_PTR;
 struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl; // 0x7E5C04
+struct VectorClass_EBolt_PTR;
+struct VectorClass_EBolt_PTR_vtbl; // 0x7E86AC
 struct VectorClass_EgoClass_PTR;
 struct VectorClass_EgoClass_PTR_vtbl; // 0x7E86FC
+struct VectorClass_EMPulseClass_PTR;
+struct VectorClass_EMPulseClass_PTR_vtbl; // 0x7E875C
+struct VectorClass_EventClass_PTR;
+struct VectorClass_EventClass_PTR_vtbl; // 0x7EFE24
+struct VectorClass_FactoryClass_PTR;
+struct VectorClass_FactoryClass_PTR_vtbl; // 0x7E9FC4
+struct VectorClass_FileEntryClass_PTR;
+struct VectorClass_FileEntryClass_PTR_vtbl; // 0x7ED32C
+struct VectorClass_FoggedObjectClass_PTR;
+struct VectorClass_FoggedObjectClass_PTR_vtbl; // 0x7E4514
+struct VectorClass_FoggedObjectDraw;
+struct VectorClass_FoggedObjectDraw_vtbl; // 0x7E8BC0
+struct VectorClass_FootClass_PTR;
+struct VectorClass_FootClass_PTR_vtbl; // 0x7E8C48
 struct VectorClass_GlobalPacketType_PTR;
 struct VectorClass_GlobalPacketType_PTR_vtbl; // 0x7F1234
-struct VectorClass_HSVClass;
-struct VectorClass_HSVClass_vtbl; // 0x7EF7F0
+struct VectorClass_GraphicMenuItem_PTR;
+struct VectorClass_GraphicMenuItem_PTR_vtbl;
 struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct;
 struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl; // 0x7ED5E0
 struct VectorClass_HashObject_unsigned_int_unsigned_int;
 struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl; // 0x7ED5C0
 struct VectorClass_HouseClass_BuildChoiceClass_PTR;
 struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl; // 0x7EA7D4
+struct VectorClass_HouseClass_PTR;
+struct VectorClass_HouseClass_PTR_vtbl; // 0x7E9F04
+struct VectorClass_HouseClass_StartingTechnoStruct_PTR;
+struct VectorClass_HouseClass_StartingTechnoStruct_PTR_vtbl; // 0x7EA964
+struct VectorClass_HouseTypeClass_PTR;
+struct VectorClass_HouseTypeClass_PTR_vtbl; // 0x7EA084
+struct VectorClass_HSVClass;
+struct VectorClass_HSVClass_vtbl; // 0x7EF7F0
+struct VectorClass_HWND___PTR;
+struct VectorClass_HWND___PTR_vtbl; // 0x7EECAC
+struct VectorClass_IConnectionPoint_PTR;
+struct VectorClass_IConnectionPoint_PTR_vtbl; // 0x7E5D08
+struct VectorClass_InfantryClass_PTR;
+struct VectorClass_InfantryClass_PTR_vtbl; // 0x7E43E8
+struct VectorClass_InfantryTypeClass_CPTR;
+struct VectorClass_InfantryTypeClass_CPTR_vtbl;
+struct VectorClass_InfantryTypeClass_PTR;
+struct VectorClass_InfantryTypeClass_PTR_vtbl; // 0x7EAC28 / 0x7EA344
+struct VectorClass_int;
+struct VectorClass_int_vtbl; // 0x7E4DB8
+struct VectorClass_IonBlastClass_PTR;
+struct VectorClass_IonBlastClass_PTR_vtbl; // 0x7EC07C
+struct VectorClass_IsometricTileClass_PTR;
+struct VectorClass_IsometricTileClass_PTR_vtbl; // 0x7E18DC
+struct VectorClass_IsometricTileTypeClass_PTR;
+struct VectorClass_IsometricTileTypeClass_PTR_vtbl; // 0x7EA404
 struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR;
 struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl; // 0x7ECBFC
+struct VectorClass_Kamikaze_PTR;
+struct VectorClass_Kamikaze_PTR_vtbl;
+struct VectorClass_KamikazeControl_PTR;
+struct VectorClass_KamikazeControl_PTR_vtbl; // 0x7ECE9C
+struct VectorClass_LaserDrawClass_PTR;
+struct VectorClass_LaserDrawClass_PTR_vtbl; // 0x7ECEFC
+struct VectorClass_LightConvertClass_PTR;
+struct VectorClass_LightConvertClass_PTR_vtbl; // 0x7E188C
 struct VectorClass_LightSourceClass_PendingCellClass_PTR;
 struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl; // 0x7ECFDC
-struct VectorClass_MPlayerScoreType_PTR;
-struct VectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3D0
-struct VectorClass_MSSfx_PTR;
-struct VectorClass_MSSfx_PTR_vtbl; // 0x7EEC44
-struct VectorClass_MSTextEntry_PTR;
-struct VectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB94
+struct VectorClass_LightSourceClass_PTR;
+struct VectorClass_LightSourceClass_PTR_vtbl; // 0x7ECF9C
+struct VectorClass_LineTrail_PTR;
+struct VectorClass_LineTrail_PTR_vtbl; // 0x7ED0EC
 struct VectorClass_MapRegionClass_PTR;
 struct VectorClass_MapRegionClass_PTR_vtbl; // 0x7ED878
 struct VectorClass_MapSelection_PTR;
@@ -2336,36 +2305,264 @@ struct VectorClass_MixFileClass_PTR;
 struct VectorClass_MixFileClass_PTR_vtbl; // 0x7E1A64
 struct VectorClass_MovieHandle_PTR;
 struct VectorClass_MovieHandle_PTR_vtbl; // 0x7F69A4
+struct VectorClass_MPGameModeClass_PTR;
+struct VectorClass_MPGameModeClass_PTR_vtbl; // 0x7EED40
+struct VectorClass_MPlayerScoreType_PTR;
+struct VectorClass_MPlayerScoreType_PTR_vtbl; // 0x7EE3D0
+struct VectorClass_MPTeam_PTR;
+struct VectorClass_MPTeam_PTR_vtbl; // 0x7EEE54
+struct VectorClass_MSAnim_PTR;
+struct VectorClass_MSAnim_PTR_vtbl;
+struct VectorClass_MSAnimEntry_PTR;
+struct VectorClass_MSAnimEntry_PTR_vtbl;
+struct VectorClass_MSSfx_PTR;
+struct VectorClass_MSSfx_PTR_vtbl; // 0x7EEC44
+struct VectorClass_MSSfxEntry_PTR;
+struct VectorClass_MSSfxEntry_PTR_vtbl;
+struct VectorClass_MSTextEntry_PTR;
+struct VectorClass_MSTextEntry_PTR_vtbl; // 0x7EEB94
+struct VectorClass_MultiMission_CPTR;
+struct VectorClass_MultiMission_CPTR_vtbl;
+struct VectorClass_MultiMission_PTR;
+struct VectorClass_MultiMission_PTR_vtbl; // 0x7EEF50 / 0x7F1214
+struct VectorClass_NeuronClass_PTR;
+struct VectorClass_NeuronClass_PTR_vtbl; // 0x7E3E54
+struct VectorClass_NodeNameType_PTR;
+struct VectorClass_NodeNameType_PTR_vtbl; // 0x7EE390
+struct VectorClass_ObjectClass_PTR;
+struct VectorClass_ObjectClass_PTR_vtbl; // 0x7E192C
+struct VectorClass_ObjectTypeClass_PTR;
+struct VectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF28C
+struct VectorClass_OverlayClass_PTR;
+struct VectorClass_OverlayClass_PTR_vtbl; // 0x7E9D44
+struct VectorClass_OverlayTypeClass_PTR;
+struct VectorClass_OverlayTypeClass_PTR_vtbl; // 0x7EA184
 struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR;
 struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl; // 0x7F0C4C
+struct VectorClass_ParasiteClass_PTR;
+struct VectorClass_ParasiteClass_PTR_vtbl; // 0x7EF844
+struct VectorClass_ParticleClass_PTR;
+struct VectorClass_ParticleClass_PTR_vtbl; // 0x7E9D84
+struct VectorClass_ParticleSystemClass_PTR;
+struct VectorClass_ParticleSystemClass_PTR_vtbl; // 0x7E9C84
+struct VectorClass_ParticleSystemTypeClass_CPTR;
+struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl;
+struct VectorClass_ParticleSystemTypeClass_PTR;
+struct VectorClass_ParticleSystemTypeClass_PTR_vtbl; // 0x7E4424 / 0x7EA484
+struct VectorClass_ParticleTypeClass_PTR;
+struct VectorClass_ParticleTypeClass_PTR_vtbl; // 0x7EA444
+struct VectorClass_PassabilityType;
+struct VectorClass_PassabilityType_vtbl; // 0x7ED560
 struct VectorClass_PhoneEntryClass_PTR;
 struct VectorClass_PhoneEntryClass_PTR_vtbl; // 0x7F1254
+struct VectorClass_PlanningBranchClass_PTR;
+struct VectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFF24
+struct VectorClass_PlanningMemberClass_PTR;
+struct VectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFF04
+struct VectorClass_PlanningNodeClass_PTR;
+struct VectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE64
+struct VectorClass_PlanningTokenClass_PTR;
+struct VectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFEA4
+struct VectorClass_Point2D;
+struct VectorClass_Point2D_vtbl; // 0x7EEB74
+struct VectorClass_RadarEventClass_PTR;
+struct VectorClass_RadarEventClass_PTR_vtbl; // 0x7F0ACC
+struct VectorClass_RadBeam_PTR;
+struct VectorClass_RadBeam_PTR_vtbl; // 0x7F04A4
+struct VectorClass_RadSiteClass_PTR;
+struct VectorClass_RadSiteClass_PTR_vtbl; // 0x7F07C4
+struct VectorClass_rc_ptr_WDT_Conflict_PTR;
+struct VectorClass_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct VectorClass_rc_ptr_WDT_GameOption_PTR;
+struct VectorClass_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct VectorClass_rc_ptr_WDT_Territory_PTR;
+struct VectorClass_rc_ptr_WDT_Territory_PTR_vtbl;
+struct VectorClass_rc_ptr_WDTTerritory_PTR;
+struct VectorClass_rc_ptr_WDTTerritory_PTR_vtbl;
 struct VectorClass_RGBClass;
 struct VectorClass_RGBClass_vtbl; // 0x7E4E38
+struct VectorClass_RGBClass_PTR;
+struct VectorClass_RGBClass_PTR_vtbl; // 0x7E4E38
+struct VectorClass_ScoutStruct;
+struct VectorClass_ScoutStruct_vtbl; // 0x7EA9A4
+struct VectorClass_ScriptClass_PTR;
+struct VectorClass_ScriptClass_PTR_vtbl; // 0x7E1B44
+struct VectorClass_ScriptTypeClass_PTR;
+struct VectorClass_ScriptTypeClass_PTR_vtbl; // 0x7EA144
 struct VectorClass_ShadowControlClass_PTR;
 struct VectorClass_ShadowControlClass_PTR_vtbl; // 0x7F42FC
+struct VectorClass_SideClass_PTR;
+struct VectorClass_SideClass_PTR_vtbl; // 0x7EA044
+struct VectorClass_SlaveManagerClass_PTR;
+struct VectorClass_SlaveManagerClass_PTR_vtbl; // 0x7F317C
+struct VectorClass_SlaveManagerClass_SlaveControl_PTR;
+struct VectorClass_SlaveManagerClass_SlaveControl_PTR_vtbl; // 0x7F324C
+struct VectorClass_SmudgeClass_PTR;
+struct VectorClass_SmudgeClass_PTR_vtbl; // 0x7E9DC4
+struct VectorClass_SmudgeTypeClass_CPTR;
+struct VectorClass_SmudgeTypeClass_CPTR_vtbl;
+struct VectorClass_SmudgeTypeClass_PTR;
+struct VectorClass_SmudgeTypeClass_PTR_vtbl; // 0x7F0D7C / 0x7EA1C4
+struct VectorClass_SpawnManagerClass_PTR;
+struct VectorClass_SpawnManagerClass_PTR_vtbl; // 0x7F3604
+struct VectorClass_SpawnManagerClass_SpawnControl_PTR;
+struct VectorClass_SpawnManagerClass_SpawnControl_PTR_vtbl; // 0x7F36D4
+struct VectorClass_SpotLightClass_PTR;
+struct VectorClass_SpotLightClass_PTR_vtbl; // 0x7EF6DC
 struct VectorClass_SubTitle_PTR;
 struct VectorClass_SubTitle_PTR_vtbl; // 0x7F3F8C
+struct VectorClass_SubzoneConnectionStruct;
+struct VectorClass_SubzoneConnectionStruct_vtbl; // 0x7E177C
+struct VectorClass_SubzoneConnectionTable;
+struct VectorClass_SubzoneConnectionTable_vtbl;
+struct VectorClass_SubzoneTrackingStruct;
+struct VectorClass_SubzoneTrackingStruct_vtbl; // 0x7ED500
+struct VectorClass_SuperClass_PTR;
+struct VectorClass_SuperClass_PTR_vtbl; // 0x7EA504
+struct VectorClass_SuperWeaponTypeClass_PTR;
+struct VectorClass_SuperWeaponTypeClass_PTR_vtbl; // 0x7EA4C4
+struct VectorClass_SwizzlePointerClass;
+struct VectorClass_SwizzlePointerClass_vtbl; // 0x7F4154
+struct VectorClass_TActionClass_PTR;
+struct VectorClass_TActionClass_PTR_vtbl; // 0x7F43F0
+struct VectorClass_TagClass_PTR;
+struct VectorClass_TagClass_PTR_vtbl; // 0x7EA5C4
+struct VectorClass_tagCONNECTDATA;
+struct VectorClass_tagCONNECTDATA_vtbl; // 0x7E5C84
+struct VectorClass_TagTypeClass_PTR;
+struct VectorClass_TagTypeClass_PTR_vtbl; // 0x7F4578
+struct VectorClass_TaskForceClass_PTR;
+struct VectorClass_TaskForceClass_PTR_vtbl; // 0x7EA0C4
+struct VectorClass_tConnInfoStruct_PTR;
+struct VectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78A4
+struct VectorClass_TeamClass_PTR;
+struct VectorClass_TeamClass_PTR_vtbl; // 0x7E9F84
+struct VectorClass_TeamTypeClass_CPTR;
+struct VectorClass_TeamTypeClass_CPTR_vtbl;
+struct VectorClass_TeamTypeClass_PTR;
+struct VectorClass_TeamTypeClass_PTR_vtbl; // 0x7EA104 / 0x7EA9E4
+struct VectorClass_TechnoClass_PTR;
+struct VectorClass_TechnoClass_PTR_vtbl; // 0x7E180C
+struct VectorClass_TechnoTypeClass_CPTR;
+struct VectorClass_TechnoTypeClass_CPTR_vtbl;
+struct VectorClass_TechnoTypeClass_PTR;
+struct VectorClass_TechnoTypeClass_PTR_vtbl; // 0x7E4DF8 / 0x7E8954
+struct VectorClass_TemporalClass_PTR;
+struct VectorClass_TemporalClass_PTR_vtbl; // 0x7F5134
+struct VectorClass_TerrainClass_PTR;
+struct VectorClass_TerrainClass_PTR_vtbl; // 0x7E9E04
+struct VectorClass_TerrainTypeClass_CPTR;
+struct VectorClass_TerrainTypeClass_CPTR_vtbl;
+struct VectorClass_TerrainTypeClass_PTR;
+struct VectorClass_TerrainTypeClass_PTR_vtbl; // 0x7F0D9C / 0x7EA204
+struct VectorClass_TEventClass_PTR;
+struct VectorClass_TEventClass_PTR_vtbl; // 0x7F552C
+struct VectorClass_ThemeClass_PTR;
+struct VectorClass_ThemeClass_PTR_vtbl;
+struct VectorClass_ThemeControl_PTR;
+struct VectorClass_ThemeControl_PTR_vtbl; // 0x7EA584
+struct VectorClass_TiberiumClass_PTR;
+struct VectorClass_TiberiumClass_PTR_vtbl; // 0x7F56DC
+struct VectorClass_ToolTip_CPTR;
+struct VectorClass_ToolTip_CPTR_vtbl;
+struct VectorClass_ToolTip_PTR;
+struct VectorClass_ToolTip_PTR_vtbl; // 0x7F57E8
 struct VectorClass_TPoint3D_int;
 struct VectorClass_TPoint3D_int_vtbl; // 0x7E4638
+struct VectorClass_TRect_int;
+struct VectorClass_TRect_int_vtbl;
+struct VectorClass_TriggerClass_PTR;
+struct VectorClass_TriggerClass_PTR_vtbl; // 0x7E9C04
+struct VectorClass_TriggerTypeClass_PTR;
+struct VectorClass_TriggerTypeClass_PTR_vtbl; // 0x7E9BC4
+struct VectorClass_TubeClass_PTR;
+struct VectorClass_TubeClass_PTR_vtbl;
 struct VectorClass_UndoInfoStruct;
 struct VectorClass_UndoInfoStruct_vtbl; // 0x7F329C
+struct VectorClass_UnitClass_PTR;
+struct VectorClass_UnitClass_PTR_vtbl; // 0x7E9EC4
+struct VectorClass_UnitTypeClass_CPTR;
+struct VectorClass_UnitTypeClass_CPTR_vtbl;
+struct VectorClass_UnitTypeClass_PTR;
+struct VectorClass_UnitTypeClass_PTR_vtbl; // 0x7EAC48 / 0x7EA2C4
+struct VectorClass_unsigned_char;
+struct VectorClass_unsigned_char_vtbl; // 0x7F65F4
+struct VectorClass_unsigned_char_PTR;
+struct VectorClass_unsigned_char_PTR_vtbl; // 0x7F7B0C
+struct VectorClass_unsigned_int;
+struct VectorClass_unsigned_int_vtbl; // 0x7E37EC
+struct VectorClass_unsigned_long;
+struct VectorClass_unsigned_long_vtbl; // 0x7F3748
+struct VectorClass_unsigned_short;
+struct VectorClass_unsigned_short_vtbl; // 0x7E3824
+struct VectorClass_unsigned_short_CPTR;
+struct VectorClass_unsigned_short_CPTR_vtbl;
+struct VectorClass_unsigned_short_PTR;
+struct VectorClass_unsigned_short_PTR_vtbl; // 0x7ECD0C / 0x7ED1FC
+struct VectorClass_VeinholeMonsterClass_PTR;
+struct VectorClass_VeinholeMonsterClass_PTR_vtbl; // 0x7F665C
+struct VectorClass_VocClass_PTR;
+struct VectorClass_VocClass_PTR_vtbl; // 0x7F68CC
+struct VectorClass_VoxClass_PTR;
+struct VectorClass_VoxClass_PTR_vtbl; // 0x7F6924
+struct VectorClass_VoxelAnimClass_PTR;
+struct VectorClass_VoxelAnimClass_PTR_vtbl; // 0x7E1E4C
+struct VectorClass_VoxelAnimTypeClass_CPTR;
+struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl;
+struct VectorClass_VoxelAnimTypeClass_PTR;
+struct VectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7F0D5C / 0x7EA3C4
 struct VectorClass_W_4_char_i_s_k_unsigned_int_char;
 struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl; // 0x7F1274
+struct VectorClass_WarheadTypeClass_PTR;
+struct VectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1EA4
+struct VectorClass_WaveClass_PTR;
+struct VectorClass_WaveClass_PTR_vtbl; // 0x7E9D04
+struct VectorClass_WaypointClass;
+struct VectorClass_WaypointClass_vtbl; // 0x7F6EF4
+struct VectorClass_WaypointPathClass_PTR;
+struct VectorClass_WaypointPathClass_PTR_vtbl; // 0x7F6E24
+struct VectorClass_WDT_Centroid;
+struct VectorClass_WDT_Centroid_vtbl;
+struct VectorClass_WDT_Map_AnimationPalette_PTR;
+struct VectorClass_WDT_Map_AnimationPalette_PTR_vtbl;
+struct VectorClass_WeaponTypeClass_PTR;
+struct VectorClass_WeaponTypeClass_PTR_vtbl; // 0x7E1EF4
 struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR;
 struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl; // 0x7F7A3C
 struct VectorClass_Wstring;
 struct VectorClass_Wstring_vtbl; // 0x7F1294
-struct VectorClass__DDSURFACEDESC_PTR;
-struct VectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5DEC
-struct VectorClass__WIN32_FIND_DATAA_PTR;
-struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED92C
-struct VectorClass_tConnInfoStruct_PTR;
-struct VectorClass_tConnInfoStruct_PTR_vtbl; // 0x7F78A4
-struct VectorClass_tagCONNECTDATA;
-struct VectorClass_tagCONNECTDATA_vtbl; // 0x7E5C84
+struct VectorClass_ZoneConnectionClass;
+struct VectorClass_ZoneConnectionClass_vtbl; // 0x7ED4E0
+struct VectorClass_ZoneConnectionTable;
+struct VectorClass_ZoneConnectionTable_vtbl;
+struct VectorCursor;
+struct VectorCursor_vtbl;
+struct VectorCursor_GraphicMenuItem_PTR;
+struct VectorCursor_GraphicMenuItem_PTR_vtbl;
+struct VectorCursor_MSAnim_PTR;
+struct VectorCursor_MSAnim_PTR_vtbl;
+struct VectorCursor_MSSfxEntry_PTR;
+struct VectorCursor_MSSfxEntry_PTR_vtbl;
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR;
+struct VectorCursor_rc_ptr_WDT_Conflict_PTR_vtbl;
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR;
+struct VectorCursor_rc_ptr_WDT_GameOption_PTR_vtbl;
+struct VectorCursor_rc_ptr_WDT_Territory_PTR;
+struct VectorCursor_rc_ptr_WDT_Territory_PTR_vtbl;
+struct VectorCursor_TRect_int;
+struct VectorCursor_TRect_int_vtbl;
+struct VectorCursor_TRect_int_VectorClass_TRect_int;
+struct VectorCursor_TRect_int_VectorClass_TRect_int_vtbl;
+struct VectorCursor_unsigned_int;
+struct VectorCursor_unsigned_int_vtbl;
+struct VeinholeLogic;
+struct VeinholeMonsterClass; // : ObjectClass : AbstractClass
+struct VeinholeMonsterClass_vtbl; // 0x7F66A8
+struct VersionClass;
+struct VersionClass_vtbl;
 struct VeterancyNavCommandClass;
 struct VeterancyNavCommandClass_vtbl; // 0x7EB914
+struct VeterancyStruct;
 struct View1CommandClass;
 struct View1CommandClass_vtbl; // 0x7EBD9C
 struct View2CommandClass;
@@ -2374,290 +2571,104 @@ struct View3CommandClass;
 struct View3CommandClass_vtbl; // 0x7EBD4C
 struct View4CommandClass;
 struct View4CommandClass_vtbl; // 0x7EBD24
+struct VocClass;
+struct VocClassHeader;
+struct VolumeStruct;
+struct VoxClass;
+struct VoxelAnimClass; // : ObjectClass : AbstractClass
+struct VoxelAnimClass_vtbl; // 0x7F6318
+struct VoxelAnimTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct VoxelAnimTypeClass_vtbl; // 0x7F6548
+struct VoxelBoundary;
+struct VoxelBoundaryData;
+struct VoxelCacheStruct;
+struct VoxelSection;
+struct VoxelSectionHeader;
+struct VoxelSectionTailer;
+struct VoxelStruct;
+struct VoxLib;
+struct VQMovieHandle;
+struct VQMovieHandle_vtbl; // 0x7EE0F4
+struct WalkLocomotionClass; // : LocomotionClass
+struct WalkLocomotionClass_vtbl; // 0x7F6AC4
+struct WarheadTypeClass; // : AbstractTypeClass : AbstractClass
+struct WarheadTypeClass_vtbl; // 0x7F6B30
+struct WaveClass; // : ObjectClass : AbstractClass
+struct WaveClass_vtbl; // 0x7F6BF4
+struct WaypointClass;
+struct WaypointPathClass; // : AbstractClass
+struct WaypointPathClass_vtbl; // 0x7F6E70
+struct WDT_Campaign;
+struct WDT_Campaign_vtbl;
+struct WDT_CampaignProperties;
+struct WDT_CampaignProperties_vtbl;
+struct WDT_Centroid;
+struct WDT_Conflict;
+struct WDT_Conflict_vtbl;
 struct WDT_FactionSelectDialogControl;
 struct WDT_FactionSelectDialogControl_vtbl; // 0x7F791C
+struct WDT_FlagGameOption;
+struct WDT_FlagGameOption_vtbl;
+struct WDT_GameOption;
+struct WDT_GameOption_vtbl;
+struct WDT_History;
+struct WDT_History_vtbl;
+struct WDT_Map;
+struct WDT_Map_vtbl;
+struct WDT_MapSizeGameOption;
+struct WDT_MapSizeGameOption_vtbl;
 struct WDT_Selection;
 struct WDT_Selection_vtbl; // 0x7F72B4
+struct WDT_State;
+struct WDT_State_vtbl;
 struct WDT_Territory;
 struct WDT_Territory_vtbl; // 0x7F7334
+struct WDT_ValueGameOption_unsigned_char;
+struct WDT_ValueGameOption_unsigned_char_vtbl;
+struct WDT_Voices_Anim;
+struct WDT_Voices_Anim_vtbl;
+struct WDTState;
+struct WDTState_vtbl;
+struct WDTTerritory;
+struct WDTTerritory_vtbl;
+struct WeaponStruct;
+struct WeaponTypeClass; // : AbstractTypeClass : AbstractClass
+struct WeaponTypeClass_vtbl; // 0x7F73B8
 struct WebBrowser;
 struct WebBrowser_vtbl; // 0x7F743C
+struct WideStringClass;
+struct WideWstring;
 struct WinModemClass;
 struct WinModemClass_vtbl; // 0x7F7488
+struct WinsockBufferType;
+struct WinsockInterfaceClass;
+struct WinsockInterfaceClass_vtbl;
 struct WonlineStringDialogControl;
 struct WonlineStringDialogControl_vtbl; // 0x7F7874
+struct Wstring_base_TL_char_A_CharTrait_TR_;
+struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_;
+struct WWMessageBox;
+struct WWMouseClass;
+struct WWMouseClass_vtbl; // 0x7F7B2C
+struct WWMovieHandle;
+struct WWMovieHandle_vtbl;
+struct WWUIComboBoxItem;
+struct WWUIIntArray;
+struct WWUIListBoxCell;
+struct WWUIListBoxColumn;
+struct WWUIListBoxColumnArray;
+struct WWUIListBoxTextEntry;
+struct XSurface; // : Surface
+struct XSurface_vtbl; // 0x7E2104
+struct ZBuffer;
+struct ZoneConnectionClass;
+struct ZoneConnectionTable;
+struct ZoneConnectionTableManager;
+struct ZoneConnectionTables;
+struct ZoneInfoStruct;
 
 // TODO STRUCT
 
-class AbstractClass; // Abstract Tree Base
-struct AbstractClass_vtbl; // 0x7E1F50
-class AbstractTypeClass; // : AbstractClass
-struct AbstractTypeClass_vtbl; // 0x7E2000
-class TagClass; // : AbstractClass
-struct TagClass_vtbl; // 0x7F44E0
-class TagTypeClass; // : AbstractTypeClass : AbstractClass
-struct TagTypeClass_vtbl; // 0x7F45C4
-class TriggerClass; // : AbstractClass
-struct TriggerClass_vtbl; // 0x7F5858
-class TriggerTypeClass; // : AbstractTypeClass : AbstractClass
-struct TriggerTypeClass_vtbl; // 0x7F5904
-class CampaignClass; // : AbstractTypeClass : AbstractClass
-struct CampaignClass_vtbl; // 0x7E4A28
-class WaypointPathClass; // : AbstractClass
-struct WaypointPathClass_vtbl; // 0x7F6E70
-class HouseClass; // : AbstractClass
-struct HouseClass_vtbl; // 0x7EA8A0
-class HouseTypeClass; // : AbstractTypeClass : AbstractClass
-struct HouseTypeClass_vtbl; // 0x7EAB58
-class FileClass; // File Tree Base
-struct FileClass_vtbl; // 0x7F08BC
-class RawFileClass; // : FileClass
-struct RawFileClass_vtbl; // 0x7F0904
-class BufferIOFileClass; // : RawFileClass : FileClass
-struct BufferIOFileClass_vtbl; // 0x7E3A2C
-class CDFileClass; // : BufferIOFileClass : RawFileClass : FileClass
-struct CDFileClass_vtbl; // 0x7E1668
-class CCFileClass; // : CDFileClass : BufferIOFileClass : RawFileClass : FileClass
-struct CCFileClass_vtbl; // 0x7E16B0
-class BombClass; // : AbstractClass
-struct BombClass_vtbl; // 0x7E3D10
-class ConvertClass; // Convert Tree Base
-struct ConvertClass_vtbl; // 0x7E5358
-class LightConvertClass; // : ConvertClass
-struct LightConvertClass_vtbl; // 0x7ED0A4
-class ObjectClass; // : AbstractClass
-struct ObjectClass_vtbl; // 0x7EF060
-class ObjectTypeClass; // : AbstractTypeClass : AbstractClass
-struct ObjectTypeClass_vtbl; // 0x7EF2D8
-class AnimClass; // : ObjectClass : AbstractClass
-struct AnimClass_vtbl; // 0x7E3354
-class AnimTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct AnimTypeClass_vtbl; // 0x7E3608
-class SmudgeClass; // : ObjectClass : AbstractClass
-struct SmudgeClass_vtbl; // 0x7F32FC
-class SmudgeTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct SmudgeTypeClass_vtbl; // 0x7F3528
-class SuperClass; // : AbstractClass
-struct SuperClass_vtbl; // 0x7F3FE8
-class SuperWeaponTypeClass; // : AbstractTypeClass : AbstractClass
-struct SuperWeaponTypeClass_vtbl; // 0x7F4090
-class ScriptClass; // : AbstractClass
-struct ScriptClass_vtbl; // 0x7F0F78
-class ScriptTypeClass; // : AbstractTypeClass : AbstractClass
-struct ScriptTypeClass_vtbl; // 0x7F1008
-class TeamClass; // : AbstractClass
-struct TeamClass_vtbl; // 0x7F4730
-class TeamTypeClass; // : AbstractTypeClass : AbstractClass
-struct TeamTypeClass_vtbl; // 0x7F47D0
-class TActionClass; // : AbstractClass
-struct TActionClass_vtbl; // 0x7F443C
-class TaskForceClass; // : AbstractTypeClass : AbstractClass
-struct TaskForceClass_vtbl; // 0x7F4680
-class TEventClass; // : AbstractClass
-struct TEventClass_vtbl; // 0x7F5578
-class AirstrikeClass; // : AbstractClass
-struct AirstrikeClass_vtbl; // 0x7E29A8
-class CaptureManagerClass; // : AbstractClass
-struct CaptureManagerClass_vtbl; // 0x7E4B40
-class SpawnManagerClass; // : AbstractClass
-struct SpawnManagerClass_vtbl; // 0x7F3650
-class SlaveManagerClass; // : AbstractClass
-struct SlaveManagerClass_vtbl; // 0x7F31C8
-class ParasiteClass; // : AbstractClass
-struct ParasiteClass_vtbl; // 0x7EF890
-class FactoryClass; // : AbstractClass
-struct FactoryClass_vtbl; // 0x7E88D0
-class LightSourceClass; // : AbstractClass
-struct LightSourceClass_vtbl; // 0x7ED028
-class RadSiteClass; // : AbstractClass
-struct RadSiteClass_vtbl; // 0x7F0810
-class AlphaShapeClass; // : AbstractClass
-struct AlphaShapeClass_vtbl; // 0x7E32A4
-class EMPulseClass; // : AbstractClass
-struct EMPulseClass_vtbl; // 0x7E87A8
-class TemporalClass; // : AbstractClass
-struct TemporalClass_vtbl; // 0x7F5180
-class NeuronClass; // : AbstractClass
-struct NeuronClass_vtbl; // 0x7E3DF0
-class DiskLaserClass; // : AbstractClass
-struct DiskLaserClass_vtbl; // 0x7E5FB8
-class SideClass; // : AbstractTypeClass : AbstractClass
-struct SideClass_vtbl; // 0x7F2EC0
-class AITriggerTypeClass; // : AbstractTypeClass : AbstractClass
-struct AITriggerTypeClass_vtbl; // 0x7E2A50
-class TiberiumClass; // : AbstractTypeClass : AbstractClass
-struct TiberiumClass_vtbl; // 0x7F5728
-class VoxelAnimClass; // : ObjectClass : AbstractClass
-struct VoxelAnimClass_vtbl; // 0x7F6318
-class VoxelAnimTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct VoxelAnimTypeClass_vtbl; // 0x7F6548
-class WarheadTypeClass; // : AbstractTypeClass : AbstractClass
-struct WarheadTypeClass_vtbl; // 0x7F6B30
-class WeaponTypeClass; // : AbstractTypeClass : AbstractClass
-struct WeaponTypeClass_vtbl; // 0x7F73B8
-class ParticleClass; // : ObjectClass : AbstractClass
-struct ParticleClass_vtbl; // 0x7EF954
-class ParticleTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct ParticleTypeClass_vtbl; // 0x7F0188
-class ParticleSystemClass; // : ObjectClass : AbstractClass
-struct ParticleSystemClass_vtbl; // 0x7EFB9C
-class ParticleSystemTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct ParticleSystemTypeClass_vtbl; // 0x7F00A8
-class BulletClass; // : ObjectClass : AbstractClass
-struct BulletClass_vtbl; // 0x7E46E4
-class BulletTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct BulletTypeClass_vtbl; // 0x7E4948
-class OverlayClass; // : ObjectClass : AbstractClass
-struct OverlayClass_vtbl; // 0x7EF3D4
-class OverlayTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct OverlayTypeClass_vtbl; // 0x7EF600
-class CellClass; // : AbstractClass
-struct CellClass_vtbl; // 0x7E4EEC
-class WaveClass; // : ObjectClass : AbstractClass
-struct WaveClass_vtbl; // 0x7F6BF4
-class MissionClass; // : ObjectClass : AbstractClass
-struct MissionClass_vtbl; // 0x7EDCC0
-class RadioClass; // : MissionClass : ObjectClass : AbstractClass
-struct RadioClass_vtbl; // 0x7F0508
-class TechnoClass; // : RadioClass : MissionClass : ObjectClass : AbstractClass
-struct TechnoClass_vtbl; // 0x7F4960
-class TechnoTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct TechnoTypeClass_vtbl; // 0x7F4ED8
-class LinkClass; // Link Tree Base
-struct LinkClass_vtbl; // 0x7E9344
-class GadgetClass; // : LinkClass
-struct GadgetClass_vtbl; // 0x7E92BC
-class GraphicMenu; // 0x7EA5FC
-struct GraphicMenu_vtbl;
-class GraphicMenuItem; // 0x7EA690
-struct GraphicMenuItem_vtbl;
-class GraphicMenuAnimItem; // 0x7EA658
-class GraphicMenuImageItem; // 0x7EA674
-class GraphicMenuShortcutItem; // 0x7EA6AC
-class GScreenClass; // GScreen Tree Base
-struct GScreenClass_vtbl; // 0x7EA6FC
-class MapClass; // : GScreenClass
-struct MapClass_vtbl; // 0x7ED404
-class DisplayClass; // : MapClass : GScreenClass
-struct DisplayClass_vtbl; // 0x7E6114
-class RadarClass; // : DisplayClass : MapClass : GScreenClass
-struct RadarClass_vtbl; // 0x7F0344
-class PowerClass; // : RadarClass : DisplayClass : MapClass : GScreenClass
-struct PowerClass_vtbl; // 0x7EFF54
-class SidebarClass; // : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
-struct SidebarClass_vtbl; // 0x7F3058
-class TabClass; // : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
-struct TabClass_vtbl; // 0x7EDFB4
-class ScrollClass; // : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
-struct ScrollClass_vtbl; // 0x7F1094
-class MouseClass; // 0x87F7E8 (4CurrentPlayer)  : ScrollClass : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
-struct MouseClass_vtbl; // 0x7E1964
-class TacticalClass; // : AbstractClass
-struct TacticalClass_vtbl; // 0x7F4348
-class BuildingLightClass; // : ObjectClass : AbstractClass
-struct BuildingLightClass_vtbl; // 0x7E3AD0
-class BuildingClass; // : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
-struct BuildingClass_vtbl; // 0x7E3EBC
-class BuildingTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct BuildingTypeClass_vtbl; // 0x7E4570
-class FootClass; // : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
-struct FootClass_vtbl; // 0x7E8C94
-class InfantryClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
-struct InfantryClass_vtbl; // 0x7EB058
-class InfantryTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct InfantryTypeClass_vtbl; // 0x7EB610
-class UnitClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
-struct UnitClass_vtbl; // 0x7F5C70
-class UnitTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct UnitTypeClass_vtbl; // 0x7F6218
-class AircraftClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
-struct AircraftClass_vtbl; // 0x7E22A4
-class AircraftTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct AircraftTypeClass_vtbl; // 0x7E2868
-class TerrainClass; // : ObjectClass : AbstractClass
-struct TerrainClass_vtbl; // 0x7F522C
-class TerrainTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct TerrainTypeClass_vtbl; // 0x7F5458
-class Surface; // Surface Tree Base
-struct Surface_vtbl; // 0x7E2198
-class XSurface; // : Surface
-struct XSurface_vtbl; // 0x7E2104
-class DSurface; // : XSurface : Surface
-struct DSurface_vtbl; // 0x7E85D4
-class BSurface; // : XSurface : Surface
-struct BSurface_vtbl; // 0x7E2070
-class LocomotionClass; // Locomotion Tree Base
-struct LocomotionClass_vtbl; // 0x7EAEC0
-class JumpjetLocomotionClass; // : LocomotionClass
-struct JumpjetLocomotionClass_vtbl; // 0x7ECE34
-class FlyLocomotionClass; // : LocomotionClass
-struct FlyLocomotionClass_vtbl; // 0x7E8AC0
-class TeleportLocomotionClass; // : LocomotionClass
-struct TeleportLocomotionClass_vtbl; // 0x7F50CC
-class ShipLocomotionClass; // : LocomotionClass
-struct ShipLocomotionClass_vtbl; // 0x7F2E58
-class DriveLocomotionClass; // : LocomotionClass
-struct DriveLocomotionClass_vtbl; // 0x7E7F7C
-class TunnelLocomotionClass; // : LocomotionClass
-struct TunnelLocomotionClass_vtbl; // 0x7F5AF0
-class DropPodLocomotionClass; // : LocomotionClass
-struct DropPodLocomotionClass_vtbl; // 0x7E8344
-class RocketLocomotionClass; // : LocomotionClass
-struct RocketLocomotionClass_vtbl; // 0x7F0BE8
-class HoverLocomotionClass; // : LocomotionClass
-struct HoverLocomotionClass_vtbl; // 0x7EADC8
-class MechLocomotionClass; // : LocomotionClass
-struct MechLocomotionClass_vtbl; // 0x7EDC38
-class WalkLocomotionClass; // : LocomotionClass
-struct WalkLocomotionClass_vtbl; // 0x7F6AC4
-class TextLabelClass; // : GadgetClass : LinkClass
-struct TextLabelClass_vtbl; // 0x7F5B44
-class LayerClass; // Layer Tree Base ( : DynamicVectorClass_ObjectClass_PTR)
-struct LayerClass_vtbl; // 0x7E6060
-class LogicClass; // : LayerClass
-struct LogicClass_vtbl; // 0x7E18FC
-class VeinholeMonsterClass; // : ObjectClass : AbstractClass
-struct VeinholeMonsterClass_vtbl; // 0x7F66A8
-class IsometricTileClass; // : ObjectClass : AbstractClass
-struct IsometricTileClass_vtbl; // 0x7EC258
-class IsometricTileTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
-struct IsometricTileTypeClass_vtbl; // 0x7ECC48
-class ControlClass; // : GadgetClass : LinkClass
-struct ControlClass_vtbl; // 0x7E528C
-class ToggleClass; // : ControlClass : GadgetClass : LinkClass
-struct ToggleClass_vtbl; // 0x7E8118
-class ShapeButtonClass; // : ToggleClass : ControlClass : GadgetClass : LinkClass
-struct ShapeButtonClass_vtbl; // 0x7E8088
-class EditClass; // : ControlClass : GadgetClass : LinkClass
-struct EditClass_vtbl; // 0x7E81A4
-class GaugeClass; // : ControlClass : GadgetClass : LinkClass
-struct GaugeClass_vtbl; // 0x7E9384
-class SliderClass; // : GaugeClass : ControlClass : GadgetClass : LinkClass
-struct SliderClass_vtbl; // 0x7ED21C
-class ListClass; // : ControlClass : GadgetClass : LinkClass
-struct ListClass_vtbl; // 0x7ED10C
-class DropListClass; // : EditClass : ControlClass : GadgetClass : LinkClass
-struct DropListClass_vtbl; // 0x7E7FCC
-class TriColorGaugeClass; // : GaugeClass : ControlClass : GadgetClass : LinkClass
-struct TriColorGaugeClass_vtbl; // 0x7E9430
-class CheckListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
-struct CheckListClass_vtbl; // 0x7E4F84
-class ColorListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
-struct ColorListClass_vtbl; // 0x7E5054
-class CommandClass; // FIXME Command Tree Base (Subs exist)
-struct CommandClass_vtbl; // 0x7EBE3C
-class MPGameModeClass; // FIXME MPGameMode Tree Base (Subs exist)
-struct MPGameModeClass_vtbl; // 0x7EED60
-class GGadgetClass; // : GadgetClass : LinkClass
-struct GGadgetClass_vtbl; // 0x7F02BC
-class SelectClass; // : ControlClass : GadgetClass : LinkClass
-struct SelectClass_vtbl; // 0x7F2FCC
-class FoggedObjectClass; // : AbstractClass
-struct FoggedObjectClass_vtbl; // 0x7E8B38
-class StaticButtonClass; // : GadgetClass : LinkClass
-struct StaticButtonClass_vtbl; // 0x7F3EA0
-class TubeClass; // : AbstractClass
-struct TubeClass_vtbl; // 0x7F59B0
 
 // TODO CLASS
 
@@ -5541,7 +5552,7 @@ struct LightingStruct
   int Level;
 };
 
-class ConvertClass
+struct ConvertClass
 {
   ConvertClass_vtbl *__vftable;
   int BytesPerPixel;
@@ -5561,7 +5572,7 @@ struct ConvertClass_vtbl
   void (__thiscall *Destructor)(ConvertClass *this);
 };
 
-class LightConvertClass : ConvertClass
+struct LightConvertClass : ConvertClass
 {
   RGBClass *UsedPalette1;
   RGBClass *UsedPalette2;
@@ -5662,7 +5673,7 @@ union Union_HouseClass_StartingLocation
   CellStruct StartingCell;
 };
 
-class FileClass
+struct FileClass
 {
   FileClass_vtbl *__vftable;
   bool SkipCDCheck;
@@ -5690,7 +5701,7 @@ struct FileClass_vtbl
   void (__thiscall *CDCheck)(FileClass *this, unsigned int ErrorCode, bool bUnk, char *pFilename);
 };
 
-class RawFileClass : FileClass
+struct RawFileClass : FileClass
 {
   FileAccessMode FileAccess;
   int FilePointer;
@@ -5705,7 +5716,7 @@ class RawFileClass : FileClass
 
 struct RawFileClass_vtbl : FileClass_vtbl {};
 
-class BufferIOFileClass : RawFileClass
+struct BufferIOFileClass : RawFileClass
 {
   bool HasIOBuffer;
   bool ConsiderAsValid;
@@ -5727,14 +5738,14 @@ class BufferIOFileClass : RawFileClass
 
 struct BufferIOFileClass_vtbl : RawFileClass_vtbl {};
 
-class __declspec(align(4)) CDFileClass : BufferIOFileClass
+struct __declspec(align(4)) CDFileClass : BufferIOFileClass
 {
   bool IsDisabled;
 };
 
 struct CDFileClass_vtbl : BufferIOFileClass_vtbl {};
 
-class CCFileClass : CDFileClass
+struct CCFileClass : CDFileClass
 {
   MemoryBuffer Buffer;
   unsigned int Position;
@@ -6190,7 +6201,7 @@ struct IFlyControl_vtbl : IUnknown_vtbl
   int (__stdcall *Is_Locked)(IFlyControl *this);
 };
 
-class CommandClass
+struct CommandClass
 {
   CommandClass_vtbl *__vftable;
 };
@@ -7021,7 +7032,7 @@ struct VectorBase_CoordStruct_vtbl : VectorBase_ELE_vtbl {};
 struct VectorClass_CoordStruct : VectorBase_CoordStruct, VectorAddon {};
 struct VectorClass_CoordStruct_vtbl : VectorBase_CoordStruct_vtbl {};
 
-class Surface
+struct Surface
 {
   Surface_vtbl *__vftable;
   int Width;
@@ -7556,7 +7567,7 @@ struct VectorClass_MultiMission_CPTR_vtbl : VectorBase_MultiMission_CPTR_vtbl {}
 struct DynamicVectorClass_MultiMission_CPTR : VectorClass_MultiMission_CPTR, DynamicAddon {};
 struct DynamicVectorClass_MultiMission_CPTR_vtbl : VectorClass_MultiMission_CPTR_vtbl {};
 
-class MPGameModeClass
+struct MPGameModeClass
 {
   MPGameModeClass_vtbl *__vftable;
   bool unknown_4;
@@ -8580,7 +8591,7 @@ struct IPiggyback_vtbl : IUnknown_vtbl
   bool (__stdcall *Is_Piggybacking)(IPiggyback *this);
 };
 
-class AbstractClass : IPersistStream, IRTTITypeInfo, INoticeSink, INoticeSource
+struct AbstractClass : IPersistStream, IRTTITypeInfo, INoticeSink, INoticeSource
 {
   unsigned int UniqueID;
   AbstractFlags AbstractFlags;
@@ -8610,7 +8621,7 @@ struct AbstractClass_vtbl : IPersistStream_vtbl
   void (__thiscall *Update)(AbstractClass *this);
 };
 
-class __declspec(align(4)) AbstractTypeClass : AbstractClass
+struct __declspec(align(4)) AbstractTypeClass : AbstractClass
 {
   char ID[24];
   unsigned __int8 zero_3C;
@@ -8626,7 +8637,7 @@ struct AbstractTypeClass_vtbl : AbstractClass_vtbl
   bool (__thiscall *SaveToINI)(AbstractTypeClass *this, CCINIClass *pINI);
 };
 
-class TagClass : AbstractClass
+struct TagClass : AbstractClass
 {
   TagTypeClass *Type;
   TriggerClass *FirstTrigger;
@@ -8639,7 +8650,7 @@ class TagClass : AbstractClass
 
 struct TagClass_vtbl : AbstractClass_vtbl {};
 
-class __unaligned __declspec(align(4)) TagTypeClass : AbstractTypeClass
+struct __unaligned __declspec(align(4)) TagTypeClass : AbstractTypeClass
 {
   int ArrayIndex;
   TriggerPersistence Persistence;
@@ -8648,7 +8659,7 @@ class __unaligned __declspec(align(4)) TagTypeClass : AbstractTypeClass
 
 struct TagTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class TriggerClass : AbstractClass
+struct TriggerClass : AbstractClass
 {
   struct TriggerTypeClass *Type;
   TriggerClass *NextTrigger;
@@ -8663,7 +8674,7 @@ class TriggerClass : AbstractClass
 
 struct TriggerClass_vtbl : AbstractClass_vtbl {};
 
-class WaypointPathClass : AbstractClass
+struct WaypointPathClass : AbstractClass
 {
   int CurrentWaypointIndex;
   DynamicVectorClass_WaypointClass Waypoints;
@@ -8671,7 +8682,7 @@ class WaypointPathClass : AbstractClass
 
 struct WaypointPathClass_vtbl : AbstractClass_vtbl {};
 
-class HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContainer
+struct HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContainer
 {
   int ArrayIndex;
   HouseTypeClass *Type;
@@ -8925,7 +8936,7 @@ struct HouseClass_vtbl : AbstractClass_vtbl
   HRESULT (__stdcall *FindConnectionPoint)(HouseClass *this, _GUID *pRiid, IConnectionPoint **ppCP);
 };
 
-class HouseTypeClass : AbstractTypeClass
+struct HouseTypeClass : AbstractTypeClass
 {
   FixedString_TL_25_A_char_TR_ ParentCountry;
   unsigned __int8 align_B1[3];
@@ -8974,7 +8985,7 @@ class HouseTypeClass : AbstractTypeClass
 
 struct HouseTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class __declspec(align(4)) BombClass : AbstractClass
+struct __declspec(align(4)) BombClass : AbstractClass
 {
   TechnoClass *Owner;
   HouseClass *OwnerHouse;
@@ -8990,7 +9001,7 @@ class __declspec(align(4)) BombClass : AbstractClass
 
 struct BombClass_vtbl : AbstractClass_vtbl {};
 
-class ObjectClass : AbstractClass
+struct ObjectClass : AbstractClass
 {
   unsigned int unknown_24;
   unsigned int unknown_28;
@@ -9132,7 +9143,7 @@ struct ObjectClass_vtbl : AbstractClass_vtbl
   LightConvertClass *(__thiscall *GetRemapColour)(ObjectClass *this);
 };
 
-class __unaligned __declspec(align(4)) ObjectTypeClass : AbstractTypeClass
+struct __unaligned __declspec(align(4)) ObjectTypeClass : AbstractTypeClass
 {
   ColorStruct RadialColor;
   unsigned __int8 unused_9B;
@@ -9197,7 +9208,7 @@ struct ObjectTypeClass_vtbl : AbstractTypeClass_vtbl
   SHPStruct *(__thiscall *GetImage)(ObjectTypeClass *this);
 };
 
-class AnimClass : ObjectClass
+struct AnimClass : ObjectClass
 {
   StageClass Animation;
   AnimTypeClass *Type;
@@ -9248,7 +9259,7 @@ struct AnimClass_vtbl : ObjectClass_vtbl
   int (__thiscall *GetEnd)(AnimClass *this);
 };
 
-class __declspec(align(4)) AnimTypeClass : ObjectTypeClass
+struct __declspec(align(4)) AnimTypeClass : ObjectTypeClass
 {
   int ArrayIndex;
   int MiddleFrameIndex;
@@ -9327,14 +9338,14 @@ struct AnimTypeClass_vtbl : ObjectTypeClass_vtbl
   void (__thiscall *Load2DArt)(AnimTypeClass *this);
 };
 
-class SmudgeClass : ObjectClass
+struct SmudgeClass : ObjectClass
 {
   SmudgeTypeClass *Type;
 };
 
 struct SmudgeClass_vtbl : ObjectClass_vtbl {};
 
-class __declspec(align(4)) SmudgeTypeClass : ObjectTypeClass
+struct __declspec(align(4)) SmudgeTypeClass : ObjectTypeClass
 {
   int ArrayIndex;
   int Width;
@@ -9348,7 +9359,7 @@ struct SmudgeTypeClass_vtbl : ObjectTypeClass_vtbl
   void (__thiscall *DrawIt)(SmudgeTypeClass *this, Point2D *pPosition, RectangleStruct *pBoundingRect, int Data, int Level, CellStruct *pCell);
 };
 
-class SuperClass : AbstractClass
+struct SuperClass : AbstractClass
 {
   int CustomChargeTime;
   SuperWeaponTypeClass *Type;
@@ -9378,7 +9389,7 @@ class SuperClass : AbstractClass
 
 struct SuperClass_vtbl : AbstractClass_vtbl {};
 
-class SuperWeaponTypeClass : AbstractTypeClass
+struct SuperWeaponTypeClass : AbstractTypeClass
 {
   int ArrayIndex;
   WeaponTypeClass *WeaponType;
@@ -9414,7 +9425,7 @@ struct SuperWeaponTypeClass_vtbl : AbstractTypeClass_vtbl
   Action (__thiscall *MouseOverObject)(SuperWeaponTypeClass *this, CellStruct *pCell, ObjectClass *pObjBelowMouse);
 };
 
-class ScriptClass : AbstractClass
+struct ScriptClass : AbstractClass
 {
   ScriptTypeClass *Type;
   int field_28;
@@ -9423,7 +9434,7 @@ class ScriptClass : AbstractClass
 
 struct ScriptClass_vtbl : AbstractClass_vtbl {};
 
-class __unaligned __declspec(align(4)) ScriptTypeClass : AbstractTypeClass
+struct __unaligned __declspec(align(4)) ScriptTypeClass : AbstractTypeClass
 {
   int ArrayIndex;
   bool IsGlobal;
@@ -9433,7 +9444,7 @@ class __unaligned __declspec(align(4)) ScriptTypeClass : AbstractTypeClass
 
 struct ScriptTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class TeamClass : AbstractClass
+struct TeamClass : AbstractClass
 {
   TeamTypeClass *Type;
   ScriptClass *CurrentScript;
@@ -9473,7 +9484,7 @@ class TeamClass : AbstractClass
 
 struct TeamClass_vtbl : AbstractClass_vtbl {};
 
-class TeamTypeClass : AbstractTypeClass
+struct TeamTypeClass : AbstractTypeClass
 {
   int ArrayIndex;
   int Group;
@@ -9521,7 +9532,7 @@ class TeamTypeClass : AbstractTypeClass
 
 struct TeamTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class TActionClass : AbstractClass
+struct TActionClass : AbstractClass
 {
   int ArrayIndex;
   TActionClass *NextAction;
@@ -9540,7 +9551,7 @@ class TActionClass : AbstractClass
 
 struct TActionClass_vtbl : AbstractClass_vtbl {};
 
-class __unaligned __declspec(align(4)) TaskForceClass : AbstractTypeClass
+struct __unaligned __declspec(align(4)) TaskForceClass : AbstractTypeClass
 {
   int Group;
   int CountEntries;
@@ -9550,7 +9561,7 @@ class __unaligned __declspec(align(4)) TaskForceClass : AbstractTypeClass
 
 struct TaskForceClass_vtbl : AbstractTypeClass_vtbl {};
 
-class TEventClass : AbstractClass
+struct TEventClass : AbstractClass
 {
   int ArrayIndex;
   TEventClass *NextEvent;
@@ -9563,7 +9574,7 @@ class TEventClass : AbstractClass
 
 struct TEventClass_vtbl : AbstractClass_vtbl {};
 
-class AirstrikeClass : AbstractClass
+struct AirstrikeClass : AbstractClass
 {
   int AirstrikeTeam;
   int EliteAirstrikeTeam;
@@ -9585,7 +9596,7 @@ class AirstrikeClass : AbstractClass
 
 struct AirstrikeClass_vtbl : AbstractClass_vtbl {};
 
-class CaptureManagerClass : AbstractClass
+struct CaptureManagerClass : AbstractClass
 {
   DynamicVectorClass_ControlNode_PTR ControlNodes;
   int MaxControlNodes;
@@ -9598,7 +9609,7 @@ class CaptureManagerClass : AbstractClass
 
 struct CaptureManagerClass_vtbl : AbstractClass_vtbl {};
 
-class SpawnManagerClass : AbstractClass
+struct SpawnManagerClass : AbstractClass
 {
   TechnoClass *Owner;
   AircraftTypeClass *SpawnType;
@@ -9615,7 +9626,7 @@ class SpawnManagerClass : AbstractClass
 
 struct SpawnManagerClass_vtbl : AbstractClass_vtbl {};
 
-class SlaveManagerClass : AbstractClass
+struct SlaveManagerClass : AbstractClass
 {
   TechnoClass *Owner;
   InfantryTypeClass *SlaveType;
@@ -9630,7 +9641,7 @@ class SlaveManagerClass : AbstractClass
 
 struct SlaveManagerClass_vtbl : AbstractClass_vtbl {};
 
-class __declspec(align(4)) ParasiteClass : AbstractClass
+struct __declspec(align(4)) ParasiteClass : AbstractClass
 {
   FootClass *Owner;
   FootClass *Victim;
@@ -9645,7 +9656,7 @@ class __declspec(align(4)) ParasiteClass : AbstractClass
 
 struct ParasiteClass_vtbl : AbstractClass_vtbl {};
 
-class __unaligned __declspec(align(4)) FactoryClass : AbstractClass
+struct __unaligned __declspec(align(4)) FactoryClass : AbstractClass
 {
   StageClass Production;
   DynamicVectorClass_TechnoTypeClass_PTR QueuedObjects;
@@ -9664,7 +9675,7 @@ class __unaligned __declspec(align(4)) FactoryClass : AbstractClass
 
 struct FactoryClass_vtbl : AbstractClass_vtbl {};
 
-class __unaligned __declspec(align(4)) LightSourceClass : AbstractClass
+struct __unaligned __declspec(align(4)) LightSourceClass : AbstractClass
 {
   int LightIntensity;
   TintStruct LightTint;
@@ -9676,7 +9687,7 @@ class __unaligned __declspec(align(4)) LightSourceClass : AbstractClass
 
 struct LightSourceClass_vtbl : AbstractClass_vtbl {};
 
-class __unaligned __declspec(align(4)) RadSiteClass : AbstractClass
+struct __unaligned __declspec(align(4)) RadSiteClass : AbstractClass
 {
   LightSourceClass *LightSource;
   CDTimerClass RadLevelTimer;
@@ -9696,7 +9707,7 @@ class __unaligned __declspec(align(4)) RadSiteClass : AbstractClass
 
 struct RadSiteClass_vtbl : AbstractClass_vtbl {};
 
-class __declspec(align(4)) AlphaShapeClass : AbstractClass
+struct __declspec(align(4)) AlphaShapeClass : AbstractClass
 {
   ObjectClass *AttachedTo;
   RectangleStruct Rect;
@@ -9706,7 +9717,7 @@ class __declspec(align(4)) AlphaShapeClass : AbstractClass
 
 struct AlphaShapeClass_vtbl : AbstractClass_vtbl {};
 
-class EMPulseClass : AbstractClass
+struct EMPulseClass : AbstractClass
 {
   CellStruct BaseCoords;
   int Spread;
@@ -9716,7 +9727,7 @@ class EMPulseClass : AbstractClass
 
 struct EMPulseClass_vtbl : AbstractClass_vtbl {};
 
-class TemporalClass : AbstractClass
+struct TemporalClass : AbstractClass
 {
   TechnoClass *Owner;
   TechnoClass *Target;
@@ -9731,7 +9742,7 @@ class TemporalClass : AbstractClass
 
 struct TemporalClass_vtbl : AbstractClass_vtbl {};
 
-class NeuronClass : AbstractClass
+struct NeuronClass : AbstractClass
 {
   void *unknown_ptr_24;
   void *unknown_ptr_28;
@@ -9741,7 +9752,7 @@ class NeuronClass : AbstractClass
 
 struct NeuronClass_vtbl : AbstractClass_vtbl {};
 
-class DiskLaserClass : AbstractClass
+struct DiskLaserClass : AbstractClass
 {
   TechnoClass *Owner;
   TechnoClass *Target;
@@ -9754,14 +9765,14 @@ class DiskLaserClass : AbstractClass
 
 struct DiskLaserClass_vtbl : AbstractClass_vtbl {};
 
-class SideClass : AbstractTypeClass
+struct SideClass : AbstractTypeClass
 {
   TypeList_int HouseTypes;
 };
 
 struct SideClass_vtbl : AbstractTypeClass_vtbl {};
 
-class AITriggerTypeClass : AbstractTypeClass
+struct AITriggerTypeClass : AbstractTypeClass
 {
   AITriggerCondition ConditionType;
   int IsGlobal;
@@ -9790,7 +9801,7 @@ class AITriggerTypeClass : AbstractTypeClass
 
 struct AITriggerTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class TiberiumClass : AbstractTypeClass
+struct TiberiumClass : AbstractTypeClass
 {
   int ArrayIndex;
   int Spread;
@@ -9811,7 +9822,7 @@ class TiberiumClass : AbstractTypeClass
 
 struct TiberiumClass_vtbl : AbstractTypeClass_vtbl {};
 
-class VoxelAnimClass : ObjectClass
+struct VoxelAnimClass : ObjectClass
 {
   unsigned int unused_AC;
   BounceClass Bounce;
@@ -9831,7 +9842,7 @@ class VoxelAnimClass : ObjectClass
 
 struct VoxelAnimClass_vtbl : ObjectClass_vtbl {};
 
-class __declspec(align(8)) VoxelAnimTypeClass : ObjectTypeClass
+struct __declspec(align(8)) VoxelAnimTypeClass : ObjectTypeClass
 {
   bool Normalized;
   bool Translucent;
@@ -9864,7 +9875,7 @@ class __declspec(align(8)) VoxelAnimTypeClass : ObjectTypeClass
 
 struct VoxelAnimTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
-class WarheadTypeClass : AbstractTypeClass
+struct WarheadTypeClass : AbstractTypeClass
 {
   double Deform;
   double Verses[11];
@@ -9930,7 +9941,7 @@ class WarheadTypeClass : AbstractTypeClass
 
 struct WarheadTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class __declspec(align(4)) WeaponTypeClass : AbstractTypeClass
+struct __declspec(align(4)) WeaponTypeClass : AbstractTypeClass
 {
   int AmbientDamage;
   int Burst;
@@ -9999,7 +10010,7 @@ class __declspec(align(4)) WeaponTypeClass : AbstractTypeClass
 
 struct WeaponTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class ParticleClass : ObjectClass
+struct ParticleClass : ObjectClass
 {
   ParticleTypeClass *Type;
   unsigned __int8 unknown_B0;
@@ -10037,7 +10048,7 @@ struct ParticleClass_vtbl : ObjectClass_vtbl
   int (__thiscall *vt_entry_1E8)(ParticleClass *this);
 };
 
-class ParticleTypeClass : ObjectTypeClass
+struct ParticleTypeClass : ObjectTypeClass
 {
   CoordStruct NextParticleOffset;
   int XVelocity;
@@ -10073,7 +10084,7 @@ class ParticleTypeClass : ObjectTypeClass
 
 struct ParticleTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
-class ParticleSystemClass : ObjectClass
+struct ParticleSystemClass : ObjectClass
 {
   ParticleSystemTypeClass *Type;
   CoordStruct SpawnDistanceToOwner;
@@ -10092,7 +10103,7 @@ class ParticleSystemClass : ObjectClass
 
 struct ParticleSystemClass_vtbl : ObjectClass_vtbl {};
 
-class __declspec(align(4)) ParticleSystemTypeClass : ObjectTypeClass
+struct __declspec(align(4)) ParticleSystemTypeClass : ObjectTypeClass
 {
   int HoldsWhat;
   bool Spawns;
@@ -10121,7 +10132,7 @@ class __declspec(align(4)) ParticleSystemTypeClass : ObjectTypeClass
 
 struct ParticleSystemTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
-class BulletClass : ObjectClass
+struct BulletClass : ObjectClass
 {
   BulletTypeClass *Type;
   TechnoClass *Owner;
@@ -10160,7 +10171,7 @@ struct BulletClass_vtbl : ObjectClass_vtbl
   bool (__thiscall *MoveTo)(BulletClass *this, CoordStruct *pObject, BulletVelocity *pCrdSrc);
 };
 
-class BulletTypeClass : ObjectTypeClass
+struct BulletTypeClass : ObjectTypeClass
 {
   bool Airburst;
   bool Floater;
@@ -10208,14 +10219,14 @@ class BulletTypeClass : ObjectTypeClass
 
 struct BulletTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
-class OverlayClass : ObjectClass
+struct OverlayClass : ObjectClass
 {
   OverlayTypeClass *Type;
 };
 
 struct OverlayClass_vtbl : ObjectClass_vtbl {};
 
-class __unaligned __declspec(align(4)) OverlayTypeClass : ObjectTypeClass
+struct __unaligned __declspec(align(4)) OverlayTypeClass : ObjectTypeClass
 {
   int ArrayIndex;
   LandType LandType;
@@ -10244,7 +10255,7 @@ struct OverlayTypeClass_vtbl : ObjectTypeClass_vtbl
   void (__thiscall *Draw)(OverlayTypeClass *this, Point2D *pClientCoords, RectangleStruct *pClipRect, int Frame);
 };
 
-class CellClass : AbstractClass
+struct CellClass : AbstractClass
 {
   CellStruct MapCoords;
   DynamicVectorClass_FoggedObjectClass_PTR *FoggedObjects;
@@ -10311,7 +10322,7 @@ class CellClass : AbstractClass
 
 struct CellClass_vtbl : AbstractClass_vtbl {};
 
-class WaveClass : ObjectClass
+struct WaveClass : ObjectClass
 {
   AbstractClass *Target;
   WaveType Type;
@@ -10353,7 +10364,7 @@ class WaveClass : ObjectClass
 
 struct WaveClass_vtbl : ObjectClass_vtbl {};
 
-class MissionClass : ObjectClass
+struct MissionClass : ObjectClass
 {
   Mission CurrentMission;
   Mission SuspendedMission;
@@ -10404,7 +10415,7 @@ struct MissionClass_vtbl : ObjectClass_vtbl
   int (__thiscall *Mission_SpyPlaneOverfly)(MissionClass *this);
 };
 
-class RadioClass : MissionClass
+struct RadioClass : MissionClass
 {
   RadioCommand LastCommands[3];
   VectorClass_TechnoClass_PTR RadioLinks;
@@ -10418,7 +10429,7 @@ struct RadioClass_vtbl : MissionClass_vtbl
   void (__thiscall *SendToEachLink)(RadioClass *this, RadioCommand Command);
 };
 
-class TechnoClass : RadioClass
+struct TechnoClass : RadioClass
 {
   FlashData Flashing;
   StageClass Animation;
@@ -10753,7 +10764,7 @@ struct TechnoClass_vtbl : RadioClass_vtbl
   bool (__thiscall *RefreshMegaMission)(TechnoClass *this);
 };
 
-class TechnoTypeClass : ObjectTypeClass
+struct TechnoTypeClass : ObjectTypeClass
 {
   int WalkRate;
   int IdleRate;
@@ -11099,7 +11110,7 @@ struct TechnoTypeClass_vtbl : ObjectTypeClass_vtbl
   int (__thiscall *GetFlightLevel)(TechnoTypeClass *this);
 };
 
-class LinkClass
+struct LinkClass
 {
   LinkClass_vtbl *__vftable;
   LinkClass *Next;
@@ -11120,7 +11131,7 @@ struct LinkClass_vtbl
   LinkClass *(__thiscall *Remove)(LinkClass *this);
 };
 
-class GadgetClass : LinkClass
+struct GadgetClass : LinkClass
 {
   int X;
   int Y;
@@ -11159,7 +11170,7 @@ struct GadgetClass_vtbl : LinkClass_vtbl
   bool (__thiscall *Clicked)(GadgetClass *this, KeyNumType *pKey, GadgetFlag Flags, int X, int Y, KeyModifier Modifier);
 };
 
-class GScreenClass : IGameMap
+struct GScreenClass : IGameMap
 {
   int ScreenShakeX;
   int ScreenShakeY;
@@ -11253,7 +11264,7 @@ struct HierarchyConnectionTableManager
   int CapacityIncrement;
 };
 
-class MapClass : GScreenClass
+struct MapClass : GScreenClass
 {
   unsigned int unknown_10;
   ZoneConnectionTableManager *ZonesConnectionsData;
@@ -11321,7 +11332,7 @@ struct MapClass_vtbl
   void (__thiscall *SetVisibleRect)(MapClass *this, RectangleStruct *pMapRect);
 };
 
-class DisplayClass : MapClass
+struct DisplayClass : MapClass
 {
   CellStruct CurrentFoundation_CenterCell;
   CellStruct CurrentFoundation_TopLeftOffset;
@@ -11412,7 +11423,7 @@ struct DisplayClass_vtbl
   void (__thiscall *RightMouseButtonUp)(DisplayClass *this, Point2D *dwUnk);
 };
 
-class RadarClass : DisplayClass
+struct RadarClass : DisplayClass
 {
   Point2D unknown_point2d_11E4;
   int unknown_size_11EC;
@@ -11514,7 +11525,7 @@ struct RadarClass_vtbl
   void (__thiscall *Init_For_House)(RadarClass *this);
 };
 
-class PowerClass : RadarClass
+struct PowerClass : RadarClass
 {
   bool PowerNeedRedraw;
   unsigned __int8 align_150D[3];
@@ -11588,7 +11599,7 @@ struct PowerClass_vtbl
   void (__thiscall *Init_For_House)(RadarClass *this);
 };
 
-class SidebarClass : PowerClass
+struct SidebarClass : PowerClass
 {
   StripClass Tabs[4];
   unsigned int unknown_5394;
@@ -11677,7 +11688,7 @@ struct SidebarClass_vtbl
   bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
-class TabClass : SidebarClass, INoticeSink
+struct TabClass : SidebarClass, INoticeSink
 {
   TabDataClass TabData;
   CDTimerClass unknown_timer_552C;
@@ -11747,7 +11758,7 @@ struct TabClass_vtbl
   bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
-class ScrollClass : TabClass
+struct ScrollClass : TabClass
 {
   unsigned int unknown_int_5548;
   bool RightDownAndDragging;
@@ -11818,7 +11829,7 @@ struct ScrollClass_vtbl
   bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
-class MouseClass : ScrollClass
+struct MouseClass : ScrollClass
 {
   bool MouseCursorIsMini;
   unsigned __int8 unknown_byte_5559[3];
@@ -11886,7 +11897,7 @@ struct MouseClass_vtbl
   bool (__thiscall *vt_entry_D8)(SidebarClass *this, int Value);
 };
 
-class TacticalClass : AbstractClass
+struct TacticalClass : AbstractClass
 {
   wchar_t ScreenText[64];
   int EndGameGraphicsFrame;
@@ -11925,7 +11936,7 @@ struct TacticalClass_vtbl : AbstractClass_vtbl
   bool (__thiscall *sub_6DBB60)(TacticalClass *this, CoordStruct *pa2, CoordStruct *pa3, unsigned int a4, unsigned int dwUnk);
 };
 
-class BuildingLightClass : ObjectClass
+struct BuildingLightClass : ObjectClass
 {
   double Speed;
   CoordStruct field_B8;
@@ -11939,7 +11950,7 @@ class BuildingLightClass : ObjectClass
 
 struct BuildingLightClass_vtbl : ObjectClass_vtbl {};
 
-class __declspec(align(8)) BuildingClass : TechnoClass
+struct __declspec(align(8)) BuildingClass : TechnoClass
 {
   BuildingTypeClass *Type;
   FactoryClass *Factory;
@@ -12034,7 +12045,7 @@ struct BuildingClass_vtbl : TechnoClass_vtbl
   int (__thiscall *AlwaysZero)(BuildingClass *this);
 };
 
-class BuildingTypeClass : TechnoTypeClass
+struct BuildingTypeClass : TechnoTypeClass
 {
   int ArrayIndex;
   CellStruct *FoundationData;
@@ -12239,7 +12250,7 @@ struct BuildingTypeClass_vtbl : TechnoTypeClass_vtbl
   SHPStruct *(__thiscall *LoadBuildup)(BuildingTypeClass *this);
 };
 
-class FootClass : TechnoClass
+struct FootClass : TechnoClass
 {
   int PlanningPathIdx;
   CellStruct WaypointNearbyAccessibleCellDelta;
@@ -12349,7 +12360,7 @@ struct FootClass_vtbl : TechnoClass_vtbl
   bool (__thiscall *IsLandZoneClear)(FootClass *this, AbstractClass *pDestination);
 };
 
-class InfantryClass : FootClass
+struct InfantryClass : FootClass
 {
   InfantryTypeClass *Type;
   Sequence SequenceAnim;
@@ -12373,7 +12384,7 @@ struct InfantryClass_vtbl : FootClass_vtbl
   bool (__thiscall *PlayAnim)(InfantryClass *this, Sequence Index, bool Force, bool RandomStartFrame);
 };
 
-class InfantryTypeClass : TechnoTypeClass
+struct InfantryTypeClass : TechnoTypeClass
 {
   int ArrayIndex;
   PipIndex Pip;
@@ -12418,7 +12429,7 @@ class InfantryTypeClass : TechnoTypeClass
 
 struct InfantryTypeClass_vtbl : TechnoTypeClass_vtbl {};
 
-class UnitClass : FootClass
+struct UnitClass : FootClass
 {
   int CurrentFiringFrame;
   UnitTypeClass *Type;
@@ -12445,7 +12456,7 @@ struct UnitClass_vtbl : FootClass_vtbl
   void (__thiscall *DrawObject)(UnitClass *this, Surface *pSurface, Point2D Coords, RectangleStruct CacheRect, int Brightness, int Tint);
 };
 
-class __declspec(align(2)) UnitTypeClass : TechnoTypeClass
+struct __declspec(align(2)) UnitTypeClass : TechnoTypeClass
 {
   int ArrayIndex;
   LandType MovementRestrictedTo;
@@ -12489,7 +12500,7 @@ class __declspec(align(2)) UnitTypeClass : TechnoTypeClass
 
 struct UnitTypeClass_vtbl : TechnoTypeClass_vtbl {};
 
-class __declspec(align(4)) AircraftClass : FootClass, IFlyControl
+struct __declspec(align(4)) AircraftClass : FootClass, IFlyControl
 {
   AircraftTypeClass *Type;
   bool ShouldLoseAmmo;
@@ -12506,7 +12517,7 @@ class __declspec(align(4)) AircraftClass : FootClass, IFlyControl
 
 struct AircraftClass_vtbl : FootClass_vtbl {};
 
-class __declspec(align(2)) AircraftTypeClass : TechnoTypeClass
+struct __declspec(align(2)) AircraftTypeClass : TechnoTypeClass
 {
   int ArrayIndex;
   bool Carryall;
@@ -12523,7 +12534,7 @@ class __declspec(align(2)) AircraftTypeClass : TechnoTypeClass
 
 struct AircraftTypeClass_vtbl : TechnoTypeClass_vtbl {};
 
-class TerrainClass : ObjectClass
+struct TerrainClass : ObjectClass
 {
   StageClass Animation;
   TerrainTypeClass *Type;
@@ -12534,7 +12545,7 @@ class TerrainClass : ObjectClass
 
 struct TerrainClass_vtbl : ObjectClass_vtbl {};
 
-class TerrainTypeClass : ObjectTypeClass
+struct TerrainTypeClass : ObjectTypeClass
 {
   int ArrayIndex;
   int Foundation;
@@ -12553,7 +12564,7 @@ class TerrainTypeClass : ObjectTypeClass
 
 struct TerrainTypeClass_vtbl : ObjectTypeClass_vtbl {};
 
-class XSurface : Surface
+struct XSurface : Surface
 {
   int LockLevel;
   int BytesPerPixel;
@@ -12565,7 +12576,7 @@ struct XSurface_vtbl : Surface_vtbl
   __int16 (__thiscall *GetPixelClip)(XSurface *this, Point2D *pPoint, RectangleStruct *pRect);
 };
 
-class DSurface : XSurface
+struct DSurface : XSurface
 {
   void *Buffer;
   bool IsAllocated;
@@ -12581,14 +12592,14 @@ struct DSurface_vtbl : XSurface_vtbl
   bool (__thiscall *CanBlit)(DSurface *this);
 };
 
-class BSurface : XSurface
+struct BSurface : XSurface
 {
   MemoryBuffer Buffer;
 };
 
 struct BSurface_vtbl : XSurface_vtbl {};
 
-class LocomotionClass : IPersistStream, ILocomotion
+struct LocomotionClass : IPersistStream, ILocomotion
 {
   FootClass *Owner;
   FootClass *LinkedTo;
@@ -12603,7 +12614,7 @@ struct LocomotionClass_vtbl : IPersistStream
   int (__thiscall *Size)(LocomotionClass *this);
 };
 
-class JumpjetLocomotionClass : LocomotionClass, IPiggyback
+struct JumpjetLocomotionClass : LocomotionClass, IPiggyback
 {
   int TurnRate;
   int Speed;
@@ -12645,7 +12656,7 @@ class JumpjetLocomotionClass : LocomotionClass, IPiggyback
 
 struct JumpjetLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class FlyLocomotionClass : LocomotionClass
+struct FlyLocomotionClass : LocomotionClass
 {
   bool AirportBound;
   CoordStruct MovingDestination;
@@ -12668,7 +12679,7 @@ class FlyLocomotionClass : LocomotionClass
 
 struct FlyLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class TeleportLocomotionClass : LocomotionClass, IPiggyback
+struct TeleportLocomotionClass : LocomotionClass, IPiggyback
 {
   CoordStruct MovingDestination;
   CoordStruct LastCoords;
@@ -12686,7 +12697,7 @@ struct TeleportLocomotionClass_vtbl : LocomotionClass_vtbl
   bool (__stdcall *IsStill)(TeleportLocomotionClass *this);
 };
 
-class __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
+struct __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
 {
   int CurrentRamp;
   int PreviousRamp;
@@ -12708,7 +12719,7 @@ class __declspec(align(8)) ShipLocomotionClass : LocomotionClass, IPiggyback
 
 struct ShipLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class DriveLocomotionClass : LocomotionClass, IPiggyback
+struct DriveLocomotionClass : LocomotionClass, IPiggyback
 {
   int CurrentRamp;
   int PreviousRamp;
@@ -12730,7 +12741,7 @@ class DriveLocomotionClass : LocomotionClass, IPiggyback
 
 struct DriveLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class __declspec(align(4)) TunnelLocomotionClass : LocomotionClass
+struct __declspec(align(4)) TunnelLocomotionClass : LocomotionClass
 {
   TunnelLocomotionClass_State State;
   CoordStruct Coords;
@@ -12740,7 +12751,7 @@ class __declspec(align(4)) TunnelLocomotionClass : LocomotionClass
 
 struct TunnelLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class DropPodLocomotionClass : LocomotionClass, IPiggyback
+struct DropPodLocomotionClass : LocomotionClass, IPiggyback
 {
   bool OutOfMap;
   CoordStruct DestinationCoords;
@@ -12749,7 +12760,7 @@ class DropPodLocomotionClass : LocomotionClass, IPiggyback
 
 struct DropPodLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class RocketLocomotionClass : LocomotionClass
+struct RocketLocomotionClass : LocomotionClass
 {
   CoordStruct MovingDestination;
   RateTimer MissionTimer;
@@ -12766,7 +12777,7 @@ class RocketLocomotionClass : LocomotionClass
 
 struct RocketLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class HoverLocomotionClass : LocomotionClass
+struct HoverLocomotionClass : LocomotionClass
 {
   CoordStruct Destination;
   CoordStruct HeadToCoord;
@@ -12782,7 +12793,7 @@ class HoverLocomotionClass : LocomotionClass
 
 struct HoverLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class MechLocomotionClass : LocomotionClass
+struct MechLocomotionClass : LocomotionClass
 {
   CoordStruct Destination;
   CoordStruct HeadToCoord;
@@ -12791,7 +12802,7 @@ class MechLocomotionClass : LocomotionClass
 
 struct MechLocomotionClass_vtbl : LocomotionClass_vtbl {};
 
-class WalkLocomotionClass : LocomotionClass, IPiggyback
+struct WalkLocomotionClass : LocomotionClass, IPiggyback
 {
   CoordStruct Destination;
   CoordStruct HeadToCoord;
@@ -12849,7 +12860,7 @@ struct WWMouseClass_vtbl
   void (__thiscall *func_44)(WWMouseClass *this, int *pArg1, int *pArg2);
 };
 
-class TextLabelClass : GadgetClass
+struct TextLabelClass : GadgetClass
 {
   int DeleteTime;
   int ID;
@@ -12879,7 +12890,7 @@ struct VectorClass_ObjectClass_PTR_vtbl : VectorBase_ObjectClass_PTR_vtbl {};
 struct DynamicVectorClass_ObjectClass_PTR : VectorClass_ObjectClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_ObjectClass_PTR_vtbl : VectorClass_ObjectClass_PTR_vtbl {};
 
-class LayerClass : DynamicVectorClass_ObjectClass_PTR {};
+struct LayerClass : DynamicVectorClass_ObjectClass_PTR {};
 
 struct LayerClass_vtbl : DynamicVectorClass_ObjectClass_PTR_vtbl
 {
@@ -12888,7 +12899,7 @@ struct LayerClass_vtbl : DynamicVectorClass_ObjectClass_PTR_vtbl
   void (__thiscall *vt_entry_24)(LayerClass *this);
 };
 
-class LogicClass : LayerClass {};
+struct LogicClass : LayerClass {};
 
 struct LogicClass_vtbl : LayerClass_vtbl
 {
@@ -12976,7 +12987,7 @@ union Union_VeinholeMonsterClass_GrowthLogic
   char __GrowthLogic[28];
 };
 
-class VeinholeMonsterClass : ObjectClass
+struct VeinholeMonsterClass : ObjectClass
 {
   Union_VeinholeMonsterClass_GrowthLogic VeinholeMonsterClass_GrowthLogic;
   int CurrentState;
@@ -13164,7 +13175,7 @@ struct VectorClass_Color16Struct_PTR_vtbl : VectorBase_Color16Struct_PTR_vtbl {}
 struct DynamicVectorClass_Color16Struct_PTR : VectorClass_Color16Struct_PTR, DynamicAddon {};
 struct DynamicVectorClass_Color16Struct_PTR_vtbl : VectorClass_Color16Struct_PTR_vtbl {};
 
-class IsometricTileTypeClass : ObjectTypeClass
+struct IsometricTileTypeClass : ObjectTypeClass
 {
   int ArrayIndex;
   int MarbleMadnessTile;
@@ -13544,7 +13555,7 @@ struct VectorClass_VeinholeMonsterClass_PTR_vtbl : VectorBase_VeinholeMonsterCla
 struct DynamicVectorClass_VeinholeMonsterClass_PTR : VectorClass_VeinholeMonsterClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_VeinholeMonsterClass_PTR_vtbl : VectorClass_VeinholeMonsterClass_PTR_vtbl {};
 
-class ControlClass : GadgetClass
+struct ControlClass : GadgetClass
 {
   int ID;
   GadgetClass *SendTo;
@@ -13555,7 +13566,7 @@ struct ControlClass_vtbl : GadgetClass_vtbl
   void (__thiscall *MakePeer)(ControlClass *this, GadgetClass *pGadget);
 };
 
-class ToggleClass : ControlClass
+struct ToggleClass : ControlClass
 {
   bool IsPressed;
   bool IsOn;
@@ -13564,7 +13575,7 @@ class ToggleClass : ControlClass
 
 struct ToggleClass_vtbl : ControlClass_vtbl {};
 
-class ShapeButtonClass : ToggleClass
+struct ShapeButtonClass : ToggleClass
 {
   bool IsToFlash;
   int FlashDelay;
@@ -13584,7 +13595,7 @@ struct ShapeButtonClass_vtbl : ToggleClass_vtbl
   void (__thiscall *SetShape)(ShapeButtonClass *this, SHPStruct*pSHP, int Width, int Height);
 };
 
-class EditClass : ControlClass
+struct EditClass : ControlClass
 {
   TextPrintType TextFlags;
   EditFlag EditFlags;
@@ -13604,7 +13615,7 @@ struct EditClass_vtbl : ControlClass_vtbl
   bool (__thiscall *HandleKeyInput)(EditClass *this, int C);
 };
 
-class GaugeClass : ControlClass
+struct GaugeClass : ControlClass
 {
   bool IsColorized;
   bool HasThumb;
@@ -13626,7 +13637,7 @@ struct GaugeClass_vtbl : ControlClass_vtbl
   int (__thiscall *ValueToPixel)(GaugeClass *this, int Value);
 };
 
-class SliderClass : GaugeClass
+struct SliderClass : GaugeClass
 {
   GadgetClass *PlusGadget;
   GadgetClass *MinusGadget;
@@ -13643,7 +13654,7 @@ struct SliderClass_vtbl : GaugeClass_vtbl
   bool (__thiscall *Step)(SliderClass *this, bool Minus);
 };
 
-class ListClass : ControlClass
+struct ListClass : ControlClass
 {
   TextPrintType TextFlags;
   void *Tabs;
@@ -13679,7 +13690,7 @@ struct ListClass_vtbl : ControlClass_vtbl
   void (__thiscall *DrawEntry)(ListClass *this, int Index, int X, int Y, int Width, bool bUnk);
 };
 
-class DropListClass : EditClass
+struct DropListClass : EditClass
 {
   bool bool_48;
   int SomeHeight;
@@ -13698,7 +13709,7 @@ struct DropListClass_vtbl : EditClass_vtbl
   wchar_t *(__thiscall *GetItem)(DropListClass *this, int Index);
 };
 
-class TriColorGaugeClass : GaugeClass
+struct TriColorGaugeClass : GaugeClass
 {
   int RedLimit;
   int YellowLimit;
@@ -13710,14 +13721,14 @@ struct TriColorGaugeClass_vtbl : GaugeClass_vtbl
   bool (__thiscall *SetYellowLimit)(TriColorGaugeClass *this, int Value);
 };
 
-class CheckListClass : ListClass
+struct CheckListClass : ListClass
 {
   bool IsReadOnly;
 };
 
 struct CheckListClass_vtbl : ListClass_vtbl {};
 
-class ColorListClass : ListClass
+struct ColorListClass : ListClass
 {
   DynamicVectorClass_int Colors;
   int Style;
@@ -13730,7 +13741,7 @@ struct ColorListClass_vtbl : ListClass_vtbl
   void (__thiscall *SetSelectedStyle)(ColorListClass *this, int Style, int Color);
 };
 
-class IsometricTileClass : ObjectClass
+struct IsometricTileClass : ObjectClass
 {
   IsometricTileTypeClass* Type;
 };
@@ -13855,7 +13866,7 @@ struct VectorClass_PassabilityType_vtbl : VectorBase_PassabilityType_vtbl {};
 struct DynamicVectorClass_PassabilityType : VectorClass_PassabilityType, DynamicAddon {};
 struct DynamicVectorClass_PassabilityType_vtbl : VectorClass_PassabilityType_vtbl {};
 
-class TriggerTypeClass : AbstractTypeClass
+struct TriggerTypeClass : AbstractTypeClass
 {
   int ArrayIndex;
   bool Difficulty[3];
@@ -13870,7 +13881,7 @@ class TriggerTypeClass : AbstractTypeClass
 
 struct TriggerTypeClass_vtbl : AbstractTypeClass_vtbl {};
 
-class CampaignClass : AbstractTypeClass
+struct CampaignClass : AbstractTypeClass
 {
   int idxCD;
   char Scenario[512];
@@ -14384,7 +14395,7 @@ struct InputManagerClass
   int field_318;
 };
 
-class GGadgetClass : GadgetClass
+struct GGadgetClass : GadgetClass
 {
   int X;
   int Y;
@@ -14466,7 +14477,7 @@ struct GameOptionsClass
   int unknown_int_B4;
 };
 
-class SelectClass : ControlClass
+struct SelectClass : ControlClass
 {
   StripClass *LinkTo;
   int unknown_int_30;
@@ -14701,7 +14712,7 @@ struct VectorClass_FoggedObjectDraw_vtbl : VectorBase_FoggedObjectDraw_vtbl {};
 struct DynamicVectorClass_FoggedObjectDraw : VectorClass_FoggedObjectDraw, DynamicAddon {};
 struct DynamicVectorClass_FoggedObjectDraw_vtbl : VectorClass_FoggedObjectDraw_vtbl {};
 
-class FoggedObjectClass : AbstractClass
+struct FoggedObjectClass : AbstractClass
 {
   int OverlayTypeIndex;
   HouseClass *Owner;
@@ -14932,7 +14943,7 @@ struct PCX
   int unknown_int_30;
 };
 
-class StaticButtonClass : GadgetClass
+struct StaticButtonClass : GadgetClass
 {
   MemoryBuffer Buffer;
   wchar_t *String;
@@ -15037,7 +15048,7 @@ struct RawTrackType
   int CellIndex;
 };
 
-class TubeClass : AbstractClass
+struct TubeClass : AbstractClass
 {
   CellStruct EnterCell;
   CellStruct ExitCell;
@@ -16239,20 +16250,6 @@ struct WDT_Voices_Anim_vtbl : ReferenceCounted_vtbl
   int (__thiscall *vt_entry_20)(WDT_Voices_Anim *this);
 };
 
-struct AddTeamCommandClass;
-struct AddTeamCommandClass_vtbl; // 0x007EBE8C
-struct Animate;
-struct Animate_vtbl; // 0x007E35A8
-struct Blitter;
-struct Blitter_vtbl; // 0x007E5B88
-struct GraphicMenuAnimItem;
-struct GraphicMenuAnimItem_vtbl; // 0x007EA658
-struct GraphicMenuImageItem;
-struct GraphicMenuImageItem_vtbl; // 0x007EA674
-struct GraphicMenuShortcutItem;
-struct GraphicMenuShortcutItem_vtbl; // 0x007EA6AC
-struct RLEBlitter;
-struct RLEBlitter_vtbl; // 0x007E5BA0
 
 struct AddTeamCommandClass_vtbl
 {
