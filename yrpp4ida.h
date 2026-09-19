@@ -1035,6 +1035,8 @@ struct MessageListClass;
 struct MissionClass; // : ObjectClass : AbstractClass
 struct MissionClass_vtbl; // 0x7EDCC0
 struct MotLib;
+struct MovieHandle;
+struct MovieHandle_vtbl; // 0x7EE124
 struct Mouse;
 struct Mouse_vtbl; // 0x7F7B78
 struct MouseClass; // 0x87F7E8 (4CurrentPlayer)  : ScrollClass : TabClass : SidebarClass : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
@@ -15932,20 +15934,22 @@ struct Base64Straw_vtbl
 
 struct BeaconPlacementCommandClass_vtbl : CommandClass_vtbl {};
 
-struct BinkMovieHandle_vtbl
+struct MovieHandle_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(BinkMovieHandle *this, int a1);
-  int (__thiscall *AdvanceFrame)(BinkMovieHandle *this);
-  int (__thiscall *Waiting)(BinkMovieHandle *this);
-  int (__thiscall *Pause)(BinkMovieHandle *this, int a1);
-  int (__thiscall *Stop)(BinkMovieHandle *this);
-  int (__thiscall *FramesLeft)(BinkMovieHandle *this);
-  int (__thiscall *SetPosition)(BinkMovieHandle *this, int a1, int a2);
-  int (__thiscall *SeekToFrame)(BinkMovieHandle *this, int a1);
-  int (__thiscall *InitSubtitles)(BinkMovieHandle *this, int a1);
-  int (__thiscall *Timing)(BinkMovieHandle *this);
-  int (__thiscall *Blit)(BinkMovieHandle *this);
+  int (__thiscall *ScalarDeletingDestructor)(MovieHandle *this, int a1);
+  int (__thiscall *AdvanceFrame)(MovieHandle *this);
+  int (__thiscall *Waiting)(MovieHandle *this);
+  int (__thiscall *Pause)(MovieHandle *this, int a1);
+  int (__thiscall *Stop)(MovieHandle *this);
+  int (__thiscall *FramesLeft)(MovieHandle *this);
+  int (__thiscall *SetPosition)(MovieHandle *this, int a1, int a2);
+  int (__thiscall *SeekToFrame)(MovieHandle *this, int a1);
+  int (__thiscall *InitSubtitles)(MovieHandle *this, int a1);
+  int (__thiscall *Timing)(MovieHandle *this);
+  int (__thiscall *Blit)(MovieHandle *this);
 };
+
+struct BinkMovieHandle_vtbl : MovieHandle_vtbl {};
 
 struct BlitPlainXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
 
@@ -17387,467 +17391,159 @@ struct SwizzleManager_ISwizzle_vtbl : IUnknown_vtbl
   int (__thiscall *Get_Save_Size)(SwizzleManager_ISwizzle *this, int a1, int a2);
 };
 
-struct TClassFactory_AITriggerTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AITriggerTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AITriggerTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_AircraftClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AircraftClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AircraftClass *this, int a1, int a2);
-};
-
-struct TClassFactory_AircraftTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AircraftTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AircraftTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_AirstrikeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AirstrikeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AirstrikeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_AlphaShapeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AlphaShapeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AlphaShapeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_AnimClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AnimClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AnimClass *this, int a1, int a2);
-};
-
-struct TClassFactory_AnimTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_AnimTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_AnimTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_BombClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_BombClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_BombClass *this, int a1, int a2);
-};
-
-struct TClassFactory_BuildingClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_BuildingClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_BuildingClass *this, int a1, int a2);
-};
-
-struct TClassFactory_BuildingLightClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_BuildingLightClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_BuildingLightClass *this, int a1, int a2);
-};
-
-struct TClassFactory_BuildingTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_BuildingTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_BuildingTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_BulletClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_BulletClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_BulletClass *this, int a1, int a2);
-};
-
-struct TClassFactory_BulletTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_BulletTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_BulletTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_CStreamClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_CStreamClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_CStreamClass *this, int a1, int a2);
-};
-
-struct TClassFactory_CampaignClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_CampaignClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_CampaignClass *this, int a1, int a2);
-};
-
-struct TClassFactory_CaptureManagerClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_CaptureManagerClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_CaptureManagerClass *this, int a1, int a2);
-};
-
-struct TClassFactory_CellClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_CellClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_CellClass *this, int a1, int a2);
-};
-
-struct TClassFactory_DiskLaserClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_DiskLaserClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_DiskLaserClass *this, int a1, int a2);
-};
-
-struct TClassFactory_DriveLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_DriveLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_DriveLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_DropPodLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_DropPodLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_DropPodLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_EMPulseClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_EMPulseClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_EMPulseClass *this, int a1, int a2);
-};
-
-struct TClassFactory_FactoryClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_FactoryClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_FactoryClass *this, int a1, int a2);
-};
-
-struct TClassFactory_FlyLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_FlyLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_FlyLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_FoggedObjectClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_FoggedObjectClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_FoggedObjectClass *this, int a1, int a2);
-};
-
-struct TClassFactory_HouseClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_HouseClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_HouseClass *this, int a1, int a2);
-};
-
-struct TClassFactory_HouseTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_HouseTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_HouseTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_HoverLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_HoverLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_HoverLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_InfantryClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_InfantryClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_InfantryClass *this, int a1, int a2);
-};
-
-struct TClassFactory_InfantryTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_InfantryTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_InfantryTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_IsometricTileTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_IsometricTileTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_IsometricTileTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_JumpjetLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_JumpjetLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_JumpjetLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_LightSourceClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_LightSourceClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_LightSourceClass *this, int a1, int a2);
-};
-
-struct TClassFactory_MechLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_MechLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_MechLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_NeuronClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_NeuronClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_NeuronClass *this, int a1, int a2);
-};
-
-struct TClassFactory_OverlayTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_OverlayTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_OverlayTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ParasiteClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ParasiteClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ParasiteClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ParticleClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ParticleClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ParticleClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ParticleSystemClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ParticleSystemClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ParticleSystemClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ParticleSystemTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ParticleSystemTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ParticleSystemTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ParticleTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ParticleTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ParticleTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_RadSiteClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_RadSiteClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_RadSiteClass *this, int a1, int a2);
-};
-
-struct TClassFactory_RocketLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_RocketLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_RocketLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ScriptClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ScriptClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ScriptClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ScriptTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ScriptTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ScriptTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_ShipLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_ShipLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_ShipLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_SideClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_SideClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_SideClass *this, int a1, int a2);
-};
-
-struct TClassFactory_SlaveManagerClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_SlaveManagerClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_SlaveManagerClass *this, int a1, int a2);
-};
-
-struct TClassFactory_SmudgeTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_SmudgeTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_SmudgeTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_SpawnManagerClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_SpawnManagerClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_SpawnManagerClass *this, int a1, int a2);
-};
-
-struct TClassFactory_SuperClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_SuperClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_SuperClass *this, int a1, int a2);
-};
-
-struct TClassFactory_SuperWeaponTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_SuperWeaponTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_SuperWeaponTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TActionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TActionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TActionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TEventClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TEventClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TEventClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TacticalClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TacticalClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TacticalClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TagClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TagClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TagClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TagTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TagTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TagTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TaskForceClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TaskForceClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TaskForceClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TeamClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TeamClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TeamClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TeamTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TeamTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TeamTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TeleportLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TeleportLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TeleportLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TemporalClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TemporalClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TemporalClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TerrainClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TerrainClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TerrainClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TerrainTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TerrainTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TerrainTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TiberiumClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TiberiumClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TiberiumClass *this);
-};
-
-struct TClassFactory_TriggerClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TriggerClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TriggerClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TriggerTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TriggerTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TriggerTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TubeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TubeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TubeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_TunnelLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_TunnelLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_TunnelLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_UnitClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_UnitClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_UnitClass *this, int a1, int a2);
-};
-
-struct TClassFactory_UnitTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_UnitTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_UnitTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_VoxelAnimClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_VoxelAnimClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_VoxelAnimClass *this, int a1, int a2);
-};
-
-struct TClassFactory_VoxelAnimTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_VoxelAnimTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_VoxelAnimTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_WalkLocomotionClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_WalkLocomotionClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_WalkLocomotionClass *this, int a1, int a2);
-};
-
-struct TClassFactory_WarheadTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_WarheadTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_WarheadTypeClass *this, int a1, int a2);
-};
-
-struct TClassFactory_WaveClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_WaveClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_WaveClass *this, int a1, int a2);
-};
-
-struct TClassFactory_WaypointPathClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_WaypointPathClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_WaypointPathClass *this, int a1, int a2);
-};
-
-struct TClassFactory_WeaponTypeClass_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *CreateInstance)(TClassFactory_WeaponTypeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *LockServer)(TClassFactory_WeaponTypeClass *this, int a1, int a2);
-};
+struct TClassFactory_AITriggerTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_AircraftClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_AircraftTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_AirstrikeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_AlphaShapeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_AnimClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_AnimTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_BombClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_BuildingClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_BuildingLightClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_BuildingTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_BulletClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_BulletTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_CStreamClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_CampaignClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_CaptureManagerClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_CellClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_DiskLaserClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_DriveLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_DropPodLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_EMPulseClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_FactoryClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_FlyLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_FoggedObjectClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_HouseClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_HouseTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_HoverLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_InfantryClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_InfantryTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_IsometricTileTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_JumpjetLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_LightSourceClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_MechLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_NeuronClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_OverlayTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ParasiteClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ParticleClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ParticleSystemClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ParticleSystemTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ParticleTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_RadSiteClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_RocketLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ScriptClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ScriptTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_ShipLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_SideClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_SlaveManagerClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_SmudgeTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_SpawnManagerClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_SuperClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_SuperWeaponTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TActionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TEventClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TacticalClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TagClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TagTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TaskForceClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TeamClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TeamTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TeleportLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TemporalClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TerrainClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TerrainTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TiberiumClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TriggerClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TriggerTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TubeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_TunnelLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_UnitClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_UnitTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_VoxelAnimClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_VoxelAnimTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_WalkLocomotionClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_WarheadTypeClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_WaveClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_WaypointPathClass_vtbl : TClassFactory_vtbl {};
+
+struct TClassFactory_WeaponTypeClass_vtbl : TClassFactory_vtbl {};
 
 struct TauntCommandClass_vtbl : CommandClass_vtbl {};
 
@@ -17928,20 +17624,7 @@ struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s
 
 struct TypeSelectCommandClass_vtbl : CommandClass_vtbl {};
 
-struct VQMovieHandle_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VQMovieHandle *this, int a1);
-  int (__thiscall *AdvanceFrame)(VQMovieHandle *this);
-  int (__thiscall *Waiting)(VQMovieHandle *this);
-  int (__thiscall *Pause)(VQMovieHandle *this, int a1);
-  int (__thiscall *Stop)(VQMovieHandle *this);
-  int (__thiscall *FramesLeft)(VQMovieHandle *this);
-  int (__thiscall *SetPosition)(VQMovieHandle *this, int a1, int a2);
-  int (__thiscall *SeekToFrame)(VQMovieHandle *this, int a1);
-  int (__thiscall *InitSubtitles)(VQMovieHandle *this, int a1);
-  int (__thiscall *Timing)(VQMovieHandle *this);
-  int (__thiscall *Blit)(VQMovieHandle *this);
-};
+struct VQMovieHandle_vtbl : MovieHandle_vtbl {};
 
 struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
 {
