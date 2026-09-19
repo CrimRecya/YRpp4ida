@@ -6258,10 +6258,7 @@ struct SwizzleManagerClass : ISwizzle
   DynamicVectorClass_SwizzlePointerClass Swizzles_New;
 };
 
-struct SwizzleManagerClass_vtbl : ISwizzle_vtbl
-{
-  void (__thiscall *Destructor)(SwizzleManagerClass *this);
-};
+struct SwizzleManagerClass_vtbl : ISwizzle_vtbl {};
 
 union Union_PlanningTokenClass_unknown_20_88
 {
@@ -8948,10 +8945,7 @@ struct HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContain
   unsigned int unknown_power_160B4;
 };
 
-struct HouseClass_vtbl : AbstractClass_vtbl
-{
-  HRESULT (__stdcall *FindConnectionPoint)(HouseClass *this, _GUID *pRiid, IConnectionPoint **ppCP);
-};
+struct HouseClass_vtbl : AbstractClass_vtbl {};
 
 struct HouseTypeClass : AbstractTypeClass
 {
@@ -12239,9 +12233,9 @@ struct LocomotionClass : IPersistStream, ILocomotion
   int RefCount;
 };
 
-struct LocomotionClass_vtbl : IPersistStream
+struct LocomotionClass_vtbl : IPersistStream_vtbl
 {
-  void (__thiscall *Destructor)(LocomotionClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(LocomotionClass *this);
   int (__thiscall *Size)(LocomotionClass *this);
 };
 
