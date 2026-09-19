@@ -416,7 +416,7 @@ struct DynamicVectorClass_ChangeLinkHouseStruct_PTR_vtbl; // 0x7E4488
 struct DynamicVectorClass_char_CPTR;
 struct DynamicVectorClass_char_CPTR_vtbl; // 0x7EE0B4
 struct DynamicVectorClass_char_PTR;
-struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5C04
+struct DynamicVectorClass_char_PTR_vtbl; // 0x7E5BC4
 struct DynamicVectorClass_Color16Struct_PTR;
 struct DynamicVectorClass_Color16Struct_PTR_vtbl;
 struct DynamicVectorClass_ColorScheme_PTR; // 0xB054D0
@@ -888,17 +888,17 @@ struct IApplication_vtbl;
 struct IConnectionPoint;
 struct IConnectionPoint_vtbl;
 struct IConnectionPointContainer;
-struct IConnectionPointContainer_vtbl;
+struct IConnectionPointContainer_vtbl; // 0x7EA7F4
 struct IEnumConnectionPoints;
 struct IEnumConnectionPoints_vtbl;
 struct IEnumConnections;
 struct IEnumConnections_vtbl;
 struct IFlyControl;
-struct IFlyControl_vtbl;
+struct IFlyControl_vtbl; // 0x7E2250
 struct IGameMap;
 struct IGameMap_vtbl;
 struct IHouse;
-struct IHouse_vtbl;
+struct IHouse_vtbl; // 0x7EA834
 struct ILocomotion;
 struct ILocomotion_vtbl; // XXX Adjacent to LocoVTable
 struct In_addr;
@@ -957,7 +957,7 @@ struct IPersistStream_vtbl;
 struct IPiggyback;
 struct IPiggyback_vtbl; // XXX Adjacent to LocoVTable
 struct IPublicHouse;
-struct IPublicHouse_vtbl;
+struct IPublicHouse_vtbl; // 0x7EA80C
 struct IPXAddressClass;
 struct IPXConnClass;
 struct IPXConnClass_vtbl; // 0x7EC0CC
@@ -968,7 +968,8 @@ struct IPXInterfaceClass_vtbl; // 0x7F794C
 struct IPXManagerClass;
 struct IPXManagerClass_vtbl; // 0x7EC16C
 struct IRTTITypeInfo;
-struct IRTTITypeInfo_vtbl; // XXX Adjacent to AbsVTable
+// XXX Adjacent to AbsVTable
+struct IRTTITypeInfo_vtbl; // 0x7E1F34 / 0x7E1FE4 / 0x7E2288 / 0x7E284C / 0x7E298C / 0x7E2A34 / 0x7E3288 / 0x7E3338 / 0x7E35EC / 0x7E3AB4 / 0x7E3CF4 / 0x7E3DD4 / 0x7E3EA0 / 0x7E4554 / 0x7E46C8 / 0x7E492C / 0x7E4A0C / 0x7E4B24 / 0x7E4ED0 / 0x7E5F9C / 0x7E878C / 0x7E88B4 / 0x7E8B1C / 0x7E8C78 / 0x7EA884 / 0x7EAB3C / 0x7EB03C / 0x7EB5F4 / 0x7EC23C / 0x7ECC2C / 0x7ED00C / 0x7EDCA4 / 0x7EF044 / 0x7EF2BC / 0x7EF3B0 / 0x7EF5E4 / 0x7EF874 / 0x7EF938 / 0x7EFB80 / 0x7F008C / 0x7F016C / 0x7F04EC / 0x7F07F4 / 0x7F0F5C / 0x7F0FEC / 0x7F2EA4 / 0x7F31AC / 0x7F32D8 / 0x7F350C / 0x7F3634 / 0x7F3FCC / 0x7F4074 / 0x7F432C / 0x7F4420 / 0x7F44C4 / 0x7F45A8 / 0x7F4664 / 0x7F4714 / 0x7F47B4 / 0x7F4944 / 0x7F4EBC / 0x7F5164 / 0x7F5200 / 0x7F543C / 0x7F555C / 0x7F570C / 0x7F583C / 0x7F58E8 / 0x7F5994 / 0x7F5C54 / 0x7F61FC / 0x7F62FC / 0x7F652C / 0x7F668C / 0x7F6B14 / 0x7F6BD8 / 0x7F6E54 / 0x7F739C
 struct ISequentialStream;
 struct ISequentialStream_vtbl;
 struct IsometricTileClass; // : ObjectClass : AbstractClass
