@@ -2675,10 +2675,6 @@ struct ZoneConnectionTableManager;
 struct ZoneConnectionTables;
 struct ZoneInfoStruct;
 
-// BATCH83 STRUCT DEFS
-
-struct LTRBStruct : RectangleStruct {};
-
 // TODO STRUCT
 
 
