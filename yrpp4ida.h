@@ -16238,3 +16238,4713 @@ struct WDT_Voices_Anim_vtbl : ReferenceCounted_vtbl
   int (__thiscall *vt_entry_1C)(WDT_Voices_Anim *this);
   int (__thiscall *vt_entry_20)(WDT_Voices_Anim *this);
 };
+
+struct AddTeamCommandClass;
+struct AddTeamCommandClass_vtbl; // 0x007EBE8C
+struct Animate;
+struct Animate_vtbl; // 0x007E35A8
+struct Blitter;
+struct Blitter_vtbl; // 0x007E5B88
+struct GraphicMenuAnimItem;
+struct GraphicMenuAnimItem_vtbl; // 0x007EA658
+struct GraphicMenuImageItem;
+struct GraphicMenuImageItem_vtbl; // 0x007EA674
+struct GraphicMenuShortcutItem;
+struct GraphicMenuShortcutItem_vtbl; // 0x007EA6AC
+struct RLEBlitter;
+struct RLEBlitter_vtbl; // 0x007E5BA0
+
+struct AddTeamCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct AllToCheerCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct AllianceCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct AnimFile_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetSource;
+  void *Buddy_Reset;
+  void *Buddy_DrawFrame;
+  void *vt_entry_10;
+  void *vt_entry_14;
+};
+
+struct Animate_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero;
+  void *AlwaysZero_2;
+  void *AlwaysZero_3;
+  void *AlwaysZero_4;
+  void *AlwaysZero_5;
+  void *AlwaysZero_6;
+  void *AlwaysZero_7;
+};
+
+struct ApplicationClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *FullName;
+  void *Name;
+  void *Quit;
+  void *ScenarioName;
+  void *FrameCount;
+  void *Swizzle_Interface;
+  void *Buddy_GetIApplication;
+  void *Buddy_GetIApplication_0;
+};
+
+struct Base64Pipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct Base64Straw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Buddy_WriteUUBlock;
+};
+
+struct BeaconPlacementCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct BinkMovieHandle_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AdvanceFrame;
+  void *Waiting;
+  void *Pause;
+  void *Stop;
+  void *FramesLeft;
+  void *SetPosition;
+  void *SeekToFrame;
+  void *InitSubtitles;
+  void *Timing;
+  void *Blit;
+};
+
+struct BlitPlainXlatAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitPlainXlatZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitPlainXlatZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitPlainXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitPlainXlat_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitPlain_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitPlain_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransDarkenZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransDarkenZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransDarken_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25Alpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25ZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent25_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50Alpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50ZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent50_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75Alpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75ZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransLucent75_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransRemapDest_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransRemapXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatAlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatWriteAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlatZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransXlat_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlatZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTransZRemapXlat_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTrans_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTrans_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct BlitTranslucentWriteAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+  void *Blit_Move;
+  void *Blit_Move_Tinted;
+};
+
+struct Blitter_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero;
+  void *AlwaysZero_2;
+  void *AlwaysZero_3;
+  void *AlwaysZero_4;
+};
+
+struct BlowPipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct BlowStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct BufferPipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct BufferStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct CComObject_CChatEventSink_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *OnServerList;
+  void *OnUpdateList;
+  void *OnServerError;
+  void *OnConnection;
+  void *OnMessageOfTheDay;
+  void *OnChannelList;
+  void *OnChannelCreate;
+  void *OnChannelJoin;
+  void *OnChannelLeave;
+  void *OnChannelTopic;
+  void *OnPrivateAction;
+  void *OnPublicAction;
+  void *OnUserList;
+  void *OnPublicMessage;
+  void *OnPrivateMessage;
+  void *OnSystemMessage;
+  void *OnNetStatus;
+  void *OnLogout;
+  void *OnPrivateGameOptions;
+  void *OnPublicGameOptions;
+  void *OnGameStart;
+  void *OnUserKick;
+  void *OnUserIP;
+  void *OnFind;
+  void *OnPageSend;
+  void *OnPaged;
+  void *OnServerBannedYou;
+  void *OnUserFlags;
+  void *OnChannelBan;
+  void *OnSquadInfo;
+  void *OnUserLocale;
+  void *OnUserTeam;
+  void *OnSetLocale;
+  void *OnSetTeam;
+  void *OnBuddyList;
+  void *OnBuddyAdd;
+  void *OnBuddyDelete;
+  void *OnPublicUnicodeMessage;
+  void *OnPrivateUnicodeMessage;
+  void *OnPrivateUnicodeAction;
+  void *OnPublicUnicodeAction;
+  void *OnPagedUnicode;
+  void *OnServerTime;
+  void *OnInsiderStatus;
+  void *OnSetLocalIP;
+};
+
+struct CComObject_CDownloadEventSink_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *OnEnd;
+  void *OnError;
+  void *Buddy_FormatByteProgress;
+  void *OnQueryResume;
+  void *Buddy_UpdatePatchProgress;
+};
+
+struct CComObject_CNetUtilEventSink_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *Buddy_HandlePing;
+  void *Buddy_WOLGetLadderInfo;
+  void *Buddy_OnGameresSent;
+  void *Buddy_WOL_OnNewNick;
+  void *Buddy_OnAgeCheck;
+  void *Buddy_WDT_OnState;
+  void *Buddy_ReportHighScore;
+};
+
+struct CD_vtbl
+{
+  void *ForceAvailable;
+  void *Buddy_ShowInsertCDDialog;
+  void *Buddy_InitializeMixFiles;
+};
+
+struct CStreamClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *Read;
+  void *Write;
+  void *Seek;
+  void *SetSize;
+  void *CopyTo;
+  void *Commit;
+  void *Revert;
+  void *LockRegion;
+  void *UnlockRegion;
+  void *Stat;
+  void *Clone;
+  void *ScalarDeletingDestructor;
+};
+
+struct CacheStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct CampaignEndScoreClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_ShowEndScoreDialog;
+};
+
+struct CampaignScoreClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_InitCampaignScoreDialog;
+};
+
+struct CarryoverClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetNext;
+  void *GetPrev;
+  void *Add;
+  void *AddTail;
+  void *AddHead;
+  void *HeadOfList;
+  void *TailOfList;
+  void *Zap;
+  void *Remove;
+};
+
+struct CenterBaseCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct CenterREventCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct CenterTeamCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct CenterViewCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct CombatantSelectCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct ConnectionPointClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *GetConnectionInterface;
+  void *GetConnectionPointContainer;
+  void *Advise;
+  void *Unadvise;
+  void *EnumConnections;
+};
+
+struct CreateGameDialogControl_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *BindControlHwnd;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *Buddy_WOLMatchTimeout;
+};
+
+struct CreateTeamCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct CursorPositionCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct DeleteCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct DeployCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct Dial8Class_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetNext;
+  void *GetPrev;
+  void *Add;
+  void *AddTail;
+  void *AddHead;
+  void *HeadOfList;
+  void *TailOfList;
+  void *Zap;
+  void *Remove;
+  void *Input;
+  void *DrawAll;
+  void *DeleteList;
+  void *ExtractGadget;
+  void *MarkListToRedraw;
+  void *Disable;
+  void *Enable;
+  void *GetID;
+  void *MarkRedraw;
+  void *PeerToPeer;
+  void *SetFocus;
+  void *KillFocus;
+  void *IsFocused;
+  void *IsListToRedraw;
+  void *IsToRedraw;
+  void *SetPosition;
+  void *SetDimension;
+  void *Buddy_Draw;
+  void *OnMouseEnter;
+  void *OnMouseLeave;
+  void *StickyProcess;
+  void *Buddy_ComputeAngleAction;
+  void *Clicked;
+  void *MakePeer;
+};
+
+struct DisplayClass_TacticalClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetNext;
+  void *GetPrev;
+  void *Add;
+  void *AddTail;
+  void *AddHead;
+  void *HeadOfList;
+  void *TailOfList;
+  void *Zap;
+  void *Remove;
+  void *Input;
+  void *DrawAll;
+  void *DeleteList;
+  void *ExtractGadget;
+  void *MarkListToRedraw;
+  void *Disable;
+  void *Enable;
+  void *GetID;
+  void *MarkRedraw;
+  void *PeerToPeer;
+  void *SetFocus;
+  void *KillFocus;
+  void *IsFocused;
+  void *IsListToRedraw;
+  void *IsToRedraw;
+  void *SetPosition;
+  void *SetDimension;
+  void *Draw;
+  void *OnMouseEnter;
+  void *OnMouseLeave;
+  void *StickyProcess;
+  void *Action;
+  void *Clicked;
+};
+
+struct DynamicVectorClass_AcceleratorTracker_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_ButtonFadeEffect_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_CoopCampaignClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_DirtyAreaStruct_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_EgoClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_GlobalPacketType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_HSVClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
+{
+  void *VectorDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl
+{
+  void *VectorDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MSSfx_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MSTextEntry_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MapRegionClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MapSelection_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MapStage_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MixFileClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_MovieHandle_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_RGBClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_ShadowControlClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_SubTitle_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_UndoInfoStruct_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_Wstring_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct DynamicVectorClass_tagCONNECTDATA_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct EnumConnectionPointsClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *Next;
+  void *Skip;
+  void *Reset;
+  void *Clone;
+};
+
+struct EnumConnectionsClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *Next;
+  void *Skip;
+  void *Reset;
+  void *Clone;
+};
+
+struct FilePipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct FileStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct FollowCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct GraphicMenuAnimItem_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *MatchKey;
+  void *HitTest;
+  void *vt_entry_C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+};
+
+struct GraphicMenuImageItem_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *MatchKey;
+  void *HitTest;
+  void *vt_entry_C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+};
+
+struct GraphicMenuShortcutItem_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *MatchKey;
+  void *HitTest;
+  void *vt_entry_C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+};
+
+struct GuardCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct HealthNavCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct Initializer_FreeForAll_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Factory_Constructor;
+};
+
+struct Initializer_MPCooperative_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Factory_Constructor;
+};
+
+struct Initializer_MultiplayerBattle_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Constructor;
+};
+
+struct Initializer_MultiplayerManBattle_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Factory_Constructor;
+};
+
+struct Initializer_MultiplayerSiege_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Factory_Constructor;
+};
+
+struct Initializer_UnholyAlliance_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Factory_Constructor;
+};
+
+struct LCWPipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct LCWStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct LZOPipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct LZOStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct MPBattleClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_8;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *DrawTeamDropdown;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *vt_entry_64;
+  void *vt_entry_68;
+  void *RandomHumanCountryIndex;
+  void *RandomAICountryIndex;
+  void *vt_entry_74;
+  void *vt_entry_78;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *StartingPositionsToHouseBaseCells2;
+  void *AllyTeams;
+  void *vt_entry_8C;
+  void *vt_entry_90;
+  void *vt_entry_94;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *vt_entry_A0;
+  void *vt_entry_A4;
+  void *vt_entry_A8;
+  void *vt_entry_AC;
+  void *vt_entry_B0;
+  void *vt_entry_B4;
+  void *vt_entry_B8;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *SpawnBaseUnits;
+  void *GenerateStartingUnits;
+};
+
+struct MPCombatTeam_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *IsTeamIncluded;
+  void *SetPlayerTeam;
+};
+
+struct MPCooperative_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_11;
+  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_12;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *Buddy_CreateFindGameDialog;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *vt_entry_40;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *Buddy_MPCoop_LoadMapList;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *Buddy_SendCampaignAISettings;
+  void *Buddy_SetupAISlots;
+  void *Buddy_ChooseRandomPlayerHouse;
+  void *Buddy_ChooseRandomAIHouse;
+  void *vt_entry_74;
+  void *Buddy_PostMessageToDlgItem732;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *Buddy_AssignStartingPoints;
+  void *Buddy_MakeAlliances;
+  void *vt_entry_8C;
+  void *Buddy_ComposeMapFileName;
+  void *Buddy_MPCoopLoadSave;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *Buddy_MPCoopEndOfGame;
+  void *Buddy_BuildIPXPacket;
+  void *Buddy_ParsePX;
+  void *Buddy_SetupRematch;
+  void *Buddy_FormatIPXAddress_2;
+  void *vt_entry_B4;
+  void *Buddy_HandleCoopCampaignComplete;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *SpawnBaseUnits;
+  void *GenerateStartingUnits;
+};
+
+struct MPFreeForAllClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *_do_always_noconv_codecvt_base_std__MBE_NXZ_13;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *DrawTeamDropdown;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *vt_entry_64;
+  void *vt_entry_68;
+  void *RandomHumanCountryIndex;
+  void *RandomAICountryIndex;
+  void *vt_entry_74;
+  void *vt_entry_78;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *StartingPositionsToHouseBaseCells2;
+  void *AllyTeams;
+  void *vt_entry_8C;
+  void *vt_entry_90;
+  void *vt_entry_94;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *vt_entry_A0;
+  void *vt_entry_A4;
+  void *vt_entry_A8;
+  void *vt_entry_AC;
+  void *vt_entry_B0;
+  void *vt_entry_B4;
+  void *vt_entry_B8;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *SpawnBaseUnits;
+  void *GenerateStartingUnits;
+};
+
+struct MPGameModeClass_InitializerBase_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero;
+};
+
+struct MPManBattleClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *vt_entry_40;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *DrawTeamDropdown;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *vt_entry_64;
+  void *vt_entry_68;
+  void *RandomHumanCountryIndex;
+  void *RandomAICountryIndex;
+  void *vt_entry_74;
+  void *vt_entry_78;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *StartingPositionsToHouseBaseCells2;
+  void *AllyTeams;
+  void *vt_entry_8C;
+  void *vt_entry_90;
+  void *vt_entry_94;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *vt_entry_A0;
+  void *vt_entry_A4;
+  void *vt_entry_A8;
+  void *vt_entry_AC;
+  void *vt_entry_B0;
+  void *vt_entry_B4;
+  void *vt_entry_B8;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *SpawnBaseUnits;
+  void *GenerateStartingUnits;
+};
+
+struct MPMegawealthClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *vt_entry_40;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *DrawTeamDropdown;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *vt_entry_64;
+  void *vt_entry_68;
+  void *RandomHumanCountryIndex;
+  void *RandomAICountryIndex;
+  void *vt_entry_74;
+  void *vt_entry_78;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *StartingPositionsToHouseBaseCells2;
+  void *AllyTeams;
+  void *vt_entry_8C;
+  void *vt_entry_90;
+  void *vt_entry_94;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *vt_entry_A0;
+  void *vt_entry_A4;
+  void *vt_entry_A8;
+  void *vt_entry_AC;
+  void *vt_entry_B0;
+  void *vt_entry_B4;
+  void *vt_entry_B8;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *SpawnBaseUnits;
+  void *GenerateStartingUnits;
+};
+
+struct MPObserverTeam_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *IsTeamIncluded;
+  void *SetPlayerTeam;
+};
+
+struct MPSiegeAttackerTeam_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *IsTeamIncluded;
+  void *SetPlayerTeam;
+};
+
+struct MPSiegeClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *vt_entry_40;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *DrawTeamDropdown;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *vt_entry_64;
+  void *vt_entry_68;
+  void *RandomHumanCountryIndex;
+  void *RandomAICountryIndex;
+  void *vt_entry_74;
+  void *vt_entry_78;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *StartingPositionsToHouseBaseCells2;
+  void *AllyTeams;
+  void *vt_entry_8C;
+  void *vt_entry_90;
+  void *vt_entry_94;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *vt_entry_A0;
+  void *vt_entry_A4;
+  void *vt_entry_A8;
+  void *vt_entry_AC;
+  void *vt_entry_B0;
+  void *vt_entry_B4;
+  void *vt_entry_B8;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *Buddy_SpawnBaseBuildings;
+  void *GenerateStartingUnits;
+};
+
+struct MPSiegeDefenderTeam_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *IsTeamIncluded;
+  void *SetPlayerTeam;
+};
+
+struct MPUnholyAllianceClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *CanAllyWith;
+  void *vt_entry_38;
+  void *IsAIAllowed;
+  void *vt_entry_40;
+  void *FirstValidMapIndex;
+  void *PopulateTeamDropdown;
+  void *DrawTeamDropdown;
+  void *PopulateTeamDropdownForPlayer;
+  void *vt_entry_54;
+  void *vt_entry_58;
+  void *vt_entry_5C;
+  void *vt_entry_60;
+  void *vt_entry_64;
+  void *vt_entry_68;
+  void *RandomHumanCountryIndex;
+  void *RandomAICountryIndex;
+  void *vt_entry_74;
+  void *vt_entry_78;
+  void *UnfixAlliances;
+  void *StartingPositionsToHouseBaseCells;
+  void *StartingPositionsToHouseBaseCells2;
+  void *AllyTeams;
+  void *vt_entry_8C;
+  void *vt_entry_90;
+  void *vt_entry_94;
+  void *vt_entry_98;
+  void *vt_entry_9C;
+  void *vt_entry_A0;
+  void *vt_entry_A4;
+  void *vt_entry_A8;
+  void *vt_entry_AC;
+  void *vt_entry_B0;
+  void *vt_entry_B4;
+  void *vt_entry_B8;
+  void *vt_entry_BC;
+  void *CreateMPTeams;
+  void *AssignStartingPositionsToHouse;
+  void *SpawnBaseUnits;
+  void *GenerateStartingUnits;
+};
+
+struct MSBinkAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSBitPrintAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSEngine_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+};
+
+struct MSFadeAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSFont_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_GetCharWidth;
+  void *Buddy_GetStringWidth;
+  void *Buddy_DrawString;
+  void *Buddy_DrawShapeToSurface;
+};
+
+struct MSFrameAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSOverlayAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSPCXAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSPrintAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSShapeAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MSVQAnim_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_SetActive;
+  void *Buddy_StopTimer;
+  void *Buddy_StartTimer;
+  void *Buddy_DrawRect;
+  void *Buddy_DrawRectOrFull;
+  void *Buddy_GetDefaultRect;
+  void *Buddy_CanDraw;
+  void *Buddy_Draw;
+};
+
+struct MapSeedClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *LoadMission;
+  void *SaveMission;
+  void *DeleteMission;
+  void *GetFileEntry;
+  void *GetUIString_Load;
+  void *GetUIString_Save;
+  void *GetUIString_Delete;
+  void *GetUIString_GameSaved;
+};
+
+struct MapSelect_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+};
+
+struct Mouse_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero;
+  void *AlwaysZero_2;
+  void *AlwaysZero_3;
+  void *AlwaysZero_4;
+  void *AlwaysZero_5;
+  void *AlwaysZero_6;
+  void *AlwaysZero_7;
+  void *AlwaysZero_8;
+  void *AlwaysZero_9;
+  void *AlwaysZero_10;
+  void *AlwaysZero_11;
+  void *AlwaysZero_12;
+  void *AlwaysZero_13;
+  void *AlwaysZero_14;
+  void *AlwaysZero_15;
+  void *AlwaysZero_16;
+  void *AlwaysZero_17;
+};
+
+struct MultiplayerDebugCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct MultiplayerSyncCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct NextObjectCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct NullModemClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_Serial_ValidatePacket;
+  void *Buddy_Write;
+  void *Buddy_Read;
+  void *Buddy_GetBuffer;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *SetFlushState;
+  void *Buddy_GetBufferField;
+  void *Buddy_SetBufferParams;
+  void *Buddy_SendPacket;
+  void *SetTimingParams;
+};
+
+struct NullModemConnClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Reset;
+  void *Buddy_SendPacket;
+  void *Buddy_ReceivePacket;
+  void *Read;
+  void *Service;
+  void *Buddy_FlushOutBuffers;
+  void *Buddy_ServiceSendQueue;
+  void *ServiceReadQueue;
+  void *Buddy_SendFramedPacket;
+};
+
+struct OptionsCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct OwnerDraw_DialogControl_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero;
+  void *AlwaysZero_2;
+  void *AlwaysZero_3;
+  void *AlwaysZero_4;
+};
+
+struct OwnerDraw_SimpleDialogControl_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *BindControlHwnd;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+};
+
+struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl
+{
+  void *VectorDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct PAVSchemeNode_VectorClass_HashObject_HashString_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl
+{
+  void *VectorDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct PKPipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+  void *vt_entry_14;
+};
+
+struct PKStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+  void *vt_entry_0C;
+};
+
+struct PageUserCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct Pipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct PlanningModeCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop55E020;
+  void *Execute;
+};
+
+struct PlayerProfile_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero_2;
+  void *Release;
+};
+
+struct PrevObjectCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct RAMFileClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetFileName;
+  void *SetFileName;
+  void *CreateFile;
+  void *DeleteFile;
+  void *Exists;
+  void *HasHandle;
+  void *Open;
+  void *OpenEx;
+  void *ReadBytes;
+  void *Seek;
+  void *GetFileSize;
+  void *WriteBytes;
+  void *Close;
+  void *GetFileTime;
+  void *SetFileTime;
+  void *CDCheck;
+};
+
+struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransDarkenZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransDarken_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent25_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent50_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransLucent75_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransRemapDest_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransRemapXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatZRead_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlatZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransXlat_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlat_unsigned_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitTransZRemapXlat_unsigned_short_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Blit_Copy;
+  void *Blit_Copy_Tinted;
+};
+
+struct RLEBlitter_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero;
+  void *AlwaysZero_2;
+};
+
+struct RadarClass_RTacticalClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetNext;
+  void *GetPrev;
+  void *Add;
+  void *AddTail;
+  void *AddHead;
+  void *HeadOfList;
+  void *TailOfList;
+  void *Zap;
+  void *Remove;
+  void *Input;
+  void *DrawAll;
+  void *DeleteList;
+  void *ExtractGadget;
+  void *MarkListToRedraw;
+  void *Disable;
+  void *Enable;
+  void *GetID;
+  void *MarkRedraw;
+  void *PeerToPeer;
+  void *SetFocus;
+  void *KillFocus;
+  void *IsFocused;
+  void *IsListToRedraw;
+  void *IsToRedraw;
+  void *SetPosition;
+  void *SetDimension;
+  void *Draw;
+  void *OnMouseEnter;
+  void *OnMouseLeave;
+  void *StickyProcess;
+  void *Action;
+  void *Clicked;
+};
+
+struct RandomStraw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct SHAPipe_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Flush;
+  void *End;
+  void *Put_To;
+  void *Put;
+};
+
+struct ScatterCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct ScoreAnimClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Pause;
+  void *Resume;
+  void *AlwaysZero;
+};
+
+struct ScoreBigFontClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_GetCharWidth;
+  void *Buddy_GetStringWidth;
+  void *Buddy_DrawString;
+  void *Buddy_DrawString_2;
+};
+
+struct ScoreFontClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_GetCharWidth;
+  void *Buddy_GetStringWidth;
+  void *Buddy_DrawString;
+  void *Buddy_DrawString_2;
+};
+
+struct ScoreFullFontClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_GetCharWidth;
+  void *Buddy_GetStringWidth;
+  void *Buddy_DrawString;
+  void *Buddy_DrawString_2;
+};
+
+struct ScorePrintClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Pause;
+  void *Resume;
+  void *Buddy_Draw;
+};
+
+struct ScoreTimeClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Pause;
+  void *Resume;
+  void *Buddy_Draw;
+};
+
+struct ScreenCaptureCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SelectTeamCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetDefenseTabCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetInfantryTabCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetStructureTabCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetUnitTabCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetView1CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetView2CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetView3CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SetView4CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SidebarClass_SBGadgetClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetNext;
+  void *GetPrev;
+  void *Add;
+  void *AddTail;
+  void *AddHead;
+  void *HeadOfList;
+  void *TailOfList;
+  void *Zap;
+  void *Remove;
+  void *Input;
+  void *DrawAll;
+  void *DeleteList;
+  void *ExtractGadget;
+  void *MarkListToRedraw;
+  void *Disable;
+  void *Enable;
+  void *GetID;
+  void *MarkRedraw;
+  void *PeerToPeer;
+  void *SetFocus;
+  void *KillFocus;
+  void *IsFocused;
+  void *IsListToRedraw;
+  void *IsToRedraw;
+  void *SetPosition;
+  void *SetDimension;
+  void *Draw;
+  void *OnMouseEnter;
+  void *OnMouseLeave;
+  void *StickyProcess;
+  void *SBGadgetClass_Action;
+  void *Clicked;
+};
+
+struct SidebarDownCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SidebarUpCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct SimpleWonlineDialogControl_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *BindControlHwnd;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *Buddy_WOLMatchTimeout;
+};
+
+struct Std_bad_cast_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *_what_exception__UBEPBDXZ;
+};
+
+struct Std_bad_typeid_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *_what_exception__UBEPBDXZ;
+};
+
+struct Std_exception_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *_what_exception__UBEPBDXZ;
+};
+
+struct Std_non_rtti_object_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *_what_exception__UBEPBDXZ;
+};
+
+struct StopCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct Straw_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Get_From;
+  void *Get;
+};
+
+struct SwizzleManager_ISwizzle_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *Reset;
+  void *Swizzle;
+  void *Fetch_Swizzle_ID;
+  void *Here_I_Am;
+  void *Save_Interface;
+  void *Load_Interface;
+  void *Get_Save_Size;
+};
+
+struct TClassFactory_AITriggerTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_AircraftClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_AircraftTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_AirstrikeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_AlphaShapeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_AnimClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_AnimTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_BombClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_BuildingClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_BuildingLightClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_BuildingTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_BulletClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_BulletTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_CStreamClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_CampaignClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_CaptureManagerClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_CellClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_DiskLaserClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_DriveLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_DropPodLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_EMPulseClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_FactoryClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_FlyLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_FoggedObjectClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_HouseClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_HouseTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_HoverLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_InfantryClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_InfantryTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_IsometricTileTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_JumpjetLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_LightSourceClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_MechLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_NeuronClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_OverlayTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ParasiteClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ParticleClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ParticleSystemClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ParticleSystemTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ParticleTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_RadSiteClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_RocketLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ScriptClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ScriptTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_ShipLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_SideClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_SlaveManagerClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_SmudgeTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_SpawnManagerClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_SuperClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_SuperWeaponTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TActionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TEventClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TacticalClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TagClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TagTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TaskForceClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TeamClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TeamTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TeleportLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TemporalClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TerrainClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TerrainTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TiberiumClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TriggerClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TriggerTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TubeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_TunnelLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_UnitClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_UnitTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_VoxelAnimClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_VoxelAnimTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_WalkLocomotionClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_WarheadTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_WaveClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_WaypointPathClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TClassFactory_WeaponTypeClass_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct TauntCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct TextButtonClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetNext;
+  void *GetPrev;
+  void *Add;
+  void *AddTail;
+  void *AddHead;
+  void *HeadOfList;
+  void *TailOfList;
+  void *Zap;
+  void *Remove;
+  void *Input;
+  void *DrawAll;
+  void *DeleteList;
+  void *ExtractGadget;
+  void *MarkListToRedraw;
+  void *Disable;
+  void *Enable;
+  void *GetID;
+  void *MarkRedraw;
+  void *PeerToPeer;
+  void *SetFocus;
+  void *KillFocus;
+  void *IsFocused;
+  void *IsListToRedraw;
+  void *IsToRedraw;
+  void *SetPosition;
+  void *SetDimension;
+  void *Buddy_DrawImpl;
+  void *OnMouseEnter;
+  void *OnMouseLeave;
+  void *StickyProcess;
+  void *Action;
+  void *Clicked;
+  void *MakePeer;
+  void *Buddy_SetText;
+  void *Buddy_SetIndex;
+  void *Buddy_Draw;
+  void *Buddy_DrawText;
+};
+
+struct TiberianSunClassFactory_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *CreateInstance;
+  void *LockServer;
+};
+
+struct ToggleRepairCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct ToggleSellCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct TypeList_AircraftTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_AnimTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual2;
+  void *SetCapacity2;
+  void *Clear2;
+  void *FindItemIndex2;
+  void *GetItemIndex2;
+  void *GetItem2;
+};
+
+struct TypeList_BuildingTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual2;
+  void *SetCapacity2;
+  void *Clear2;
+  void *FindItemIndex2;
+  void *GetItemIndex2;
+  void *GetItem2;
+};
+
+struct TypeList_InfantryTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_ParticleSystemTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_RGBClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_SmudgeTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_TeamTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual2;
+  void *SetCapacity2;
+  void *Clear2;
+  void *FindItemIndex2;
+  void *GetItemIndex2;
+  void *GetItem2;
+};
+
+struct TypeList_TerrainTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_UnitTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_VoxelAnimTypeClass_CPTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct TypeSelectCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop55E020;
+  void *Execute;
+};
+
+struct VQMovieHandle_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AdvanceFrame;
+  void *Waiting;
+  void *Pause;
+  void *Stop;
+  void *FramesLeft;
+  void *SetPosition;
+  void *SeekToFrame;
+  void *InitSubtitles;
+  void *Timing;
+  void *Blit;
+};
+
+struct VectorClass_AcceleratorTracker_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_ButtonFadeEffect_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_CoopCampaignClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_CrossDissolveEffect_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_DirtyAreaStruct_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_DistributionObject_CellClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_EgoClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_GlobalPacketType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_HSVClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MPlayerScoreType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MSSfx_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MSTextEntry_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MapRegionClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MapSelection_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MapStage_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MixFileClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_MovieHandle_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_PhoneEntryClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_RGBClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_ShadowControlClass_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_SubTitle_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_TPoint3D_int_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_UndoInfoStruct_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_Wstring_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass__DDSURFACEDESC_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_tConnInfoStruct_PTR_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VectorClass_tagCONNECTDATA_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *OperatorEqual;
+  void *SetCapacity;
+  void *Clear;
+  void *FindItemIndex;
+  void *GetItemIndex;
+  void *GetItem;
+};
+
+struct VeterancyNavCommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct View1CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct View2CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct View3CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct View4CommandClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *GetName;
+  void *GetUIName;
+  void *GetUICategory;
+  void *GetUIDescription;
+  void *PreventCombinationOverride;
+  void *ExtraTriggerCondition;
+  void *CheckLoop;
+  void *Execute;
+};
+
+struct WDT_FactionSelectDialogControl_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *BindControlHwnd;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+};
+
+struct WDT_Selection_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *vt_entry_04;
+  void *vt_entry_08;
+};
+
+struct WDT_Territory_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *AlwaysZero_2;
+  void *Release;
+};
+
+struct WebBrowser_vtbl
+{
+  void *QueryInterface;
+  void *AddRef;
+  void *Release;
+  void *vt_entry_0C;
+  void *vt_entry_10;
+  void *vt_entry_14;
+  void *vt_entry_18;
+  void *vt_entry_1C;
+  void *vt_entry_20;
+  void *vt_entry_24;
+  void *vt_entry_28;
+  void *vt_entry_2C;
+  void *vt_entry_30;
+  void *vt_entry_34;
+  void *Buddy_ShowBadWebPage;
+  void *Buddy_LogErrorMsg;
+  void *Buddy_WOL_RegisterLogin;
+  void *Buddy_DestructWOLBrowser;
+};
+
+struct WinModemClass_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *Buddy_OpenSerialPort;
+  void *vt_entry_08;
+  void *Buddy_GetModemStatus;
+  void *Buddy_SetSerialDTR;
+  void *Buddy_DialModem;
+  void *Buddy_CreateModemDialString;
+  void *Buddy_WriteComPort;
+  void *vt_entry_20;
+  void *vt_entry_24;
+};
+
+struct WonlineStringDialogControl_vtbl
+{
+  void *ScalarDeletingDestructor;
+  void *BindControlHwnd;
+  void *vt_entry_08;
+  void *vt_entry_0C;
+  void *Buddy_WOLMatchTimeout;
+};
