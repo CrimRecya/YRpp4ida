@@ -37,3 +37,5 @@ CLAUDE.md
 CLAUDE.local.md
 # Agent 记忆与工作资产目录(DSH 自有，非项目交付物)
 .dsh/
+# WorkBuddy 工作区记忆目录(含项目日志与用户画像，与 .dsh/ 同性质，严禁提交)
+.workbuddy/

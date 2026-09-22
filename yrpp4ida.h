@@ -351,7 +351,7 @@ struct DynamicVectorClass__DDSURFACEDESC_PTR;
 struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl; // 0x7E5E0C
 struct DynamicVectorClass__WIN32_FIND_DATAA_PTR;
 struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl; // 0x7ED94C
-struct DynamicVectorClass_AbstractClass_PTR; // 0xB0F720 / 0x8A0390
+struct DynamicVectorClass_AbstractClass_PTR; // 0x8A0390
 struct DynamicVectorClass_AbstractClass_PTR_vtbl; // 0x7E91EC
 struct DynamicVectorClass_AbstractTypeClass_PTR; // 0xA8E968
 struct DynamicVectorClass_AbstractTypeClass_PTR_vtbl; // 0x7EA524
@@ -553,7 +553,7 @@ struct DynamicVectorClass_MultiMission_PTR;
 struct DynamicVectorClass_MultiMission_PTR_vtbl; // 0x7F11F4
 struct DynamicVectorClass_NodeNameType_PTR; // 0xA8DA74
 struct DynamicVectorClass_NodeNameType_PTR_vtbl; // 0x7EE370
-struct DynamicVectorClass_ObjectClass_PTR; // 0x87F778 (LogicClass) / 0x8A0360 / 0xA8E360 / 0xA8ECB8 / 0xB0F698 / 0xAC1418
+struct DynamicVectorClass_ObjectClass_PTR; // 0x8A0360 / 0xA8E360 / 0xA8ECB8 / 0xB0F698 / 0xAC1418
 struct DynamicVectorClass_ObjectClass_PTR_vtbl; // 0x7E4F64
 struct DynamicVectorClass_ObjectTypeClass_PTR;
 struct DynamicVectorClass_ObjectTypeClass_PTR_vtbl; // 0x7EF26C
@@ -583,7 +583,7 @@ struct DynamicVectorClass_PlanningBranchClass_PTR;
 struct DynamicVectorClass_PlanningBranchClass_PTR_vtbl; // 0x7EFEC4
 struct DynamicVectorClass_PlanningMemberClass_PTR;
 struct DynamicVectorClass_PlanningMemberClass_PTR_vtbl; // 0x7EFEE4
-struct DynamicVectorClass_PlanningNodeClass_PTR; // 0xAC4B30 / 0xAC4C18 / 0xAC4C98
+struct DynamicVectorClass_PlanningNodeClass_PTR; // 0xAC4C18 / 0xAC4C98
 struct DynamicVectorClass_PlanningNodeClass_PTR_vtbl; // 0x7EFE44
 struct DynamicVectorClass_PlanningTokenClass_PTR; // 0xAC4C78
 struct DynamicVectorClass_PlanningTokenClass_PTR_vtbl; // 0x7EFE84
@@ -852,17 +852,15 @@ struct GenericList_vtbl; // 0x7E1B04
 struct GenericNode;
 struct GenericNode_vtbl; // 0x7E1B0C
 struct GetCDClass;
-struct GGadgetClass; // : GadgetClass : LinkClass
-struct GGadgetClass_vtbl; // 0x7F02BC
-struct GraphicMenu; // 0x7EA5FC
-struct GraphicMenu_vtbl;
-struct GraphicMenuAnimItem; // 0x7EA658
+struct GraphicMenu;
+struct GraphicMenu_vtbl; // 0x7EA5FC
+struct GraphicMenuAnimItem;
 struct GraphicMenuAnimItem_vtbl; // 0x7EA658
-struct GraphicMenuImageItem; // 0x7EA674
+struct GraphicMenuImageItem;
 struct GraphicMenuImageItem_vtbl; // 0x7EA674
-struct GraphicMenuItem; // 0x7EA690
+struct GraphicMenuItem;
 struct GraphicMenuItem_vtbl; // 0x7EA690
-struct GraphicMenuShortcutItem; // 0x7EA6AC
+struct GraphicMenuShortcutItem;
 struct GraphicMenuShortcutItem_vtbl; // 0x7EA6AC
 struct GroundType;
 struct GScreenClass; // GScreen Tree Base
@@ -1189,7 +1187,6 @@ struct PriorityQueueClass_PathQueueNode;
 struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_;
 struct PriorityQueueClassNode;
 struct ProgressScreenClass;
-struct Quaternion;
 struct RadarClass; // : DisplayClass : MapClass : GScreenClass
 struct RadarClass_vtbl; // 0x7F0344
 struct RadarClass_RTacticalClass;
@@ -1475,7 +1472,7 @@ struct SUR_D_D_SURFACE_DESC2;
 struct Surface; // Surface Tree Base
 struct Surface_vtbl; // 0x7E2198
 struct SwizzleManager_ISwizzle;
-struct SwizzleManager_ISwizzle_vtbl; // 0x7F4108
+struct SwizzleManager_ISwizzle_vtbl;
 struct SwizzleManagerClass;
 struct SwizzleManagerClass_vtbl; // 0x7F4108
 struct SwizzlePointerClass;
@@ -14028,20 +14025,6 @@ struct InputManagerClass
   int field_314;
   int field_318;
 };
-
-struct GGadgetClass : GadgetClass
-{
-  int X;
-  int Y;
-  int Width;
-  int Height;
-  bool NeedsRedraw;
-  bool IsSticky;
-  bool Disabled;
-  GadgetFlag Flags;
-};
-
-struct GGadgetClass_vtbl : GadgetClass_vtbl {};
 
 struct AlphaLightingRemapClass
 {
