@@ -17896,3 +17896,128 @@ struct WinModemClass_vtbl
   int (__thiscall *vt_entry_20)(WinModemClass *this, int a1);
   int (__thiscall *vt_entry_24)(WinModemClass *this, int a1);
 };
+
+struct Pipe
+{
+  Pipe_vtbl *__vftable;
+  Pipe *ChainTo;
+  Pipe *ChainFrom;
+};
+
+struct BufferPipe : Pipe
+{
+  MemoryBuffer Buffer;
+  int Index;
+};
+
+struct LCWPipe : Pipe
+{
+  int Control;
+  int Counter;
+  void *Buffer;
+  void *Buffer2;
+  unsigned int BlockSize;
+  int SafetyMargin;
+  __int16 BlockHeader_CompCount;
+  __int16 BlockHeader_UncompCount;
+};
+
+struct Straw
+{
+  Straw_vtbl *__vftable;
+  Straw *ChainTo;
+  Straw *ChainFrom;
+};
+
+struct BufferStraw : Straw
+{
+  MemoryBuffer Buffer;
+  int Index;
+};
+
+struct LCWStraw : Straw
+{
+  int Control;
+  int Counter;
+  void *Buffer;
+  void *Buffer2;
+  unsigned int BlockSize;
+  int SafetyMargin;
+  __int16 BlockHeader_CompCount;
+  __int16 BlockHeader_UncompCount;
+};
+
+struct Blitter
+{
+  Blitter_vtbl *__vftable;
+};
+
+struct RLEBlitter
+{
+  RLEBlitter_vtbl *__vftable;
+};
+
+struct CD
+{
+  CD_vtbl *__vftable;
+  unsigned int unknown_04;
+};
+
+struct MapSeedClass : LoadOptionsClass
+{
+  int Theater;
+  int MapType;
+  int Resources;
+  int Ruggedness;
+  int Time;
+  int WaterAmount;
+  int NumPlayers;
+  int Tiberium;
+  int TiberiumLayout;
+  int Vegetation;
+  int UrbanPresence;
+  int Width;
+  int Height;
+  int Accessibility;
+  int RegionSize;
+  int Seed;
+  FixedString_128_A_wchar_t DescriptionBuffer;
+  int unknown178;
+  int unknown17C;
+  int unknown180;
+  int unknown184;
+  TypeList_int RMGLevelLightSettings;
+  TypeList_int TemperateAmbientLight;
+  TypeList_int SnowAmbientLight;
+  TypeList_int TemperateAmbientRed;
+  TypeList_int TemperateAmbientGreen;
+  TypeList_int TemperateAmbientBlue;
+  TypeList_int SnowAmbientRed;
+  TypeList_int SnowAmbientGreen;
+  TypeList_int SnowAmbientBlue;
+  TypeList_int RMGVegetationMinimums;
+  TypeList_int RMGVegetationMaximums;
+  int RMGMinimumTiberium;
+  int RMGMaximumTiberium;
+  TypeList_BuildingTypeClass_PTR TemperateOrePatchLamps;
+  TypeList_BuildingTypeClass_PTR SnowOrePatchLamps;
+  int MaxTrees;
+  bool unknown300;
+  int unknown304;
+  int unknown308;
+  int Level;
+  bool unknown310;
+  int align_314;
+};
+
+struct MPBattleClass : MPGameModeClass {};
+struct MPFreeForAllClass : MPGameModeClass {};
+struct MPManBattleClass : MPGameModeClass {};
+struct MPMegawealthClass : MPGameModeClass {};
+struct MPSiegeClass : MPGameModeClass {};
+struct MPUnholyAllianceClass : MPGameModeClass {};
+
+struct MPCombatTeam : MPTeam {};
+struct MPObserverTeam : MPTeam {};
+struct MPSiegeAttackerTeam : MPTeam {};
+struct MPSiegeDefenderTeam : MPTeam {};
