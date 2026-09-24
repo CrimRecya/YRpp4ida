@@ -6559,7 +6559,7 @@ struct INIClass
 
 struct INIClass_vtbl
 {
-  void (__thiscall *Destructor)(INIClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(INIClass *this, unsigned char flags);
 };
 
 struct __declspec(align(4)) CCINIClass : INIClass
@@ -6568,10 +6568,7 @@ struct __declspec(align(4)) CCINIClass : INIClass
   unsigned __int8 Digest[20];
 };
 
-struct CCINIClass_vtbl
-{
-  void (__thiscall *Destructor)(CCINIClass *this);
-};
+struct CCINIClass_vtbl : INIClass_vtbl {};
 
 struct VectorBase_TagClass_PTR : VectorBase_PTR
 {
@@ -11325,9 +11322,8 @@ struct GScreenClass : IGameMap
   int Bitfield;
 };
 
-struct GScreenClass_vtbl : IUnknown_vtbl
+struct GScreenClass_vtbl : IGameMap_vtbl
 {
-  int (__stdcall *Is_Visible)(IGameMap *this, CellStruct Cell);
   void (__thiscall *ScalarDeletingDestructor)(GScreenClass *this);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
@@ -16143,11 +16139,8 @@ struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl : Blitter_vtbl {};
 struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl : Blitter_vtbl {};
 struct BlitTranslucentWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
 
-struct CChatEventSink_vtbl
+struct CChatEventSink_vtbl : IUnknown_vtbl
 {
-  int (__thiscall *QueryInterface)(CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *AddRef)(CChatEventSink *this, int a1);
-  int (__thiscall *Release)(CChatEventSink *this, int a1);
   int (__thiscall *OnServerList)(CChatEventSink *this, int a1, int a2, int a3);
   int (__thiscall *OnUpdateList)(CChatEventSink *this, int a1, int a2, int a3);
   int (__thiscall *OnServerError)(CChatEventSink *this, int a1, int a2, int a3);
@@ -16195,57 +16188,7 @@ struct CChatEventSink_vtbl
   int (__thiscall *OnSetLocalIP)(CChatEventSink *this, int a1, int a2, int a3);
 };
 
-struct CComObject_CChatEventSink_vtbl
-{
-  int (__thiscall *QueryInterface)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *AddRef)(CComObject_CChatEventSink *this, int a1);
-  int (__thiscall *Release)(CComObject_CChatEventSink *this, int a1);
-  int (__thiscall *OnServerList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnUpdateList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnServerError)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnConnection)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnMessageOfTheDay)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnChannelList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnChannelCreate)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnChannelJoin)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnChannelLeave)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnChannelTopic)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnPrivateAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnPublicAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnUserList)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnPublicMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnPrivateMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnSystemMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnNetStatus)(CComObject_CChatEventSink *this, int a1, int a2);
-  int (__thiscall *OnLogout)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnPrivateGameOptions)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnPublicGameOptions)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnGameStart)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnUserKick)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnUserIP)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnFind)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnPageSend)(CComObject_CChatEventSink *this, int a1, int a2);
-  int (__thiscall *OnPaged)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnServerBannedYou)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnUserFlags)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnChannelBan)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnSquadInfo)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnUserLocale)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnUserTeam)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnSetLocale)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnSetTeam)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnBuddyList)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnBuddyAdd)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnBuddyDelete)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnPublicUnicodeMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnPrivateUnicodeMessage)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnPrivateUnicodeAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnPublicUnicodeAction)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *OnPagedUnicode)(CComObject_CChatEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *OnServerTime)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnInsiderStatus)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-  int (__thiscall *OnSetLocalIP)(CComObject_CChatEventSink *this, int a1, int a2, int a3);
-};
+struct CComObject_CChatEventSink_vtbl : CChatEventSink_vtbl {};
 
 struct CComObject_CDownloadEventSink_vtbl : IUnknown_vtbl
 {
@@ -16267,16 +16210,7 @@ struct CNetUtilEventSink_vtbl : IUnknown_vtbl
   int (__thiscall *vt_entry_24)(CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
 
-struct CComObject_CNetUtilEventSink_vtbl : IUnknown_vtbl
-{
-  int (__thiscall *vt_entry_0C)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *vt_entry_10)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
-  int (__thiscall *vt_entry_14)(CComObject_CNetUtilEventSink *this, int a1, int a2);
-  int (__thiscall *vt_entry_18)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *vt_entry_1C)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *vt_entry_20)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *vt_entry_24)(CComObject_CNetUtilEventSink *this, int a1, int a2, int a3, int a4, int a5, int a6);
-};
+struct CComObject_CNetUtilEventSink_vtbl : CNetUtilEventSink_vtbl {};
 
 struct CD_vtbl
 {
@@ -16705,41 +16639,17 @@ struct GraphicMenuAnimItem_vtbl : GraphicMenuItem_vtbl {};
 struct GraphicMenuImageItem_vtbl : GraphicMenuItem_vtbl {};
 struct GraphicMenuShortcutItem_vtbl : GraphicMenuItem_vtbl {};
 
-struct Initializer_FreeForAll_vtbl
+struct MPGameModeClass_InitializerBase_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Initializer_FreeForAll *this, int a1);
-  int (__thiscall *Factory_Constructor)(Initializer_FreeForAll *this, int a1, int a2, int a3, int a4, int a5, int a6);
+  int (__thiscall *ScalarDeletingDestructor)(MPGameModeClass_InitializerBase *this, int a1);
+  int (__thiscall *Factory_Constructor)(MPGameModeClass_InitializerBase *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
-
-struct Initializer_MPCooperative_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(Initializer_MPCooperative *this, int a1);
-  int (__thiscall *Factory_Constructor)(Initializer_MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6);
-};
-
-struct Initializer_MultiplayerBattle_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(Initializer_MultiplayerBattle *this, int a1);
-  int (__thiscall *Constructor)(Initializer_MultiplayerBattle *this, int a1, int a2, int a3, int a4, int a5, int a6);
-};
-
-struct Initializer_MultiplayerManBattle_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(Initializer_MultiplayerManBattle *this, int a1);
-  int (__thiscall *Factory_Constructor)(Initializer_MultiplayerManBattle *this, int a1, int a2, int a3, int a4, int a5, int a6);
-};
-
-struct Initializer_MultiplayerSiege_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(Initializer_MultiplayerSiege *this, int a1);
-  int (__thiscall *Factory_Constructor)(Initializer_MultiplayerSiege *this, int a1, int a2, int a3, int a4, int a5, int a6);
-};
-
-struct Initializer_UnholyAlliance_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(Initializer_UnholyAlliance *this, int a1);
-  int (__thiscall *Factory_Constructor)(Initializer_UnholyAlliance *this, int a1, int a2, int a3, int a4, int a5, int a6);
-};
+struct Initializer_FreeForAll_vtbl : MPGameModeClass_InitializerBase_vtbl {};
+struct Initializer_MPCooperative_vtbl : MPGameModeClass_InitializerBase_vtbl {};
+struct Initializer_MultiplayerBattle_vtbl : MPGameModeClass_InitializerBase_vtbl {};
+struct Initializer_MultiplayerManBattle_vtbl : MPGameModeClass_InitializerBase_vtbl {};
+struct Initializer_MultiplayerSiege_vtbl : MPGameModeClass_InitializerBase_vtbl {};
+struct Initializer_UnholyAlliance_vtbl : MPGameModeClass_InitializerBase_vtbl {};
 
 struct MPBattleClass_vtbl : MPGameModeClass_vtbl {};
 struct MPCooperative_vtbl : MPGameModeClass_vtbl {};
@@ -16753,12 +16663,6 @@ struct MPCombatTeam_vtbl : MPTeam_vtbl {};
 struct MPObserverTeam_vtbl : MPTeam_vtbl {};
 struct MPSiegeAttackerTeam_vtbl : MPTeam_vtbl {};
 struct MPSiegeDefenderTeam_vtbl : MPTeam_vtbl {};
-
-struct MPGameModeClass_InitializerBase_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(MPGameModeClass_InitializerBase *this, int a1);
-  int (__thiscall *vt_entry_04)(MPGameModeClass_InitializerBase *this);
-};
 
 struct MSAnim_vtbl
 {
@@ -16895,49 +16799,10 @@ struct SimpleWonlineDialogControl_vtbl : OwnerDraw_SimpleDialogControl_vtbl {};
 struct WonlineStringDialogControl_vtbl : SimpleWonlineDialogControl_vtbl {};
 struct CreateGameDialogControl_vtbl : WonlineStringDialogControl_vtbl {};
 
-struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl
-{
-  int (__thiscall *VectorDeletingDestructor)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *OperatorEqual)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *SetCapacity)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1, int a2);
-  int (__thiscall *Clear)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this);
-  int (__thiscall *FindItemIndex)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *GetItemIndex)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *GetItem)(PAVSchemeNode_DynamicVectorClass_HashObject_HashString *this, int a1, int a2);
-};
-
-struct PAVSchemeNode_VectorClass_HashObject_HashString_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *OperatorEqual)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *SetCapacity)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1, int a2);
-  int (__thiscall *Clear)(PAVSchemeNode_VectorClass_HashObject_HashString *this);
-  int (__thiscall *FindItemIndex)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *GetItemIndex)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1);
-  int (__thiscall *GetItem)(PAVSchemeNode_VectorClass_HashObject_HashString *this, int a1, int a2);
-};
-
-struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl
-{
-  int (__thiscall *VectorDeletingDestructor)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *OperatorEqual)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *SetCapacity)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
-  int (__thiscall *Clear)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this);
-  int (__thiscall *FindItemIndex)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *GetItemIndex)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *GetItem)(PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
-};
-
-struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *OperatorEqual)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *SetCapacity)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
-  int (__thiscall *Clear)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this);
-  int (__thiscall *FindItemIndex)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *GetItemIndex)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1);
-  int (__thiscall *GetItem)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
-};
+struct PAVSchemeNode_VectorClass_HashObject_HashString_vtbl : VectorBase_ELE_vtbl {};
+struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl : PAVSchemeNode_VectorClass_HashObject_HashString_vtbl {};
+struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl : VectorBase_ELE_vtbl {};
+struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl : PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl {};
 
 struct PlayerProfile_vtbl : ReferenceCounted_vtbl {};
 
