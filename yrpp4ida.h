@@ -740,6 +740,8 @@ struct DynamicVectorClass_VoxelAnimTypeClass_CPTR;
 struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl; // 0x7F0DCC
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR; // 0xA8EB28
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl; // 0x7EA3A4
+struct DynamicVectorClass_W_4_char_i_s_k_unsigned_int_char;
+struct DynamicVectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl;
 struct DynamicVectorClass_WarheadTypeClass_PTR; // 0x8874C0
 struct DynamicVectorClass_WarheadTypeClass_PTR_vtbl; // 0x7E1E84
 struct DynamicVectorClass_WaveClass_PTR; // 0xA8EC38
@@ -2219,6 +2221,8 @@ struct VectorBase_VoxelAnimTypeClass_CPTR;
 struct VectorBase_VoxelAnimTypeClass_CPTR_vtbl;
 struct VectorBase_VoxelAnimTypeClass_PTR;
 struct VectorBase_VoxelAnimTypeClass_PTR_vtbl;
+struct VectorBase_W_4_char_i_s_k_unsigned_int_char;
+struct VectorBase_W_4_char_i_s_k_unsigned_int_char_vtbl;
 struct VectorBase_WarheadTypeClass_PTR;
 struct VectorBase_WarheadTypeClass_PTR_vtbl;
 struct VectorBase_WaveClass_PTR;
@@ -2711,6 +2715,7 @@ struct VoxelStruct;
 struct VoxLib;
 struct VQMovieHandle;
 struct VQMovieHandle_vtbl; // 0x7EE0F4
+struct W_4_char_i_s_k_unsigned_int_char;
 struct WalkLocomotionClass; // : LocomotionClass
 struct WalkLocomotionClass_vtbl; // 0x7F6AC4
 struct WarheadTypeClass; // : AbstractTypeClass : AbstractClass
@@ -4761,19 +4766,6 @@ enum CommProtocolType : int
 };
 
 // TODO ENUM
-
-struct MSAnim_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(MSAnim *this);
-  int (__thiscall *SetActive)(MSAnim *this);
-  int (__thiscall *StopTimer)(MSAnim *this);
-  int (__thiscall *StartTimer)(MSAnim *this);
-  int (__thiscall *DrawRect)(MSAnim *this);
-  int (__thiscall *DrawRectOrFull)(MSAnim *this);
-  int (__thiscall *GetDefaultRect)(MSAnim *this);
-  int (__thiscall *CanDraw)(MSAnim *this);
-  int (__thiscall *Draw)(MSAnim *this);
-};
 
 struct __declspec(align(4)) VectorBase
 {
@@ -7742,7 +7734,7 @@ struct MPGameModeClass
 
 struct MPGameModeClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(MPGameModeClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(MPGameModeClass *this, unsigned char flags);
   bool (__thiscall *vt_entry_04)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_08)(MPGameModeClass *this);
   bool (__thiscall *vt_entry_0C)(MPGameModeClass *this, unsigned int dwUnk);
@@ -16750,66 +16742,17 @@ struct Initializer_UnholyAlliance_vtbl
 };
 
 struct MPBattleClass_vtbl : MPGameModeClass_vtbl {};
+struct MPCooperative_vtbl : MPGameModeClass_vtbl {};
+struct MPFreeForAllClass_vtbl : MPGameModeClass_vtbl {};
+struct MPManBattleClass_vtbl : MPGameModeClass_vtbl {};
+struct MPMegawealthClass_vtbl : MPGameModeClass_vtbl {};
+struct MPSiegeClass_vtbl : MPGameModeClass_vtbl {};
+struct MPUnholyAllianceClass_vtbl : MPGameModeClass_vtbl {};
 
 struct MPCombatTeam_vtbl : MPTeam_vtbl {};
-
-struct MPCooperative_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_04)(MPCooperative *this);
-  int (__thiscall *vt_entry_08)(MPCooperative *this);
-  int (__thiscall *vt_entry_0C)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_10)(MPCooperative *this);
-  int (__thiscall *vt_entry_14)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_18)(MPCooperative *this);
-  int (__thiscall *vt_entry_1C)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_20)(MPCooperative *this);
-  int (__thiscall *vt_entry_24)(MPCooperative *this);
-  int (__thiscall *vt_entry_28)(MPCooperative *this);
-  int (__thiscall *vt_entry_2C)(MPCooperative *this);
-  int (__thiscall *vt_entry_30)(MPCooperative *this);
-  int (__thiscall *CanAllyWith)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_38)(MPCooperative *this, int a1);
-  int (__thiscall *IsAIAllowed)(MPCooperative *this);
-  int (__thiscall *vt_entry_40)(MPCooperative *this);
-  int (__thiscall *FirstValidMapIndex)(MPCooperative *this);
-  int (__thiscall *PopulateTeamDropdown)(MPCooperative *this, int a1, int a2, int a3);
-  int (__thiscall *vt_entry_4C)(MPCooperative *this, int a1, int a2, int a3);
-  int (__thiscall *PopulateTeamDropdownForPlayer)(MPCooperative *this, int a1, int a2);
-  int (__thiscall *vt_entry_54)(MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
-  int (__thiscall *vt_entry_58)(MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
-  int (__thiscall *vt_entry_5C)(MPCooperative *this, int a1, int a2, int a3);
-  int (__thiscall *vt_entry_60)(MPCooperative *this);
-  int (__thiscall *vt_entry_64)(MPCooperative *this);
-  int (__thiscall *vt_entry_68)(MPCooperative *this);
-  int (__thiscall *vt_entry_6C)(MPCooperative *this);
-  int (__thiscall *vt_entry_70)(MPCooperative *this);
-  int (__thiscall *vt_entry_74)(MPCooperative *this, int a1, int a2);
-  int (__thiscall *vt_entry_78)(MPCooperative *this, int a1);
-  int (__thiscall *UnfixAlliances)(MPCooperative *this);
-  int (__thiscall *StartingPositionsToHouseBaseCells)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_84)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_88)(MPCooperative *this);
-  int (__thiscall *vt_entry_8C)(MPCooperative *this);
-  int (__thiscall *vt_entry_90)(MPCooperative *this);
-  int (__thiscall *vt_entry_94)(MPCooperative *this);
-  int (__thiscall *vt_entry_98)(MPCooperative *this);
-  int (__thiscall *vt_entry_9C)(MPCooperative *this);
-  int (__thiscall *vt_entry_A0)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_A4)(MPCooperative *this, int a1);
-  int (__thiscall *vt_entry_A8)(MPCooperative *this);
-  int (__thiscall *vt_entry_AC)(MPCooperative *this);
-  int (__thiscall *vt_entry_B0)(MPCooperative *this);
-  int (__thiscall *vt_entry_B4)(MPCooperative *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
-  int (__thiscall *vt_entry_B8)(MPCooperative *this);
-  int (__thiscall *vt_entry_BC)(MPCooperative *this);
-  int (__thiscall *CreateMPTeams)(MPCooperative *this, int a1);
-  int (__thiscall *AssignStartingPositionsToHouse)(MPCooperative *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *SpawnBaseUnits)(MPCooperative *this, int a1, int a2);
-  int (__thiscall *GenerateStartingUnits)(MPCooperative *this, int a1, int a2);
-};
-
-struct MPFreeForAllClass_vtbl : MPGameModeClass_vtbl {};
+struct MPObserverTeam_vtbl : MPTeam_vtbl {};
+struct MPSiegeAttackerTeam_vtbl : MPTeam_vtbl {};
+struct MPSiegeDefenderTeam_vtbl : MPTeam_vtbl {};
 
 struct MPGameModeClass_InitializerBase_vtbl
 {
@@ -16817,77 +16760,25 @@ struct MPGameModeClass_InitializerBase_vtbl
   int (__thiscall *vt_entry_04)(MPGameModeClass_InitializerBase *this);
 };
 
-struct MPManBattleClass_vtbl : MPGameModeClass_vtbl {};
-
-struct MPMegawealthClass_vtbl : MPGameModeClass_vtbl {};
-
-struct MPObserverTeam_vtbl : MPTeam_vtbl {};
-
-struct MPSiegeAttackerTeam_vtbl : MPTeam_vtbl {};
-
-struct MPSiegeClass_vtbl
+struct MSAnim_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_04)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_08)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_0C)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_10)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_14)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_18)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_1C)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_20)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_24)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_28)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_2C)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_30)(MPSiegeClass *this);
-  int (__thiscall *CanAllyWith)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_38)(MPSiegeClass *this, int a1);
-  int (__thiscall *IsAIAllowed)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_40)(MPSiegeClass *this);
-  int (__thiscall *FirstValidMapIndex)(MPSiegeClass *this);
-  int (__thiscall *PopulateTeamDropdown)(MPSiegeClass *this, int a1, int a2, int a3);
-  int (__thiscall *DrawTeamDropdown)(MPSiegeClass *this, int a1, int a2, int a3);
-  int (__thiscall *PopulateTeamDropdownForPlayer)(MPSiegeClass *this, int a1, int a2);
-  int (__thiscall *vt_entry_54)(MPSiegeClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
-  int (__thiscall *vt_entry_58)(MPSiegeClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
-  int (__thiscall *vt_entry_5C)(MPSiegeClass *this, int a1, int a2, int a3);
-  int (__thiscall *vt_entry_60)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_64)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_68)(MPSiegeClass *this);
-  int (__thiscall *RandomHumanCountryIndex)(MPSiegeClass *this);
-  int (__thiscall *RandomAICountryIndex)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_74)(MPSiegeClass *this, int a1, int a2);
-  int (__thiscall *vt_entry_78)(MPSiegeClass *this, int a1);
-  int (__thiscall *UnfixAlliances)(MPSiegeClass *this);
-  int (__thiscall *StartingPositionsToHouseBaseCells)(MPSiegeClass *this, int a1);
-  int (__thiscall *StartingPositionsToHouseBaseCells2)(MPSiegeClass *this, int a1);
-  int (__thiscall *AllyTeams)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_8C)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_90)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_94)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_98)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_9C)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_A0)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_A4)(MPSiegeClass *this, int a1);
-  int (__thiscall *vt_entry_A8)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_AC)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_B0)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_B4)(MPSiegeClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
-  int (__thiscall *vt_entry_B8)(MPSiegeClass *this);
-  int (__thiscall *vt_entry_BC)(MPSiegeClass *this);
-  int (__thiscall *CreateMPTeams)(MPSiegeClass *this, int a1);
-  int (__thiscall *AssignStartingPositionsToHouse)(MPSiegeClass *this, int a1, int a2, int a3, int a4);
-  int (__thiscall *vt_entry_C8)(MPSiegeClass *this, int a1, int a2);
-  int (__thiscall *GenerateStartingUnits)(MPSiegeClass *this, int a1, int a2);
+  int (__thiscall *ScalarDeletingDestructor)(MSAnim *this);
+  int (__thiscall *SetActive)(MSAnim *this);
+  int (__thiscall *StopTimer)(MSAnim *this);
+  int (__thiscall *StartTimer)(MSAnim *this);
+  int (__thiscall *DrawRect)(MSAnim *this);
+  int (__thiscall *DrawRectOrFull)(MSAnim *this);
+  int (__thiscall *GetDefaultRect)(MSAnim *this);
+  int (__thiscall *CanDraw)(MSAnim *this);
+  int (__thiscall *Draw)(MSAnim *this);
 };
 
-struct MPSiegeDefenderTeam_vtbl : MPTeam_vtbl {};
-
-struct MPUnholyAllianceClass_vtbl : MPGameModeClass_vtbl {};
-
 struct MSBinkAnim_vtbl : MSAnim_vtbl {};
-
 struct MSBitPrintAnim_vtbl : MSAnim_vtbl {};
+struct MSShapeAnim_vtbl : MSAnim_vtbl {};
+struct MSFrameAnim_vtbl : MSAnim_vtbl {};
+struct MSPrintAnim_vtbl : MSAnim_vtbl {};
+struct MSVQAnim_vtbl : MSAnim_vtbl {};
 
 struct MSEngine_vtbl
 {
@@ -16895,8 +16786,6 @@ struct MSEngine_vtbl
   int (__thiscall *vt_entry_04)(MSEngine *this, int a1);
   int (__thiscall *vt_entry_08)(MSEngine *this);
 };
-
-struct MSShapeAnim_vtbl : MSAnim_vtbl {};
 
 struct MSFadeAnim_vtbl : MSShapeAnim_vtbl {};
 
@@ -16908,8 +16797,6 @@ struct MSFont_vtbl
   int (__thiscall *vt_entry_0C)(MSFont *this, int a1, int a2, int a3, int a4, int a5);
   int (__thiscall *vt_entry_10)(MSFont *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
-
-struct MSFrameAnim_vtbl : MSAnim_vtbl {};
 
 struct MSOverlayAnim_vtbl : MSFadeAnim_vtbl {};
 
@@ -16925,10 +16812,6 @@ struct MSPCXAnim_vtbl
   int (__thiscall *vt_entry_1C)(MSPCXAnim *this);
   int (__thiscall *vt_entry_20)(MSPCXAnim *this, int a1);
 };
-
-struct MSPrintAnim_vtbl : MSAnim_vtbl {};
-
-struct MSVQAnim_vtbl : MSAnim_vtbl {};
 
 struct MapSeedClass_vtbl : LoadOptionsClass_vtbl {};
 
@@ -17007,6 +16890,7 @@ struct OwnerDraw_SimpleDialogControl_vtbl
   int (__thiscall *vt_entry_0C)(OwnerDraw_SimpleDialogControl *this);
   int (__thiscall *vt_entry_10)(OwnerDraw_SimpleDialogControl *this);
 };
+
 struct SimpleWonlineDialogControl_vtbl : OwnerDraw_SimpleDialogControl_vtbl {};
 struct WonlineStringDialogControl_vtbl : SimpleWonlineDialogControl_vtbl {};
 struct CreateGameDialogControl_vtbl : WonlineStringDialogControl_vtbl {};
@@ -17336,18 +17220,17 @@ struct VectorBase_TPoint3D_int_vtbl : VectorBase_ELE_vtbl {};
 struct VectorClass_TPoint3D_int : VectorBase_TPoint3D_int, VectorAddon {};
 struct VectorClass_TPoint3D_int_vtbl : VectorBase_TPoint3D_int_vtbl {};
 
-struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl
+struct VectorBase_W_4_char_i_s_k_unsigned_int_char : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this);
-  int (__thiscall *FindItemIndex)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
+  W_4_char_i_s_k_unsigned_int_char *Items;
 };
-
-struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
+struct VectorBase_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_W_4_char_i_s_k_unsigned_int_char : VectorBase_W_4_char_i_s_k_unsigned_int_char, VectorAddon {};
+struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorBase_W_4_char_i_s_k_unsigned_int_char_vtbl {};
+struct DynamicVectorClass_W_4_char_i_s_k_unsigned_int_char : VectorClass_W_4_char_i_s_k_unsigned_int_char, DynamicAddon {};
+struct DynamicVectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
+struct TypeList_W_4_char_i_s_k_unsigned_int_char : DynamicVectorClass_W_4_char_i_s_k_unsigned_int_char, TypeListAddon {};
+struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : DynamicVectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
 
 struct VectorBase_tagCONNECTDATA : VectorBase_ELE
 {
