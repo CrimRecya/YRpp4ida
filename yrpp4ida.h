@@ -1865,12 +1865,16 @@ struct VectorBase_CoordStruct;
 struct VectorBase_CoordStruct_vtbl;
 struct VectorBase_DamageGroup_PTR;
 struct VectorBase_DamageGroup_PTR_vtbl;
+struct VectorBase_DirtyAreaStruct;
+struct VectorBase_DirtyAreaStruct_vtbl;
 struct VectorBase_DirtyAreaStruct_PTR;
 struct VectorBase_DirtyAreaStruct_PTR_vtbl;
 struct VectorBase_DiskLaserClass_PTR;
 struct VectorBase_DiskLaserClass_PTR_vtbl;
 struct VectorBase_double;
 struct VectorBase_double_vtbl;
+struct VectorBase_DynamicVectorClass_char_PTR_PTR;
+struct VectorBase_DynamicVectorClass_char_PTR_PTR_vtbl;
 struct VectorBase_EBolt_PTR;
 struct VectorBase_EBolt_PTR_vtbl;
 struct VectorBase_ELE;
@@ -1927,6 +1931,8 @@ struct VectorBase_LightSourceClass_PTR;
 struct VectorBase_LightSourceClass_PTR_vtbl;
 struct VectorBase_LineTrail_PTR;
 struct VectorBase_LineTrail_PTR_vtbl;
+struct VectorBase_MovieHandle_PTR;
+struct VectorBase_MovieHandle_PTR_vtbl;
 struct VectorBase_MPGameModeClass_PTR;
 struct VectorBase_MPGameModeClass_PTR_vtbl;
 struct VectorBase_MPTeam_PTR;
@@ -1995,6 +2001,8 @@ struct VectorBase_rc_ptr_WDTTerritory_PTR;
 struct VectorBase_rc_ptr_WDTTerritory_PTR_vtbl;
 struct VectorBase_RGBClass_PTR;
 struct VectorBase_RGBClass_PTR_vtbl;
+struct VectorBase_RGBClass;
+struct VectorBase_RGBClass_vtbl;
 struct VectorBase_ScoutStruct;
 struct VectorBase_ScoutStruct_vtbl;
 struct VectorBase_ScriptClass_PTR;
@@ -6599,6 +6607,8 @@ struct VectorClass_InfantryTypeClass_PTR : VectorBase_InfantryTypeClass_PTR, Vec
 struct VectorClass_InfantryTypeClass_PTR_vtbl : VectorBase_InfantryTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_InfantryTypeClass_PTR : VectorClass_InfantryTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_InfantryTypeClass_PTR_vtbl : VectorClass_InfantryTypeClass_PTR_vtbl {};
+struct TypeList_InfantryTypeClass_PTR : DynamicVectorClass_InfantryTypeClass_PTR, TypeListAddon {};
+struct TypeList_InfantryTypeClass_PTR_vtbl : DynamicVectorClass_InfantryTypeClass_PTR_vtbl {};
 struct VectorBase_InfantryTypeClass_CPTR : VectorBase_PTR
 {
   const InfantryTypeClass **Items;
@@ -6608,8 +6618,8 @@ struct VectorClass_InfantryTypeClass_CPTR : VectorBase_InfantryTypeClass_CPTR, V
 struct VectorClass_InfantryTypeClass_CPTR_vtbl : VectorBase_InfantryTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_InfantryTypeClass_CPTR : VectorClass_InfantryTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_InfantryTypeClass_CPTR_vtbl : VectorClass_InfantryTypeClass_CPTR_vtbl {};
-struct TypeList_InfantryTypeClass_PTR : DynamicVectorClass_InfantryTypeClass_PTR, TypeListAddon {};
-struct TypeList_InfantryTypeClass_PTR_vtbl : DynamicVectorClass_InfantryTypeClass_PTR_vtbl {};
+struct TypeList_InfantryTypeClass_CPTR : DynamicVectorClass_InfantryTypeClass_CPTR, TypeListAddon {};
+struct TypeList_InfantryTypeClass_CPTR_vtbl : DynamicVectorClass_InfantryTypeClass_CPTR_vtbl {};
 
 struct VectorBase_UnitTypeClass_PTR : VectorBase_PTR
 {
@@ -6620,6 +6630,8 @@ struct VectorClass_UnitTypeClass_PTR : VectorBase_UnitTypeClass_PTR, VectorAddon
 struct VectorClass_UnitTypeClass_PTR_vtbl : VectorBase_UnitTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_UnitTypeClass_PTR : VectorClass_UnitTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_UnitTypeClass_PTR_vtbl : VectorClass_UnitTypeClass_PTR_vtbl {};
+struct TypeList_UnitTypeClass_PTR : DynamicVectorClass_UnitTypeClass_PTR, TypeListAddon {};
+struct TypeList_UnitTypeClass_PTR_vtbl : DynamicVectorClass_UnitTypeClass_PTR_vtbl {};
 struct VectorBase_UnitTypeClass_CPTR : VectorBase_PTR
 {
   const UnitTypeClass **Items;
@@ -6629,8 +6641,8 @@ struct VectorClass_UnitTypeClass_CPTR : VectorBase_UnitTypeClass_CPTR, VectorAdd
 struct VectorClass_UnitTypeClass_CPTR_vtbl : VectorBase_UnitTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_UnitTypeClass_CPTR : VectorClass_UnitTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_UnitTypeClass_CPTR_vtbl : VectorClass_UnitTypeClass_CPTR_vtbl {};
-struct TypeList_UnitTypeClass_PTR : DynamicVectorClass_UnitTypeClass_PTR, TypeListAddon {};
-struct TypeList_UnitTypeClass_PTR_vtbl : DynamicVectorClass_UnitTypeClass_PTR_vtbl {};
+struct TypeList_UnitTypeClass_CPTR : DynamicVectorClass_UnitTypeClass_CPTR, TypeListAddon {};
+struct TypeList_UnitTypeClass_CPTR_vtbl : DynamicVectorClass_UnitTypeClass_CPTR_vtbl {};
 
 struct VectorBase_AircraftTypeClass_PTR : VectorBase_PTR
 {
@@ -6641,6 +6653,8 @@ struct VectorClass_AircraftTypeClass_PTR : VectorBase_AircraftTypeClass_PTR, Vec
 struct VectorClass_AircraftTypeClass_PTR_vtbl : VectorBase_AircraftTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_AircraftTypeClass_PTR : VectorClass_AircraftTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_AircraftTypeClass_PTR_vtbl : VectorClass_AircraftTypeClass_PTR_vtbl {};
+struct TypeList_AircraftTypeClass_PTR : DynamicVectorClass_AircraftTypeClass_PTR, TypeListAddon {};
+struct TypeList_AircraftTypeClass_PTR_vtbl : DynamicVectorClass_AircraftTypeClass_PTR_vtbl {};
 struct VectorBase_AircraftTypeClass_CPTR : VectorBase_PTR
 {
   const AircraftTypeClass **Items;
@@ -6650,8 +6664,8 @@ struct VectorClass_AircraftTypeClass_CPTR : VectorBase_AircraftTypeClass_CPTR, V
 struct VectorClass_AircraftTypeClass_CPTR_vtbl : VectorBase_AircraftTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_AircraftTypeClass_CPTR : VectorClass_AircraftTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_AircraftTypeClass_CPTR_vtbl : VectorClass_AircraftTypeClass_CPTR_vtbl {};
-struct TypeList_AircraftTypeClass_PTR : DynamicVectorClass_AircraftTypeClass_PTR, TypeListAddon {};
-struct TypeList_AircraftTypeClass_PTR_vtbl : DynamicVectorClass_AircraftTypeClass_PTR_vtbl {};
+struct TypeList_AircraftTypeClass_CPTR : DynamicVectorClass_AircraftTypeClass_CPTR, TypeListAddon {};
+struct TypeList_AircraftTypeClass_CPTR_vtbl : DynamicVectorClass_AircraftTypeClass_CPTR_vtbl {};
 
 struct LineTrail
 {
@@ -6677,6 +6691,8 @@ struct VectorClass_TechnoTypeClass_PTR : VectorBase_TechnoTypeClass_PTR, VectorA
 struct VectorClass_TechnoTypeClass_PTR_vtbl : VectorBase_TechnoTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_TechnoTypeClass_PTR : VectorClass_TechnoTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_TechnoTypeClass_PTR_vtbl : VectorClass_TechnoTypeClass_PTR_vtbl {};
+struct TypeList_TechnoTypeClass_PTR : DynamicVectorClass_TechnoTypeClass_PTR, TypeListAddon {};
+struct TypeList_TechnoTypeClass_PTR_vtbl : DynamicVectorClass_TechnoTypeClass_PTR_vtbl {};
 struct VectorBase_TechnoTypeClass_CPTR : VectorBase_PTR
 {
   const TechnoTypeClass **Items;
@@ -6686,8 +6702,6 @@ struct VectorClass_TechnoTypeClass_CPTR : VectorBase_TechnoTypeClass_CPTR, Vecto
 struct VectorClass_TechnoTypeClass_CPTR_vtbl : VectorBase_TechnoTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_TechnoTypeClass_CPTR : VectorClass_TechnoTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_TechnoTypeClass_CPTR_vtbl : VectorClass_TechnoTypeClass_CPTR_vtbl {};
-struct TypeList_TechnoTypeClass_PTR : DynamicVectorClass_TechnoTypeClass_PTR, TypeListAddon {};
-struct TypeList_TechnoTypeClass_PTR_vtbl : DynamicVectorClass_TechnoTypeClass_PTR_vtbl {};
 
 struct ControlNode
 {
@@ -6756,6 +6770,8 @@ struct VectorClass_AnimTypeClass_PTR : VectorBase_AnimTypeClass_PTR, VectorAddon
 struct VectorClass_AnimTypeClass_PTR_vtbl : VectorBase_AnimTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_AnimTypeClass_PTR : VectorClass_AnimTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_AnimTypeClass_PTR_vtbl : VectorClass_AnimTypeClass_PTR_vtbl {};
+struct TypeList_AnimTypeClass_PTR : DynamicVectorClass_AnimTypeClass_PTR, TypeListAddon {};
+struct TypeList_AnimTypeClass_PTR_vtbl : DynamicVectorClass_AnimTypeClass_PTR_vtbl {};
 struct VectorBase_AnimTypeClass_CPTR : VectorBase_PTR
 {
   const AnimTypeClass **Items;
@@ -6765,8 +6781,8 @@ struct VectorClass_AnimTypeClass_CPTR : VectorBase_AnimTypeClass_CPTR, VectorAdd
 struct VectorClass_AnimTypeClass_CPTR_vtbl : VectorBase_AnimTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_AnimTypeClass_CPTR : VectorClass_AnimTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_AnimTypeClass_CPTR_vtbl : VectorClass_AnimTypeClass_CPTR_vtbl {};
-struct TypeList_AnimTypeClass_PTR : DynamicVectorClass_AnimTypeClass_PTR, TypeListAddon {};
-struct TypeList_AnimTypeClass_PTR_vtbl : DynamicVectorClass_AnimTypeClass_PTR_vtbl {};
+struct TypeList_AnimTypeClass_CPTR : DynamicVectorClass_AnimTypeClass_CPTR, TypeListAddon {};
+struct TypeList_AnimTypeClass_CPTR_vtbl : DynamicVectorClass_AnimTypeClass_CPTR_vtbl {};
 
 struct VectorBase_VoxelAnimTypeClass_PTR : VectorBase_PTR
 {
@@ -6777,6 +6793,8 @@ struct VectorClass_VoxelAnimTypeClass_PTR : VectorBase_VoxelAnimTypeClass_PTR, V
 struct VectorClass_VoxelAnimTypeClass_PTR_vtbl : VectorBase_VoxelAnimTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR : VectorClass_VoxelAnimTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl : VectorClass_VoxelAnimTypeClass_PTR_vtbl {};
+struct TypeList_VoxelAnimTypeClass_PTR : DynamicVectorClass_VoxelAnimTypeClass_PTR, TypeListAddon {};
+struct TypeList_VoxelAnimTypeClass_PTR_vtbl : DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl {};
 struct VectorBase_VoxelAnimTypeClass_CPTR : VectorBase_PTR
 {
   const VoxelAnimTypeClass **Items;
@@ -6786,8 +6804,8 @@ struct VectorClass_VoxelAnimTypeClass_CPTR : VectorBase_VoxelAnimTypeClass_CPTR,
 struct VectorClass_VoxelAnimTypeClass_CPTR_vtbl : VectorBase_VoxelAnimTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_VoxelAnimTypeClass_CPTR : VectorClass_VoxelAnimTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl : VectorClass_VoxelAnimTypeClass_CPTR_vtbl {};
-struct TypeList_VoxelAnimTypeClass_PTR : DynamicVectorClass_VoxelAnimTypeClass_PTR, TypeListAddon {};
-struct TypeList_VoxelAnimTypeClass_PTR_vtbl : DynamicVectorClass_VoxelAnimTypeClass_PTR_vtbl {};
+struct TypeList_VoxelAnimTypeClass_CPTR : DynamicVectorClass_VoxelAnimTypeClass_CPTR, TypeListAddon {};
+struct TypeList_VoxelAnimTypeClass_CPTR_vtbl : DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl {};
 
 struct VectorBase_RGBClass_PTR : VectorBase_PTR
 {
@@ -6881,6 +6899,8 @@ struct VectorClass_BuildingTypeClass_PTR : VectorBase_BuildingTypeClass_PTR, Vec
 struct VectorClass_BuildingTypeClass_PTR_vtbl : VectorBase_BuildingTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_BuildingTypeClass_PTR : VectorClass_BuildingTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_BuildingTypeClass_PTR_vtbl : VectorClass_BuildingTypeClass_PTR_vtbl {};
+struct TypeList_BuildingTypeClass_PTR : DynamicVectorClass_BuildingTypeClass_PTR, TypeListAddon {};
+struct TypeList_BuildingTypeClass_PTR_vtbl : DynamicVectorClass_BuildingTypeClass_PTR_vtbl {};
 struct VectorBase_BuildingTypeClass_CPTR : VectorBase_PTR
 {
   const BuildingTypeClass **Items;
@@ -6890,8 +6910,8 @@ struct VectorClass_BuildingTypeClass_CPTR : VectorBase_BuildingTypeClass_CPTR, V
 struct VectorClass_BuildingTypeClass_CPTR_vtbl : VectorBase_BuildingTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_BuildingTypeClass_CPTR : VectorClass_BuildingTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_BuildingTypeClass_CPTR_vtbl : VectorClass_BuildingTypeClass_CPTR_vtbl {};
-struct TypeList_BuildingTypeClass_PTR : DynamicVectorClass_BuildingTypeClass_PTR, TypeListAddon {};
-struct TypeList_BuildingTypeClass_PTR_vtbl : DynamicVectorClass_BuildingTypeClass_PTR_vtbl {};
+struct TypeList_BuildingTypeClass_CPTR : DynamicVectorClass_BuildingTypeClass_CPTR, TypeListAddon {};
+struct TypeList_BuildingTypeClass_CPTR_vtbl : DynamicVectorClass_BuildingTypeClass_CPTR_vtbl {};
 
 struct VectorBase_ParticleSystemTypeClass_PTR : VectorBase_PTR
 {
@@ -6902,6 +6922,8 @@ struct VectorClass_ParticleSystemTypeClass_PTR : VectorBase_ParticleSystemTypeCl
 struct VectorClass_ParticleSystemTypeClass_PTR_vtbl : VectorBase_ParticleSystemTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR : VectorClass_ParticleSystemTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl : VectorClass_ParticleSystemTypeClass_PTR_vtbl {};
+struct TypeList_ParticleSystemTypeClass_PTR : DynamicVectorClass_ParticleSystemTypeClass_PTR, TypeListAddon {};
+struct TypeList_ParticleSystemTypeClass_PTR_vtbl : DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl {};
 struct VectorBase_ParticleSystemTypeClass_CPTR : VectorBase_PTR
 {
   const ParticleSystemTypeClass **Items;
@@ -6911,8 +6933,8 @@ struct VectorClass_ParticleSystemTypeClass_CPTR : VectorBase_ParticleSystemTypeC
 struct VectorClass_ParticleSystemTypeClass_CPTR_vtbl : VectorBase_ParticleSystemTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_ParticleSystemTypeClass_CPTR : VectorClass_ParticleSystemTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl : VectorClass_ParticleSystemTypeClass_CPTR_vtbl {};
-struct TypeList_ParticleSystemTypeClass_PTR : DynamicVectorClass_ParticleSystemTypeClass_PTR, TypeListAddon {};
-struct TypeList_ParticleSystemTypeClass_PTR_vtbl : DynamicVectorClass_ParticleSystemTypeClass_PTR_vtbl {};
+struct TypeList_ParticleSystemTypeClass_CPTR : DynamicVectorClass_ParticleSystemTypeClass_CPTR, TypeListAddon {};
+struct TypeList_ParticleSystemTypeClass_CPTR_vtbl : DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl {};
 
 struct BuildType
 {
@@ -7693,6 +7715,8 @@ struct VectorClass_SmudgeTypeClass_PTR : VectorBase_SmudgeTypeClass_PTR, VectorA
 struct VectorClass_SmudgeTypeClass_PTR_vtbl : VectorBase_SmudgeTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_SmudgeTypeClass_PTR : VectorClass_SmudgeTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_SmudgeTypeClass_PTR_vtbl : VectorClass_SmudgeTypeClass_PTR_vtbl {};
+struct TypeList_SmudgeTypeClass_PTR : DynamicVectorClass_SmudgeTypeClass_PTR, TypeListAddon {};
+struct TypeList_SmudgeTypeClass_PTR_vtbl : DynamicVectorClass_SmudgeTypeClass_PTR_vtbl {};
 struct VectorBase_SmudgeTypeClass_CPTR : VectorBase_PTR
 {
   const SmudgeTypeClass **Items;
@@ -7702,8 +7726,8 @@ struct VectorClass_SmudgeTypeClass_CPTR : VectorBase_SmudgeTypeClass_CPTR, Vecto
 struct VectorClass_SmudgeTypeClass_CPTR_vtbl : VectorBase_SmudgeTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_SmudgeTypeClass_CPTR : VectorClass_SmudgeTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl : VectorClass_SmudgeTypeClass_CPTR_vtbl {};
-struct TypeList_SmudgeTypeClass_PTR : DynamicVectorClass_SmudgeTypeClass_PTR, TypeListAddon {};
-struct TypeList_SmudgeTypeClass_PTR_vtbl : DynamicVectorClass_SmudgeTypeClass_PTR_vtbl {};
+struct TypeList_SmudgeTypeClass_CPTR : DynamicVectorClass_SmudgeTypeClass_CPTR, TypeListAddon {};
+struct TypeList_SmudgeTypeClass_CPTR_vtbl : DynamicVectorClass_SmudgeTypeClass_CPTR_vtbl {};
 
 struct VectorBase_TerrainTypeClass_PTR : VectorBase_PTR
 {
@@ -7714,6 +7738,8 @@ struct VectorClass_TerrainTypeClass_PTR : VectorBase_TerrainTypeClass_PTR, Vecto
 struct VectorClass_TerrainTypeClass_PTR_vtbl : VectorBase_TerrainTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_TerrainTypeClass_PTR : VectorClass_TerrainTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_TerrainTypeClass_PTR_vtbl : VectorClass_TerrainTypeClass_PTR_vtbl {};
+struct TypeList_TerrainTypeClass_PTR : DynamicVectorClass_TerrainTypeClass_PTR, TypeListAddon {};
+struct TypeList_TerrainTypeClass_PTR_vtbl : DynamicVectorClass_TerrainTypeClass_PTR_vtbl {};
 struct VectorBase_TerrainTypeClass_CPTR : VectorBase_PTR
 {
   const TerrainTypeClass **Items;
@@ -7723,8 +7749,8 @@ struct VectorClass_TerrainTypeClass_CPTR : VectorBase_TerrainTypeClass_CPTR, Vec
 struct VectorClass_TerrainTypeClass_CPTR_vtbl : VectorBase_TerrainTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_TerrainTypeClass_CPTR : VectorClass_TerrainTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_TerrainTypeClass_CPTR_vtbl : VectorClass_TerrainTypeClass_CPTR_vtbl {};
-struct TypeList_TerrainTypeClass_PTR : DynamicVectorClass_TerrainTypeClass_PTR, TypeListAddon {};
-struct TypeList_TerrainTypeClass_PTR_vtbl : DynamicVectorClass_TerrainTypeClass_PTR_vtbl {};
+struct TypeList_TerrainTypeClass_CPTR : DynamicVectorClass_TerrainTypeClass_CPTR, TypeListAddon {};
+struct TypeList_TerrainTypeClass_CPTR_vtbl : DynamicVectorClass_TerrainTypeClass_CPTR_vtbl {};
 
 struct __declspec(align(8)) RulesClass
 {
@@ -12957,6 +12983,8 @@ struct VectorClass_TeamTypeClass_PTR : VectorBase_TeamTypeClass_PTR, VectorAddon
 struct VectorClass_TeamTypeClass_PTR_vtbl : VectorBase_TeamTypeClass_PTR_vtbl {};
 struct DynamicVectorClass_TeamTypeClass_PTR : VectorClass_TeamTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_TeamTypeClass_PTR_vtbl : VectorClass_TeamTypeClass_PTR_vtbl {};
+struct TypeList_TeamTypeClass_PTR : DynamicVectorClass_TeamTypeClass_PTR, TypeListAddon {};
+struct TypeList_TeamTypeClass_PTR_vtbl : DynamicVectorClass_TeamTypeClass_PTR_vtbl {};
 struct VectorBase_TeamTypeClass_CPTR : VectorBase_PTR
 {
   const TeamTypeClass **Items;
@@ -12966,8 +12994,8 @@ struct VectorClass_TeamTypeClass_CPTR : VectorBase_TeamTypeClass_CPTR, VectorAdd
 struct VectorClass_TeamTypeClass_CPTR_vtbl : VectorBase_TeamTypeClass_CPTR_vtbl {};
 struct DynamicVectorClass_TeamTypeClass_CPTR : VectorClass_TeamTypeClass_CPTR, DynamicAddon {};
 struct DynamicVectorClass_TeamTypeClass_CPTR_vtbl : VectorClass_TeamTypeClass_CPTR_vtbl {};
-struct TypeList_TeamTypeClass_PTR : DynamicVectorClass_TeamTypeClass_PTR, TypeListAddon {};
-struct TypeList_TeamTypeClass_PTR_vtbl : DynamicVectorClass_TeamTypeClass_PTR_vtbl {};
+struct TypeList_TeamTypeClass_CPTR : DynamicVectorClass_TeamTypeClass_CPTR, TypeListAddon {};
+struct TypeList_TeamTypeClass_CPTR_vtbl : DynamicVectorClass_TeamTypeClass_CPTR_vtbl {};
 
 struct VectorBase_TaskForceClass_PTR : VectorBase_PTR
 {
@@ -16298,17 +16326,14 @@ struct VectorClass_CrossDissolveEffect_PTR_vtbl
 
 struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl : VectorClass_CrossDissolveEffect_PTR_vtbl {};
 
-struct VectorClass_DirtyAreaStruct_vtbl
+struct VectorBase_DirtyAreaStruct : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DirtyAreaStruct *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_DirtyAreaStruct *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_DirtyAreaStruct *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_DirtyAreaStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DirtyAreaStruct *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_DirtyAreaStruct *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_DirtyAreaStruct *this, int a1, int a2);
+  DirtyAreaStruct *Items;
 };
-
+struct VectorBase_DirtyAreaStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_DirtyAreaStruct : VectorBase_DirtyAreaStruct, VectorAddon {};
+struct VectorClass_DirtyAreaStruct_vtbl : VectorBase_DirtyAreaStruct_vtbl {};
+struct DynamicVectorClass_DirtyAreaStruct : VectorClass_DirtyAreaStruct, DynamicAddon {};
 struct DynamicVectorClass_DirtyAreaStruct_vtbl : VectorClass_DirtyAreaStruct_vtbl {};
 
 struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
@@ -16322,16 +16347,15 @@ struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
   int (__thiscall *GetItem)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
 };
 
-struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
+struct VectorBase_DynamicVectorClass_char_PTR_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
+  DynamicVectorClass_char_PTR **Items;
 };
+struct VectorBase_DynamicVectorClass_char_PTR_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DynamicVectorClass_char_PTR_PTR : VectorBase_DynamicVectorClass_char_PTR_PTR, VectorAddon {};
+struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl : VectorBase_DynamicVectorClass_char_PTR_PTR_vtbl {};
+struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR : VectorClass_DynamicVectorClass_char_PTR_PTR, DynamicAddon {};
+struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl : VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl {};
 
 struct VectorClass_EgoClass_PTR_vtbl
 {
@@ -16485,17 +16509,14 @@ struct VectorClass_MixFileClass_PTR_vtbl
 
 struct DynamicVectorClass_MixFileClass_PTR_vtbl : VectorClass_MixFileClass_PTR_vtbl {};
 
-struct VectorClass_MovieHandle_PTR_vtbl
+struct VectorBase_MovieHandle_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MovieHandle_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MovieHandle_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MovieHandle_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MovieHandle_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MovieHandle_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MovieHandle_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MovieHandle_PTR *this, int a1);
+  MovieHandle **Items;
 };
-
+struct VectorBase_MovieHandle_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MovieHandle_PTR : VectorBase_MovieHandle_PTR, VectorAddon {};
+struct VectorClass_MovieHandle_PTR_vtbl : VectorBase_MovieHandle_PTR_vtbl {};
+struct DynamicVectorClass_MovieHandle_PTR : VectorClass_MovieHandle_PTR, DynamicAddon {};
 struct DynamicVectorClass_MovieHandle_PTR_vtbl : VectorClass_MovieHandle_PTR_vtbl {};
 
 struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
@@ -16522,18 +16543,17 @@ struct VectorClass_PhoneEntryClass_PTR_vtbl
 
 struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl : VectorClass_PhoneEntryClass_PTR_vtbl {};
 
-struct VectorClass_RGBClass_vtbl
+struct VectorBase_RGBClass : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_RGBClass *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_RGBClass *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_RGBClass *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_RGBClass *this);
-  int (__thiscall *FindItemIndex)(VectorClass_RGBClass *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_RGBClass *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_RGBClass *this, int a1, int a2);
+  RGBClass *Items;
 };
-
+struct VectorBase_RGBClass_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_RGBClass : VectorBase_RGBClass, VectorAddon {};
+struct VectorClass_RGBClass_vtbl : VectorBase_RGBClass_vtbl {};
+struct DynamicVectorClass_RGBClass : VectorClass_RGBClass, DynamicAddon {};
 struct DynamicVectorClass_RGBClass_vtbl : VectorClass_RGBClass_vtbl {};
+struct TypeList_RGBClass : DynamicVectorClass_RGBClass, TypeListAddon {};
+struct TypeList_RGBClass_vtbl : DynamicVectorClass_RGBClass_vtbl {};
 
 struct VectorClass_ShadowControlClass_PTR_vtbl
 {
@@ -17222,37 +17242,6 @@ struct TiberianSunClassFactory_vtbl : IUnknown_vtbl
   int (__thiscall *LockServer)(TiberianSunClassFactory *this, int a1, int a2);
 };
 
-struct TypeList_AircraftTypeClass_CPTR_vtbl : DynamicVectorClass_AircraftTypeClass_CPTR_vtbl {};
-
-struct TypeList_AnimTypeClass_CPTR_vtbl : DynamicVectorClass_AnimTypeClass_CPTR_vtbl {};
-
-struct TypeList_BuildingTypeClass_CPTR_vtbl : DynamicVectorClass_BuildingTypeClass_CPTR_vtbl {};
-
-struct TypeList_InfantryTypeClass_CPTR_vtbl : DynamicVectorClass_InfantryTypeClass_CPTR_vtbl {};
-
-struct TypeList_ParticleSystemTypeClass_CPTR_vtbl : DynamicVectorClass_ParticleSystemTypeClass_CPTR_vtbl {};
-
-struct TypeList_RGBClass_vtbl : DynamicVectorClass_RGBClass_vtbl {};
-
-struct TypeList_SmudgeTypeClass_CPTR_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
-  int (__thiscall *OperatorEqual)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
-  int (__thiscall *SetCapacity)(TypeList_SmudgeTypeClass_CPTR *this, int a1, int a2);
-  int (__thiscall *Clear)(TypeList_SmudgeTypeClass_CPTR *this);
-  int (__thiscall *FindItemIndex)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
-  int (__thiscall *GetItemIndex)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
-  int (__thiscall *GetItem)(TypeList_SmudgeTypeClass_CPTR *this, int a1);
-};
-
-struct TypeList_TeamTypeClass_CPTR_vtbl : DynamicVectorClass_TeamTypeClass_CPTR_vtbl {};
-
-struct TypeList_TerrainTypeClass_CPTR_vtbl : DynamicVectorClass_TerrainTypeClass_CPTR_vtbl {};
-
-struct TypeList_UnitTypeClass_CPTR_vtbl : DynamicVectorClass_UnitTypeClass_CPTR_vtbl {};
-
-struct TypeList_VoxelAnimTypeClass_CPTR_vtbl : DynamicVectorClass_VoxelAnimTypeClass_CPTR_vtbl {};
-
 struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
 
 struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
@@ -17291,17 +17280,6 @@ struct VectorClass_DistributionObject_CellClass_PTR_vtbl
 };
 
 struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl : VectorClass_DistributionObject_CellClass_PTR_vtbl {};
-
-struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_DynamicVectorClass_char_PTR_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
-};
 
 struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
 {
