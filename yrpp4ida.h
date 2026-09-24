@@ -324,7 +324,7 @@ struct DeleteCommandClass;
 struct DeleteCommandClass_vtbl; // 0x7EBF7C
 struct DeployCommandClass;
 struct DeployCommandClass_vtbl; // 0x7EBA2C
-struct Dial8Class;
+struct Dial8Class; // : ControlClass : GadgetClass : LinkClass
 struct Dial8Class_vtbl; // 0x7E5E3C
 struct DifficultyStruct;
 struct DirectDrawWrap;
@@ -335,7 +335,7 @@ struct DiskLaserClass; // : AbstractClass
 struct DiskLaserClass_vtbl; // 0x7E5FB8
 struct DisplayClass; // : MapClass : GScreenClass
 struct DisplayClass_vtbl; // 0x7E6114
-struct DisplayClass_TacticalClass;
+struct DisplayClass_TacticalClass; // : GadgetClass : LinkClass
 struct DisplayClass_TacticalClass_vtbl; // 0x7E608C
 struct DriveLocomotionClass; // : LocomotionClass
 struct DriveLocomotionClass_vtbl; // 0x7E7F7C
@@ -1189,7 +1189,7 @@ struct PriorityQueueClassNode;
 struct ProgressScreenClass;
 struct RadarClass; // : DisplayClass : MapClass : GScreenClass
 struct RadarClass_vtbl; // 0x7F0344
-struct RadarClass_RTacticalClass;
+struct RadarClass_RTacticalClass; // : GadgetClass : LinkClass
 struct RadarClass_RTacticalClass_vtbl; // 0x7F02BC
 struct RadarEventClass;
 struct RadBeam;
@@ -1414,7 +1414,7 @@ struct SHPReference;
 struct SHPStruct;
 struct SidebarClass; // : PowerClass : RadarClass : DisplayClass : MapClass : GScreenClass
 struct SidebarClass_vtbl; // 0x7F3058
-struct SidebarClass_SBGadgetClass;
+struct SidebarClass_SBGadgetClass; // : GadgetClass : LinkClass
 struct SidebarClass_SBGadgetClass_vtbl; // 0x7F2F44
 struct SidebarDownCommandClass;
 struct SidebarDownCommandClass_vtbl; // 0x7EBC0C
@@ -1673,7 +1673,7 @@ struct TerrainTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClas
 struct TerrainTypeClass_vtbl; // 0x7F5458
 struct TEventClass; // : AbstractClass
 struct TEventClass_vtbl; // 0x7F5578
-struct TextButtonClass;
+struct TextButtonClass; // : ToggleClass : ControlClass : GadgetClass : LinkClass
 struct TextButtonClass_vtbl; // 0x7F55DC
 struct TextLabelClass; // : GadgetClass : LinkClass
 struct TextLabelClass_vtbl; // 0x7F5B44
@@ -2660,8 +2660,6 @@ struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_;
 struct WWMessageBox;
 struct WWMouseClass;
 struct WWMouseClass_vtbl; // 0x7F7B2C
-struct WWMovieHandle;
-struct WWMovieHandle_vtbl;
 struct WWUIComboBoxItem;
 struct WWUIIntArray;
 struct WWUIListBoxCell;
@@ -6231,7 +6229,7 @@ struct CommandClass
 
 struct CommandClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(CommandClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(CommandClass *this, unsigned char flags);
   char *(__thiscall *GetName)(CommandClass *this);
   wchar_t *(__thiscall *GetUIName)(CommandClass *this);
   wchar_t *(__thiscall *GetUICategory)(CommandClass *this);
@@ -11144,7 +11142,7 @@ struct LinkClass
 
 struct LinkClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(LinkClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(LinkClass *this, unsigned char flags);
   LinkClass *(__thiscall *GetNext)(LinkClass *this);
   LinkClass *(__thiscall *GetPrev)(LinkClass *this);
   LinkClass *(__thiscall *Add)(LinkClass *this, LinkClass *pAnother);
@@ -15359,9 +15357,9 @@ struct WWUIComboBoxItem
   int IsWideText;
 };
 
-struct WWMovieHandle
+struct MovieHandle
 {
-  WWMovieHandle_vtbl *__vftable;
+  MovieHandle_vtbl *__vftable;
   bool State;
   char Padding[3];
   int Width;
@@ -15369,20 +15367,23 @@ struct WWMovieHandle
   void *Player;
 };
 
-struct WWMovieHandle_vtbl
+struct MovieHandle_vtbl
 {
-  void (__thiscall *Destructor)(WWMovieHandle *this, int deleting);
-  bool (__thiscall *AdvanceFrame)(WWMovieHandle *this);
-  bool (__thiscall *Waiting)(WWMovieHandle *this);
-  void (__thiscall *Pause)(WWMovieHandle *this, int pause);
-  void (__thiscall *Stop)(WWMovieHandle *this);
-  bool (__thiscall *FramesLeft)(WWMovieHandle *this);
-  void (__thiscall *SetPosition)(WWMovieHandle *this, int x, int y);
-  void (__thiscall *SeekToFrame)(WWMovieHandle *this, int frame);
-  void (__thiscall *InitSubtitles)(WWMovieHandle *this);
-  int (__thiscall *Timing)(WWMovieHandle *this);
-  void (__thiscall *Blit)(WWMovieHandle *this);
+  void (__thiscall *ScalarDeletingDestructor)(MovieHandle *this, unsigned char flags);
+  bool (__thiscall *AdvanceFrame)(MovieHandle *this);
+  bool (__thiscall *Waiting)(MovieHandle *this);
+  void (__thiscall *Pause)(MovieHandle *this, int pause);
+  void (__thiscall *Stop)(MovieHandle *this);
+  bool (__thiscall *FramesLeft)(MovieHandle *this);
+  void (__thiscall *SetPosition)(MovieHandle *this, int x, int y);
+  void (__thiscall *SeekToFrame)(MovieHandle *this, int frame);
+  void (__thiscall *InitSubtitles)(MovieHandle *this);
+  int (__thiscall *Timing)(MovieHandle *this);
+  void (__thiscall *Blit)(MovieHandle *this);
 };
+
+struct BinkMovieHandle_vtbl : MovieHandle_vtbl {};
+struct VQMovieHandle_vtbl : MovieHandle_vtbl {};
 
 struct OwnerDrawDialogElement
 {
@@ -15406,7 +15407,7 @@ struct OwnerDrawDialogElement
   int NewEditCaretBlinkState;
   wchar_t *NewEditRejectChars;
   int NewEditStyleFlags;
-  WWMovieHandle *StaticMovieHandle;
+  MovieHandle *StaticMovieHandle;
   int StaticLoopMovie;
   void *StaticMovieAuxHandle;
   void *Font;
@@ -15867,13 +15868,6 @@ struct WDT_Voices_Anim_vtbl : ReferenceCounted_vtbl
   int (__thiscall *vt_entry_20)(WDT_Voices_Anim *this);
 };
 
-
-struct AddTeamCommandClass_vtbl : CommandClass_vtbl {};
-
-struct AllToCheerCommandClass_vtbl : CommandClass_vtbl {};
-
-struct AllianceCommandClass_vtbl : CommandClass_vtbl {};
-
 struct AnimFile_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(AnimFile *this, int a1);
@@ -15918,6 +15912,16 @@ struct Pipe_vtbl
 };
 
 struct Base64Pipe_vtbl : Pipe_vtbl {};
+struct BlowPipe_vtbl : Pipe_vtbl {};
+struct BufferPipe_vtbl : Pipe_vtbl {};
+struct FilePipe_vtbl : Pipe_vtbl {};
+struct LCWPipe_vtbl : Pipe_vtbl {};
+struct LZOPipe_vtbl : Pipe_vtbl {};
+struct SHAPipe_vtbl : Pipe_vtbl {};
+struct PKPipe_vtbl : Pipe_vtbl
+{
+  int (__thiscall *vt_entry_14)(PKPipe *this, int a1);
+};
 
 struct Base64Straw_vtbl
 {
@@ -15926,138 +15930,24 @@ struct Base64Straw_vtbl
   int (__thiscall *vt_entry_08)(Base64Straw *this, int a1, int a2);
 };
 
-struct BeaconPlacementCommandClass_vtbl : CommandClass_vtbl {};
-
-struct MovieHandle_vtbl
+struct Straw_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MovieHandle *this, int a1);
-  int (__thiscall *AdvanceFrame)(MovieHandle *this);
-  int (__thiscall *Waiting)(MovieHandle *this);
-  int (__thiscall *Pause)(MovieHandle *this, int a1);
-  int (__thiscall *Stop)(MovieHandle *this);
-  int (__thiscall *FramesLeft)(MovieHandle *this);
-  int (__thiscall *SetPosition)(MovieHandle *this, int a1, int a2);
-  int (__thiscall *SeekToFrame)(MovieHandle *this, int a1);
-  int (__thiscall *InitSubtitles)(MovieHandle *this, int a1);
-  int (__thiscall *Timing)(MovieHandle *this);
-  int (__thiscall *Blit)(MovieHandle *this);
+  int (__thiscall *ScalarDeletingDestructor)(Straw *this, int a1);
+  int (__thiscall *Get_From)(Straw *this, int a1);
+  int (__thiscall *Get)(Straw *this, int a1, int a2);
 };
 
-struct BinkMovieHandle_vtbl : MovieHandle_vtbl {};
-
-struct BlitPlainXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitPlainXlatZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitPlainXlatZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitPlainXlat_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitPlainXlat_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitPlain_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitPlain_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransDarkenZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransDarkenZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransDarken_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25Alpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25ZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent25_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50Alpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50ZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent50_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75Alpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75ZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransLucent75_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransRemapDest_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitTransRemapXlat_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatAlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlatZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlat_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitTransXlat_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlatZRead_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlat_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitTransZRemapXlat_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTrans_unsigned_char_vtbl : Blitter_vtbl {};
-
-struct BlitTrans_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl : Blitter_vtbl {};
-
-struct BlitTranslucentWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlowStraw_vtbl : Straw_vtbl {};
+struct BufferStraw_vtbl : Straw_vtbl {};
+struct CacheStraw_vtbl : Straw_vtbl {};
+struct FileStraw_vtbl : Straw_vtbl {};
+struct LCWStraw_vtbl : Straw_vtbl {};
+struct LZOStraw_vtbl : Straw_vtbl {};
+struct RandomStraw_vtbl : Straw_vtbl {};
+struct PKStraw_vtbl : Straw_vtbl
+{
+  int (__thiscall *vt_entry_0C)(PKStraw *this, int a1);
+};
 
 struct Blitter_vtbl
 {
@@ -16068,20 +15958,63 @@ struct Blitter_vtbl
   int (__thiscall *Blit_Move_Tinted)(Blitter *this);
 };
 
-struct BlowPipe_vtbl : Pipe_vtbl {};
-
-struct Straw_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(Straw *this, int a1);
-  int (__thiscall *Get_From)(Straw *this, int a1);
-  int (__thiscall *Get)(Straw *this, int a1, int a2);
-};
-
-struct BlowStraw_vtbl : Straw_vtbl {};
-
-struct BufferPipe_vtbl : Pipe_vtbl {};
-
-struct BufferStraw_vtbl : Straw_vtbl {};
+struct BlitPlainXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitPlainXlatZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitPlainXlatZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitPlainXlat_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitPlainXlat_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitPlain_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitPlain_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransDarkenZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransDarkenZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransDarken_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25AlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25Alpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25ZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25ZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25ZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent25_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50AlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50Alpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50ZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50ZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50ZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent50_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75AlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75Alpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75ZReadWarp_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75ZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75ZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransLucent75_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransRemapDest_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitTransRemapXlat_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitTransXlatAlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlatAlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlatMultWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlatWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlatZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlatZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransXlat_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitTransXlat_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlatAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlatZReadWrite_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlatZRead_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlat_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitTransZRemapXlat_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTrans_unsigned_char_vtbl : Blitter_vtbl {};
+struct BlitTrans_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTranslucent50NonzeroAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTranslucent50ZeroAlpha_unsigned_short_vtbl : Blitter_vtbl {};
+struct BlitTranslucentWriteAlpha_unsigned_short_vtbl : Blitter_vtbl {};
 
 struct CChatEventSink_vtbl
 {
@@ -16241,8 +16174,6 @@ struct CStreamClass_vtbl : IUnknown_vtbl
   int (__thiscall *ScalarDeletingDestructor)(CStreamClass *this, int a1);
 };
 
-struct CacheStraw_vtbl : Straw_vtbl {};
-
 struct CampaignEndScoreClass_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(CampaignEndScoreClass *this, int a1);
@@ -16257,26 +16188,52 @@ struct CampaignScoreClass_vtbl
 
 struct CarryoverClass_vtbl : LinkClass_vtbl {};
 
-struct CenterBaseCommandClass_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(CenterBaseCommandClass *this, int a1);
-  int (__thiscall *GetName)(CenterBaseCommandClass *this);
-  int (__thiscall *GetUIName)(CenterBaseCommandClass *this);
-  int (__thiscall *GetUICategory)(CenterBaseCommandClass *this);
-  int (__thiscall *GetUIDescription)(CenterBaseCommandClass *this);
-  int (__thiscall *PreventCombinationOverride)(CenterBaseCommandClass *this, int a1);
-  int (__thiscall *ExtraTriggerCondition)(CenterBaseCommandClass *this, int a1);
-  int (__thiscall *CheckLoop)(CenterBaseCommandClass *this, int a1);
-  int (__thiscall *Execute)(CenterBaseCommandClass *this, int a1);
-};
-
+struct AddTeamCommandClass_vtbl : CommandClass_vtbl {};
+struct AllToCheerCommandClass_vtbl : CommandClass_vtbl {};
+struct AllianceCommandClass_vtbl : CommandClass_vtbl {};
+struct BeaconPlacementCommandClass_vtbl : CommandClass_vtbl {};
+struct CenterBaseCommandClass_vtbl : CommandClass_vtbl {};
 struct CenterREventCommandClass_vtbl : CommandClass_vtbl {};
-
 struct CenterTeamCommandClass_vtbl : CommandClass_vtbl {};
-
 struct CenterViewCommandClass_vtbl : CommandClass_vtbl {};
-
 struct CombatantSelectCommandClass_vtbl : CommandClass_vtbl {};
+struct CreateTeamCommandClass_vtbl : CommandClass_vtbl {};
+struct CursorPositionCommandClass_vtbl : CommandClass_vtbl {};
+struct DeleteCommandClass_vtbl : CommandClass_vtbl {};
+struct DeployCommandClass_vtbl : CommandClass_vtbl {};
+struct FollowCommandClass_vtbl : CommandClass_vtbl {};
+struct GuardCommandClass_vtbl : CommandClass_vtbl {};
+struct HealthNavCommandClass_vtbl : CommandClass_vtbl {};
+struct MultiplayerDebugCommandClass_vtbl : CommandClass_vtbl {};
+struct MultiplayerSyncCommandClass_vtbl : CommandClass_vtbl {};
+struct NextObjectCommandClass_vtbl : CommandClass_vtbl {};
+struct OptionsCommandClass_vtbl : CommandClass_vtbl {};
+struct PageUserCommandClass_vtbl : CommandClass_vtbl {};
+struct PlanningModeCommandClass_vtbl : CommandClass_vtbl {};
+struct PrevObjectCommandClass_vtbl : CommandClass_vtbl {};
+struct ScatterCommandClass_vtbl : CommandClass_vtbl {};
+struct ScreenCaptureCommandClass_vtbl : CommandClass_vtbl {};
+struct SelectTeamCommandClass_vtbl : CommandClass_vtbl {};
+struct SetDefenseTabCommandClass_vtbl : CommandClass_vtbl {};
+struct SetInfantryTabCommandClass_vtbl : CommandClass_vtbl {};
+struct SetStructureTabCommandClass_vtbl : CommandClass_vtbl {};
+struct SetUnitTabCommandClass_vtbl : CommandClass_vtbl {};
+struct SetView1CommandClass_vtbl : CommandClass_vtbl {};
+struct SetView2CommandClass_vtbl : CommandClass_vtbl {};
+struct SetView3CommandClass_vtbl : CommandClass_vtbl {};
+struct SetView4CommandClass_vtbl : CommandClass_vtbl {};
+struct SidebarDownCommandClass_vtbl : CommandClass_vtbl {};
+struct SidebarUpCommandClass_vtbl : CommandClass_vtbl {};
+struct StopCommandClass_vtbl : CommandClass_vtbl {};
+struct TauntCommandClass_vtbl : CommandClass_vtbl {};
+struct ToggleRepairCommandClass_vtbl : CommandClass_vtbl {};
+struct ToggleSellCommandClass_vtbl : CommandClass_vtbl {};
+struct TypeSelectCommandClass_vtbl : CommandClass_vtbl {};
+struct VeterancyNavCommandClass_vtbl : CommandClass_vtbl {};
+struct View1CommandClass_vtbl : CommandClass_vtbl {};
+struct View2CommandClass_vtbl : CommandClass_vtbl {};
+struct View3CommandClass_vtbl : CommandClass_vtbl {};
+struct View4CommandClass_vtbl : CommandClass_vtbl {};
 
 struct ConnectionPointClass_vtbl : IUnknown_vtbl
 {
@@ -16287,74 +16244,7 @@ struct ConnectionPointClass_vtbl : IUnknown_vtbl
   int (__thiscall *EnumConnections)(ConnectionPointClass *this, int a1, int a2);
 };
 
-struct SimpleWonlineDialogControl_vtbl : OwnerDraw_SimpleDialogControl_vtbl {};
-
-struct WonlineStringDialogControl_vtbl : SimpleWonlineDialogControl_vtbl {};
-
-struct CreateGameDialogControl_vtbl : WonlineStringDialogControl_vtbl {};
-
-struct CreateTeamCommandClass_vtbl : CommandClass_vtbl {};
-
-struct CursorPositionCommandClass_vtbl : CommandClass_vtbl {};
-
-struct DeleteCommandClass_vtbl : CommandClass_vtbl {};
-
-struct DeployCommandClass_vtbl : CommandClass_vtbl {};
-
-struct Dial8Class_vtbl : LinkClass_vtbl
-{
-  int (__thiscall *Input)(Dial8Class *this);
-  int (__thiscall *DrawAll)(Dial8Class *this, int a1);
-  int (__thiscall *DeleteList)(Dial8Class *this);
-  int (__thiscall *ExtractGadget)(Dial8Class *this, int a1);
-  int (__thiscall *MarkListToRedraw)(Dial8Class *this);
-  int (__thiscall *Disable)(Dial8Class *this);
-  int (__thiscall *Enable)(Dial8Class *this);
-  int (__thiscall *GetID)(Dial8Class *this);
-  int (__thiscall *MarkRedraw)(Dial8Class *this);
-  int (__thiscall *PeerToPeer)(Dial8Class *this, int a1, int a2, int a3);
-  int (__thiscall *SetFocus)(Dial8Class *this);
-  int (__thiscall *KillFocus)(Dial8Class *this);
-  int (__thiscall *IsFocused)(Dial8Class *this);
-  int (__thiscall *IsListToRedraw)(Dial8Class *this);
-  int (__thiscall *IsToRedraw)(Dial8Class *this);
-  int (__thiscall *SetPosition)(Dial8Class *this, int a1, int a2);
-  int (__thiscall *SetDimension)(Dial8Class *this, int a1, int a2);
-  int (__thiscall *vt_entry_6C)(Dial8Class *this, int a1);
-  int (__thiscall *OnMouseEnter)(Dial8Class *this);
-  int (__thiscall *OnMouseLeave)(Dial8Class *this);
-  int (__thiscall *StickyProcess)(Dial8Class *this, int a1);
-  int (__thiscall *vt_entry_7C)(Dial8Class *this, int a1, int a2, int a3);
-  int (__thiscall *Clicked)(Dial8Class *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *MakePeer)(Dial8Class *this, int a1);
-};
-
-struct DisplayClass_TacticalClass_vtbl : LinkClass_vtbl
-{
-  int (__thiscall *Input)(DisplayClass_TacticalClass *this);
-  int (__thiscall *DrawAll)(DisplayClass_TacticalClass *this, int a1);
-  int (__thiscall *DeleteList)(DisplayClass_TacticalClass *this);
-  int (__thiscall *ExtractGadget)(DisplayClass_TacticalClass *this, int a1);
-  int (__thiscall *MarkListToRedraw)(DisplayClass_TacticalClass *this);
-  int (__thiscall *Disable)(DisplayClass_TacticalClass *this);
-  int (__thiscall *Enable)(DisplayClass_TacticalClass *this);
-  int (__thiscall *GetID)(DisplayClass_TacticalClass *this);
-  int (__thiscall *MarkRedraw)(DisplayClass_TacticalClass *this);
-  int (__thiscall *PeerToPeer)(DisplayClass_TacticalClass *this, int a1, int a2, int a3);
-  int (__thiscall *SetFocus)(DisplayClass_TacticalClass *this);
-  int (__thiscall *KillFocus)(DisplayClass_TacticalClass *this);
-  int (__thiscall *IsFocused)(DisplayClass_TacticalClass *this);
-  int (__thiscall *IsListToRedraw)(DisplayClass_TacticalClass *this);
-  int (__thiscall *IsToRedraw)(DisplayClass_TacticalClass *this);
-  int (__thiscall *SetPosition)(DisplayClass_TacticalClass *this, int a1, int a2);
-  int (__thiscall *SetDimension)(DisplayClass_TacticalClass *this, int a1, int a2);
-  int (__thiscall *Draw)(DisplayClass_TacticalClass *this, int a1);
-  int (__thiscall *OnMouseEnter)(DisplayClass_TacticalClass *this);
-  int (__thiscall *OnMouseLeave)(DisplayClass_TacticalClass *this);
-  int (__thiscall *StickyProcess)(DisplayClass_TacticalClass *this, int a1);
-  int (__thiscall *Action)(DisplayClass_TacticalClass *this, int a1, int a2, int a3);
-  int (__thiscall *Clicked)(DisplayClass_TacticalClass *this, int a1, int a2, int a3, int a4, int a5);
-};
+struct Dial8Class_vtbl : ControlClass_vtbl {};
 
 struct VectorClass_AcceleratorTracker_vtbl
 {
@@ -16432,10 +16322,6 @@ struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
   int (__thiscall *GetItem)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
 };
 
-struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl : VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl {};
-
-struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl : VectorClass_DistributionObject_CellClass_PTR_vtbl {};
-
 struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DynamicVectorClass_char_PTR_PTR *this, int a1);
@@ -16507,12 +16393,6 @@ struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl
   int (__thiscall *GetItemIndex)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
   int (__thiscall *GetItem)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
 };
-
-struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl : VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl {};
-
-struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl : VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl {};
-
-struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl : VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl {};
 
 struct VectorClass_MPlayerScoreType_PTR_vtbl
 {
@@ -16755,8 +16635,6 @@ struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl
   int (__thiscall *GetItem)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
 };
 
-struct DynamicVectorClass_tagCONNECTDATA_vtbl : VectorClass_tagCONNECTDATA_vtbl {};
-
 struct EnumConnectionPointsClass_vtbl : IUnknown_vtbl
 {
   int (__thiscall *Next)(EnumConnectionPointsClass *this, int a1, int a2, int a3, int a4);
@@ -16773,32 +16651,11 @@ struct EnumConnectionsClass_vtbl : IUnknown_vtbl
   int (__thiscall *Clone)(EnumConnectionsClass *this, int a1, int a2);
 };
 
-struct FilePipe_vtbl : Pipe_vtbl {};
-
-struct FileStraw_vtbl : Straw_vtbl {};
-
-struct FollowCommandClass_vtbl : CommandClass_vtbl {};
-
 struct GraphicMenuAnimItem_vtbl : GraphicMenuItem_vtbl {};
 
 struct GraphicMenuImageItem_vtbl : GraphicMenuItem_vtbl {};
 
 struct GraphicMenuShortcutItem_vtbl : GraphicMenuItem_vtbl {};
-
-struct GuardCommandClass_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(GuardCommandClass *this, int a1);
-  int (__thiscall *GetName)(GuardCommandClass *this);
-  int (__thiscall *GetUIName)(GuardCommandClass *this);
-  int (__thiscall *GetUICategory)(GuardCommandClass *this);
-  int (__thiscall *GetUIDescription)(GuardCommandClass *this);
-  int (__thiscall *PreventCombinationOverride)(GuardCommandClass *this, int a1);
-  int (__thiscall *ExtraTriggerCondition)(GuardCommandClass *this, int a1);
-  int (__thiscall *CheckLoop)(GuardCommandClass *this, int a1);
-  int (__thiscall *Execute)(GuardCommandClass *this, int a1);
-};
-
-struct HealthNavCommandClass_vtbl : CommandClass_vtbl {};
 
 struct Initializer_FreeForAll_vtbl
 {
@@ -16835,14 +16692,6 @@ struct Initializer_UnholyAlliance_vtbl
   int (__thiscall *ScalarDeletingDestructor)(Initializer_UnholyAlliance *this, int a1);
   int (__thiscall *Factory_Constructor)(Initializer_UnholyAlliance *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
-
-struct LCWPipe_vtbl : Pipe_vtbl {};
-
-struct LCWStraw_vtbl : Straw_vtbl {};
-
-struct LZOPipe_vtbl : Pipe_vtbl {};
-
-struct LZOStraw_vtbl : Straw_vtbl {};
 
 struct MPBattleClass_vtbl : MPGameModeClass_vtbl {};
 
@@ -17051,12 +16900,6 @@ struct Mouse_vtbl
   int (__thiscall *vt_entry_44)(Mouse *this);
 };
 
-struct MultiplayerDebugCommandClass_vtbl : CommandClass_vtbl {};
-
-struct MultiplayerSyncCommandClass_vtbl : CommandClass_vtbl {};
-
-struct NextObjectCommandClass_vtbl : CommandClass_vtbl {};
-
 struct NullModemClass_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(NullModemClass *this, int a1);
@@ -17091,8 +16934,6 @@ struct NullModemConnClass_vtbl
   int (__thiscall *vt_entry_24)(NullModemConnClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
 
-struct OptionsCommandClass_vtbl : CommandClass_vtbl {};
-
 struct OwnerDraw_DialogControl_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_DialogControl *this, int a1);
@@ -17110,6 +16951,9 @@ struct OwnerDraw_SimpleDialogControl_vtbl
   int (__thiscall *vt_entry_0C)(OwnerDraw_SimpleDialogControl *this);
   int (__thiscall *vt_entry_10)(OwnerDraw_SimpleDialogControl *this);
 };
+struct SimpleWonlineDialogControl_vtbl : OwnerDraw_SimpleDialogControl_vtbl {};
+struct WonlineStringDialogControl_vtbl : SimpleWonlineDialogControl_vtbl {};
+struct CreateGameDialogControl_vtbl : WonlineStringDialogControl_vtbl {};
 
 struct PAVSchemeNode_DynamicVectorClass_HashObject_HashString_vtbl
 {
@@ -17155,34 +16999,7 @@ struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl
   int (__thiscall *GetItem)(PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct *this, int a1, int a2);
 };
 
-struct PKPipe_vtbl : Pipe_vtbl
-{
-  int (__thiscall *vt_entry_14)(PKPipe *this, int a1);
-};
-
-struct PKStraw_vtbl : Straw_vtbl
-{
-  int (__thiscall *vt_entry_0C)(PKStraw *this, int a1);
-};
-
-struct PageUserCommandClass_vtbl : CommandClass_vtbl {};
-
-struct PlanningModeCommandClass_vtbl : CommandClass_vtbl {};
-
 struct PlayerProfile_vtbl : ReferenceCounted_vtbl {};
-
-struct PrevObjectCommandClass_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(PrevObjectCommandClass *this, int a1);
-  int (__thiscall *GetName)(PrevObjectCommandClass *this);
-  int (__thiscall *GetUIName)(PrevObjectCommandClass *this);
-  int (__thiscall *GetUICategory)(PrevObjectCommandClass *this);
-  int (__thiscall *GetUIDescription)(PrevObjectCommandClass *this);
-  int (__thiscall *PreventCombinationOverride)(PrevObjectCommandClass *this, int a1);
-  int (__thiscall *ExtraTriggerCondition)(PrevObjectCommandClass *this, int a1);
-  int (__thiscall *CheckLoop)(PrevObjectCommandClass *this, int a1);
-  int (__thiscall *Execute)(PrevObjectCommandClass *this, int a1);
-};
 
 struct RAMFileClass_vtbl
 {
@@ -17205,108 +17022,6 @@ struct RAMFileClass_vtbl
   int (__thiscall *CDCheck)(RAMFileClass *this, int a1, int a2, int a3);
 };
 
-struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransDarkenZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransDarken_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent25_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent50_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransLucent75_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransRemapDest_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransRemapXlat_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatAlpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlatZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlat_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransXlat_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlat_unsigned_char_vtbl : RLEBlitter_vtbl {};
-
-struct RLEBlitTransZRemapXlat_unsigned_short_vtbl : RLEBlitter_vtbl {};
-
 struct RLEBlitter_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(RLEBlitter *this, int a1);
@@ -17314,38 +17029,61 @@ struct RLEBlitter_vtbl
   int (__thiscall *Blit_Copy_Tinted)(RLEBlitter *this);
 };
 
-struct RadarClass_RTacticalClass_vtbl : LinkClass_vtbl
-{
-  int (__thiscall *Input)(RadarClass_RTacticalClass *this);
-  int (__thiscall *DrawAll)(RadarClass_RTacticalClass *this, int a1);
-  int (__thiscall *DeleteList)(RadarClass_RTacticalClass *this);
-  int (__thiscall *ExtractGadget)(RadarClass_RTacticalClass *this, int a1);
-  int (__thiscall *MarkListToRedraw)(RadarClass_RTacticalClass *this);
-  int (__thiscall *Disable)(RadarClass_RTacticalClass *this);
-  int (__thiscall *Enable)(RadarClass_RTacticalClass *this);
-  int (__thiscall *GetID)(RadarClass_RTacticalClass *this);
-  int (__thiscall *MarkRedraw)(RadarClass_RTacticalClass *this);
-  int (__thiscall *PeerToPeer)(RadarClass_RTacticalClass *this, int a1, int a2, int a3);
-  int (__thiscall *SetFocus)(RadarClass_RTacticalClass *this);
-  int (__thiscall *KillFocus)(RadarClass_RTacticalClass *this);
-  int (__thiscall *IsFocused)(RadarClass_RTacticalClass *this);
-  int (__thiscall *IsListToRedraw)(RadarClass_RTacticalClass *this);
-  int (__thiscall *IsToRedraw)(RadarClass_RTacticalClass *this);
-  int (__thiscall *SetPosition)(RadarClass_RTacticalClass *this, int a1, int a2);
-  int (__thiscall *SetDimension)(RadarClass_RTacticalClass *this, int a1, int a2);
-  int (__thiscall *Draw)(RadarClass_RTacticalClass *this, int a1);
-  int (__thiscall *OnMouseEnter)(RadarClass_RTacticalClass *this);
-  int (__thiscall *OnMouseLeave)(RadarClass_RTacticalClass *this);
-  int (__thiscall *StickyProcess)(RadarClass_RTacticalClass *this, int a1);
-  int (__thiscall *Action)(RadarClass_RTacticalClass *this, int a1, int a2, int a3);
-  int (__thiscall *Clicked)(RadarClass_RTacticalClass *this, int a1, int a2, int a3, int a4, int a5);
-};
+struct RLEBlitTransDarkenZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransDarkenZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransDarken_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25AlphaZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25AlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25AlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25Alpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25ZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25ZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25ZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent25_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50AlphaZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50AlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50AlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50Alpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50ZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50ZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50ZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent50_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75AlphaZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75AlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75AlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75Alpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75ZReadWarp_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75ZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75ZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransLucent75_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransRemapDestZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransRemapDestZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransRemapDest_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransRemapXlatZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransRemapXlatZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransRemapXlat_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatAlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatAlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatAlpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlatZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlat_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransXlat_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatAlphaZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatAlphaZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatAlpha_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatZReadWrite_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatZRead_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlatZRead_unsigned_short_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlat_unsigned_char_vtbl : RLEBlitter_vtbl {};
+struct RLEBlitTransZRemapXlat_unsigned_short_vtbl : RLEBlitter_vtbl {};
 
-struct RandomStraw_vtbl : Straw_vtbl {};
-
-struct SHAPipe_vtbl : Pipe_vtbl {};
-
-struct ScatterCommandClass_vtbl : CommandClass_vtbl {};
+struct DisplayClass_TacticalClass_vtbl : GadgetClass_vtbl {};
+struct RadarClass_RTacticalClass_vtbl : GadgetClass_vtbl {};
+struct SidebarClass_SBGadgetClass_vtbl : GadgetClass_vtbl {};
 
 struct ScoreAnimClass_vtbl
 {
@@ -17365,67 +17103,10 @@ struct ScoreFontClass_vtbl
 };
 
 struct ScoreBigFontClass_vtbl : ScoreFontClass_vtbl {};
-
 struct ScoreFullFontClass_vtbl : ScoreFontClass_vtbl {};
 
 struct ScorePrintClass_vtbl : ScoreAnimClass_vtbl {};
-
 struct ScoreTimeClass_vtbl : ScoreAnimClass_vtbl {};
-
-struct ScreenCaptureCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SelectTeamCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetDefenseTabCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetInfantryTabCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetStructureTabCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetUnitTabCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetView1CommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetView2CommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetView3CommandClass_vtbl : CommandClass_vtbl {};
-
-struct SetView4CommandClass_vtbl : CommandClass_vtbl {};
-
-struct SidebarClass_SBGadgetClass_vtbl : LinkClass_vtbl
-{
-  int (__thiscall *Input)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *DrawAll)(SidebarClass_SBGadgetClass *this, int a1);
-  int (__thiscall *DeleteList)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *ExtractGadget)(SidebarClass_SBGadgetClass *this, int a1);
-  int (__thiscall *MarkListToRedraw)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *Disable)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *Enable)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *GetID)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *MarkRedraw)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *PeerToPeer)(SidebarClass_SBGadgetClass *this, int a1, int a2, int a3);
-  int (__thiscall *SetFocus)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *KillFocus)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *IsFocused)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *IsListToRedraw)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *IsToRedraw)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *SetPosition)(SidebarClass_SBGadgetClass *this, int a1, int a2);
-  int (__thiscall *SetDimension)(SidebarClass_SBGadgetClass *this, int a1, int a2);
-  int (__thiscall *Draw)(SidebarClass_SBGadgetClass *this, int a1);
-  int (__thiscall *OnMouseEnter)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *OnMouseLeave)(SidebarClass_SBGadgetClass *this);
-  int (__thiscall *StickyProcess)(SidebarClass_SBGadgetClass *this, int a1);
-  int (__thiscall *SBGadgetClass_Action)(SidebarClass_SBGadgetClass *this, int a1, int a2, int a3);
-  int (__thiscall *Clicked)(SidebarClass_SBGadgetClass *this, int a1, int a2, int a3, int a4, int a5);
-};
-
-struct SidebarDownCommandClass_vtbl : CommandClass_vtbl {};
-
-struct SidebarUpCommandClass_vtbl : CommandClass_vtbl {};
-
-struct Std_bad_cast_vtbl : Std_exception_vtbl {};
-
-struct Std_bad_typeid_vtbl : Std_exception_vtbl {};
 
 struct Std_exception_vtbl
 {
@@ -17433,9 +17114,10 @@ struct Std_exception_vtbl
   int (__thiscall *vt_entry_04)(Std_exception *this);
 };
 
-struct Std_non_rtti_object_vtbl : Std_bad_typeid_vtbl {};
+struct Std_bad_cast_vtbl : Std_exception_vtbl {};
+struct Std_bad_typeid_vtbl : Std_exception_vtbl {};
 
-struct StopCommandClass_vtbl : CommandClass_vtbl {};
+struct Std_non_rtti_object_vtbl : Std_bad_typeid_vtbl {};
 
 struct SwizzleManager_ISwizzle_vtbl : IUnknown_vtbl
 {
@@ -17449,187 +17131,85 @@ struct SwizzleManager_ISwizzle_vtbl : IUnknown_vtbl
 };
 
 struct TClassFactory_AITriggerTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_AircraftClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_AircraftTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_AirstrikeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_AlphaShapeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_AnimClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_AnimTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_BombClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_BuildingClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_BuildingLightClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_BuildingTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_BulletClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_BulletTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_CStreamClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_CampaignClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_CaptureManagerClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_CellClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_DiskLaserClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_DriveLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_DropPodLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_EMPulseClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_FactoryClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_FlyLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_FoggedObjectClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_HouseClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_HouseTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_HoverLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_InfantryClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_InfantryTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_IsometricTileTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_JumpjetLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_LightSourceClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_MechLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_NeuronClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_OverlayTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ParasiteClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ParticleClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ParticleSystemClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ParticleSystemTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ParticleTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_RadSiteClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_RocketLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ScriptClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ScriptTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_ShipLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_SideClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_SlaveManagerClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_SmudgeTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_SpawnManagerClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_SuperClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_SuperWeaponTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TActionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TEventClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TacticalClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TagClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TagTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TaskForceClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TeamClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TeamTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TeleportLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TemporalClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TerrainClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TerrainTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TiberiumClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TriggerClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TriggerTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TubeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_TunnelLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_UnitClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_UnitTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_VoxelAnimClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_VoxelAnimTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_WalkLocomotionClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_WarheadTypeClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_WaveClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_WaypointPathClass_vtbl : TClassFactory_vtbl {};
-
 struct TClassFactory_WeaponTypeClass_vtbl : TClassFactory_vtbl {};
 
-struct TauntCommandClass_vtbl : CommandClass_vtbl {};
-
-struct TextButtonClass_vtbl : LinkClass_vtbl
+struct TextButtonClass_vtbl : ToggleClass_vtbl
 {
-  int (__thiscall *Input)(TextButtonClass *this);
-  int (__thiscall *DrawAll)(TextButtonClass *this, int a1);
-  int (__thiscall *DeleteList)(TextButtonClass *this);
-  int (__thiscall *ExtractGadget)(TextButtonClass *this, int a1);
-  int (__thiscall *MarkListToRedraw)(TextButtonClass *this);
-  int (__thiscall *Disable)(TextButtonClass *this);
-  int (__thiscall *Enable)(TextButtonClass *this);
-  int (__thiscall *GetID)(TextButtonClass *this);
-  int (__thiscall *MarkRedraw)(TextButtonClass *this);
-  int (__thiscall *PeerToPeer)(TextButtonClass *this, int a1, int a2, int a3);
-  int (__thiscall *SetFocus)(TextButtonClass *this);
-  int (__thiscall *KillFocus)(TextButtonClass *this);
-  int (__thiscall *IsFocused)(TextButtonClass *this);
-  int (__thiscall *IsListToRedraw)(TextButtonClass *this);
-  int (__thiscall *IsToRedraw)(TextButtonClass *this);
-  int (__thiscall *SetPosition)(TextButtonClass *this, int a1, int a2);
-  int (__thiscall *SetDimension)(TextButtonClass *this, int a1, int a2);
-  int (__thiscall *vt_entry_6C)(TextButtonClass *this, int a1);
-  int (__thiscall *OnMouseEnter)(TextButtonClass *this);
-  int (__thiscall *OnMouseLeave)(TextButtonClass *this);
-  int (__thiscall *StickyProcess)(TextButtonClass *this, int a1);
-  int (__thiscall *Action)(TextButtonClass *this, int a1, int a2, int a3);
-  int (__thiscall *Clicked)(TextButtonClass *this, int a1, int a2, int a3, int a4, int a5);
-  int (__thiscall *MakePeer)(TextButtonClass *this, int a1);
   int (__thiscall *vt_entry_88)(TextButtonClass *this, int a1, int a2);
   int (__thiscall *vt_entry_8C)(TextButtonClass *this, int a1);
   int (__thiscall *vt_entry_90)(TextButtonClass *this);
@@ -17641,10 +17221,6 @@ struct TiberianSunClassFactory_vtbl : IUnknown_vtbl
   int (__thiscall *CreateInstance)(TiberianSunClassFactory *this, int a1, int a2, int a3, int a4);
   int (__thiscall *LockServer)(TiberianSunClassFactory *this, int a1, int a2);
 };
-
-struct ToggleRepairCommandClass_vtbl : CommandClass_vtbl {};
-
-struct ToggleSellCommandClass_vtbl : CommandClass_vtbl {};
 
 struct TypeList_AircraftTypeClass_CPTR_vtbl : DynamicVectorClass_AircraftTypeClass_CPTR_vtbl {};
 
@@ -17679,10 +17255,6 @@ struct TypeList_VoxelAnimTypeClass_CPTR_vtbl : DynamicVectorClass_VoxelAnimTypeC
 
 struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
 
-struct TypeSelectCommandClass_vtbl : CommandClass_vtbl {};
-
-struct VQMovieHandle_vtbl : MovieHandle_vtbl {};
-
 struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
@@ -17705,6 +17277,8 @@ struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
   int (__thiscall *GetItem)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
 };
 
+struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl : VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl {};
+
 struct VectorClass_DistributionObject_CellClass_PTR_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
@@ -17715,6 +17289,8 @@ struct VectorClass_DistributionObject_CellClass_PTR_vtbl
   int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
   int (__thiscall *GetItem)(VectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
 };
+
+struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl : VectorClass_DistributionObject_CellClass_PTR_vtbl {};
 
 struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl
 {
@@ -17760,6 +17336,8 @@ struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
   int (__thiscall *GetItem)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
 };
 
+struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl : VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl {};
+
 struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
@@ -17771,6 +17349,8 @@ struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
   int (__thiscall *GetItem)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
 };
 
+struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl : VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl {};
+
 struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
 {
   int (__thiscall *ScalarDeletingDestructor)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
@@ -17781,6 +17361,8 @@ struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
   int (__thiscall *GetItemIndex)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
   int (__thiscall *GetItem)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
 };
+
+struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl : VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl {};
 
 struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
 {
@@ -17848,15 +17430,7 @@ struct VectorClass_tagCONNECTDATA_vtbl
   int (__thiscall *GetItem)(VectorClass_tagCONNECTDATA *this, int a1, int a2);
 };
 
-struct VeterancyNavCommandClass_vtbl : CommandClass_vtbl {};
-
-struct View1CommandClass_vtbl : CommandClass_vtbl {};
-
-struct View2CommandClass_vtbl : CommandClass_vtbl {};
-
-struct View3CommandClass_vtbl : CommandClass_vtbl {};
-
-struct View4CommandClass_vtbl : CommandClass_vtbl {};
+struct DynamicVectorClass_tagCONNECTDATA_vtbl : VectorClass_tagCONNECTDATA_vtbl {};
 
 struct WDT_FactionSelectDialogControl_vtbl : OwnerDraw_SimpleDialogControl_vtbl {};
 
