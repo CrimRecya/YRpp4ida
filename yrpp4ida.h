@@ -837,7 +837,7 @@ struct FileStraw_vtbl; // 0x7E4D90
 struct FixedString_128_A_wchar_t;
 struct FixedString_32_A_char;
 struct FixedString_64_A_wchar_t;
-struct FixedString_TL_25_A_char_TR_;
+struct FixedString_25_char;
 struct FlashData;
 struct FlyLocomotionClass; // : LocomotionClass
 struct FlyLocomotionClass_vtbl; // 0x7E8AC0
@@ -922,23 +922,23 @@ struct ILocomotion_vtbl; // 0x7E7EB0 / 0x7E8278 / 0x7E89F4 / 0x7EACFC / 0x7EADF4
 struct In_addr;
 struct In_addr_unnamed_type_un_u_b;
 struct In_addr_unnamed_type_un_u_w;
-struct IndexBitfield_TL_HouseClass_PTR_TR_;
-struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_;
-struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement;
-struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_;
-struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement;
-struct IndexClass_TL_int_A_int_TR_;
-struct IndexClass_TL_int_A_int_TR_NodeElement;
-struct IndexClass_TL_int_A_ToolTip_PTR_TR_;
-struct IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement;
-struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
-struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_;
-struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement;
+struct IndexBitfield_HouseClass_PTR;
+struct IndexClass_int_INIClass_INIEntry_PTR;
+struct IndexClass_int_INIClass_INIEntry_PTR_NodeElement;
+struct IndexClass_int_INIClass_INISection_PTR;
+struct IndexClass_int_INIClass_INISection_PTR_NodeElement;
+struct IndexClass_int_int;
+struct IndexClass_int_int_NodeElement;
+struct IndexClass_int_ToolTip_PTR;
+struct IndexClass_int_ToolTip_PTR_NodeElement;
+struct IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR;
+struct IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement;
+struct IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR;
+struct IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement;
+struct IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR;
+struct IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement;
+struct IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR;
+struct IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement;
 struct InfantryClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct InfantryClass_vtbl; // 0x7EB058
 struct InfantryTypeClass; // : TechnoTypeClass : ObjectTypeClass : AbstractTypeClass : AbstractClass
@@ -1026,10 +1026,10 @@ struct LineTrail;
 struct LineTrailNode;
 struct LinkClass; // Link Tree Base
 struct LinkClass_vtbl; // 0x7E9344
-struct List_TL_INIClass_INIEntry_PTR_TR_;
-struct List_TL_INIClass_INIEntry_PTR_TR__vtbl; // 0x7EB744
-struct List_TL_INIClass_INISection_PTR_TR_;
-struct List_TL_INIClass_INISection_PTR_TR__vtbl; // 0x7E1AFC
+struct List_INIClass_INIEntry_PTR;
+struct List_INIClass_INIEntry_PTR_vtbl; // 0x7EB744
+struct List_INIClass_INISection_PTR;
+struct List_INIClass_INISection_PTR_vtbl; // 0x7E1AFC
 struct ListClass; // : ControlClass : GadgetClass : LinkClass
 struct ListClass_vtbl; // 0x7ED10C
 struct LoadOptionsClass;
@@ -1138,10 +1138,10 @@ struct NeuronClass; // : AbstractClass
 struct NeuronClass_vtbl; // 0x7E3DF0
 struct NextObjectCommandClass;
 struct NextObjectCommandClass_vtbl; // 0x7EB9DC
-struct Node_TL_INIClass_INIEntry_PTR_TR_;
-struct Node_TL_INIClass_INIEntry_PTR_TR__vtbl;
-struct Node_TL_INIClass_INISection_PTR_TR_;
-struct Node_TL_INIClass_INISection_PTR_TR__vtbl; // 0x7EB74C
+struct Node_INIClass_INIEntry_PTR;
+struct Node_INIClass_INIEntry_PTR_vtbl;
+struct Node_INIClass_INISection_PTR;
+struct Node_INIClass_INISection_PTR_vtbl; // 0x7EB74C
 struct NodeNameType;
 struct NullModemClass;
 struct NullModemClass_vtbl; // 0x7EEFDC
@@ -1212,7 +1212,7 @@ struct PrevObjectCommandClass;
 struct PrevObjectCommandClass_vtbl; // 0x7EBA04
 struct PriorityQueueClass_HierarchicalNode;
 struct PriorityQueueClass_PathQueueNode;
-struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_;
+struct PriorityQueueClass_PriorityQueueClassNode_std_less_PriorityQueueClassNode;
 struct PriorityQueueClassNode;
 struct ProgressScreenClass;
 struct RadarClass; // : DisplayClass : MapClass : GScreenClass
@@ -1415,7 +1415,7 @@ struct SelectTeamCommandClass;
 struct SelectTeamCommandClass_vtbl; // 0x7EBE64
 struct SequenceStruct;
 struct SessionClass;
-struct SessionClass_TL_unnamed_type_MPStats_TR_;
+struct SessionClass_unnamed_type_MPStats;
 struct SessionOptionsClass;
 struct SetDefenseTabCommandClass;
 struct SetDefenseTabCommandClass_vtbl; // 0x7EB8C4
@@ -2775,8 +2775,8 @@ struct WinsockInterfaceClass_WinsockBufferType;
 struct WonlineStringDialogControl;
 struct WonlineStringDialogControl_vtbl; // 0x7F7874
 struct Wstring;
-struct Wstring_base_TL_char_A_CharTrait_TR_;
-struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_;
+struct Wstring_base_char_CharTrait;
+struct Wstring_base_wchar_t_WCharTrait;
 struct WWMessageBox;
 struct WWMouseClass;
 struct WWMouseClass_vtbl; // 0x7F7B2C
@@ -5089,7 +5089,7 @@ struct TimerStruct_SystemTimer
 };
 typedef TimerStruct_SystemTimer SysTimerClass;
 
-struct IndexBitfield_TL_HouseClass_PTR_TR_
+struct IndexBitfield_HouseClass_PTR
 {
   unsigned int data;
 };
@@ -5174,7 +5174,7 @@ struct CounterClass : VectorClass_int
 };
 struct CounterClass_vtbl : VectorClass_int_vtbl {};
 
-struct FixedString_TL_25_A_char_TR_
+struct FixedString_25_char
 {
   char chars[25];
 };
@@ -5361,20 +5361,20 @@ struct MainVoxelIndexKey
   unsigned __int32 bitfield_17 : 15;
 };
 
-struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement
+struct IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement
 {
   MainVoxelIndexKey ID;
   VoxelCacheStruct *Data;
 };
 
-struct IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_
+struct IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR
 {
-  IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *IndexTable;
+  IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *Archive;
+  IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *Archive;
 };
 
 struct TurretWeaponVoxelIndexKey
@@ -5386,20 +5386,20 @@ struct TurretWeaponVoxelIndexKey
   unsigned __int32 TurretWeaponIndex : 8;
 };
 
-struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement
+struct IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement
 {
   TurretWeaponVoxelIndexKey ID;
   VoxelCacheStruct *Data;
 };
 
-struct IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_
+struct IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR
 {
-  IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *IndexTable;
+  IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *Archive;
+  IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *Archive;
 };
 
 struct ShadowVoxelIndexKey
@@ -5407,20 +5407,20 @@ struct ShadowVoxelIndexKey
   unsigned __int32 Data : 32;
 };
 
-struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement
+struct IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement
 {
   ShadowVoxelIndexKey ID;
   VoxelCacheStruct *Data;
 };
 
-struct IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_
+struct IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR
 {
-  IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *IndexTable;
+  IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *Archive;
+  IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *Archive;
 };
 
 struct TurretBarrelVoxelIndexKey
@@ -5432,20 +5432,20 @@ struct TurretBarrelVoxelIndexKey
   unsigned __int32 bitfield_24 : 8;
 };
 
-struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement
+struct IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement
 {
   TurretBarrelVoxelIndexKey ID;
   VoxelCacheStruct *Data;
 };
 
-struct IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_
+struct IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR
 {
-  IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *IndexTable;
+  IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_NodeElement *Archive;
+  IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR_NodeElement *Archive;
 };
 
 struct StageClass
@@ -5697,7 +5697,7 @@ struct ConvertClass
 
 struct ConvertClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(ConvertClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(ConvertClass *this, unsigned char flags);
 };
 
 struct LightConvertClass : ConvertClass
@@ -5810,7 +5810,7 @@ struct FileClass
 
 struct FileClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(FileClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(FileClass *this, unsigned char flags);
   char *(__thiscall *GetFileName)(FileClass *this);
   char *(__thiscall *SetFileName)(FileClass *this, char *pSource);
   int (__thiscall *CreateFileA)(FileClass *this);
@@ -5910,7 +5910,7 @@ struct PriorityQueueClassNode
   float Score;
 };
 
-struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_
+struct PriorityQueueClass_PriorityQueueClassNode_std_less_PriorityQueueClassNode
 {
   int Count;
   int Capacity;
@@ -5922,7 +5922,7 @@ struct PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueC
 struct TiberiumLogic
 {
   int Count;
-  PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_ *Queue;
+  PriorityQueueClass_PriorityQueueClassNode_std_less_PriorityQueueClassNode *Queue;
   bool *CellIndexesWithTiberium;
   PriorityQueueClassNode *Nodes;
   CDTimerClass Timer;
@@ -5937,7 +5937,7 @@ struct GenericNode
 
 struct GenericNode_vtbl
 {
-  void (__thiscall *Destructor)(GenericNode *this);
+  void (__thiscall *ScalarDeletingDestructor)(GenericNode *this, unsigned char flags);
 };
 
 struct GenericList
@@ -5949,14 +5949,14 @@ struct GenericList
 
 struct GenericList_vtbl
 {
-  void (__thiscall *Destructor)(GenericList *this);
+  void (__thiscall *ScalarDeletingDestructor)(GenericList *this, unsigned char flags);
 };
 
-struct List_TL_INIClass_INISection_PTR_TR_ : GenericList {};
+struct List_INIClass_INISection_PTR : GenericList {};
 
-struct List_TL_INIClass_INISection_PTR_TR__vtbl
+struct List_INIClass_INISection_PTR_vtbl
 {
-  void (__thiscall *Destructor)(List_TL_INIClass_INISection_PTR_TR_ *this);
+  void (__thiscall *ScalarDeletingDestructor)(List_INIClass_INISection_PTR *this, unsigned char flags);
 };
 
 struct HWND__
@@ -5973,42 +5973,42 @@ struct MPTeam
 
 struct MPTeam_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(MPTeam *this);
+  void (__thiscall *ScalarDeletingDestructor)(MPTeam *this, unsigned char flags);
   bool (__thiscall *IsTeamIncluded)(MPTeam *this, int Idx);
   bool (__thiscall *SetPlayerTeam)(MPTeam *this, int IdxPlayer);
 };
 
-struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_
+struct Wstring_base_wchar_t_WCharTrait
 {
   wchar_t *Buffer;
 };
 
-struct Wstring_base_TL_char_A_CharTrait_TR_
+struct Wstring_base_char_CharTrait
 {
   char *Buffer;
 };
 
 union Union_MPGameModeClass_CSFTitle
 {
-  Wstring_base_TL_wchar_t_A_WCharTrait_TR_ CSFTitle;
+  Wstring_base_wchar_t_WCharTrait CSFTitle;
   char __CSFTitle[4];
 };
 
 union Union_MPGameModeClass_CSFTooltip
 {
-  Wstring_base_TL_wchar_t_A_WCharTrait_TR_ CSFTooltip;
+  Wstring_base_wchar_t_WCharTrait CSFTooltip;
   char __CSFTooltip[4];
 };
 
 union Union_MPGameModeClass_INIFilename
 {
-  Wstring_base_TL_char_A_CharTrait_TR_ INIFilename;
+  Wstring_base_char_CharTrait INIFilename;
   char __INIFilename[4];
 };
 
 union Union_MPGameModeClass_MapFilter
 {
-  Wstring_base_TL_char_A_CharTrait_TR_ MapFilter;
+  Wstring_base_char_CharTrait MapFilter;
   char __MapFilter[4];
 };
 
@@ -6377,25 +6377,25 @@ union Union_PlanningTokenClass_unknown_20_88
   char __unknown_20_88[108];
 };
 
-struct Node_TL_INIClass_INISection_PTR_TR_ : GenericNode {};
+struct Node_INIClass_INISection_PTR : GenericNode {};
 
-struct Node_TL_INIClass_INISection_PTR_TR__vtbl
+struct Node_INIClass_INISection_PTR_vtbl
 {
-  void (__thiscall *Destructor)(Node_TL_INIClass_INISection_PTR_TR_ *this);
+  void (__thiscall *ScalarDeletingDestructor)(Node_INIClass_INISection_PTR *this, unsigned char flags);
 };
 
-struct List_TL_INIClass_INIEntry_PTR_TR_ : GenericList {};
+struct List_INIClass_INIEntry_PTR : GenericList {};
 
-struct List_TL_INIClass_INIEntry_PTR_TR__vtbl
+struct List_INIClass_INIEntry_PTR_vtbl
 {
-  void (__thiscall *Destructor)(List_TL_INIClass_INIEntry_PTR_TR_ *this);
+  void (__thiscall *ScalarDeletingDestructor)(List_INIClass_INIEntry_PTR *this, unsigned char flags);
 };
 
-struct Node_TL_INIClass_INIEntry_PTR_TR_ : GenericNode {};
+struct Node_INIClass_INIEntry_PTR : GenericNode {};
 
-struct Node_TL_INIClass_INIEntry_PTR_TR__vtbl
+struct Node_INIClass_INIEntry_PTR_vtbl
 {
-  void (__thiscall *Destructor)(Node_TL_INIClass_INIEntry_PTR_TR_ *this);
+  void (__thiscall *ScalarDeletingDestructor)(Node_INIClass_INIEntry_PTR *this, unsigned char flags);
 };
 
 struct INIClass_INIComment
@@ -6404,7 +6404,7 @@ struct INIClass_INIComment
   INIClass_INIComment *Next;
 };
 
-struct INIClass_INIEntry : Node_TL_INIClass_INIEntry_PTR_TR_
+struct INIClass_INIEntry : Node_INIClass_INIEntry_PTR
 {
   char *Key;
   char *Value;
@@ -6417,52 +6417,52 @@ struct INIClass_INIEntry : Node_TL_INIClass_INIEntry_PTR_TR_
 
 struct INIClass_INIEntry_vtbl
 {
-  void (__thiscall *Destructor)(INIClass_INIEntry *this);
+  void (__thiscall *ScalarDeletingDestructor)(INIClass_INIEntry *this, unsigned char flags);
 };
 
-struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement
+struct IndexClass_int_INIClass_INIEntry_PTR_NodeElement
 {
   int ID;
   INIClass_INIEntry *Data;
 };
 
-struct IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_
+struct IndexClass_int_INIClass_INIEntry_PTR
 {
-  IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement *IndexTable;
+  IndexClass_int_INIClass_INIEntry_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_NodeElement *Archive;
+  IndexClass_int_INIClass_INIEntry_PTR_NodeElement *Archive;
 };
 
-struct INIClass_INISection : Node_TL_INIClass_INISection_PTR_TR_
+struct INIClass_INISection : Node_INIClass_INISection_PTR
 {
   char *Name;
-  List_TL_INIClass_INIEntry_PTR_TR_ Entries;
-  IndexClass_TL_int_A_INIClass_INIEntry_PTR_TR_ EntryIndex;
+  List_INIClass_INIEntry_PTR Entries;
+  IndexClass_int_INIClass_INIEntry_PTR EntryIndex;
   INIClass_INIComment *Comments;
 };
 
 struct INIClass_INISection_vtbl
 {
-  void (__thiscall *Destructor)(INIClass_INISection *this);
+  void (__thiscall *ScalarDeletingDestructor)(INIClass_INISection *this, unsigned char flags);
 };
 
-struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement
+struct IndexClass_int_INIClass_INISection_PTR_NodeElement
 {
   int ID;
   INIClass_INISection *Data;
 };
 
-struct IndexClass_TL_int_A_INIClass_INISection_PTR_TR_
+struct IndexClass_int_INIClass_INISection_PTR
 {
-  IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement *IndexTable;
+  IndexClass_int_INIClass_INISection_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_int_A_INIClass_INISection_PTR_TR_NodeElement *Archive;
+  IndexClass_int_INIClass_INISection_PTR_NodeElement *Archive;
 };
 
 struct VectorBase_CellStruct : VectorBase_ELE
@@ -6552,8 +6552,8 @@ struct INIClass
   INIClass_vtbl *__vftable;
   char *CurrentSectionName;
   INIClass_INISection *CurrentSection;
-  List_TL_INIClass_INISection_PTR_TR_ Sections;
-  IndexClass_TL_int_A_INIClass_INISection_PTR_TR_ SectionIndex;
+  List_INIClass_INISection_PTR Sections;
+  IndexClass_int_INIClass_INISection_PTR SectionIndex;
   INIClass_INIComment *LineComments;
 };
 
@@ -7185,7 +7185,7 @@ struct Surface
 
 struct Surface_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(Surface *this, bool bUnk);
+  void (__thiscall *ScalarDeletingDestructor)(Surface *this, unsigned char flags);
   bool (__thiscall *CopyFromWhole)(Surface *this, Surface *pSrc, bool bUnk1, bool bUnk2);
   bool (__thiscall *CopyFromPart)(Surface *this, RectangleStruct *pClipRect, Surface *pSrc, RectangleStruct *pSrcRect, bool bUnk1, bool bUnk2);
   bool (__thiscall *CopyFrom)(Surface *this, RectangleStruct *pClipRect, RectangleStruct *pClipRect2, Surface *pSrc, RectangleStruct *pDestRect, RectangleStruct *pSrcRect, bool bUnk1, bool bUnk2);
@@ -8751,7 +8751,7 @@ struct AbstractClass : IPersistStream, IRTTITypeInfo, INoticeSink, INoticeSource
 
 struct AbstractClass_vtbl : IPersistStream_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(AbstractClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(AbstractClass *this, unsigned char flags);
   void (__thiscall *Init)(AbstractClass *this);
   void (__thiscall *PointerExpired)(AbstractClass *this, AbstractClass *pAbstract, bool Removed);
   AbstractType (__thiscall *WhatAmI)(AbstractClass *this);
@@ -8864,7 +8864,7 @@ struct HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContain
   double BuildDelay;
   int IQLevel;
   int TechLevel;
-  IndexBitfield_TL_HouseClass_PTR_TR_ AltAllies;
+  IndexBitfield_HouseClass_PTR AltAllies;
   int StartingCredits;
   Edge StartingEdge;
   unsigned int AIState_1E4;
@@ -8998,7 +8998,7 @@ struct HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContain
   int LATime;
   int LAEnemy;
   BuildingClass *ToCapture;
-  IndexBitfield_TL_HouseClass_PTR_TR_ RadarVisibleTo;
+  IndexBitfield_HouseClass_PTR RadarVisibleTo;
   int SiloMoney;
   TargetType PreferredTargetType;
   CellStruct PreferredTargetCell;
@@ -9046,7 +9046,7 @@ struct HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContain
   Edge Edge;
   CellStruct EMPTarget;
   CellStruct NukeTarget;
-  IndexBitfield_TL_HouseClass_PTR_TR_ Allies;
+  IndexBitfield_HouseClass_PTR Allies;
   CDTimerClass DamageDelayTimer;
   CDTimerClass TeamDelayTimer;
   CDTimerClass TriggerDelayTimer;
@@ -9061,7 +9061,7 @@ struct HouseClass : AbstractClass, IHouse, IPublicHouse, IConnectionPointContain
   wchar_t UIName[21];
   int ColorSchemeIndex;
   Union_HouseClass_StartingLocation HouseClass_StartingLocation;
-  IndexBitfield_TL_HouseClass_PTR_TR_ StartingAllies;
+  IndexBitfield_HouseClass_PTR StartingAllies;
   unsigned int unknown_16060;
   DynamicVectorClass_IConnectionPoint_PTR WaypointPath;
   unsigned int unknown_1607C;
@@ -9083,7 +9083,7 @@ struct HouseClass_vtbl : AbstractClass_vtbl {};
 
 struct HouseTypeClass : AbstractTypeClass
 {
-  FixedString_TL_25_A_char_TR_ ParentCountry;
+  FixedString_25_char ParentCountry;
   unsigned __int8 align_B1[3];
   int ArrayIndex;
   int ArrayIndex2;
@@ -9330,10 +9330,10 @@ struct __unaligned __declspec(align(4)) ObjectTypeClass : AbstractTypeClass
   ColorStruct LineTrailColor;
   unsigned __int8 align_23E[2];
   int LineTrailColorDecrement;
-  IndexClass_TL_MainVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_ VoxelMainCache;
-  IndexClass_TL_TurretWeaponVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_ VoxelTurretWeaponCache;
-  IndexClass_TL_ShadowVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_ VoxelShadowCache;
-  IndexClass_TL_TurretBarrelVoxelIndexKey_A_VoxelCacheStruct_PTR_TR_ VoxelTurretBarrelCache;
+  IndexClass_MainVoxelIndexKey_VoxelCacheStruct_PTR VoxelMainCache;
+  IndexClass_TurretWeaponVoxelIndexKey_VoxelCacheStruct_PTR VoxelTurretWeaponCache;
+  IndexClass_ShadowVoxelIndexKey_VoxelCacheStruct_PTR VoxelShadowCache;
+  IndexClass_TurretBarrelVoxelIndexKey_VoxelCacheStruct_PTR VoxelTurretBarrelCache;
 };
 
 struct ObjectTypeClass_vtbl : AbstractTypeClass_vtbl
@@ -10617,7 +10617,7 @@ struct TechnoClass : RadioClass
   bool UnlimboingInfantry;
   CDTimerClass ReloadTimer;
   Point2D RadarPosition;
-  IndexBitfield_TL_HouseClass_PTR_TR_ DisplayProductionTo;
+  IndexBitfield_HouseClass_PTR DisplayProductionTo;
   int Group;
   AbstractClass *ArchiveTarget;
   HouseClass *Owner;
@@ -10871,7 +10871,7 @@ struct TechnoClass_vtbl : RadioClass_vtbl
   void (__thiscall *DrawActionLines)(TechnoClass *this, bool Force, unsigned int dwUnk2);
   BlitterFlags (__thiscall *GetDisguiseFlags)(TechnoClass *this, BlitterFlags ExistingFlags);
   bool (__thiscall *IsClearlyVisibleTo)(TechnoClass *this, HouseClass *pHouse);
-  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *pVoxel, unsigned int dwUnk2, __int16 Facing, IndexClass_TL_int_A_int_TR_ *pVoxelIndex, RectangleStruct *pRect, Point2D *pLocation, Matrix3D *pMatrix, int Intensity, unsigned int dwUnk9, BlitterFlags dwUnk10);
+  void (__thiscall *DrawVoxel)(TechnoClass *this, VoxelStruct *pVoxel, unsigned int dwUnk2, __int16 Facing, IndexClass_int_int *pVoxelIndex, RectangleStruct *pRect, Point2D *pLocation, Matrix3D *pMatrix, int Intensity, unsigned int dwUnk9, BlitterFlags dwUnk10);
   void (__thiscall *GetDrawExtraRect)(TechnoClass *this, Point2D *pPoint, RectangleStruct *pRect);
   void (__thiscall *DrawHealthBar)(TechnoClass *this, Point2D *pLocation, RectangleStruct *pBoundingRect, bool bUnk3);
   void (__thiscall *DrawPipScalePips)(TechnoClass *this, Point2D *pLocation, Point2D *pOriginalLocation, RectangleStruct *pBounds);
@@ -11324,7 +11324,7 @@ struct GScreenClass : IGameMap
 
 struct GScreenClass_vtbl : IGameMap_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(GScreenClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(GScreenClass *this, unsigned char flags);
   void (__thiscall *One_Time)(GScreenClass *this);
   void (__thiscall *Init)(GScreenClass *this);
   void (__thiscall *Init_Clear)(GScreenClass *this);
@@ -12099,7 +12099,7 @@ struct FootClass_vtbl : TechnoClass_vtbl
   bool (__thiscall *TryEnterIdle)(FootClass *this);
   bool (__thiscall *ChronoWarpTo)(FootClass *this, CoordStruct Dest);
   void (__thiscall *Draw_A_SHP)(FootClass *this, SHPStruct *pSHP, int IdxFacing, Point2D *pCoords, RectangleStruct *pRectangle, unsigned int dwUnk5, unsigned int dwUnk6, unsigned int dwUnk7, ZGradient ZGradient, unsigned int dwUnk9, int ExtraLight, unsigned int dwUnk11, unsigned int dwUnk12, unsigned int dwUnk13, unsigned int dwUnk14, unsigned int dwUnk15, unsigned int dwUnk16);
-  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *pVXL, int HVAFrameIndex, int Flags, IndexClass_TL_int_A_int_TR_ *pCache, RectangleStruct *pRectangle, Point2D *pCenterPoint, Matrix3D *pMatrix, unsigned int Brightness, BlitterFlags DrawFlags, unsigned int dwUnk10);
+  void (__thiscall *Draw_A_VXL)(FootClass *this, VoxelStruct *pVXL, int HVAFrameIndex, int Flags, IndexClass_int_int *pCache, RectangleStruct *pRectangle, Point2D *pCenterPoint, Matrix3D *pMatrix, unsigned int Brightness, BlitterFlags DrawFlags, unsigned int dwUnk10);
   void (__thiscall *GoBerzerk)(FootClass *this);
   void (__thiscall *Panic)(FootClass *this);
   void (__thiscall *UnPanic)(FootClass *this);
@@ -12368,7 +12368,7 @@ struct LocomotionClass : IPersistStream, ILocomotion
 
 struct LocomotionClass_vtbl : IPersistStream_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(LocomotionClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(LocomotionClass *this, unsigned char flags);
   int (__thiscall *Size)(LocomotionClass *this);
 };
 
@@ -12598,7 +12598,7 @@ struct WWMouseClass
 
 struct WWMouseClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(WWMouseClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(WWMouseClass *this, unsigned char flags);
   void (__thiscall *Draw)(WWMouseClass *this, Point2D *pCoords, SHPStruct *pImage, int IdxFrame);
   bool (__thiscall *IsRefCountNegative)(WWMouseClass *this);
   void (__thiscall *HideCursor)(WWMouseClass *this);
@@ -12719,7 +12719,7 @@ struct LoadOptionsClass
 
 struct LoadOptionsClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(LoadOptionsClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(LoadOptionsClass *this, unsigned char flags);
   bool (__thiscall *LoadMission)(LoadOptionsClass *this, char *lpMultiByteStr);
   bool (__thiscall *SaveMission)(LoadOptionsClass *this, char *lpMultiByteStr, wchar_t *pSource);
   bool (__thiscall *DeleteMission)(LoadOptionsClass *this, char *lpFileName);
@@ -12733,7 +12733,7 @@ struct LoadOptionsClass_vtbl
 struct VeinholeLogic
 {
   int NextFreeNodeIndex;
-  PriorityQueueClass_TL_PriorityQueueClassNode_A_std_less_TL_PriorityQueueClassNode_TR_TR_ *Queue;
+  PriorityQueueClass_PriorityQueueClassNode_std_less_PriorityQueueClassNode *Queue;
   PriorityQueueClassNode *Nodes;
   CDTimerClass VeinTimer;
   bool *CellIndexesWithVeins;
@@ -12828,20 +12828,20 @@ struct VectorClass_ToolTip_CPTR_vtbl : VectorBase_ToolTip_CPTR_vtbl {};
 struct DynamicVectorClass_ToolTip_CPTR : VectorClass_ToolTip_CPTR, DynamicAddon {};
 struct DynamicVectorClass_ToolTip_CPTR_vtbl : VectorClass_ToolTip_CPTR_vtbl {};
 
-struct IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement
+struct IndexClass_int_ToolTip_PTR_NodeElement
 {
   int ID;
   ToolTip *Data;
 };
 
-struct IndexClass_TL_int_A_ToolTip_PTR_TR_
+struct IndexClass_int_ToolTip_PTR
 {
-  IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement *IndexTable;
+  IndexClass_int_ToolTip_PTR_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_int_A_ToolTip_PTR_TR_NodeElement *Archive;
+  IndexClass_int_ToolTip_PTR_NodeElement *Archive;
 };
 
 struct ToolTipManagerData
@@ -12862,12 +12862,12 @@ struct ToolTipManager
   int LastToolTipDelay;
   int ToolTipLifeTime;
   DynamicVectorClass_ToolTip_PTR ToolTips;
-  IndexClass_TL_int_A_ToolTip_PTR_TR_ ToolTipIndex;
+  IndexClass_int_ToolTip_PTR ToolTipIndex;
 };
 
 struct ToolTipManager_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(ToolTipManager *this);
+  void (__thiscall *ScalarDeletingDestructor)(ToolTipManager *this, unsigned char flags);
   bool (__thiscall *Update)(ToolTipManager *this, ToolTipManagerData *pFrom);
   void (__thiscall *MarkToRedraw)(ToolTipManager *this, ToolTipManagerData *pFrom);
   void (__thiscall *Draw)(ToolTipManager *this, bool OnSidebar);
@@ -14118,20 +14118,20 @@ struct BombListClass
   int UpdateDelay;
 };
 
-struct IndexClass_TL_int_A_int_TR_NodeElement
+struct IndexClass_int_int_NodeElement
 {
   int ID;
   int Data;
 };
 
-struct IndexClass_TL_int_A_int_TR_
+struct IndexClass_int_int
 {
-  IndexClass_TL_int_A_int_TR_NodeElement *IndexTable;
+  IndexClass_int_int_NodeElement *IndexTable;
   int IndexCount;
   int IndexSize;
   bool IsSorted;
   char padding[3];
-  IndexClass_TL_int_A_int_TR_NodeElement *Archive;
+  IndexClass_int_int_NodeElement *Archive;
 };
 
 struct InputManagerClass
@@ -14298,7 +14298,7 @@ struct BitFont
 
 struct BitFont_vtbl
 {
-  void (__thiscall *Destructor)(BitFont *this);
+  void (__thiscall *ScalarDeletingDestructor)(BitFont *this, unsigned char flags);
 };
 
 struct BitFont_InternalData
@@ -14495,7 +14495,7 @@ struct FoggedObjectRenderStruct
   FoggedObjectClass* FoggedObject;
 };
 
-struct __declspec(align(4)) SessionClass_TL_unnamed_type_MPStats_TR_
+struct __declspec(align(4)) SessionClass_unnamed_type_MPStats
 {
   char Name[64];
   int MaxRoundTrip;
@@ -14549,7 +14549,7 @@ struct __declspec(align(4)) SessionClass
   int MaxMaxAhead;
   int PrecalcMaxAhead;
   int PrecalcDesiredFrameRate;
-  SessionClass_TL_unnamed_type_MPStats_TR_ MPStats[8];
+  SessionClass_unnamed_type_MPStats MPStats[8];
   bool EnableMultiplayerDebug;
   bool DrawMPDebugStats;
   char field_67E;
@@ -15084,7 +15084,7 @@ struct __declspec(align(4)) CommBufferClass
 
 struct CommBufferClass_vtbl
 {
-  void (__thiscall *Destructor)(CommBufferClass *this);
+  void (__thiscall *ScalarDeletingDestructor)(CommBufferClass *this, unsigned char flags);
 };
 
 struct __declspec(align(4)) ConnectionClass
@@ -15112,7 +15112,7 @@ struct __declspec(align(4)) ConnectionClass
 
 struct ConnectionClass_vtbl
 {
-  void (__thiscall *ScalarDeletingDestructor)(ConnectionClass *this, unsigned int flags);
+  void (__thiscall *ScalarDeletingDestructor)(ConnectionClass *this, unsigned char flags);
   int (__thiscall *Reset)(ConnectionClass *this);
   int (__thiscall *SendPacket)(ConnectionClass *this, const void *pBuf, int Length, int a4, char a5);
   int (__thiscall *ReceivePacket)(ConnectionClass *this, void *pBuf, int Length);
@@ -15187,7 +15187,7 @@ struct __declspec(align(4)) ConnManClass
 
 struct ConnManClass_vtbl
 {
-      void (__thiscall *ScalarDeletingDestructor)(ConnManClass *this, unsigned int flags);
+      void (__thiscall *ScalarDeletingDestructor)(ConnManClass *this, unsigned char flags);
       int (__thiscall *vt_entry_04)(ConnManClass *vt_entry_04);
       int (__thiscall *vt_entry_08)(ConnManClass *vt_entry_08);
       int (__thiscall *vt_entry_0C)(ConnManClass *vt_entry_0C);
@@ -15257,7 +15257,7 @@ struct __declspec(align(4)) IPXManagerClass
 
 struct IPXManagerClass_vtbl
 {
-      void (__thiscall *ScalarDeletingDestructor)(IPXManagerClass *this, unsigned int flags);
+      void (__thiscall *ScalarDeletingDestructor)(IPXManagerClass *this, unsigned char flags);
       void (__thiscall *Service)(IPXManagerClass *this);
       int (__thiscall *Send)(IPXManagerClass *this, void *pBuf, int Length, int a4, int HouseIndex);
       int (__thiscall *Receive)(IPXManagerClass *this, int a2, int a3, int *pOut);
@@ -15324,7 +15324,7 @@ struct __declspec(align(4)) WinsockInterfaceClass
 
 struct WinsockInterfaceClass_vtbl
 {
-      void (__thiscall *ScalarDeletingDestructor)(WinsockInterfaceClass *this, unsigned int flags);
+      void (__thiscall *ScalarDeletingDestructor)(WinsockInterfaceClass *this, unsigned char flags);
       int (__thiscall *vt_entry_04)(WinsockInterfaceClass *vt_entry_04);
       int (__thiscall *vt_entry_08)(WinsockInterfaceClass *vt_entry_08);
       int (__thiscall *vt_entry_0C)(WinsockInterfaceClass *vt_entry_0C);
@@ -15614,7 +15614,7 @@ struct GraphicMenuItem
 
 struct GraphicMenuItem_vtbl
 {
-  GraphicMenuItem *(__thiscall *ScalarDeletingDestructor)(GraphicMenuItem *this, char a2);
+  GraphicMenuItem *(__thiscall *ScalarDeletingDestructor)(GraphicMenuItem *this, unsigned char flags);
   char (__thiscall *MatchKey)(GraphicMenuItem *this, int Key);
   char (__thiscall *HitTest)(GraphicMenuItem *this, Point2D *pPoint);
   void (__thiscall *vt_entry_C)(GraphicMenuItem *this, void *pOwner);
@@ -15624,7 +15624,7 @@ struct GraphicMenuItem_vtbl
 
 struct GraphicMenu_vtbl
 {
-  GraphicMenu *(__thiscall *ScalarDeletingDestructor)(GraphicMenu *this, char a2);
+  GraphicMenu *(__thiscall *ScalarDeletingDestructor)(GraphicMenu *this, unsigned char flags);
 };
 
 struct ReferenceCounted
@@ -15635,7 +15635,7 @@ struct ReferenceCounted
 
 struct ReferenceCounted_vtbl
 {
-  ReferenceCounted *(__thiscall *ScalarDeletingDestructor)(ReferenceCounted *this, char a2);
+  ReferenceCounted *(__thiscall *ScalarDeletingDestructor)(ReferenceCounted *this, unsigned char flags);
   char (__thiscall *vt_entry_4)(ReferenceCounted *this);
   int (__thiscall *Release)(ReferenceCounted *this);
 };
@@ -15648,7 +15648,7 @@ struct rc_ptr_base
 
 struct rc_ptr_base_vtbl
 {
-  rc_ptr_base *(__thiscall *ScalarDeletingDestructor)(rc_ptr_base *this, char a2);
+  rc_ptr_base *(__thiscall *ScalarDeletingDestructor)(rc_ptr_base *this, unsigned char flags);
 };
 
 struct rc_ptr_PlayerProfile_PTR : rc_ptr_base {};
@@ -15729,7 +15729,7 @@ struct VectorCursor
 
 struct VectorCursor_vtbl
 {
-  VectorCursor *(__thiscall *ScalarDeletingDestructor)(VectorCursor *this, char a2);
+  VectorCursor *(__thiscall *ScalarDeletingDestructor)(VectorCursor *this, unsigned char flags);
   bool (__thiscall *IsValid)(VectorCursor *this);
   VectorCursor *(__thiscall *operator_plusplus)(VectorCursor *this);
   VectorCursor *(__thiscall *operator_minusminus)(VectorCursor *this);
@@ -15993,7 +15993,7 @@ struct WDT_Voices_Anim_vtbl : ReferenceCounted_vtbl
 
 struct AnimFile_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(AnimFile *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(AnimFile *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(AnimFile *this, int a1);
   int (__thiscall *vt_entry_08)(AnimFile *this);
   int (__thiscall *vt_entry_0C)(AnimFile *this, int a1);
@@ -16003,7 +16003,7 @@ struct AnimFile_vtbl
 
 struct Animate_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Animate *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Animate *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(Animate *this);
   int (__thiscall *vt_entry_08)(Animate *this);
   int (__thiscall *vt_entry_0C)(Animate *this);
@@ -16027,7 +16027,7 @@ struct ApplicationClass_vtbl : IUnknown_vtbl
 
 struct Pipe_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Pipe *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Pipe *this, unsigned char flags);
   int (__thiscall *Flush)(Pipe *this);
   int (__thiscall *End)(Pipe *this);
   int (__thiscall *Put_To)(Pipe *this, int a1);
@@ -16048,14 +16048,14 @@ struct PKPipe_vtbl : Pipe_vtbl
 
 struct Base64Straw_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Base64Straw *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Base64Straw *this, unsigned char flags);
   int (__thiscall *Get_From)(Base64Straw *this, int a1);
   int (__thiscall *vt_entry_08)(Base64Straw *this, int a1, int a2);
 };
 
 struct Straw_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Straw *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Straw *this, unsigned char flags);
   int (__thiscall *Get_From)(Straw *this, int a1);
   int (__thiscall *Get)(Straw *this, int a1, int a2);
 };
@@ -16074,7 +16074,7 @@ struct PKStraw_vtbl : Straw_vtbl
 
 struct Blitter_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Blitter *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Blitter *this, unsigned char flags);
   int (__thiscall *Blit_Copy)(Blitter *this);
   int (__thiscall *Blit_Copy_Tinted)(Blitter *this);
   int (__thiscall *Blit_Move)(Blitter *this);
@@ -16232,18 +16232,18 @@ struct CStreamClass_vtbl : IUnknown_vtbl
   int (__thiscall *UnlockRegion)(CStreamClass *this, int a1, int a2, int a3, int a4, int a5, int a6);
   int (__thiscall *Stat)(CStreamClass *this, int a1, int a2, int a3);
   int (__thiscall *Clone)(CStreamClass *this, int a1, int a2);
-  int (__thiscall *ScalarDeletingDestructor)(CStreamClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(CStreamClass *this, unsigned char flags);
 };
 
 struct CampaignEndScoreClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(CampaignEndScoreClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(CampaignEndScoreClass *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(CampaignEndScoreClass *this, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
 };
 
 struct CampaignScoreClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(CampaignScoreClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(CampaignScoreClass *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(CampaignScoreClass *this);
 };
 
@@ -16641,7 +16641,7 @@ struct GraphicMenuShortcutItem_vtbl : GraphicMenuItem_vtbl {};
 
 struct MPGameModeClass_InitializerBase_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MPGameModeClass_InitializerBase *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(MPGameModeClass_InitializerBase *this, unsigned char flags);
   int (__thiscall *Factory_Constructor)(MPGameModeClass_InitializerBase *this, int a1, int a2, int a3, int a4, int a5, int a6);
 };
 struct Initializer_FreeForAll_vtbl : MPGameModeClass_InitializerBase_vtbl {};
@@ -16666,7 +16666,7 @@ struct MPSiegeDefenderTeam_vtbl : MPTeam_vtbl {};
 
 struct MSAnim_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MSAnim *this);
+  int (__thiscall *ScalarDeletingDestructor)(MSAnim *this, unsigned char flags);
   int (__thiscall *SetActive)(MSAnim *this);
   int (__thiscall *StopTimer)(MSAnim *this);
   int (__thiscall *StartTimer)(MSAnim *this);
@@ -16686,7 +16686,7 @@ struct MSVQAnim_vtbl : MSAnim_vtbl {};
 
 struct MSEngine_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MSEngine *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(MSEngine *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(MSEngine *this, int a1);
   int (__thiscall *vt_entry_08)(MSEngine *this);
 };
@@ -16695,7 +16695,7 @@ struct MSFadeAnim_vtbl : MSShapeAnim_vtbl {};
 
 struct MSFont_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MSFont *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(MSFont *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(MSFont *this, int a1);
   int (__thiscall *vt_entry_08)(MSFont *this, int a1);
   int (__thiscall *vt_entry_0C)(MSFont *this, int a1, int a2, int a3, int a4, int a5);
@@ -16706,7 +16706,7 @@ struct MSOverlayAnim_vtbl : MSFadeAnim_vtbl {};
 
 struct MSPCXAnim_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(MSPCXAnim *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(MSPCXAnim *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(MSPCXAnim *this, int a1);
   int (__thiscall *vt_entry_08)(MSPCXAnim *this);
   int (__thiscall *vt_entry_0C)(MSPCXAnim *this);
@@ -16723,7 +16723,7 @@ struct MapSelect_vtbl : MSEngine_vtbl {};
 
 struct Mouse_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Mouse *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Mouse *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(Mouse *this);
   int (__thiscall *vt_entry_08)(Mouse *this);
   int (__thiscall *vt_entry_0C)(Mouse *this);
@@ -16745,7 +16745,7 @@ struct Mouse_vtbl
 
 struct NullModemClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(NullModemClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(NullModemClass *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(NullModemClass *this);
   int (__thiscall *vt_entry_08)(NullModemClass *this, int a1, int a2, int a3, int a4);
   int (__thiscall *vt_entry_0C)(NullModemClass *this, int a1, int a2, int a3);
@@ -16765,7 +16765,7 @@ struct NullModemClass_vtbl
 
 struct NullModemConnClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(NullModemConnClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(NullModemConnClass *this, unsigned char flags);
   int (__thiscall *Reset)(NullModemConnClass *this);
   int (__thiscall *vt_entry_08)(NullModemConnClass *this, int a1, int a2, int a3, int a4);
   int (__thiscall *vt_entry_0C)(NullModemConnClass *this, int a1, int a2);
@@ -16779,7 +16779,7 @@ struct NullModemConnClass_vtbl
 
 struct OwnerDraw_DialogControl_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_DialogControl *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_DialogControl *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(OwnerDraw_DialogControl *this);
   int (__thiscall *vt_entry_08)(OwnerDraw_DialogControl *this);
   int (__thiscall *vt_entry_0C)(OwnerDraw_DialogControl *this);
@@ -16788,7 +16788,7 @@ struct OwnerDraw_DialogControl_vtbl
 
 struct OwnerDraw_SimpleDialogControl_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_SimpleDialogControl *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(OwnerDraw_SimpleDialogControl *this, unsigned char flags);
   int (__thiscall *BindControlHwnd)(OwnerDraw_SimpleDialogControl *this, int a1, int a2);
   int (__thiscall *vt_entry_08)(OwnerDraw_SimpleDialogControl *this);
   int (__thiscall *vt_entry_0C)(OwnerDraw_SimpleDialogControl *this);
@@ -16808,7 +16808,7 @@ struct PlayerProfile_vtbl : ReferenceCounted_vtbl {};
 
 struct RAMFileClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(RAMFileClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(RAMFileClass *this, unsigned char flags);
   int (__thiscall *GetFileName)(RAMFileClass *this);
   int (__thiscall *SetFileName)(RAMFileClass *this, int a1);
   int (__thiscall *CreateFile)(RAMFileClass *this);
@@ -16829,7 +16829,7 @@ struct RAMFileClass_vtbl
 
 struct RLEBlitter_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(RLEBlitter *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(RLEBlitter *this, unsigned char flags);
   int (__thiscall *Blit_Copy)(RLEBlitter *this);
   int (__thiscall *Blit_Copy_Tinted)(RLEBlitter *this);
 };
@@ -16892,7 +16892,7 @@ struct SidebarClass_SBGadgetClass_vtbl : GadgetClass_vtbl {};
 
 struct ScoreAnimClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(ScoreAnimClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(ScoreAnimClass *this, unsigned char flags);
   int (__thiscall *Pause)(ScoreAnimClass *this);
   int (__thiscall *Resume)(ScoreAnimClass *this);
   int (__thiscall *vt_entry_0C)(ScoreAnimClass *this);
@@ -16900,7 +16900,7 @@ struct ScoreAnimClass_vtbl
 
 struct ScoreFontClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(ScoreFontClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(ScoreFontClass *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(ScoreFontClass *this, int a1);
   int (__thiscall *vt_entry_08)(ScoreFontClass *this, int a1);
   int (__thiscall *vt_entry_0C)(ScoreFontClass *this, int a1, int a2, int a3, int a4, int a5);
@@ -16915,7 +16915,7 @@ struct ScoreTimeClass_vtbl : ScoreAnimClass_vtbl {};
 
 struct Std_exception_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(Std_exception *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(Std_exception *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(Std_exception *this);
 };
 
@@ -17134,7 +17134,7 @@ struct WebBrowser_vtbl : IUnknown_vtbl
 
 struct WinModemClass_vtbl
 {
-  int (__thiscall *ScalarDeletingDestructor)(WinModemClass *this, int a1);
+  int (__thiscall *ScalarDeletingDestructor)(WinModemClass *this, unsigned char flags);
   int (__thiscall *vt_entry_04)(WinModemClass *this, int a1, int a2, int a3, int a4, int a5);
   int (__thiscall *vt_entry_08)(WinModemClass *this, int a1);
   int (__thiscall *vt_entry_0C)(WinModemClass *this);
