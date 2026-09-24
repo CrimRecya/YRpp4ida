@@ -18,17 +18,16 @@ struct ExtendedRegister;
 struct StackRegister;
 struct Registers;
 
-struct CChatEventSink;
-struct CChatEventSink_vtbl; // 0x7F77A4
-struct CNetUtilEventSink;
-struct CNetUtilEventSink_vtbl; // 0x7F7778
+struct _DDSURFACEDESC;
 struct _GUID;
+struct _WIN32_FIND_DATAA;
 struct AbilitiesStruct;
 struct AbstractClass; // Abstract Tree Base
 struct AbstractClass_vtbl; // 0x7E1F50
 struct AbstractTypeClass; // : AbstractClass
 struct AbstractTypeClass_vtbl; // 0x7E2000
 struct ABuffer;
+struct AcceleratorTracker;
 struct AddTeamCommandClass;
 struct AddTeamCommandClass_vtbl; // 0x7EBE8C
 struct AircraftClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
@@ -240,6 +239,7 @@ struct BulletClass_vtbl; // 0x7E46E4
 struct BulletData;
 struct BulletTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
 struct BulletTypeClass_vtbl; // 0x7E4948
+struct ButtonFadeEffect;
 struct BytePalette;
 struct CacheStraw;
 struct CacheStraw_vtbl; // 0x7EB754
@@ -255,6 +255,8 @@ struct CarryoverClass;
 struct CarryoverClass_vtbl; // 0x7E4C04
 struct CCFileClass; // : CDFileClass : BufferIOFileClass : RawFileClass : FileClass
 struct CCFileClass_vtbl; // 0x7E16B0
+struct CChatEventSink;
+struct CChatEventSink_vtbl; // 0x7F77A4
 struct CCINIClass;
 struct CCINIClass_vtbl; // 0x7E1AF4
 struct CComObject_CChatEventSink;
@@ -283,6 +285,8 @@ struct CenterViewCommandClass_vtbl; // 0x7EBAF4
 struct ChangeLinkHouseStruct;
 struct CheckListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
 struct CheckListClass_vtbl; // 0x7E4F84
+struct CNetUtilEventSink;
+struct CNetUtilEventSink_vtbl; // 0x7F7778
 struct Color16Struct;
 struct ColorListClass; // : ListClass : ControlClass : GadgetClass : LinkClass
 struct ColorListClass_vtbl; // 0x7E5054
@@ -305,6 +309,7 @@ struct ControlClass_vtbl; // 0x7E528C
 struct ControlNode;
 struct ConvertClass; // Convert Tree Base
 struct ConvertClass_vtbl; // 0x7E5358
+struct CoopCampaignClass;
 struct CounterClass;
 struct CounterClass_vtbl; // 0x7E5C54
 struct Crate;
@@ -313,6 +318,7 @@ struct CreateGameDialogControl;
 struct CreateGameDialogControl_vtbl; // 0x7F788C
 struct CreateTeamCommandClass;
 struct CreateTeamCommandClass_vtbl; // 0x7EB84C
+struct CrossDissolveEffect;
 struct CSFLabel;
 struct CSFString;
 struct CStreamClass;
@@ -337,6 +343,9 @@ struct DisplayClass; // : MapClass : GScreenClass
 struct DisplayClass_vtbl; // 0x7E6114
 struct DisplayClass_TacticalClass; // : GadgetClass : LinkClass
 struct DisplayClass_TacticalClass_vtbl; // 0x7E608C
+struct DistributionObject_AITriggerTypeClass;
+struct DistributionObject_BuildingTypeClass;
+struct DistributionObject_CellClass;
 struct DriveLocomotionClass; // : LocomotionClass
 struct DriveLocomotionClass_vtbl; // 0x7E7F7C
 struct DropListClass; // : EditClass : ControlClass : GadgetClass : LinkClass
@@ -754,6 +763,7 @@ struct DynamicVectorClass_ZoneConnectionTable_vtbl;
 struct EBolt;
 struct EditClass; // : ControlClass : GadgetClass : LinkClass
 struct EditClass_vtbl; // 0x7E81A4
+struct EgoClass;
 struct EMPulseClass; // : AbstractClass
 struct EMPulseClass_vtbl; // 0x7E87A8
 struct EnumConnectionPointsClass;
@@ -852,6 +862,7 @@ struct GenericList_vtbl; // 0x7E1B04
 struct GenericNode;
 struct GenericNode_vtbl; // 0x7E1B0C
 struct GetCDClass;
+struct GlobalPacketType;
 struct GraphicMenu;
 struct GraphicMenu_vtbl; // 0x7EA5FC
 struct GraphicMenuAnimItem;
@@ -867,17 +878,21 @@ struct GScreenClass; // GScreen Tree Base
 struct GScreenClass_vtbl; // 0x7EA6FC
 struct GuardCommandClass;
 struct GuardCommandClass_vtbl; // 0x7EBAA4
+struct HashObject_unsigned_int_SubzoneConnectionStruct;
+struct HashObject_unsigned_int_unsigned_int;
 struct HealthNavCommandClass;
 struct HealthNavCommandClass_vtbl; // 0x7EB93C
 struct HierarchyConnectionTableManager;
 struct HierarchyConnectionTables;
 struct HouseClass; // : AbstractClass
 struct HouseClass_vtbl; // 0x7EA8A0
+struct HouseClass_BuildChoiceClass;
 struct HouseClass_StartingTechnoStruct;
 struct HouseTypeClass; // : AbstractTypeClass : AbstractClass
 struct HouseTypeClass_vtbl; // 0x7EAB58
 struct HoverLocomotionClass; // : LocomotionClass
 struct HoverLocomotionClass_vtbl; // 0x7EADC8
+struct HSVClass;
 struct HWND__;
 struct IAIHouse;
 struct IAIHouse_vtbl;
@@ -977,6 +992,7 @@ struct ISequentialStream_vtbl;
 struct IsometricTileClass; // : ObjectClass : AbstractClass
 struct IsometricTileClass_vtbl; // 0x7EC258
 struct IsometricTileTypeClass; // : ObjectTypeClass : AbstractTypeClass : AbstractClass
+struct IsometricTileTypeClass_TileInsertType;
 struct IsometricTileTypeClass_vtbl; // 0x7ECC48
 struct IStream;
 struct IStream_vtbl;
@@ -1002,6 +1018,7 @@ struct LightConvertClass; // : ConvertClass
 struct LightConvertClass_vtbl; // 0x7ED0A4
 struct LightingStruct;
 struct LightSourceClass; // : AbstractClass
+struct LightSourceClass_PendingCellClass;
 struct LightSourceClass_vtbl; // 0x7ED028
 struct LineTrail;
 struct LineTrailNode;
@@ -1030,10 +1047,13 @@ struct LZOStraw_vtbl; // 0x7ED394
 struct MainVoxelIndexKey;
 struct MapClass; // : GScreenClass
 struct MapClass_vtbl; // 0x7ED404
+struct MapRegionClass;
 struct MapSeedClass;
 struct MapSeedClass_vtbl; // 0x7ED8E4
 struct MapSelect;
 struct MapSelect_vtbl; // 0x7EDB4C
+struct MapSelection;
+struct MapStage;
 struct Matrix3D;
 struct MechLocomotionClass; // : LocomotionClass
 struct MechLocomotionClass_vtbl; // 0x7EDC38
@@ -1041,6 +1061,7 @@ struct MemoryBuffer;
 struct MessageListClass;
 struct MissionClass; // : ObjectClass : AbstractClass
 struct MissionClass_vtbl; // 0x7EDCC0
+struct MixFileClass;
 struct MotLib;
 struct MovieHandle;
 struct MovieHandle_vtbl; // 0x7EE124
@@ -1061,6 +1082,7 @@ struct MPGameModeClass; // FIXME MPGameMode Tree Base (Subs exist)
 struct MPGameModeClass_vtbl; // 0x7EED60
 struct MPGameModeClass_InitializerBase;
 struct MPGameModeClass_InitializerBase_vtbl; // 0x7EEE74
+struct MPlayerScoreType;
 struct MPManBattleClass;
 struct MPManBattleClass_vtbl; // 0x7EE50C
 struct MPMegawealthClass;
@@ -1098,9 +1120,11 @@ struct MSPCXAnim;
 struct MSPCXAnim_vtbl; // 0x7EEA2C
 struct MSPrintAnim;
 struct MSPrintAnim_vtbl; // 0x7EEA00
+struct MSSfx;
 struct MSSfxEntry;
 struct MSShapeAnim;
 struct MSShapeAnim_vtbl; // 0x7EE910
+struct MSTextEntry;
 struct MSVQAnim;
 struct MSVQAnim_vtbl; // 0x7EE9B0
 struct MultiMission;
@@ -1141,6 +1165,7 @@ struct OwnerDrawLayoutSize;
 struct OwnerDrawTooltipBlitState;
 struct OwnerDrawTooltipRequest;
 struct OwnerDrawWindowMessageKey;
+struct OwnerTalkClass_ConnectionListStruct;
 struct PageUserCommandClass;
 struct PageUserCommandClass_vtbl; // 0x7EBF2C
 struct ParasiteClass; // : AbstractClass
@@ -1163,6 +1188,7 @@ struct PAVTechnoClass_DynamicVectorClass_HashObject_RadarTrackingStruct_vtbl; //
 struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct;
 struct PAVTechnoClass_VectorClass_HashObject_RadarTrackingStruct_vtbl; // 0x7F044C
 struct PCX;
+struct PhoneEntryClass;
 struct Pipe;
 struct Pipe_vtbl; // 0x7E6218
 struct PKPipe;
@@ -1215,10 +1241,12 @@ struct rc_ptr_WDT_Campaign_PTR;
 struct rc_ptr_WDT_Campaign_PTR_vtbl;
 struct rc_ptr_WDT_CampaignProperties_PTR;
 struct rc_ptr_WDT_CampaignProperties_PTR_vtbl;
+struct rc_ptr_WDT_Conflict;
 struct rc_ptr_WDT_Conflict_PTR;
 struct rc_ptr_WDT_Conflict_PTR_vtbl;
 struct rc_ptr_WDT_FlagGameOption_PTR;
 struct rc_ptr_WDT_FlagGameOption_PTR_vtbl;
+struct rc_ptr_WDT_GameOption;
 struct rc_ptr_WDT_GameOption_PTR;
 struct rc_ptr_WDT_GameOption_PTR_vtbl;
 struct rc_ptr_WDT_History_PTR;
@@ -1229,12 +1257,14 @@ struct rc_ptr_WDT_MapSizeGameOption_PTR;
 struct rc_ptr_WDT_MapSizeGameOption_PTR_vtbl;
 struct rc_ptr_WDT_State_PTR;
 struct rc_ptr_WDT_State_PTR_vtbl;
+struct rc_ptr_WDT_Territory;
 struct rc_ptr_WDT_Territory_PTR;
 struct rc_ptr_WDT_Territory_PTR_vtbl;
 struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR;
 struct rc_ptr_WDT_ValueGameOption_unsigned_char_PTR_vtbl;
 struct rc_ptr_WDTState_PTR;
 struct rc_ptr_WDTState_PTR_vtbl;
+struct rc_ptr_WDTTerritory;
 struct rc_ptr_WDTTerritory_PTR;
 struct rc_ptr_WDTTerritory_PTR_vtbl;
 struct RecoilData;
@@ -1401,6 +1431,7 @@ struct SetView3CommandClass;
 struct SetView3CommandClass_vtbl; // 0x7EBCAC
 struct SetView4CommandClass;
 struct SetView4CommandClass_vtbl; // 0x7EBC84
+struct ShadowControlClass;
 struct ShadowVoxelIndexKey;
 struct ShapeButtonClass; // : ToggleClass : ControlClass : GadgetClass : LinkClass
 struct ShapeButtonClass_vtbl; // 0x7E8088
@@ -1457,6 +1488,7 @@ struct Straw_vtbl; // 0x7E61F0
 struct StringClass;
 struct StripClass;
 struct SubSequenceStruct;
+struct SubTitle;
 struct SubzoneConnectionStruct;
 struct SubzoneConnectionTable;
 struct SubzoneTrackingStruct;
@@ -1490,6 +1522,7 @@ struct Tag_WIN32_FIND_DATAA;
 struct TagClass; // : AbstractClass
 struct TagClass_vtbl; // 0x7F44E0
 struct TagCONNECTDATA;
+struct tagCONNECTDATA;
 struct TagSTATSTG;
 struct TagTypeClass; // : AbstractTypeClass : AbstractClass
 struct TagTypeClass_vtbl; // 0x7F45C4
@@ -1655,6 +1688,7 @@ struct TClassFactory_WaypointPathClass;
 struct TClassFactory_WaypointPathClass_vtbl; // 0x7F38D0
 struct TClassFactory_WeaponTypeClass;
 struct TClassFactory_WeaponTypeClass_vtbl; // 0x7F3DC8
+struct tConnInfoStruct;
 struct TeamClass; // : AbstractClass
 struct TeamClass_vtbl; // 0x7F4730
 struct TeamTypeClass; // : AbstractTypeClass : AbstractClass
@@ -1698,6 +1732,7 @@ struct ToolTip;
 struct ToolTipManager;
 struct ToolTipManager_vtbl; // 0x7F57AC
 struct ToolTipManagerData;
+struct TPoint3D_int;
 struct TrackType;
 struct TransitionTimer;
 struct TRect_int;
@@ -1772,6 +1807,7 @@ struct U_Large_Int_unnamed_type_s;
 struct U_Large_Int_unnamed_type_u;
 struct UDPInterfaceClass;
 struct UDPInterfaceClass_vtbl; // 0x7F7A6C
+struct UndoInfoStruct;
 struct UnitClass; // : FootClass : TechnoClass : RadioClass : MissionClass : ObjectClass : AbstractClass
 struct UnitClass_vtbl; // 0x7F5C70
 struct UnitTrackerClass;
@@ -1787,10 +1823,16 @@ struct Vector4D_float;
 struct VectorAddon;
 struct VectorBase;
 struct VectorBase_vtbl;
+struct VectorBase__DDSURFACEDESC_PTR;
+struct VectorBase__DDSURFACEDESC_PTR_vtbl;
+struct VectorBase__WIN32_FIND_DATAA_PTR;
+struct VectorBase__WIN32_FIND_DATAA_PTR_vtbl;
 struct VectorBase_AbstractClass_PTR;
 struct VectorBase_AbstractClass_PTR_vtbl;
 struct VectorBase_AbstractTypeClass_PTR;
 struct VectorBase_AbstractTypeClass_PTR_vtbl;
+struct VectorBase_AcceleratorTracker;
+struct VectorBase_AcceleratorTracker_vtbl;
 struct VectorBase_AircraftClass_PTR;
 struct VectorBase_AircraftClass_PTR_vtbl;
 struct VectorBase_AircraftTypeClass_CPTR;
@@ -1833,6 +1875,8 @@ struct VectorBase_BulletClass_PTR;
 struct VectorBase_BulletClass_PTR_vtbl;
 struct VectorBase_BulletTypeClass_PTR;
 struct VectorBase_BulletTypeClass_PTR_vtbl;
+struct VectorBase_ButtonFadeEffect_PTR;
+struct VectorBase_ButtonFadeEffect_PTR_vtbl;
 struct VectorBase_CampaignClass_PTR;
 struct VectorBase_CampaignClass_PTR_vtbl;
 struct VectorBase_CaptureManagerClass_PTR;
@@ -1861,8 +1905,12 @@ struct VectorBase_ControlNode_PTR;
 struct VectorBase_ControlNode_PTR_vtbl;
 struct VectorBase_ConvertClass_PTR;
 struct VectorBase_ConvertClass_PTR_vtbl;
+struct VectorBase_CoopCampaignClass_PTR;
+struct VectorBase_CoopCampaignClass_PTR_vtbl;
 struct VectorBase_CoordStruct;
 struct VectorBase_CoordStruct_vtbl;
+struct VectorBase_CrossDissolveEffect_PTR;
+struct VectorBase_CrossDissolveEffect_PTR_vtbl;
 struct VectorBase_DamageGroup_PTR;
 struct VectorBase_DamageGroup_PTR_vtbl;
 struct VectorBase_DirtyAreaStruct;
@@ -1871,12 +1919,20 @@ struct VectorBase_DirtyAreaStruct_PTR;
 struct VectorBase_DirtyAreaStruct_PTR_vtbl;
 struct VectorBase_DiskLaserClass_PTR;
 struct VectorBase_DiskLaserClass_PTR_vtbl;
+struct VectorBase_DistributionObject_AITriggerTypeClass_PTR;
+struct VectorBase_DistributionObject_AITriggerTypeClass_PTR_vtbl;
+struct VectorBase_DistributionObject_BuildingTypeClass_PTR;
+struct VectorBase_DistributionObject_BuildingTypeClass_PTR_vtbl;
+struct VectorBase_DistributionObject_CellClass_PTR;
+struct VectorBase_DistributionObject_CellClass_PTR_vtbl;
 struct VectorBase_double;
 struct VectorBase_double_vtbl;
 struct VectorBase_DynamicVectorClass_char_PTR_PTR;
 struct VectorBase_DynamicVectorClass_char_PTR_PTR_vtbl;
 struct VectorBase_EBolt_PTR;
 struct VectorBase_EBolt_PTR_vtbl;
+struct VectorBase_EgoClass_PTR;
+struct VectorBase_EgoClass_PTR_vtbl;
 struct VectorBase_ELE;
 struct VectorBase_ELE_vtbl;
 struct VectorBase_EMPulseClass_PTR;
@@ -1893,14 +1949,24 @@ struct VectorBase_FoggedObjectDraw;
 struct VectorBase_FoggedObjectDraw_vtbl;
 struct VectorBase_FootClass_PTR;
 struct VectorBase_FootClass_PTR_vtbl;
+struct VectorBase_GlobalPacketType_PTR;
+struct VectorBase_GlobalPacketType_PTR_vtbl;
 struct VectorBase_GraphicMenuItem_PTR;
 struct VectorBase_GraphicMenuItem_PTR_vtbl;
+struct VectorBase_HashObject_unsigned_int_SubzoneConnectionStruct;
+struct VectorBase_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl;
+struct VectorBase_HashObject_unsigned_int_unsigned_int;
+struct VectorBase_HashObject_unsigned_int_unsigned_int_vtbl;
+struct VectorBase_HouseClass_BuildChoiceClass_PTR;
+struct VectorBase_HouseClass_BuildChoiceClass_PTR_vtbl;
 struct VectorBase_HouseClass_PTR;
 struct VectorBase_HouseClass_PTR_vtbl;
 struct VectorBase_HouseClass_StartingTechnoStruct_PTR;
 struct VectorBase_HouseClass_StartingTechnoStruct_PTR_vtbl;
 struct VectorBase_HouseTypeClass_PTR;
 struct VectorBase_HouseTypeClass_PTR_vtbl;
+struct VectorBase_HSVClass;
+struct VectorBase_HSVClass_vtbl;
 struct VectorBase_HWND___PTR;
 struct VectorBase_HWND___PTR_vtbl;
 struct VectorBase_IConnectionPoint_PTR;
@@ -1919,6 +1985,8 @@ struct VectorBase_IsometricTileClass_PTR;
 struct VectorBase_IsometricTileClass_PTR_vtbl;
 struct VectorBase_IsometricTileTypeClass_PTR;
 struct VectorBase_IsometricTileTypeClass_PTR_vtbl;
+struct VectorBase_IsometricTileTypeClass_TileInsertType_PTR;
+struct VectorBase_IsometricTileTypeClass_TileInsertType_PTR_vtbl;
 struct VectorBase_Kamikaze_PTR;
 struct VectorBase_Kamikaze_PTR_vtbl;
 struct VectorBase_KamikazeControl_PTR;
@@ -1927,22 +1995,38 @@ struct VectorBase_LaserDrawClass_PTR;
 struct VectorBase_LaserDrawClass_PTR_vtbl;
 struct VectorBase_LightConvertClass_PTR;
 struct VectorBase_LightConvertClass_PTR_vtbl;
+struct VectorBase_LightSourceClass_PendingCellClass_PTR;
+struct VectorBase_LightSourceClass_PendingCellClass_PTR_vtbl;
 struct VectorBase_LightSourceClass_PTR;
 struct VectorBase_LightSourceClass_PTR_vtbl;
 struct VectorBase_LineTrail_PTR;
 struct VectorBase_LineTrail_PTR_vtbl;
+struct VectorBase_MapRegionClass_PTR;
+struct VectorBase_MapRegionClass_PTR_vtbl;
+struct VectorBase_MapSelection_PTR;
+struct VectorBase_MapSelection_PTR_vtbl;
+struct VectorBase_MapStage_PTR;
+struct VectorBase_MapStage_PTR_vtbl;
+struct VectorBase_MixFileClass_PTR;
+struct VectorBase_MixFileClass_PTR_vtbl;
 struct VectorBase_MovieHandle_PTR;
 struct VectorBase_MovieHandle_PTR_vtbl;
 struct VectorBase_MPGameModeClass_PTR;
 struct VectorBase_MPGameModeClass_PTR_vtbl;
+struct VectorBase_MPlayerScoreType_PTR;
+struct VectorBase_MPlayerScoreType_PTR_vtbl;
 struct VectorBase_MPTeam_PTR;
 struct VectorBase_MPTeam_PTR_vtbl;
 struct VectorBase_MSAnim_PTR;
 struct VectorBase_MSAnim_PTR_vtbl;
 struct VectorBase_MSAnimEntry_PTR;
 struct VectorBase_MSAnimEntry_PTR_vtbl;
+struct VectorBase_MSSfx_PTR;
+struct VectorBase_MSSfx_PTR_vtbl;
 struct VectorBase_MSSfxEntry_PTR;
 struct VectorBase_MSSfxEntry_PTR_vtbl;
+struct VectorBase_MSTextEntry_PTR;
+struct VectorBase_MSTextEntry_PTR_vtbl;
 struct VectorBase_MultiMission_CPTR;
 struct VectorBase_MultiMission_CPTR_vtbl;
 struct VectorBase_MultiMission_PTR;
@@ -1959,6 +2043,8 @@ struct VectorBase_OverlayClass_PTR;
 struct VectorBase_OverlayClass_PTR_vtbl;
 struct VectorBase_OverlayTypeClass_PTR;
 struct VectorBase_OverlayTypeClass_PTR_vtbl;
+struct VectorBase_OwnerTalkClass_ConnectionListStruct_PTR;
+struct VectorBase_OwnerTalkClass_ConnectionListStruct_PTR_vtbl;
 struct VectorBase_ParasiteClass_PTR;
 struct VectorBase_ParasiteClass_PTR_vtbl;
 struct VectorBase_ParticleClass_PTR;
@@ -1973,6 +2059,8 @@ struct VectorBase_ParticleTypeClass_PTR;
 struct VectorBase_ParticleTypeClass_PTR_vtbl;
 struct VectorBase_PassabilityType;
 struct VectorBase_PassabilityType_vtbl;
+struct VectorBase_PhoneEntryClass_PTR;
+struct VectorBase_PhoneEntryClass_PTR_vtbl;
 struct VectorBase_PlanningBranchClass_PTR;
 struct VectorBase_PlanningBranchClass_PTR_vtbl;
 struct VectorBase_PlanningMemberClass_PTR;
@@ -2009,6 +2097,8 @@ struct VectorBase_ScriptClass_PTR;
 struct VectorBase_ScriptClass_PTR_vtbl;
 struct VectorBase_ScriptTypeClass_PTR;
 struct VectorBase_ScriptTypeClass_PTR_vtbl;
+struct VectorBase_ShadowControlClass_PTR;
+struct VectorBase_ShadowControlClass_PTR_vtbl;
 struct VectorBase_SideClass_PTR;
 struct VectorBase_SideClass_PTR_vtbl;
 struct VectorBase_SlaveManagerClass_PTR;
@@ -2027,6 +2117,8 @@ struct VectorBase_SpawnManagerClass_SpawnControl_PTR;
 struct VectorBase_SpawnManagerClass_SpawnControl_PTR_vtbl;
 struct VectorBase_SpotLightClass_PTR;
 struct VectorBase_SpotLightClass_PTR_vtbl;
+struct VectorBase_SubTitle_PTR;
+struct VectorBase_SubTitle_PTR_vtbl;
 struct VectorBase_SubzoneConnectionStruct;
 struct VectorBase_SubzoneConnectionStruct_vtbl;
 struct VectorBase_SubzoneConnectionTable;
@@ -2043,10 +2135,14 @@ struct VectorBase_TActionClass_PTR;
 struct VectorBase_TActionClass_PTR_vtbl;
 struct VectorBase_TagClass_PTR;
 struct VectorBase_TagClass_PTR_vtbl;
+struct VectorBase_tagCONNECTDATA;
+struct VectorBase_tagCONNECTDATA_vtbl;
 struct VectorBase_TagTypeClass_PTR;
 struct VectorBase_TagTypeClass_PTR_vtbl;
 struct VectorBase_TaskForceClass_PTR;
 struct VectorBase_TaskForceClass_PTR_vtbl;
+struct VectorBase_tConnInfoStruct_PTR;
+struct VectorBase_tConnInfoStruct_PTR_vtbl;
 struct VectorBase_TeamClass_PTR;
 struct VectorBase_TeamClass_PTR_vtbl;
 struct VectorBase_TeamTypeClass_CPTR;
@@ -2079,6 +2175,8 @@ struct VectorBase_ToolTip_CPTR;
 struct VectorBase_ToolTip_CPTR_vtbl;
 struct VectorBase_ToolTip_PTR;
 struct VectorBase_ToolTip_PTR_vtbl;
+struct VectorBase_TPoint3D_int;
+struct VectorBase_TPoint3D_int_vtbl;
 struct VectorBase_TRect_int;
 struct VectorBase_TRect_int_vtbl;
 struct VectorBase_TriggerClass_PTR;
@@ -2087,6 +2185,8 @@ struct VectorBase_TriggerTypeClass_PTR;
 struct VectorBase_TriggerTypeClass_PTR_vtbl;
 struct VectorBase_TubeClass_PTR;
 struct VectorBase_TubeClass_PTR_vtbl;
+struct VectorBase_UndoInfoStruct;
+struct VectorBase_UndoInfoStruct_vtbl;
 struct VectorBase_UnitClass_PTR;
 struct VectorBase_UnitClass_PTR_vtbl;
 struct VectorBase_UnitTypeClass_CPTR;
@@ -2133,6 +2233,10 @@ struct VectorBase_WDT_Map_AnimationPalette_PTR;
 struct VectorBase_WDT_Map_AnimationPalette_PTR_vtbl;
 struct VectorBase_WeaponTypeClass_PTR;
 struct VectorBase_WeaponTypeClass_PTR_vtbl;
+struct VectorBase_WinsockInterfaceClass_WinsockBufferType_PTR;
+struct VectorBase_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl;
+struct VectorBase_Wstring;
+struct VectorBase_Wstring_vtbl;
 struct VectorBase_ZoneConnectionClass;
 struct VectorBase_ZoneConnectionClass_vtbl;
 struct VectorBase_ZoneConnectionTable;
@@ -2632,6 +2736,7 @@ struct WDT_GameOption_vtbl; // 0x7F7060
 struct WDT_History;
 struct WDT_History_vtbl; // 0x7F70DC
 struct WDT_Map;
+struct WDT_Map_AnimationPalette;
 struct WDT_Map_vtbl; // 0x7F7134
 struct WDT_MapSizeGameOption;
 struct WDT_MapSizeGameOption_vtbl; // 0x7F70B4
@@ -2661,8 +2766,10 @@ struct WinModemClass_vtbl; // 0x7F7488
 struct WinsockBufferType;
 struct WinsockInterfaceClass;
 struct WinsockInterfaceClass_vtbl; // 0x7F79BC
+struct WinsockInterfaceClass_WinsockBufferType;
 struct WonlineStringDialogControl;
 struct WonlineStringDialogControl_vtbl; // 0x7F7874
+struct Wstring;
 struct Wstring_base_TL_char_A_CharTrait_TR_;
 struct Wstring_base_TL_wchar_t_A_WCharTrait_TR_;
 struct WWMessageBox;
@@ -16274,56 +16381,44 @@ struct ConnectionPointClass_vtbl : IUnknown_vtbl
 
 struct Dial8Class_vtbl : ControlClass_vtbl {};
 
-struct VectorClass_AcceleratorTracker_vtbl
+struct VectorBase_AcceleratorTracker : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_AcceleratorTracker *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_AcceleratorTracker *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_AcceleratorTracker *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_AcceleratorTracker *this);
-  int (__thiscall *FindItemIndex)(VectorClass_AcceleratorTracker *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_AcceleratorTracker *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_AcceleratorTracker *this, int a1, int a2);
+  AcceleratorTracker *Items;
 };
-
+struct VectorBase_AcceleratorTracker_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_AcceleratorTracker : VectorBase_AcceleratorTracker, VectorAddon {};
+struct VectorClass_AcceleratorTracker_vtbl : VectorBase_AcceleratorTracker_vtbl {};
+struct DynamicVectorClass_AcceleratorTracker : VectorClass_AcceleratorTracker, DynamicAddon {};
 struct DynamicVectorClass_AcceleratorTracker_vtbl : VectorClass_AcceleratorTracker_vtbl {};
 
-struct VectorClass_ButtonFadeEffect_PTR_vtbl
+struct VectorBase_ButtonFadeEffect_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_ButtonFadeEffect_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_ButtonFadeEffect_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_ButtonFadeEffect_PTR *this, int a1);
+  ButtonFadeEffect **Items;
 };
-
+struct VectorBase_ButtonFadeEffect_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ButtonFadeEffect_PTR : VectorBase_ButtonFadeEffect_PTR, VectorAddon {};
+struct VectorClass_ButtonFadeEffect_PTR_vtbl : VectorBase_ButtonFadeEffect_PTR_vtbl {};
+struct DynamicVectorClass_ButtonFadeEffect_PTR : VectorClass_ButtonFadeEffect_PTR, DynamicAddon {};
 struct DynamicVectorClass_ButtonFadeEffect_PTR_vtbl : VectorClass_ButtonFadeEffect_PTR_vtbl {};
 
-struct VectorClass_CoopCampaignClass_PTR_vtbl
+struct VectorBase_CoopCampaignClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_CoopCampaignClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_CoopCampaignClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_CoopCampaignClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_CoopCampaignClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CoopCampaignClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_CoopCampaignClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_CoopCampaignClass_PTR *this, int a1);
+  CoopCampaignClass **Items;
 };
-
+struct VectorBase_CoopCampaignClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CoopCampaignClass_PTR : VectorBase_CoopCampaignClass_PTR, VectorAddon {};
+struct VectorClass_CoopCampaignClass_PTR_vtbl : VectorBase_CoopCampaignClass_PTR_vtbl {};
+struct DynamicVectorClass_CoopCampaignClass_PTR : VectorClass_CoopCampaignClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_CoopCampaignClass_PTR_vtbl : VectorClass_CoopCampaignClass_PTR_vtbl {};
 
-struct VectorClass_CrossDissolveEffect_PTR_vtbl
+struct VectorBase_CrossDissolveEffect_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_CrossDissolveEffect_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_CrossDissolveEffect_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_CrossDissolveEffect_PTR *this, int a1);
+  CrossDissolveEffect **Items;
 };
-
+struct VectorBase_CrossDissolveEffect_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_CrossDissolveEffect_PTR : VectorBase_CrossDissolveEffect_PTR, VectorAddon {};
+struct VectorClass_CrossDissolveEffect_PTR_vtbl : VectorBase_CrossDissolveEffect_PTR_vtbl {};
+struct DynamicVectorClass_CrossDissolveEffect_PTR : VectorClass_CrossDissolveEffect_PTR, DynamicAddon {};
 struct DynamicVectorClass_CrossDissolveEffect_PTR_vtbl : VectorClass_CrossDissolveEffect_PTR_vtbl {};
 
 struct VectorBase_DirtyAreaStruct : VectorBase_ELE
@@ -16336,16 +16431,15 @@ struct VectorClass_DirtyAreaStruct_vtbl : VectorBase_DirtyAreaStruct_vtbl {};
 struct DynamicVectorClass_DirtyAreaStruct : VectorClass_DirtyAreaStruct, DynamicAddon {};
 struct DynamicVectorClass_DirtyAreaStruct_vtbl : VectorClass_DirtyAreaStruct_vtbl {};
 
-struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
+struct VectorBase_DistributionObject_AITriggerTypeClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
+  DistributionObject_AITriggerTypeClass **Items;
 };
+struct VectorBase_DistributionObject_AITriggerTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DistributionObject_AITriggerTypeClass_PTR : VectorBase_DistributionObject_AITriggerTypeClass_PTR, VectorAddon {};
+struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl : VectorBase_DistributionObject_AITriggerTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR : VectorClass_DistributionObject_AITriggerTypeClass_PTR, DynamicAddon {};
+struct DynamicVectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl : VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl {};
 
 struct VectorBase_DynamicVectorClass_char_PTR_PTR : VectorBase_PTR
 {
@@ -16357,156 +16451,124 @@ struct VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl : VectorBase_DynamicVect
 struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR : VectorClass_DynamicVectorClass_char_PTR_PTR, DynamicAddon {};
 struct DynamicVectorClass_DynamicVectorClass_char_PTR_PTR_vtbl : VectorClass_DynamicVectorClass_char_PTR_PTR_vtbl {};
 
-struct VectorClass_EgoClass_PTR_vtbl
+struct VectorBase_EgoClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_EgoClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_EgoClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_EgoClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_EgoClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_EgoClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_EgoClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_EgoClass_PTR *this, int a1);
+  EgoClass **Items;
 };
-
+struct VectorBase_EgoClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_EgoClass_PTR : VectorBase_EgoClass_PTR, VectorAddon {};
+struct VectorClass_EgoClass_PTR_vtbl : VectorBase_EgoClass_PTR_vtbl {};
+struct DynamicVectorClass_EgoClass_PTR : VectorClass_EgoClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_EgoClass_PTR_vtbl : VectorClass_EgoClass_PTR_vtbl {};
 
-struct VectorClass_GlobalPacketType_PTR_vtbl
+struct VectorBase_GlobalPacketType_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_GlobalPacketType_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_GlobalPacketType_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_GlobalPacketType_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_GlobalPacketType_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_GlobalPacketType_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_GlobalPacketType_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_GlobalPacketType_PTR *this, int a1);
+  GlobalPacketType **Items;
 };
-
+struct VectorBase_GlobalPacketType_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_GlobalPacketType_PTR : VectorBase_GlobalPacketType_PTR, VectorAddon {};
+struct VectorClass_GlobalPacketType_PTR_vtbl : VectorBase_GlobalPacketType_PTR_vtbl {};
+struct DynamicVectorClass_GlobalPacketType_PTR : VectorClass_GlobalPacketType_PTR, DynamicAddon {};
 struct DynamicVectorClass_GlobalPacketType_PTR_vtbl : VectorClass_GlobalPacketType_PTR_vtbl {};
 
-struct VectorClass_HSVClass_vtbl
+struct VectorBase_HSVClass : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HSVClass *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_HSVClass *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_HSVClass *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_HSVClass *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HSVClass *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_HSVClass *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_HSVClass *this, int a1, int a2);
+  HSVClass *Items;
 };
-
+struct VectorBase_HSVClass_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_HSVClass : VectorBase_HSVClass, VectorAddon {};
+struct VectorClass_HSVClass_vtbl : VectorBase_HSVClass_vtbl {};
+struct DynamicVectorClass_HSVClass : VectorClass_HSVClass, DynamicAddon {};
 struct DynamicVectorClass_HSVClass_vtbl : VectorClass_HSVClass_vtbl {};
 
-struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
+struct VectorBase_HashObject_unsigned_int_SubzoneConnectionStruct : VectorBase_ELE
 {
-  int (__thiscall *VectorDeletingDestructor)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
+  HashObject_unsigned_int_SubzoneConnectionStruct *Items;
 };
+struct VectorBase_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct : VectorBase_HashObject_unsigned_int_SubzoneConnectionStruct, VectorAddon {};
+struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl : VectorBase_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl {};
+struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct : VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct, DynamicAddon {};
+struct DynamicVectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl : VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl {};
 
-struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl
+struct VectorBase_HashObject_unsigned_int_unsigned_int : VectorBase_ELE
 {
-  int (__thiscall *VectorDeletingDestructor)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
+  HashObject_unsigned_int_unsigned_int *Items;
 };
+struct VectorBase_HashObject_unsigned_int_unsigned_int_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_HashObject_unsigned_int_unsigned_int : VectorBase_HashObject_unsigned_int_unsigned_int, VectorAddon {};
+struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl : VectorBase_HashObject_unsigned_int_unsigned_int_vtbl {};
+struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int : VectorClass_HashObject_unsigned_int_unsigned_int, DynamicAddon {};
+struct DynamicVectorClass_HashObject_unsigned_int_unsigned_int_vtbl : VectorClass_HashObject_unsigned_int_unsigned_int_vtbl {};
 
-struct VectorClass_MPlayerScoreType_PTR_vtbl
+struct VectorBase_MPlayerScoreType_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MPlayerScoreType_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MPlayerScoreType_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MPlayerScoreType_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MPlayerScoreType_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MPlayerScoreType_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MPlayerScoreType_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MPlayerScoreType_PTR *this, int a1);
+  MPlayerScoreType **Items;
 };
-
+struct VectorBase_MPlayerScoreType_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MPlayerScoreType_PTR : VectorBase_MPlayerScoreType_PTR, VectorAddon {};
+struct VectorClass_MPlayerScoreType_PTR_vtbl : VectorBase_MPlayerScoreType_PTR_vtbl {};
+struct DynamicVectorClass_MPlayerScoreType_PTR : VectorClass_MPlayerScoreType_PTR, DynamicAddon {};
 struct DynamicVectorClass_MPlayerScoreType_PTR_vtbl : VectorClass_MPlayerScoreType_PTR_vtbl {};
 
-struct VectorClass_MSSfx_PTR_vtbl
+struct VectorBase_MSSfx_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MSSfx_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MSSfx_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MSSfx_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MSSfx_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MSSfx_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MSSfx_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MSSfx_PTR *this, int a1);
+  MSSfx **Items;
 };
-
+struct VectorBase_MSSfx_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MSSfx_PTR : VectorBase_MSSfx_PTR, VectorAddon {};
+struct VectorClass_MSSfx_PTR_vtbl : VectorBase_MSSfx_PTR_vtbl {};
+struct DynamicVectorClass_MSSfx_PTR : VectorClass_MSSfx_PTR, DynamicAddon {};
 struct DynamicVectorClass_MSSfx_PTR_vtbl : VectorClass_MSSfx_PTR_vtbl {};
 
-struct VectorClass_MSTextEntry_PTR_vtbl
+struct VectorBase_MSTextEntry_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MSTextEntry_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MSTextEntry_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MSTextEntry_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MSTextEntry_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MSTextEntry_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MSTextEntry_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MSTextEntry_PTR *this, int a1);
+  MSTextEntry **Items;
 };
-
+struct VectorBase_MSTextEntry_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MSTextEntry_PTR : VectorBase_MSTextEntry_PTR, VectorAddon {};
+struct VectorClass_MSTextEntry_PTR_vtbl : VectorBase_MSTextEntry_PTR_vtbl {};
+struct DynamicVectorClass_MSTextEntry_PTR : VectorClass_MSTextEntry_PTR, DynamicAddon {};
 struct DynamicVectorClass_MSTextEntry_PTR_vtbl : VectorClass_MSTextEntry_PTR_vtbl {};
 
-struct VectorClass_MapRegionClass_PTR_vtbl
+struct VectorBase_MapRegionClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MapRegionClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MapRegionClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MapRegionClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MapRegionClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MapRegionClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MapRegionClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MapRegionClass_PTR *this, int a1);
+  MapRegionClass **Items;
 };
-
+struct VectorBase_MapRegionClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MapRegionClass_PTR : VectorBase_MapRegionClass_PTR, VectorAddon {};
+struct VectorClass_MapRegionClass_PTR_vtbl : VectorBase_MapRegionClass_PTR_vtbl {};
+struct DynamicVectorClass_MapRegionClass_PTR : VectorClass_MapRegionClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_MapRegionClass_PTR_vtbl : VectorClass_MapRegionClass_PTR_vtbl {};
 
-struct VectorClass_MapSelection_PTR_vtbl
+struct VectorBase_MapSelection_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MapSelection_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MapSelection_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MapSelection_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MapSelection_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MapSelection_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MapSelection_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MapSelection_PTR *this, int a1);
+  MapSelection **Items;
 };
-
+struct VectorBase_MapSelection_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MapSelection_PTR : VectorBase_MapSelection_PTR, VectorAddon {};
+struct VectorClass_MapSelection_PTR_vtbl : VectorBase_MapSelection_PTR_vtbl {};
+struct DynamicVectorClass_MapSelection_PTR : VectorClass_MapSelection_PTR, DynamicAddon {};
 struct DynamicVectorClass_MapSelection_PTR_vtbl : VectorClass_MapSelection_PTR_vtbl {};
 
-struct VectorClass_MapStage_PTR_vtbl
+struct VectorBase_MapStage_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MapStage_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MapStage_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MapStage_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MapStage_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MapStage_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MapStage_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MapStage_PTR *this, int a1);
+  MapStage **Items;
 };
-
+struct VectorBase_MapStage_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MapStage_PTR : VectorBase_MapStage_PTR, VectorAddon {};
+struct VectorClass_MapStage_PTR_vtbl : VectorBase_MapStage_PTR_vtbl {};
+struct DynamicVectorClass_MapStage_PTR : VectorClass_MapStage_PTR, DynamicAddon {};
 struct DynamicVectorClass_MapStage_PTR_vtbl : VectorClass_MapStage_PTR_vtbl {};
 
-struct VectorClass_MixFileClass_PTR_vtbl
+struct VectorBase_MixFileClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_MixFileClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_MixFileClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_MixFileClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_MixFileClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_MixFileClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_MixFileClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_MixFileClass_PTR *this, int a1);
+  MixFileClass **Items;
 };
-
+struct VectorBase_MixFileClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_MixFileClass_PTR : VectorBase_MixFileClass_PTR, VectorAddon {};
+struct VectorClass_MixFileClass_PTR_vtbl : VectorBase_MixFileClass_PTR_vtbl {};
+struct DynamicVectorClass_MixFileClass_PTR : VectorClass_MixFileClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_MixFileClass_PTR_vtbl : VectorClass_MixFileClass_PTR_vtbl {};
 
 struct VectorBase_MovieHandle_PTR : VectorBase_PTR
@@ -16519,28 +16581,24 @@ struct VectorClass_MovieHandle_PTR_vtbl : VectorBase_MovieHandle_PTR_vtbl {};
 struct DynamicVectorClass_MovieHandle_PTR : VectorClass_MovieHandle_PTR, DynamicAddon {};
 struct DynamicVectorClass_MovieHandle_PTR_vtbl : VectorClass_MovieHandle_PTR_vtbl {};
 
-struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+struct VectorBase_OwnerTalkClass_ConnectionListStruct_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  OwnerTalkClass_ConnectionListStruct **Items;
 };
+struct VectorBase_OwnerTalkClass_ConnectionListStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR : VectorBase_OwnerTalkClass_ConnectionListStruct_PTR, VectorAddon {};
+struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl : VectorBase_OwnerTalkClass_ConnectionListStruct_PTR_vtbl {};
+struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR : VectorClass_OwnerTalkClass_ConnectionListStruct_PTR, DynamicAddon {};
+struct DynamicVectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl : VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl {};
 
-struct VectorClass_PhoneEntryClass_PTR_vtbl
+struct VectorBase_PhoneEntryClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_PhoneEntryClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_PhoneEntryClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_PhoneEntryClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_PhoneEntryClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_PhoneEntryClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_PhoneEntryClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_PhoneEntryClass_PTR *this, int a1);
+  PhoneEntryClass **Items;
 };
-
+struct VectorBase_PhoneEntryClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_PhoneEntryClass_PTR : VectorBase_PhoneEntryClass_PTR, VectorAddon {};
+struct VectorClass_PhoneEntryClass_PTR_vtbl : VectorBase_PhoneEntryClass_PTR_vtbl {};
+struct DynamicVectorClass_PhoneEntryClass_PTR : VectorClass_PhoneEntryClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_PhoneEntryClass_PTR_vtbl : VectorClass_PhoneEntryClass_PTR_vtbl {};
 
 struct VectorBase_RGBClass : VectorBase_ELE
@@ -16555,105 +16613,85 @@ struct DynamicVectorClass_RGBClass_vtbl : VectorClass_RGBClass_vtbl {};
 struct TypeList_RGBClass : DynamicVectorClass_RGBClass, TypeListAddon {};
 struct TypeList_RGBClass_vtbl : DynamicVectorClass_RGBClass_vtbl {};
 
-struct VectorClass_ShadowControlClass_PTR_vtbl
+struct VectorBase_ShadowControlClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_ShadowControlClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_ShadowControlClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_ShadowControlClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_ShadowControlClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_ShadowControlClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_ShadowControlClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_ShadowControlClass_PTR *this, int a1);
+  ShadowControlClass **Items;
 };
-
+struct VectorBase_ShadowControlClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_ShadowControlClass_PTR : VectorBase_ShadowControlClass_PTR, VectorAddon {};
+struct VectorClass_ShadowControlClass_PTR_vtbl : VectorBase_ShadowControlClass_PTR_vtbl {};
+struct DynamicVectorClass_ShadowControlClass_PTR : VectorClass_ShadowControlClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_ShadowControlClass_PTR_vtbl : VectorClass_ShadowControlClass_PTR_vtbl {};
 
-struct VectorClass_SubTitle_PTR_vtbl
+struct VectorBase_SubTitle_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_SubTitle_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_SubTitle_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_SubTitle_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_SubTitle_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_SubTitle_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_SubTitle_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_SubTitle_PTR *this, int a1);
+  SubTitle **Items;
 };
-
+struct VectorBase_SubTitle_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_SubTitle_PTR : VectorBase_SubTitle_PTR, VectorAddon {};
+struct VectorClass_SubTitle_PTR_vtbl : VectorBase_SubTitle_PTR_vtbl {};
+struct DynamicVectorClass_SubTitle_PTR : VectorClass_SubTitle_PTR, DynamicAddon {};
 struct DynamicVectorClass_SubTitle_PTR_vtbl : VectorClass_SubTitle_PTR_vtbl {};
 
-struct VectorClass_UndoInfoStruct_vtbl
+struct VectorBase_UndoInfoStruct : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_UndoInfoStruct *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_UndoInfoStruct *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_UndoInfoStruct *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_UndoInfoStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_UndoInfoStruct *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_UndoInfoStruct *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_UndoInfoStruct *this, int a1, int a2);
+  UndoInfoStruct *Items;
 };
-
+struct VectorBase_UndoInfoStruct_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_UndoInfoStruct : VectorBase_UndoInfoStruct, VectorAddon {};
+struct VectorClass_UndoInfoStruct_vtbl : VectorBase_UndoInfoStruct_vtbl {};
+struct DynamicVectorClass_UndoInfoStruct : VectorClass_UndoInfoStruct, DynamicAddon {};
 struct DynamicVectorClass_UndoInfoStruct_vtbl : VectorClass_UndoInfoStruct_vtbl {};
 
-struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
+struct VectorBase_WinsockInterfaceClass_WinsockBufferType_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
+  WinsockInterfaceClass_WinsockBufferType **Items;
 };
+struct VectorBase_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR : VectorBase_WinsockInterfaceClass_WinsockBufferType_PTR, VectorAddon {};
+struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl : VectorBase_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl {};
+struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR : VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR, DynamicAddon {};
+struct DynamicVectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl : VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl {};
 
-struct VectorClass_Wstring_vtbl
+struct VectorBase_Wstring : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_Wstring *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_Wstring *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_Wstring *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_Wstring *this);
-  int (__thiscall *FindItemIndex)(VectorClass_Wstring *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_Wstring *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_Wstring *this, int a1, int a2);
+  Wstring *Items;
 };
-
+struct VectorBase_Wstring_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_Wstring : VectorBase_Wstring, VectorAddon {};
+struct VectorClass_Wstring_vtbl : VectorBase_Wstring_vtbl {};
+struct DynamicVectorClass_Wstring : VectorClass_Wstring, DynamicAddon {};
 struct DynamicVectorClass_Wstring_vtbl : VectorClass_Wstring_vtbl {};
 
-struct VectorClass__DDSURFACEDESC_PTR_vtbl
+struct VectorBase__DDSURFACEDESC_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass__DDSURFACEDESC_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass__DDSURFACEDESC_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass__DDSURFACEDESC_PTR *this, int a1);
+  _DDSURFACEDESC **Items;
 };
-
+struct VectorBase__DDSURFACEDESC_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass__DDSURFACEDESC_PTR : VectorBase__DDSURFACEDESC_PTR, VectorAddon {};
+struct VectorClass__DDSURFACEDESC_PTR_vtbl : VectorBase__DDSURFACEDESC_PTR_vtbl {};
+struct DynamicVectorClass__DDSURFACEDESC_PTR : VectorClass__DDSURFACEDESC_PTR, DynamicAddon {};
 struct DynamicVectorClass__DDSURFACEDESC_PTR_vtbl : VectorClass__DDSURFACEDESC_PTR_vtbl {};
 
-struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl
+struct VectorBase__WIN32_FIND_DATAA_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass__WIN32_FIND_DATAA_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass__WIN32_FIND_DATAA_PTR *this, int a1);
+  _WIN32_FIND_DATAA **Items;
 };
-
+struct VectorBase__WIN32_FIND_DATAA_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass__WIN32_FIND_DATAA_PTR : VectorBase__WIN32_FIND_DATAA_PTR, VectorAddon {};
+struct VectorClass__WIN32_FIND_DATAA_PTR_vtbl : VectorBase__WIN32_FIND_DATAA_PTR_vtbl {};
+struct DynamicVectorClass__WIN32_FIND_DATAA_PTR : VectorClass__WIN32_FIND_DATAA_PTR, DynamicAddon {};
 struct DynamicVectorClass__WIN32_FIND_DATAA_PTR_vtbl : VectorClass__WIN32_FIND_DATAA_PTR_vtbl {};
 
-struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl
+struct VectorBase_tConnInfoStruct_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(DynamicVectorClass_tConnInfoStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *GetItem)(DynamicVectorClass_tConnInfoStruct_PTR *this, int a1);
+  tConnInfoStruct **Items;
 };
+struct VectorBase_tConnInfoStruct_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_tConnInfoStruct_PTR : VectorBase_tConnInfoStruct_PTR, VectorAddon {};
+struct VectorClass_tConnInfoStruct_PTR_vtbl : VectorBase_tConnInfoStruct_PTR_vtbl {};
+struct DynamicVectorClass_tConnInfoStruct_PTR : VectorClass_tConnInfoStruct_PTR, DynamicAddon {};
+struct DynamicVectorClass_tConnInfoStruct_PTR_vtbl : VectorClass_tConnInfoStruct_PTR_vtbl {};
 
 struct EnumConnectionPointsClass_vtbl : IUnknown_vtbl
 {
@@ -16672,9 +16710,7 @@ struct EnumConnectionsClass_vtbl : IUnknown_vtbl
 };
 
 struct GraphicMenuAnimItem_vtbl : GraphicMenuItem_vtbl {};
-
 struct GraphicMenuImageItem_vtbl : GraphicMenuItem_vtbl {};
-
 struct GraphicMenuShortcutItem_vtbl : GraphicMenuItem_vtbl {};
 
 struct Initializer_FreeForAll_vtbl
@@ -17242,127 +17278,63 @@ struct TiberianSunClassFactory_vtbl : IUnknown_vtbl
   int (__thiscall *LockServer)(TiberianSunClassFactory *this, int a1, int a2);
 };
 
-struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
-
-struct VectorClass_DistributionObject_AITriggerTypeClass_PTR_vtbl
+struct VectorBase_DistributionObject_BuildingTypeClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_DistributionObject_AITriggerTypeClass_PTR *this, int a1, int a2);
+  DistributionObject_BuildingTypeClass **Items;
 };
-
-struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_DistributionObject_BuildingTypeClass_PTR *this, int a1, int a2);
-};
-
+struct VectorBase_DistributionObject_BuildingTypeClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DistributionObject_BuildingTypeClass_PTR : VectorBase_DistributionObject_BuildingTypeClass_PTR, VectorAddon {};
+struct VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl : VectorBase_DistributionObject_BuildingTypeClass_PTR_vtbl {};
+struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR : VectorClass_DistributionObject_BuildingTypeClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl : VectorClass_DistributionObject_BuildingTypeClass_PTR_vtbl {};
 
-struct VectorClass_DistributionObject_CellClass_PTR_vtbl
+struct VectorBase_DistributionObject_CellClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_DistributionObject_CellClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_DistributionObject_CellClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_DistributionObject_CellClass_PTR *this, int a1, int a2);
+  DistributionObject_CellClass **Items;
 };
-
+struct VectorBase_DistributionObject_CellClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_DistributionObject_CellClass_PTR : VectorBase_DistributionObject_CellClass_PTR, VectorAddon {};
+struct VectorClass_DistributionObject_CellClass_PTR_vtbl : VectorBase_DistributionObject_CellClass_PTR_vtbl {};
+struct DynamicVectorClass_DistributionObject_CellClass_PTR : VectorClass_DistributionObject_CellClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_DistributionObject_CellClass_PTR_vtbl : VectorClass_DistributionObject_CellClass_PTR_vtbl {};
 
-struct VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct_vtbl
+struct VectorBase_HouseClass_BuildChoiceClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_HashObject_unsigned_int_SubzoneConnectionStruct *this, int a1, int a2);
+  HouseClass_BuildChoiceClass **Items;
 };
-
-struct VectorClass_HashObject_unsigned_int_unsigned_int_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_HashObject_unsigned_int_unsigned_int *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_HashObject_unsigned_int_unsigned_int *this, int a1, int a2);
-};
-
-struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_HouseClass_BuildChoiceClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_HouseClass_BuildChoiceClass_PTR *this, int a1);
-};
-
+struct VectorBase_HouseClass_BuildChoiceClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_HouseClass_BuildChoiceClass_PTR : VectorBase_HouseClass_BuildChoiceClass_PTR, VectorAddon {};
+struct VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl : VectorBase_HouseClass_BuildChoiceClass_PTR_vtbl {};
+struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR : VectorClass_HouseClass_BuildChoiceClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_HouseClass_BuildChoiceClass_PTR_vtbl : VectorClass_HouseClass_BuildChoiceClass_PTR_vtbl {};
 
-struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl
+struct VectorBase_IsometricTileTypeClass_TileInsertType_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_IsometricTileTypeClass_TileInsertType_PTR *this, int a1);
+  IsometricTileTypeClass_TileInsertType **Items;
 };
-
+struct VectorBase_IsometricTileTypeClass_TileInsertType_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR : VectorBase_IsometricTileTypeClass_TileInsertType_PTR, VectorAddon {};
+struct VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl : VectorBase_IsometricTileTypeClass_TileInsertType_PTR_vtbl {};
+struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR : VectorClass_IsometricTileTypeClass_TileInsertType_PTR, DynamicAddon {};
 struct DynamicVectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl : VectorClass_IsometricTileTypeClass_TileInsertType_PTR_vtbl {};
 
-struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl
+struct VectorBase_LightSourceClass_PendingCellClass_PTR : VectorBase_PTR
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_LightSourceClass_PendingCellClass_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_LightSourceClass_PendingCellClass_PTR *this, int a1);
+  LightSourceClass_PendingCellClass **Items;
 };
-
+struct VectorBase_LightSourceClass_PendingCellClass_PTR_vtbl : VectorBase_PTR_vtbl {};
+struct VectorClass_LightSourceClass_PendingCellClass_PTR : VectorBase_LightSourceClass_PendingCellClass_PTR, VectorAddon {};
+struct VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl : VectorBase_LightSourceClass_PendingCellClass_PTR_vtbl {};
+struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR : VectorClass_LightSourceClass_PendingCellClass_PTR, DynamicAddon {};
 struct DynamicVectorClass_LightSourceClass_PendingCellClass_PTR_vtbl : VectorClass_LightSourceClass_PendingCellClass_PTR_vtbl {};
 
-struct VectorClass_OwnerTalkClass_ConnectionListStruct_PTR_vtbl
+struct VectorBase_TPoint3D_int : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_OwnerTalkClass_ConnectionListStruct_PTR *this, int a1);
+  TPoint3D_int *Items;
 };
-
-struct VectorClass_TPoint3D_int_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_TPoint3D_int *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_TPoint3D_int *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_TPoint3D_int *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_TPoint3D_int *this);
-  int (__thiscall *FindItemIndex)(VectorClass_TPoint3D_int *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_TPoint3D_int *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_TPoint3D_int *this, int a1, int a2);
-};
+struct VectorBase_TPoint3D_int_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_TPoint3D_int : VectorBase_TPoint3D_int, VectorAddon {};
+struct VectorClass_TPoint3D_int_vtbl : VectorBase_TPoint3D_int_vtbl {};
 
 struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl
 {
@@ -17375,39 +17347,16 @@ struct VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl
   int (__thiscall *GetItem)(VectorClass_W_4_char_i_s_k_unsigned_int_char *this, int a1);
 };
 
-struct VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_WinsockInterfaceClass_WinsockBufferType_PTR *this, int a1);
-};
+struct TypeList_W_4_char_i_s_k_unsigned_int_char_vtbl : VectorClass_W_4_char_i_s_k_unsigned_int_char_vtbl {};
 
-struct VectorClass_tConnInfoStruct_PTR_vtbl
+struct VectorBase_tagCONNECTDATA : VectorBase_ELE
 {
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_tConnInfoStruct_PTR *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_tConnInfoStruct_PTR *this);
-  int (__thiscall *FindItemIndex)(VectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_tConnInfoStruct_PTR *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_tConnInfoStruct_PTR *this, int a1);
+  tagCONNECTDATA *Items;
 };
-
-struct VectorClass_tagCONNECTDATA_vtbl
-{
-  int (__thiscall *ScalarDeletingDestructor)(VectorClass_tagCONNECTDATA *this, int a1);
-  int (__thiscall *OperatorEqual)(VectorClass_tagCONNECTDATA *this, int a1);
-  int (__thiscall *SetCapacity)(VectorClass_tagCONNECTDATA *this, int a1, int a2);
-  int (__thiscall *Clear)(VectorClass_tagCONNECTDATA *this);
-  int (__thiscall *FindItemIndex)(VectorClass_tagCONNECTDATA *this, int a1);
-  int (__thiscall *GetItemIndex)(VectorClass_tagCONNECTDATA *this, int a1);
-  int (__thiscall *GetItem)(VectorClass_tagCONNECTDATA *this, int a1, int a2);
-};
-
+struct VectorBase_tagCONNECTDATA_vtbl : VectorBase_ELE_vtbl {};
+struct VectorClass_tagCONNECTDATA : VectorBase_tagCONNECTDATA, VectorAddon {};
+struct VectorClass_tagCONNECTDATA_vtbl : VectorBase_tagCONNECTDATA_vtbl {};
+struct DynamicVectorClass_tagCONNECTDATA : VectorClass_tagCONNECTDATA, DynamicAddon {};
 struct DynamicVectorClass_tagCONNECTDATA_vtbl : VectorClass_tagCONNECTDATA_vtbl {};
 
 struct WDT_FactionSelectDialogControl_vtbl : OwnerDraw_SimpleDialogControl_vtbl {};
